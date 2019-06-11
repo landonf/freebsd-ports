@@ -42,7 +42,9 @@ do-install:
 	@${RM} -r ${STAGEDIR}${DATADIR}/bin/fsnotifier \
 		${STAGEDIR}${DATADIR}/bin/fsnotifier-arm \
 		${STAGEDIR}${DATADIR}/bin/fsnotifier64 \
-		${STAGEDIR}${DATADIR}/bin/lib*.so
+		${STAGEDIR}${DATADIR}/bin/lib*.so \
+		${STAGEDIR}${DATADIR}/bin/gdb/linux \
+		${STAGEDIR}${DATADIR}/bin/lldb/linux
 # Remove the bundled native Pty4J support libraries, they are replaced
 # by java/intellij-pty4j
 	@${RM} -r ${STAGEDIR}${DATADIR}/lib/pty4j-native
