@@ -1,0 +1,40 @@
+--- lib/CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
++++ lib/CMakeLists.txt	2019-05-31 19:16:27.558212000 -0600
+@@ -19,17 +19,19 @@ if (STANDALONE)
+     set (VERSION "0")
+ endif()
+ 
+-add_library(appmenu-gtk3-parser SHARED
+-        ${LIB_SOURCES}
+-        ${GTK3_SOURCES})
+-target_link_libraries(appmenu-gtk3-parser PRIVATE ${GLIB2_LIBRARIES} ${GTK3_LIBRARIES})
+-target_include_directories(appmenu-gtk3-parser PRIVATE ${GLIB2_INCLUDE_DIRS} ${GTK3_INCLUDE_DIRS})
+-set_target_properties(appmenu-gtk3-parser PROPERTIES
+-	VERSION ${VERSION}
+-	SOVERSION ${VERSION_MAJOR})
+-install(TARGETS appmenu-gtk3-parser DESTINATION ${CMAKE_INSTALL_LIBDIR})
++if (APPMENU_GTK3_MODULE)
++	add_library(appmenu-gtk3-parser SHARED
++	        ${LIB_SOURCES}
++	        ${GTK3_SOURCES})
++	target_link_libraries(appmenu-gtk3-parser PRIVATE ${GLIB2_LIBRARIES} ${GTK3_LIBRARIES})
++	target_include_directories(appmenu-gtk3-parser PRIVATE ${GLIB2_INCLUDE_DIRS} ${GTK3_INCLUDE_DIRS})
++	set_target_properties(appmenu-gtk3-parser PROPERTIES
++		VERSION ${VERSION}
++		SOVERSION ${VERSION_MAJOR})
++	install(TARGETS appmenu-gtk3-parser DESTINATION ${CMAKE_INSTALL_LIBDIR})
++endif()
+ 
+-if (GTK2_FOUND)
++if (APPMENU_GTK2_MODULE)
+         add_library(appmenu-gtk2-parser SHARED
+ 		${LIB_SOURCES})
+ 	set_target_properties(appmenu-gtk2-parser PROPERTIES
+@@ -46,4 +48,6 @@ set(LIB_PUBLIC_HEADERS
+ 
+ set(GTK_MODULE_INCLUDE_DIR ${CMAKE_INSTALL_INCLUDEDIR}/appmenu-gtk-parser)
+ 
+-install(FILES ${LIB_PUBLIC_HEADERS} DESTINATION ${GTK_MODULE_INCLUDE_DIR})
++if(ENABLE_APPMENU_COMMON)
++	install(FILES ${LIB_PUBLIC_HEADERS} DESTINATION ${GTK_MODULE_INCLUDE_DIR})
++endif()

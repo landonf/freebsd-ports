@@ -1,0 +1,4 @@
+lib/gtk-2.0/modules/libappmenu-gtk-module.so
+lib/libappmenu-gtk2-parser.so
+lib/libappmenu-gtk2-parser.so.0
+libdata/pkgconfig/appmenu-gtk2-parser.pc

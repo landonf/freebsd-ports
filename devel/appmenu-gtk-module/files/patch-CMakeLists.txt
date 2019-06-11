@@ -1,0 +1,60 @@
+--- CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
++++ CMakeLists.txt	2019-05-31 22:47:10.934693000 -0600
+@@ -7,9 +7,12 @@ include(GNUInstallDirs)
+ include(CMakeDependentOption)
+ include(FeatureSummary)
+ find_package (PkgConfig QUIET)
++find_package(X11 REQUIRED)
++include_directories(${X11_INCLUDE_DIR})
+ find_package(GLIB2 REQUIRED QUIET COMPONENTS GLIB GOBJECT GIO GIO_UNIX COMPILE_SCHEMAS)
+ include(GLibProgramHandlers)
+ find_package(GTK 3.22 QUIET COMPONENTS GDK GTK X11 WAYLAND)
++set(GTK3_FOUND ${GTK_FOUND})
+ find_package(GTK 2.24 COMPONENTS GDK GTK X11)
+ set(GTK2_FOUND ${GTK_FOUND})
+ 
+@@ -19,12 +22,19 @@ find_path(WAYLAND_INCLUDE
+     PATH_SUFFIXES wayland
+ )
+ 
+-cmake_dependent_option(STANDALONE "Build appmenu-gtk-module STANDALONE" ON
+-        "NOT CORE_FOUND" OFF)
+-option(ENABLE_APPMENU_GTK_MODULE "Build appmenu-gtk-module" ON)
++option(STANDALONE "Build appmenu-gtk-module STANDALONE" ON)
++option(ENABLE_APPMENU_COMMON "Build appmenu-gtk-module common" OFF)
++option(ENABLE_APPMENU_GTK3_MODULE "Build GTK3 appmenu-gtk-module" OFF)
++option(ENABLE_APPMENU_GTK2_MODULE "Build GTK2 appmenu-gtk-module" OFF)
+ 
+-set(APPMENU_GTK2_MODULE ${GTK2_FOUND} AND ${ENABLE_APPMENU_GTK_MODULE})
+-add_feature_info(Gtk3Module ENABLE_APPMENU_GTK_MODULE "Gtk+ module for AppMenu - Gtk3 version")
++if(GTK3_FOUND AND ENABLE_APPMENU_GTK3_MODULE)
++	set(APPMENU_GTK3_MODULE ON)
++endif()
++if(GTK2_FOUND AND ENABLE_APPMENU_GTK2_MODULE)
++	set(APPMENU_GTK2_MODULE ON)
++endif()
++
++add_feature_info(Gtk3Module APPMENU_GTK3_MODULE "Gtk+ module for AppMenu - Gtk3 version")
+ add_feature_info(GtkModuleDemos ENABLE_GTK_MODULE_DEMOS "Gtk+ module for AppMenu - demos")
+ add_feature_info(Gtk2Module APPMENU_GTK2_MODULE "Gtk+ module for AppMenu - Gtk2 version")
+ 
+@@ -48,9 +58,12 @@ if(STANDALONE)
+         add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
+ endif()
+ 
+-if(ENABLE_APPMENU_GTK_MODULE OR STANDALONE)
++if(ENABLE_APPMENU_COMMON OR APPMENU_GTK2_MODULE OR APPMENU_GTK3_MODULE)
+ 	add_subdirectory(data)
+ 	add_subdirectory(lib)
++endif()
++
++if(APPMENU_GTK2_MODULE OR APPMENU_GTK3_MODULE)
+ 	add_subdirectory(src)
+ 	add_subdirectory(tests)
+ endif()
+@@ -62,4 +75,4 @@ if(ENABLE_GTK_MODULE_DEMOS)
+         endif()
+ endif()
+ cmake_dependent_option(ENABLE_GTK_MODULE_DEMOS "Enable demo programs and docs for gtk module" OFF
+-        "ENABLE_APPMENU_GTK_MODULE" OFF)
++        "APPMENU_GTK3_MODULE" OFF)

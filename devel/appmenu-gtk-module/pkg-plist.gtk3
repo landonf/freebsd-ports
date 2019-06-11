@@ -1,0 +1,4 @@
+lib/gtk-3.0/modules/libappmenu-gtk-module.so
+lib/libappmenu-gtk3-parser.so
+lib/libappmenu-gtk3-parser.so.0
+libdata/pkgconfig/appmenu-gtk3-parser.pc
