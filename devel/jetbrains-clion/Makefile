@@ -17,7 +17,8 @@ LICENSE_NAME=	Subscription license agreement for business and organizations
 LICENSE_TEXT=	See: https://www.jetbrains.com/store/license.html
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
-RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
+RUN_DEPENDS=	cmake>=3.14.3:devel/cmake \
+		intellij-fsnotifier>0:java/intellij-fsnotifier \
 		intellij-pty4j>0:java/intellij-pty4j
 
 USES=		linux python:run shebangfix
@@ -43,6 +44,7 @@ do-install:
 		${STAGEDIR}${DATADIR}/bin/fsnotifier-arm \
 		${STAGEDIR}${DATADIR}/bin/fsnotifier64 \
 		${STAGEDIR}${DATADIR}/bin/lib*.so \
+		${STAGEDIR}${DATADIR}/bin/cmake/linux \
 		${STAGEDIR}${DATADIR}/bin/gdb/linux \
 		${STAGEDIR}${DATADIR}/bin/lldb/linux
 # Remove the bundled native Pty4J support libraries, they are replaced
@@ -55,6 +57,11 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/clion.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	cd ${WRKSRC}/lib && ${JAVA_HOME}/bin/jar xf icons.jar
 	${INSTALL_DATA} ${WRKSRC}/lib/icon.png ${STAGEDIR}${DATADIR}/clion.png
+# Use cmake binaries provided by devel/cmake
+	${MKDIR} ${STAGEDIR}${DATADIR}/bin/cmake/linux/bin
+.for f in ccmake cmake cpack ctest
+	${LN} -sf ${PREFIX}/bin/${f} ${STAGEDIR}${DATADIR}/bin/cmake/linux/bin/${f}
+.endfor 
 # Use fsnotifier replacement provided by java/intellij-fsnotifier
 	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/intellij/bin/fsnotifier" >> ${STAGEDIR}${DATADIR}/bin/idea.properties
 # Fix slow render
