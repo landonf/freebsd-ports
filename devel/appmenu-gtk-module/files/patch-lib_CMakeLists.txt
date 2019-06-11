@@ -1,5 +1,5 @@
---- lib/CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
-+++ lib/CMakeLists.txt	2019-05-31 19:16:27.558212000 -0600
+--- lib/CMakeLists.txt.orig	2019-05-01 22:08:39 UTC
++++ lib/CMakeLists.txt
 @@ -19,17 +19,19 @@ if (STANDALONE)
      set (VERSION "0")
  endif()

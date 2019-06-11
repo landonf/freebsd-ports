@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
-+++ CMakeLists.txt	2019-05-31 22:47:10.934693000 -0600
+--- CMakeLists.txt.orig	2019-05-01 22:08:39 UTC
++++ CMakeLists.txt
 @@ -7,9 +7,12 @@ include(GNUInstallDirs)
  include(CMakeDependentOption)
  include(FeatureSummary)

@@ -1,5 +1,5 @@
---- src/CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
-+++ src/CMakeLists.txt	2019-05-31 19:16:14.188533000 -0600
+--- src/CMakeLists.txt.orig	2019-05-01 22:08:39 UTC
++++ src/CMakeLists.txt
 @@ -1,29 +1,33 @@
 -set(MODULE_SOURCES
 -    appmenu-gtk-module.c

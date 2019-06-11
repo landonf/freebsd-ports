@@ -1,5 +1,5 @@
---- src/datastructs-private.h.orig	2019-05-31 18:15:23.103515000 -0600
-+++ src/datastructs-private.h	2019-05-31 18:15:34.808471000 -0600
+--- src/datastructs-private.h.orig	2019-05-01 22:08:39 UTC
++++ src/datastructs-private.h
 @@ -30,8 +30,8 @@
  
  struct _WindowData

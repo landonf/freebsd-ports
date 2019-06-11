@@ -1,5 +1,5 @@
---- data/CMakeLists.txt.orig	2019-05-01 16:08:39.000000000 -0600
-+++ data/CMakeLists.txt	2019-05-31 19:03:50.810825000 -0600
+--- data/CMakeLists.txt.orig	2019-05-01 22:08:39 UTC
++++ data/CMakeLists.txt
 @@ -1,3 +1,4 @@
 +if(ENABLE_APPMENU_COMMON)
  add_custom_target(data-files-module SOURCES org.appmenu.gtk-module.gschema.xml appmenu-gtk-module.service)
