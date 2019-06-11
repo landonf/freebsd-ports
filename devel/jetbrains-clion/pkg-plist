@@ -9,6 +9,10 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clion.svg
 %%DATADIR%%/bin/clion.vmoptions
 %%DATADIR%%/bin/clion64.vmoptions
+%%DATADIR%%/bin/cmake/linux/bin/ccmake
+%%DATADIR%%/bin/cmake/linux/bin/cmake
+%%DATADIR%%/bin/cmake/linux/bin/cpack
+%%DATADIR%%/bin/cmake/linux/bin/ctest
 %%DATADIR%%/bin/format.sh
 %%DATADIR%%/bin/gdb/renderers/default/__init__.py
 %%DATADIR%%/bin/gdb/renderers/default/libstdcxx_printers.py
@@ -22,10 +26,6 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/lldb/renderers/lldb_formatters/__init__.py
 %%DATADIR%%/bin/lldb/renderers/lldb_formatters/jetbrains_stl_formatters.py
 %%DATADIR%%/bin/log.xml
-%%DATADIR%%/bin/cmake/linux/bin/ccmake
-%%DATADIR%%/bin/cmake/linux/bin/cmake
-%%DATADIR%%/bin/cmake/linux/bin/cpack
-%%DATADIR%%/bin/cmake/linux/bin/ctest
 %%DATADIR%%/bin/printenv.py
 %%DATADIR%%/bin/restart.py
 %%DATADIR%%/build.txt
