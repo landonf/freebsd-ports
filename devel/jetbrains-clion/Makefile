@@ -2,6 +2,7 @@
 
 PORTNAME=	clion
 PORTVERSION=	2019.1.4
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cf.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -19,7 +20,7 @@ LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 		intellij-pty4j>0:java/intellij-pty4j
 
-USES=		python:run shebangfix
+USES=		linux python:run shebangfix
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.8+
@@ -41,11 +42,7 @@ do-install:
 	@${RM} -r ${STAGEDIR}${DATADIR}/bin/fsnotifier \
 		${STAGEDIR}${DATADIR}/bin/fsnotifier-arm \
 		${STAGEDIR}${DATADIR}/bin/fsnotifier64 \
-		${STAGEDIR}${DATADIR}/bin/lib*.so \
-		${STAGEDIR}${DATADIR}/bin/clang \
-		${STAGEDIR}${DATADIR}/bin/cmake \
-		${STAGEDIR}${DATADIR}/bin/gdb/linux \
-		${STAGEDIR}${DATADIR}/bin/lldb/linux
+		${STAGEDIR}${DATADIR}/bin/lib*.so
 # Remove the bundled native Pty4J support libraries, they are replaced
 # by java/intellij-pty4j
 	@${RM} -r ${STAGEDIR}${DATADIR}/lib/pty4j-native
