@@ -60,7 +60,8 @@ PATCHDIR=	/dev/null
 GL_HASH=	57fe7a74b38180002154fbd6028075db
 
 # Extract only the appmenu-gtk-module subproject
-EXTRACT_AFTER_ARGS+=	\
+EXTRACT_AFTER_ARGS=	\
+	--no-same-owner --no-same-permissions \
 	--include "^${DISTNAME}/subprojects/${PORTNAME}" \
 	-s "|^${DISTNAME}/subprojects/${PORTNAME}/\(.*\)|${DISTNAME}/\1|"
 
