@@ -123,9 +123,6 @@
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
     SUBDIR += appmenu-gtk-module
-    SUBDIR += appmenu-gtk-module-common
-    SUBDIR += appmenu-gtk-module-gtk2
-    SUBDIR += appmenu-gtk-module-gtk3
     SUBDIR += appstream-glib
     SUBDIR += apr1
     SUBDIR += apr2
