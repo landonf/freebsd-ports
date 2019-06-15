@@ -1620,6 +1620,7 @@
     SUBDIR += ocaml-re
     SUBDIR += ocaml-react
     SUBDIR += ocaml-res
+    SUBDIR += ocaml-result
     SUBDIR += ocaml-sdl
     SUBDIR += ocaml-sem
     SUBDIR += ocaml-sexplib
@@ -4921,6 +4922,7 @@
     SUBDIR += py-schedule
     SUBDIR += py-schema
     SUBDIR += py-schematics-patched
+    SUBDIR += py-scikit-build
     SUBDIR += py-scripttest
     SUBDIR += py-selection
     SUBDIR += py-selectors2
