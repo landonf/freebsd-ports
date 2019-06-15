@@ -1,2 +1,4 @@
 Enables integration of applications using the older GtkMenuShell and
 GtkMenuItem APIs with a desktop environment's global menu bar.
+
+WWW: https://gitlab.com/vala-panel-project/vala-panel-appmenu
