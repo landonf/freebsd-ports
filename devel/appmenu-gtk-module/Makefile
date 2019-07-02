@@ -4,7 +4,6 @@ PORTNAME=	appmenu-gtk-module
 PORTVERSION=	0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/vala-panel-project/vala-panel-appmenu/uploads/${GL_HASH}/
-PKGNAMESUFFIX=	-${FLAVOR}
 DISTNAME=	vala-panel-appmenu-${PORTVERSION}
 
 MAINTAINER=	landonf@freebsd.org
@@ -18,8 +17,8 @@ COMMENT=	GTK+ 2.x module to display old-style menus in the global menu bar
 COMMENT=	GTK+ 3.x module to display old-style menus in the global menu bar
 .endif
 
-LICENSE=	LGPL3
 .if ${FLAVOR:Umeta} != meta
+LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 .endif
 
@@ -30,30 +29,34 @@ gtk3_RUN_DEPENDS=	${PORTNAME}-common>=${PORTVERSION}:devel/${PORTNAME}@common
 
 FLAVORS=	meta gtk3 gtk2 common
 FLAVOR?=	${FLAVORS:[1]}
-meta_PKGNAMESUFFIX=
+gtk3_PKGNAMESUFFIX=	-gtk3
+gtk2_PKGNAMESUFFIX=	-gtk2
+common_PKGNAMESUFFIX=	-common
 
-.if ${FLAVOR:U} == meta
+.if ${FLAVOR} == meta
 USES=		metaport
 .else
 USES=		cmake gnome tar:xz
 .endif
 
-.if ${FLAVOR:U} == common
+.if ${FLAVOR} == common
 USE_GNOME=	glib20
 CMAKE_ON=	ENABLE_APPMENU_COMMON
 GLIB_SCHEMAS=	org.appmenu.gtk-module.gschema.xml
-.elif ${FLAVOR:U} == gtk2
+.elif ${FLAVOR} == gtk2
 USE_GNOME=	gtk20
 CMAKE_ON=	ENABLE_APPMENU_GTK2_MODULE
-.elif ${FLAVOR:U} == gtk3
+.elif ${FLAVOR} == gtk3
 USE_GNOME=	gtk30
 CMAKE_ON=	ENABLE_APPMENU_GTK3_MODULE
 .endif
 
-PLIST=		${PKGDIR}/pkg-plist.${FLAVOR}
-meta_PLIST=
+PLIST=		${PKGDIR}/pkg-plist
+gtk3_PLIST=	${PKGDIR}/pkg-plist.gtk3
+gtk2_PLIST=	${PKGDIR}/pkg-plist.gtk2
+common_PLIST=	${PKGDIR}/pkg-plist.common
 
-.if ${FLAVOR:U} == meta
+.if ${FLAVOR} == meta
 PATCHDIR=	/dev/null
 .endif
 
