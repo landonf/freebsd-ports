@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	aerc
-DISTVERSION=	0.1.1-37
-DISTVERSIONSUFFIX=	-gd22a914
+DISTVERSION=	0.1.1-53
+DISTVERSIONSUFFIX=	-gdfe114b
 CATEGORIES=	mail
 
 MAINTAINER=	tobik@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	scdoc:textproc/scdoc
 
-USES=		go:modules
+USES=		go:modules,no_targets
 USE_GITHUB=	nodefault
 GH_TUPLE=	danwakefield:fnmatch:cbb64ac3d964:danwakefield_fnmatch/vendor/github.com/danwakefield/fnmatch \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
@@ -25,7 +25,6 @@ GH_TUPLE=	danwakefield:fnmatch:cbb64ac3d964:danwakefield_fnmatch/vendor/github.c
 		emersion:go-smtp:v0.11.1:emersion_go_smtp/vendor/github.com/emersion/go-smtp \
 		emersion:go-textwrapper:d0e65e56babe:emersion_go_textwrapper/vendor/github.com/emersion/go-textwrapper \
 		gdamore:encoding:v1.0.0:gdamore_encoding/vendor/github.com/gdamore/encoding \
-		gdamore:tcell:b5d0c1ac5702:gdamore_tcell/vendor/github.com/gdamore/tcell \
 		go-ini:ini:v1.42.0:go_ini_ini/vendor/github.com/go-ini/ini \
 		golang:sys:4c4f7f33c9ed:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.2:golang_text/vendor/golang.org/x/text \
@@ -44,9 +43,10 @@ GH_TUPLE=	danwakefield:fnmatch:cbb64ac3d964:danwakefield_fnmatch/vendor/github.c
 		stretchr:testify:v1.3.0:stretchr_testify/vendor/github.com/stretchr/testify
 
 # Additional distfiles to fetch from https://git.sr.ht
-SRHT_TUPLE=	sircmpwn aerc ${DISTVERSIONFULL} \
-		sircmpwn getopt e7e23d1cd3a3 \
-		sircmpwn pty 3a43678975a9
+SRHT_TUPLE=	sircmpwn aerc ${DISTVERSIONFULL} "" \
+		sircmpwn getopt e7e23d1cd3a3 vendor/git.sr.ht/~sircmpwn/getopt \
+		sircmpwn pty 3a43678975a9 vendor/git.sr.ht/~sircmpwn/pty \
+		sircmpwn tcell 1f7dcc638286 vendor/github.com/gdamore/tcell
 
 MAKE_ARGS=	MANDIR=${STAGEDIR}${PREFIX}/man
 MAKE_ENV=	${GO_ENV} \
@@ -63,15 +63,15 @@ HTML_FILTER_RUN_DEPENDS=	socksify:net/dante \
 
 .include <bsd.port.pre.mk>
 
-.for account project tag in ${SRHT_TUPLE}
+.for account project tag subdir in ${SRHT_TUPLE}
 MASTER_SITES+=	https://git.sr.ht/~${account}/${project}/archive/${tag}${EXTRACT_SUFX}?dummy=/:${account}_${project}
 DISTFILES+=	${account}-${project}-${tag}_SRHT0${EXTRACT_SUFX}:${account}_${project}
 .endfor
 
 post-extract:
-.for account project tag in ${SRHT_TUPLE:[4..-1]}
-	@${MKDIR} ${WRKSRC}/vendor/git.sr.ht/~${account}
-	@${MV} ${WRKDIR}/${project}-${tag} ${WRKSRC}/vendor/git.sr.ht/~${account}/${project}
+.for account project tag subdir in ${SRHT_TUPLE:[5..-1]}
+	@${MKDIR} ${WRKSRC}/${subdir:H}
+	@${MV} ${WRKDIR}/${project}-${tag} ${WRKSRC}/${subdir}
 .endfor
 
 post-patch:
@@ -80,13 +80,5 @@ post-patch:
 		-e '/MANDIR/ s,install -m644,${INSTALL_MAN},' \
 		-e '/SHAREDIR/ s,install -m644,${INSTALL_DATA},' \
 		${WRKSRC}/Makefile
-
-# Prevent USES=go do-{build,install} targets.  We do want the
-# environmental setup USES=go does though.
-do-build:
-	@${DO_MAKE_BUILD} -C ${WRKSRC} ${ALL_TARGET}
-
-do-install:
-	@${DO_MAKE_BUILD} -C ${WRKSRC} DESTDIR=${STAGEDIR} ${INSTALL_TARGET}
 
 .include <bsd.port.post.mk>

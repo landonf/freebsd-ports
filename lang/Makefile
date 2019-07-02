@@ -125,9 +125,11 @@
     SUBDIR += gnatdroid-sysroot
     SUBDIR += gnatdroid-sysroot-x86
     SUBDIR += gnatdroid-x86
+    SUBDIR += gnu-apl
     SUBDIR += gnu-cobol
     SUBDIR += gnustep-base
     SUBDIR += go
+    SUBDIR += go-devel
     SUBDIR += go14
     SUBDIR += gomacro
     SUBDIR += gprolog
