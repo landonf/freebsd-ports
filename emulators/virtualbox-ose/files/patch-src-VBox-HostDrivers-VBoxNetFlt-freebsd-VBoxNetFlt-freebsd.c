@@ -1,5 +1,5 @@
 --- src/VBox/HostDrivers/VBoxNetFlt/freebsd/VBoxNetFlt-freebsd.c.orig	2019-05-13 07:33:07.000000000 -0600
-+++ src/VBox/HostDrivers/VBoxNetFlt/freebsd/VBoxNetFlt-freebsd.c	2019-07-18 21:31:13.545333000 -0600
++++ src/VBox/HostDrivers/VBoxNetFlt/freebsd/VBoxNetFlt-freebsd.c	2019-07-18 22:37:54.714204000 -0600
 @@ -52,11 +52,14 @@
  #include <net/if_dl.h>
  #include <net/if_types.h>
@@ -524,7 +524,7 @@
  
      taskqueue_drain(taskqueue_fast, &pThis->u.s.tskin);
      taskqueue_drain(taskqueue_fast, &pThis->u.s.tskout);
-@@ -684,106 +1013,347 @@ void vboxNetFltOsDeleteInstance(PVBOXNETFLTINS pThis)
+@@ -684,106 +1013,345 @@ void vboxNetFltOsDeleteInstance(PVBOXNETFLTINS pThis)
          ng_rmnode_self(pThis->u.s.node);
      VBOXCURVNET_RESTORE();
      pThis->u.s.node = NULL;
@@ -674,7 +674,6 @@
 +    ng_ID_t *id)
 +{
 +    struct namelist *nl;
-+    ng_ID_t ether_node;
 +    int error;
 +
 +    /* Fetch the full node list */
@@ -684,7 +683,6 @@
 +    }
 +
 +    /* Look for a matching NG_ETHER node */
-+    ether_node = 0;
 +    for (uint32_t i = 0; i < nl->numnames; i++) {
 +        struct nodeinfo *ni;
 +        char ifname[IF_NAMESIZE];
@@ -708,13 +706,13 @@
 +        if (strcmp(ifname, pThis->szName) != 0)
 +            continue;
 +
-+        *id = ether_node;
++        *id = ni->id;
 +        vboxNetFltFreeBSDFreeNodeList(nl);
 +        return (0);
 +    }
 +
 +    vboxNetFltFreeBSDFreeNodeList(nl);
-+    return (error);
++    return (ENOENT);
 +}
 +
 +/**
