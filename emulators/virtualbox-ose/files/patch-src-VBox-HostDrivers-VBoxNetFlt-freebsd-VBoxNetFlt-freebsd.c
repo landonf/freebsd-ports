@@ -548,7 +548,7 @@
  
      taskqueue_drain(taskqueue_fast, &pThis->u.s.tskin);
      taskqueue_drain(taskqueue_fast, &pThis->u.s.tskout);
-@@ -676,106 +1010,347 @@ void vboxNetFltOsDeleteInstance(PVBOXNETFLTINS pThis)
+@@ -676,106 +1010,345 @@ void vboxNetFltOsDeleteInstance(PVBOXNETFLTINS pThis)
          ng_rmnode_self(pThis->u.s.node);
      VBOXCURVNET_RESTORE();
      pThis->u.s.node = NULL;
@@ -698,7 +698,6 @@
 +    ng_ID_t *id)
 +{
 +    struct namelist *nl;
-+    ng_ID_t ether_node;
 +    int error;
 +
 +    /* Fetch the full node list */
@@ -708,7 +707,6 @@
 +    }
 +
 +    /* Look for a matching NG_ETHER node */
-+    ether_node = 0;
 +    for (uint32_t i = 0; i < nl->numnames; i++) {
 +        struct nodeinfo *ni;
 +        char ifname[IF_NAMESIZE];
@@ -732,13 +730,13 @@
 +        if (strcmp(ifname, pThis->szName) != 0)
 +            continue;
 +
-+        *id = ether_node;
++        *id = ni->id;
 +        vboxNetFltFreeBSDFreeNodeList(nl);
 +        return (0);
 +    }
 +
 +    vboxNetFltFreeBSDFreeNodeList(nl);
-+    return (error);
++    return (ENOENT);
 +}
 +
 +/**
