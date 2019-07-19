@@ -575,6 +575,7 @@
     SUBDIR += elixir-trailing_format_plug
     SUBDIR += elixir-tzdata
     SUBDIR += elixir-unsafe
+    SUBDIR += elm-format
     SUBDIR += embb
     SUBDIR += emscripten
     SUBDIR += entt
@@ -868,6 +869,7 @@
     SUBDIR += gogland-eap
     SUBDIR += gogs
     SUBDIR += golint
+    SUBDIR += google-cloud-cpp
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide

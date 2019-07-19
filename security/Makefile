@@ -91,6 +91,7 @@
     SUBDIR += clamfs
     SUBDIR += clamsmtp
     SUBDIR += clamtk
+    SUBDIR += cloak
     SUBDIR += clusterssh
     SUBDIR += cops
     SUBDIR += courier-authlib
@@ -371,6 +372,7 @@
     SUBDIR += mkp224o
     SUBDIR += modsecurity3
     SUBDIR += modsecurity3-apache
+    SUBDIR += modsecurity3-nginx
     SUBDIR += monkeysphere
     SUBDIR += morphis
     SUBDIR += munge
@@ -931,6 +933,7 @@
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
+    SUBDIR += py-muacrypt
     SUBDIR += py-netmiko
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
