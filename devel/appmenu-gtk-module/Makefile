@@ -7,15 +7,11 @@ MASTER_SITES=	https://gitlab.com/vala-panel-project/vala-panel-appmenu/uploads/$
 DISTNAME=	vala-panel-appmenu-${PORTVERSION}
 
 MAINTAINER=	landonf@freebsd.org
-.if ${FLAVOR:Umeta} == meta
-COMMENT=	GTK+ modules to display old-style menus in the global menu bar
-.elif ${FLAVOR:U} == common
-COMMENT=	GTK+ module to display old-style menus in the global menu bar (common files)
-.elif ${FLAVOR:U} == gtk2
-COMMENT=	GTK+ 2.x module to display old-style menus in the global menu bar
-.elif ${FLAVOR:U} == gtk3
-COMMENT=	GTK+ 3.x module to display old-style menus in the global menu bar
-.endif
+COMMENT=	${COMMENT_${FLAVOR:Umeta}}
+COMMENT_meta=	GTK+ modules to display old-style menus in the global menu bar
+COMMENT_common=	GTK+ module to display old-style menus in the global menu bar (common files)
+COMMENT_gtk2=	GTK+ 2.x module to display old-style menus in the global menu bar
+COMMENT_gtk3=	GTK+ 3.x module to display old-style menus in the global menu bar
 
 .if ${FLAVOR:Umeta} != meta
 LICENSE=	LGPL3
