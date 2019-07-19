@@ -7643,6 +7643,12 @@ share/icons/Papirus-Light/16x16/panel/nomachine-indicator.svg
 share/icons/Papirus-Light/16x16/panel/notes-panel.svg
 share/icons/Papirus-Light/16x16/panel/num-lock-off.svg
 share/icons/Papirus-Light/16x16/panel/num-lock-on.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-offline-panel.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-oops-panel.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-panel.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-paused-panel.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus-Light/16x16/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus-Light/16x16/panel/nylas-tray-empty.svg
 share/icons/Papirus-Light/16x16/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus-Light/16x16/panel/nylas-tray-full.svg
@@ -9603,6 +9609,12 @@ share/icons/Papirus-Light/22x22/panel/nomachine-indicator.svg
 share/icons/Papirus-Light/22x22/panel/notes-panel.svg
 share/icons/Papirus-Light/22x22/panel/num-lock-off.svg
 share/icons/Papirus-Light/22x22/panel/num-lock-on.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-offline-panel.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-oops-panel.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-panel.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-paused-panel.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus-Light/22x22/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus-Light/22x22/panel/nylas-tray-empty.svg
 share/icons/Papirus-Light/22x22/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus-Light/22x22/panel/nylas-tray-full.svg
@@ -11563,6 +11575,12 @@ share/icons/Papirus-Light/24x24/panel/nomachine-indicator.svg
 share/icons/Papirus-Light/24x24/panel/notes-panel.svg
 share/icons/Papirus-Light/24x24/panel/num-lock-off.svg
 share/icons/Papirus-Light/24x24/panel/num-lock-on.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-offline-panel.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-oops-panel.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-panel.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-paused-panel.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus-Light/24x24/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus-Light/24x24/panel/nylas-tray-empty.svg
 share/icons/Papirus-Light/24x24/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus-Light/24x24/panel/nylas-tray-full.svg
@@ -14425,6 +14443,7 @@ share/icons/Papirus/16x16/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/16x16/apps/appimagekit-cacher.svg
 share/icons/Papirus/16x16/apps/appimagekit-caprine.svg
 share/icons/Papirus/16x16/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/16x16/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/16x16/apps/appimagekit-dockstation.svg
 share/icons/Papirus/16x16/apps/appimagekit-downline.svg
 share/icons/Papirus/16x16/apps/appimagekit-draw.io.svg
@@ -14457,6 +14476,7 @@ share/icons/Papirus/16x16/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/16x16/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/16x16/apps/appimagekit-unityhub.svg
 share/icons/Papirus/16x16/apps/appimagekit-vnote.svg
+share/icons/Papirus/16x16/apps/appimagekit-wewechat.svg
 share/icons/Papirus/16x16/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/16x16/apps/appimagekit-workflowy.svg
 share/icons/Papirus/16x16/apps/applets-screenshooter.svg
@@ -14503,6 +14523,7 @@ share/icons/Papirus/16x16/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/16x16/apps/aptdaemon-working.svg
 share/icons/Papirus/16x16/apps/archive-manager.svg
 share/icons/Papirus/16x16/apps/archivemanager.svg
+share/icons/Papirus/16x16/apps/arcolinux-hello.svg
 share/icons/Papirus/16x16/apps/ardour.svg
 share/icons/Papirus/16x16/apps/ardour5.svg
 share/icons/Papirus/16x16/apps/arduino-icon-small.svg
@@ -14539,7 +14560,6 @@ share/icons/Papirus/16x16/apps/audience.svg
 share/icons/Papirus/16x16/apps/audio-player.svg
 share/icons/Papirus/16x16/apps/audio-recorder.svg
 share/icons/Papirus/16x16/apps/audiobook.svg
-share/icons/Papirus/16x16/apps/audoban.applet.playbar.svg
 share/icons/Papirus/16x16/apps/aurees.svg
 share/icons/Papirus/16x16/apps/auryo.svg
 share/icons/Papirus/16x16/apps/authy.svg
@@ -14550,10 +14570,12 @@ share/icons/Papirus/16x16/apps/awf.svg
 share/icons/Papirus/16x16/apps/ax-applet.svg
 share/icons/Papirus/16x16/apps/azpainter.svg
 share/icons/Papirus/16x16/apps/azuredatastudio.svg
+share/icons/Papirus/16x16/apps/baba-is-you.svg
 share/icons/Papirus/16x16/apps/babe.svg
 share/icons/Papirus/16x16/apps/background.svg
 share/icons/Papirus/16x16/apps/badge-small.svg
 share/icons/Papirus/16x16/apps/badland.svg
+share/icons/Papirus/16x16/apps/baidunetdisk.svg
 share/icons/Papirus/16x16/apps/baka-mplayer.svg
 share/icons/Papirus/16x16/apps/balena-etcher-electron.svg
 share/icons/Papirus/16x16/apps/baloo.svg
@@ -14562,6 +14584,7 @@ share/icons/Papirus/16x16/apps/banshee-1.svg
 share/icons/Papirus/16x16/apps/banshee.svg
 share/icons/Papirus/16x16/apps/baobab.svg
 share/icons/Papirus/16x16/apps/bareftp.svg
+share/icons/Papirus/16x16/apps/barrier.svg
 share/icons/Papirus/16x16/apps/bash.svg
 share/icons/Papirus/16x16/apps/basket.svg
 share/icons/Papirus/16x16/apps/bbc.svg
@@ -14632,6 +14655,7 @@ share/icons/Papirus/16x16/apps/bridge-constructor-portal.svg
 share/icons/Papirus/16x16/apps/brightnesssettings.svg
 share/icons/Papirus/16x16/apps/browser-tor.svg
 share/icons/Papirus/16x16/apps/browser.svg
+share/icons/Papirus/16x16/apps/browser360-beta.svg
 share/icons/Papirus/16x16/apps/bt-logo.svg
 share/icons/Papirus/16x16/apps/btsync-gui.svg
 share/icons/Papirus/16x16/apps/bug-buddy.svg
@@ -14682,6 +14706,8 @@ share/icons/Papirus/16x16/apps/camorama.svg
 share/icons/Papirus/16x16/apps/cantata.svg
 share/icons/Papirus/16x16/apps/cantor.svg
 share/icons/Papirus/16x16/apps/caprine.svg
+share/icons/Papirus/16x16/apps/carla-control.svg
+share/icons/Papirus/16x16/apps/carla.svg
 share/icons/Papirus/16x16/apps/cataclysm-dda.svg
 share/icons/Papirus/16x16/apps/catarina.svg
 share/icons/Papirus/16x16/apps/catfish.svg
@@ -14913,6 +14939,7 @@ share/icons/Papirus/16x16/apps/com.github.danrabbit.lookbook.svg
 share/icons/Papirus/16x16/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/16x16/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/16x16/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/16x16/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/16x16/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/16x16/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/16x16/apps/com.github.donadigo.eddy.svg
@@ -15021,6 +15048,7 @@ share/icons/Papirus/16x16/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/16x16/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/16x16/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/16x16/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/16x16/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/16x16/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/16x16/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/16x16/apps/com.obsproject.Studio.svg
@@ -15073,7 +15101,9 @@ share/icons/Papirus/16x16/apps/config-language.svg
 share/icons/Papirus/16x16/apps/config-users.svg
 share/icons/Papirus/16x16/apps/configurator.svg
 share/icons/Papirus/16x16/apps/configure-debian.svg
+share/icons/Papirus/16x16/apps/conky-logomark-violet.svg
 share/icons/Papirus/16x16/apps/conky-manager.svg
+share/icons/Papirus/16x16/apps/conky.svg
 share/icons/Papirus/16x16/apps/connectagram.svg
 share/icons/Papirus/16x16/apps/construo.svg
 share/icons/Papirus/16x16/apps/contact-editor.svg
@@ -15192,6 +15222,7 @@ share/icons/Papirus/16x16/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/16x16/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/16x16/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/16x16/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/16x16/apps/dead-cells.svg
 share/icons/Papirus/16x16/apps/dead-island.svg
 share/icons/Papirus/16x16/apps/deadbeef.svg
 share/icons/Papirus/16x16/apps/debian-installer-launcher.svg
@@ -15288,6 +15319,7 @@ share/icons/Papirus/16x16/apps/display-im6.Q16.svg
 share/icons/Papirus/16x16/apps/display-im6.q16.svg
 share/icons/Papirus/16x16/apps/display.im6.svg
 share/icons/Papirus/16x16/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/16x16/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/16x16/apps/distributor-logo-debian.svg
 share/icons/Papirus/16x16/apps/distributor-logo-fedora.svg
 share/icons/Papirus/16x16/apps/distributor-logo-freebsd.svg
@@ -15374,6 +15406,7 @@ share/icons/Papirus/16x16/apps/ekiga.svg
 share/icons/Papirus/16x16/apps/electrip.svg
 share/icons/Papirus/16x16/apps/electron-mail.svg
 share/icons/Papirus/16x16/apps/electron.svg
+share/icons/Papirus/16x16/apps/electron4.svg
 share/icons/Papirus/16x16/apps/electrum-ltc.svg
 share/icons/Papirus/16x16/apps/electrum.svg
 share/icons/Papirus/16x16/apps/element4l.svg
@@ -15448,6 +15481,7 @@ share/icons/Papirus/16x16/apps/facebook.svg
 share/icons/Papirus/16x16/apps/facebookresource.svg
 share/icons/Papirus/16x16/apps/factorio.svg
 share/icons/Papirus/16x16/apps/falkon.svg
+share/icons/Papirus/16x16/apps/far2l.svg
 share/icons/Papirus/16x16/apps/fbmessenger.svg
 share/icons/Papirus/16x16/apps/fbreader.svg
 share/icons/Papirus/16x16/apps/fceu.svg
@@ -15571,6 +15605,7 @@ share/icons/Papirus/16x16/apps/galternatives.svg
 share/icons/Papirus/16x16/apps/gambas3.svg
 share/icons/Papirus/16x16/apps/gargoyle-house.svg
 share/icons/Papirus/16x16/apps/garrysmod.svg
+share/icons/Papirus/16x16/apps/gaupol.svg
 share/icons/Papirus/16x16/apps/gbrainy.svg
 share/icons/Papirus/16x16/apps/gcbalculator.svg
 share/icons/Papirus/16x16/apps/gcleaner.svg
@@ -15923,6 +15958,7 @@ share/icons/Papirus/16x16/apps/gst-debug-viewer.svg
 share/icons/Papirus/16x16/apps/gstreamer-properties.svg
 share/icons/Papirus/16x16/apps/gtg.svg
 share/icons/Papirus/16x16/apps/gthumb.svg
+share/icons/Papirus/16x16/apps/gtimelog.svg
 share/icons/Papirus/16x16/apps/gtk-help.svg
 share/icons/Papirus/16x16/apps/gtk-info.svg
 share/icons/Papirus/16x16/apps/gtk-lshw.svg
@@ -16100,6 +16136,7 @@ share/icons/Papirus/16x16/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/16x16/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/16x16/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/16x16/apps/io.github.Hexchat.svg
+share/icons/Papirus/16x16/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/16x16/apps/io.github.OpenToonz.svg
 share/icons/Papirus/16x16/apps/io.github.Pithos.svg
 share/icons/Papirus/16x16/apps/io.github.TransmissionRemoteGtk.svg
@@ -16137,6 +16174,7 @@ share/icons/Papirus/16x16/apps/io.liri.Text.svg
 share/icons/Papirus/16x16/apps/io.lmms.LMMS.svg
 share/icons/Papirus/16x16/apps/io.mgba.mGBA.svg
 share/icons/Papirus/16x16/apps/io.neovim.nvim.svg
+share/icons/Papirus/16x16/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/16x16/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/16x16/apps/io.poez.Poezio.svg
 share/icons/Papirus/16x16/apps/io.thp.numptyphysics.svg
@@ -16561,6 +16599,7 @@ share/icons/Papirus/16x16/apps/livewallpaper-config.svg
 share/icons/Papirus/16x16/apps/livewallpaper.svg
 share/icons/Papirus/16x16/apps/lmms.svg
 share/icons/Papirus/16x16/apps/locale.svg
+share/icons/Papirus/16x16/apps/loginized.svg
 share/icons/Papirus/16x16/apps/logisim-icon-128.svg
 share/icons/Papirus/16x16/apps/logisim-icon.svg
 share/icons/Papirus/16x16/apps/logview.svg
@@ -16611,6 +16650,7 @@ share/icons/Papirus/16x16/apps/markpado.svg
 share/icons/Papirus/16x16/apps/marktext.svg
 share/icons/Papirus/16x16/apps/marsshooter.svg
 share/icons/Papirus/16x16/apps/master-pdf-editor.svg
+share/icons/Papirus/16x16/apps/masterpdfeditor.svg
 share/icons/Papirus/16x16/apps/masterpdfeditor3.svg
 share/icons/Papirus/16x16/apps/masterpdfeditor4.svg
 share/icons/Papirus/16x16/apps/masterpdfeditor5.svg
@@ -16688,9 +16728,12 @@ share/icons/Papirus/16x16/apps/messengerfordesktop.svg
 share/icons/Papirus/16x16/apps/metacity.svg
 share/icons/Papirus/16x16/apps/meterbridge.svg
 share/icons/Papirus/16x16/apps/meterbridge32x32.svg
+share/icons/Papirus/16x16/apps/metro-2033-redux.svg
+share/icons/Papirus/16x16/apps/metro-last-light-redux.svg
 share/icons/Papirus/16x16/apps/metronome.svg
 share/icons/Papirus/16x16/apps/mgba.svg
 share/icons/Papirus/16x16/apps/microscope.svg
+share/icons/Papirus/16x16/apps/microsoft-office-online.svg
 share/icons/Papirus/16x16/apps/microsoft.svg
 share/icons/Papirus/16x16/apps/midori.svg
 share/icons/Papirus/16x16/apps/milkytracker.svg
@@ -16860,6 +16903,7 @@ share/icons/Papirus/16x16/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/16x16/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/16x16/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -17273,6 +17317,7 @@ share/icons/Papirus/16x16/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/16x16/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/16x16/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/16x16/apps/org.processing.processingide.svg
+share/icons/Papirus/16x16/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/16x16/apps/org.pwmt.zathura.svg
 share/icons/Papirus/16x16/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/16x16/apps/org.qbittorrent.qBittorrent.svg
@@ -17700,6 +17745,7 @@ share/icons/Papirus/16x16/apps/regedit.svg
 share/icons/Papirus/16x16/apps/rekonq.svg
 share/icons/Papirus/16x16/apps/relay.svg
 share/icons/Papirus/16x16/apps/remmina.svg
+share/icons/Papirus/16x16/apps/renpy.svg
 share/icons/Papirus/16x16/apps/repository.svg
 share/icons/Papirus/16x16/apps/resapplet.svg
 share/icons/Papirus/16x16/apps/rescuetime.svg
@@ -17829,6 +17875,7 @@ share/icons/Papirus/16x16/apps/skype.svg
 share/icons/Papirus/16x16/apps/skypeforlinux.svg
 share/icons/Papirus/16x16/apps/slack.svg
 share/icons/Papirus/16x16/apps/slade.svg
+share/icons/Papirus/16x16/apps/slay-the-spire.svg
 share/icons/Papirus/16x16/apps/sleep.svg
 share/icons/Papirus/16x16/apps/slic3r-prusa.svg
 share/icons/Papirus/16x16/apps/slic3r-prusa3d.svg
@@ -17907,6 +17954,7 @@ share/icons/Papirus/16x16/apps/starbound.svg
 share/icons/Papirus/16x16/apps/stardew-valley.svg
 share/icons/Papirus/16x16/apps/stargus.svg
 share/icons/Papirus/16x16/apps/start-here-archlinux.svg
+share/icons/Papirus/16x16/apps/start-here-arcolinux.svg
 share/icons/Papirus/16x16/apps/start-here-korora.svg
 share/icons/Papirus/16x16/apps/start-here-lubuntu.svg
 share/icons/Papirus/16x16/apps/start-here-pop-os.svg
@@ -17957,6 +18005,8 @@ share/icons/Papirus/16x16/apps/steam_icon_257510.svg
 share/icons/Papirus/16x16/apps/steam_icon_258890.svg
 share/icons/Papirus/16x16/apps/steam_icon_269670.svg
 share/icons/Papirus/16x16/apps/steam_icon_280.svg
+share/icons/Papirus/16x16/apps/steam_icon_286690.svg
+share/icons/Papirus/16x16/apps/steam_icon_287390.svg
 share/icons/Papirus/16x16/apps/steam_icon_289070.svg
 share/icons/Papirus/16x16/apps/steam_icon_291650.svg
 share/icons/Papirus/16x16/apps/steam_icon_294100.svg
@@ -18021,13 +18071,16 @@ share/icons/Papirus/16x16/apps/steam_icon_552620.svg
 share/icons/Papirus/16x16/apps/steam_icon_569860.svg
 share/icons/Papirus/16x16/apps/steam_icon_570.svg
 share/icons/Papirus/16x16/apps/steam_icon_57300.svg
+share/icons/Papirus/16x16/apps/steam_icon_588650.svg
 share/icons/Papirus/16x16/apps/steam_icon_598530.svg
 share/icons/Papirus/16x16/apps/steam_icon_599390.svg
 share/icons/Papirus/16x16/apps/steam_icon_620.svg
+share/icons/Papirus/16x16/apps/steam_icon_646570.svg
 share/icons/Papirus/16x16/apps/steam_icon_684410.svg
 share/icons/Papirus/16x16/apps/steam_icon_70.svg
 share/icons/Papirus/16x16/apps/steam_icon_70300.svg
 share/icons/Papirus/16x16/apps/steam_icon_730.svg
+share/icons/Papirus/16x16/apps/steam_icon_736260.svg
 share/icons/Papirus/16x16/apps/steam_icon_751780.svg
 share/icons/Papirus/16x16/apps/steam_icon_8930.svg
 share/icons/Papirus/16x16/apps/steam_icon_999830.svg
@@ -18045,6 +18098,7 @@ share/icons/Papirus/16x16/apps/stock_task.svg
 share/icons/Papirus/16x16/apps/stock_view-details.svg
 share/icons/Papirus/16x16/apps/stock_xfburn-burn-cd.svg
 share/icons/Papirus/16x16/apps/stock_xfburn.svg
+share/icons/Papirus/16x16/apps/stoken-gui.svg
 share/icons/Papirus/16x16/apps/strawberry.svg
 share/icons/Papirus/16x16/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/16x16/apps/streamtuner.svg
@@ -18439,9 +18493,12 @@ share/icons/Papirus/16x16/apps/wesnoth-icon.svg
 share/icons/Papirus/16x16/apps/wesnoth.svg
 share/icons/Papirus/16x16/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/16x16/apps/wesnoth_editor.svg
+share/icons/Papirus/16x16/apps/wewechat.svg
 share/icons/Papirus/16x16/apps/whalebird.svg
 share/icons/Papirus/16x16/apps/whatsapp-desktop.svg
+share/icons/Papirus/16x16/apps/whatsapp-nativefier.svg
 share/icons/Papirus/16x16/apps/whatsapp.svg
+share/icons/Papirus/16x16/apps/whatsdesk.svg
 share/icons/Papirus/16x16/apps/whatsie.svg
 share/icons/Papirus/16x16/apps/wicd-gtk.svg
 share/icons/Papirus/16x16/apps/wicd.svg
@@ -18544,11 +18601,13 @@ share/icons/Papirus/16x16/apps/xfce4-backdrop.svg
 share/icons/Papirus/16x16/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/16x16/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/16x16/apps/xfce4-clock.svg
+share/icons/Papirus/16x16/apps/xfce4-color-settings.svg
 share/icons/Papirus/16x16/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/16x16/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/16x16/apps/xfce4-dict.svg
 share/icons/Papirus/16x16/apps/xfce4-display.svg
 share/icons/Papirus/16x16/apps/xfce4-eyes.svg
+share/icons/Papirus/16x16/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/16x16/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/16x16/apps/xfce4-mcs-manager.svg
 share/icons/Papirus/16x16/apps/xfce4-menueditor.svg
@@ -20464,6 +20523,12 @@ share/icons/Papirus/16x16/panel/nomachine-indicator.svg
 share/icons/Papirus/16x16/panel/notes-panel.svg
 share/icons/Papirus/16x16/panel/num-lock-off.svg
 share/icons/Papirus/16x16/panel/num-lock-on.svg
+share/icons/Papirus/16x16/panel/nutstore-offline-panel.svg
+share/icons/Papirus/16x16/panel/nutstore-oops-panel.svg
+share/icons/Papirus/16x16/panel/nutstore-panel.svg
+share/icons/Papirus/16x16/panel/nutstore-paused-panel.svg
+share/icons/Papirus/16x16/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus/16x16/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus/16x16/panel/nylas-tray-empty.svg
 share/icons/Papirus/16x16/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus/16x16/panel/nylas-tray-full.svg
@@ -23548,6 +23613,7 @@ share/icons/Papirus/22x22/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/22x22/apps/appimagekit-cacher.svg
 share/icons/Papirus/22x22/apps/appimagekit-caprine.svg
 share/icons/Papirus/22x22/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/22x22/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/22x22/apps/appimagekit-dockstation.svg
 share/icons/Papirus/22x22/apps/appimagekit-downline.svg
 share/icons/Papirus/22x22/apps/appimagekit-draw.io.svg
@@ -23580,6 +23646,7 @@ share/icons/Papirus/22x22/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/22x22/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/22x22/apps/appimagekit-unityhub.svg
 share/icons/Papirus/22x22/apps/appimagekit-vnote.svg
+share/icons/Papirus/22x22/apps/appimagekit-wewechat.svg
 share/icons/Papirus/22x22/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/22x22/apps/appimagekit-workflowy.svg
 share/icons/Papirus/22x22/apps/applets-screenshooter.svg
@@ -23626,6 +23693,7 @@ share/icons/Papirus/22x22/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/22x22/apps/aptdaemon-working.svg
 share/icons/Papirus/22x22/apps/archive-manager.svg
 share/icons/Papirus/22x22/apps/archivemanager.svg
+share/icons/Papirus/22x22/apps/arcolinux-hello.svg
 share/icons/Papirus/22x22/apps/ardour.svg
 share/icons/Papirus/22x22/apps/ardour5.svg
 share/icons/Papirus/22x22/apps/arduino-icon-small.svg
@@ -23662,7 +23730,6 @@ share/icons/Papirus/22x22/apps/audience.svg
 share/icons/Papirus/22x22/apps/audio-player.svg
 share/icons/Papirus/22x22/apps/audio-recorder.svg
 share/icons/Papirus/22x22/apps/audiobook.svg
-share/icons/Papirus/22x22/apps/audoban.applet.playbar.svg
 share/icons/Papirus/22x22/apps/aurees.svg
 share/icons/Papirus/22x22/apps/auryo.svg
 share/icons/Papirus/22x22/apps/authy.svg
@@ -23673,10 +23740,12 @@ share/icons/Papirus/22x22/apps/awf.svg
 share/icons/Papirus/22x22/apps/ax-applet.svg
 share/icons/Papirus/22x22/apps/azpainter.svg
 share/icons/Papirus/22x22/apps/azuredatastudio.svg
+share/icons/Papirus/22x22/apps/baba-is-you.svg
 share/icons/Papirus/22x22/apps/babe.svg
 share/icons/Papirus/22x22/apps/background.svg
 share/icons/Papirus/22x22/apps/badge-small.svg
 share/icons/Papirus/22x22/apps/badland.svg
+share/icons/Papirus/22x22/apps/baidunetdisk.svg
 share/icons/Papirus/22x22/apps/baka-mplayer.svg
 share/icons/Papirus/22x22/apps/balena-etcher-electron.svg
 share/icons/Papirus/22x22/apps/baloo.svg
@@ -23685,6 +23754,7 @@ share/icons/Papirus/22x22/apps/banshee-1.svg
 share/icons/Papirus/22x22/apps/banshee.svg
 share/icons/Papirus/22x22/apps/baobab.svg
 share/icons/Papirus/22x22/apps/bareftp.svg
+share/icons/Papirus/22x22/apps/barrier.svg
 share/icons/Papirus/22x22/apps/bash.svg
 share/icons/Papirus/22x22/apps/basket.svg
 share/icons/Papirus/22x22/apps/bbc.svg
@@ -23755,6 +23825,7 @@ share/icons/Papirus/22x22/apps/bridge-constructor-portal.svg
 share/icons/Papirus/22x22/apps/brightnesssettings.svg
 share/icons/Papirus/22x22/apps/browser-tor.svg
 share/icons/Papirus/22x22/apps/browser.svg
+share/icons/Papirus/22x22/apps/browser360-beta.svg
 share/icons/Papirus/22x22/apps/bt-logo.svg
 share/icons/Papirus/22x22/apps/btsync-gui.svg
 share/icons/Papirus/22x22/apps/bug-buddy.svg
@@ -23805,6 +23876,8 @@ share/icons/Papirus/22x22/apps/camorama.svg
 share/icons/Papirus/22x22/apps/cantata.svg
 share/icons/Papirus/22x22/apps/cantor.svg
 share/icons/Papirus/22x22/apps/caprine.svg
+share/icons/Papirus/22x22/apps/carla-control.svg
+share/icons/Papirus/22x22/apps/carla.svg
 share/icons/Papirus/22x22/apps/cataclysm-dda.svg
 share/icons/Papirus/22x22/apps/catarina.svg
 share/icons/Papirus/22x22/apps/catfish.svg
@@ -24036,6 +24109,7 @@ share/icons/Papirus/22x22/apps/com.github.danrabbit.lookbook.svg
 share/icons/Papirus/22x22/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/22x22/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/22x22/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/22x22/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/22x22/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/22x22/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/22x22/apps/com.github.donadigo.eddy.svg
@@ -24144,6 +24218,7 @@ share/icons/Papirus/22x22/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/22x22/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/22x22/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/22x22/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/22x22/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/22x22/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/22x22/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/22x22/apps/com.obsproject.Studio.svg
@@ -24196,7 +24271,9 @@ share/icons/Papirus/22x22/apps/config-language.svg
 share/icons/Papirus/22x22/apps/config-users.svg
 share/icons/Papirus/22x22/apps/configurator.svg
 share/icons/Papirus/22x22/apps/configure-debian.svg
+share/icons/Papirus/22x22/apps/conky-logomark-violet.svg
 share/icons/Papirus/22x22/apps/conky-manager.svg
+share/icons/Papirus/22x22/apps/conky.svg
 share/icons/Papirus/22x22/apps/connectagram.svg
 share/icons/Papirus/22x22/apps/construo.svg
 share/icons/Papirus/22x22/apps/contact-editor.svg
@@ -24315,6 +24392,7 @@ share/icons/Papirus/22x22/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/22x22/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/22x22/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/22x22/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/22x22/apps/dead-cells.svg
 share/icons/Papirus/22x22/apps/dead-island.svg
 share/icons/Papirus/22x22/apps/deadbeef.svg
 share/icons/Papirus/22x22/apps/debian-installer-launcher.svg
@@ -24411,6 +24489,7 @@ share/icons/Papirus/22x22/apps/display-im6.Q16.svg
 share/icons/Papirus/22x22/apps/display-im6.q16.svg
 share/icons/Papirus/22x22/apps/display.im6.svg
 share/icons/Papirus/22x22/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/22x22/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/22x22/apps/distributor-logo-debian.svg
 share/icons/Papirus/22x22/apps/distributor-logo-fedora.svg
 share/icons/Papirus/22x22/apps/distributor-logo-freebsd.svg
@@ -24497,6 +24576,7 @@ share/icons/Papirus/22x22/apps/ekiga.svg
 share/icons/Papirus/22x22/apps/electrip.svg
 share/icons/Papirus/22x22/apps/electron-mail.svg
 share/icons/Papirus/22x22/apps/electron.svg
+share/icons/Papirus/22x22/apps/electron4.svg
 share/icons/Papirus/22x22/apps/electrum-ltc.svg
 share/icons/Papirus/22x22/apps/electrum.svg
 share/icons/Papirus/22x22/apps/element4l.svg
@@ -24571,6 +24651,7 @@ share/icons/Papirus/22x22/apps/facebook.svg
 share/icons/Papirus/22x22/apps/facebookresource.svg
 share/icons/Papirus/22x22/apps/factorio.svg
 share/icons/Papirus/22x22/apps/falkon.svg
+share/icons/Papirus/22x22/apps/far2l.svg
 share/icons/Papirus/22x22/apps/fbmessenger.svg
 share/icons/Papirus/22x22/apps/fbreader.svg
 share/icons/Papirus/22x22/apps/fceu.svg
@@ -24694,6 +24775,7 @@ share/icons/Papirus/22x22/apps/galternatives.svg
 share/icons/Papirus/22x22/apps/gambas3.svg
 share/icons/Papirus/22x22/apps/gargoyle-house.svg
 share/icons/Papirus/22x22/apps/garrysmod.svg
+share/icons/Papirus/22x22/apps/gaupol.svg
 share/icons/Papirus/22x22/apps/gbrainy.svg
 share/icons/Papirus/22x22/apps/gcbalculator.svg
 share/icons/Papirus/22x22/apps/gcleaner.svg
@@ -25046,6 +25128,7 @@ share/icons/Papirus/22x22/apps/gst-debug-viewer.svg
 share/icons/Papirus/22x22/apps/gstreamer-properties.svg
 share/icons/Papirus/22x22/apps/gtg.svg
 share/icons/Papirus/22x22/apps/gthumb.svg
+share/icons/Papirus/22x22/apps/gtimelog.svg
 share/icons/Papirus/22x22/apps/gtk-help.svg
 share/icons/Papirus/22x22/apps/gtk-info.svg
 share/icons/Papirus/22x22/apps/gtk-lshw.svg
@@ -25223,6 +25306,7 @@ share/icons/Papirus/22x22/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/22x22/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/22x22/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/22x22/apps/io.github.Hexchat.svg
+share/icons/Papirus/22x22/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/22x22/apps/io.github.OpenToonz.svg
 share/icons/Papirus/22x22/apps/io.github.Pithos.svg
 share/icons/Papirus/22x22/apps/io.github.TransmissionRemoteGtk.svg
@@ -25260,6 +25344,7 @@ share/icons/Papirus/22x22/apps/io.liri.Text.svg
 share/icons/Papirus/22x22/apps/io.lmms.LMMS.svg
 share/icons/Papirus/22x22/apps/io.mgba.mGBA.svg
 share/icons/Papirus/22x22/apps/io.neovim.nvim.svg
+share/icons/Papirus/22x22/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/22x22/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/22x22/apps/io.poez.Poezio.svg
 share/icons/Papirus/22x22/apps/io.thp.numptyphysics.svg
@@ -25684,6 +25769,7 @@ share/icons/Papirus/22x22/apps/livewallpaper-config.svg
 share/icons/Papirus/22x22/apps/livewallpaper.svg
 share/icons/Papirus/22x22/apps/lmms.svg
 share/icons/Papirus/22x22/apps/locale.svg
+share/icons/Papirus/22x22/apps/loginized.svg
 share/icons/Papirus/22x22/apps/logisim-icon-128.svg
 share/icons/Papirus/22x22/apps/logisim-icon.svg
 share/icons/Papirus/22x22/apps/logview.svg
@@ -25734,6 +25820,7 @@ share/icons/Papirus/22x22/apps/markpado.svg
 share/icons/Papirus/22x22/apps/marktext.svg
 share/icons/Papirus/22x22/apps/marsshooter.svg
 share/icons/Papirus/22x22/apps/master-pdf-editor.svg
+share/icons/Papirus/22x22/apps/masterpdfeditor.svg
 share/icons/Papirus/22x22/apps/masterpdfeditor3.svg
 share/icons/Papirus/22x22/apps/masterpdfeditor4.svg
 share/icons/Papirus/22x22/apps/masterpdfeditor5.svg
@@ -25811,9 +25898,12 @@ share/icons/Papirus/22x22/apps/messengerfordesktop.svg
 share/icons/Papirus/22x22/apps/metacity.svg
 share/icons/Papirus/22x22/apps/meterbridge.svg
 share/icons/Papirus/22x22/apps/meterbridge32x32.svg
+share/icons/Papirus/22x22/apps/metro-2033-redux.svg
+share/icons/Papirus/22x22/apps/metro-last-light-redux.svg
 share/icons/Papirus/22x22/apps/metronome.svg
 share/icons/Papirus/22x22/apps/mgba.svg
 share/icons/Papirus/22x22/apps/microscope.svg
+share/icons/Papirus/22x22/apps/microsoft-office-online.svg
 share/icons/Papirus/22x22/apps/microsoft.svg
 share/icons/Papirus/22x22/apps/midori.svg
 share/icons/Papirus/22x22/apps/milkytracker.svg
@@ -25983,6 +26073,7 @@ share/icons/Papirus/22x22/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/22x22/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/22x22/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -26398,6 +26489,7 @@ share/icons/Papirus/22x22/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/22x22/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/22x22/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/22x22/apps/org.processing.processingide.svg
+share/icons/Papirus/22x22/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/22x22/apps/org.pwmt.zathura.svg
 share/icons/Papirus/22x22/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/22x22/apps/org.qbittorrent.qBittorrent.svg
@@ -26826,6 +26918,7 @@ share/icons/Papirus/22x22/apps/regedit.svg
 share/icons/Papirus/22x22/apps/rekonq.svg
 share/icons/Papirus/22x22/apps/relay.svg
 share/icons/Papirus/22x22/apps/remmina.svg
+share/icons/Papirus/22x22/apps/renpy.svg
 share/icons/Papirus/22x22/apps/repository.svg
 share/icons/Papirus/22x22/apps/resapplet.svg
 share/icons/Papirus/22x22/apps/rescuetime.svg
@@ -26955,6 +27048,7 @@ share/icons/Papirus/22x22/apps/skype.svg
 share/icons/Papirus/22x22/apps/skypeforlinux.svg
 share/icons/Papirus/22x22/apps/slack.svg
 share/icons/Papirus/22x22/apps/slade.svg
+share/icons/Papirus/22x22/apps/slay-the-spire.svg
 share/icons/Papirus/22x22/apps/sleep.svg
 share/icons/Papirus/22x22/apps/slic3r-prusa.svg
 share/icons/Papirus/22x22/apps/slic3r-prusa3d.svg
@@ -27033,6 +27127,7 @@ share/icons/Papirus/22x22/apps/starbound.svg
 share/icons/Papirus/22x22/apps/stardew-valley.svg
 share/icons/Papirus/22x22/apps/stargus.svg
 share/icons/Papirus/22x22/apps/start-here-archlinux.svg
+share/icons/Papirus/22x22/apps/start-here-arcolinux.svg
 share/icons/Papirus/22x22/apps/start-here-korora.svg
 share/icons/Papirus/22x22/apps/start-here-lubuntu.svg
 share/icons/Papirus/22x22/apps/start-here-pop-os.svg
@@ -27083,6 +27178,8 @@ share/icons/Papirus/22x22/apps/steam_icon_257510.svg
 share/icons/Papirus/22x22/apps/steam_icon_258890.svg
 share/icons/Papirus/22x22/apps/steam_icon_269670.svg
 share/icons/Papirus/22x22/apps/steam_icon_280.svg
+share/icons/Papirus/22x22/apps/steam_icon_286690.svg
+share/icons/Papirus/22x22/apps/steam_icon_287390.svg
 share/icons/Papirus/22x22/apps/steam_icon_289070.svg
 share/icons/Papirus/22x22/apps/steam_icon_291650.svg
 share/icons/Papirus/22x22/apps/steam_icon_294100.svg
@@ -27147,13 +27244,16 @@ share/icons/Papirus/22x22/apps/steam_icon_552620.svg
 share/icons/Papirus/22x22/apps/steam_icon_569860.svg
 share/icons/Papirus/22x22/apps/steam_icon_570.svg
 share/icons/Papirus/22x22/apps/steam_icon_57300.svg
+share/icons/Papirus/22x22/apps/steam_icon_588650.svg
 share/icons/Papirus/22x22/apps/steam_icon_598530.svg
 share/icons/Papirus/22x22/apps/steam_icon_599390.svg
 share/icons/Papirus/22x22/apps/steam_icon_620.svg
+share/icons/Papirus/22x22/apps/steam_icon_646570.svg
 share/icons/Papirus/22x22/apps/steam_icon_684410.svg
 share/icons/Papirus/22x22/apps/steam_icon_70.svg
 share/icons/Papirus/22x22/apps/steam_icon_70300.svg
 share/icons/Papirus/22x22/apps/steam_icon_730.svg
+share/icons/Papirus/22x22/apps/steam_icon_736260.svg
 share/icons/Papirus/22x22/apps/steam_icon_751780.svg
 share/icons/Papirus/22x22/apps/steam_icon_8930.svg
 share/icons/Papirus/22x22/apps/steam_icon_999830.svg
@@ -27171,6 +27271,7 @@ share/icons/Papirus/22x22/apps/stock_task.svg
 share/icons/Papirus/22x22/apps/stock_view-details.svg
 share/icons/Papirus/22x22/apps/stock_xfburn-burn-cd.svg
 share/icons/Papirus/22x22/apps/stock_xfburn.svg
+share/icons/Papirus/22x22/apps/stoken-gui.svg
 share/icons/Papirus/22x22/apps/strawberry.svg
 share/icons/Papirus/22x22/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/22x22/apps/streamtuner.svg
@@ -27565,9 +27666,12 @@ share/icons/Papirus/22x22/apps/wesnoth-icon.svg
 share/icons/Papirus/22x22/apps/wesnoth.svg
 share/icons/Papirus/22x22/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/22x22/apps/wesnoth_editor.svg
+share/icons/Papirus/22x22/apps/wewechat.svg
 share/icons/Papirus/22x22/apps/whalebird.svg
 share/icons/Papirus/22x22/apps/whatsapp-desktop.svg
+share/icons/Papirus/22x22/apps/whatsapp-nativefier.svg
 share/icons/Papirus/22x22/apps/whatsapp.svg
+share/icons/Papirus/22x22/apps/whatsdesk.svg
 share/icons/Papirus/22x22/apps/whatsie.svg
 share/icons/Papirus/22x22/apps/wicd-gtk.svg
 share/icons/Papirus/22x22/apps/wicd.svg
@@ -27670,11 +27774,13 @@ share/icons/Papirus/22x22/apps/xfce4-backdrop.svg
 share/icons/Papirus/22x22/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/22x22/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/22x22/apps/xfce4-clock.svg
+share/icons/Papirus/22x22/apps/xfce4-color-settings.svg
 share/icons/Papirus/22x22/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/22x22/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/22x22/apps/xfce4-dict.svg
 share/icons/Papirus/22x22/apps/xfce4-display.svg
 share/icons/Papirus/22x22/apps/xfce4-eyes.svg
+share/icons/Papirus/22x22/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/22x22/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/22x22/apps/xfce4-mcs-manager.svg
 share/icons/Papirus/22x22/apps/xfce4-menueditor.svg
@@ -30127,6 +30233,12 @@ share/icons/Papirus/22x22/panel/nomachine-indicator.svg
 share/icons/Papirus/22x22/panel/notes-panel.svg
 share/icons/Papirus/22x22/panel/num-lock-off.svg
 share/icons/Papirus/22x22/panel/num-lock-on.svg
+share/icons/Papirus/22x22/panel/nutstore-offline-panel.svg
+share/icons/Papirus/22x22/panel/nutstore-oops-panel.svg
+share/icons/Papirus/22x22/panel/nutstore-panel.svg
+share/icons/Papirus/22x22/panel/nutstore-paused-panel.svg
+share/icons/Papirus/22x22/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus/22x22/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus/22x22/panel/nylas-tray-empty.svg
 share/icons/Papirus/22x22/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus/22x22/panel/nylas-tray-full.svg
@@ -34312,6 +34424,7 @@ share/icons/Papirus/24x24/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/24x24/apps/appimagekit-cacher.svg
 share/icons/Papirus/24x24/apps/appimagekit-caprine.svg
 share/icons/Papirus/24x24/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/24x24/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/24x24/apps/appimagekit-dockstation.svg
 share/icons/Papirus/24x24/apps/appimagekit-downline.svg
 share/icons/Papirus/24x24/apps/appimagekit-draw.io.svg
@@ -34344,6 +34457,7 @@ share/icons/Papirus/24x24/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/24x24/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/24x24/apps/appimagekit-unityhub.svg
 share/icons/Papirus/24x24/apps/appimagekit-vnote.svg
+share/icons/Papirus/24x24/apps/appimagekit-wewechat.svg
 share/icons/Papirus/24x24/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/24x24/apps/appimagekit-workflowy.svg
 share/icons/Papirus/24x24/apps/applets-screenshooter.svg
@@ -34390,6 +34504,7 @@ share/icons/Papirus/24x24/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/24x24/apps/aptdaemon-working.svg
 share/icons/Papirus/24x24/apps/archive-manager.svg
 share/icons/Papirus/24x24/apps/archivemanager.svg
+share/icons/Papirus/24x24/apps/arcolinux-hello.svg
 share/icons/Papirus/24x24/apps/ardour.svg
 share/icons/Papirus/24x24/apps/ardour5.svg
 share/icons/Papirus/24x24/apps/arduino-icon-small.svg
@@ -34426,7 +34541,6 @@ share/icons/Papirus/24x24/apps/audience.svg
 share/icons/Papirus/24x24/apps/audio-player.svg
 share/icons/Papirus/24x24/apps/audio-recorder.svg
 share/icons/Papirus/24x24/apps/audiobook.svg
-share/icons/Papirus/24x24/apps/audoban.applet.playbar.svg
 share/icons/Papirus/24x24/apps/aurees.svg
 share/icons/Papirus/24x24/apps/auryo.svg
 share/icons/Papirus/24x24/apps/authy.svg
@@ -34437,10 +34551,12 @@ share/icons/Papirus/24x24/apps/awf.svg
 share/icons/Papirus/24x24/apps/ax-applet.svg
 share/icons/Papirus/24x24/apps/azpainter.svg
 share/icons/Papirus/24x24/apps/azuredatastudio.svg
+share/icons/Papirus/24x24/apps/baba-is-you.svg
 share/icons/Papirus/24x24/apps/babe.svg
 share/icons/Papirus/24x24/apps/background.svg
 share/icons/Papirus/24x24/apps/badge-small.svg
 share/icons/Papirus/24x24/apps/badland.svg
+share/icons/Papirus/24x24/apps/baidunetdisk.svg
 share/icons/Papirus/24x24/apps/baka-mplayer.svg
 share/icons/Papirus/24x24/apps/balena-etcher-electron.svg
 share/icons/Papirus/24x24/apps/baloo.svg
@@ -34449,6 +34565,7 @@ share/icons/Papirus/24x24/apps/banshee-1.svg
 share/icons/Papirus/24x24/apps/banshee.svg
 share/icons/Papirus/24x24/apps/baobab.svg
 share/icons/Papirus/24x24/apps/bareftp.svg
+share/icons/Papirus/24x24/apps/barrier.svg
 share/icons/Papirus/24x24/apps/bash.svg
 share/icons/Papirus/24x24/apps/basket.svg
 share/icons/Papirus/24x24/apps/bbc.svg
@@ -34519,6 +34636,7 @@ share/icons/Papirus/24x24/apps/bridge-constructor-portal.svg
 share/icons/Papirus/24x24/apps/brightnesssettings.svg
 share/icons/Papirus/24x24/apps/browser-tor.svg
 share/icons/Papirus/24x24/apps/browser.svg
+share/icons/Papirus/24x24/apps/browser360-beta.svg
 share/icons/Papirus/24x24/apps/bt-logo.svg
 share/icons/Papirus/24x24/apps/btsync-gui.svg
 share/icons/Papirus/24x24/apps/bug-buddy.svg
@@ -34569,6 +34687,8 @@ share/icons/Papirus/24x24/apps/camorama.svg
 share/icons/Papirus/24x24/apps/cantata.svg
 share/icons/Papirus/24x24/apps/cantor.svg
 share/icons/Papirus/24x24/apps/caprine.svg
+share/icons/Papirus/24x24/apps/carla-control.svg
+share/icons/Papirus/24x24/apps/carla.svg
 share/icons/Papirus/24x24/apps/cataclysm-dda.svg
 share/icons/Papirus/24x24/apps/catarina.svg
 share/icons/Papirus/24x24/apps/catfish.svg
@@ -34800,6 +34920,7 @@ share/icons/Papirus/24x24/apps/com.github.danrabbit.lookbook.svg
 share/icons/Papirus/24x24/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/24x24/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/24x24/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/24x24/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/24x24/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/24x24/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/24x24/apps/com.github.donadigo.eddy.svg
@@ -34908,6 +35029,7 @@ share/icons/Papirus/24x24/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/24x24/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/24x24/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/24x24/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/24x24/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/24x24/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/24x24/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/24x24/apps/com.obsproject.Studio.svg
@@ -34960,7 +35082,9 @@ share/icons/Papirus/24x24/apps/config-language.svg
 share/icons/Papirus/24x24/apps/config-users.svg
 share/icons/Papirus/24x24/apps/configurator.svg
 share/icons/Papirus/24x24/apps/configure-debian.svg
+share/icons/Papirus/24x24/apps/conky-logomark-violet.svg
 share/icons/Papirus/24x24/apps/conky-manager.svg
+share/icons/Papirus/24x24/apps/conky.svg
 share/icons/Papirus/24x24/apps/connectagram.svg
 share/icons/Papirus/24x24/apps/construo.svg
 share/icons/Papirus/24x24/apps/contact-editor.svg
@@ -35079,6 +35203,7 @@ share/icons/Papirus/24x24/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/24x24/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/24x24/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/24x24/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/24x24/apps/dead-cells.svg
 share/icons/Papirus/24x24/apps/dead-island.svg
 share/icons/Papirus/24x24/apps/deadbeef.svg
 share/icons/Papirus/24x24/apps/debian-installer-launcher.svg
@@ -35175,6 +35300,7 @@ share/icons/Papirus/24x24/apps/display-im6.Q16.svg
 share/icons/Papirus/24x24/apps/display-im6.q16.svg
 share/icons/Papirus/24x24/apps/display.im6.svg
 share/icons/Papirus/24x24/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/24x24/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/24x24/apps/distributor-logo-debian.svg
 share/icons/Papirus/24x24/apps/distributor-logo-fedora.svg
 share/icons/Papirus/24x24/apps/distributor-logo-freebsd.svg
@@ -35261,6 +35387,7 @@ share/icons/Papirus/24x24/apps/ekiga.svg
 share/icons/Papirus/24x24/apps/electrip.svg
 share/icons/Papirus/24x24/apps/electron-mail.svg
 share/icons/Papirus/24x24/apps/electron.svg
+share/icons/Papirus/24x24/apps/electron4.svg
 share/icons/Papirus/24x24/apps/electrum-ltc.svg
 share/icons/Papirus/24x24/apps/electrum.svg
 share/icons/Papirus/24x24/apps/element4l.svg
@@ -35335,6 +35462,7 @@ share/icons/Papirus/24x24/apps/facebook.svg
 share/icons/Papirus/24x24/apps/facebookresource.svg
 share/icons/Papirus/24x24/apps/factorio.svg
 share/icons/Papirus/24x24/apps/falkon.svg
+share/icons/Papirus/24x24/apps/far2l.svg
 share/icons/Papirus/24x24/apps/fbmessenger.svg
 share/icons/Papirus/24x24/apps/fbreader.svg
 share/icons/Papirus/24x24/apps/fceu.svg
@@ -35458,6 +35586,7 @@ share/icons/Papirus/24x24/apps/galternatives.svg
 share/icons/Papirus/24x24/apps/gambas3.svg
 share/icons/Papirus/24x24/apps/gargoyle-house.svg
 share/icons/Papirus/24x24/apps/garrysmod.svg
+share/icons/Papirus/24x24/apps/gaupol.svg
 share/icons/Papirus/24x24/apps/gbrainy.svg
 share/icons/Papirus/24x24/apps/gcbalculator.svg
 share/icons/Papirus/24x24/apps/gcleaner.svg
@@ -35810,6 +35939,7 @@ share/icons/Papirus/24x24/apps/gst-debug-viewer.svg
 share/icons/Papirus/24x24/apps/gstreamer-properties.svg
 share/icons/Papirus/24x24/apps/gtg.svg
 share/icons/Papirus/24x24/apps/gthumb.svg
+share/icons/Papirus/24x24/apps/gtimelog.svg
 share/icons/Papirus/24x24/apps/gtk-help.svg
 share/icons/Papirus/24x24/apps/gtk-info.svg
 share/icons/Papirus/24x24/apps/gtk-lshw.svg
@@ -35987,6 +36117,7 @@ share/icons/Papirus/24x24/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/24x24/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/24x24/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/24x24/apps/io.github.Hexchat.svg
+share/icons/Papirus/24x24/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/24x24/apps/io.github.OpenToonz.svg
 share/icons/Papirus/24x24/apps/io.github.Pithos.svg
 share/icons/Papirus/24x24/apps/io.github.TransmissionRemoteGtk.svg
@@ -36024,6 +36155,7 @@ share/icons/Papirus/24x24/apps/io.liri.Text.svg
 share/icons/Papirus/24x24/apps/io.lmms.LMMS.svg
 share/icons/Papirus/24x24/apps/io.mgba.mGBA.svg
 share/icons/Papirus/24x24/apps/io.neovim.nvim.svg
+share/icons/Papirus/24x24/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/24x24/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/24x24/apps/io.poez.Poezio.svg
 share/icons/Papirus/24x24/apps/io.thp.numptyphysics.svg
@@ -36448,6 +36580,7 @@ share/icons/Papirus/24x24/apps/livewallpaper-config.svg
 share/icons/Papirus/24x24/apps/livewallpaper.svg
 share/icons/Papirus/24x24/apps/lmms.svg
 share/icons/Papirus/24x24/apps/locale.svg
+share/icons/Papirus/24x24/apps/loginized.svg
 share/icons/Papirus/24x24/apps/logisim-icon-128.svg
 share/icons/Papirus/24x24/apps/logisim-icon.svg
 share/icons/Papirus/24x24/apps/logview.svg
@@ -36498,6 +36631,7 @@ share/icons/Papirus/24x24/apps/markpado.svg
 share/icons/Papirus/24x24/apps/marktext.svg
 share/icons/Papirus/24x24/apps/marsshooter.svg
 share/icons/Papirus/24x24/apps/master-pdf-editor.svg
+share/icons/Papirus/24x24/apps/masterpdfeditor.svg
 share/icons/Papirus/24x24/apps/masterpdfeditor3.svg
 share/icons/Papirus/24x24/apps/masterpdfeditor4.svg
 share/icons/Papirus/24x24/apps/masterpdfeditor5.svg
@@ -36575,9 +36709,12 @@ share/icons/Papirus/24x24/apps/messengerfordesktop.svg
 share/icons/Papirus/24x24/apps/metacity.svg
 share/icons/Papirus/24x24/apps/meterbridge.svg
 share/icons/Papirus/24x24/apps/meterbridge32x32.svg
+share/icons/Papirus/24x24/apps/metro-2033-redux.svg
+share/icons/Papirus/24x24/apps/metro-last-light-redux.svg
 share/icons/Papirus/24x24/apps/metronome.svg
 share/icons/Papirus/24x24/apps/mgba.svg
 share/icons/Papirus/24x24/apps/microscope.svg
+share/icons/Papirus/24x24/apps/microsoft-office-online.svg
 share/icons/Papirus/24x24/apps/microsoft.svg
 share/icons/Papirus/24x24/apps/midori.svg
 share/icons/Papirus/24x24/apps/milkytracker.svg
@@ -36747,6 +36884,7 @@ share/icons/Papirus/24x24/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/24x24/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/24x24/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -37160,6 +37298,7 @@ share/icons/Papirus/24x24/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/24x24/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/24x24/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/24x24/apps/org.processing.processingide.svg
+share/icons/Papirus/24x24/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/24x24/apps/org.pwmt.zathura.svg
 share/icons/Papirus/24x24/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/24x24/apps/org.qbittorrent.qBittorrent.svg
@@ -37588,6 +37727,7 @@ share/icons/Papirus/24x24/apps/regedit.svg
 share/icons/Papirus/24x24/apps/rekonq.svg
 share/icons/Papirus/24x24/apps/relay.svg
 share/icons/Papirus/24x24/apps/remmina.svg
+share/icons/Papirus/24x24/apps/renpy.svg
 share/icons/Papirus/24x24/apps/repository.svg
 share/icons/Papirus/24x24/apps/resapplet.svg
 share/icons/Papirus/24x24/apps/rescuetime.svg
@@ -37717,6 +37857,7 @@ share/icons/Papirus/24x24/apps/skype.svg
 share/icons/Papirus/24x24/apps/skypeforlinux.svg
 share/icons/Papirus/24x24/apps/slack.svg
 share/icons/Papirus/24x24/apps/slade.svg
+share/icons/Papirus/24x24/apps/slay-the-spire.svg
 share/icons/Papirus/24x24/apps/sleep.svg
 share/icons/Papirus/24x24/apps/slic3r-prusa.svg
 share/icons/Papirus/24x24/apps/slic3r-prusa3d.svg
@@ -37795,6 +37936,7 @@ share/icons/Papirus/24x24/apps/starbound.svg
 share/icons/Papirus/24x24/apps/stardew-valley.svg
 share/icons/Papirus/24x24/apps/stargus.svg
 share/icons/Papirus/24x24/apps/start-here-archlinux.svg
+share/icons/Papirus/24x24/apps/start-here-arcolinux.svg
 share/icons/Papirus/24x24/apps/start-here-korora.svg
 share/icons/Papirus/24x24/apps/start-here-lubuntu.svg
 share/icons/Papirus/24x24/apps/start-here-pop-os.svg
@@ -37845,6 +37987,8 @@ share/icons/Papirus/24x24/apps/steam_icon_257510.svg
 share/icons/Papirus/24x24/apps/steam_icon_258890.svg
 share/icons/Papirus/24x24/apps/steam_icon_269670.svg
 share/icons/Papirus/24x24/apps/steam_icon_280.svg
+share/icons/Papirus/24x24/apps/steam_icon_286690.svg
+share/icons/Papirus/24x24/apps/steam_icon_287390.svg
 share/icons/Papirus/24x24/apps/steam_icon_289070.svg
 share/icons/Papirus/24x24/apps/steam_icon_291650.svg
 share/icons/Papirus/24x24/apps/steam_icon_294100.svg
@@ -37909,13 +38053,16 @@ share/icons/Papirus/24x24/apps/steam_icon_552620.svg
 share/icons/Papirus/24x24/apps/steam_icon_569860.svg
 share/icons/Papirus/24x24/apps/steam_icon_570.svg
 share/icons/Papirus/24x24/apps/steam_icon_57300.svg
+share/icons/Papirus/24x24/apps/steam_icon_588650.svg
 share/icons/Papirus/24x24/apps/steam_icon_598530.svg
 share/icons/Papirus/24x24/apps/steam_icon_599390.svg
 share/icons/Papirus/24x24/apps/steam_icon_620.svg
+share/icons/Papirus/24x24/apps/steam_icon_646570.svg
 share/icons/Papirus/24x24/apps/steam_icon_684410.svg
 share/icons/Papirus/24x24/apps/steam_icon_70.svg
 share/icons/Papirus/24x24/apps/steam_icon_70300.svg
 share/icons/Papirus/24x24/apps/steam_icon_730.svg
+share/icons/Papirus/24x24/apps/steam_icon_736260.svg
 share/icons/Papirus/24x24/apps/steam_icon_751780.svg
 share/icons/Papirus/24x24/apps/steam_icon_8930.svg
 share/icons/Papirus/24x24/apps/steam_icon_999830.svg
@@ -37933,6 +38080,7 @@ share/icons/Papirus/24x24/apps/stock_task.svg
 share/icons/Papirus/24x24/apps/stock_view-details.svg
 share/icons/Papirus/24x24/apps/stock_xfburn-burn-cd.svg
 share/icons/Papirus/24x24/apps/stock_xfburn.svg
+share/icons/Papirus/24x24/apps/stoken-gui.svg
 share/icons/Papirus/24x24/apps/strawberry.svg
 share/icons/Papirus/24x24/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/24x24/apps/streamtuner.svg
@@ -38327,9 +38475,12 @@ share/icons/Papirus/24x24/apps/wesnoth-icon.svg
 share/icons/Papirus/24x24/apps/wesnoth.svg
 share/icons/Papirus/24x24/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/24x24/apps/wesnoth_editor.svg
+share/icons/Papirus/24x24/apps/wewechat.svg
 share/icons/Papirus/24x24/apps/whalebird.svg
 share/icons/Papirus/24x24/apps/whatsapp-desktop.svg
+share/icons/Papirus/24x24/apps/whatsapp-nativefier.svg
 share/icons/Papirus/24x24/apps/whatsapp.svg
+share/icons/Papirus/24x24/apps/whatsdesk.svg
 share/icons/Papirus/24x24/apps/whatsie.svg
 share/icons/Papirus/24x24/apps/wicd-gtk.svg
 share/icons/Papirus/24x24/apps/wicd.svg
@@ -38432,11 +38583,13 @@ share/icons/Papirus/24x24/apps/xfce4-backdrop.svg
 share/icons/Papirus/24x24/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/24x24/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/24x24/apps/xfce4-clock.svg
+share/icons/Papirus/24x24/apps/xfce4-color-settings.svg
 share/icons/Papirus/24x24/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/24x24/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/24x24/apps/xfce4-dict.svg
 share/icons/Papirus/24x24/apps/xfce4-display.svg
 share/icons/Papirus/24x24/apps/xfce4-eyes.svg
+share/icons/Papirus/24x24/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/24x24/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/24x24/apps/xfce4-mcs-manager.svg
 share/icons/Papirus/24x24/apps/xfce4-menueditor.svg
@@ -40889,6 +41042,12 @@ share/icons/Papirus/24x24/panel/nomachine-indicator.svg
 share/icons/Papirus/24x24/panel/notes-panel.svg
 share/icons/Papirus/24x24/panel/num-lock-off.svg
 share/icons/Papirus/24x24/panel/num-lock-on.svg
+share/icons/Papirus/24x24/panel/nutstore-offline-panel.svg
+share/icons/Papirus/24x24/panel/nutstore-oops-panel.svg
+share/icons/Papirus/24x24/panel/nutstore-panel.svg
+share/icons/Papirus/24x24/panel/nutstore-paused-panel.svg
+share/icons/Papirus/24x24/panel/nutstore-synchronized-panel.svg
+share/icons/Papirus/24x24/panel/nutstore-synchronizing-panel.svg
 share/icons/Papirus/24x24/panel/nylas-tray-empty.svg
 share/icons/Papirus/24x24/panel/nylas-tray-full-newitems.svg
 share/icons/Papirus/24x24/panel/nylas-tray-full.svg
@@ -43086,6 +43245,7 @@ share/icons/Papirus/32x32/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/32x32/apps/appimagekit-cacher.svg
 share/icons/Papirus/32x32/apps/appimagekit-caprine.svg
 share/icons/Papirus/32x32/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/32x32/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/32x32/apps/appimagekit-dockstation.svg
 share/icons/Papirus/32x32/apps/appimagekit-downline.svg
 share/icons/Papirus/32x32/apps/appimagekit-draw.io.svg
@@ -43118,6 +43278,7 @@ share/icons/Papirus/32x32/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/32x32/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/32x32/apps/appimagekit-unityhub.svg
 share/icons/Papirus/32x32/apps/appimagekit-vnote.svg
+share/icons/Papirus/32x32/apps/appimagekit-wewechat.svg
 share/icons/Papirus/32x32/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/32x32/apps/appimagekit-workflowy.svg
 share/icons/Papirus/32x32/apps/applets-screenshooter.svg
@@ -43164,6 +43325,7 @@ share/icons/Papirus/32x32/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/32x32/apps/aptdaemon-working.svg
 share/icons/Papirus/32x32/apps/archive-manager.svg
 share/icons/Papirus/32x32/apps/archivemanager.svg
+share/icons/Papirus/32x32/apps/arcolinux-hello.svg
 share/icons/Papirus/32x32/apps/ardour.svg
 share/icons/Papirus/32x32/apps/ardour5.svg
 share/icons/Papirus/32x32/apps/arduino-icon-small.svg
@@ -43200,7 +43362,6 @@ share/icons/Papirus/32x32/apps/audience.svg
 share/icons/Papirus/32x32/apps/audio-player.svg
 share/icons/Papirus/32x32/apps/audio-recorder.svg
 share/icons/Papirus/32x32/apps/audiobook.svg
-share/icons/Papirus/32x32/apps/audoban.applet.playbar.svg
 share/icons/Papirus/32x32/apps/aurees.svg
 share/icons/Papirus/32x32/apps/auryo.svg
 share/icons/Papirus/32x32/apps/authy.svg
@@ -43211,10 +43372,12 @@ share/icons/Papirus/32x32/apps/awf.svg
 share/icons/Papirus/32x32/apps/ax-applet.svg
 share/icons/Papirus/32x32/apps/azpainter.svg
 share/icons/Papirus/32x32/apps/azuredatastudio.svg
+share/icons/Papirus/32x32/apps/baba-is-you.svg
 share/icons/Papirus/32x32/apps/babe.svg
 share/icons/Papirus/32x32/apps/background.svg
 share/icons/Papirus/32x32/apps/badge-small.svg
 share/icons/Papirus/32x32/apps/badland.svg
+share/icons/Papirus/32x32/apps/baidunetdisk.svg
 share/icons/Papirus/32x32/apps/baka-mplayer.svg
 share/icons/Papirus/32x32/apps/balena-etcher-electron.svg
 share/icons/Papirus/32x32/apps/baloo.svg
@@ -43223,6 +43386,7 @@ share/icons/Papirus/32x32/apps/banshee-1.svg
 share/icons/Papirus/32x32/apps/banshee.svg
 share/icons/Papirus/32x32/apps/baobab.svg
 share/icons/Papirus/32x32/apps/bareftp.svg
+share/icons/Papirus/32x32/apps/barrier.svg
 share/icons/Papirus/32x32/apps/bash.svg
 share/icons/Papirus/32x32/apps/basket.svg
 share/icons/Papirus/32x32/apps/bbc.svg
@@ -43293,6 +43457,7 @@ share/icons/Papirus/32x32/apps/bridge-constructor-portal.svg
 share/icons/Papirus/32x32/apps/brightnesssettings.svg
 share/icons/Papirus/32x32/apps/browser-tor.svg
 share/icons/Papirus/32x32/apps/browser.svg
+share/icons/Papirus/32x32/apps/browser360-beta.svg
 share/icons/Papirus/32x32/apps/bt-logo.svg
 share/icons/Papirus/32x32/apps/btsync-gui.svg
 share/icons/Papirus/32x32/apps/bug-buddy.svg
@@ -43343,6 +43508,8 @@ share/icons/Papirus/32x32/apps/camorama.svg
 share/icons/Papirus/32x32/apps/cantata.svg
 share/icons/Papirus/32x32/apps/cantor.svg
 share/icons/Papirus/32x32/apps/caprine.svg
+share/icons/Papirus/32x32/apps/carla-control.svg
+share/icons/Papirus/32x32/apps/carla.svg
 share/icons/Papirus/32x32/apps/cataclysm-dda.svg
 share/icons/Papirus/32x32/apps/catarina.svg
 share/icons/Papirus/32x32/apps/catfish.svg
@@ -43574,6 +43741,7 @@ share/icons/Papirus/32x32/apps/com.github.danrabbit.lookbook.svg
 share/icons/Papirus/32x32/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/32x32/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/32x32/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/32x32/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/32x32/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/32x32/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/32x32/apps/com.github.donadigo.eddy.svg
@@ -43682,6 +43850,7 @@ share/icons/Papirus/32x32/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/32x32/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/32x32/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/32x32/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/32x32/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/32x32/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/32x32/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/32x32/apps/com.obsproject.Studio.svg
@@ -43734,7 +43903,9 @@ share/icons/Papirus/32x32/apps/config-language.svg
 share/icons/Papirus/32x32/apps/config-users.svg
 share/icons/Papirus/32x32/apps/configurator.svg
 share/icons/Papirus/32x32/apps/configure-debian.svg
+share/icons/Papirus/32x32/apps/conky-logomark-violet.svg
 share/icons/Papirus/32x32/apps/conky-manager.svg
+share/icons/Papirus/32x32/apps/conky.svg
 share/icons/Papirus/32x32/apps/connectagram.svg
 share/icons/Papirus/32x32/apps/construo.svg
 share/icons/Papirus/32x32/apps/contact-editor.svg
@@ -43853,6 +44024,7 @@ share/icons/Papirus/32x32/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/32x32/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/32x32/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/32x32/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/32x32/apps/dead-cells.svg
 share/icons/Papirus/32x32/apps/dead-island.svg
 share/icons/Papirus/32x32/apps/deadbeef.svg
 share/icons/Papirus/32x32/apps/debian-installer-launcher.svg
@@ -43949,6 +44121,7 @@ share/icons/Papirus/32x32/apps/display-im6.Q16.svg
 share/icons/Papirus/32x32/apps/display-im6.q16.svg
 share/icons/Papirus/32x32/apps/display.im6.svg
 share/icons/Papirus/32x32/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/32x32/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/32x32/apps/distributor-logo-debian.svg
 share/icons/Papirus/32x32/apps/distributor-logo-fedora.svg
 share/icons/Papirus/32x32/apps/distributor-logo-freebsd.svg
@@ -44035,6 +44208,7 @@ share/icons/Papirus/32x32/apps/ekiga.svg
 share/icons/Papirus/32x32/apps/electrip.svg
 share/icons/Papirus/32x32/apps/electron-mail.svg
 share/icons/Papirus/32x32/apps/electron.svg
+share/icons/Papirus/32x32/apps/electron4.svg
 share/icons/Papirus/32x32/apps/electrum-ltc.svg
 share/icons/Papirus/32x32/apps/electrum.svg
 share/icons/Papirus/32x32/apps/element4l.svg
@@ -44109,6 +44283,7 @@ share/icons/Papirus/32x32/apps/facebook.svg
 share/icons/Papirus/32x32/apps/facebookresource.svg
 share/icons/Papirus/32x32/apps/factorio.svg
 share/icons/Papirus/32x32/apps/falkon.svg
+share/icons/Papirus/32x32/apps/far2l.svg
 share/icons/Papirus/32x32/apps/fbmessenger.svg
 share/icons/Papirus/32x32/apps/fbreader.svg
 share/icons/Papirus/32x32/apps/fceu.svg
@@ -44232,6 +44407,7 @@ share/icons/Papirus/32x32/apps/galternatives.svg
 share/icons/Papirus/32x32/apps/gambas3.svg
 share/icons/Papirus/32x32/apps/gargoyle-house.svg
 share/icons/Papirus/32x32/apps/garrysmod.svg
+share/icons/Papirus/32x32/apps/gaupol.svg
 share/icons/Papirus/32x32/apps/gbrainy.svg
 share/icons/Papirus/32x32/apps/gcbalculator.svg
 share/icons/Papirus/32x32/apps/gcleaner.svg
@@ -44584,6 +44760,7 @@ share/icons/Papirus/32x32/apps/gst-debug-viewer.svg
 share/icons/Papirus/32x32/apps/gstreamer-properties.svg
 share/icons/Papirus/32x32/apps/gtg.svg
 share/icons/Papirus/32x32/apps/gthumb.svg
+share/icons/Papirus/32x32/apps/gtimelog.svg
 share/icons/Papirus/32x32/apps/gtk-help.svg
 share/icons/Papirus/32x32/apps/gtk-info.svg
 share/icons/Papirus/32x32/apps/gtk-lshw.svg
@@ -44761,6 +44938,7 @@ share/icons/Papirus/32x32/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/32x32/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/32x32/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/32x32/apps/io.github.Hexchat.svg
+share/icons/Papirus/32x32/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/32x32/apps/io.github.OpenToonz.svg
 share/icons/Papirus/32x32/apps/io.github.Pithos.svg
 share/icons/Papirus/32x32/apps/io.github.TransmissionRemoteGtk.svg
@@ -44798,6 +44976,7 @@ share/icons/Papirus/32x32/apps/io.liri.Text.svg
 share/icons/Papirus/32x32/apps/io.lmms.LMMS.svg
 share/icons/Papirus/32x32/apps/io.mgba.mGBA.svg
 share/icons/Papirus/32x32/apps/io.neovim.nvim.svg
+share/icons/Papirus/32x32/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/32x32/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/32x32/apps/io.poez.Poezio.svg
 share/icons/Papirus/32x32/apps/io.thp.numptyphysics.svg
@@ -45222,6 +45401,7 @@ share/icons/Papirus/32x32/apps/livewallpaper-config.svg
 share/icons/Papirus/32x32/apps/livewallpaper.svg
 share/icons/Papirus/32x32/apps/lmms.svg
 share/icons/Papirus/32x32/apps/locale.svg
+share/icons/Papirus/32x32/apps/loginized.svg
 share/icons/Papirus/32x32/apps/logisim-icon-128.svg
 share/icons/Papirus/32x32/apps/logisim-icon.svg
 share/icons/Papirus/32x32/apps/logview.svg
@@ -45272,6 +45452,7 @@ share/icons/Papirus/32x32/apps/markpado.svg
 share/icons/Papirus/32x32/apps/marktext.svg
 share/icons/Papirus/32x32/apps/marsshooter.svg
 share/icons/Papirus/32x32/apps/master-pdf-editor.svg
+share/icons/Papirus/32x32/apps/masterpdfeditor.svg
 share/icons/Papirus/32x32/apps/masterpdfeditor3.svg
 share/icons/Papirus/32x32/apps/masterpdfeditor4.svg
 share/icons/Papirus/32x32/apps/masterpdfeditor5.svg
@@ -45349,9 +45530,12 @@ share/icons/Papirus/32x32/apps/messengerfordesktop.svg
 share/icons/Papirus/32x32/apps/metacity.svg
 share/icons/Papirus/32x32/apps/meterbridge.svg
 share/icons/Papirus/32x32/apps/meterbridge32x32.svg
+share/icons/Papirus/32x32/apps/metro-2033-redux.svg
+share/icons/Papirus/32x32/apps/metro-last-light-redux.svg
 share/icons/Papirus/32x32/apps/metronome.svg
 share/icons/Papirus/32x32/apps/mgba.svg
 share/icons/Papirus/32x32/apps/microscope.svg
+share/icons/Papirus/32x32/apps/microsoft-office-online.svg
 share/icons/Papirus/32x32/apps/microsoft.svg
 share/icons/Papirus/32x32/apps/midori.svg
 share/icons/Papirus/32x32/apps/milkytracker.svg
@@ -45522,6 +45706,7 @@ share/icons/Papirus/32x32/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/32x32/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/32x32/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -45935,6 +46120,7 @@ share/icons/Papirus/32x32/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/32x32/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/32x32/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/32x32/apps/org.processing.processingide.svg
+share/icons/Papirus/32x32/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/32x32/apps/org.pwmt.zathura.svg
 share/icons/Papirus/32x32/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/32x32/apps/org.qbittorrent.qBittorrent.svg
@@ -46363,6 +46549,7 @@ share/icons/Papirus/32x32/apps/regedit.svg
 share/icons/Papirus/32x32/apps/rekonq.svg
 share/icons/Papirus/32x32/apps/relay.svg
 share/icons/Papirus/32x32/apps/remmina.svg
+share/icons/Papirus/32x32/apps/renpy.svg
 share/icons/Papirus/32x32/apps/repository.svg
 share/icons/Papirus/32x32/apps/resapplet.svg
 share/icons/Papirus/32x32/apps/rescuetime.svg
@@ -46492,6 +46679,7 @@ share/icons/Papirus/32x32/apps/skype.svg
 share/icons/Papirus/32x32/apps/skypeforlinux.svg
 share/icons/Papirus/32x32/apps/slack.svg
 share/icons/Papirus/32x32/apps/slade.svg
+share/icons/Papirus/32x32/apps/slay-the-spire.svg
 share/icons/Papirus/32x32/apps/sleep.svg
 share/icons/Papirus/32x32/apps/slic3r-prusa.svg
 share/icons/Papirus/32x32/apps/slic3r-prusa3d.svg
@@ -46570,6 +46758,7 @@ share/icons/Papirus/32x32/apps/starbound.svg
 share/icons/Papirus/32x32/apps/stardew-valley.svg
 share/icons/Papirus/32x32/apps/stargus.svg
 share/icons/Papirus/32x32/apps/start-here-archlinux.svg
+share/icons/Papirus/32x32/apps/start-here-arcolinux.svg
 share/icons/Papirus/32x32/apps/start-here-korora.svg
 share/icons/Papirus/32x32/apps/start-here-lubuntu.svg
 share/icons/Papirus/32x32/apps/start-here-pop-os.svg
@@ -46620,6 +46809,8 @@ share/icons/Papirus/32x32/apps/steam_icon_257510.svg
 share/icons/Papirus/32x32/apps/steam_icon_258890.svg
 share/icons/Papirus/32x32/apps/steam_icon_269670.svg
 share/icons/Papirus/32x32/apps/steam_icon_280.svg
+share/icons/Papirus/32x32/apps/steam_icon_286690.svg
+share/icons/Papirus/32x32/apps/steam_icon_287390.svg
 share/icons/Papirus/32x32/apps/steam_icon_289070.svg
 share/icons/Papirus/32x32/apps/steam_icon_291650.svg
 share/icons/Papirus/32x32/apps/steam_icon_294100.svg
@@ -46684,13 +46875,16 @@ share/icons/Papirus/32x32/apps/steam_icon_552620.svg
 share/icons/Papirus/32x32/apps/steam_icon_569860.svg
 share/icons/Papirus/32x32/apps/steam_icon_570.svg
 share/icons/Papirus/32x32/apps/steam_icon_57300.svg
+share/icons/Papirus/32x32/apps/steam_icon_588650.svg
 share/icons/Papirus/32x32/apps/steam_icon_598530.svg
 share/icons/Papirus/32x32/apps/steam_icon_599390.svg
 share/icons/Papirus/32x32/apps/steam_icon_620.svg
+share/icons/Papirus/32x32/apps/steam_icon_646570.svg
 share/icons/Papirus/32x32/apps/steam_icon_684410.svg
 share/icons/Papirus/32x32/apps/steam_icon_70.svg
 share/icons/Papirus/32x32/apps/steam_icon_70300.svg
 share/icons/Papirus/32x32/apps/steam_icon_730.svg
+share/icons/Papirus/32x32/apps/steam_icon_736260.svg
 share/icons/Papirus/32x32/apps/steam_icon_751780.svg
 share/icons/Papirus/32x32/apps/steam_icon_8930.svg
 share/icons/Papirus/32x32/apps/steam_icon_999830.svg
@@ -46708,6 +46902,7 @@ share/icons/Papirus/32x32/apps/stock_task.svg
 share/icons/Papirus/32x32/apps/stock_view-details.svg
 share/icons/Papirus/32x32/apps/stock_xfburn-burn-cd.svg
 share/icons/Papirus/32x32/apps/stock_xfburn.svg
+share/icons/Papirus/32x32/apps/stoken-gui.svg
 share/icons/Papirus/32x32/apps/strawberry.svg
 share/icons/Papirus/32x32/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/32x32/apps/streamtuner.svg
@@ -47104,9 +47299,12 @@ share/icons/Papirus/32x32/apps/wesnoth-icon.svg
 share/icons/Papirus/32x32/apps/wesnoth.svg
 share/icons/Papirus/32x32/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/32x32/apps/wesnoth_editor.svg
+share/icons/Papirus/32x32/apps/wewechat.svg
 share/icons/Papirus/32x32/apps/whalebird.svg
 share/icons/Papirus/32x32/apps/whatsapp-desktop.svg
+share/icons/Papirus/32x32/apps/whatsapp-nativefier.svg
 share/icons/Papirus/32x32/apps/whatsapp.svg
+share/icons/Papirus/32x32/apps/whatsdesk.svg
 share/icons/Papirus/32x32/apps/whatsie.svg
 share/icons/Papirus/32x32/apps/wicd-gtk.svg
 share/icons/Papirus/32x32/apps/wicd.svg
@@ -47209,11 +47407,13 @@ share/icons/Papirus/32x32/apps/xfce4-backdrop.svg
 share/icons/Papirus/32x32/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/32x32/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/32x32/apps/xfce4-clock.svg
+share/icons/Papirus/32x32/apps/xfce4-color-settings.svg
 share/icons/Papirus/32x32/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/32x32/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/32x32/apps/xfce4-dict.svg
 share/icons/Papirus/32x32/apps/xfce4-display.svg
 share/icons/Papirus/32x32/apps/xfce4-eyes.svg
+share/icons/Papirus/32x32/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/32x32/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/32x32/apps/xfce4-mcs-manager.svg
 share/icons/Papirus/32x32/apps/xfce4-menueditor.svg
@@ -49712,7 +49912,9 @@ share/icons/Papirus/32x32/status/laptoptrusted.svg
 share/icons/Papirus/32x32/status/messagebox_critical.svg
 share/icons/Papirus/32x32/status/messagebox_info.svg
 share/icons/Papirus/32x32/status/messagebox_warning.svg
+share/icons/Papirus/32x32/status/network-wired-activated.svg
 share/icons/Papirus/32x32/status/network-wired-disconnected.svg
+share/icons/Papirus/32x32/status/network-wired-unavailable.svg
 share/icons/Papirus/32x32/status/network-wireless-encrypted.svg
 share/icons/Papirus/32x32/status/non-starred.svg
 share/icons/Papirus/32x32/status/offline.svg
@@ -49973,6 +50175,7 @@ share/icons/Papirus/48x48/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/48x48/apps/appimagekit-cacher.svg
 share/icons/Papirus/48x48/apps/appimagekit-caprine.svg
 share/icons/Papirus/48x48/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/48x48/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/48x48/apps/appimagekit-dockstation.svg
 share/icons/Papirus/48x48/apps/appimagekit-downline.svg
 share/icons/Papirus/48x48/apps/appimagekit-draw.io.svg
@@ -50005,6 +50208,7 @@ share/icons/Papirus/48x48/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/48x48/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/48x48/apps/appimagekit-unityhub.svg
 share/icons/Papirus/48x48/apps/appimagekit-vnote.svg
+share/icons/Papirus/48x48/apps/appimagekit-wewechat.svg
 share/icons/Papirus/48x48/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/48x48/apps/appimagekit-workflowy.svg
 share/icons/Papirus/48x48/apps/applets-screenshooter.svg
@@ -50051,6 +50255,7 @@ share/icons/Papirus/48x48/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/48x48/apps/aptdaemon-working.svg
 share/icons/Papirus/48x48/apps/archive-manager.svg
 share/icons/Papirus/48x48/apps/archivemanager.svg
+share/icons/Papirus/48x48/apps/arcolinux-hello.svg
 share/icons/Papirus/48x48/apps/ardour.svg
 share/icons/Papirus/48x48/apps/ardour5.svg
 share/icons/Papirus/48x48/apps/arduino-icon-small.svg
@@ -50100,10 +50305,12 @@ share/icons/Papirus/48x48/apps/awf.svg
 share/icons/Papirus/48x48/apps/ax-applet.svg
 share/icons/Papirus/48x48/apps/azpainter.svg
 share/icons/Papirus/48x48/apps/azuredatastudio.svg
+share/icons/Papirus/48x48/apps/baba-is-you.svg
 share/icons/Papirus/48x48/apps/babe.svg
 share/icons/Papirus/48x48/apps/background.svg
 share/icons/Papirus/48x48/apps/badge-small.svg
 share/icons/Papirus/48x48/apps/badland.svg
+share/icons/Papirus/48x48/apps/baidunetdisk.svg
 share/icons/Papirus/48x48/apps/baka-mplayer.svg
 share/icons/Papirus/48x48/apps/balena-etcher-electron.svg
 share/icons/Papirus/48x48/apps/baloo.svg
@@ -50112,6 +50319,7 @@ share/icons/Papirus/48x48/apps/banshee-1.svg
 share/icons/Papirus/48x48/apps/banshee.svg
 share/icons/Papirus/48x48/apps/baobab.svg
 share/icons/Papirus/48x48/apps/bareftp.svg
+share/icons/Papirus/48x48/apps/barrier.svg
 share/icons/Papirus/48x48/apps/bash.svg
 share/icons/Papirus/48x48/apps/basket.svg
 share/icons/Papirus/48x48/apps/bbc.svg
@@ -50182,6 +50390,7 @@ share/icons/Papirus/48x48/apps/bridge-constructor-portal.svg
 share/icons/Papirus/48x48/apps/brightnesssettings.svg
 share/icons/Papirus/48x48/apps/browser-tor.svg
 share/icons/Papirus/48x48/apps/browser.svg
+share/icons/Papirus/48x48/apps/browser360-beta.svg
 share/icons/Papirus/48x48/apps/bt-logo.svg
 share/icons/Papirus/48x48/apps/btsync-gui.svg
 share/icons/Papirus/48x48/apps/bug-buddy.svg
@@ -50232,6 +50441,8 @@ share/icons/Papirus/48x48/apps/camorama.svg
 share/icons/Papirus/48x48/apps/cantata.svg
 share/icons/Papirus/48x48/apps/cantor.svg
 share/icons/Papirus/48x48/apps/caprine.svg
+share/icons/Papirus/48x48/apps/carla-control.svg
+share/icons/Papirus/48x48/apps/carla.svg
 share/icons/Papirus/48x48/apps/cataclysm-dda.svg
 share/icons/Papirus/48x48/apps/catarina.svg
 share/icons/Papirus/48x48/apps/catfish.svg
@@ -50466,6 +50677,7 @@ share/icons/Papirus/48x48/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/48x48/apps/com.github.davide-sd.ip_address.svg
 share/icons/Papirus/48x48/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/48x48/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/48x48/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/48x48/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/48x48/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/48x48/apps/com.github.donadigo.eddy.svg
@@ -50588,6 +50800,7 @@ share/icons/Papirus/48x48/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/48x48/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/48x48/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/48x48/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/48x48/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/48x48/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/48x48/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/48x48/apps/com.obsproject.Studio.svg
@@ -50641,7 +50854,9 @@ share/icons/Papirus/48x48/apps/config-language.svg
 share/icons/Papirus/48x48/apps/config-users.svg
 share/icons/Papirus/48x48/apps/configurator.svg
 share/icons/Papirus/48x48/apps/configure-debian.svg
+share/icons/Papirus/48x48/apps/conky-logomark-violet.svg
 share/icons/Papirus/48x48/apps/conky-manager.svg
+share/icons/Papirus/48x48/apps/conky.svg
 share/icons/Papirus/48x48/apps/connectagram.svg
 share/icons/Papirus/48x48/apps/construo.svg
 share/icons/Papirus/48x48/apps/contact-editor.svg
@@ -50760,6 +50975,7 @@ share/icons/Papirus/48x48/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/48x48/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/48x48/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/48x48/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/48x48/apps/dead-cells.svg
 share/icons/Papirus/48x48/apps/dead-island.svg
 share/icons/Papirus/48x48/apps/deadbeef.svg
 share/icons/Papirus/48x48/apps/debian-installer-launcher.svg
@@ -50858,6 +51074,7 @@ share/icons/Papirus/48x48/apps/display-im6.q16.svg
 share/icons/Papirus/48x48/apps/display.im6.svg
 share/icons/Papirus/48x48/apps/distributor-logo-antergos.svg
 share/icons/Papirus/48x48/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/48x48/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/48x48/apps/distributor-logo-centos.svg
 share/icons/Papirus/48x48/apps/distributor-logo-chakra.svg
 share/icons/Papirus/48x48/apps/distributor-logo-debian.svg
@@ -50954,6 +51171,7 @@ share/icons/Papirus/48x48/apps/ekiga.svg
 share/icons/Papirus/48x48/apps/electrip.svg
 share/icons/Papirus/48x48/apps/electron-mail.svg
 share/icons/Papirus/48x48/apps/electron.svg
+share/icons/Papirus/48x48/apps/electron4.svg
 share/icons/Papirus/48x48/apps/electrum-ltc.svg
 share/icons/Papirus/48x48/apps/electrum.svg
 share/icons/Papirus/48x48/apps/element4l.svg
@@ -51029,6 +51247,7 @@ share/icons/Papirus/48x48/apps/facebook.svg
 share/icons/Papirus/48x48/apps/facebookresource.svg
 share/icons/Papirus/48x48/apps/factorio.svg
 share/icons/Papirus/48x48/apps/falkon.svg
+share/icons/Papirus/48x48/apps/far2l.svg
 share/icons/Papirus/48x48/apps/fbmessenger.svg
 share/icons/Papirus/48x48/apps/fbreader.svg
 share/icons/Papirus/48x48/apps/fceu.svg
@@ -51152,6 +51371,7 @@ share/icons/Papirus/48x48/apps/galternatives.svg
 share/icons/Papirus/48x48/apps/gambas3.svg
 share/icons/Papirus/48x48/apps/gargoyle-house.svg
 share/icons/Papirus/48x48/apps/garrysmod.svg
+share/icons/Papirus/48x48/apps/gaupol.svg
 share/icons/Papirus/48x48/apps/gbrainy.svg
 share/icons/Papirus/48x48/apps/gcbalculator.svg
 share/icons/Papirus/48x48/apps/gcleaner.svg
@@ -51504,6 +51724,7 @@ share/icons/Papirus/48x48/apps/gst-debug-viewer.svg
 share/icons/Papirus/48x48/apps/gstreamer-properties.svg
 share/icons/Papirus/48x48/apps/gtg.svg
 share/icons/Papirus/48x48/apps/gthumb.svg
+share/icons/Papirus/48x48/apps/gtimelog.svg
 share/icons/Papirus/48x48/apps/gtk-help.svg
 share/icons/Papirus/48x48/apps/gtk-info.svg
 share/icons/Papirus/48x48/apps/gtk-lshw.svg
@@ -51681,6 +51902,7 @@ share/icons/Papirus/48x48/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/48x48/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/48x48/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/48x48/apps/io.github.Hexchat.svg
+share/icons/Papirus/48x48/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/48x48/apps/io.github.OpenToonz.svg
 share/icons/Papirus/48x48/apps/io.github.Pithos.svg
 share/icons/Papirus/48x48/apps/io.github.TransmissionRemoteGtk.svg
@@ -51718,6 +51940,7 @@ share/icons/Papirus/48x48/apps/io.liri.Text.svg
 share/icons/Papirus/48x48/apps/io.lmms.LMMS.svg
 share/icons/Papirus/48x48/apps/io.mgba.mGBA.svg
 share/icons/Papirus/48x48/apps/io.neovim.nvim.svg
+share/icons/Papirus/48x48/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/48x48/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/48x48/apps/io.poez.Poezio.svg
 share/icons/Papirus/48x48/apps/io.thp.numptyphysics.svg
@@ -52142,6 +52365,7 @@ share/icons/Papirus/48x48/apps/livewallpaper-config.svg
 share/icons/Papirus/48x48/apps/livewallpaper.svg
 share/icons/Papirus/48x48/apps/lmms.svg
 share/icons/Papirus/48x48/apps/locale.svg
+share/icons/Papirus/48x48/apps/loginized.svg
 share/icons/Papirus/48x48/apps/logisim-icon-128.svg
 share/icons/Papirus/48x48/apps/logisim-icon.svg
 share/icons/Papirus/48x48/apps/logview.svg
@@ -52193,6 +52417,7 @@ share/icons/Papirus/48x48/apps/marktext.svg
 share/icons/Papirus/48x48/apps/marsshooter.svg
 share/icons/Papirus/48x48/apps/martchus.syncthingplasmoid.svg
 share/icons/Papirus/48x48/apps/master-pdf-editor.svg
+share/icons/Papirus/48x48/apps/masterpdfeditor.svg
 share/icons/Papirus/48x48/apps/masterpdfeditor3.svg
 share/icons/Papirus/48x48/apps/masterpdfeditor4.svg
 share/icons/Papirus/48x48/apps/masterpdfeditor5.svg
@@ -52273,9 +52498,12 @@ share/icons/Papirus/48x48/apps/messengerfordesktop.svg
 share/icons/Papirus/48x48/apps/metacity.svg
 share/icons/Papirus/48x48/apps/meterbridge.svg
 share/icons/Papirus/48x48/apps/meterbridge32x32.svg
+share/icons/Papirus/48x48/apps/metro-2033-redux.svg
+share/icons/Papirus/48x48/apps/metro-last-light-redux.svg
 share/icons/Papirus/48x48/apps/metronome.svg
 share/icons/Papirus/48x48/apps/mgba.svg
 share/icons/Papirus/48x48/apps/microscope.svg
+share/icons/Papirus/48x48/apps/microsoft-office-online.svg
 share/icons/Papirus/48x48/apps/microsoft.svg
 share/icons/Papirus/48x48/apps/midori.svg
 share/icons/Papirus/48x48/apps/milkytracker.svg
@@ -52446,6 +52674,7 @@ share/icons/Papirus/48x48/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/48x48/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/48x48/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -52968,6 +53197,7 @@ share/icons/Papirus/48x48/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/48x48/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/48x48/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/48x48/apps/org.processing.processingide.svg
+share/icons/Papirus/48x48/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/48x48/apps/org.pwmt.zathura.svg
 share/icons/Papirus/48x48/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/48x48/apps/org.qbittorrent.qBittorrent.svg
@@ -53398,6 +53628,7 @@ share/icons/Papirus/48x48/apps/regedit.svg
 share/icons/Papirus/48x48/apps/rekonq.svg
 share/icons/Papirus/48x48/apps/relay.svg
 share/icons/Papirus/48x48/apps/remmina.svg
+share/icons/Papirus/48x48/apps/renpy.svg
 share/icons/Papirus/48x48/apps/repository.svg
 share/icons/Papirus/48x48/apps/resapplet.svg
 share/icons/Papirus/48x48/apps/rescuetime.svg
@@ -53531,6 +53762,7 @@ share/icons/Papirus/48x48/apps/skype.svg
 share/icons/Papirus/48x48/apps/skypeforlinux.svg
 share/icons/Papirus/48x48/apps/slack.svg
 share/icons/Papirus/48x48/apps/slade.svg
+share/icons/Papirus/48x48/apps/slay-the-spire.svg
 share/icons/Papirus/48x48/apps/sleep.svg
 share/icons/Papirus/48x48/apps/slic3r-prusa.svg
 share/icons/Papirus/48x48/apps/slic3r-prusa3d.svg
@@ -53610,6 +53842,7 @@ share/icons/Papirus/48x48/apps/stardew-valley.svg
 share/icons/Papirus/48x48/apps/stargus.svg
 share/icons/Papirus/48x48/apps/start-here-antergos.svg
 share/icons/Papirus/48x48/apps/start-here-archlinux.svg
+share/icons/Papirus/48x48/apps/start-here-arcolinux.svg
 share/icons/Papirus/48x48/apps/start-here-chakra.svg
 share/icons/Papirus/48x48/apps/start-here-debian.svg
 share/icons/Papirus/48x48/apps/start-here-fedora.svg
@@ -53673,6 +53906,8 @@ share/icons/Papirus/48x48/apps/steam_icon_257510.svg
 share/icons/Papirus/48x48/apps/steam_icon_258890.svg
 share/icons/Papirus/48x48/apps/steam_icon_269670.svg
 share/icons/Papirus/48x48/apps/steam_icon_280.svg
+share/icons/Papirus/48x48/apps/steam_icon_286690.svg
+share/icons/Papirus/48x48/apps/steam_icon_287390.svg
 share/icons/Papirus/48x48/apps/steam_icon_289070.svg
 share/icons/Papirus/48x48/apps/steam_icon_291650.svg
 share/icons/Papirus/48x48/apps/steam_icon_294100.svg
@@ -53737,13 +53972,16 @@ share/icons/Papirus/48x48/apps/steam_icon_552620.svg
 share/icons/Papirus/48x48/apps/steam_icon_569860.svg
 share/icons/Papirus/48x48/apps/steam_icon_570.svg
 share/icons/Papirus/48x48/apps/steam_icon_57300.svg
+share/icons/Papirus/48x48/apps/steam_icon_588650.svg
 share/icons/Papirus/48x48/apps/steam_icon_598530.svg
 share/icons/Papirus/48x48/apps/steam_icon_599390.svg
 share/icons/Papirus/48x48/apps/steam_icon_620.svg
+share/icons/Papirus/48x48/apps/steam_icon_646570.svg
 share/icons/Papirus/48x48/apps/steam_icon_684410.svg
 share/icons/Papirus/48x48/apps/steam_icon_70.svg
 share/icons/Papirus/48x48/apps/steam_icon_70300.svg
 share/icons/Papirus/48x48/apps/steam_icon_730.svg
+share/icons/Papirus/48x48/apps/steam_icon_736260.svg
 share/icons/Papirus/48x48/apps/steam_icon_751780.svg
 share/icons/Papirus/48x48/apps/steam_icon_8930.svg
 share/icons/Papirus/48x48/apps/steam_icon_999830.svg
@@ -53766,6 +54004,7 @@ share/icons/Papirus/48x48/apps/stock_xfburn-data-copy.svg
 share/icons/Papirus/48x48/apps/stock_xfburn-import-session.svg
 share/icons/Papirus/48x48/apps/stock_xfburn-new-data-composition.svg
 share/icons/Papirus/48x48/apps/stock_xfburn.svg
+share/icons/Papirus/48x48/apps/stoken-gui.svg
 share/icons/Papirus/48x48/apps/strawberry.svg
 share/icons/Papirus/48x48/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/48x48/apps/streamtuner.svg
@@ -54163,9 +54402,12 @@ share/icons/Papirus/48x48/apps/wesnoth-icon.svg
 share/icons/Papirus/48x48/apps/wesnoth.svg
 share/icons/Papirus/48x48/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/48x48/apps/wesnoth_editor.svg
+share/icons/Papirus/48x48/apps/wewechat.svg
 share/icons/Papirus/48x48/apps/whalebird.svg
 share/icons/Papirus/48x48/apps/whatsapp-desktop.svg
+share/icons/Papirus/48x48/apps/whatsapp-nativefier.svg
 share/icons/Papirus/48x48/apps/whatsapp.svg
+share/icons/Papirus/48x48/apps/whatsdesk.svg
 share/icons/Papirus/48x48/apps/whatsie.svg
 share/icons/Papirus/48x48/apps/wicd-gtk.svg
 share/icons/Papirus/48x48/apps/wicd.svg
@@ -54268,11 +54510,13 @@ share/icons/Papirus/48x48/apps/xfce4-backdrop.svg
 share/icons/Papirus/48x48/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/48x48/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/48x48/apps/xfce4-clock.svg
+share/icons/Papirus/48x48/apps/xfce4-color-settings.svg
 share/icons/Papirus/48x48/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/48x48/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/48x48/apps/xfce4-dict.svg
 share/icons/Papirus/48x48/apps/xfce4-display.svg
 share/icons/Papirus/48x48/apps/xfce4-eyes.svg
+share/icons/Papirus/48x48/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/48x48/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/48x48/apps/xfce4-logo.svg
 share/icons/Papirus/48x48/apps/xfce4-mcs-manager.svg
@@ -57104,6 +57348,7 @@ share/icons/Papirus/64x64/apps/appimagekit-brackets-electron.svg
 share/icons/Papirus/64x64/apps/appimagekit-cacher.svg
 share/icons/Papirus/64x64/apps/appimagekit-caprine.svg
 share/icons/Papirus/64x64/apps/appimagekit-colorpicker.svg
+share/icons/Papirus/64x64/apps/appimagekit-conky-logomark-violet.svg
 share/icons/Papirus/64x64/apps/appimagekit-dockstation.svg
 share/icons/Papirus/64x64/apps/appimagekit-downline.svg
 share/icons/Papirus/64x64/apps/appimagekit-draw.io.svg
@@ -57136,6 +57381,7 @@ share/icons/Papirus/64x64/apps/appimagekit-synfigstudio.svg
 share/icons/Papirus/64x64/apps/appimagekit-trinity-desktop.svg
 share/icons/Papirus/64x64/apps/appimagekit-unityhub.svg
 share/icons/Papirus/64x64/apps/appimagekit-vnote.svg
+share/icons/Papirus/64x64/apps/appimagekit-wewechat.svg
 share/icons/Papirus/64x64/apps/appimagekit-wire-desktop.svg
 share/icons/Papirus/64x64/apps/appimagekit-workflowy.svg
 share/icons/Papirus/64x64/apps/applets-screenshooter.svg
@@ -57182,6 +57428,7 @@ share/icons/Papirus/64x64/apps/aptdaemon-upgrade.svg
 share/icons/Papirus/64x64/apps/aptdaemon-working.svg
 share/icons/Papirus/64x64/apps/archive-manager.svg
 share/icons/Papirus/64x64/apps/archivemanager.svg
+share/icons/Papirus/64x64/apps/arcolinux-hello.svg
 share/icons/Papirus/64x64/apps/ardour.svg
 share/icons/Papirus/64x64/apps/ardour5.svg
 share/icons/Papirus/64x64/apps/arduino-icon-small.svg
@@ -57218,7 +57465,6 @@ share/icons/Papirus/64x64/apps/audience.svg
 share/icons/Papirus/64x64/apps/audio-player.svg
 share/icons/Papirus/64x64/apps/audio-recorder.svg
 share/icons/Papirus/64x64/apps/audiobook.svg
-share/icons/Papirus/64x64/apps/audoban.applet.playbar.svg
 share/icons/Papirus/64x64/apps/aurees.svg
 share/icons/Papirus/64x64/apps/auryo.svg
 share/icons/Papirus/64x64/apps/authy.svg
@@ -57229,10 +57475,12 @@ share/icons/Papirus/64x64/apps/awf.svg
 share/icons/Papirus/64x64/apps/ax-applet.svg
 share/icons/Papirus/64x64/apps/azpainter.svg
 share/icons/Papirus/64x64/apps/azuredatastudio.svg
+share/icons/Papirus/64x64/apps/baba-is-you.svg
 share/icons/Papirus/64x64/apps/babe.svg
 share/icons/Papirus/64x64/apps/background.svg
 share/icons/Papirus/64x64/apps/badge-small.svg
 share/icons/Papirus/64x64/apps/badland.svg
+share/icons/Papirus/64x64/apps/baidunetdisk.svg
 share/icons/Papirus/64x64/apps/baka-mplayer.svg
 share/icons/Papirus/64x64/apps/balena-etcher-electron.svg
 share/icons/Papirus/64x64/apps/baloo.svg
@@ -57241,6 +57489,7 @@ share/icons/Papirus/64x64/apps/banshee-1.svg
 share/icons/Papirus/64x64/apps/banshee.svg
 share/icons/Papirus/64x64/apps/baobab.svg
 share/icons/Papirus/64x64/apps/bareftp.svg
+share/icons/Papirus/64x64/apps/barrier.svg
 share/icons/Papirus/64x64/apps/bash.svg
 share/icons/Papirus/64x64/apps/basket.svg
 share/icons/Papirus/64x64/apps/bbc.svg
@@ -57311,6 +57560,7 @@ share/icons/Papirus/64x64/apps/bridge-constructor-portal.svg
 share/icons/Papirus/64x64/apps/brightnesssettings.svg
 share/icons/Papirus/64x64/apps/browser-tor.svg
 share/icons/Papirus/64x64/apps/browser.svg
+share/icons/Papirus/64x64/apps/browser360-beta.svg
 share/icons/Papirus/64x64/apps/bt-logo.svg
 share/icons/Papirus/64x64/apps/btsync-gui.svg
 share/icons/Papirus/64x64/apps/bug-buddy.svg
@@ -57361,6 +57611,8 @@ share/icons/Papirus/64x64/apps/camorama.svg
 share/icons/Papirus/64x64/apps/cantata.svg
 share/icons/Papirus/64x64/apps/cantor.svg
 share/icons/Papirus/64x64/apps/caprine.svg
+share/icons/Papirus/64x64/apps/carla-control.svg
+share/icons/Papirus/64x64/apps/carla.svg
 share/icons/Papirus/64x64/apps/cataclysm-dda.svg
 share/icons/Papirus/64x64/apps/catarina.svg
 share/icons/Papirus/64x64/apps/catfish.svg
@@ -57592,6 +57844,7 @@ share/icons/Papirus/64x64/apps/com.github.danrabbit.lookbook.svg
 share/icons/Papirus/64x64/apps/com.github.danrabbit.nimbus.svg
 share/icons/Papirus/64x64/apps/com.github.davidmhewitt.clipped.svg
 share/icons/Papirus/64x64/apps/com.github.davidmhewitt.torrential.svg
+share/icons/Papirus/64x64/apps/com.github.debauchee.barrier.svg
 share/icons/Papirus/64x64/apps/com.github.djaler.formatter.svg
 share/icons/Papirus/64x64/apps/com.github.donadigo.appeditor.svg
 share/icons/Papirus/64x64/apps/com.github.donadigo.eddy.svg
@@ -57700,6 +57953,7 @@ share/icons/Papirus/64x64/apps/com.makemkv.MakeMKV.svg
 share/icons/Papirus/64x64/apps/com.mattermost.Desktop.svg
 share/icons/Papirus/64x64/apps/com.meetfranz.Franz.svg
 share/icons/Papirus/64x64/apps/com.moddb.TotalChaos.svg
+share/icons/Papirus/64x64/apps/com.mojang.Minecraft.svg
 share/icons/Papirus/64x64/apps/com.moonlight_stream.Moonlight.svg
 share/icons/Papirus/64x64/apps/com.notepadqq.Notepadqq.svg
 share/icons/Papirus/64x64/apps/com.obsproject.Studio.svg
@@ -57752,7 +58006,9 @@ share/icons/Papirus/64x64/apps/config-language.svg
 share/icons/Papirus/64x64/apps/config-users.svg
 share/icons/Papirus/64x64/apps/configurator.svg
 share/icons/Papirus/64x64/apps/configure-debian.svg
+share/icons/Papirus/64x64/apps/conky-logomark-violet.svg
 share/icons/Papirus/64x64/apps/conky-manager.svg
+share/icons/Papirus/64x64/apps/conky.svg
 share/icons/Papirus/64x64/apps/connectagram.svg
 share/icons/Papirus/64x64/apps/construo.svg
 share/icons/Papirus/64x64/apps/contact-editor.svg
@@ -57871,6 +58127,7 @@ share/icons/Papirus/64x64/apps/de.manuel_kehl.go-for-it.svg
 share/icons/Papirus/64x64/apps/de.rwth_aachen.ient.YUView.svg
 share/icons/Papirus/64x64/apps/de.unifreiburg.ellipticcurve.svg
 share/icons/Papirus/64x64/apps/de.wolfvollprecht.UberWriter.svg
+share/icons/Papirus/64x64/apps/dead-cells.svg
 share/icons/Papirus/64x64/apps/dead-island.svg
 share/icons/Papirus/64x64/apps/deadbeef.svg
 share/icons/Papirus/64x64/apps/debian-installer-launcher.svg
@@ -57967,6 +58224,7 @@ share/icons/Papirus/64x64/apps/display-im6.Q16.svg
 share/icons/Papirus/64x64/apps/display-im6.q16.svg
 share/icons/Papirus/64x64/apps/display.im6.svg
 share/icons/Papirus/64x64/apps/distributor-logo-archlinux.svg
+share/icons/Papirus/64x64/apps/distributor-logo-arcolinux.svg
 share/icons/Papirus/64x64/apps/distributor-logo-debian.svg
 share/icons/Papirus/64x64/apps/distributor-logo-fedora.svg
 share/icons/Papirus/64x64/apps/distributor-logo-freebsd.svg
@@ -58053,6 +58311,7 @@ share/icons/Papirus/64x64/apps/ekiga.svg
 share/icons/Papirus/64x64/apps/electrip.svg
 share/icons/Papirus/64x64/apps/electron-mail.svg
 share/icons/Papirus/64x64/apps/electron.svg
+share/icons/Papirus/64x64/apps/electron4.svg
 share/icons/Papirus/64x64/apps/electrum-ltc.svg
 share/icons/Papirus/64x64/apps/electrum.svg
 share/icons/Papirus/64x64/apps/element4l.svg
@@ -58127,6 +58386,7 @@ share/icons/Papirus/64x64/apps/facebook.svg
 share/icons/Papirus/64x64/apps/facebookresource.svg
 share/icons/Papirus/64x64/apps/factorio.svg
 share/icons/Papirus/64x64/apps/falkon.svg
+share/icons/Papirus/64x64/apps/far2l.svg
 share/icons/Papirus/64x64/apps/fbmessenger.svg
 share/icons/Papirus/64x64/apps/fbreader.svg
 share/icons/Papirus/64x64/apps/fceu.svg
@@ -58250,6 +58510,7 @@ share/icons/Papirus/64x64/apps/galternatives.svg
 share/icons/Papirus/64x64/apps/gambas3.svg
 share/icons/Papirus/64x64/apps/gargoyle-house.svg
 share/icons/Papirus/64x64/apps/garrysmod.svg
+share/icons/Papirus/64x64/apps/gaupol.svg
 share/icons/Papirus/64x64/apps/gbrainy.svg
 share/icons/Papirus/64x64/apps/gcbalculator.svg
 share/icons/Papirus/64x64/apps/gcleaner.svg
@@ -58602,6 +58863,7 @@ share/icons/Papirus/64x64/apps/gst-debug-viewer.svg
 share/icons/Papirus/64x64/apps/gstreamer-properties.svg
 share/icons/Papirus/64x64/apps/gtg.svg
 share/icons/Papirus/64x64/apps/gthumb.svg
+share/icons/Papirus/64x64/apps/gtimelog.svg
 share/icons/Papirus/64x64/apps/gtk-help.svg
 share/icons/Papirus/64x64/apps/gtk-info.svg
 share/icons/Papirus/64x64/apps/gtk-lshw.svg
@@ -58779,6 +59041,7 @@ share/icons/Papirus/64x64/apps/io.github.Freedoom-Phase-1.svg
 share/icons/Papirus/64x64/apps/io.github.Freedoom-Phase-2.svg
 share/icons/Papirus/64x64/apps/io.github.GnomeMpv.svg
 share/icons/Papirus/64x64/apps/io.github.Hexchat.svg
+share/icons/Papirus/64x64/apps/io.github.NhekoReborn.Nheko.svg
 share/icons/Papirus/64x64/apps/io.github.OpenToonz.svg
 share/icons/Papirus/64x64/apps/io.github.Pithos.svg
 share/icons/Papirus/64x64/apps/io.github.TransmissionRemoteGtk.svg
@@ -58816,6 +59079,7 @@ share/icons/Papirus/64x64/apps/io.liri.Text.svg
 share/icons/Papirus/64x64/apps/io.lmms.LMMS.svg
 share/icons/Papirus/64x64/apps/io.mgba.mGBA.svg
 share/icons/Papirus/64x64/apps/io.neovim.nvim.svg
+share/icons/Papirus/64x64/apps/io.otsaloma.gaupol.svg
 share/icons/Papirus/64x64/apps/io.otsaloma.nfoview.svg
 share/icons/Papirus/64x64/apps/io.poez.Poezio.svg
 share/icons/Papirus/64x64/apps/io.thp.numptyphysics.svg
@@ -59240,6 +59504,7 @@ share/icons/Papirus/64x64/apps/livewallpaper-config.svg
 share/icons/Papirus/64x64/apps/livewallpaper.svg
 share/icons/Papirus/64x64/apps/lmms.svg
 share/icons/Papirus/64x64/apps/locale.svg
+share/icons/Papirus/64x64/apps/loginized.svg
 share/icons/Papirus/64x64/apps/logisim-icon-128.svg
 share/icons/Papirus/64x64/apps/logisim-icon.svg
 share/icons/Papirus/64x64/apps/logview.svg
@@ -59290,6 +59555,7 @@ share/icons/Papirus/64x64/apps/markpado.svg
 share/icons/Papirus/64x64/apps/marktext.svg
 share/icons/Papirus/64x64/apps/marsshooter.svg
 share/icons/Papirus/64x64/apps/master-pdf-editor.svg
+share/icons/Papirus/64x64/apps/masterpdfeditor.svg
 share/icons/Papirus/64x64/apps/masterpdfeditor3.svg
 share/icons/Papirus/64x64/apps/masterpdfeditor4.svg
 share/icons/Papirus/64x64/apps/masterpdfeditor5.svg
@@ -59367,9 +59633,12 @@ share/icons/Papirus/64x64/apps/messengerfordesktop.svg
 share/icons/Papirus/64x64/apps/metacity.svg
 share/icons/Papirus/64x64/apps/meterbridge.svg
 share/icons/Papirus/64x64/apps/meterbridge32x32.svg
+share/icons/Papirus/64x64/apps/metro-2033-redux.svg
+share/icons/Papirus/64x64/apps/metro-last-light-redux.svg
 share/icons/Papirus/64x64/apps/metronome.svg
 share/icons/Papirus/64x64/apps/mgba.svg
 share/icons/Papirus/64x64/apps/microscope.svg
+share/icons/Papirus/64x64/apps/microsoft-office-online.svg
 share/icons/Papirus/64x64/apps/microsoft.svg
 share/icons/Papirus/64x64/apps/midori.svg
 share/icons/Papirus/64x64/apps/milkytracker.svg
@@ -59539,6 +59808,7 @@ share/icons/Papirus/64x64/apps/net.sourceforge.atanks.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.btanks.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.chromium-bsu.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.electrip.Electrip.svg
+share/icons/Papirus/64x64/apps/net.sourceforge.fretsonfire.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.mars-game.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.projectM.svg
 share/icons/Papirus/64x64/apps/net.sourceforge.qtpfsgui.LuminanceHDR.svg
@@ -59952,6 +60222,7 @@ share/icons/Papirus/64x64/apps/org.pitivi.Pitivi.svg
 share/icons/Papirus/64x64/apps/org.pjbroad.EternallandsClient.svg
 share/icons/Papirus/64x64/apps/org.ppsspp.PPSSPP.svg
 share/icons/Papirus/64x64/apps/org.processing.processingide.svg
+share/icons/Papirus/64x64/apps/org.pulseaudio.pavucontrol.svg
 share/icons/Papirus/64x64/apps/org.pwmt.zathura.svg
 share/icons/Papirus/64x64/apps/org.pyzo.pyzo.svg
 share/icons/Papirus/64x64/apps/org.qbittorrent.qBittorrent.svg
@@ -60380,6 +60651,7 @@ share/icons/Papirus/64x64/apps/regedit.svg
 share/icons/Papirus/64x64/apps/rekonq.svg
 share/icons/Papirus/64x64/apps/relay.svg
 share/icons/Papirus/64x64/apps/remmina.svg
+share/icons/Papirus/64x64/apps/renpy.svg
 share/icons/Papirus/64x64/apps/repository.svg
 share/icons/Papirus/64x64/apps/resapplet.svg
 share/icons/Papirus/64x64/apps/rescuetime.svg
@@ -60509,6 +60781,7 @@ share/icons/Papirus/64x64/apps/skype.svg
 share/icons/Papirus/64x64/apps/skypeforlinux.svg
 share/icons/Papirus/64x64/apps/slack.svg
 share/icons/Papirus/64x64/apps/slade.svg
+share/icons/Papirus/64x64/apps/slay-the-spire.svg
 share/icons/Papirus/64x64/apps/sleep.svg
 share/icons/Papirus/64x64/apps/slic3r-prusa.svg
 share/icons/Papirus/64x64/apps/slic3r-prusa3d.svg
@@ -60587,6 +60860,7 @@ share/icons/Papirus/64x64/apps/starbound.svg
 share/icons/Papirus/64x64/apps/stardew-valley.svg
 share/icons/Papirus/64x64/apps/stargus.svg
 share/icons/Papirus/64x64/apps/start-here-archlinux.svg
+share/icons/Papirus/64x64/apps/start-here-arcolinux.svg
 share/icons/Papirus/64x64/apps/start-here-korora.svg
 share/icons/Papirus/64x64/apps/start-here-lubuntu.svg
 share/icons/Papirus/64x64/apps/start-here-pop-os.svg
@@ -60637,6 +60911,8 @@ share/icons/Papirus/64x64/apps/steam_icon_257510.svg
 share/icons/Papirus/64x64/apps/steam_icon_258890.svg
 share/icons/Papirus/64x64/apps/steam_icon_269670.svg
 share/icons/Papirus/64x64/apps/steam_icon_280.svg
+share/icons/Papirus/64x64/apps/steam_icon_286690.svg
+share/icons/Papirus/64x64/apps/steam_icon_287390.svg
 share/icons/Papirus/64x64/apps/steam_icon_289070.svg
 share/icons/Papirus/64x64/apps/steam_icon_291650.svg
 share/icons/Papirus/64x64/apps/steam_icon_294100.svg
@@ -60701,13 +60977,16 @@ share/icons/Papirus/64x64/apps/steam_icon_552620.svg
 share/icons/Papirus/64x64/apps/steam_icon_569860.svg
 share/icons/Papirus/64x64/apps/steam_icon_570.svg
 share/icons/Papirus/64x64/apps/steam_icon_57300.svg
+share/icons/Papirus/64x64/apps/steam_icon_588650.svg
 share/icons/Papirus/64x64/apps/steam_icon_598530.svg
 share/icons/Papirus/64x64/apps/steam_icon_599390.svg
 share/icons/Papirus/64x64/apps/steam_icon_620.svg
+share/icons/Papirus/64x64/apps/steam_icon_646570.svg
 share/icons/Papirus/64x64/apps/steam_icon_684410.svg
 share/icons/Papirus/64x64/apps/steam_icon_70.svg
 share/icons/Papirus/64x64/apps/steam_icon_70300.svg
 share/icons/Papirus/64x64/apps/steam_icon_730.svg
+share/icons/Papirus/64x64/apps/steam_icon_736260.svg
 share/icons/Papirus/64x64/apps/steam_icon_751780.svg
 share/icons/Papirus/64x64/apps/steam_icon_8930.svg
 share/icons/Papirus/64x64/apps/steam_icon_999830.svg
@@ -60725,6 +61004,7 @@ share/icons/Papirus/64x64/apps/stock_task.svg
 share/icons/Papirus/64x64/apps/stock_view-details.svg
 share/icons/Papirus/64x64/apps/stock_xfburn-burn-cd.svg
 share/icons/Papirus/64x64/apps/stock_xfburn.svg
+share/icons/Papirus/64x64/apps/stoken-gui.svg
 share/icons/Papirus/64x64/apps/strawberry.svg
 share/icons/Papirus/64x64/apps/streamlink-twitch-gui.svg
 share/icons/Papirus/64x64/apps/streamtuner.svg
@@ -61119,9 +61399,12 @@ share/icons/Papirus/64x64/apps/wesnoth-icon.svg
 share/icons/Papirus/64x64/apps/wesnoth.svg
 share/icons/Papirus/64x64/apps/wesnoth_editor-icon.svg
 share/icons/Papirus/64x64/apps/wesnoth_editor.svg
+share/icons/Papirus/64x64/apps/wewechat.svg
 share/icons/Papirus/64x64/apps/whalebird.svg
 share/icons/Papirus/64x64/apps/whatsapp-desktop.svg
+share/icons/Papirus/64x64/apps/whatsapp-nativefier.svg
 share/icons/Papirus/64x64/apps/whatsapp.svg
+share/icons/Papirus/64x64/apps/whatsdesk.svg
 share/icons/Papirus/64x64/apps/whatsie.svg
 share/icons/Papirus/64x64/apps/wicd-gtk.svg
 share/icons/Papirus/64x64/apps/wicd.svg
@@ -61224,11 +61507,13 @@ share/icons/Papirus/64x64/apps/xfce4-backdrop.svg
 share/icons/Papirus/64x64/apps/xfce4-battery-plugin.svg
 share/icons/Papirus/64x64/apps/xfce4-clipman-plugin.svg
 share/icons/Papirus/64x64/apps/xfce4-clock.svg
+share/icons/Papirus/64x64/apps/xfce4-color-settings.svg
 share/icons/Papirus/64x64/apps/xfce4-cpufreq-plugin.svg
 share/icons/Papirus/64x64/apps/xfce4-cpugraph-plugin.svg
 share/icons/Papirus/64x64/apps/xfce4-dict.svg
 share/icons/Papirus/64x64/apps/xfce4-display.svg
 share/icons/Papirus/64x64/apps/xfce4-eyes.svg
+share/icons/Papirus/64x64/apps/xfce4-fsguard-plugin-warning.svg
 share/icons/Papirus/64x64/apps/xfce4-indicator-plugin.svg
 share/icons/Papirus/64x64/apps/xfce4-mcs-manager.svg
 share/icons/Papirus/64x64/apps/xfce4-menueditor.svg
@@ -71917,6 +72202,12 @@ share/icons/ePapirus/24x24/panel/notification-new-symbolic.svg
 share/icons/ePapirus/24x24/panel/notification-symbolic.svg
 share/icons/ePapirus/24x24/panel/num-lock-off.svg
 share/icons/ePapirus/24x24/panel/num-lock-on.svg
+share/icons/ePapirus/24x24/panel/nutstore-offline-panel.svg
+share/icons/ePapirus/24x24/panel/nutstore-oops-panel.svg
+share/icons/ePapirus/24x24/panel/nutstore-panel.svg
+share/icons/ePapirus/24x24/panel/nutstore-paused-panel.svg
+share/icons/ePapirus/24x24/panel/nutstore-synchronized-panel.svg
+share/icons/ePapirus/24x24/panel/nutstore-synchronizing-panel.svg
 share/icons/ePapirus/24x24/panel/nylas-tray-empty.svg
 share/icons/ePapirus/24x24/panel/nylas-tray-full-newitems.svg
 share/icons/ePapirus/24x24/panel/nylas-tray-full.svg

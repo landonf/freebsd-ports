@@ -3,6 +3,7 @@
 
 PORTNAME=	libdrm
 PORTVERSION=	2.4.98
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://dri.freedesktop.org/libdrm/
@@ -43,12 +44,17 @@ PLIST_SUB+=	ARM_DRIVERS="@comment "
 PLIST_SUB+=	INTEL_DRIVER=""
 PLIST_SUB+=	NOUVEAU_DRIVER=""
 PLIST_SUB+=	RADEON_DRIVERS=""
-.elif ${ARCH} == powerpc || ${ARCH} == powerpc64
+.elif ${ARCH:Mpowerpc*}
 PLIST_SUB+=	ARM_DRIVERS="@comment "
 PLIST_SUB+=	INTEL_DRIVER="@comment "
 PLIST_SUB+=	NOUVEAU_DRIVER=""
 PLIST_SUB+=	RADEON_DRIVERS=""
-.elif ${ARCH} == aarch64 || ${ARCH} == armv6 || ${ARCH} == armv7
+.elif ${ARCH} == aarch64
+PLIST_SUB+=	ARM_DRIVERS=""
+PLIST_SUB+=	INTEL_DRIVER="@comment "
+PLIST_SUB+=	NOUVEAU_DRIVER=""
+PLIST_SUB+=	RADEON_DRIVERS=""
+.elif ${ARCH:Marm*}
 PLIST_SUB+=	ARM_DRIVERS=""
 PLIST_SUB+=	INTEL_DRIVER="@comment "
 PLIST_SUB+=	NOUVEAU_DRIVER="@comment "
