@@ -54,7 +54,7 @@
   * Netgraph command list, we don't support any
   * additional commands.
   */
-@@ -303,24 +324,223 @@ static int ng_vboxnetflt_newhook(node_p node, hook_p h
+@@ -303,24 +324,225 @@ static int ng_vboxnetflt_newhook(node_p node, hook_p h
  }
  
  /**
@@ -142,13 +142,15 @@
 +            break;
 +    }
 +
-+    /* Timeout may race with completion */
-+    if (error == EWOULDBLOCK && sreq->resp != NULL)
++    /* If our request was completed, we don't care if mtx_sleep()
++     * timed out or otherwise failed */
++    if (sreq->resp != NULL)
 +        return (0);
 +
 +    /*
-+     * If we stop waiting before a response has been received, we're
-+     * responsible for removing this handler from the queue.
++     * Otherwise, we stopped waiting before a response has been
++     * received, and we're responsible for removing this handler from
++     * the queue.
 +     *
 +     * If the expected message is delivered later, it will be dropped as
 +     * spurious if it fails to match against another registered handler.
@@ -156,7 +158,7 @@
 +    STAILQ_REMOVE(&pThis->u.s.sreq_list, sreq, vboxnetflt_sreq,
 +        sr_link);
 +
-+    return (error);
++    return (ETIMEDOUT);
 +}
 +
 +/**
@@ -593,7 +595,7 @@
 +
 +    /* Fetch the node list */
 +    error = vboxnetflt_sreq_simple_rpc(pThis, node, NG_NODE_ID(node),
-+        NGM_GENERIC_COOKIE, NGM_LISTNODES, msg);
++        NGM_GENERIC_COOKIE, NGM_LISTNODES, &msg);
 +    if (error)
 +    {
 +        LogRel(("VBoxNetFlt: NGM_LISTNODES failed (%d)\n", error));
