@@ -43,7 +43,6 @@
     SUBDIR += antiword
     SUBDIR += apache-poi
     SUBDIR += apache-solr
-    SUBDIR += apache-solr3
     SUBDIR += apertium
     SUBDIR += archmage
     SUBDIR += artha
@@ -81,7 +80,6 @@
     SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
-    SUBDIR += cdiff
     SUBDIR += cgrep
     SUBDIR += chkascii
     SUBDIR += chpp
@@ -223,6 +221,7 @@
     SUBDIR += gmetadom
     SUBDIR += gnome-doc-utils
     SUBDIR += gnugrep
+    SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
     SUBDIR += gpp
@@ -302,6 +301,7 @@
     SUBDIR += it-hyphen
     SUBDIR += it-mythes
     SUBDIR += itstool
+    SUBDIR += itstool22
     SUBDIR += jade
     SUBDIR += jakarta-commons-digester
     SUBDIR += jalingo
@@ -803,6 +803,7 @@
     SUBDIR += p5-Term-QRCode
     SUBDIR += p5-Test-Groonga
     SUBDIR += p5-Test-Perl-Critic
+    SUBDIR += p5-Test-Regexp
     SUBDIR += p5-Text-ANSI-Util
     SUBDIR += p5-Text-ANSI-WideUtil
     SUBDIR += p5-Text-ANSITable
@@ -1301,6 +1302,7 @@
     SUBDIR += py-nltk
     SUBDIR += py-normality
     SUBDIR += py-numpydoc
+    SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
     SUBDIR += py-openpyxl24
     SUBDIR += py-openstackdocstheme
@@ -1313,11 +1315,13 @@
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
+    SUBDIR += py-patiencediff
     SUBDIR += py-pdfminer
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
     SUBDIR += py-pdftotext
+    SUBDIR += py-pikepdf
     SUBDIR += py-precis_i18n
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
@@ -1346,6 +1350,7 @@
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
     SUBDIR += py-python-slugify
+    SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
@@ -1477,7 +1482,9 @@
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
+    SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml008
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1844,12 +1851,14 @@
     SUBDIR += yali
     SUBDIR += yamcha
     SUBDIR += yaml-mode.el
+    SUBDIR += ydiff
     SUBDIR += yelp-tools
     SUBDIR += yelp-xsl
     SUBDIR += yi-aspell
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yould
+    SUBDIR += yq
     SUBDIR += zenxml
     SUBDIR += zorba
     SUBDIR += zu-aspell

@@ -101,7 +101,8 @@ php_ARGS:=	${php_ARGS:Nflavors}
 php_ARGS+=	ext
 .    if !defined(USE_GITHUB)
 EXTRACT_SUFX=	.tgz
-MASTER_SITES=	http://pecl.php.net/get/
+MASTER_SITES=	https://pecl.php.net/get/ \
+		http://pecl.php.net/get/
 .    endif
 PKGNAMEPREFIX=	${PECL_PKGNAMEPREFIX}
 DIST_SUBDIR=	PECL
@@ -353,18 +354,8 @@ add-plist-phpext:
 	@${ECHO_CMD} "[" > ${PHP_EXT_PKGMESSAGE}
 	@${ECHO_CMD} "{" >> ${PHP_EXT_PKGMESSAGE}
 	@${ECHO_CMD} "  message: <<EOD" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "****************************************************************************" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "The following line has been added to your ${PREFIX}/${PHP_EXT_INI_FILE}" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "configuration file to automatically load the installed extension:" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "" >> ${PHP_EXT_PKGMESSAGE}
-.    if ${php_ARGS:Mzend}
-	@${ECHO_CMD} "zend_extension=${PHP_MODNAME}.so" >> ${PHP_EXT_PKGMESSAGE}
-.    else
-	@${ECHO_CMD} "extension=${PHP_MODNAME}.so" >> ${PHP_EXT_PKGMESSAGE}
-.    endif
-	@${ECHO_CMD} "" >> ${PHP_EXT_PKGMESSAGE}
-	@${ECHO_CMD} "****************************************************************************" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "This file has been added to automatically load the installed extension:" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "${PREFIX}/${PHP_EXT_INI_FILE}" >> ${PHP_EXT_PKGMESSAGE}
 	@${ECHO_CMD} "EOD" >> ${PHP_EXT_PKGMESSAGE}
 	@${ECHO_CMD} "  type: install" >> ${PHP_EXT_PKGMESSAGE}
 	@${ECHO_CMD} "}" >> ${PHP_EXT_PKGMESSAGE}

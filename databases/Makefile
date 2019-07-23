@@ -51,7 +51,6 @@
     SUBDIR += db48
     SUBDIR += db5
     SUBDIR += db6
-    SUBDIR += dbconnect
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -101,7 +100,6 @@
     SUBDIR += gom
     SUBDIR += gqlplus
     SUBDIR += grass7
-    SUBDIR += gtksql
     SUBDIR += hamsterdb
     SUBDIR += hashtypes
     SUBDIR += hbase
@@ -183,6 +181,8 @@
     SUBDIR += mariadb102-server
     SUBDIR += mariadb103-client
     SUBDIR += mariadb103-server
+    SUBDIR += mariadb104-client
+    SUBDIR += mariadb104-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
     SUBDIR += mdbtools
@@ -561,7 +561,6 @@
     SUBDIR += pecl-memcached
     SUBDIR += pecl-mongodb
     SUBDIR += pecl-redis
-    SUBDIR += pecl-redis3
     SUBDIR += pecl-rrd
     SUBDIR += percona-pam-for-mysql
     SUBDIR += percona-toolkit
@@ -661,9 +660,6 @@
     SUBDIR += plpgsql_check
     SUBDIR += pointcloud
     SUBDIR += postgis-jdbc
-    SUBDIR += postgis20
-    SUBDIR += postgis21
-    SUBDIR += postgis22
     SUBDIR += postgis23
     SUBDIR += postgis24
     SUBDIR += postgis25
@@ -890,6 +886,7 @@
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
     SUBDIR += rubygem-activemodel50
+    SUBDIR += rubygem-activerecord-explain-analyze
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
@@ -1018,6 +1015,7 @@
     SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
+    SUBDIR += tdb1
     SUBDIR += tdbc
     SUBDIR += tile38
     SUBDIR += tiledb

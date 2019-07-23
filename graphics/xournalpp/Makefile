@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	xournalpp
-DISTVERSION=	1.0.12
-PORTREVISION=	1
+DISTVERSION=	1.0.13-nightly.20190722
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org

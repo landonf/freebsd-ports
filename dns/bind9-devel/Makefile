@@ -9,7 +9,7 @@ PORTREVISION=	0
 .else
 # XXX: correct version
 # dns/bind9xx here
-PORTREVISION=	1
+PORTREVISION=	0
 .endif
 CATEGORIES=	dns net ipv6
 # XXX: put the ISC master_site
@@ -39,15 +39,15 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 .endif
 
 # XXX: remove tar:bz2
-USES=	compiler:c11 cpe libedit ssl tar:bz2
+USES=	compiler:c11 cpe libedit pkgconfig ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.15.0a0.2019.06.10
+ISCVERSION=	9.15.0a0.2019.07.21
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	32c86e29e23c6829290086f919fed3cf124fe348
+GL_COMMIT=	03b8e7ccb7c702aff4e2d10f54deb2ef5a7946c2
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -57,7 +57,7 @@ CPE_UPDATE=	${ISCVERSION:C/.*-//:tl}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
-		--with-libxml2=${LOCALBASE} \
+		--with-libxml2 \
 		--with-readline="-L${LOCALBASE}/lib -ledit" \
 		--with-dlopen=yes \
 		--with-openssl=${OPENSSLBASE} \
@@ -210,7 +210,7 @@ TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-symtable \
 			--enable-developer
-USES+=	perl5 pkgconfig
+USES+=	perl5
 USE_PERL5=	build
 BUILD_DEPENDS+=	cmocka>0:sysutils/cmocka
 .else

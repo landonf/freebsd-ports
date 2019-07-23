@@ -22,7 +22,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libfreetype.so:print/freetype2 \
 		libgif.so:graphics/giflib \
 		liblcms2.so:graphics/lcms2 \
-		libpng16.so:graphics/png
+		libpng.so:graphics/png
 
 USES=		compiler:features gmake iconv jpeg pkgconfig
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
@@ -51,9 +51,9 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	12
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	1
-JDK_BUILD_NUMBER=	12
-BSD_JDK_VERSION=	2
+JDK_PATCH_VERSION=	2
+JDK_BUILD_NUMBER=	10
+BSD_JDK_VERSION=	1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CC=/usr/bin/cc \
