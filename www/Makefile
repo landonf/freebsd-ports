@@ -33,7 +33,6 @@
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
-    SUBDIR += august
     SUBDIR += awffull
     SUBDIR += aws
     SUBDIR += aws-demos
@@ -1309,7 +1308,6 @@
     SUBDIR += p5-WebService-Linode
     SUBDIR += p5-WebService-MoviePosterDB
     SUBDIR += p5-WebService-MusicBrainz
-    SUBDIR += p5-WebService-MusicBrainz0
     SUBDIR += p5-WebService-NoPaste
     SUBDIR += p5-WebService-Pushover
     SUBDIR += p5-WebService-Rakuten
@@ -2226,6 +2224,7 @@
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
+    SUBDIR += slowhttptest
     SUBDIR += smarty2
     SUBDIR += smarty3
     SUBDIR += smb_auth
@@ -2423,7 +2422,6 @@
     SUBDIR += webhook
     SUBDIR += webinject
     SUBDIR += webkit2-gtk3
-    SUBDIR += weblint
     SUBDIR += weblint++
     SUBDIR += webpy
     SUBDIR += webreport
