@@ -57,6 +57,7 @@
     SUBDIR += asmon
     SUBDIR += asusoled
     SUBDIR += atf-master
+    SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
     SUBDIR += atf-sun50i_a64
     SUBDIR += atitvout
@@ -96,7 +97,6 @@
     SUBDIR += batmon
     SUBDIR += battmond
     SUBDIR += battray
-    SUBDIR += bbcp
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
@@ -104,6 +104,7 @@
     SUBDIR += bfs
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
+    SUBDIR += bibelot
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
@@ -205,6 +206,7 @@
     SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
+    SUBDIR += crate
     SUBDIR += cronic
     SUBDIR += cronolog
     SUBDIR += cronolog-devel
@@ -301,6 +303,7 @@
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += eventlog
+    SUBDIR += evhz
     SUBDIR += evtviewer
     SUBDIR += exa
     SUBDIR += exfat-utils
@@ -346,6 +349,7 @@
     SUBDIR += fpc-users
     SUBDIR += fpc-utmp
     SUBDIR += fpc-uuid
+    SUBDIR += frand
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
@@ -430,6 +434,7 @@
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
+    SUBDIR += go-wtf
     SUBDIR += goaccess
     SUBDIR += goawk
     SUBDIR += gomplate
@@ -442,7 +447,6 @@
     SUBDIR += graid5
     SUBDIR += graveman
     SUBDIR += graylog
-    SUBDIR += grub2
     SUBDIR += grub2-bhyve
     SUBDIR += gsh
     SUBDIR += gsmartcontrol
@@ -497,6 +501,7 @@
     SUBDIR += intel-pcm-devel
     SUBDIR += intel-qcu
     SUBDIR += intel-undervolt
+    SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
     SUBDIR += iocell
@@ -589,6 +594,7 @@
     SUBDIR += linux-c7-lttng-ust
     SUBDIR += linux-c7-userspace-rcu
     SUBDIR += linux-crashplan
+    SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += livecd
     SUBDIR += lizardfs
@@ -627,6 +633,7 @@
     SUBDIR += mac_nonet
     SUBDIR += mac_rtprio
     SUBDIR += magicrescue
+    SUBDIR += makeztxt
     SUBDIR += manck
     SUBDIR += mapchan
     SUBDIR += mapdir
@@ -754,7 +761,6 @@
     SUBDIR += ohmu
     SUBDIR += omnibackup
     SUBDIR += open
-    SUBDIR += openhpi
     SUBDIR += openipmi
     SUBDIR += openupsd
     SUBDIR += openzfs
@@ -1099,6 +1105,7 @@
     SUBDIR += reoback
     SUBDIR += reptyr
     SUBDIR += respond
+    SUBDIR += rest-server
     SUBDIR += restic
     SUBDIR += retail
     SUBDIR += rex
@@ -1227,12 +1234,14 @@
     SUBDIR += schedutils
     SUBDIR += screen
     SUBDIR += screenfetch
+    SUBDIR += screenfetch-nox11
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
     SUBDIR += sdparm
     SUBDIR += seatools
     SUBDIR += sec
+    SUBDIR += sensu-go
     SUBDIR += serf
     SUBDIR += setcdboot
     SUBDIR += setquota
@@ -1299,11 +1308,7 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng310
     SUBDIR += syslog-ng311
-    SUBDIR += syslog-ng312
-    SUBDIR += syslog-ng313
-    SUBDIR += syslog-ng314
     SUBDIR += syslog-ng315
     SUBDIR += syslog-ng317
     SUBDIR += syslog-ng318
@@ -1311,7 +1316,7 @@
     SUBDIR += syslog-ng320
     SUBDIR += syslog-ng321
     SUBDIR += syslog-ng322
-    SUBDIR += syslog-ng39
+    SUBDIR += syslog-ng323
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1328,6 +1333,7 @@
     SUBDIR += tenshi
     SUBDIR += tentakel
     SUBDIR += terraform
+    SUBDIR += terraform-provider-vultr
     SUBDIR += testdisk
     SUBDIR += thefish
     SUBDIR += timelimit
@@ -1397,6 +1403,8 @@
     SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-riotboard
+    SUBDIR += u-boot-rock64
+    SUBDIR += u-boot-rockpro64
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi-0-w
     SUBDIR += u-boot-rpi2
@@ -1419,6 +1427,7 @@
     SUBDIR += uefi-edk2-bhyve-csm
     SUBDIR += uefi-edk2-bhyve-devel
     SUBDIR += uefi-edk2-qemu
+    SUBDIR += ufetch
     SUBDIR += ufs_copy
     SUBDIR += uhidd
     SUBDIR += uif2iso
