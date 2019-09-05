@@ -178,8 +178,6 @@
     SUBDIR += pangoxsl
     SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
-    SUBDIR += pure-gtk
-    SUBDIR += pure-tk
     SUBDIR += py-AnyQt
     SUBDIR += py-Pmw
     SUBDIR += py-SquareMap
@@ -224,6 +222,7 @@
     SUBDIR += qtermwidget
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6
+    SUBDIR += redkite
     SUBDIR += rep-gtk2
     SUBDIR += rubygem-gdk3
     SUBDIR += rubygem-gtk2

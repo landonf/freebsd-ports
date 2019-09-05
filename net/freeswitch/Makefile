@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	freeswitch
-PORTVERSION=	1.8.5
+PORTVERSION=	1.8.7
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://files.freeswitch.org/releases/freeswitch/ \
 		http://files.freeswitch.org/releases/sounds/:sounds
