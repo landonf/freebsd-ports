@@ -12,7 +12,7 @@ COMMENT=	Java Development Kit ${JDK_MAJOR_VERSION}
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64
 
 BUILD_DEPENDS=	zip:archivers/zip \
 		autoconf>0:devel/autoconf \
@@ -24,6 +24,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libgif.so:graphics/giflib \
 		liblcms2.so:graphics/lcms2 \
 		libpng.so:graphics/png
+RUN_DEPENDS=	javavm:java/javavmwrapper
 
 USES=		compiler:features gmake iconv jpeg pkgconfig
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
@@ -56,7 +57,7 @@ JDK_MAJOR_VERSION=	11
 JDK_MINOR_VERSION=	0
 JDK_PATCH_VERSION=	4
 JDK_BUILD_NUMBER=	11
-BSD_JDK_VERSION=	1
+BSD_JDK_VERSION=	2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CC=${CC} \
@@ -93,6 +94,11 @@ JDK_BUILD_TYPE=		release
 
 .include <bsd.port.pre.mk>
 
+# Support aarch64 on FreeBSD 12 and up
+.if ${OSVERSION} >= 1200500
+ONLY_FOR_ARCHS+=aarch64
+.endif
+
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk11 \
 		${LOCALBASE}/bootstrap-openjdk11
 
@@ -116,13 +122,16 @@ CONFIGURE_ARGS+=	--with-toolchain-type=${COMPILER_TYPE}
 
 .if ${COMPILER_TYPE} == gcc
 USE_GCC=	yes
-CONFIGURE_ARGS+=	--disable-warnings-as-errors \
-			--disable-dtrace \
-			--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT} -L${LOCALBASE}/lib/gcc${GCC_DEFAULT}" \
+CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT} -L${LOCALBASE}/lib/gcc${GCC_DEFAULT}" \
 			--with-extra-cflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}" \
 			--with-extra-cxxflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	USE_CLANG=true
+.endif
+
+.if ${ARCH} == aarch64 || ${ARCH} == powerpc64
+CONFIGURE_ARGS+=	--disable-warnings-as-errors \
+			--disable-dtrace
 .endif
 
 .if empty(ICONV_LIB)
@@ -150,6 +159,7 @@ do-install:
 	@cd ${STAGEDIR}${INSTALLDIR} && \
 		${FIND} bin -type f -exec ${CHMOD} ${BINMODE} {} \;
 	@${CHMOD} ${BINMODE} ${STAGEDIR}${INSTALLDIR}/lib/jspawnhelper
+	@${ECHO} "@javavm ${INSTALLDIR}/bin/java" >> ${TMPPLIST}
 	@${FIND} ${STAGEDIR}${INSTALLDIR} -not -type d | ${SORT} | \
 		${SED} -e 's|^${STAGEDIR}${PREFIX}/||' >> ${TMPPLIST}
 
