@@ -12,6 +12,7 @@
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-openssl
     SUBDIR += acme.sh
+    SUBDIR += acmed
     SUBDIR += acmetool
     SUBDIR += aescrypt
     SUBDIR += aespipe
@@ -39,6 +40,7 @@
     SUBDIR += barnyard2-sguil
     SUBDIR += base
     SUBDIR += base-audit
+    SUBDIR += bastillion
     SUBDIR += bcrypt
     SUBDIR += bcwipe
     SUBDIR += bdes
@@ -133,6 +135,7 @@
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
     SUBDIR += dsniff
+    SUBDIR += dsvpn
     SUBDIR += duo
     SUBDIR += easy-rsa
     SUBDIR += elixir-comeonin
@@ -263,7 +266,6 @@
     SUBDIR += knocker
     SUBDIR += kpcli
     SUBDIR += kpkpass
-    SUBDIR += kr
     SUBDIR += krb5
     SUBDIR += krb5-115
     SUBDIR += krb5-116
@@ -278,6 +280,7 @@
     SUBDIR += l5
     SUBDIR += lasso
     SUBDIR += lastpass-cli
+    SUBDIR += lego
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
@@ -339,7 +342,6 @@
     SUBDIR += linux-c7-libtasn1
     SUBDIR += linux-c7-nettle
     SUBDIR += linux-c7-nss
-    SUBDIR += linux-c7-openssl
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
     SUBDIR += log2timeline
@@ -1083,6 +1085,7 @@
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
+    SUBDIR += rubygem-devise-two-factor30-rails52
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
@@ -1094,7 +1097,6 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
-    SUBDIR += rubygem-googleauth06
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -1225,6 +1227,7 @@
     SUBDIR += softhsm2
     SUBDIR += sops
     SUBDIR += spass
+    SUBDIR += spass-qt5
     SUBDIR += spike-proxy
     SUBDIR += spybye
     SUBDIR += sqlmap
