@@ -9,6 +9,7 @@
     SUBDIR += advancemess
     SUBDIR += aftp
     SUBDIR += almostti
+    SUBDIR += anese 
     SUBDIR += aqemu
     SUBDIR += atari800
     SUBDIR += bfe
@@ -105,7 +106,6 @@
     SUBDIR += pcem
     SUBDIR += pcemu
     SUBDIR += pcsxr
-    SUBDIR += pearpc
     SUBDIR += pipelight
     SUBDIR += playonbsd
     SUBDIR += ppsspp
@@ -120,6 +120,7 @@
     SUBDIR += qemu-user-static
     SUBDIR += qemu-utils
     SUBDIR += qemu2
+    SUBDIR += qemu30
     SUBDIR += qmc2
     SUBDIR += quasi88
     SUBDIR += riscv-fesvr
@@ -173,9 +174,9 @@
     SUBDIR += xen-kernel
     SUBDIR += xhomer
     SUBDIR += xsystem35
+    SUBDIR += xzx
     SUBDIR += yuzu
     SUBDIR += yuzu-qt5
-    SUBDIR += xzx
     SUBDIR += zsnes
 
 .include <bsd.port.subdir.mk>
