@@ -23,6 +23,7 @@
     SUBDIR += apinger
     SUBDIR += appkonference
     SUBDIR += aprsc
+    SUBDIR += aquantia-atlantic-kmod
     SUBDIR += arp-scan
     SUBDIR += arp-sk
     SUBDIR += arpdig
@@ -198,6 +199,7 @@
     SUBDIR += gofish
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
+    SUBDIR += google-cloud-sdk-app-engine-go
     SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += goreplay
@@ -342,6 +344,7 @@
     SUBDIR += libcapn
     SUBDIR += libcmis
     SUBDIR += libcoap
+    SUBDIR += libdaq
     SUBDIR += libdmapsharing
     SUBDIR += libdnet
     SUBDIR += libexosip2
@@ -854,6 +857,8 @@
     SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
+    SUBDIR += p5-URI-Encode-XS
+    SUBDIR += p5-URI-Fast
     SUBDIR += p5-URI-FromHash
     SUBDIR += p5-URI-Match
     SUBDIR += p5-URI-Nested
@@ -995,7 +1000,6 @@
     SUBDIR += prtunnel
     SUBDIR += ptpd2
     SUBDIR += ptunnel
-    SUBDIR += pure-sockets
     SUBDIR += pvm
     SUBDIR += pwhois
     SUBDIR += pxe
@@ -1172,8 +1176,10 @@
     SUBDIR += remmina-plugin-nx
     SUBDIR += remmina-plugin-rdp
     SUBDIR += remmina-plugin-secret
-    SUBDIR += remmina-plugin-telepathy
+    SUBDIR += remmina-plugin-spice
+    SUBDIR += remmina-plugin-st
     SUBDIR += remmina-plugin-vnc
+    SUBDIR += remmina-plugin-www
     SUBDIR += remmina-plugin-xdmcp
     SUBDIR += remmina-plugins
     SUBDIR += remotebox
@@ -1193,6 +1199,7 @@
     SUBDIR += rtpbreak
     SUBDIR += rtpproxy
     SUBDIR += rtptools
+    SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1205,6 +1212,7 @@
     SUBDIR += rubygem-azure-core
     SUBDIR += rubygem-beefcake
     SUBDIR += rubygem-bunny
+    SUBDIR += rubygem-cloudflare
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-docker-api
     SUBDIR += rubygem-dogapi
@@ -1251,8 +1259,11 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab_omniauth-ldap
+    SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
+    SUBDIR += rubygem-google-cloud-logging
+    SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http_parser.rb
@@ -1317,6 +1328,7 @@
     SUBDIR += rubygem-rye
     SUBDIR += rubygem-serverengine
     SUBDIR += rubygem-simple_oauth
+    SUBDIR += rubygem-stackdriver-core
     SUBDIR += rubygem-stompserver
     SUBDIR += rubygem-t
     SUBDIR += rubygem-tweetstream
@@ -1331,21 +1343,22 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += s3ql
-    SUBDIR += samba46
-    SUBDIR += samba47
-    SUBDIR += samba48
     SUBDIR += samba410
+    SUBDIR += samba48
     SUBDIR += samplicator
+    SUBDIR += savvycan
     SUBDIR += sbd
     SUBDIR += sbm
     SUBDIR += scamper
     SUBDIR += scapy
     SUBDIR += scnc
     SUBDIR += scr_ipfm
+    SUBDIR += sctplib
     SUBDIR += sdl2_net
     SUBDIR += sdl_net
     SUBDIR += seda
     SUBDIR += self-service-password
+    SUBDIR += sems
     SUBDIR += sendemail
     SUBDIR += sendsms
     SUBDIR += sendsnpp
@@ -1374,6 +1387,7 @@
     SUBDIR += sobby
     SUBDIR += socat
     SUBDIR += sock
+    SUBDIR += socketapi
     SUBDIR += socketbind
     SUBDIR += socketpipe
     SUBDIR += socketw
@@ -1395,12 +1409,14 @@
     SUBDIR += ssvnc
     SUBDIR += stone
     SUBDIR += stund
+    SUBDIR += subnetcalc
     SUBDIR += suckblow
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
     SUBDIR += tableutil
     SUBDIR += tac_plus4
+    SUBDIR += tacacs
     SUBDIR += tapidbus
     SUBDIR += tayga
     SUBDIR += tclsoap
@@ -1451,6 +1467,7 @@
     SUBDIR += tramp
     SUBDIR += trickle
     SUBDIR += tsclient
+    SUBDIR += tsctp
     SUBDIR += tshark
     SUBDIR += tshark-lite
     SUBDIR += tsocks
@@ -1534,6 +1551,7 @@
     SUBDIR += yaz++
     SUBDIR += yazproxy
     SUBDIR += yconalyzer
+    SUBDIR += yggdrasil
     SUBDIR += yptransitd
     SUBDIR += zebra
     SUBDIR += zebra-server

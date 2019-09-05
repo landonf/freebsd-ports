@@ -100,7 +100,6 @@ BUILD_DEPENDS+=	${GO_CMD}:${GO_PORT}
 .if ${go_ARGS:Mrun}
 RUN_DEPENDS+=	${GO_CMD}:${GO_PORT}
 .endif
-PLIST_SUB+=	GO_PKGNAME=${GO_PKGNAME}
 
 _USES_POST+=	go
 .endif # !defined(_INCLUDE_USES_GO_MK)
@@ -125,6 +124,19 @@ do-install:
 .for _TARGET in ${GO_TARGET}
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/${_TARGET:T:S/^.$/${PORTNAME}/} ${STAGEDIR}${PREFIX}/bin
 .endfor
+.endif
+
+# Helper targets for port maintainers
+
+.if ${go_ARGS:Mmodules}
+_MODULES2TUPLE_CMD=	modules2tuple
+gomod-vendor: patch
+	@if type ${_MODULES2TUPLE_CMD} > /dev/null 2>&1; then \
+		cd ${WRKSRC}; ${GO_CMD} mod vendor; \
+		[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt; \
+	else \
+		${ECHO_MSG} "===> Please install \"ports-mgmt/modules2tuple\""; \
+	fi
 .endif
 
 .endif # defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_GO_POST_MK)

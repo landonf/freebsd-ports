@@ -3,7 +3,7 @@
 
 PORTNAME=	collectd
 PORTVERSION=	5.9.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://storage.googleapis.com/collectd-tarballs/
 PKGNAMESUFFIX=	5
@@ -127,7 +127,6 @@ JAVA_CONFIGURE_ENABLE=	java
 JAVA_CONFIGURE_WITH=	java=${LOCALBASE} libjvm
 
 DBI_LIB_DEPENDS=	libdbi.so:databases/libdbi
-DBI_CONFIGURE_ENABLE=	libdbi=${LOCALBASE}
 DBI_CONFIGURE_ENABLE=	dbi
 DBI_CFLAGS=		-Wno-deprecated-declarations
 
