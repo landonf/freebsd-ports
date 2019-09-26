@@ -91,6 +91,7 @@
     SUBDIR += frontbase-jdbc
     SUBDIR += gadfly
     SUBDIR += galera
+    SUBDIR += galera26
     SUBDIR += gdbm
     SUBDIR += geoserver-mysql-plugin
     SUBDIR += gigabase
@@ -186,7 +187,6 @@
     SUBDIR += mariadb104-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
-    SUBDIR += mdbconv
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
@@ -522,7 +522,6 @@
     SUBDIR += p5-Xapian
     SUBDIR += p5-mysql-genocide
     SUBDIR += p5-tokyotyrant
-    SUBDIR += palm-db-tools
     SUBDIR += pear-DB
     SUBDIR += pear-DBA
     SUBDIR += pear-DBA_Relational
@@ -656,9 +655,22 @@
     SUBDIR += php73-pdo_sqlite
     SUBDIR += php73-pgsql
     SUBDIR += php73-sqlite3
+    SUBDIR += php74-dba
+    SUBDIR += php74-mysqli
+    SUBDIR += php74-odbc
+    SUBDIR += php74-pdo
+    SUBDIR += php74-pdo_dblib
+    SUBDIR += php74-pdo_firebird
+    SUBDIR += php74-pdo_mysql
+    SUBDIR += php74-pdo_odbc
+    SUBDIR += php74-pdo_pgsql
+    SUBDIR += php74-pdo_sqlite
+    SUBDIR += php74-pgsql
+    SUBDIR += php74-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
+    SUBDIR += phpmyadmin-devel
     SUBDIR += phppgadmin
     SUBDIR += pldebugger
     SUBDIR += plpgsql_check
@@ -678,7 +690,6 @@
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
-    SUBDIR += postgresql-plruby
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-prefix
     SUBDIR += postgresql-relay
@@ -998,7 +1009,6 @@
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
-    SUBDIR += skytools
     SUBDIR += slony1v2
     SUBDIR += soci
     SUBDIR += spatialite
@@ -1025,7 +1035,6 @@
     SUBDIR += sqlrelay
     SUBDIR += sqsh
     SUBDIR += squirrel-sql
-    SUBDIR += tablelog
     SUBDIR += tarantool
     SUBDIR += tarantool-c
     SUBDIR += tcl-Mysql

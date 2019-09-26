@@ -190,6 +190,7 @@
     SUBDIR += lua52
     SUBDIR += lua53
     SUBDIR += luajit
+    SUBDIR += luajit-openresty
     SUBDIR += malbolge
     SUBDIR += maude
     SUBDIR += mawk
@@ -274,6 +275,7 @@
     SUBDIR += perl5.30
     SUBDIR += petite-chez
     SUBDIR += pfe
+    SUBDIR += purescript
     SUBDIR += phantomjs
     SUBDIR += pharo
     SUBDIR += phc
@@ -284,6 +286,8 @@
     SUBDIR += php72-extensions
     SUBDIR += php73
     SUBDIR += php73-extensions
+    SUBDIR += php74
+    SUBDIR += php74-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl
@@ -312,6 +316,7 @@
     SUBDIR += qmasm
     SUBDIR += qscheme
     SUBDIR += quack
+    SUBDIR += quickjs
     SUBDIR += racket
     SUBDIR += racket-minimal
     SUBDIR += ratfor
@@ -384,5 +389,6 @@
     SUBDIR += yap-devel
     SUBDIR += yorick
     SUBDIR += ypsilon
+    SUBDIR += zig
 
 .include <bsd.port.subdir.mk>
