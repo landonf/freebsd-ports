@@ -95,6 +95,7 @@
     SUBDIR += corosync3
     SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
+    SUBDIR += courier-sox
     SUBDIR += cppzmq
     SUBDIR += cryptcat
     SUBDIR += csocks
@@ -268,6 +269,7 @@
     SUBDIR += intel-ixl-kmod
     SUBDIR += iodine
     SUBDIR += ip2location
+    SUBDIR += ip2proxy
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
@@ -973,6 +975,10 @@
     SUBDIR += php73-soap
     SUBDIR += php73-sockets
     SUBDIR += php73-xmlrpc
+    SUBDIR += php74-ldap
+    SUBDIR += php74-soap
+    SUBDIR += php74-sockets
+    SUBDIR += php74-xmlrpc
     SUBDIR += phpldapadmin
     SUBDIR += pim6-tools
     SUBDIR += pim6dd
@@ -1276,6 +1282,7 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-net-ldap
     SUBDIR += rubygem-net-netrc
+    SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
@@ -1473,7 +1480,6 @@
     SUBDIR += tsocks
     SUBDIR += tucan
     SUBDIR += turnserver
-    SUBDIR += turses
     SUBDIR += twitux
     SUBDIR += u6rd
     SUBDIR += ucarp

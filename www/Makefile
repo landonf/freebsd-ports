@@ -158,7 +158,6 @@
     SUBDIR += faup
     SUBDIR += fcgi
     SUBDIR += fcgiwrap
-    SUBDIR += feedjack
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
@@ -201,6 +200,7 @@
     SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish
+    SUBDIR += glassfish5
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-appengine-sdk
@@ -235,7 +235,6 @@
     SUBDIR += habari
     SUBDIR += halberd
     SUBDIR += hastymail2-devel
-    SUBDIR += havp
     SUBDIR += helma
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
@@ -285,6 +284,7 @@
     SUBDIR += jspwiki
     SUBDIR += jtoolkit
     SUBDIR += junkbuster
+    SUBDIR += jwt-cli
     SUBDIR += kanboard
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
@@ -309,6 +309,7 @@
     SUBDIR += libmicrohttpd
     SUBDIR += libnghttp2
     SUBDIR += libresonic-standalone
+    SUBDIR += libwpe
     SUBDIR += libwww
     SUBDIR += lightsquid
     SUBDIR += lighttpd
@@ -328,6 +329,8 @@
     SUBDIR += ljdump
     SUBDIR += llgal
     SUBDIR += logtools
+    SUBDIR += lua-resty-core
+    SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
     SUBDIR += lynx
     SUBDIR += lynx-current
@@ -409,6 +412,7 @@
     SUBDIR += mod_php71
     SUBDIR += mod_php72
     SUBDIR += mod_php73
+    SUBDIR += mod_php74
     SUBDIR += mod_proctitle
     SUBDIR += mod_proxy_xml
     SUBDIR += mod_python35
@@ -1188,6 +1192,7 @@
     SUBDIR += p5-Template-Toolkit-Simple
     SUBDIR += p5-Tenjin
     SUBDIR += p5-Test-HTTP
+    SUBDIR += p5-Test-HTTP-LocalServer
     SUBDIR += p5-Test-HTTP-Server-Simple
     SUBDIR += p5-Test-LWP-UserAgent
     SUBDIR += p5-Test-Nginx
@@ -1402,6 +1407,9 @@
     SUBDIR += php73-opcache
     SUBDIR += php73-session
     SUBDIR += php73-tidy
+    SUBDIR += php74-opcache
+    SUBDIR += php74-session
+    SUBDIR += php74-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1446,6 +1454,7 @@
     SUBDIR += py-amf
     SUBDIR += py-apachelog
     SUBDIR += py-arxiv
+    SUBDIR += py-asgiref
     SUBDIR += py-autobahn
     SUBDIR += py-aws-requests-auth
     SUBDIR += py-azure-common
@@ -1520,6 +1529,7 @@
     SUBDIR += py-django-assets
     SUBDIR += py-django-auth-ldap
     SUBDIR += py-django-babel
+    SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap3
@@ -1599,6 +1609,7 @@
     SUBDIR += py-django-sortedm2m
     SUBDIR += py-django-star-ratings
     SUBDIR += py-django-statici18n
+    SUBDIR += py-django-staticinline
     SUBDIR += py-django-storages
     SUBDIR += py-django-subdomains
     SUBDIR += py-django-sudo
@@ -1718,6 +1729,7 @@
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
     SUBDIR += py-notebook
+    SUBDIR += py-openbrokerapi
     SUBDIR += py-pafy
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
@@ -2061,6 +2073,7 @@
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
     SUBDIR += rubygem-jekyll-watch
+    SUBDIR += rubygem-jekyll3
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-rails
@@ -2229,7 +2242,6 @@
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
-    SUBDIR += rubygem-webpack-rails-rails5
     SUBDIR += rubygem-webpack-rails-rails52
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
@@ -2377,6 +2389,7 @@
     SUBDIR += trytond28_google_maps
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tusd
     SUBDIR += twiki
     SUBDIR += twiki-BehaviourContrib
     SUBDIR += twiki-BlogAddOn
@@ -2470,6 +2483,7 @@
     SUBDIR += wikicalc
     SUBDIR += woof
     SUBDIR += wordpress
+    SUBDIR += wpebackend-fdo
     SUBDIR += wsdlpull
     SUBDIR += wsmake
     SUBDIR += wt

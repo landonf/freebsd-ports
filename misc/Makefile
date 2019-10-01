@@ -170,7 +170,6 @@
     SUBDIR += gnome-user-docs
     SUBDIR += gnu-watch
     SUBDIR += gnuls
-    SUBDIR += gnustep-examples
     SUBDIR += gobuster
     SUBDIR += gone
     SUBDIR += gonvert
@@ -364,6 +363,7 @@
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
+    SUBDIR += php74-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -470,7 +470,6 @@
     SUBDIR += spamcalc
     SUBDIR += sshbuddy
     SUBDIR += sssnips
-    SUBDIR += survex
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
@@ -511,6 +510,7 @@
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
     SUBDIR += utftools
+    SUBDIR += utouch-kmod
     SUBDIR += valentina
     SUBDIR += valspeak
     SUBDIR += vdmfec
@@ -546,7 +546,5 @@
     SUBDIR += yaunc
     SUBDIR += ytree
     SUBDIR += zoneinfo
-    SUBDIR += zygrib
-    SUBDIR += zygrib-maps
 
 .include <bsd.port.subdir.mk>
