@@ -1,0 +1,23 @@
+# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
+# $FreeBSD$
+
+PORTNAME=	eden
+PORTVERSION=	0.7.4
+DISTVERSIONPREFIX=	v
+CATEGORIES=	www
+
+MAINTAINER=	ehaupt@FreeBSD.org
+COMMENT=	Interact with any Open Service Broker API
+
+LICENSE=	MIT
+
+USES=		go:modules
+USE_GITHUB=	yes
+
+GH_ACCOUNT=	starkandwayne
+
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
+
+PLIST_FILES=	bin/eden
+
+.include <bsd.port.mk>
