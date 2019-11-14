@@ -76,10 +76,6 @@ JTREG_BUILD=	b05_29_nov_2012
 JTREGFILE=	jtreg-4.1-bin-${JTREG_BUILD}.zip
 UPDATE_VERSION=	32
 
-.if ${PORT_OPTIONS:MIPV6}
-CATEGORIES+=	ipv6
-.endif
-
 .if ${PORT_OPTIONS:MTZUPDATE}
 RUN_DEPENDS+=	java-zoneinfo>0:java/java-zoneinfo
 .endif
