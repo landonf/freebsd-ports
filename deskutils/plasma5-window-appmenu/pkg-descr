@@ -1,0 +1,8 @@
+Window AppMenu is a Plasma applet that shows the current window's application
+menu in your panels.
+
+Unlike Plasma5's Global Menu applet, Window AppMenu can be configured to
+display the active window's appmenu even when the window is not on the screen
+containing the panel.
+
+WWW: https://github.com/psifidotos/applet-window-appmenu

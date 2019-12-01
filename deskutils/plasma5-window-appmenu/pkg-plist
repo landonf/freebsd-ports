@@ -1,0 +1,17 @@
+%%QT_PLUGINDIR%%/plasma/applets/plasma_applet_windowappmenu.so
+%%QT_QMLDIR%%/org/kde/private/windowAppMenu/libappmenuplugin.so
+%%QT_QMLDIR%%/org/kde/private/windowAppMenu/qmldir
+share/kservices5/plasma-applet-org.kde.windowappmenu.desktop
+share/metainfo/org.kde.windowappmenu.appdata.xml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/code/util.js
+share/plasma/plasmoids/org.kde.windowappmenu/contents/config/config.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/config/main.xml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/Broadcaster.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/FlickableIndicators.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/MenuFlickable.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/PaintedToolButton.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/config/ColorsComboBox.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/config/ConfigGeneral.qml
+share/plasma/plasmoids/org.kde.windowappmenu/contents/ui/main.qml
+share/plasma/plasmoids/org.kde.windowappmenu/metadata.desktop
+share/plasma/plasmoids/org.kde.windowappmenu/metadata.json
