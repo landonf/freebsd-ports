@@ -456,6 +456,7 @@
     SUBDIR += gstreamer-plugins-cdio
     SUBDIR += gstreamer-plugins-hal
     SUBDIR += gstreamer1-plugins-cdio
+    SUBDIR += gtime
     SUBDIR += gtk-imonc
     SUBDIR += hachoir-metadata
     SUBDIR += hachoir-subfile
