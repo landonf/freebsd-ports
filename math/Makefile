@@ -113,6 +113,7 @@
     SUBDIR += SCIP
     SUBDIR += SoPlex
     SUBDIR += aamath
+    SUBDIR += abella
     SUBDIR += abs
     SUBDIR += acalc
     SUBDIR += add
@@ -120,7 +121,6 @@
     SUBDIR += adol-c
     SUBDIR += algae
     SUBDIR += alglib
-    SUBDIR += algotutor
     SUBDIR += alt-ergo
     SUBDIR += amath
     SUBDIR += ambit
@@ -173,6 +173,7 @@
     SUBDIR += clblas
     SUBDIR += clblast
     SUBDIR += clfft
+    SUBDIR += clingo
     SUBDIR += cln
     SUBDIR += cloog
     SUBDIR += clp
@@ -196,6 +197,7 @@
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
+    SUBDIR += darknet
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += diehard
@@ -212,6 +214,7 @@
     SUBDIR += eispack
     SUBDIR += elpa
     SUBDIR += emc2
+    SUBDIR += ensmallen
     SUBDIR += ent
     SUBDIR += entropy
     SUBDIR += eprover
@@ -245,6 +248,7 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
+    SUBDIR += gemmlowp
     SUBDIR += geogebra
     SUBDIR += geogram
     SUBDIR += geonext
@@ -283,6 +287,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-semigroups
+    SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
     SUBDIR += intervaltree
@@ -354,6 +359,7 @@
     SUBDIR += matlab-installer
     SUBDIR += maxima
     SUBDIR += mbasecalc
+    SUBDIR += mcsim
     SUBDIR += metis
     SUBDIR += metis-edf
     SUBDIR += metis4
@@ -368,6 +374,7 @@
     SUBDIR += mpc
     SUBDIR += mpexpr
     SUBDIR += mpfr
+    SUBDIR += mpfrc++
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
@@ -386,7 +393,6 @@
     SUBDIR += nlopt
     SUBDIR += ntl
     SUBDIR += numdiff
-    SUBDIR += nyh-hoc
     SUBDIR += ocaml-ocamlgraph
     SUBDIR += ocaml-zarith
     SUBDIR += ocamlgsl
@@ -406,8 +412,10 @@
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
+    SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
+    SUBDIR += octave-forge-fits
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -424,6 +432,7 @@
     SUBDIR += octave-forge-io
     SUBDIR += octave-forge-irsa
     SUBDIR += octave-forge-level-set
+    SUBDIR += octave-forge-linear-algebra
     SUBDIR += octave-forge-lssa
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
@@ -471,7 +480,6 @@
     SUBDIR += octomap
     SUBDIR += ogdf
     SUBDIR += oleo
-    SUBDIR += onnx
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -720,6 +728,7 @@
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
+    SUBDIR += py-matplotlib-scalebar
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
@@ -757,8 +766,8 @@
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
-    SUBDIR += py-pysym
     SUBDIR += py-pystan
+    SUBDIR += py-pysym
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog
@@ -849,13 +858,11 @@
     SUBDIR += suitesparse
     SUBDIR += sundials
     SUBDIR += superlu
-    SUBDIR += superlu_mt
     SUBDIR += symmetrica
     SUBDIR += symphony
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += tblis
-    SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += timbl
     SUBDIR += tmv
@@ -865,7 +872,6 @@
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
-    SUBDIR += tvm
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
