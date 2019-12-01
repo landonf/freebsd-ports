@@ -1,0 +1,3 @@
+include/appmenu-gtk-parser/appmenu-gtk-action-group.h
+include/appmenu-gtk-parser/appmenu-gtk-menu-shell.h
+include/appmenu-gtk-parser/appmenu-gtk-parser.h
