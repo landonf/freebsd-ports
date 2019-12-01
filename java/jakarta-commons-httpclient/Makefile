@@ -3,7 +3,7 @@
 
 PORTNAME=	commons-httpclient
 DISTVERSION=	3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	java www
 MASTER_SITES=	APACHE/httpcomponents/${PORTNAME}/source
 PKGNAMEPREFIX=	jakarta-
@@ -14,9 +14,9 @@ COMMENT=	Package implementing the client side of the HTTP standard
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/jakarta-commons-logging
+BUILD_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging
 BUILD_DEPENDS+=	${JAVALIBDIR}/commons-codec.jar:java/jakarta-commons-codec
-RUN_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/jakarta-commons-logging
+RUN_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging
 RUN_DEPENDS+=	${JAVALIBDIR}/commons-codec.jar:java/jakarta-commons-codec
 
 OPTIONS_DEFINE=	DOCS
@@ -24,7 +24,6 @@ OPTIONS_DEFINE=	DOCS
 USES+=		cpe
 CPE_VENDOR=	apache
 USE_JAVA=	yes
-JAVA_VERSION=	1.6+
 USE_ANT=	yes
 MAKE_ENV=	ANT_INCLUDE_SHARED_JARS=YES
 NO_ARCH=	yes
