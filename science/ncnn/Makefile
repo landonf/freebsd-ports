@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	ncnn
-DISTVERSION=	20190611-113
-DISTVERSIONSUFFIX=	-g46e7ac7
-CATEGORIES=	science
+DISTVERSION=	20191113
+CATEGORIES=	science # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	High-performance neural network inference framework
@@ -14,5 +13,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USES=		cmake compiler:c11
 USE_GITHUB=	yes
 GH_ACCOUNT=	Tencent
+
+OPTIONS_DEFINE=		VULKAN
+OPTIONS_DEFAULT=	VULKAN
+
+VULKAN_DESC=		Vulkan compute support
+VULKAN_CMAKE_BOOL=	NCNN_VULKAN
+VULKAN_BUILD_DEPENDS=	glslangValidator:devel/glslang \
+			${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \
+			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
 
 .include <bsd.port.mk>

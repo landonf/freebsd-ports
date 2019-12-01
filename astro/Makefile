@@ -13,7 +13,6 @@
     SUBDIR += cfitsio
     SUBDIR += fowsr
     SUBDIR += foxtrotgps
-    SUBDIR += garmindev
     SUBDIR += geographiclib
     SUBDIR += gkrellmoon2
     SUBDIR += gnuastro
@@ -22,7 +21,6 @@
     SUBDIR += gpsbabel14
     SUBDIR += gpscorrelate
     SUBDIR += gpsd
-    SUBDIR += gpsdrive
     SUBDIR += gpsman
     SUBDIR += gpsprune
     SUBDIR += gpstk
@@ -78,7 +76,6 @@
     SUBDIR += p5-Starlink-AST
     SUBDIR += p5-Weather-Underground
     SUBDIR += phoon
-    SUBDIR += planets
     SUBDIR += pp3
     SUBDIR += ptiger
     SUBDIR += py-RO
