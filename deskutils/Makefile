@@ -193,6 +193,7 @@
     SUBDIR += plans
     SUBDIR += plasma5-milou
     SUBDIR += plasma5-sddm-kcm
+    SUBDIR += plasma5-window-appmenu
     SUBDIR += plopfolio
     SUBDIR += preferences
     SUBDIR += projectlibre
