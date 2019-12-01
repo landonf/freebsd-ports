@@ -2,7 +2,6 @@ bin/geary
 lib/geary/web-extensions/libgeary-web-process.so
 share/applications/geary-autostart.desktop
 share/applications/org.gnome.Geary.desktop
-share/dbus-1/services/org.gnome.Geary.service
 %%DATADIR%%/sql/version-001.sql
 %%DATADIR%%/sql/version-002.sql
 %%DATADIR%%/sql/version-003.sql
