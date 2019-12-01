@@ -16,9 +16,11 @@ LICENSE_NAME=	Subscription license agreement for business and organizations
 LICENSE_TEXT=	See: https://www.jetbrains.com/store/license.html
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
-RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier
+RUN_DEPENDS=	cmake>=3.14.3:devel/cmake \
+		intellij-fsnotifier>0:java/intellij-fsnotifier \
+		intellij-pty4j>0:java/intellij-pty4j
 
-USES=		python:run shebangfix
+USES=		linux python:run shebangfix
 
 USE_JAVA=	yes
 JAVA_VERSION=	8+
@@ -32,22 +34,30 @@ WRKSRC=		${WRKDIR}/clion-${PORTVERSION}
 
 SUB_FILES=	clion clion.desktop pkg-message
 
+CLION_CLANG=	bin/clang/linux
+
 do-install:
 # Linux/Windows/OS X only so remove them
 	@${RM} -r ${WRKSRC}/bin/fsnotifier \
 		${WRKSRC}/bin/fsnotifier-arm \
 		${WRKSRC}/bin/fsnotifier64 \
-		${WRKSRC}/bin/clang \
-		${WRKSRC}/bin/cmake \
+		${WRKSRC}/bin/cmake/linux \
 		${WRKSRC}/bin/gdb/linux \
 		${WRKSRC}/bin/lldb/linux \
 		${WRKSRC}/lib/pty4j-native \
 		${WRKSRC}/plugins/performanceTesting/bin
 # Remove bundled linux JetBrains Runtime and OpenJDK
 	@${RM} -r ${WRKSRC}/jbr ${WRKSRC}/jre64
+# Use cmake binaries provided by devel/cmake
+	${MKDIR} ${WRKSRC}/bin/cmake/linux/bin
+.for f in ccmake cmake cpack ctest
+	${LN} -sf ${PREFIX}/bin/${f} ${WRKSRC}/bin/cmake/linux/bin/${f}
+.endfor 
+
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
-		"! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
+		"! -path \./${CLION_CLANG}/* ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
+	@(cd ${WRKSRC} && ${COPYTREE_BIN} ${CLION_CLANG} ${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR} "-name *\.sh")
 	${INSTALL_SCRIPT} ${WRKDIR}/clion ${STAGEDIR}${PREFIX}/bin/clion
 	${INSTALL_MAN} ${FILESDIR}/clion.1 ${STAGEDIR}${PREFIX}/man/man1

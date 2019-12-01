@@ -2,11 +2,17 @@ bin/clion
 man/man1/clion.1.gz
 share/applications/clion.desktop
 %%DATADIR%%/Install-Linux-tar.txt
+%%DATADIR%%/bin/clang/linux/clang-tidy
+%%DATADIR%%/bin/clang/linux/clangd
 %%DATADIR%%/bin/clion.png
 %%DATADIR%%/bin/clion.sh
 %%DATADIR%%/bin/clion.svg
 %%DATADIR%%/bin/clion.vmoptions
 %%DATADIR%%/bin/clion64.vmoptions
+%%DATADIR%%/bin/cmake/linux/bin/ccmake
+%%DATADIR%%/bin/cmake/linux/bin/cmake
+%%DATADIR%%/bin/cmake/linux/bin/cpack
+%%DATADIR%%/bin/cmake/linux/bin/ctest
 %%DATADIR%%/bin/format.sh
 %%DATADIR%%/bin/gdb/renderers/default/__init__.py
 %%DATADIR%%/bin/gdb/renderers/default/libstdcxx_printers.py
