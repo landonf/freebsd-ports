@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	convertdate
-PORTVERSION=	2.1.3
-PORTREVISION=	1
+PORTVERSION=	2.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +10,7 @@ MAINTAINER=	gmm@tutanota.com
 COMMENT=	Converts between Gregorian dates and other calendar systems
 
 LICENSE=	MIT
-LICENSE_FILE=	LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		python
 USE_PYTHON=	autoplist distutils
