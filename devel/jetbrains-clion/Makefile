@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	clion
-PORTVERSION=	2019.2.5
+PORTVERSION=	2019.3
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cf.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -23,7 +23,7 @@ RUN_DEPENDS=	cmake>=3.14.3:devel/cmake \
 USES=		linux python:run shebangfix
 
 USE_JAVA=	yes
-JAVA_VERSION=	8+
+JAVA_VERSION=	11+
 
 SHEBANG_FILES=	bin/printenv.py bin/restart.py
 
@@ -52,7 +52,7 @@ do-install:
 	${MKDIR} ${WRKSRC}/bin/cmake/linux/bin
 .for f in ccmake cmake cpack ctest
 	${LN} -sf ${PREFIX}/bin/${f} ${WRKSRC}/bin/cmake/linux/bin/${f}
-.endfor 
+.endfor
 
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
