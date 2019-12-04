@@ -97,6 +97,7 @@
     SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-sandwich
     SUBDIR += R-cran-scatterplot3d
+    SUBDIR += R-cran-sets
     SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
@@ -436,6 +437,7 @@
     SUBDIR += octave-forge-lssa
     SUBDIR += octave-forge-ltfat
     SUBDIR += octave-forge-mapping
+    SUBDIR += octave-forge-matgeom
     SUBDIR += octave-forge-miscellaneous
     SUBDIR += octave-forge-missing-functions
     SUBDIR += octave-forge-msh
