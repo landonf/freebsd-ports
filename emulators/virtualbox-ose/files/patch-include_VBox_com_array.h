@@ -1,6 +1,6 @@
---- include/VBox/com/array.h.orig	2019-04-12 15:47:42 UTC
+--- include/VBox/com/array.h.orig	2019-01-25 18:10:05 UTC
 +++ include/VBox/com/array.h
-@@ -168,7 +168,7 @@
+@@ -171,7 +171,7 @@
  
  #include "VBox/com/defs.h"
  
@@ -9,7 +9,7 @@
  /** @def VBOX_WITH_TYPE_TRAITS
   * Type traits are a C++ 11 feature, so not available everywhere (yet).
   * Only GCC 4.6 or newer and MSVC++ 16.0 (Visual Studio 2010) or newer.
-@@ -940,12 +940,12 @@ class SafeArray : public Traits (public)
+@@ -943,12 +943,12 @@ class SafeArray : public Traits (public)
       */
      T &operator[] (size_t aIdx)
      {
@@ -25,7 +25,7 @@
          return m.raw[aIdx];
  #endif
      }
-@@ -960,7 +960,7 @@ class SafeArray : public Traits (public)
+@@ -963,7 +963,7 @@ class SafeArray : public Traits (public)
  #ifdef VBOX_WITH_XPCOM
          return m.arr[aIdx];
  #else
