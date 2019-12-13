@@ -247,6 +247,7 @@
     SUBDIR += dirvish
     SUBDIR += diskcheckd
     SUBDIR += diskimage-tools
+    SUBDIR += diskmonitor
     SUBDIR += diskscrub
     SUBDIR += disktool
     SUBDIR += disktype
