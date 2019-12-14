@@ -63,18 +63,22 @@
        ;;
      --with-ow-dir=*)
        WATCOM=`echo $option | cut -d'=' -f2`
-@@ -2840,14 +2843,6 @@ if [ "$OS" = "linux" ]; then
-     cnf_append "VBOX_WITHOUT_LINUX_TEST_BUILDS" "1"
+@@ -2825,6 +2828,18 @@
+     cnf_append "VBOX_WITH_AUDIO_PULSE" ""
+   elif [ $WITH_PULSE -eq 2 ]; then # --enable-pulse was passed, force PulseAudio.
+     cnf_append "VBOX_WITH_AUDIO_PULSE" "1"
++  fi
++
++  # ALSA
++  if [ $WITH_ALSA -eq 1 ]; then
++    check_alsa
++  else
++    cnf_append "VBOX_WITH_AUDIO_ALSA" ""
++  fi
++
++  # DBus
++  if [ $WITH_DBUS -eq 0 ]; then
++    cnf_append "VBOX_WITH_DBUS" ""
    fi
-   if [ $ONLY_ADDITIONS -eq 0 ]; then
--    if [ $WITH_ALSA -eq 1 ]; then
--      check_alsa
--    else
--      cnf_append "VBOX_WITH_AUDIO_ALSA" ""
--    fi
--    if [ $WITH_DBUS -eq 0 ]; then
--      cnf_append "VBOX_WITH_DBUS" ""
--    fi
-     if [ $WITH_DEVMAPPER -eq 1 ]; then
-       check_libdevmapper
-     else
+ fi
+ 
