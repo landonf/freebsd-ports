@@ -1,4 +1,4 @@
---- src/VBox/HostDrivers/Support/SUPDrv.cpp.orig	2018-10-15 14:30:56 UTC
+--- src/VBox/HostDrivers/Support/SUPDrv.cpp.orig	2019-11-21 17:01:59 UTC
 +++ src/VBox/HostDrivers/Support/SUPDrv.cpp
 @@ -104,7 +104,7 @@
  /** @def SUPDRV_CHECK_SMAP_CHECK

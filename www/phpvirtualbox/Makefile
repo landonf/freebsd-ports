@@ -10,6 +10,8 @@ COMMENT=	AJAX Web Interface for VirtualBox
 
 LICENSE=	GPLv3
 
+IGNORE=		does not work with VirtualBox 6.0 or later
+
 USES=		dos2unix php
 USE_PHP=	json session simplexml soap xml
 

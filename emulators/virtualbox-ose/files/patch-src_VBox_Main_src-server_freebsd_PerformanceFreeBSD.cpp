@@ -1,4 +1,4 @@
---- src/VBox/Main/src-server/freebsd/PerformanceFreeBSD.cpp.orig	2017-07-27 13:18:27 UTC
+--- src/VBox/Main/src-server/freebsd/PerformanceFreeBSD.cpp.orig	2019-11-21 17:02:20 UTC
 +++ src/VBox/Main/src-server/freebsd/PerformanceFreeBSD.cpp
 @@ -80,8 +80,10 @@ int CollectorFreeBSD::getHostMemoryUsage(ULONG *total,
      cbParameter = sizeof(cPagesMemInactive);

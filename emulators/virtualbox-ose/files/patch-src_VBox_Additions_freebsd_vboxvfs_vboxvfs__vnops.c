@@ -1,4 +1,4 @@
---- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c.orig	2019-10-10 18:06:51 UTC
+--- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c.orig	2019-12-10 17:45:29 UTC
 +++ src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c
 @@ -1,10 +1,6 @@
 -/* $Id: vboxvfs_vnops.c $ */
@@ -7,7 +7,7 @@
 - */
 -
  /*
-  * Copyright (C) 2008-2017 Oracle Corporation
+  * Copyright (C) 2008-2019 Oracle Corporation
 + * Copyright (C) 2017 Mahdi Mokhtari
   *
   * This file is part of VirtualBox Open Source Edition (OSE), as

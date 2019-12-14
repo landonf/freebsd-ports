@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r0drv/freebsd/semmutex-r0drv-freebsd.c.orig	2018-10-15 14:31:31 UTC
+--- src/VBox/Runtime/r0drv/freebsd/semmutex-r0drv-freebsd.c.orig	2019-11-21 17:02:50 UTC
 +++ src/VBox/Runtime/r0drv/freebsd/semmutex-r0drv-freebsd.c
 @@ -62,6 +62,7 @@ RTDECL(int)  RTSemMutexCreate(PRTSEMMUTEX phMutexSem)
  {

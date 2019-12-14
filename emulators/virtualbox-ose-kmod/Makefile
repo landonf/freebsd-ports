@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.2.34
+PORTVERSION=	6.1.0
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
+MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 PKGNAMESUFFIX=	-kmod
 DISTNAME=	VirtualBox-${PORTVERSION}
 
