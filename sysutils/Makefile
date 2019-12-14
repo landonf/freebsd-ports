@@ -1262,6 +1262,7 @@
     SUBDIR += symon
     SUBDIR += synergy
     SUBDIR += synergy-1
+    SUBDIR += sysctlbyname-improved-kmod
     SUBDIR += sysctlinfo-kmod
     SUBDIR += sysgather
     SUBDIR += sysinfo
