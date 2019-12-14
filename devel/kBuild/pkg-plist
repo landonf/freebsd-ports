@@ -132,6 +132,7 @@ bin/kmk_time
 %%DATADIR%%/tools/YASM.kmk
 %%DATADIR%%/tools/ZIP.kmk
 %%DATADIR%%/units/dtrace.kmk
+%%DATADIR%%/units/gccprecomp.kmk
 %%DATADIR%%/units/lex.kmk
 %%DATADIR%%/units/qt3.kmk
 %%DATADIR%%/units/qt4.kmk
