@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r3/freebsd/systemmem-freebsd.cpp.orig	2017-07-27 13:18:46 UTC
+--- src/VBox/Runtime/r3/freebsd/systemmem-freebsd.cpp.orig	2019-11-21 17:02:54 UTC
 +++ src/VBox/Runtime/r3/freebsd/systemmem-freebsd.cpp
 @@ -65,7 +65,6 @@ RTDECL(int) RTSystemQueryAvailableRam(uint64_t *pcb)
      u_int cPagesMemFree = 0;

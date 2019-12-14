@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r0drv/freebsd/thread-r0drv-freebsd.c.orig	2018-10-15 14:31:31 UTC
+--- src/VBox/Runtime/r0drv/freebsd/thread-r0drv-freebsd.c.orig	2019-11-21 17:02:50 UTC
 +++ src/VBox/Runtime/r0drv/freebsd/thread-r0drv-freebsd.c
 @@ -49,7 +49,6 @@ RTDECL(RTNATIVETHREAD) RTThreadNativeSelf(void)
  static int rtR0ThreadFbsdSleepCommon(RTMSINTERVAL cMillies)

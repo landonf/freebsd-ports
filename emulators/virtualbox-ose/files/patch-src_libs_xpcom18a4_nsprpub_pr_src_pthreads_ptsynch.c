@@ -1,4 +1,4 @@
---- src/libs/xpcom18a4/nsprpub/pr/src/pthreads/ptsynch.c.orig	2019-04-16 10:18:41 UTC
+--- src/libs/xpcom18a4/nsprpub/pr/src/pthreads/ptsynch.c.orig	2019-11-21 17:04:13 UTC
 +++ src/libs/xpcom18a4/nsprpub/pr/src/pthreads/ptsynch.c
 @@ -49,6 +49,9 @@
  #include <string.h>

@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c.orig	2019-04-16 10:17:21 UTC
+--- src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c.orig	2019-11-21 17:02:50 UTC
 +++ src/VBox/Runtime/r0drv/freebsd/memobj-r0drv-freebsd.c
 @@ -130,6 +130,7 @@ static vm_map_t rtR0MemObjFreeBSDGetMap(PRTR0MEMOBJINT
  
@@ -242,7 +242,7 @@
  //  AssertMsgReturn(!offSub && !cbSub, ("%#x %#x\n", offSub, cbSub), VERR_NOT_SUPPORTED);
      AssertMsgReturn(pvFixed == (void *)-1, ("%p\n", pvFixed), VERR_NOT_SUPPORTED);
  
-@@ -697,6 +740,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
+@@ -698,6 +741,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
              Assert((vm_offset_t)pMemFreeBSD->Core.pv == Addr);
              pMemFreeBSD->Core.u.Mapping.R0Process = NIL_RTR0PROCESS;
              *ppMem = &pMemFreeBSD->Core;
@@ -250,7 +250,7 @@
              return VINF_SUCCESS;
          }
          rc = vm_map_remove(kernel_map, Addr, Addr + cbSub);
-@@ -705,6 +749,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
+@@ -706,6 +750,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
      else
          vm_object_deallocate(pMemToMapFreeBSD->pObject);
  
@@ -258,16 +258,16 @@
      return VERR_NO_MEMORY;
  }
  
-@@ -712,6 +757,8 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
+@@ -713,6 +758,8 @@ DECLHIDDEN(int) rtR0MemObjNativeMapKernel(PPRTR0MEMOBJ
  DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJINTERNAL ppMem, RTR0MEMOBJ pMemToMap, RTR3PTR R3PtrFixed, size_t uAlignment,
-                                         unsigned fProt, RTR0PROCESS R0Process)
+                                         unsigned fProt, RTR0PROCESS R0Process, size_t offSub, size_t cbSub)
  {
 +    IPRT_FREEBSD_SAVE_EFL_AC();
 +
      /*
       * Check for unsupported stuff.
       */
-@@ -783,6 +830,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
+@@ -788,6 +835,7 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
              Assert((vm_offset_t)pMemFreeBSD->Core.pv == AddrR3);
              pMemFreeBSD->Core.u.Mapping.R0Process = R0Process;
              *ppMem = &pMemFreeBSD->Core;
@@ -275,7 +275,7 @@
              return VINF_SUCCESS;
          }
  
-@@ -792,19 +840,25 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
+@@ -797,19 +845,25 @@ DECLHIDDEN(int) rtR0MemObjNativeMapUser(PPRTR0MEMOBJIN
      else
          vm_object_deallocate(pMemToMapFreeBSD->pObject);
  
@@ -301,7 +301,7 @@
  
      if ((fProt & RTMEM_PROT_NONE) == RTMEM_PROT_NONE)
          ProtectionFlags = VM_PROT_NONE;
-@@ -816,6 +870,7 @@ DECLHIDDEN(int) rtR0MemObjNativeProtect(PRTR0MEMOBJINT
+@@ -821,6 +875,7 @@ DECLHIDDEN(int) rtR0MemObjNativeProtect(PRTR0MEMOBJINT
          ProtectionFlags |= VM_PROT_EXECUTE;
  
      int krc = vm_map_protect(pVmMap, AddrStart, AddrEnd, ProtectionFlags, FALSE);
@@ -309,7 +309,7 @@
      if (krc == KERN_SUCCESS)
          return VINF_SUCCESS;
  
-@@ -840,11 +895,19 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -845,11 +900,19 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
  
              vm_offset_t pb = (vm_offset_t)pMemFreeBSD->Core.pv + ptoa(iPage);
  
@@ -333,7 +333,7 @@
          }
  
          case RTR0MEMOBJTYPE_MAPPING:
-@@ -853,11 +916,15 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -858,11 +921,15 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
  
              if (pMemFreeBSD->Core.u.Mapping.R0Process != NIL_RTR0PROCESS)
              {
@@ -350,7 +350,7 @@
              }
              return vtophys(pb);
          }
-@@ -868,9 +935,11 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
+@@ -873,9 +940,11 @@ DECLHIDDEN(RTHCPHYS) rtR0MemObjNativeGetPagePhysAddr(P
          {
              RTHCPHYS addr;
  

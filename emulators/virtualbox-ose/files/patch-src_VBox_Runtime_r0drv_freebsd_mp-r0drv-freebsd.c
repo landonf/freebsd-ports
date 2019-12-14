@@ -1,4 +1,4 @@
---- src/VBox/Runtime/r0drv/freebsd/mp-r0drv-freebsd.c.orig	2019-04-16 10:17:21 UTC
+--- src/VBox/Runtime/r0drv/freebsd/mp-r0drv-freebsd.c.orig	2019-11-21 17:02:50 UTC
 +++ src/VBox/Runtime/r0drv/freebsd/mp-r0drv-freebsd.c
 @@ -147,7 +147,9 @@ RTDECL(RTCPUID) RTMpGetOnlineCount(void)
  static void rtmpOnAllFreeBSDWrapper(void *pvArg)

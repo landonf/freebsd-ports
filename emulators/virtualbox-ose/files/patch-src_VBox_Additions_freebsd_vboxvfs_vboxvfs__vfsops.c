@@ -1,4 +1,4 @@
---- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vfsops.c.orig	2019-01-25 18:12:34 UTC
+--- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vfsops.c.orig	2019-11-21 16:54:10 UTC
 +++ src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vfsops.c
 @@ -1,8 +1,3 @@
 -/* $Id: vboxvfs_vfsops.c $ */

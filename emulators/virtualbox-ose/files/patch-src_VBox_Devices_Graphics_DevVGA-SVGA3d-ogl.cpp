@@ -1,6 +1,6 @@
---- src/VBox/Devices/Graphics/DevVGA-SVGA3d-ogl.cpp.orig	2019-01-25 18:17:47 UTC
+--- src/VBox/Devices/Graphics/DevVGA-SVGA3d-ogl.cpp.orig	2019-11-21 16:59:41 UTC
 +++ src/VBox/Devices/Graphics/DevVGA-SVGA3d-ogl.cpp
-@@ -1150,7 +1150,7 @@ int vmsvga3dTerminate(PVGASTATE pThis)
+@@ -1175,7 +1175,7 @@ int vmsvga3dTerminate(PVGASTATE pThis)
      RTSemEventDestroy(pState->WndRequestSem);
  #elif defined(RT_OS_DARWIN)
  
@@ -9,7 +9,7 @@
      /* signal to the thread that it is supposed to exit */
      pState->bTerminate = true;
      /* wait for it to terminate */
-@@ -2850,7 +2850,7 @@ int vmsvga3dGenerateMipmaps(PVGASTATE pThis, uint32_t 
+@@ -3004,7 +3004,7 @@ int vmsvga3dGenerateMipmaps(PVGASTATE pThis, uint32_t 
  }
  
  
@@ -18,7 +18,7 @@
  /**
   * X11 event handling thread.
   *
-@@ -2880,7 +2880,7 @@ DECLCALLBACK(int) vmsvga3dXEventThread(RTTHREAD hThrea
+@@ -3034,7 +3034,7 @@ DECLCALLBACK(int) vmsvga3dXEventThread(RTTHREAD hThrea
      }
      return VINF_SUCCESS;
  }
@@ -27,7 +27,7 @@
  
  
  /**
-@@ -3206,7 +3206,7 @@ static int vmsvga3dContextDestroyOgl(PVGASTATE pThis, 
+@@ -3369,7 +3369,7 @@ static int vmsvga3dContextDestroyOgl(PVGASTATE pThis, 
      AssertRC(rc);
  #elif defined(RT_OS_DARWIN)
      vmsvga3dCocoaDestroyViewAndContext(pContext->cocoaView, pContext->cocoaContext);

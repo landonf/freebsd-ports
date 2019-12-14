@@ -1,4 +1,4 @@
---- src/VBox/HostDrivers/VBoxNetFlt/Makefile.kmk.orig	2019-05-13 13:33:07 UTC
+--- src/VBox/HostDrivers/VBoxNetFlt/Makefile.kmk.orig	2019-11-21 17:02:02 UTC
 +++ src/VBox/HostDrivers/VBoxNetFlt/Makefile.kmk
 @@ -565,7 +565,7 @@ $(PATH_OUT)/opt_netgraph.h:
  	$(QUIET)$(RM) -f -- $@

@@ -1,4 +1,4 @@
---- src/VBox/Additions/common/VBoxGuest/VBoxGuest-freebsd.c.orig	2019-01-25 18:12:28 UTC
+--- src/VBox/Additions/common/VBoxGuest/VBoxGuest-freebsd.c.orig	2019-11-21 16:54:06 UTC
 +++ src/VBox/Additions/common/VBoxGuest/VBoxGuest-freebsd.c
 @@ -45,6 +45,7 @@
  #include <sys/uio.h>

@@ -1,4 +1,4 @@
---- src/VBox/Additions/common/VBoxGuest/freebsd/files_vboxguest.orig	2019-01-25 18:12:28 UTC
+--- src/VBox/Additions/common/VBoxGuest/freebsd/files_vboxguest.orig	2019-11-21 16:54:06 UTC
 +++ src/VBox/Additions/common/VBoxGuest/freebsd/files_vboxguest
 @@ -63,6 +63,7 @@ FILES_VBOXGUEST_NOBIN=" \
      ${PATH_ROOT}/include/iprt/time.h=>include/iprt/time.h \

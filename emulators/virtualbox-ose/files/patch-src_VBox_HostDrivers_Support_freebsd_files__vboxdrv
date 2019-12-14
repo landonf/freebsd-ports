@@ -1,4 +1,4 @@
---- src/VBox/HostDrivers/Support/freebsd/files_vboxdrv.orig	2019-01-25 18:19:55 UTC
+--- src/VBox/HostDrivers/Support/freebsd/files_vboxdrv.orig	2019-11-21 17:02:00 UTC
 +++ src/VBox/HostDrivers/Support/freebsd/files_vboxdrv
 @@ -119,6 +119,7 @@ FILES_VBOXDRV_NOBIN=" \
      ${PATH_ROOT}/src/VBox/Runtime/common/misc/handletable.cpp=>common/misc/handletable.c \

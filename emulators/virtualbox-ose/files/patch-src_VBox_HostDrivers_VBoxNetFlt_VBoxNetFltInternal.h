@@ -1,6 +1,6 @@
---- src/VBox/HostDrivers/VBoxNetFlt/VBoxNetFltInternal.h.orig	2019-06-15 19:42:35 UTC
-+++ src/VBox/HostDrivers/VBoxNetFlt/VBoxNetFltInternal.h
-@@ -240,6 +240,10 @@ typedef struct VBOXNETFLTINS
+--- src/VBox/HostDrivers/VBoxNetFlt/VBoxNetFltInternal.h	2019-12-10 10:52:37.000000000 -0700
++++ src/VBox/HostDrivers/VBoxNetFlt/VBoxNetFltInternal.h	2019-12-13 17:34:41.330051000 -0700
+@@ -243,6 +243,10 @@
              hook_p input;
              /** Output hook */
              hook_p output;

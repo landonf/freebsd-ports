@@ -1,4 +1,4 @@
---- src/VBox/HostDrivers/Support/freebsd/SUPDrv-freebsd.c.orig	2019-04-16 10:16:37 UTC
+--- src/VBox/HostDrivers/Support/freebsd/SUPDrv-freebsd.c.orig	2019-11-21 17:02:00 UTC
 +++ src/VBox/HostDrivers/Support/freebsd/SUPDrv-freebsd.c
 @@ -46,6 +46,7 @@
  #include <sys/uio.h>

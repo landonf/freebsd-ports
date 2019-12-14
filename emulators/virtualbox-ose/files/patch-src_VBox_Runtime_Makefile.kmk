@@ -1,0 +1,30 @@
+--- src/VBox/Runtime/Makefile.kmk.orig	2019-11-21 17:02:28 UTC
++++ src/VBox/Runtime/Makefile.kmk
+@@ -175,6 +175,11 @@ $(IPRT_OUT_DIR)/oiddb.h.ts +| $(IPRT_OUT_DIR)/oiddb.h:
+ 
+ 
+ #
++# Set the defines that utf8-posix.cpp needs. It's used by several targets.
++#
++r3/posix/utf8-posix.cpp_DEFS.freebsd = $(VBOX_ICONV_DEFS)
++
++#
+ # Unicode Specification reader used to regenerate unidata-*.cpp.
+ #
+ uniread_TEMPLATE = VBoxBldProg
+@@ -2226,6 +2231,7 @@ endif
+ VBoxRT_LIBS.darwin             = \
+ 	iconv
+ VBoxRT_LIBS.freebsd            = \
++	crypt \
+ 	iconv \
+ 	rt
+ VBoxRT_LIBS.haiku              = \
+@@ -2369,6 +2375,7 @@ endif
+ VBoxRT-x86_LIBS.darwin             = \
+ 	iconv
+ VBoxRT-x86_LIBS.freebsd            = \
++	crypt \
+ 	iconv \
+ 	rt
+ VBoxRT-x86_LIBS.haiku              = \

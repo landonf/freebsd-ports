@@ -3,10 +3,10 @@
 
 PORTNAME=	kBuild
 DISTVERSION=	${KBUILD_VERSION}
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	LOCAL/jkim
-DISTNAME=	${PORTNAME}-${DISTVERSION}r3127-src
+DISTNAME=	${PORTNAME}-${DISTVERSION}r${KBUILD_SVN_REV}-src
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	Makefile framework
@@ -29,6 +29,8 @@ KBUILD_ENV=	AUTORECONF=${AUTORECONF} \
 		AUTOPOINT=true \
 		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}" MAKE="${MAKE_CMD}"
+KBUILD_SVN_URL=	https://www.virtualbox.org/svn/kbuild-mirror/trunk
+KBUILD_SVN_REV=	3301
 KBUILD_TARGET=	${OPSYS:tl}
 
 KBUILD_BINS=	kDepIDB kDepObj kDepPre kObjCache kmk kmk_append kmk_ash \
@@ -42,12 +44,11 @@ PORTDOCS=	QuickReference-kmk.html \
 ENV=
 .export ENV
 
-OPTIONS_DEFINE=	DOCS GCC
-OPTIONS_DEFAULT=GCC
-GCC_DESC=	Build with GCC (should almost always be enabled)
-GCC_USE=	GCC=yes
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
+	@${ECHO_CMD} 'KBUILD_SVN_URL := ${KBUILD_SVN_URL}' > ${WRKSRC}/SvnInfo.kmk
+	@${ECHO_CMD} 'KBUILD_SVN_REV := ${KBUILD_SVN_REV}' >> ${WRKSRC}/SvnInfo.kmk
 	@${REINPLACE_CMD} 's|gcc|${CC}|g' ${WRKSRC}/kBuild/tools/*.kmk
 
 do-build:

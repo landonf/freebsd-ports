@@ -1,4 +1,4 @@
---- src/VBox/Additions/freebsd/vboxvfs/vboxvfs.h.orig	2019-04-16 10:09:14 UTC
+--- src/VBox/Additions/freebsd/vboxvfs/vboxvfs.h.orig	2019-11-21 16:54:10 UTC
 +++ src/VBox/Additions/freebsd/vboxvfs/vboxvfs.h
 @@ -1,8 +1,3 @@
 -/* $Id: vboxvfs.h $ */

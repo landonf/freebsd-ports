@@ -7,6 +7,7 @@ bin/VBoxManage
 bin/VBoxVRDP
 %%QT%%bin/VirtualBox
 %%QT%%bin/VirtualBoxVM
+bin/vbox-img
 bin/vboxautostart
 bin/vboxballoonctrl
 bin/vboxbugreport
@@ -371,6 +372,7 @@ include/virtualbox/xpcom/xptinfo.h
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/xpcom/server/policy.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/xpcom/server%%PYTHON_PYCDIR%%policy%%PYTHON_PYCEXT%%
 %%QT%%lib/virtualbox/DbgPlugInDiggers.so
+%%QT%%lib/virtualbox/UICommon.so
 lib/virtualbox/VBox.sh
 lib/virtualbox/VBoxAuth.so
 lib/virtualbox/VBoxAuthSimple.so
@@ -380,14 +382,12 @@ lib/virtualbox/VBoxBugReport
 lib/virtualbox/VBoxDD.so
 lib/virtualbox/VBoxDD2.so
 lib/virtualbox/VBoxDDR0.r0
-lib/virtualbox/VBoxDDRC.rc
 lib/virtualbox/VBoxDDU.so
 %%QT%%lib/virtualbox/VBoxDbg.so
 %%QT%%lib/virtualbox/VBoxDragAndDropSvc.so
 lib/virtualbox/VBoxEFI32.fd
 lib/virtualbox/VBoxEFI64.fd
 lib/virtualbox/VBoxExtPackHelperApp
-%%QT%%lib/virtualbox/VBoxGlobal.so
 lib/virtualbox/VBoxGuestControlSvc.so
 lib/virtualbox/VBoxGuestPropSvc.so
 @(root,%%VBOXGROUP%%,4510) lib/virtualbox/VBoxHeadless
@@ -402,16 +402,12 @@ lib/virtualbox/VBoxNetDHCP.so
 lib/virtualbox/VBoxNetNAT.so
 %%PYTHON%%lib/virtualbox/VBoxPython.so
 %%PYTHON%%lib/virtualbox/VBoxPython%%PYTHON_VERU%%.so
-lib/virtualbox/VBoxREM.so
-%%I386%%lib/virtualbox/VBoxREM32.so
-%%I386%%lib/virtualbox/VBoxREM64.so
 lib/virtualbox/VBoxRT.so
 %%X11%%@(root,%%VBOXGROUP%%,4510) lib/virtualbox/VBoxSDL
 %%X11%%lib/virtualbox/VBoxSDL.so
 lib/virtualbox/VBoxSVC
 %%X11%%lib/virtualbox/VBoxSVGA3D.so
 %%X11%%lib/virtualbox/VBoxSharedClipboard.so
-%%X11%%lib/virtualbox/VBoxSharedCrOpenGL.so
 lib/virtualbox/VBoxSharedFolders.so
 %%QT%%lib/virtualbox/VBoxTestOGL
 lib/virtualbox/VBoxVMM.so
@@ -420,11 +416,11 @@ lib/virtualbox/VBoxXPCOM.so
 lib/virtualbox/VBoxXPCOMC.so
 lib/virtualbox/VBoxXPCOMIPCD
 lib/virtualbox/VMMR0.r0
-lib/virtualbox/VMMRC.rc
 %%QT%%lib/virtualbox/VirtualBox
 %%QT%%@(root,%%VBOXGROUP%%,4510) lib/virtualbox/VirtualBoxVM
 %%QT%%lib/virtualbox/VirtualBoxVM.so
 %%SDK%%lib/virtualbox/sdk
+lib/virtualbox/vbox-img
 %%WEBSERVICE%%lib/virtualbox/vboxwebsrv
 %%WEBSERVICE%%lib/virtualbox/webtest
 %%VNC%%lib/virtualbox/ExtensionPacks/VNC/ExtPack-license.html

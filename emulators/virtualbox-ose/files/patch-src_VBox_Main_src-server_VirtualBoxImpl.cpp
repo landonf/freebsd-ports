@@ -1,6 +1,6 @@
---- src/VBox/Main/src-server/VirtualBoxImpl.cpp.orig	2015-04-01 12:15:14.000000000 -0400
-+++ src/VBox/Main/src-server/VirtualBoxImpl.cpp	2015-04-07 12:25:59.226583000 -0400
-@@ -2172,7 +2172,7 @@
+--- src/VBox/Main/src-server/VirtualBoxImpl.cpp.orig	2019-11-21 17:02:20 UTC
++++ src/VBox/Main/src-server/VirtualBoxImpl.cpp
+@@ -2655,7 +2655,7 @@ int VirtualBox::i_encryptSettingBytes(const uint8_t *a
      if (aCiphertextSize < 32)
          return VERR_INVALID_PARAMETER;
  

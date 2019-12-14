@@ -1,0 +1,23 @@
+--- src/VBox/Storage/testcase/Makefile.kmk.orig	2019-11-21 17:03:07 UTC
++++ src/VBox/Storage/testcase/Makefile.kmk
+@@ -146,7 +146,7 @@ if defined(VBOX_WITH_TESTCASES) || defined(VBOX_WITH_V
+    vbox-img_LIBS += xml2
+   endif
+  else ifeq ($(KBUILD_TARGET),freebsd)
+-  vbox-img_LIBS += iconv
++  vbox-img_LIBS += crypt iconv
+   ifdef SDK_VBOX_LIBXML2_LIBS
+    vbox-img_LIBS += xml2 lzma
+   endif
+@@ -191,8 +191,10 @@ if    defined(VBOX_WITH_TESTCASES) && defined(VBOX_WIT
+   ifdef SDK_VBOX_LIBXML2_LIBS
+    vdkeystoremgr_LIBS += xml2
+   endif
+- else if1of ($(KBUILD_TARGET),darwin freebsd)
++ else ifeq ($(KBUILD_TARGET),darwin)
+   vdkeystoremgr_LIBS += iconv
++ else ifeq ($(KBUILD_TARGET),freebsd)
++  vdkeystoremgr_LIBS += crypt iconv
+  else ifeq ($(KBUILD_TARGET),win)
+   vdkeystoremgr_SDKS.win = VBOX_NTDLL
+  else ifeq ($(KBUILD_TARGET),solaris)

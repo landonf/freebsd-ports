@@ -1,4 +1,4 @@
---- src/VBox/Devices/Graphics/DevVGA-SVGA3d-glLdr.cpp.orig	2019-05-13 13:30:56 UTC
+--- src/VBox/Devices/Graphics/DevVGA-SVGA3d-glLdr.cpp.orig	2019-11-21 16:59:41 UTC
 +++ src/VBox/Devices/Graphics/DevVGA-SVGA3d-glLdr.cpp
 @@ -186,7 +186,7 @@ int glLdrInit(PPDMDEVINS pDevIns)
      pfn_wglDeleteContext = 0;
