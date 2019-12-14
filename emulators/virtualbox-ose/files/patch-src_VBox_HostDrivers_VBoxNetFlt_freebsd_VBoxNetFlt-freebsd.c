@@ -249,12 +249,11 @@
  int vboxNetFltOsDisconnectIt(PVBOXNETFLTINS pThis)
 --- src/VBox/HostDrivers/VBoxNetFlt/freebsd/VBoxNetFlt-freebsd.c	2019-12-13 17:35:26.410632000 -0700
 +++ src/VBox/HostDrivers/VBoxNetFlt/freebsd/VBoxNetFlt-freebsd.c	2019-12-13 17:43:11.311353000 -0700
-@@ -58,6 +58,8 @@
+@@ -58,6 +58,7 @@
  #include <netgraph/netgraph.h>
  #include <netgraph/ng_parse.h>
- 
 +#include <netgraph/ng_ether.h>
-+
+ 
  #define LOG_GROUP LOG_GROUP_NET_FLT_DRV
  #include <VBox/version.h>
  #include <VBox/err.h>
