@@ -3,6 +3,7 @@
 PORTNAME=	alacritty
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.0
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	tobik@FreeBSD.org
@@ -13,8 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE-APACHE
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
+TEST_DEPENDS=	dejavu>0:x11-fonts/dejavu
 
-USES=		cargo python:3.6+,build ssl:build xorg
+USES=		cargo localbase:ldflags python:3.6+,build ssl:build xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	jwilm
 GH_TUPLE=	chrisduerr:glutin:7e479dca8be6244b96e2a080714fc4babf7fe30d:glutin \

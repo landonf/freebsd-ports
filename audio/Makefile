@@ -764,6 +764,7 @@
     SUBDIR += sndio
     SUBDIR += so-synth-lv2
     SUBDIR += solfege
+    SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
     SUBDIR += sorcer-lv2
@@ -787,6 +788,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-tui
     SUBDIR += spotifyd
     SUBDIR += squash
     SUBDIR += sratom

@@ -284,7 +284,6 @@
     SUBDIR += pdagent-integrations
     SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
-    SUBDIR += php71-snmp
     SUBDIR += php72-snmp
     SUBDIR += php73-snmp
     SUBDIR += php74-snmp
@@ -393,11 +392,6 @@
     SUBDIR += xymon-client
     SUBDIR += xymon-server
     SUBDIR += yaf
-    SUBDIR += zabbix22-agent
-    SUBDIR += zabbix22-frontend
-    SUBDIR += zabbix22-java
-    SUBDIR += zabbix22-proxy
-    SUBDIR += zabbix22-server
     SUBDIR += zabbix3-agent
     SUBDIR += zabbix3-frontend
     SUBDIR += zabbix3-java

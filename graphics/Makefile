@@ -387,6 +387,7 @@
     SUBDIR += kdiagram
     SUBDIR += kf5-kimageformats
     SUBDIR += kf5-kplotting
+    SUBDIR += kf5-kquickcharts
     SUBDIR += kf5-prison
     SUBDIR += kgraphviewer
     SUBDIR += kimagemapeditor
@@ -397,6 +398,7 @@
     SUBDIR += kolourpaint
     SUBDIR += kooka
     SUBDIR += kphotoalbum
+    SUBDIR += kqtquickcharts
     SUBDIR += krita
     SUBDIR += kudu
     SUBDIR += kxstitch
@@ -600,7 +602,7 @@
     SUBDIR += optar
     SUBDIR += optipng
     SUBDIR += osg
-    SUBDIR += osg-devel
+    SUBDIR += osg34
     SUBDIR += osgearth
     SUBDIR += ossim
     SUBDIR += oyranos
@@ -741,8 +743,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php71-exif
-    SUBDIR += php71-gd
     SUBDIR += php72-exif
     SUBDIR += php72-gd
     SUBDIR += php73-exif
@@ -802,6 +802,7 @@
     SUBDIR += py-blockdiagcontrib-cisco
     SUBDIR += py-cairo
     SUBDIR += py-cairocffi
+    SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
     SUBDIR += py-chart
     SUBDIR += py-colour
@@ -1033,6 +1034,7 @@
     SUBDIR += uniconvertor
     SUBDIR += uniconvw
     SUBDIR += unpaper
+    SUBDIR += urho3d
     SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv
     SUBDIR += vapoursynth-waifu2x-w2xc

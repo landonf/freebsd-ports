@@ -791,6 +791,7 @@
     SUBDIR += qwdtools
     SUBDIR += r1q2
     SUBDIR += railroad-rampage
+    SUBDIR += rawgl
     SUBDIR += redeclipse
     SUBDIR += redeclipse-data
     SUBDIR += redorblack
@@ -853,6 +854,9 @@
     SUBDIR += simplevaders
     SUBDIR += simsu
     SUBDIR += simutrans
+    SUBDIR += simutrans-pak128
+    SUBDIR += simutrans-pak128.german
+    SUBDIR += simutrans-pak64
     SUBDIR += sjeng
     SUBDIR += ski
     SUBDIR += sl
@@ -974,6 +978,7 @@
     SUBDIR += vectoroids
     SUBDIR += vegastrike
     SUBDIR += vegastrike-data
+    SUBDIR += veloren
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris

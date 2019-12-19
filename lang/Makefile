@@ -144,6 +144,7 @@
     SUBDIR += icc
     SUBDIR += ici
     SUBDIR += icon
+    SUBDIR += intel-compute-runtime
     SUBDIR += intercal
     SUBDIR += io
     SUBDIR += io-devel
@@ -272,8 +273,6 @@
     SUBDIR += pharo
     SUBDIR += phc
     SUBDIR += php-mode.el
-    SUBDIR += php71
-    SUBDIR += php71-extensions
     SUBDIR += php72
     SUBDIR += php72-extensions
     SUBDIR += php73
@@ -375,6 +374,7 @@
     SUBDIR += twelf
     SUBDIR += ucc
     SUBDIR += urweb
+    SUBDIR += v
     SUBDIR += v8
     SUBDIR += vala
     SUBDIR += visualworks

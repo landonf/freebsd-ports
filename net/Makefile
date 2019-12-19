@@ -324,6 +324,7 @@
     SUBDIR += knc
     SUBDIR += knxd
     SUBDIR += kontactinterface
+    SUBDIR += kpeoplevcard
     SUBDIR += kpimtextedit
     SUBDIR += krdc
     SUBDIR += krfb
@@ -468,6 +469,7 @@
     SUBDIR += mping
     SUBDIR += mptsd
     SUBDIR += mrouted
+    SUBDIR += mrtparse
     SUBDIR += msend
     SUBDIR += mtr
     SUBDIR += mtr-nox11
@@ -962,10 +964,6 @@
     SUBDIR += pen
     SUBDIR += pfinger
     SUBDIR += phamm
-    SUBDIR += php71-ldap
-    SUBDIR += php71-soap
-    SUBDIR += php71-sockets
-    SUBDIR += php71-xmlrpc
     SUBDIR += php72-ldap
     SUBDIR += php72-soap
     SUBDIR += php72-sockets
@@ -1021,6 +1019,7 @@
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
+    SUBDIR += py-cloudscraper
     SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
@@ -1074,6 +1073,7 @@
     SUBDIR += py-pcapy
     SUBDIR += py-port-for
     SUBDIR += py-portend
+    SUBDIR += py-pyenet
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
     SUBDIR += py-pynmsg
@@ -1353,7 +1353,6 @@
     SUBDIR += ryu
     SUBDIR += s3ql
     SUBDIR += samba410
-    SUBDIR += samba48
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd
@@ -1440,6 +1439,7 @@
     SUBDIR += tcpmssd
     SUBDIR += tcpproxy
     SUBDIR += tcpreen
+    SUBDIR += tcprtt
     SUBDIR += tcpsg
     SUBDIR += tcpshow
     SUBDIR += tcpslice

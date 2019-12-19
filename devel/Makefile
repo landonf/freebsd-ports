@@ -15,6 +15,7 @@
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
+    SUBDIR += R-cran-RcppProgress
     SUBDIR += R-cran-Rdpack
     SUBDIR += R-cran-abind
     SUBDIR += R-cran-bindr
@@ -205,6 +206,7 @@
     SUBDIR += aws-sdk-cpp
     SUBDIR += aws-sdk-php
     SUBDIR += awscli
+    SUBDIR += axmldec
     SUBDIR += b2
     SUBDIR += babeltrace
     SUBDIR += bam
@@ -707,6 +709,7 @@
     SUBDIR += fpp
     SUBDIR += frama-c
     SUBDIR += freebsd-gcc6
+    SUBDIR += freebsd-gcc9
     SUBDIR += frink
     SUBDIR += fsmtrie
     SUBDIR += fstrcmp
@@ -827,8 +830,6 @@
     SUBDIR += gitolite2
     SUBDIR += gittrac
     SUBDIR += glade
-    SUBDIR += glade2
-    SUBDIR += glade3
     SUBDIR += glademm
     SUBDIR += glib20
     SUBDIR += glib20-reference
@@ -864,13 +865,13 @@
     SUBDIR += go-tools
     SUBDIR += gob2
     SUBDIR += gobject-introspection
+    SUBDIR += gocheese
     SUBDIR += godep
     SUBDIR += godot
     SUBDIR += godot-tools
     SUBDIR += godot2
     SUBDIR += godot2-tools
     SUBDIR += goffice
-    SUBDIR += goffice010
     SUBDIR += gogland-eap
     SUBDIR += gogs
     SUBDIR += golint
@@ -878,7 +879,6 @@
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
-    SUBDIR += googlemock
     SUBDIR += googletest
     SUBDIR += goprotobuf
     SUBDIR += gorm
@@ -1011,6 +1011,7 @@
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
+    SUBDIR += intel-graphics-compiler
     SUBDIR += interactive_rebase_tool
     SUBDIR += ioncube
     SUBDIR += ipython
@@ -1363,6 +1364,7 @@
     SUBDIR += libstrfunc
     SUBDIR += libstroke
     SUBDIR += libsysctlmibinfo
+    SUBDIR += libsysctlmibinfo2
     SUBDIR += libsysinfo
     SUBDIR += libtai
     SUBDIR += libtap
@@ -1664,6 +1666,7 @@
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
     SUBDIR += opencl
+    SUBDIR += opencl-clang
     SUBDIR += opencvs
     SUBDIR += opendht
     SUBDIR += opengrok
@@ -1688,6 +1691,7 @@
     SUBDIR += p5-AI-Pathfinding-AStar
     SUBDIR += p5-AI-Prolog
     SUBDIR += p5-ARGV-Struct
+    SUBDIR += p5-AWS-Signature4
     SUBDIR += p5-Acme-Comment
     SUBDIR += p5-Acme-Damn
     SUBDIR += p5-Acme-MetaSyntactic
@@ -3875,7 +3879,6 @@
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
     SUBDIR += pecl-raphf2
-    SUBDIR += pecl-request
     SUBDIR += pecl-swoole
     SUBDIR += pecl-sync
     SUBDIR += pecl-uploadprogress
@@ -3898,16 +3901,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php71-gettext
-    SUBDIR += php71-intl
-    SUBDIR += php71-json
-    SUBDIR += php71-pcntl
-    SUBDIR += php71-readline
-    SUBDIR += php71-shmop
-    SUBDIR += php71-sysvmsg
-    SUBDIR += php71-sysvsem
-    SUBDIR += php71-sysvshm
-    SUBDIR += php71-tokenizer
     SUBDIR += php72-gettext
     SUBDIR += php72-intl
     SUBDIR += php72-json
@@ -4122,6 +4115,7 @@
     SUBDIR += py-anyjson
     SUBDIR += py-apache_conf_parser
     SUBDIR += py-apipkg
+    SUBDIR += py-apispec
     SUBDIR += py-apns2
     SUBDIR += py-appdirs
     SUBDIR += py-application
@@ -4908,6 +4902,7 @@
     SUBDIR += py-pytest-flakes
     SUBDIR += py-pytest-forked
     SUBDIR += py-pytest-helpers-namespace
+    SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
     SUBDIR += py-pytest-pycodestyle
@@ -5477,6 +5472,7 @@
     SUBDIR += rubygem-aws-sdk-apigateway
     SUBDIR += rubygem-aws-sdk-apigatewaymanagementapi
     SUBDIR += rubygem-aws-sdk-apigatewayv2
+    SUBDIR += rubygem-aws-sdk-appconfig
     SUBDIR += rubygem-aws-sdk-applicationautoscaling
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
@@ -5515,6 +5511,7 @@
     SUBDIR += rubygem-aws-sdk-comprehendmedical
     SUBDIR += rubygem-aws-sdk-configservice
     SUBDIR += rubygem-aws-sdk-connect
+    SUBDIR += rubygem-aws-sdk-connectparticipant
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
@@ -5539,6 +5536,7 @@
     SUBDIR += rubygem-aws-sdk-eks
     SUBDIR += rubygem-aws-sdk-elasticache
     SUBDIR += rubygem-aws-sdk-elasticbeanstalk
+    SUBDIR += rubygem-aws-sdk-elasticinference
     SUBDIR += rubygem-aws-sdk-elasticloadbalancing
     SUBDIR += rubygem-aws-sdk-elasticloadbalancingv2
     SUBDIR += rubygem-aws-sdk-elasticsearchservice
@@ -5569,6 +5567,7 @@
     SUBDIR += rubygem-aws-sdk-iotevents
     SUBDIR += rubygem-aws-sdk-ioteventsdata
     SUBDIR += rubygem-aws-sdk-iotjobsdataplane
+    SUBDIR += rubygem-aws-sdk-iotsecuretunneling
     SUBDIR += rubygem-aws-sdk-iotthingsgraph
     SUBDIR += rubygem-aws-sdk-kafka
     SUBDIR += rubygem-aws-sdk-kinesis
@@ -5601,6 +5600,7 @@
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
     SUBDIR += rubygem-aws-sdk-migrationhub
+    SUBDIR += rubygem-aws-sdk-migrationhubconfig
     SUBDIR += rubygem-aws-sdk-mobile
     SUBDIR += rubygem-aws-sdk-mq
     SUBDIR += rubygem-aws-sdk-mturk
@@ -5668,6 +5668,7 @@
     SUBDIR += rubygem-aws-sdk-v1
     SUBDIR += rubygem-aws-sdk-waf
     SUBDIR += rubygem-aws-sdk-wafregional
+    SUBDIR += rubygem-aws-sdk-wafv2
     SUBDIR += rubygem-aws-sdk-workdocs
     SUBDIR += rubygem-aws-sdk-worklink
     SUBDIR += rubygem-aws-sdk-workmail
@@ -6145,11 +6146,13 @@
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-reentrant_flock
     SUBDIR += rubygem-ref
+    SUBDIR += rubygem-reline
     SUBDIR += rubygem-request_store
     SUBDIR += rubygem-require_all
     SUBDIR += rubygem-resque
     SUBDIR += rubygem-retriable
     SUBDIR += rubygem-retryable
+    SUBDIR += rubygem-rgen
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rice
     SUBDIR += rubygem-rodzilla
@@ -6427,6 +6430,7 @@
     SUBDIR += spdlog
     SUBDIR += spice-protocol
     SUBDIR += spin
+    SUBDIR += spirv-llvm-translator
     SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += spread-sheet-widget
@@ -6487,6 +6491,7 @@
     SUBDIR += tdl
     SUBDIR += template-glib
     SUBDIR += termbox
+    SUBDIR += termcolor
     SUBDIR += terminality
     SUBDIR += tevent
     SUBDIR += tevent1

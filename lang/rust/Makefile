@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.39.0
+PORTVERSION?=	1.40.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -56,9 +56,9 @@ DOCS_VARS=		_RUST_BUILD_DOCS=true
 GDB_RUN_DEPENDS=	${LOCALBASE}/bin/gdb:devel/gdb
 
 # See WRKSRC/src/stage0.txt for the date and version values.
-BOOTSTRAPS_DATE?=		2019-09-26
-RUST_BOOTSTRAP_VERSION?=	1.38.0
-CARGO_BOOTSTRAP_VERSION?=	0.39.0
+BOOTSTRAPS_DATE?=		2019-11-07
+RUST_BOOTSTRAP_VERSION?=	1.39.0
+CARGO_BOOTSTRAP_VERSION?=	0.40.0
 COMPILER_RT_VERSION?=		9.0.0
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
@@ -254,9 +254,11 @@ makesum:
 .endfor
 	${RM} ${DISTINFO_FILE}.${arch}
 .endfor
+.if ${ONLY_FOR_ARCHS:Mpowerpc64}
 	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv2 ARCH=powerpc64 DISTINFO_FILE=${DISTINFO_FILE}.powerpc64-elfv2
 	${GREP} ${_RUST_ARCH_powerpc64:Upowerpc64} ${DISTINFO_FILE}.powerpc64-elfv2 >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.powerpc64-elfv2
+.endif
 	${AWK} '!seen[$$0]++' ${DISTINFO_FILE}.tmp > ${DISTINFO_FILE}
 	${RM} ${DISTINFO_FILE}.tmp
 .endif

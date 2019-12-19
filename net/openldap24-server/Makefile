@@ -65,7 +65,7 @@ BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
 PORTREVISION_CLIENT=	0
-PORTREVISION_SERVER=	1
+PORTREVISION_SERVER=	3
 OPENLDAP_SHLIB_MAJOR=	2
 OPENLDAP_SHLIB_MINOR=	10.11
 OPENLDAP_MAJOR=		${DISTVERSION:R}
@@ -514,7 +514,7 @@ EXTRA_PATCHES+=		${FILESDIR}/extrapatch-outlook-servers__slapd__schema_prep.c
 .endif
 
 .if ${PORT_OPTIONS:MKQUEUE}
-USE_AUTOTOOLS+=		autoconf
+BUILD_DEPENDS+=		autoconf>0:devel/autoconf
 EXTRA_PATCHES+=		${FILESDIR}/extrapatch-ITS6300
 .endif
 
