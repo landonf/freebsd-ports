@@ -1413,6 +1413,7 @@
     SUBDIR += vbetool
     SUBDIR += vchanger
     SUBDIR += vcp
+    SUBDIR += vector
     SUBDIR += videogen
     SUBDIR += vii
     SUBDIR += vils
