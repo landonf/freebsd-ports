@@ -1290,7 +1290,6 @@
     SUBDIR += liboil
     SUBDIR += libol
     SUBDIR += libolecf
-    SUBDIR += liboobs
     SUBDIR += libopenbsd
     SUBDIR += libopencm3
     SUBDIR += libopensync
