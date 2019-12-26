@@ -849,7 +849,6 @@
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
     SUBDIR += gnome-common
-    SUBDIR += gnome-js-common
     SUBDIR += gnome-vfs
     SUBDIR += gnome-vfs-reference
     SUBDIR += gnome-vfsmm
