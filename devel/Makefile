@@ -5884,7 +5884,6 @@
     SUBDIR += rubygem-gitlab-chronic
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
-    SUBDIR += rubygem-gitlab-peek-rails52
     SUBDIR += rubygem-gitlab-pygments.rb
     SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_chronic_duration
