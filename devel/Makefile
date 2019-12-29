@@ -4267,6 +4267,7 @@
     SUBDIR += py-cachecontrol
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
+    SUBDIR += py-cachy
     SUBDIR += py-calendar
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
