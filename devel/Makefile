@@ -4304,6 +4304,7 @@
     SUBDIR += py-click6
     SUBDIR += py-cliff
     SUBDIR += py-cligj
+    SUBDIR += py-clikit
     SUBDIR += py-clint
     SUBDIR += py-clonedigger
     SUBDIR += py-cloudpickle
