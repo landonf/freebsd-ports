@@ -5545,6 +5545,7 @@
     SUBDIR += rubygem-aws-sdk-docdb
     SUBDIR += rubygem-aws-sdk-dynamodb
     SUBDIR += rubygem-aws-sdk-dynamodbstreams
+    SUBDIR += rubygem-aws-sdk-ebs
     SUBDIR += rubygem-aws-sdk-ec2
     SUBDIR += rubygem-aws-sdk-ec2instanceconnect
     SUBDIR += rubygem-aws-sdk-ecr
