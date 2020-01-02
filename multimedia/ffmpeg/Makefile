@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	4.2.1
-PORTREVISION=	18
+PORTVERSION=	4.2.2
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -39,7 +38,7 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ARIBB24 ASS BEIGNET BS2B CACA CDIO CELT \
 		CODEC2 DAV1D DAVS2 DC1394 DEBUG DOCS DRM FDK_AAC FLITE \
 		FONTCONFIG FREETYPE FREI0R FRIBIDI GME GSM ICONV ILBC JACK \
 		KLVANC KVAZAAR LADSPA LAME LENSFUN LIBBLURAY LIBRSVG2 LIBXML2 \
-		LV2 MFX MODPLUG MYSOFA OPENAL OPENCL OPENCV OPENGL OPENH264 \
+		LTO LV2 MFX MODPLUG MYSOFA OPENAL OPENCL OPENCV OPENGL OPENH264 \
 		OPENJPEG OPENMPT OPTIMIZED_CFLAGS OPUS POCKETSPHINX PULSEAUDIO \
 		RAV1E RTCPU RUBBERBAND SDL SMB SNAPPY SNDIO SOXR SPEEX SRT SSH \
 		SVTAV1 SVTHEVC SVTVP9 TENSORFLOW TESSERACT THEORA TWOLAME V4L \
@@ -111,6 +110,7 @@ ILBC_DESC=	Internet Low Bit Rate codec
 KLVANC_DESC=	Kernel Labs VANC processing
 KVAZAAR_DESC=	H.265 video codec support via Kvazaar
 LICENSE_DESC=	Licensing options
+LTO_DESC=	Use Link-Time Optimization
 LV2_DESC=	LV2 audio filtering
 MFX_DESC=	Intel MediaSDK (aka Quick Sync Video)
 MYSOFA_DESC=	SOFAlizer binaural filter
@@ -316,6 +316,9 @@ LIBRSVG2_CONFIGURE_ENABLE=	librsvg
 LIBXML2_LIB_DEPENDS=	libxml2.so:textproc/libxml2
 LIBXML2_CONFIGURE_ENABLE=	libxml2
 
+# lto
+LTO_CONFIGURE_ENABLE=	lto
+
 # lv2
 LV2_BUILD_DEPENDS=	lv2>0:audio/lv2
 LV2_LIB_DEPENDS=	liblilv-0.so:audio/lilv
@@ -454,7 +457,7 @@ SRT_CONFIGURE_ENABLE=	libsrt
 # svt-av1
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
 SVTAV1_CONFIGURE_ON=	--enable-libsvtav1
-SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.7.5/ffmpeg_plugin/:svtav1
+SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.8.0/ffmpeg_plugin/:svtav1
 SVTAV1_PATCHFILES=	0001-Add-ability-for-ffmpeg-to-run-svt-av1.patch:-p1:svtav1
 .if exists(/usr/bin/ld.lld) && (${/usr/bin/ld:L:tA} != /usr/bin/ld.lld)
 # https://github.com/OpenVisualCloud/SVT-AV1/issues/691

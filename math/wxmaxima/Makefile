@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	wxmaxima
-PORTVERSION=	19.12.1
+PORTVERSION=	19.12.4
 DISTVERSIONPREFIX=	Version-
 CATEGORIES=	math
 
-MAINTAINER=	phascolarctos@protonmail.ch
+MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	WxWidgets GUI for the computer algebra system maxima
 
 LICENSE=	GPLv2

@@ -306,7 +306,6 @@
     SUBDIR += linklint
     SUBDIR += links
     SUBDIR += links1
-    SUBDIR += linux-c6-qt47-webkit
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-flashplayer
     SUBDIR += linux-opera
@@ -330,6 +329,7 @@
     SUBDIR += mediawiki131
     SUBDIR += mediawiki132
     SUBDIR += mediawiki133
+    SUBDIR += mediawiki134
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -502,10 +502,12 @@
     SUBDIR += p5-Apache-AuthCookie
     SUBDIR += p5-Apache-AuthTicket
     SUBDIR += p5-Apache-Clean2
+    SUBDIR += p5-Apache-Config-Preproc
     SUBDIR += p5-Apache-ConfigFile
     SUBDIR += p5-Apache-ConfigParser
     SUBDIR += p5-Apache-DB
     SUBDIR += p5-Apache-DBI
+    SUBDIR += p5-Apache-Defaults
     SUBDIR += p5-Apache-Gallery
     SUBDIR += p5-Apache-Htgroup
     SUBDIR += p5-Apache-LogFormat-Compiler
@@ -1479,6 +1481,7 @@
     SUBDIR += py-dj22-django-model-utils
     SUBDIR += py-dj22-django-mptt
     SUBDIR += py-dj22-django-prometheus
+    SUBDIR += py-dj22-django-redis
     SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
     SUBDIR += py-dj22-django-taggit-serializer
@@ -1625,14 +1628,18 @@
     SUBDIR += py-flask-assets
     SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
+    SUBDIR += py-flask-collect
     SUBDIR += py-flask-compress
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
+    SUBDIR += py-flask-json
     SUBDIR += py-flask-login
     SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
     SUBDIR += py-flask-moment
+    SUBDIR += py-flask-mongoengine
     SUBDIR += py-flask-oauthlib
+    SUBDIR += py-flask-peewee
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
@@ -1820,6 +1827,7 @@
     SUBDIR += py-requests-cache
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-futures097
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
@@ -1961,6 +1969,7 @@
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
     SUBDIR += rubygem-async-http
+    SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-atlassian-jwt
@@ -2008,6 +2017,8 @@
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-gollum-rugged_adapter
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gitlab-puma
+    SUBDIR += rubygem-gitlab-puma_worker_killer
     SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-goldfinger
     SUBDIR += rubygem-gollum
