@@ -1,6 +1,6 @@
---- include/iprt/string.h.orig	2019-11-21 16:51:44 UTC
+--- include/iprt/string.h.orig	2018-06-29 13:08:03 UTC
 +++ include/iprt/string.h
-@@ -46,6 +46,11 @@
+@@ -43,6 +43,11 @@
  #elif defined(RT_OS_FREEBSD) && defined(_KERNEL)
    RT_C_DECLS_BEGIN
  # include <sys/libkern.h>

@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.1.0
+PORTVERSION=	6.0.14
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
+MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
 EXTRACT_ONLY=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX}
 
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	yasm:devel/yasm \
 		xsltproc:textproc/libxslt \
-		kBuild>=0.1.9998_14:devel/kBuild \
+		kmk:devel/kBuild \
 		gtar:archivers/gtar
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libxslt.so:textproc/libxslt \
@@ -47,11 +47,11 @@ USERS=		${VBOXUSER}
 GROUPS=		${VBOXGROUP}
 VBOX_DIR=	${PREFIX}/${VBOX_DIR_REL}
 VBOX_DIR_REL=	lib/virtualbox
-VBOX_LINKS=	VBoxVRDP vbox-img
+VBOX_LINKS=	VBoxVRDP
 VBOX_PROGS=	VBoxAutostart VBoxBalloonCtrl VBoxBugReport VBoxHeadless \
 		VBoxManage
 VBOX_UTILS=	VBoxExtPackHelperApp VBoxNetAdpCtl VBoxNetDHCP VBoxNetNAT \
-		VBoxSVC VBoxXPCOMIPCD vbox-img
+		VBoxSVC VBoxXPCOMIPCD
 
 OPTIONS_DEFINE=	ALSA DBUS DEBUG GUESTADDITIONS MANUAL NLS OPUS PULSEAUDIO \
 		PYTHON QT5 R0LOGGING UDPTUNNEL VDE VNC WEBSERVICE VPX X11
@@ -141,12 +141,12 @@ USE_TEX=	dvipsk:build formats:build
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USES+=		python
+USES+=		python:2.7
 USE_PYTHON=	distutils noegginfo noflavors
 PYDISTUTILS_PKGNAME=	vboxapi
 PYDISTUTILS_PKGVERSION=	1.0
 .else
-USES+=		python:build
+USES+=		python:2.7,build
 .endif
 
 .if ${PORT_OPTIONS:MQT5}
@@ -210,8 +210,10 @@ CC=		${LOCALBASE}/bin/clang${VBOX_LLVM_VER}
 CXX=		${LOCALBASE}/bin/clang++${VBOX_LLVM_VER}
 VBOX_LLVM_VER?=	70
 .endif
+PATCH_DEPENDS+=	${LOCALBASE}/share/kBuild/tools/GXX3.kmk:devel/kBuild
 EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-Config.kmk \
-		${PATCHDIR}/extrapatch-src_VBox_Devices_PC_ipxe_Makefile.kmk
+		${PATCHDIR}/extrapatch-src-VBox-Devices-PC-ipxe-Makefile.kmk \
+		${PATCHDIR}/extrapatch-src-recompiler-Makefile.kmk
 .endif
 
 .if ${PYTHON_MAJOR_VER} >= 3
@@ -249,8 +251,6 @@ post-patch:
 	@${ECHO_CMD} 'VBOX_PATH_SHARED_LIBS = ${VBOX_DIR}' >> \
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_WITH_RUNPATH = ${VBOX_DIR}' >> \
-	    ${WRKSRC}/LocalConfig.kmk
-	@${ECHO_CMD} 'VBOX_WITH_VBOX_IMG = ${VBOX_DIR}' >> \
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_PATH_APP_PRIVATE = ${DATADIR}' >> \
 	    ${WRKSRC}/LocalConfig.kmk
@@ -291,13 +291,14 @@ post-patch:
 	@${ECHO} 'VBOX_WITH_VMSVGA3D =' >> ${WRKSRC}/LocalConfig.kmk
 .endif
 .if ${COMPILER_TYPE} == clang
-	@${REINPLACE_CMD} -e 's| -mno-align-long-strings||' \
-	    ${WRKSRC}/Config.kmk
-	@${REINPLACE_CMD} -e 's|-mpreferred-stack-boundary=2 ||' \
-	    ${WRKSRC}/Config.kmk \
-	    ${WRKSRC}/src/VBox/Devices/PC/ipxe/Makefile.kmk
+	@${REINPLACE_CMD} -e 's| -finline-limit=8000||' \
+	    -e 's| -mpreferred-stack-boundary=2||' ${WRKSRC}/Config.kmk
 	@${REINPLACE_CMD} -e 's| -fpermissive||' ${WRKSRC}/Config.kmk \
 	    ${WRKSRC}/src/VBox/Main/webservice/Makefile.kmk
+	@${ECHO_CMD} 'TOOL_VBoxGccFreeBSD_LD = ${CXX}' >> ${WRKSRC}/LocalConfig.kmk
+	@${SED} -e 's|GXX3|VBoxGccFreeBSD|g' \
+	    ${LOCALBASE}/share/kBuild/tools/GXX3.kmk > \
+	    ${WRKSRC}/tools/kBuildTools/VBoxGccFreeBSD.kmk
 .endif
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    ${WRKSRC}/Config.kmk ${WRKSRC}/configure \
@@ -341,7 +342,7 @@ do-install:
 
 	${MKDIR} ${STAGEDIR}${VBOX_DIR}
 	cd ${KMK_BUILDDIR}/bin && ${COPYTREE_SHARE} \
-	    "*.fd *.r0 *.so components" ${STAGEDIR}${VBOX_DIR}
+	    "*.fd *.r0 *.rc *.so components" ${STAGEDIR}${VBOX_DIR}
 .if ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MWEBSERVICE}
 	${RLN} ${STAGEDIR}${DATADIR}/sdk ${STAGEDIR}${VBOX_DIR}
 .endif
