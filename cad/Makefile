@@ -12,7 +12,6 @@
     SUBDIR += astk-serveur
     SUBDIR += atlc
     SUBDIR += basicdsp
-    SUBDIR += brickutils
     SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
@@ -106,7 +105,6 @@
     SUBDIR += tkgate
     SUBDIR += tochnog
     SUBDIR += transcalc
-    SUBDIR += ujprog
     SUBDIR += varkon
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
