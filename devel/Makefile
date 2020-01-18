@@ -134,6 +134,7 @@
     SUBDIR += aphpunit
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
+    SUBDIR += app-builder
     SUBDIR += appmenu-gtk-module
     SUBDIR += appstream-glib
     SUBDIR += apr1
@@ -317,6 +318,7 @@
     SUBDIR += check
     SUBDIR += checkbashisms
     SUBDIR += checkheaders
+    SUBDIR += chroma
     SUBDIR += chromium-gn
     SUBDIR += chrpath
     SUBDIR += chruby
@@ -516,6 +518,7 @@
     SUBDIR += dulwich
     SUBDIR += dupl
     SUBDIR += duplo
+    SUBDIR += dwarf2json
     SUBDIR += dwarfdump
     SUBDIR += dxa65
     SUBDIR += dyncall
@@ -3847,6 +3850,7 @@
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
+    SUBDIR += pecl-expect
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
@@ -4245,6 +4249,7 @@
     SUBDIR += py-cachecontrol
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
+    SUBDIR += py-cachetools3
     SUBDIR += py-cachy
     SUBDIR += py-calendar
     SUBDIR += py-canonicaljson
@@ -4816,6 +4821,7 @@
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
+    SUBDIR += py-pybix
     SUBDIR += py-pybloomfiltermmap
     SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
@@ -4900,6 +4906,7 @@
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-relaxed
     SUBDIR += py-pytest-rerunfailures
@@ -5384,6 +5391,7 @@
     SUBDIR += resolv_wrapper
     SUBDIR += rhtvision
     SUBDIR += riscv64-gcc
+    SUBDIR += riscv64-none-elf-gcc
     SUBDIR += riscv64-xtoolchain-gcc
     SUBDIR += rlog
     SUBDIR += rlwrap
@@ -5810,7 +5818,13 @@
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
     SUBDIR += rubygem-docile
+    SUBDIR += rubygem-dry-configurable
+    SUBDIR += rubygem-dry-container
+    SUBDIR += rubygem-dry-core
+    SUBDIR += rubygem-dry-equalizer
     SUBDIR += rubygem-dry-inflector
+    SUBDIR += rubygem-dry-logic
+    SUBDIR += rubygem-dry-types
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-edavis10-object_daddy
@@ -6538,6 +6552,7 @@
     SUBDIR += tigcc
     SUBDIR += tijmp
     SUBDIR += tinycbor
+    SUBDIR += tinygo
     SUBDIR += tinylaf
     SUBDIR += tkcon
     SUBDIR += tkcvs

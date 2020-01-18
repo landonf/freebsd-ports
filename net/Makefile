@@ -482,6 +482,7 @@
     SUBDIR += ndisc6
     SUBDIR += ndpi
     SUBDIR += ndproxy
+    SUBDIR += neatvnc
     SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
@@ -1073,6 +1074,7 @@
     SUBDIR += py-pyenet
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
+    SUBDIR += py-pynamecheap
     SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
@@ -1123,6 +1125,7 @@
     SUBDIR += py-suds-jurko
     SUBDIR += py-terminado
     SUBDIR += py-tofu
+    SUBDIR += py-transip
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1515,6 +1518,7 @@
     SUBDIR += wackamole
     SUBDIR += wakeonlan
     SUBDIR += waypipe
+    SUBDIR += wayvnc
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wireguard

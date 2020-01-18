@@ -75,7 +75,6 @@
     SUBDIR += box
     SUBDIR += boxer
     SUBDIR += bsd-plotutils
-    SUBDIR += bugle
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
     SUBDIR += caffe
@@ -841,7 +840,7 @@
     SUBDIR += py-paint
     SUBDIR += py-photocollage
     SUBDIR += py-pillow
-    SUBDIR += py-pivy-devel
+    SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
     SUBDIR += py-poppler
@@ -1043,6 +1042,7 @@
     SUBDIR += vp
     SUBDIR += vpaint
     SUBDIR += vulkan-loader
+    SUBDIR += vv
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan
