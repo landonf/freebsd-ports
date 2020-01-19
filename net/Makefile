@@ -1018,7 +1018,6 @@
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
     SUBDIR += py-cloudscraper
-    SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
@@ -1129,7 +1128,6 @@
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
-    SUBDIR += py-upnp-inspector
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-urlextract
