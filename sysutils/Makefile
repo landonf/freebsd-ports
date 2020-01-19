@@ -255,7 +255,6 @@
     SUBDIR += docker
     SUBDIR += docker-compose
     SUBDIR += docker-credential-pass
-    SUBDIR += docker-freebsd
     SUBDIR += docker-machine
     SUBDIR += doctl
     SUBDIR += doinkd
@@ -558,6 +557,7 @@
     SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool
+    SUBDIR += kio-fuse
     SUBDIR += kldfind
     SUBDIR += kldpatch
     SUBDIR += kops
@@ -880,6 +880,7 @@
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
     SUBDIR += personality
+    SUBDIR += perp
     SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx
@@ -1173,6 +1174,7 @@
     SUBDIR += safe-rm
     SUBDIR += safecat
     SUBDIR += safecopy
+    SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sample
