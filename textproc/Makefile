@@ -46,7 +46,6 @@
     SUBDIR += apache-poi
     SUBDIR += apache-solr
     SUBDIR += apertium
-    SUBDIR += archmage
     SUBDIR += artha
     SUBDIR += asciidoc
     SUBDIR += asm-xml
@@ -164,6 +163,7 @@
     SUBDIR += elasticsearch5
     SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
+    SUBDIR += elasticsearch7
     SUBDIR += elixir-earmark
     SUBDIR += elixir-funnel
     SUBDIR += elixir-sweet_xml
@@ -219,7 +219,6 @@
     SUBDIR += gladtex
     SUBDIR += glark
     SUBDIR += gmetadom
-    SUBDIR += gnome-doc-utils
     SUBDIR += gnugrep
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
@@ -1219,7 +1218,6 @@
     SUBDIR += py-alabaster
     SUBDIR += py-asciinema
     SUBDIR += py-asonic
-    SUBDIR += py-asv
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
     SUBDIR += py-bibtexparser
@@ -1242,7 +1240,6 @@
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
     SUBDIR += py-dparse
-    SUBDIR += py-dsv
     SUBDIR += py-duecredit
     SUBDIR += py-elasticsearch
     SUBDIR += py-elasticsearch-async
@@ -1256,9 +1253,9 @@
     SUBDIR += py-errorhandler
     SUBDIR += py-esmre
     SUBDIR += py-et_xmlfile
-    SUBDIR += py-excelerator
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
+    SUBDIR += py-ftfy
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-gensim
@@ -1272,14 +1269,14 @@
     SUBDIR += py-hunspell
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
-    SUBDIR += py-jaxml
+    SUBDIR += py-isbnlib
+    SUBDIR += py-isbntools
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
     SUBDIR += py-langdetect
     SUBDIR += py-laserhammer
-    SUBDIR += py-libtre
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
     SUBDIR += py-license-expression
@@ -1321,7 +1318,6 @@
     SUBDIR += py-pyPEG2
     SUBDIR += py-pyahocorasick
     SUBDIR += py-pyaml
-    SUBDIR += py-pyctpp2
     SUBDIR += py-pyes
     SUBDIR += py-pygccxml
     SUBDIR += py-pygments
@@ -1358,8 +1354,6 @@
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2html5
-    SUBDIR += py-rstyoutube
-    SUBDIR += py-rxp
     SUBDIR += py-scour
     SUBDIR += py-sgrep
     SUBDIR += py-simplebayes
@@ -1384,7 +1378,6 @@
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-stemming
-    SUBDIR += py-syck
     SUBDIR += py-tabletext
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
@@ -1400,7 +1393,6 @@
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
-    SUBDIR += py-tvgrab
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
@@ -1413,7 +1405,6 @@
     SUBDIR += py-xlrd
     SUBDIR += py-xlsxwriter
     SUBDIR += py-xlutils
-    SUBDIR += py-xlwriter
     SUBDIR += py-xlwt
     SUBDIR += py-xml-default-dict
     SUBDIR += py-xmldiff
@@ -1424,7 +1415,6 @@
     SUBDIR += py-zope.structuredtext
     SUBDIR += py-zope.tal
     SUBDIR += py-zpt
-    SUBDIR += py2html
     SUBDIR += pychm
     SUBDIR += qprint
     SUBDIR += qrcodegen
@@ -1432,7 +1422,6 @@
     SUBDIR += qt5-xml
     SUBDIR += qt5-xmlpatterns
     SUBDIR += qu-aspell
-    SUBDIR += queequeg
     SUBDIR += rand
     SUBDIR += randlm
     SUBDIR += rapidxml
@@ -1465,7 +1454,6 @@
     SUBDIR += rss2html
     SUBDIR += rtf2html
     SUBDIR += rtfreader
-    SUBDIR += rubber
     SUBDIR += ruby-escape
     SUBDIR += ruby-format
     SUBDIR += ruby-htree
@@ -1695,7 +1683,6 @@
     SUBDIR += sgrep2
     SUBDIR += sift
     SUBDIR += sigil
-    SUBDIR += silvercity
     SUBDIR += simplexml
     SUBDIR += sk-aspell
     SUBDIR += sk-hunspell
@@ -1846,7 +1833,6 @@
     SUBDIR += xp
     SUBDIR += xslide.el
     SUBDIR += xstream
-    SUBDIR += xsv
     SUBDIR += xsv-rs
     SUBDIR += xwindiff
     SUBDIR += y2l
@@ -1859,7 +1845,6 @@
     SUBDIR += yi-aspell
     SUBDIR += yi-hunspell
     SUBDIR += yodl
-    SUBDIR += yould
     SUBDIR += yq
     SUBDIR += zenxml
     SUBDIR += zorba

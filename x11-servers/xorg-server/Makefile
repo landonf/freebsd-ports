@@ -23,14 +23,13 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	SUID FIXDRM
 OPTIONS_RADIO=	CONF
 OPTIONS_RADIO_CONF=	DEVD HAL UDEV
-OPTIONS_DEFAULT=	DEVD SUID
- 
-SUID_DESC=	Install setuid wrapper to allow startx as non-root
 CONF_DESC=	Backend to use for input device configuration
-DEVD_DESC=	Use devd (native)
-HAL_DESC=	Use HAL (deprecated)
-UDEV_DESC=	Use udev via libudev-devd (experimental)
+DEVD_DESC=	Use devd for autoconfiguration of input devices
+HAL_DESC=	Use hald for autoconfiguration of input devices
+UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
+SUID_DESC=	Install the Xorg server with setuid bit set
 FIXDRM_DESC=	Enable glamor workaround for drm-devel-kmod bug
+OPTIONS_DEFAULT=DEVD SUID
 
 OPTIONS_EXCLUDE_sparc64=	HAL
 
@@ -81,9 +80,10 @@ CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
 		--disable-xwayland --enable-xcsecurity
 SUB_FILES=	pkg-install pkg-deinstall
 .else
-CONFIGURE_ARGS+=	--disable-xorg
+CONFIGURE_ARGS+=--disable-xorg
 OPTIONS_EXCLUDE=	DEVD HAL UDEV SUID FIXDRM
-# Set PLIST for slave ports so they only need to set PLIST_FILES
+# for slave ports we need to overwrite PLIST, so it doesn't overwrite
+# PLIST_FILES, with the masterport plist.
 PLIST=		${.CURDIR}/pkg-plist
 .endif
 
@@ -95,6 +95,9 @@ PLIST=		${.CURDIR}/pkg-plist
 # a *non-empty* value by-passes the pkg-config check.
 CONFIGURE_ENV=	SHA1_LIB="-L/usr/lib -lcrypto" SHA1_CFLAGS="-I/usr/include"
 .endif
+
+# We handle Xorg setuid in the plist. This allows to build xorg-server as a user.
+CONFIGURE_ARGS+=--disable-install-setuid
 
 .if ${ARCH} == "i386" || ${ARCH} == "amd64"
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
