@@ -279,7 +279,6 @@
     SUBDIR += purescript
     SUBDIR += py-hy
     SUBDIR += py-mx-base
-    SUBDIR += py-prolog
     SUBDIR += py-qt5-qml
     SUBDIR += py-textX
     SUBDIR += pypy
@@ -314,6 +313,7 @@
     SUBDIR += ruby24
     SUBDIR += ruby25
     SUBDIR += ruby26
+    SUBDIR += ruby27
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly
@@ -325,7 +325,6 @@
     SUBDIR += scala-docs
     SUBDIR += scheme48
     SUBDIR += scm
-    SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
     SUBDIR += siod
