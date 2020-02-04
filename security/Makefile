@@ -178,6 +178,7 @@
     SUBDIR += gnome-ssh-askpass
     SUBDIR += gnomint
     SUBDIR += gnupg
+    SUBDIR += gnupg-pkcs11-scd
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
@@ -258,7 +259,6 @@
     SUBDIR += kpkpass
     SUBDIR += kpmenu
     SUBDIR += krb5
-    SUBDIR += krb5-115
     SUBDIR += krb5-116
     SUBDIR += krb5-117
     SUBDIR += krb5-appl
@@ -834,7 +834,6 @@
     SUBDIR += pxytest
     SUBDIR += py-AccessControl
     SUBDIR += py-PF
-    SUBDIR += py-Products.PlonePAS
     SUBDIR += py-Products.PluggableAuthService
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
@@ -846,7 +845,6 @@
     SUBDIR += py-asyncssh
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
-    SUBDIR += py-borg.localrole
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
@@ -932,11 +930,6 @@
     SUBDIR += py-pbkdf2
     SUBDIR += py-pgpdump
     SUBDIR += py-plaso
-    SUBDIR += py-plone.app.openid
-    SUBDIR += py-plone.keyring
-    SUBDIR += py-plone.openid
-    SUBDIR += py-plone.protect
-    SUBDIR += py-plone.session
     SUBDIR += py-potr
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
@@ -996,6 +989,7 @@
     SUBDIR += py-trustme
     SUBDIR += py-tuf
     SUBDIR += py-txtorcon
+    SUBDIR += py-vici
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-volatility3
