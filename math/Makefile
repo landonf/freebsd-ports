@@ -200,6 +200,7 @@
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += csdp
+    SUBDIR += ctl-sat
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
@@ -692,7 +693,6 @@
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-autograd
-    SUBDIR += py-basemap
     SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-bitmath

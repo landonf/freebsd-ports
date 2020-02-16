@@ -47,13 +47,16 @@ CONFLICTS_INSTALL?=	rust-nightly
 PLIST_FILES=	lib/rustlib/components \
 		lib/rustlib/rust-installer-version
 
-OPTIONS_DEFINE=	DOCS GDB SOURCES
+OPTIONS_DEFINE=	DOCS GDB SOURCES WASM
 GDB_DESC=	Install ports gdb (necessary for debugging rust programs)
 SOURCES_DESC=	Install source files
+WASM_DESC=	Build the WebAssembly target (wasm32-unknown-unknown)
 
 DOCS_VARS_OFF=		_RUST_BUILD_DOCS=false
 DOCS_VARS=		_RUST_BUILD_DOCS=true
 GDB_RUN_DEPENDS=	${LOCALBASE}/bin/gdb:devel/gdb
+WASM_VARS_OFF=		_RUST_BUILD_WASM=false
+WASM_VARS=		_RUST_BUILD_WASM=true
 
 # See WRKSRC/src/stage0.txt for the date and version values.
 BOOTSTRAPS_DATE?=		2020-01-11
@@ -125,7 +128,7 @@ post-patch:
 	@${ECHO_MSG} "Bootstrap date and version after patching:"
 	@${GREP} -E '^(date|rustc|cargo)' ${WRKSRC}/src/stage0.txt
 .if ${ARCH} == powerpc64
-# Starting with 13.0 powerpc64 is ELFv2 while 12.0 is ELFv1.  Pass the correct LLVM target triple.  
+# Starting with 13.0 powerpc64 is ELFv2 while 12.0 is ELFv1.  Pass the correct LLVM target triple.
 	@${REINPLACE_CMD} 's,powerpc64-unknown-freebsd,powerpc64-unknown-freebsd${OSREL},' \
 		${WRKSRC}/src/librustc_target/spec/powerpc64_unknown_freebsd.rs
 .endif
@@ -148,6 +151,9 @@ do-configure:
 	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'docs=${_RUST_BUILD_DOCS}' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'verbose=2' >> ${WRKSRC}/config.toml
+.if ${PORT_OPTIONS:MWASM}
+	@${ECHO_CMD} 'target=["${_RUST_TARGET}","wasm32-unknown-unknown"]' >> ${WRKSRC}/config.toml
+.endif
 	@${ECHO_CMD} '[install]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'prefix="${PREFIX}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'sysconfdir="${PREFIX}/etc"' >> ${WRKSRC}/config.toml
@@ -155,6 +161,7 @@ do-configure:
 	@${ECHO_CMD} 'channel="${PKGNAMESUFFIX:Ustable:S/^-//}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'default-linker="${CC}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'verbose-tests=true' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'lld=${_RUST_BUILD_WASM}' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} '[llvm]' >> ${WRKSRC}/config.toml
 .if defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
 	@${ECHO_CMD} 'ccache="${CCACHE_BIN}"' >> ${WRKSRC}/config.toml
@@ -166,8 +173,8 @@ do-configure:
 	@${ECHO_CMD} 'cxx="${CXX}"' >> ${WRKSRC}/config.toml
 .if ${ARCH} == armv6
 # fails to link with base ld.bfd: rustc_codegen_llvm.e2557spx-cgu.11:(.text._ZN89_$LT$rustc_target..abi..call..CastTarget$u20$as$u20$rustc_codegen_llvm..abi..LlvmType$GT$9llvm_type17h1296210ab461fc57E+0x54): relocation truncated to fit: R_ARM_CALL against symbol `__aeabi_uldivmod' defined in .text.__aeabi_uldivmod section in /tmp/rustcdnGbao/libcompiler_builtins-ee65b414e4115a8f.rlib(compiler_builtins-ee65b414e4115a8f.compiler_builtins.ay8p39ey-cgu.13.rcgu.o)
-	@${PRINTF} '#!/bin/sh\nexec ${CC} -fuse-ld=lld "$$@"' > ${WRKDIR}/cc-wrapper 	 
-	@${CHMOD} +x ${WRKDIR}/cc-wrapper 	 
+	@${PRINTF} '#!/bin/sh\nexec ${CC} -fuse-ld=lld "$$@"' > ${WRKDIR}/cc-wrapper
+	@${CHMOD} +x ${WRKDIR}/cc-wrapper
 	@${ECHO_CMD} 'linker="${WRKDIR}/cc-wrapper"' >> ${WRKSRC}/config.toml
 .else
 	@${ECHO_CMD} 'linker="${CC}"' >> ${WRKSRC}/config.toml
