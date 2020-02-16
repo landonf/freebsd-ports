@@ -250,6 +250,10 @@ post-install: .SILENT
 	${REINPLACE_CMD} -e '/libnvidia-egl-wayland\.so/d ; \
 		/10_nvidia_wayland\.json/d' ${TMPPLIST}
 .endif
+.if ${NVVERSION} < 440.044
+	@echo "${NVVERSION}"
+	${REINPLACE_CMD} -E '/^lib32\//d' ${TMPPLIST}
+.endif
 # Rename some libraries and install a libmap file to resolve conflict with
 # Mesa libraries.
 	${LN} -sf libGL-NVIDIA.so.1 \
