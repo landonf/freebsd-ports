@@ -1,4 +1,4 @@
---- hw/xfree86/os-support/bsd/bsd_init.c.orig	2016-07-19 17:07:29 UTC
+--- hw/xfree86/os-support/bsd/bsd_init.c.orig	2017-03-15 18:05:25 UTC
 +++ hw/xfree86/os-support/bsd/bsd_init.c
 @@ -48,6 +48,8 @@ static int devConsoleFd = -1;
  #if defined (SYSCONS_SUPPORT) || defined (PCVT_SUPPORT)
@@ -9,7 +9,7 @@
  #endif
  
  #ifdef PCCONS_SUPPORT
-@@ -230,6 +230,9 @@ xf86OpenConsole()
+@@ -230,6 +232,9 @@ xf86OpenConsole()
               * Add cases for other *BSD that behave the same.
               */
  #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
@@ -19,7 +19,7 @@
              uname(&uts);
              i = atof(uts.release) * 100;
              if (i >= 310)
-@@ -256,6 +258,7 @@ xf86OpenConsole()
+@@ -253,6 +258,7 @@ xf86OpenConsole()
  #endif
   acquire_vt:
              if (!xf86Info.ShareVTs) {
@@ -27,7 +27,7 @@
                  /*
                   * now get the VT
                   */
-@@ -290,6 +293,26 @@ xf86OpenConsole()
+@@ -287,6 +293,26 @@ xf86OpenConsole()
                  if (ioctl(xf86Info.consoleFd, KDSETMODE, KD_GRAPHICS) < 0) {
                      FatalError("xf86OpenConsole: KDSETMODE KD_GRAPHICS failed");
                  }
@@ -54,7 +54,7 @@
              }
              else {              /* xf86Info.ShareVTs */
                  close(xf86Info.consoleFd);
-@@ -597,6 +620,8 @@ xf86CloseConsole()
+@@ -594,6 +620,8 @@ xf86CloseConsole()
      case SYSCONS:
      case PCVT:
          ioctl(xf86Info.consoleFd, KDSETMODE, KD_TEXT);  /* Back to text mode */

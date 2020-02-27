@@ -162,6 +162,7 @@
     SUBDIR += cfengine313
     SUBDIR += cfengine314
     SUBDIR += cfengine315
+    SUBDIR += checkrestart
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -433,7 +434,6 @@
     SUBDIR += gnome-control-center
     SUBDIR += gnome-mount
     SUBDIR += gnome-power-manager
-    SUBDIR += gnome-schedule
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
@@ -492,6 +492,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += iichid
     SUBDIR += immortal
     SUBDIR += incron
     SUBDIR += inotify-tools
@@ -949,7 +950,6 @@
     SUBDIR += pwgen
     SUBDIR += pwsafe
     SUBDIR += pxattr
-    SUBDIR += py-XenAPI
     SUBDIR += py-analyzemft
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
@@ -975,7 +975,6 @@
     SUBDIR += py-ezjailremote
     SUBDIR += py-filelike
     SUBDIR += py-filelock
-    SUBDIR += py-freenas.cli
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine
@@ -1309,6 +1308,7 @@
     SUBDIR += tracker-miners
     SUBDIR += tree
     SUBDIR += tren
+    SUBDIR += triton
     SUBDIR += trueos-libqt5
     SUBDIR += ts
     SUBDIR += tss

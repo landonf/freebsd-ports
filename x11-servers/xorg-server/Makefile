@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	xorg-server
-PORTVERSION?=	1.20.6
-PORTREVISION?=	0
+PORTVERSION?=	1.20.7
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -20,28 +20,29 @@ RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 SLAVE_PORT?=	no
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	SUID FIXDRM
+OPTIONS_DEFINE=	FIXDRM SUID
 OPTIONS_RADIO=	CONF
-OPTIONS_RADIO_CONF=	DEVD HAL UDEV
+OPTIONS_RADIO_CONF=	DEVD UDEV
+OPTIONS_DEFAULT=	SUID
+OPTIONS_DEFAULT_FreeBSD_11=	DEVD
+OPTIONS_DEFAULT_FreeBSD_12=	UDEV
+OPTIONS_DEFAULT_FreeBSD_13=	UDEV
+OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
+
+SUID_DESC=	Install setuid wrapper to allow startx as non-root
 CONF_DESC=	Backend to use for input device configuration
 DEVD_DESC=	Use devd for autoconfiguration of input devices
-HAL_DESC=	Use hald for autoconfiguration of input devices
+FIXDRM_DESC=	Enable glamor workaround for drm-kmod bug
 UDEV_DESC=	Use udev via libudev-devd for autoconfiguration of input devices
-SUID_DESC=	Install the Xorg server with setuid bit set
-FIXDRM_DESC=	Enable glamor workaround for drm-devel-kmod bug
-OPTIONS_DEFAULT=DEVD SUID
-
-OPTIONS_EXCLUDE_sparc64=	HAL
 
 DEVD_CONFIGURE_ENABLE=	config-devd
-HAL_CONFIGURE_ENABLE=	config-hal
-HAL_LIB_DEPENDS=	libhal.so:sysutils/hal \
-			libdbus-1.so:devel/dbus
 SUID_CONFIGURE_ENABLE=	suid-wrapper
 SUID_CONFIGURE_ON=	--libexecdir=${PREFIX}/bin	# set SUID_WRAPPER_DIR
 UDEV_CONFIGURE_ENABLE=	config-udev
 UDEV_CONFIGURE_ON=	--disable-config-udev-kms
 UDEV_LIB_DEPENDS=	libudev.so:devel/libudev-devd
+
+.include <bsd.port.options.mk>
 
 FONTPATH_ROOT?=	${LOCALBASE}/share/fonts
 FONTPATHD?=	${PREFIX}/etc/X11/fontpath.d
@@ -56,7 +57,7 @@ DEFAULT_FONTPATH_LIST= \
 DEFAULT_FONTPATH_CMD=${ECHO_CMD} ${DEFAULT_FONTPATH_LIST} | ${TR} ' ' ,
 PLIST_SUB+=	FONTPATHD="${FONTPATHD:S,^${PREFIX}/,,}"
 
-USES=		gmake gl libtool perl5 ssl tar:bzip2 xorg xorg-cat:xserver
+USES=		compiler:c11 gl gmake perl5 ssl xorg xorg-cat:xserver
 USE_PERL5=	build
 USE_GL+=	gl
 USE_XORG+=	pixman xau xdmcp xfont2 xkbfile xorgproto xshmfence xtrans
@@ -80,10 +81,9 @@ CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
 		--disable-xwayland --enable-xcsecurity
 SUB_FILES=	pkg-install pkg-deinstall
 .else
-CONFIGURE_ARGS+=--disable-xorg
-OPTIONS_EXCLUDE=	DEVD HAL UDEV SUID FIXDRM
-# for slave ports we need to overwrite PLIST, so it doesn't overwrite
-# PLIST_FILES, with the masterport plist.
+CONFIGURE_ARGS+=	--disable-xorg
+OPTIONS_EXCLUDE=	DEVD FIXDRM UDEV SUID
+# Set PLIST for slave ports so they only need to set PLIST_FILES
 PLIST=		${.CURDIR}/pkg-plist
 .endif
 
@@ -96,9 +96,6 @@ PLIST=		${.CURDIR}/pkg-plist
 CONFIGURE_ENV=	SHA1_LIB="-L/usr/lib -lcrypto" SHA1_CFLAGS="-I/usr/include"
 .endif
 
-# We handle Xorg setuid in the plist. This allows to build xorg-server as a user.
-CONFIGURE_ARGS+=--disable-install-setuid
-
 .if ${ARCH} == "i386" || ${ARCH} == "amd64"
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
@@ -110,8 +107,8 @@ PLIST_SUB+=	SPARC64="@comment "
 .endif
 
 post-patch-FIXDRM-on:
-# Workaround xfwm-4.12 lockups with modesetting driver on drm-kmod 4.15+
-# with partial revert of commit 86b2d8740a330deafe8a9bbf0402705a43efbb42
+# Workaround lockups with modesetting driver using drm-kmod 4.16+ with partial
+# revert of commit 86b2d8740a330deafe8a9bbf0402705a43efbb42
 	@${REINPLACE_CMD} '/glamor_make_pixmap_exportable/ s/FALSE/TRUE/' \
 		${WRKSRC}/glamor/glamor_egl.c
 
@@ -127,6 +124,9 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/xorg/modules/extensions/.xorg/
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/X11/xorg.conf.d
 	@${MKDIR} ${STAGEDIR}${FONTPATHD}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d
+	@${INSTALL_DATA} ${FILESDIR}/20-evdev-kbd.conf \
+		${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d
 .endif # ! SLAVE_PORT
 
 .include <bsd.port.post.mk>

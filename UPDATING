@@ -5,6 +5,92 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20200225:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. Removal of the Topology Maps feature
+
+  The deprecated topology maps feature has been removed.  Please replicate
+  any required data to another source before upgrading NetBox to v2.7.7, as
+  any existing topology maps will be deleted.
+
+
+  2. Changed REDIS database configuration settings
+
+  The REDIS database configuration parameters were splitted up in two
+  discrete subsections named "webhooks" and "caching" with the 2.7 release.
+  This requires modification of the REDIS parameter in configuration.py as
+  follows:
+
+  Old Redis sample configuration:
+
+  REDIS = {
+    'HOST': 'localhost',
+    'PORT': 6379,
+    'PASSWORD': '',
+    'DATABASE': 0,
+    'CACHE_DATABASE': 1,
+    'DEFAULT_TIMEOUT': 300,
+    'SSL': False,
+  }
+
+  New Redis sample configuration:
+
+  REDIS = {
+    'webhooks': {
+        'HOST': 'redis.example.com',
+        'PORT': 1234,
+        'PASSWORD': 'foobar',
+        'DATABASE': 0,
+        'DEFAULT_TIMEOUT': 300,
+        'SSL': False,
+    },
+    'caching': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'PASSWORD': '',
+        'DATABASE': 1,
+        'DEFAULT_TIMEOUT': 300,
+        'SSL': False,
+    }
+  }
+
+  Note that the CACHE_DATABASE parameter has been removed and the connection
+  settings have been duplicated for both webhooks and caching.  This allows
+  one to make use of separate Redis instances if desired.  It is fine to use
+  the same Redis service for both functions, although the database
+  identifiers should be different.
+
+  Please also check the pkg-message and the changelogs for further info.
+
+20200223:
+  AFFECTS: users of security/gsasl
+  AUTHOR: hrs@FreeBSD.org
+
+  The library part of security/gsasl has been split into security/libgsasl.
+  The security/gsasl now depends on security/libgsasl. Due to this change,
+  old security/gsasl conflicts with the new security/libgsasl and it can
+  prevent the installed security/gsasl from upgrading. Please remove the
+  installed security/gsasl before upgrading if a conflict error occurs.
+
+20200220:
+  AFFECTS: users of x11-servers/xorg-server
+  AUTHOR: zeising@FreeBSD.org
+
+  x11-servers/xorg-server has been updated to 1.20.7.
+
+  With this update, xorg-server has switched from using the devd backend to
+  the udev backend for device configuration on FreeBSD 12 and 13.  If you have
+  issues with input devices, please see the install message for details.
+
+  The HAL backend option has been completely removed, as it was deprecated.
+
+  If you have problems with input devices, ensure that both x11/libinput and
+  x11-drivers/xf86-input-libinput are installed.  They are installed in the
+  default configuration, but if you have a custom configuration, they might not
+  be.
+
 20200207:
   AFFECTS: users of security/nss
   AUTHOR: lwhsu@FreeBSD.org
