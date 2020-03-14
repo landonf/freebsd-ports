@@ -17,6 +17,7 @@
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += ach
+    SUBDIR += adguardhome
     SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amphetadesk
@@ -32,6 +33,7 @@
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
+    SUBDIR += authelia
     SUBDIR += awffull
     SUBDIR += aws
     SUBDIR += aws-demos
@@ -456,7 +458,6 @@
     SUBDIR += node
     SUBDIR += node10
     SUBDIR += node12
-    SUBDIR += node8
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -465,7 +466,6 @@
     SUBDIR += npm
     SUBDIR += npm-node10
     SUBDIR += npm-node12
-    SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
     SUBDIR += onionbalance
@@ -959,6 +959,7 @@
     SUBDIR += p5-Interchange6
     SUBDIR += p5-JE
     SUBDIR += p5-JSON-API
+    SUBDIR += p5-JSON-WebToken
     SUBDIR += p5-Jemplate
     SUBDIR += p5-Jifty
     SUBDIR += p5-LWP-Authen-Negotiate
@@ -1411,6 +1412,7 @@
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp2
+    SUBDIR += py-aiohttp_cors
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
@@ -1433,6 +1435,7 @@
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
     SUBDIR += py-cachecontrol
+    SUBDIR += py-cachelib
     SUBDIR += py-caldav
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
@@ -1804,7 +1807,6 @@
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
     SUBDIR += pyblosxom
-    SUBDIR += pycarddav
     SUBDIR += pyjamas
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
@@ -2391,7 +2393,6 @@
     SUBDIR += yarn
     SUBDIR += yarn-node10
     SUBDIR += yarn-node12
-    SUBDIR += yarn-node8
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls

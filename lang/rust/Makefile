@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.41.1
+PORTVERSION?=	1.42.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -29,16 +29,20 @@ ONLY_FOR_ARCHS?=	aarch64 amd64 armv6 armv7 i386 powerpc64
 ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
 BUILD_DEPENDS=	cmake:devel/cmake
-LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libgit2.so:devel/libgit2 \
+LIB_DEPENDS=	libcurl.so:ftp/curl
+.if !defined(NIGHTLY_DATE)
+LIB_DEPENDS+=	libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2
+.endif
 
 USES=		pkgconfig python:3.3+,build ssl tar:xz
 
-MAKE_ENV=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
-		LIBSSH2_SYS_USE_PKG_CONFIG=1 \
-		OPENSSL_DIR="${OPENSSLBASE}" \
+MAKE_ENV=	OPENSSL_DIR="${OPENSSLBASE}" \
 		RUST_BACKTRACE=1
+.if !defined(NIGHTLY_DATE)
+MAKE_ENV+=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
+		LIBSSH2_SYS_USE_PKG_CONFIG=1
+.endif
 TEST_ENV=	${MAKE_ENV} \
 		ALLOW_NONZERO_RLIMIT_CORE=1
 
@@ -58,9 +62,9 @@ WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 WASM_VARS=		_RUST_BUILD_WASM=true
 
 # See WRKSRC/src/stage0.txt for the date and version values.
-BOOTSTRAPS_DATE?=		2020-01-11
-RUST_BOOTSTRAP_VERSION?=	1.40.0
-CARGO_BOOTSTRAP_VERSION?=	0.41.0
+BOOTSTRAPS_DATE?=		2020-02-29
+RUST_BOOTSTRAP_VERSION?=	1.41.1
+CARGO_BOOTSTRAP_VERSION?=	0.42.0
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}

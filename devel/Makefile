@@ -476,7 +476,6 @@
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
     SUBDIR += dia2code+
-    SUBDIR += diffuse
     SUBDIR += ding-libs
     SUBDIR += directfb
     SUBDIR += dispy
@@ -498,7 +497,6 @@
     SUBDIR += doxygen
     SUBDIR += dparser
     SUBDIR += dragon
-    SUBDIR += dreampie
     SUBDIR += ds2
     SUBDIR += dsymbol
     SUBDIR += dub
@@ -523,6 +521,7 @@
     SUBDIR += eiffelstudio
     SUBDIR += electron4
     SUBDIR += electron6
+    SUBDIR += electron7
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -886,7 +885,6 @@
     SUBDIR += gstreamer-plugins-soup
     SUBDIR += gstreamer1-plugins-soup
     SUBDIR += gtgt
-    SUBDIR += gtkparasite
     SUBDIR += gtranslator
     SUBDIR += guichan
     SUBDIR += guile-lib
@@ -1241,6 +1239,7 @@
     SUBDIR += liblouis
     SUBDIR += liblpm
     SUBDIR += libltdl
+    SUBDIR += libluksde
     SUBDIR += liblxqt
     SUBDIR += libmaa
     SUBDIR += libmatheval
@@ -1506,6 +1505,7 @@
     SUBDIR += mercurialeclipse
     SUBDIR += mergify
     SUBDIR += meson
+    SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
     SUBDIR += mime
@@ -1632,7 +1632,6 @@
     SUBDIR += opencvs
     SUBDIR += opendht
     SUBDIR += opengrok
-    SUBDIR += openmp
     SUBDIR += openocd
     SUBDIR += openwince-include
     SUBDIR += openzz
@@ -2658,6 +2657,7 @@
     SUBDIR += p5-Log-TraceMessages
     SUBDIR += p5-Log-ger
     SUBDIR += p5-Logfile-Rotate
+    SUBDIR += p5-Long-Jump
     SUBDIR += p5-Luka
     SUBDIR += p5-Lvalue
     SUBDIR += p5-MCE
@@ -4046,6 +4046,7 @@
     SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
+    SUBDIR += py-archinfo
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
     SUBDIR += py-argparse
@@ -4069,6 +4070,7 @@
     SUBDIR += py-atomicwrites
     SUBDIR += py-atpublic
     SUBDIR += py-attrs
+    SUBDIR += py-autoflake
     SUBDIR += py-automaton
     SUBDIR += py-avro
     SUBDIR += py-aws-sam-translator
@@ -4215,6 +4217,7 @@
     SUBDIR += py-circuits
     SUBDIR += py-cjson
     SUBDIR += py-cld
+    SUBDIR += py-cle
     SUBDIR += py-cleo
     SUBDIR += py-cli-helpers
     SUBDIR += py-cliapp
@@ -4225,6 +4228,7 @@
     SUBDIR += py-click-threading
     SUBDIR += py-click6
     SUBDIR += py-cliff
+    SUBDIR += py-cliff2
     SUBDIR += py-cligj
     SUBDIR += py-clikit
     SUBDIR += py-clint
@@ -4368,6 +4372,8 @@
     SUBDIR += py-flatbuffers
     SUBDIR += py-flex
     SUBDIR += py-flexmock
+    SUBDIR += py-flit
+    SUBDIR += py-flit-core
     SUBDIR += py-fluent-logger
     SUBDIR += py-flufl.i18n
     SUBDIR += py-flufl.lock
@@ -4397,7 +4403,6 @@
     SUBDIR += py-fypp
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
-    SUBDIR += py-gamin
     SUBDIR += py-gast
     SUBDIR += py-gdata
     SUBDIR += py-gdbgui
@@ -4442,7 +4447,6 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
     SUBDIR += py-hghooks
-    SUBDIR += py-hgsubversion
     SUBDIR += py-hgtools
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
@@ -4478,6 +4482,7 @@
     SUBDIR += py-iso8601
     SUBDIR += py-isodate
     SUBDIR += py-isort
+    SUBDIR += py-itanium_demangler
     SUBDIR += py-iterpipes
     SUBDIR += py-itypes
     SUBDIR += py-jaraco
@@ -4581,6 +4586,8 @@
     SUBDIR += py-magic
     SUBDIR += py-mailcap-fix
     SUBDIR += py-manuel
+    SUBDIR += py-marrow.mailer
+    SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-mccabe
@@ -4589,6 +4596,7 @@
     SUBDIR += py-meliae
     SUBDIR += py-memory-profiler
     SUBDIR += py-microversion_parse
+    SUBDIR += py-minidump
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock
@@ -4603,6 +4611,7 @@
     SUBDIR += py-mox
     SUBDIR += py-mox3
     SUBDIR += py-msgpack
+    SUBDIR += py-mulpyplexer
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
@@ -4648,7 +4657,6 @@
     SUBDIR += py-opster
     SUBDIR += py-optik
     SUBDIR += py-option_merge
-    SUBDIR += py-orbit
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
     SUBDIR += py-orderedmultidict
@@ -4879,6 +4887,7 @@
     SUBDIR += py-python-gist
     SUBDIR += py-python-gitlab
     SUBDIR += py-python-jenkins
+    SUBDIR += py-python-jsonrpc-server
     SUBDIR += py-python-magic
     SUBDIR += py-python-mimeparse
     SUBDIR += py-python-pcre
@@ -4959,7 +4968,6 @@
     SUBDIR += py-ruamel.ordereddict
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-rubymarshal
-    SUBDIR += py-rwt
     SUBDIR += py-rx
     SUBDIR += py-rx1
     SUBDIR += py-sanetime
@@ -6438,6 +6446,7 @@
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
+    SUBDIR += rubygem-warden127
     SUBDIR += rubygem-wdm
     SUBDIR += rubygem-web-console-rails60
     SUBDIR += rubygem-web-console2
@@ -6545,6 +6554,7 @@
     SUBDIR += statcvs
     SUBDIR += statik
     SUBDIR += statsvn
+    SUBDIR += stb
     SUBDIR += stdx-allocator
     SUBDIR += stfl
     SUBDIR += stlfilt
@@ -6619,6 +6629,7 @@
     SUBDIR += tkcvs
     SUBDIR += tkmerge
     SUBDIR += tkp4
+    SUBDIR += tl-expected
     SUBDIR += tla
     SUBDIR += tmake
     SUBDIR += tnt
