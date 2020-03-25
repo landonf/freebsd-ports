@@ -806,6 +806,7 @@
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
     SUBDIR += py-glfw
+    SUBDIR += py-glooey
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
     SUBDIR += py-graphviz
@@ -862,14 +863,14 @@
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
-    SUBDIR += py-soya3d
     SUBDIR += py-spectra
     SUBDIR += py-stltools
-    SUBDIR += py-svg_path
+    SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-vecrec
     SUBDIR += py-visvis
     SUBDIR += py-wand
     SUBDIR += py-webcolors

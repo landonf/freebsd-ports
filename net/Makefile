@@ -345,6 +345,7 @@
     SUBDIR += ldapsh
     SUBDIR += leproxy
     SUBDIR += lft
+    SUBDIR += libarcus
     SUBDIR += libarms
     SUBDIR += libbgpdump
     SUBDIR += libcapn
@@ -1469,6 +1470,7 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traefik
+    SUBDIR += traefik2
     SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3
