@@ -226,6 +226,7 @@
     SUBDIR += dune-typetree
     SUBDIR += dune-uggrid
     SUBDIR += e
+    SUBDIR += eclib
     SUBDIR += ecos
     SUBDIR += edenmath
     SUBDIR += eigen2
@@ -369,6 +370,7 @@
     SUBDIR += lrslib
     SUBDIR += ltl
     SUBDIR += ltl2ba
+    SUBDIR += m4ri
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl

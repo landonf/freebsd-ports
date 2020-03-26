@@ -20,6 +20,7 @@
     SUBDIR += cascade
     SUBDIR += cascade-compiler
     SUBDIR += chipvault
+    SUBDIR += cura
     SUBDIR += cura-engine
     SUBDIR += digital
     SUBDIR += dinotrace
@@ -109,6 +110,7 @@
     SUBDIR += tkgate
     SUBDIR += tochnog
     SUBDIR += transcalc
+    SUBDIR += uranium
     SUBDIR += varkon
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
