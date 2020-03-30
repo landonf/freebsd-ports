@@ -451,6 +451,7 @@
     SUBDIR += date
     SUBDIR += dbus
     SUBDIR += dbus-c++
+    SUBDIR += dbus-java
     SUBDIR += dbus-glib
     SUBDIR += dbus-sharp
     SUBDIR += dbus-sharp-glib
@@ -4159,6 +4160,7 @@
     SUBDIR += py-banal
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-beautifultable
     SUBDIR += py-bidict
     SUBDIR += py-billiard
     SUBDIR += py-binaryornot
@@ -4321,6 +4323,7 @@
     SUBDIR += py-docopt
     SUBDIR += py-dogpile.cache
     SUBDIR += py-doit
+    SUBDIR += py-dotted
     SUBDIR += py-dtfabric
     SUBDIR += py-durus
     SUBDIR += py-dynrules
@@ -5296,6 +5299,7 @@
     SUBDIR += replay
     SUBDIR += replxx
     SUBDIR += resolv_wrapper
+    SUBDIR += revive
     SUBDIR += rhtvision
     SUBDIR += riscv32-unknown-elf-gcc
     SUBDIR += riscv64-gcc
@@ -6283,6 +6287,7 @@
     SUBDIR += rubygem-ruby-prof
     SUBDIR += rubygem-ruby-progressbar
     SUBDIR += rubygem-ruby-sdl-ffi
+    SUBDIR += rubygem-ruby-statistics
     SUBDIR += rubygem-ruby2_keywords
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_dep
@@ -6329,8 +6334,8 @@
     SUBDIR += rubygem-simple_form-rails50
     SUBDIR += rubygem-simplecov
     SUBDIR += rubygem-skiptrace
+    SUBDIR += rubygem-slack-messenger
     SUBDIR += rubygem-slack-notifier
-    SUBDIR += rubygem-slack-notifier1
     SUBDIR += rubygem-slim
     SUBDIR += rubygem-slop
     SUBDIR += rubygem-slop3
