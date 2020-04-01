@@ -242,7 +242,9 @@ post-patch:
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_PATH_SHARED_LIBS = ${VBOX_DIR}' >> \
 	    ${WRKSRC}/LocalConfig.kmk
-	@${ECHO_CMD} 'VBOX_WITH_RUNPATH = ${VBOX_DIR}' >> \
+	# Please keep this even if using Clang to avoid repeated regressions.
+	# PR 245048
+	@${ECHO_CMD} "VBOX_WITH_RUNPATH = ${_GCC_RUNTIME:D${_GCC_RUNTIME}\:}${VBOX_DIR}" >> \
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_PATH_APP_PRIVATE = ${DATADIR}' >> \
 	    ${WRKSRC}/LocalConfig.kmk

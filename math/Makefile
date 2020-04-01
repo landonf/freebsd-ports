@@ -95,6 +95,7 @@
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
     SUBDIR += R-cran-quantreg
+    SUBDIR += R-cran-raster
     SUBDIR += R-cran-recipes
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-robustbase
@@ -157,6 +158,7 @@
     SUBDIR += blocksolve95
     SUBDIR += bonmin
     SUBDIR += boolector
+    SUBDIR += brial
     SUBDIR += bsdnt
     SUBDIR += btor2tools
     SUBDIR += cadabra2
@@ -724,6 +726,7 @@
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
+    SUBDIR += py-brial
     SUBDIR += py-cdecimal
     SUBDIR += py-chaospy
     SUBDIR += py-claripy
