@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cliqz
-DISTVERSION=	1.34.0
+DISTVERSION=	1.34.1
 CATEGORIES=	www
 MASTER_SITES=	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/:amazon \
 		http://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/${CLIQZ_LAST_BUILD_ID}/:cliqz
@@ -20,7 +20,7 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 DEPRECATED=	Uses deprecated version of python
-EXPIRATION_DATE=	2020-09-15
+EXPIRATION_DATE=	2020-12-31
 
 FETCH_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
@@ -78,7 +78,7 @@ SHEBANG_FILES=	magic_build_and_package.sh
 CLIQZ_CHANNEL=		release
 # If the DISTVERSION is updated, make sure to update the last build id from
 # fetch -qo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${DISTVERSION}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20200325191531
+CLIQZ_LAST_BUILD_ID=	20200404160144
 CLIQZ_ICON=		${PORTNAME}.png
 CLIQZ_ICON_SRC=		${WRKSRC}/mozilla-release/browser/branding/${PORTNAME}/default48.png
 MOZ_DESKTOP=		${WRKSRC}/mozilla-release/toolkit/mozapps/installer/linux/rpm/mozilla.desktop
@@ -98,9 +98,9 @@ MOZ_CONFIGURE_ARGS+=	"--disable-crashreporter" \
 			"--disable-debug-symbols" \
 			"--disable-tests" \
 			"--disable-updater" \
-			"--libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib" \
-			"--with-system-graphite2" \
-			"--with-system-harfbuzz"
+			"--libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib" 
+#			"--with-system-graphite2" \
+#			"--with-system-harfbuzz"
 
 .include "${.CURDIR}/Makefile.options"
 
