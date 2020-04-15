@@ -1,6 +1,6 @@
---- src/VBox/HostServices/SharedOpenGL/Makefile.kmk.orig	2017-10-18 07:12:48 UTC
-+++ src/VBox/HostServices/SharedOpenGL/Makefile.kmk
-@@ -436,6 +436,7 @@ if (   defined(VBOX_WITH_QTGUI) \
+--- src/VBox/HostServices/SharedOpenGL/Makefile.kmk.orig	2019-10-10 12:35:37.000000000 -0600
++++ src/VBox/HostServices/SharedOpenGL/Makefile.kmk	2020-04-15 13:21:19.377571000 -0600
+@@ -329,6 +329,7 @@
      $(if $(VBOX_WITH_CROGL), VBOX_WITH_CROGL,) \
      $(if $(VBOX_WITH_VIDEOHWACCEL), VBOX_WITH_VIDEOHWACCEL,)
    ifdef VBOX_WITH_VIDEOHWACCEL
