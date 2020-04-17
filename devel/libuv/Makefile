@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	libuv
-PORTVERSION=	1.35.0
+PORTVERSION=	1.36.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -16,11 +17,10 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USE_GITHUB=	yes
 
-USES=		autoreconf libtool pathfix pkgconfig python:test shebangfix
+USES=		autoreconf libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
-SHEBANG_FILES=	gyp_uv.py
 
 TEST_TARGET=	check
 
