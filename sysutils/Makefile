@@ -4,6 +4,7 @@
     COMMENT = System utilities
 
     SUBDIR += 3dm
+    SUBDIR += 3mux
     SUBDIR += 44bsd-more
     SUBDIR += 915resolution
     SUBDIR += DTraceToolkit
@@ -635,6 +636,7 @@
     SUBDIR += lxterminal
     SUBDIR += mac_nonet
     SUBDIR += mac_rtprio
+    SUBDIR += mackerel-agent
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan
@@ -981,7 +983,6 @@
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine
-    SUBDIR += py-halite
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho

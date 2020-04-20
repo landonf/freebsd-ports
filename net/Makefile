@@ -149,6 +149,7 @@
     SUBDIR += erlang-xmlrpc
     SUBDIR += eternalterminal
     SUBDIR += etrace
+    SUBDIR += evans
     SUBDIR += eventviews
     SUBDIR += exabgp
     SUBDIR += exabgp4
@@ -552,7 +553,6 @@
     SUBDIR += openldap24-server
     SUBDIR += openmdns
     SUBDIR += openmpi
-    SUBDIR += openmpi2
     SUBDIR += openmpi3
     SUBDIR += openntpd
     SUBDIR += opennx
@@ -990,7 +990,6 @@
     SUBDIR += pimdd
     SUBDIR += pipsecd
     SUBDIR += pjsip
-    SUBDIR += pjsip-extsrtp
     SUBDIR += pkt-gen
     SUBDIR += pktanon
     SUBDIR += pload

@@ -262,6 +262,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += ydotool
     SUBDIR += zanshin
     SUBDIR += zim
     SUBDIR += znotes

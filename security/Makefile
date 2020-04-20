@@ -1217,6 +1217,8 @@
     SUBDIR += sst
     SUBDIR += starttls
     SUBDIR += steghide
+    SUBDIR += step-certificates
+    SUBDIR += step-cli
     SUBDIR += stoken
     SUBDIR += strobe
     SUBDIR += strongswan
@@ -1228,7 +1230,6 @@
     SUBDIR += sudoscript
     SUBDIR += super
     SUBDIR += suricata
-    SUBDIR += suricata5
     SUBDIR += swatchdog
     SUBDIR += switzerland
     SUBDIR += symbion-sslproxy

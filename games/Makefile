@@ -479,6 +479,9 @@
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
+    SUBDIR += libretro-core-info
+    SUBDIR += libretro-shaders-glsl
+    SUBDIR += libretro-shaders-slang
     SUBDIR += libshhcards
     SUBDIR += libtmcg
     SUBDIR += lightsoff
@@ -507,6 +510,7 @@
     SUBDIR += linux-quake4-demo
     SUBDIR += linux-ssamtfe
     SUBDIR += linux-ssamtse
+    SUBDIR += linux-steam-utils
     SUBDIR += linux-unigine-heaven
     SUBDIR += linux-unigine-valley
     SUBDIR += linux-unrealgold
@@ -779,6 +783,7 @@
     SUBDIR += rescue
     SUBDIR += residualvm
     SUBDIR += retroarch
+    SUBDIR += retroarch-assets
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li
