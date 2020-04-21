@@ -232,6 +232,7 @@
     SUBDIR += bingrep
     SUBDIR += binutils
     SUBDIR += bison
+    SUBDIR += bitkeeper
     SUBDIR += blame
     SUBDIR += blitz
     SUBDIR += bloaty
@@ -4456,6 +4457,7 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-heapdict
     SUBDIR += py-hghooks
+    SUBDIR += py-hglib
     SUBDIR += py-hgtools
     SUBDIR += py-holidays
     SUBDIR += py-http-prompt
