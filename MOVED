@@ -14413,7 +14413,6 @@ graphics/driconf||2020-03-01|Has expired: Old, uses EOLed python27
 graphics/gimp-help||2020-03-01|Has expired: Broken
 graphics/nathive||2020-03-01|Has expired: Old, uses EOLed python27
 graphics/py-goocanvas||2020-03-01|Has expired: Old, uses EOLed python27
-graphics/py-mcomix||2020-03-01|Has expired: Old, uses EOLed python27
 graphics/uniconvw||2020-03-01|Has expired: Old, uses EOLed python27
 japanese/gimp-help||2020-03-01|Has expired: Broken
 java/jakarta-regexp||2020-03-01|Has expired: EOL: As of 2011-04-17, the Regexp project is retired
@@ -14548,3 +14547,4 @@ www/py-ddgr|www/ddgr|2020-04-19|Duplicate port
 sysutils/py-halite||2020-04-19|Hasexpired: Uses deprecated version of python
 security/suricata5|security/suricata|2020-04-20|Has expired: security/suricata is already at version 5
 finance/py-ebaysdk-python|finance/py-ebaysdk|2020-04-21|Renamed to match Pypy package
+emulators/qemu30|emulators/qemu31|2020-04-21|Has expired: No longer maintained by upstream
