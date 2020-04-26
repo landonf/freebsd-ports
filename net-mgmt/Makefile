@@ -299,6 +299,8 @@
     SUBDIR += prometheus2
     SUBDIR += pushgateway
     SUBDIR += py-adal
+    SUBDIR += py-aggregate6
+    SUBDIR += py-arouteserver
     SUBDIR += py-ciscoconfparse
     SUBDIR += py-dnsdiag
     SUBDIR += py-ipcalc
