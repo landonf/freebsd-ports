@@ -45,6 +45,7 @@
     SUBDIR += ansible25
     SUBDIR += ansible26
     SUBDIR += ansible27
+    SUBDIR += ansible28
     SUBDIR += anvil
     SUBDIR += apache-mesos
     SUBDIR += apachetop
@@ -261,6 +262,7 @@
     SUBDIR += docker-compose
     SUBDIR += docker-credential-pass
     SUBDIR += docker-machine
+    SUBDIR += docker-registry
     SUBDIR += doctl
     SUBDIR += doinkd
     SUBDIR += dolly
@@ -685,6 +687,7 @@
     SUBDIR += minipro
     SUBDIR += minirsyslogd
     SUBDIR += mixer
+    SUBDIR += mkdesktop
     SUBDIR += mkfile
     SUBDIR += mkfwimage
     SUBDIR += mkntpwd
@@ -1138,6 +1141,7 @@
     SUBDIR += rubygem-ohai8
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
+    SUBDIR += rubygem-puppetfile-resolver
     SUBDIR += rubygem-puppetserver-ca
     SUBDIR += rubygem-r10k
     SUBDIR += rubygem-rubyipmi

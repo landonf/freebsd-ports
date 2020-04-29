@@ -405,6 +405,7 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
+    SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
@@ -951,6 +952,7 @@
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
     SUBDIR += py-pyotp
+    SUBDIR += py-pyotp2289
     SUBDIR += py-pyptlib
     SUBDIR += py-pysaml2
     SUBDIR += py-pysaml24
@@ -1083,6 +1085,7 @@
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-gateway1
+    SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh4
     SUBDIR += rubygem-net-telnet
