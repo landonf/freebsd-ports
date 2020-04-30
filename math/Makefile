@@ -238,6 +238,7 @@
     SUBDIR += eigen2
     SUBDIR += eigen3
     SUBDIR += eispack
+    SUBDIR += elemental
     SUBDIR += elpa
     SUBDIR += emc2
     SUBDIR += ensmallen
@@ -357,6 +358,7 @@
     SUBDIR += libbraiding
     SUBDIR += libccd
     SUBDIR += libflame
+    SUBDIR += libhomfly
     SUBDIR += liblbfgs
     SUBDIR += libmesh
     SUBDIR += libmissing
