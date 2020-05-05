@@ -3,7 +3,7 @@
 
 PORTNAME=	cinder
 PORTVERSION=	12.0.10
-PORTREVISION=	7
+PORTREVISION=	10
 CATEGORIES=	misc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -28,10 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=2.0.0:devel/py-pbr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lxml>=3.4.1:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oauth2client>=1.5.0:security/py-oauth2client@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.log>=3.36.0:devel/py-oslo.log@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}oslo.middleware>=3.31.0:devel/py-oslo.middleware@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}oslo.privsep>=1.23.0:devel/py-oslo.privsep@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.serialization>=2.18.0:devel/py-oslo.serialization@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}oslo.service>=1.24.0:devel/py-oslo.service@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.utils>=3.33.0:devel/py-oslo.utils@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}osprofiler>=1.4.0:devel/py-osprofiler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paramiko>=2.0.0:security/py-paramiko@${PY_FLAVOR} \
@@ -122,9 +119,12 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}castellan1>=0.16.0:devel/py-castellan1@${PY
 		${PYTHON_PKGNAMEPREFIX}oslo.context2>=2.19.2:devel/py-oslo.context2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.db6>=4.27.0:devel/py-oslo.db6@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.messaging10>=5.29.0:devel/py-oslo.messaging10@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.middleware3>=3.31.0:devel/py-oslo.middleware3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.policy2>=1.30.0:devel/py-oslo.policy2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.privsep1>=1.23.0:devel/py-oslo.privsep1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.reports1>=1.18.0:devel/py-oslo.reports1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.rootwrap5>=5.8.0:devel/py-oslo.rootwrap5@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.service1>=1.24.0:devel/py-oslo.service1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.versionedobjects1>=1.31.2:devel/py-oslo.versionedobjects1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.vmware2>=2.17.0:devel/py-oslo.vmware2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-novaclient16>=9.1.0:net/py-python-novaclient16@${PY_FLAVOR} \
@@ -138,9 +138,12 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}castellan>=0.16.0:devel/py-castellan@${PY_F
 		${PYTHON_PKGNAMEPREFIX}oslo.context>=2.19.2:devel/py-oslo.context@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.db>=4.27.0:devel/py-oslo.db@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.messaging>=5.29.0:devel/py-oslo.messaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.middleware>=3.31.0:devel/py-oslo.middleware@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.policy>=1.30.0:devel/py-oslo.policy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.privsep>=1.23.0:devel/py-oslo.privsep@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.reports>=1.18.0:devel/py-oslo.reports@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.rootwrap>=5.8.0:devel/py-oslo.rootwrap@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}oslo.service>=1.24.0:devel/py-oslo.service@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.versionedobjects>=1.31.2:devel/py-oslo.versionedobjects@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oslo.vmware>=2.17.0:devel/py-oslo.vmware@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-novaclient>=9.1.0:net/py-python-novaclient@${PY_FLAVOR} \
