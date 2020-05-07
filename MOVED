@@ -14660,7 +14660,6 @@ games/linux-enemyterritory-jaymod-21||2020-05-05|Has expired: Broken for more th
 games/linux-enemyterritory-omni-bot||2020-05-05|Has expired: Broken for more than 6 months
 games/linux-enemyterritory-omni-bot-0660||2020-05-05|Has expired: Broken for more than 6 months
 games/nadar||2020-05-05|Has expired: Broken for more than 6 months
-games/nxengine||2020-05-05|Has expired: Broken for more than 6 months
 games/oneko||2020-05-05|Has expired: Broken for more than 6 months
 games/seahaven||2020-05-05|Has expired: Broken for more than 6 months
 games/sudoku_solver||2020-05-05|Has expired: Broken for more than 6 months
@@ -15001,3 +15000,7 @@ x11-wm/nickleby||2020-05-05|Has expired: Broken for more than 6 months
 x11-wm/olvwm||2020-05-05|Has expired: 64-bit unsupported
 x11-wm/ratmenu||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/livecd||2020-05-05|Has expired: Broken for more than 6 months
+deskutils/osynctool||2020-05-06|Abandonware, website disappeared
+devel/libopensync||2020-05-06|Abandonware, website disappeared
+deskutils/libopensync-plugin-vformat-devel||2020-05-06|Abandonware, website disappeared
+devel/py-ipykernel|devel/py-ipykernel5|2020-05-07|Has expired: Old version, use devel/py-ipykernel5 instead

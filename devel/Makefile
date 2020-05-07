@@ -870,6 +870,7 @@
     SUBDIR += gradle
     SUBDIR += gradle4
     SUBDIR += gradle5
+    SUBDIR += gradle62
     SUBDIR += grantlee5
     SUBDIR += graphql.el
     SUBDIR += grpc
@@ -1259,7 +1260,6 @@
     SUBDIR += libolecf
     SUBDIR += libopenbsd
     SUBDIR += libopencm3
-    SUBDIR += libopensync
     SUBDIR += libopkele
     SUBDIR += liborcus
     SUBDIR += libosinfo
@@ -4498,7 +4498,6 @@
     SUBDIR += py-ioflo
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
-    SUBDIR += py-ipykernel
     SUBDIR += py-ipykernel5
     SUBDIR += py-ipyparallel
     SUBDIR += py-ipython_genutils
