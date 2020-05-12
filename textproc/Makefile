@@ -1351,6 +1351,7 @@
     SUBDIR += py-snowballstemmer
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
+    SUBDIR += py-sphinx18
     SUBDIR += py-sphinx-hieroglyph
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-me
@@ -1363,10 +1364,13 @@
     SUBDIR += py-sphinxcontrib-bitbucket
     SUBDIR += py-sphinxcontrib-devhelp
     SUBDIR += py-sphinxcontrib-fulltoc
+    SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-jsmath
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
+    SUBDIR += py-sphinxcontrib-qthelp
+    SUBDIR += py-sphinxcontrib-serializinghtml
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-stemming
     SUBDIR += py-tabletext

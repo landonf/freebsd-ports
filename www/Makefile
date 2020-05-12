@@ -199,6 +199,8 @@
     SUBDIR += googlebook_dl
     SUBDIR += googler
     SUBDIR += goose
+    SUBDIR += gophernicus
+    SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
     SUBDIR += grafana
@@ -1404,6 +1406,7 @@
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
+    SUBDIR += py-beautifulsoup448
     SUBDIR += py-beautifulsoup460
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1649,6 +1652,7 @@
     SUBDIR += py-httpie
     SUBDIR += py-httplib2
     SUBDIR += py-httptools
+    SUBDIR += py-httpx
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
@@ -1838,8 +1842,8 @@
     SUBDIR += rubygem-actionpack50
     SUBDIR += rubygem-actionpack52
     SUBDIR += rubygem-actionpack60
+    SUBDIR += rubygem-activeresource
     SUBDIR += rubygem-activeresource4
-    SUBDIR += rubygem-activeresource5
     SUBDIR += rubygem-acts-as-taggable-on
     SUBDIR += rubygem-acts-as-taggable-on3
     SUBDIR += rubygem-acts-as-taggable-on5

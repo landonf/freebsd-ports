@@ -431,6 +431,7 @@
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
+    SUBDIR += go-btfs
     SUBDIR += go-wtf
     SUBDIR += goaccess
     SUBDIR += goawk
@@ -599,6 +600,7 @@
     SUBDIR += lr
     SUBDIR += lsblk
     SUBDIR += lscpu
+    SUBDIR += lsd
     SUBDIR += lsof
     SUBDIR += lsop
     SUBDIR += lsyncd
@@ -1145,7 +1147,8 @@
     SUBDIR += rubygem-winrm-elevated
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
-    SUBDIR += rundeck
+    SUBDIR += rundeck2
+    SUBDIR += rundeck3
     SUBDIR += runit
     SUBDIR += runit-faster
     SUBDIR += runwhen
@@ -1334,6 +1337,7 @@
     SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-pinebookpro
     SUBDIR += u-boot-qemu-arm
+    SUBDIR += u-boot-qemu-arm64
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64
