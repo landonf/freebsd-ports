@@ -3,8 +3,8 @@
 @@ -24,6 +24,7 @@
  
  /* Qt includes */
- # include <QPainter>
-+# include <QPainterPath>
+ #include <QPainter>
++#include <QPainterPath>
  
  #endif /* !VBOX_WITH_PRECOMPILED_HEADERS */
  
