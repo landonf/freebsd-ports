@@ -100,7 +100,8 @@
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
-    SUBDIR += beats
+    SUBDIR += beats6
+    SUBDIR += beats7
     SUBDIR += bfs
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
@@ -968,6 +969,7 @@
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
     SUBDIR += py-leviathan
+    SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
