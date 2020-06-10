@@ -1189,6 +1189,7 @@
     SUBDIR += libglade2
     SUBDIR += libglade2-reference
     SUBDIR += libglademm24
+    SUBDIR += libgnt
     SUBDIR += libgpc
     SUBDIR += libgpkg
     SUBDIR += libgrading

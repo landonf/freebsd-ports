@@ -115,6 +115,7 @@
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += dekagen
     SUBDIR += denemo
+    SUBDIR += din
     SUBDIR += discid
     SUBDIR += dpf-plugins-lv2
     SUBDIR += drumgizmo
@@ -203,6 +204,7 @@
     SUBDIR += freedesktop-sound-theme
     SUBDIR += freepats
     SUBDIR += funktrackergold
+    SUBDIR += ganv
     SUBDIR += gbemol
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
@@ -685,6 +687,7 @@
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
+    SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
     SUBDIR += rebot3
@@ -787,6 +790,7 @@
     SUBDIR += taglookup
     SUBDIR += tagtool
     SUBDIR += tagutil
+    SUBDIR += tamgamp-lv2
     SUBDIR += tap-plugins
     SUBDIR += tap-plugins-lv2
     SUBDIR += tcd
