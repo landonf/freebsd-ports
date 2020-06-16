@@ -395,6 +395,8 @@
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
+    SUBDIR += librespeed-cli
+    SUBDIR += librespeed-go
     SUBDIR += librsync
     SUBDIR += libsignal
     SUBDIR += libsrtp2
@@ -529,6 +531,8 @@
     SUBDIR += onedrive
     SUBDIR += onenetd
     SUBDIR += onioncat
+    SUBDIR += ooni-mini
+    SUBDIR += ooni-probe-cli
     SUBDIR += opal
     SUBDIR += open-isns
     SUBDIR += openbgpd
