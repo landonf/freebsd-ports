@@ -109,6 +109,7 @@
     SUBDIR += agar
     SUBDIR += ahven
     SUBDIR += aifad
+    SUBDIR += aixlog
     SUBDIR += ald
     SUBDIR += allegro
     SUBDIR += allegro-devel
@@ -6661,7 +6662,7 @@
     SUBDIR += svn_load_dirs
     SUBDIR += svntrac
     SUBDIR += swank-clojure
-    SUBDIR += swig30
+    SUBDIR += swig
     SUBDIR += synfig
     SUBDIR += sysconftool
     SUBDIR += sysfsutils
