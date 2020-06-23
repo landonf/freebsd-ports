@@ -274,7 +274,6 @@
     SUBDIR += dunst
     SUBDIR += dupd
     SUBDIR += duplicity
-    SUBDIR += duplicity07
     SUBDIR += duply
     SUBDIR += dupmerge
     SUBDIR += dvd+rw-tools
@@ -747,6 +746,7 @@
     SUBDIR += nvramtool
     SUBDIR += oak
     SUBDIR += obliterate
+    SUBDIR += oc
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -757,6 +757,7 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
+    SUBDIR += openshift-install
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
