@@ -56,9 +56,6 @@ INSTALL_TARGET=	install-strip
 TEST_TARGET=	test
 USE_LDCONFIG=	yes
 
-PORTDOCS=	*
-PORTEXAMPLES=	*
-
 CPE_VENDOR=	haxx
 
 DOCS=		BUGS FAQ FEATURES INSTALL KNOWN_BUGS MAIL-ETIQUETTE RESOURCES \
@@ -167,12 +164,5 @@ post-install-DOCS-on:
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
 	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} README Makefile.example makefile* *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
-
-pre-test-PROXY-off:
-	@${ECHO_MSG} "******************************************"
-	@${ECHO_MSG} "* You have disabled curl proxy support.  *"
-	@${ECHO_MSG} "* Some tests SHALL FAIL!                 *"
-	@${ECHO_MSG} "* This is being addressed.               *"
-	@${ECHO_MSG} "******************************************"
 
 .include <bsd.port.post.mk>
