@@ -750,6 +750,7 @@
     SUBDIR += p5-String-HexConvert
     SUBDIR += p5-String-Koremutake
     SUBDIR += p5-String-LCSS
+    SUBDIR += p5-String-Pad
     SUBDIR += p5-String-Print
     SUBDIR += p5-String-RewritePrefix
     SUBDIR += p5-String-Scanf
@@ -1527,7 +1528,6 @@
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
-    SUBDIR += rubygem-gherkin
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
     SUBDIR += rubygem-github-markup17

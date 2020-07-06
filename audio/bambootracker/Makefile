@@ -3,7 +3,7 @@
 
 PORTNAME=	bambootracker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.2
+DISTVERSION=	0.4.3
 CATEGORIES=	audio
 MASTER_SITES=	LOCAL/ehaupt:extras
 DISTFILES=	${PORTNAME}-extras-${EXTRASVERSION}${EXTRACT_SUFX}:extras
@@ -33,6 +33,12 @@ EXTRASVERSION=	2
 OPTIONS_DEFINE=	EXAMPLES NLS
 OPTIONS_SUB=	yes
 
+.include <bsd.port.pre.mk>
+
+.if (${OSVERSION} >= 1300096)
+EXTRA_PATCHES=	${PATCHDIR}/extrapatch-BambooTracker_BambooTracker.pro
+.endif
+
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons \
 		${STAGEDIR}${MANPREFIX}/man/fr.UTF-8/man1
@@ -52,4 +58,4 @@ do-install-EXAMPLES-on:
 		${WRKDIR}/${PORTNAME}-extras-${EXTRASVERSION}/*.btm \
 		${STAGEDIR}${EXAMPLESDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

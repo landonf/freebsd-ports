@@ -229,6 +229,7 @@
     SUBDIR += dune-spgrid
     SUBDIR += dune-typetree
     SUBDIR += dune-uggrid
+    SUBDIR += e-antic
     SUBDIR += eclib
     SUBDIR += ecos
     SUBDIR += edenmath
@@ -760,7 +761,6 @@
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
-    SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
@@ -812,6 +812,7 @@
     SUBDIR += py-pystan
     SUBDIR += py-pysym
     SUBDIR += py-python-fcl
+    SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog
