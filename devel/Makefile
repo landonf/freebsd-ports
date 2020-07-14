@@ -3598,6 +3598,7 @@
     SUBDIR += p5-asa
     SUBDIR += p5-autobox
     SUBDIR += p5-autobox-Core
+    SUBDIR += p5-autobox-Transform
     SUBDIR += p5-autodie
     SUBDIR += p5-autovivification
     SUBDIR += p5-bareword-filehandles
@@ -4405,7 +4406,6 @@
     SUBDIR += py-foolscap
     SUBDIR += py-freebsd
     SUBDIR += py-freebsd-sysctl
-    SUBDIR += py-freenas.dispatcher
     SUBDIR += py-freenas.utils
     SUBDIR += py-freezegun
     SUBDIR += py-frozendict

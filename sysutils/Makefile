@@ -970,6 +970,7 @@
     SUBDIR += py-ezjailremote
     SUBDIR += py-filelike
     SUBDIR += py-filelock
+    SUBDIR += py-focker
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-google-compute-engine
@@ -978,6 +979,7 @@
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
+    SUBDIR += py-jailconf
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
