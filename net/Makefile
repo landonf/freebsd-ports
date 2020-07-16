@@ -1118,6 +1118,7 @@
     SUBDIR += py-terminado
     SUBDIR += py-tofu
     SUBDIR += py-transip
+    SUBDIR += py-trio
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1158,6 +1159,7 @@
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
+    SUBDIR += realtek-re-kmod
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
