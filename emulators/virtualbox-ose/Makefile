@@ -142,12 +142,12 @@ USE_TEX=	dvipsk:build formats:build
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USES+=		python:2.7
+USES+=		python
 USE_PYTHON=	distutils noegginfo noflavors
 PYDISTUTILS_PKGNAME=	vboxapi
 PYDISTUTILS_PKGVERSION=	1.0
 .else
-USES+=		python:2.7,build
+USES+=		python:build
 .endif
 
 .if ${PORT_OPTIONS:MQT5}
@@ -282,7 +282,9 @@ post-patch:
 	@${ECHO} 'VBOX_WITH_VMSVGA3D =' >> ${WRKSRC}/LocalConfig.kmk
 .endif
 	@${REINPLACE_CMD} -e 's| -finline-limit=8000||' \
-	    -e 's| -mpreferred-stack-boundary=2||' ${WRKSRC}/Config.kmk
+	    -e 's| -mpreferred-stack-boundary=2||' \
+	    -e 's|%%PYTHON_VERSION%%|${PYTHON_VERSION}|' \
+		${WRKSRC}/Config.kmk
 	@${REINPLACE_CMD} -e 's| -fpermissive||' ${WRKSRC}/Config.kmk \
 	    ${WRKSRC}/src/VBox/Main/webservice/Makefile.kmk
 	@${ECHO_CMD} 'TOOL_VBoxGccFreeBSD_LD = ${CXX}' >> ${WRKSRC}/LocalConfig.kmk
@@ -402,5 +404,9 @@ do-install:
 	${INSTALL_DATA} ${KMK_BUILDDIR}/obj/webservice/vboxweb.wsdl \
 	    ${STAGEDIR}${DATADIR}/sdk/bindings/webservice/
 .endif
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/virtualbox/*.so \
+		${STAGEDIR}${PREFIX}/lib/virtualbox/components/*.so
 
 .include <bsd.port.post.mk>
