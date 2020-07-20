@@ -1,15 +1,6 @@
---- src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp.orig	2019-01-25 18:19:18 UTC
+--- src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp.orig	2020-05-13 19:43:27 UTC
 +++ src/VBox/Frontends/VBoxManage/VBoxManageHelp.cpp
-@@ -610,7 +610,7 @@ void printUsage(USAGECATEGORY fCategory, uint32_t fSub
-                      "                                             file <file>|\n"
-                      "                                             <devicename>]\n"
-                      "                            [--uarttype<1-N> 16450|16550A|16750\n"
--#if defined(RT_OS_LINUX) || defined(RT_OS_WINDOWS)
-+#if defined(RT_OS_FREEBSD) || defined(RT_OS_LINUX) || defined(RT_OS_WINDOWS)
-                      "                            [--lpt<1-N> off|<I/O base> <IRQ>]\n"
-                      "                            [--lptmode<1-N> <devicename>]\n"
- #endif
-@@ -624,7 +624,7 @@ void printUsage(USAGECATEGORY fCategory, uint32_t fSub
+@@ -622,7 +622,7 @@ void printUsage(USAGECATEGORY fCategory, uint32_t fSub
              RTStrmPrintf(pStrm, "|dsound");
  #endif
          }
@@ -18,7 +9,7 @@
          {
              RTStrmPrintf(pStrm, ""
  #ifdef VBOX_WITH_AUDIO_OSS
-@@ -637,22 +637,6 @@ void printUsage(USAGECATEGORY fCategory, uint32_t fSub
+@@ -635,22 +635,6 @@ void printUsage(USAGECATEGORY fCategory, uint32_t fSub
                                  "|pulse"
  #endif
                          );

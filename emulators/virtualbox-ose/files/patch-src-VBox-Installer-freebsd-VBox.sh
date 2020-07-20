@@ -1,6 +1,6 @@
 --- src/VBox/Installer/freebsd/VBox.sh.orig	2016-08-27 05:10:34 UTC
 +++ src/VBox/Installer/freebsd/VBox.sh
-@@ -0,0 +1,67 @@
+@@ -0,0 +1,64 @@
 +#!/bin/sh
 +#
 +# Oracle VM VirtualBox startup script, FreeBSD hosts.
@@ -37,9 +37,6 @@
 +case "$APP" in
 +    VirtualBox|virtualbox)
 +        exec "$INSTALL_DIR/VirtualBox" "$@"
-+        ;;
-+    VirtualBoxVM|virtualboxvm)
-+        exec "$INSTALL_DIR/VirtualBoxVM" "$@"
 +        ;;
 +    VBoxManage|vboxmanage)
 +        exec "$INSTALL_DIR/VBoxManage" "$@"

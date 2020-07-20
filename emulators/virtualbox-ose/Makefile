@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.0.14
+PORTVERSION=	5.2.44
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
@@ -41,6 +41,8 @@ CONFLICTS_INSTALL=	virtualbox-ose-additions-* \
 			virtualbox-ose-legacy-[0-9]* \
 			virtualbox-ose-lite-[0-9]*
 
+LDFLAGS=	-lpthread
+
 VBOXUSER?=	vboxusers
 VBOXWSUSER?=	vboxusers
 VBOXGROUP?=	vboxusers
@@ -54,7 +56,7 @@ VBOX_PROGS=	VBoxAutostart VBoxBalloonCtrl VBoxBugReport VBoxHeadless \
 VBOX_UTILS=	VBoxExtPackHelperApp VBoxNetAdpCtl VBoxNetDHCP VBoxNetNAT \
 		VBoxSVC VBoxXPCOMIPCD
 
-OPTIONS_DEFINE=	ALSA DBUS DEBUG GUESTADDITIONS MANUAL NLS OPUS PULSEAUDIO \
+OPTIONS_DEFINE=	ALSA DBUS DEBUG GUESTADDITIONS MANUAL NLS PULSEAUDIO \
 		PYTHON QT5 R0LOGGING UDPTUNNEL VDE VNC WEBSERVICE VPX X11
 OPTIONS_DEFAULT=	DBUS QT5 UDPTUNNEL VNC WEBSERVICE X11
 OPTIONS_SUB=	yes
@@ -63,7 +65,6 @@ DEBUG_DESC=	Debug symbols, additional logs and assertions
 GUESTADDITIONS_DESC=	Build with Guest Additions
 MANUAL_DESC=	Build with user manual
 NLS_DESC=	Native language support (requires QT5)
-OPUS_DESC=	Use libvpx for audio recording (requires VPX)
 QT5_DESC=	Build with QT5 frontend (requires X11)
 R0LOGGING_DESC=	Enable R0 logging (requires DEBUG)
 UDPTUNNEL_DESC=	Build with UDP tunnel support
@@ -80,9 +81,6 @@ DEBUG_CONFIGURE_ON=	--build-debug
 MANUAL_BUILD_DEPENDS=	${LOCALBASE}/share/xml/docbook/4.4/docbookx.dtd:textproc/docbook-xml
 MANUAL_CONFIGURE_OFF=	--disable-docs
 NLS_IMPLIES=		QT5
-OPUS_CONFIGURE_OFF=	--disable-libopus
-OPUS_LIB_DEPENDS=	libopus.so:audio/opus
-OPUS_IMPLIES=		VPX
 PULSEAUDIO_CONFIGURE_OFF=	--disable-pulse
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PYTHON_CONFIGURE_OFF=	--disable-python
@@ -159,7 +157,7 @@ USE_QT=		buildtools_build core dbus gui linguisttools_build opengl
 USE_QT+=	printsupport widgets x11extras
 USE_XORG=	xcb
 INSTALLS_ICONS=	yes
-VBOX_PROGS+=	VirtualBox VirtualBoxVM
+VBOX_PROGS+=	VirtualBox
 VBOX_UTILS+=	VBoxTestOGL
 VBOX_WITH_QT=	1
 .else
@@ -277,9 +275,6 @@ post-patch:
 	    ${WRKSRC}/LocalConfig.kmk
 	@${REINPLACE_CMD} -E -e '/soap_socket_errno\(/s/(soap_socket_errno)(\([^)]+\))/\1/' \
 		${WRKSRC}/src/VBox/Main/webservice/vboxweb.cpp
-.endif
-.if empty(PORT_OPTIONS:MX11)
-	@${ECHO} 'VBOX_WITH_VMSVGA3D =' >> ${WRKSRC}/LocalConfig.kmk
 .endif
 	@${REINPLACE_CMD} -e 's| -finline-limit=8000||' \
 	    -e 's| -mpreferred-stack-boundary=2||' \
