@@ -432,10 +432,12 @@
     SUBDIR += netsurf
     SUBDIR += newsboat
     SUBDIR += nextcloud
+    SUBDIR += nextcloud-appointments
     SUBDIR += nextcloud-calendar
     SUBDIR += nextcloud-circles
     SUBDIR += nextcloud-contacts
     SUBDIR += nextcloud-deck
+    SUBDIR += nextcloud-forms
     SUBDIR += nextcloud-notes
     SUBDIR += nextcloud-tasks
     SUBDIR += nghttp2
@@ -1451,6 +1453,7 @@
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
+    SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
@@ -1836,6 +1839,7 @@
     SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-cal-heatmap-rails-rails4
     SUBDIR += rubygem-carrierwave
+    SUBDIR += rubygem-cgi
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails
     SUBDIR += rubygem-chromedriver-helper
