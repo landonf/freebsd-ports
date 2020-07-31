@@ -4,7 +4,10 @@
 #
 # In case you don't know the exact coordinates, you might find it at
 # http://maps.google.com/ or http://www.heavens-above.com/
-
+#
+# Where the difference matters, assume the WGS84 coordinate system,
+# which is used by GPS receivers, Google Maps, OpenStreetMap and
+# others.
 #
 # Style (sorted from east to west): sort -n -r -k2
 # Lat,		Long,		"name"	opt			# location
@@ -18,7 +21,7 @@
  35.54,		139.53,		"        ,nyan,ume"		# Yokohama, Kanagawa, Japan
  35.36,		139.31,		"                     ,daichi"	# Kawasaki, Kanagawa, Japan
  35.009668,	135.75497,	"takawata"			# Kyoto, Kyoto, Japan
- 48.24138,	135.07563,	"fluffy"			# Khabarovsk, Russia
+ 48.516613,	135.051836,	"fluffy"			# Khabarovsk, Russia
  31.2,		121.5,		"loader"			# Shanghai, China
  25.017,	121.450,	"avatar,kevlo,vanilla,lwhsu,sunpoet"	# Taipei, Taiwan
 -31.900,	115.855,	"woodsb02"			# Perth, WA, Australia
@@ -165,6 +168,7 @@
  39.25,		-121.02,	"truckman"			# Nevada City, CA, USA
  37.75573,	-121.947116,	"peter"				# San Ramon, CA, USA
  37.96,         -121.98,        "jhb"                           # Concord, CA, USA
+ 37.368,	-121.993,	"gshapiro"			# Santa Clara, CA, USA
  37.38,		-122.05,	"obrien"			# Sunnyvale, CA, USA
  37.40,         -122.07,        "murray"			# Mountain View, CA, USA
  37.3905,	-122.0715,	"delphij"			# Mountain View, CA, USA
@@ -172,7 +176,6 @@
  37.84,		-122.25,	"jmg"				# Oakland, CA, USA
  37.848966,	-122.288577,	"dteske"			# Emeryville, CA, USA
  37.913698,	-122.29414,	"julian"			# El Cerrito, CA, USA
- 37.90641,	-122.30927,	"gshapiro"			# Richmond, CA, USA
  37.7749,	-122.4194,	"eadler"			# San Francisco, CA, USA
  37.76,		-122.42,	"lx"				# San Francisco, CA, USA
  37.05,		-122.52,	"np"				# Cupertino, CA, USA
