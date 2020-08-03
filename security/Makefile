@@ -867,6 +867,7 @@
     SUBDIR += py-certifi
     SUBDIR += py-certstream
     SUBDIR += py-ckcc-protocol
+    SUBDIR += py-coincurve
     SUBDIR += py-cpe
     SUBDIR += py-cracklib
     SUBDIR += py-cryptography
@@ -911,6 +912,7 @@
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
     SUBDIR += py-mcrypt
+    SUBDIR += py-merkletools
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
