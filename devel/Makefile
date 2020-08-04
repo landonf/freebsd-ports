@@ -219,6 +219,7 @@
     SUBDIR += bazel-buildtools
     SUBDIR += bazel029
     SUBDIR += bbfreeze-loader
+    SUBDIR += bbparse
     SUBDIR += bcc
     SUBDIR += bcpp
     SUBDIR += bcunit

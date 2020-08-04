@@ -789,6 +789,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-opt-einsum
+    SUBDIR += py-or-tools
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -833,6 +834,7 @@
     SUBDIR += py-scs
     SUBDIR += py-seaborn
     SUBDIR += py-secp256k1
+    SUBDIR += py-seriate
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
     SUBDIR += py-snuggs
