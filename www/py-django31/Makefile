@@ -1,15 +1,13 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
 # $FreeBSD$
-#
-# Remember to update www/py-django along with this port.
 
 PORTNAME=	django
-PORTVERSION=	1.11.29
+PORTVERSION=	3.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		https://www.djangoproject.com/m/releases/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-PKGNAMESUFFIX=	111
+PKGNAMESUFFIX=	31
 DISTNAME=	Django-${PORTVERSION}
 DIST_SUBDIR=	python
 
@@ -19,20 +17,22 @@ COMMENT=	High-level Python Web Framework
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-DEPRECATED=	Django 1.11 is End-of-Life since April 2020. Switch to Django 2.2+ as soon as possible.
-
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}asgiref>0:www/py-asgiref@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sqlparse>=0:databases/py-sqlparse@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tblib>0:devel/py-tblib@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		cpe python${PY_MYSQL} shebangfix
+USES=		cpe python:3.6+ shebangfix
 USE_PYTHON=	autoplist distutils
 SHEBANG_FILES=	django/bin/django-admin.py \
 		django/conf/project_template/manage.py-tpl
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django2[0-2] ${PYTHON_PKGNAMEPREFIX}django3[0-1]
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django111 ${PYTHON_PKGNAMEPREFIX}django22 \
+			${PYTHON_PKGNAMEPREFIX}django30
 CPE_VENDOR=		djangoproject
 
-DOCSDIR=	${PREFIX}/share/doc/py-django
+DOCSDIR=		${PREFIX}/share/doc/py-django
 PORTDOCS=	*
 
 OPTIONS_DEFINE=		DOCS HTMLDOCS
@@ -41,15 +41,14 @@ OPTIONS_DEFAULT=	SQLITE
 OPTIONS_GROUP=		DATABASE
 OPTIONS_GROUP_DATABASE=	PGSQL MYSQL SQLITE
 
-HTMLDOCS_DESC=	Install HTML documentation (requires Sphinx)
+HTMLDOCS_DESC=		Install HTML documentation (requires Sphinx)
 
-PLIST_FILES=	man/man1/django-admin.1.gz
+PLIST_FILES=		man/man1/django-admin.1.gz
 
 HTMLDOCS_BUILD_DEPENDS=	${PY_SPHINX}
 HTMLDOCS_IMPLIES=	DOCS
 PGSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
-MYSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=1.2.2:databases/py-MySQLdb@${PY_FLAVOR}
-MYSQL_VARS=	PY_MYSQL=:2.7
+MYSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=1.3.13:databases/py-mysqlclient@${PY_FLAVOR}
 SQLITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
 post-build-HTMLDOCS-on:
@@ -58,11 +57,14 @@ post-build-HTMLDOCS-on:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/man/* ${STAGEDIR}/${MAN1PREFIX}/man/man1
 	@${ECHO_MSG}	""
-	@${ECHO_MSG}	"			* See http://docs.djangoproject.com/ for complete documentation"
+	@${ECHO_MSG}	"	* See http://docs.djangoproject.com/ for complete documentation"
 	@${ECHO_MSG}	""
 
 post-install-HTMLDOCS-on:
 	${MKDIR} ${STAGEDIR}/${DOCSDIR}
 	${CP} -R ${WRKSRC}/docs/_build/html ${STAGEDIR}/${DOCSDIR}
+
+do-test:
+	@cd ${WRKSRC} && ${PYTHON_CMD} tests/runtests.py --settings=test_sqlite
 
 .include <bsd.port.mk>
