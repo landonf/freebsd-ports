@@ -3990,6 +3990,7 @@
     SUBDIR += pushmi
     SUBDIR += py-AddOns
     SUBDIR += py-Automat
+    SUBDIR += py-BTrees
     SUBDIR += py-Breve
     SUBDIR += py-BytecodeAssembler
     SUBDIR += py-DateTime
@@ -4194,6 +4195,7 @@
     SUBDIR += py-bitarray
     SUBDIR += py-bitstring
     SUBDIR += py-black
+    SUBDIR += py-blessed
     SUBDIR += py-blessings
     SUBDIR += py-blinker
     SUBDIR += py-blist
@@ -4361,6 +4363,7 @@
     SUBDIR += py-efl
     SUBDIR += py-eggtestinfo
     SUBDIR += py-ejson
+    SUBDIR += py-enlighten
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
     SUBDIR += py-enum34
@@ -4783,6 +4786,7 @@
     SUBDIR += py-pep517
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
+    SUBDIR += py-persistent
     SUBDIR += py-petname
     SUBDIR += py-pew
     SUBDIR += py-pex
