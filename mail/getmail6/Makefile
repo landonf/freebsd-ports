@@ -1,30 +1,27 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	getmail
-DISTVERSION=	5.14
-PORTREVISION=	1
+PORTNAME=	getmail6
+DISTVERSIONPREFIX=	v
+DISTVERSION=	6.03
 CATEGORIES=	mail python
-MASTER_SITES=	http://pyropus.ca/software/getmail/old-versions/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	jrm@FreeBSD.org
-COMMENT=	POP3/IMAP4 mail retriever with Maildir and command delivery
+MAINTAINER=	m.bueker@berlin.de
+COMMENT=	POP3/IMAP4 mail retriever (Python3 fork)
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/docs/COPYING
 
-DEPRECATED=	Uses deprecated version of python
-EXPIRATION_DATE=	2020-09-15
+USES=		python
+USE_GITHUB=	yes
+USE_PYTHON=	autoplist concurrent distutils
 
-USES=		python:2.7
-USE_PYTHON=	autoplist distutils
-
-CONFLICTS=	py*-getmail6
+CONFLICTS=	getmail
 
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-PORTDOCS=	*.css *.html *.txt BUGS CHANGELOG README THANKS TODO
+PORTDOCS=	*.css *.html *.txt BUGS CHANGELOG README THANKS
 PORTEXAMPLES=	getmailrc-examples
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
