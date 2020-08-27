@@ -99,7 +99,6 @@
     SUBDIR += aarch64-xtoolchain-gcc
     SUBDIR += abi-compliance-checker
     SUBDIR += abseil
-    SUBDIR += ace
     SUBDIR += acsccid
     SUBDIR += activitymail
     SUBDIR += ada-util
@@ -231,7 +230,6 @@
     SUBDIR += bennugd-modules
     SUBDIR += bglibs
     SUBDIR += bicyclerepair
-    SUBDIR += bin86
     SUBDIR += binaryen
     SUBDIR += bingrep
     SUBDIR += binutils
@@ -610,7 +608,6 @@
     SUBDIR += erlang-meck
     SUBDIR += erlang-metrics
     SUBDIR += erlang-neotoma
-    SUBDIR += erlang-oserl
     SUBDIR += erlang-parse_trans
     SUBDIR += erlang-poolboy
     SUBDIR += erlang-pooler
@@ -4054,6 +4051,7 @@
     SUBDIR += py-aiortc
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
+    SUBDIR += py-ansi
     SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
     SUBDIR += py-anyjson
@@ -4081,6 +4079,7 @@
     SUBDIR += py-astroid
     SUBDIR += py-astroid1
     SUBDIR += py-asttokens
+    SUBDIR += py-astunparse
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
     SUBDIR += py-asyncio
@@ -4948,6 +4947,7 @@
     SUBDIR += py-pytrie
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
+    SUBDIR += py-pytzdata
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
     SUBDIR += py-pyusb
@@ -5712,6 +5712,7 @@
     SUBDIR += rubygem-azure_mgmt_authorization
     SUBDIR += rubygem-azure_mgmt_automation
     SUBDIR += rubygem-azure_mgmt_azurestack
+    SUBDIR += rubygem-azure_mgmt_azurestack_hci
     SUBDIR += rubygem-azure_mgmt_batch
     SUBDIR += rubygem-azure_mgmt_batchai
     SUBDIR += rubygem-azure_mgmt_billing
@@ -6054,6 +6055,7 @@
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
+    SUBDIR += rubygem-grape-entity07
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
