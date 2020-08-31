@@ -222,6 +222,7 @@
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdtclft
     SUBDIR += geeqie
+    SUBDIR += geeqie-devel
     SUBDIR += gegl
     SUBDIR += generic_image_decoder
     SUBDIR += geoapi
@@ -263,9 +264,8 @@
     SUBDIR += gmic
     SUBDIR += gmic-qt
     SUBDIR += gmt
-    SUBDIR += gmt5
-    SUBDIR += gmt5-dcw
-    SUBDIR += gmt5-gshhg
+    SUBDIR += gmt-dcw
+    SUBDIR += gmt-gshhg
     SUBDIR += gnash
     SUBDIR += gnome-color-manager
     SUBDIR += gnome-video-effects
@@ -512,6 +512,7 @@
     SUBDIR += linux-c7-libdrm
     SUBDIR += linux-c7-libepoxy
     SUBDIR += linux-c7-libglvnd
+    SUBDIR += linux-c7-librsvg2
     SUBDIR += linux-c7-png
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
@@ -892,6 +893,7 @@
     SUBDIR += qgis-ltr
     SUBDIR += qiv
     SUBDIR += qr-code-generator
+    SUBDIR += qt-avif-image-plugin
     SUBDIR += qt5-3d
     SUBDIR += qt5-graphicaleffects
     SUBDIR += qt5-imageformats

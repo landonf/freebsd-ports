@@ -248,6 +248,7 @@
     SUBDIR += eval
     SUBDIR += exprtk
     SUBDIR += facile
+    SUBDIR += faiss
     SUBDIR += fann
     SUBDIR += fcl
     SUBDIR += fcl05
@@ -934,6 +935,7 @@
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
+    SUBDIR += universal
     SUBDIR += unuran
     SUBDIR += vampire
     SUBDIR += viennacl

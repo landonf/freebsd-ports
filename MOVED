@@ -15372,7 +15372,7 @@ net-im/py-skype4py||2020-08-15|Has expired: Uses deprecated version of python
 net-im/telepathy-haze||2020-08-15|Has expired: Uses deprecated version of python
 www/halberd||2020-08-15|Has expired: Uses deprecated version of python
 x11-toolkits/py-wxPython28||2020-08-15|Has expired: Uses deprecated version of python
-devel/codeblocks-devel||2020-08-22|Removed
+devel/codeblocks-devel||2020-08-22|Retire: non-devel port was updated to newer version
 net/frr5|net/frr7|2020-08-25|Has expired: Upstream no longer maintained
 textproc/rubygem-kramdown22|textproc/rubygem-kramdown|2020-08-26|Obsolete, please use textproc/rubygem-kramdown instead
 devel/rubygem-health_check26-rails60|devel/rubygem-health_check|2020-08-26|Obsolete, please use devel/rubygem-health_check instead
@@ -15391,7 +15391,6 @@ games/xminesweep||2020-08-27|Has expired: Broken for more than 6 months
 graphics/backfract||2020-08-27|Has expired: Broken for more than 6 months
 japanese/kanjipad||2020-08-27|Has expired: Broken for more than 6 months
 japanese/xdtp||2020-08-27|Has expired: Broken for more than 6 months
-korean/hpscat||2020-08-27|Has expired: Broken for more than 6 months
 math/barvinok||2020-08-27|Has expired: Broken for more than 6 months
 math/openmesh||2020-08-27|Has expired: Broken for more than 6 months
 math/rehearse||2020-08-27|Has expired: Broken for more than 6 months
@@ -15404,3 +15403,7 @@ security/py-keystone||2020-08-27|Has expired: Broken for more than 6 months
 sysutils/mono-kmod||2020-08-27|Has expired: mastersite disappeared, unfetchable
 x11-themes/gtk-cleanice-engine||2020-08-27|Has expired: Broken for more than 6 months
 x11-wm/aewm||2020-08-27|Has expired: Broken for more than 6 months
+security/scamp||2020-08-29|Removed at maintainer request, no longer viable
+graphics/gmt5|graphics/gmt|2020-08-29|Obsolete, please use graphics/gmt instead
+graphics/gmt5-dcw|graphics/gmt-dcw|2020-08-29|Rename to align port name with graphics/gmt
+graphics/gmt5-gshhg|graphics/gmt-gshhg|2020-08-29|Rename to align port name with graphics/gmt

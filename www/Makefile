@@ -173,6 +173,7 @@
     SUBDIR += fusionpbx
     SUBDIR += g-cows
     SUBDIR += g-gcl
+    SUBDIR += gallery-dl
     SUBDIR += gallery2
     SUBDIR += gatling
     SUBDIR += gauche-makiki
@@ -1592,6 +1593,7 @@
     SUBDIR += py-flexget
     SUBDIR += py-flup6
     SUBDIR += py-folium
+    SUBDIR += py-forcediphttpsadapter
     SUBDIR += py-formencode
     SUBDIR += py-freenit
     SUBDIR += py-frozen-flask

@@ -812,6 +812,7 @@
     SUBDIR += gitinspector
     SUBDIR += gitlab-runner
     SUBDIR += gitlab-shell
+    SUBDIR += gitleaks
     SUBDIR += gitlist
     SUBDIR += gitolite
     SUBDIR += gitolite2
@@ -4291,6 +4292,7 @@
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
     SUBDIR += py-crcmod
+    SUBDIR += py-csv23
     SUBDIR += py-ctags
     SUBDIR += py-curio
     SUBDIR += py-cursive
@@ -4903,6 +4905,7 @@
     SUBDIR += py-pytest-lazy-fixture
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-mutagen
     SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-randomly
@@ -5340,6 +5343,7 @@
     SUBDIR += remotery
     SUBDIR += replay
     SUBDIR += replxx
+    SUBDIR += reproc
     SUBDIR += resolv_wrapper
     SUBDIR += revive
     SUBDIR += rhtvision
@@ -5441,6 +5445,7 @@
     SUBDIR += rubygem-aws-sdk-apigatewaymanagementapi
     SUBDIR += rubygem-aws-sdk-apigatewayv2
     SUBDIR += rubygem-aws-sdk-appconfig
+    SUBDIR += rubygem-aws-sdk-appflow
     SUBDIR += rubygem-aws-sdk-applicationautoscaling
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
@@ -6676,6 +6681,7 @@
     SUBDIR += tablist
     SUBDIR += tailor
     SUBDIR += talloc
+    SUBDIR += taskflow
     SUBDIR += tass64
     SUBDIR += tbb
     SUBDIR += tcl-memchan

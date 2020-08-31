@@ -990,6 +990,7 @@
     SUBDIR += py-trustme
     SUBDIR += py-tuf
     SUBDIR += py-txtorcon
+    SUBDIR += py-uhashring
     SUBDIR += py-vici
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3
@@ -1143,7 +1144,6 @@
     SUBDIR += sancp
     SUBDIR += sandsifter
     SUBDIR += sasp
-    SUBDIR += scamp
     SUBDIR += scanlogd
     SUBDIR += scanssh
     SUBDIR += scrypt
