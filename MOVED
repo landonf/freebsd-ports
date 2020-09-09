@@ -7961,7 +7961,6 @@ databases/php5-propel||2016-01-25|Has expired: PHP 5.4 EOL reached
 deskutils/fengoffice||2016-01-25|Has expired: PHP 5.4 EOL reached
 devel/simpletest||2016-01-25|Has expired: PHP 5.4 EOL reached
 graphics/php5-swfed||2016-01-25|Has expired: PHP 5.4 EOL reached
-sysutils/loganalyzer||2016-01-25|Has expired: PHP 5.4 EOL reached
 textproc/simplehtmldom||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/autoindex2||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp11||2016-01-25|Has expired: PHP 5.4 EOL reached
@@ -9696,7 +9695,7 @@ java/bootstrap-openjdk|java/bootstrap-openjdk6|2017-12-01|Has expired: supersede
 lang/gcc46|lang/gcc6|2017-12-01|Has expired: Unsupported by upstream. Use GCC 6 or newer instead
 security/krb5-113|security/krb5-114|2017-12-03|Has expired: EOL twelve months after release of krb5-1.15
 net/bird6|net/bird@ipv6|2017-12-06|Moved to a flavored version
-devel/kore-notls|devel/kore@notls|2017-12-06|Moved to a flavored version
+devel/kore-notls|devel/kore|2017-12-06|Moved to a flavored version
 devel/llvm-cheri128|devel/llvm-cheri|2017-12-07|A single cheri compiler can now target 128-bit and 256-bit capabilities
 audio/cd-console||2017-12-13|Has expired: No public distfiles
 textproc/pecl-cld||2017-12-13|Has expired: Depends on expired devel/cld
@@ -15408,3 +15407,22 @@ graphics/gmt5|graphics/gmt|2020-08-29|Obsolete, please use graphics/gmt instead
 graphics/gmt5-dcw|graphics/gmt-dcw|2020-08-29|Rename to align port name with graphics/gmt
 graphics/gmt5-gshhg|graphics/gmt-gshhg|2020-08-29|Rename to align port name with graphics/gmt
 net/dhcpcd-devel|net/dhcpcd|2020-09-03|Development version no longer necessary following 9.1.0 stable release which saw dhcpcd capsicumized with privilege separation
+multimedia/w_scan|multimedia/w_scan2|2020-09-04|Has expired: No longer developed since September 2017, MASTER_SITES gone
+net/ntp-devel||2020-09-04|Has expired: Current devel branch of ntp is no longer published
+mail/postfix-policyd-spf-python|mail/py-spf-engine|2020-09-04|Has expired: Use mail/py-spf-engine instead (Project is superseded by successor)
+graphics/py-pyembree||2020-09-04|Has expired: Broken for more than 6 months
+games/asteroid||2020-09-04|Has expired: Broken for more than 6 months
+www/py-pySmartDL|www/py-pysmartdl|2020-09-05|Rename to match our py- port naming
+astro/py-RO|astro/py-ro|2020-09-05|Rename to match our py- port naming
+astro/py-astLib|astro/py-astlib|2020-09-05|Rename to match our py- port naming
+www/py-MechanicalSoup|www/py-mechanicalsoup|2020-09-05|Rename to match our py- port naming
+devel/kore@default|devel/kore|2020-09-07|Flavor removed
+devel/kore@notls|devel/kore|2020-09-07|Flavor removed
+x11-wm/e-module-alarm||2020-09-09|Removed
+x11-wm/e-module-cpu||2020-09-09|Removed
+x11-wm/e-module-deskshow||2020-09-09|Removed
+x11-wm/e-module-everything-places||2020-09-09|Removed
+x11-wm/e-module-mem||2020-09-09|Removed
+x11-wm/e-module-rmb||2020-09-09|Removed
+x11-wm/e-module-wlan||2020-09-09|Removed
+x11-wm/e-modules||2020-09-09|Removed

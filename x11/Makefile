@@ -71,6 +71,7 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
+    SUBDIR += glcapsviewer
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
     SUBDIR += gnome-desktop
@@ -289,6 +290,7 @@
     SUBDIR += sakura
     SUBDIR += sbxkb
     SUBDIR += screen-message
+    SUBDIR += screenkey
     SUBDIR += scripts
     SUBDIR += sddm
     SUBDIR += sessreg

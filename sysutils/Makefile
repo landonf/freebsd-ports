@@ -311,6 +311,7 @@
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += evhz
+    SUBDIR += evisum
     SUBDIR += evtviewer
     SUBDIR += exa
     SUBDIR += exfat-utils
@@ -601,6 +602,7 @@
     SUBDIR += lmon
     SUBDIR += lnav
     SUBDIR += lockfile-progs
+    SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash-forwarder

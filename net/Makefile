@@ -465,6 +465,7 @@
     SUBDIR += mtr
     SUBDIR += mtr-nox11
     SUBDIR += multicat
+    SUBDIR += mvfst
     SUBDIR += nakenchat
     SUBDIR += nanomsg
     SUBDIR += nast
@@ -513,7 +514,6 @@
     SUBDIR += ntimed
     SUBDIR += ntopng
     SUBDIR += ntp
-    SUBDIR += ntp-devel
     SUBDIR += ntpa
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
@@ -862,6 +862,7 @@
     SUBDIR += p5-URI-SmartURI
     SUBDIR += p5-URI-Template
     SUBDIR += p5-URI-Template-Restrict
+    SUBDIR += p5-URI-cpan
     SUBDIR += p5-URI-db
     SUBDIR += p5-URI-ws
     SUBDIR += p5-VM-EC2
@@ -1508,6 +1509,7 @@
     SUBDIR += vtun
     SUBDIR += wackamole
     SUBDIR += wakeonlan
+    SUBDIR += wangle
     SUBDIR += waypipe
     SUBDIR += wayvnc
     SUBDIR += webalizer-geodb

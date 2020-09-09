@@ -1397,10 +1397,10 @@
     SUBDIR += privatebin
     SUBDIR += privoxy
     SUBDIR += protovis
+    SUBDIR += proxygen
     SUBDIR += pserv
     SUBDIR += publicfile
     SUBDIR += punbb
-    SUBDIR += py-MechanicalSoup
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
@@ -1645,6 +1645,7 @@
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
     SUBDIR += py-livereload
+    SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
     SUBDIR += py-meld3
     SUBDIR += py-multidict
@@ -1665,12 +1666,12 @@
     SUBDIR += py-priority
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
-    SUBDIR += py-pySmartDL
     SUBDIR += py-pyjwt
     SUBDIR += py-pylons
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
+    SUBDIR += py-pysmartdl
     SUBDIR += py-python-digitalocean
     SUBDIR += py-python-dotenv
     SUBDIR += py-python-multipart

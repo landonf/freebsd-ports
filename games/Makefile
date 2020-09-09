@@ -16,6 +16,7 @@
     SUBDIR += CaribbeanStud
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
+    SUBDIR += NBlood
     SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
@@ -55,7 +56,6 @@
     SUBDIR += ascii-invaders
     SUBDIR += asciiquarium
     SUBDIR += assaultcube
-    SUBDIR += asteroid
     SUBDIR += asteroids3d
     SUBDIR += astromenace
     SUBDIR += asylum
@@ -153,6 +153,7 @@
     SUBDIR += connectagram
     SUBDIR += connectfive
     SUBDIR += construo
+    SUBDIR += coronapoker
     SUBDIR += corsix-th
     SUBDIR += cosmo
     SUBDIR += cosmosmash
