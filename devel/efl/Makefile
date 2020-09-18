@@ -3,6 +3,7 @@
 
 PORTNAME=	efl
 DISTVERSION=	1.24.3
+PORTREVISION=	2
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -20,6 +21,7 @@ LIB_DEPENDS=	libgif.so:graphics/giflib \
 		libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libdbus-1.so:devel/dbus \
+		libcurl.so:ftp/curl \
 		libsndfile.so:audio/libsndfile
 RUN_DEPENDS=	update-mime-database:misc/shared-mime-info
 
@@ -127,6 +129,7 @@ WAYLAND_LIB_DEPENDS=		libepoll-shim.so:devel/libepoll-shim \
 WAYLAND_CFLAGS=			-I${LOCALBASE}/include/libepoll-shim
 WAYLAND_LDFLAGS=		-lepoll-shim
 WAYLAND_MESON_TRUE=		wl
+WAYLAND_BROKEN=			Wayland bits compile but don't yet work at runtime
 
 GSTREAMER_USE=			GSTREAMER1=core
 GSTREAMER_MESON_TRUE=		gstreamer
