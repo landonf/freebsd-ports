@@ -28,7 +28,8 @@ LIB_DEPENDS=	libgmime-2.6.so:mail/gmime26 \
 		libsecret-1.so:security/libsecret \
 		libfolks.so:net-im/folks \
 		libhandy-0.0.so:x11-toolkits/libhandy \
-		libenchant-2.so:textproc/enchant2
+		libenchant-2.so:textproc/enchant2 \
+		libnotify.so:devel/libnotify
 
 USES=		compiler:c11 desktop-file-utils gettext gmake gnome meson \
 		pkgconfig python:3.5+,build shebangfix sqlite tar:xz
