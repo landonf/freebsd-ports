@@ -27,7 +27,7 @@ LIB_DEPENDS=	libgmime-2.6.so:mail/gmime26 \
 		libgcr-3.so:security/gcr \
 		libsecret-1.so:security/libsecret \
 		libfolks.so:net-im/folks \
-		libhandy-0.0.so:x11-toolkits/libhandy \
+		libhandy-1.0.so:x11-toolkits/libhandy \
 		libenchant-2.so:textproc/enchant2 \
 		libnotify.so:devel/libnotify
 
