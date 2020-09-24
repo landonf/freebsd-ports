@@ -4274,6 +4274,7 @@
     SUBDIR += py-coverage
     SUBDIR += py-coverage_enable_subprocess
     SUBDIR += py-cppy
+    SUBDIR += py-cppheaderparser
     SUBDIR += py-crank
     SUBDIR += py-crashtest
     SUBDIR += py-crc32c
@@ -5257,6 +5258,7 @@
     SUBDIR += pyrex
     SUBDIR += pyside2
     SUBDIR += pyside2-tools
+    SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythk
     SUBDIR += pythontidy
@@ -5415,6 +5417,7 @@
     SUBDIR += rubygem-authlogic
     SUBDIR += rubygem-avro
     SUBDIR += rubygem-awesome_print
+    SUBDIR += rubygem-awrence
     SUBDIR += rubygem-aws-eventstream
     SUBDIR += rubygem-aws-partitions
     SUBDIR += rubygem-aws-sdk
@@ -5829,6 +5832,7 @@
     SUBDIR += rubygem-cairo-gobject
     SUBDIR += rubygem-capybara
     SUBDIR += rubygem-capybara-screenshot
+    SUBDIR += rubygem-cbor
     SUBDIR += rubygem-celluloid
     SUBDIR += rubygem-celluloid-essentials
     SUBDIR += rubygem-celluloid-extras
