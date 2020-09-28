@@ -1305,6 +1305,7 @@
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
+    SUBDIR += py-pallets-sphinx-themes
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parse
@@ -1356,6 +1357,7 @@
     SUBDIR += py-regex
     SUBDIR += py-reno
     SUBDIR += py-reverend
+    SUBDIR += py-rich
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2html5
@@ -1368,6 +1370,7 @@
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-intl
+    SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-me
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx18
@@ -1382,6 +1385,7 @@
     SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-jsmath
+    SUBDIR += py-sphinxcontrib-log-cabinet
     SUBDIR += py-sphinxcontrib-napoleon
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
@@ -1769,6 +1773,7 @@
     SUBDIR += tokyodystopia
     SUBDIR += tr-aspell
     SUBDIR += trang
+    SUBDIR += translate-toolkit
     SUBDIR += trdsql
     SUBDIR += ts-hunspell
     SUBDIR += tth
