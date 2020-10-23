@@ -151,6 +151,7 @@
     SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
+    SUBDIR += ffuf
     SUBDIR += fiked
     SUBDIR += find-zlib
     SUBDIR += fizz
@@ -790,6 +791,9 @@
     SUBDIR += php74-filter
     SUBDIR += php74-openssl
     SUBDIR += php74-sodium
+    SUBDIR += php80-filter
+    SUBDIR += php80-openssl
+    SUBDIR += php80-sodium
     SUBDIR += phpsecinfo
     SUBDIR += picosha2
     SUBDIR += pidentd

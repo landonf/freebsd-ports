@@ -88,7 +88,8 @@
     SUBDIR += knock
     SUBDIR += knot-resolver
     SUBDIR += knot2
-    SUBDIR += knot2-lib
+    SUBDIR += knot3
+    SUBDIR += knot3-lib
     SUBDIR += ldapdns
     SUBDIR += ldns
     SUBDIR += libasr
@@ -115,7 +116,6 @@
     SUBDIR += nss_mdns
     SUBDIR += nss_resinit
     SUBDIR += opendd
-    SUBDIR += opendnssec
     SUBDIR += opendnssec2
     SUBDIR += openresolv
     SUBDIR += p5-AnyEvent-CacheDNS

@@ -278,6 +278,7 @@
     SUBDIR += php72-snmp
     SUBDIR += php73-snmp
     SUBDIR += php74-snmp
+    SUBDIR += php80-snmp
     SUBDIR += phpipam
     SUBDIR += phpweathermap
     SUBDIR += ping_exporter
@@ -371,6 +372,7 @@
     SUBDIR += unifi-lts
     SUBDIR += unifi-poller
     SUBDIR += unifi5
+    SUBDIR += unifi6
     SUBDIR += virt-viewer
     SUBDIR += wdiag
     SUBDIR += whatmask

@@ -38,6 +38,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
     SUBDIR += asterisk16
+    SUBDIR += asterisk18
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -426,6 +427,7 @@
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
+    SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
     SUBDIR += mgen
@@ -957,6 +959,9 @@
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
     SUBDIR += php74-xmlrpc
+    SUBDIR += php80-ldap
+    SUBDIR += php80-soap
+    SUBDIR += php80-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1001,6 +1006,7 @@
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
+    SUBDIR += py-errbot
     SUBDIR += py-eventlet
     SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gntp
@@ -1077,6 +1083,7 @@
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-network
+    SUBDIR += py-qt5-networkauth
     SUBDIR += py-rabbitpy
     SUBDIR += py-radix
     SUBDIR += py-raet
@@ -1243,12 +1250,19 @@
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
+    SUBDIR += rubygem-google-cloud-bigtable-admin-v2
+    SUBDIR += rubygem-google-cloud-bigtable-v2
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-google-cloud-errors
     SUBDIR += rubygem-google-cloud-logging
+    SUBDIR += rubygem-google-cloud-logging-v2
     SUBDIR += rubygem-google-cloud-pubsub
+    SUBDIR += rubygem-google-cloud-pubsub-v1
     SUBDIR += rubygem-google-cloud-spanner
+    SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
+    SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
+    SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-grpc124

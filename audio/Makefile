@@ -536,8 +536,10 @@
     SUBDIR += mpg321
     SUBDIR += mpiosh
     SUBDIR += mps
+    SUBDIR += mpz
     SUBDIR += mumble
     SUBDIR += murmur
+    SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
@@ -761,6 +763,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd
     SUBDIR += squash
@@ -840,6 +843,7 @@
     SUBDIR += wavpack
     SUBDIR += wavplay
     SUBDIR += webrtc-audio-processing
+    SUBDIR += welle.io
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmix
@@ -870,7 +874,6 @@
     SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
-    SUBDIR += zinf
     SUBDIR += zita-convolver
     SUBDIR += zita-resampler
     SUBDIR += zrythm

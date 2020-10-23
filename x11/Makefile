@@ -107,6 +107,7 @@
     SUBDIR += idesk
     SUBDIR += imwheel
     SUBDIR += innerspace
+    SUBDIR += inputplug
     SUBDIR += j4-dmenu-desktop
     SUBDIR += jgmenu
     SUBDIR += kanshi
@@ -262,6 +263,7 @@
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
+    SUBDIR += pmenu
     SUBDIR += polybar
     SUBDIR += printscreen
     SUBDIR += py-caffeine-ng
@@ -388,6 +390,7 @@
     SUBDIR += xcb-util-wm
     SUBDIR += xcb-util-xrm
     SUBDIR += xcbautolock
+    SUBDIR += xclickroot
     SUBDIR += xclip
     SUBDIR += xclipboard
     SUBDIR += xcm

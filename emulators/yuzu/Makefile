@@ -1,14 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20200927
+PORTVERSION=	s20201021
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	905e8016a04e.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1340
-PATCHFILES+=	34635a42c0b3.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1703
-PATCHFILES+=	1adf640d3725.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/1703
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -37,7 +35,7 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	a8be822e8
+GH_TAGNAME=	ea20b5c97
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -47,7 +45,7 @@ GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		herumi:xbyak:v5.96:xbyak/externals/xbyak \
-		kinetiknz:cubeb:cubeb-0.2-1265-gb594641:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1251-ga7e83aa:cubeb/externals/cubeb \
 		svn2github:inih:603729d:inih/externals/inih/inih
 
 USES=		cmake compiler:c++17-lang localbase:ldflags python:build sdl ssl
@@ -98,7 +96,7 @@ post-patch:
 
 .include <bsd.port.pre.mk>
 
-# XXX Drop after FreeBSD 11.3/12.1 EOL
+# XXX Drop after FreeBSD 12.1 EOL
 .if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 100
 . if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} < 100
 LLVM_DEFAULT=	10
@@ -109,7 +107,7 @@ CXX=		clang++${LLVM_DEFAULT}
 CPP=		clang-cpp${LLVM_DEFAULT}
 .endif
 
-# XXX Drop after FreeBSD 11.3/12.1 EOL
+# XXX Drop after FreeBSD 12.1 EOL
 .if make(makesum) || (!exists(/usr/include/c++/v1/fenv.h) && exists(/usr/lib/libc++.so))
 MASTER_SITES+=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VER}/:libcxx
 DISTFILES+=	libcxx-${LLVM_VER}.src.tar.xz:libcxx

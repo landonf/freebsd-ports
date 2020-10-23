@@ -212,6 +212,7 @@
     SUBDIR += libquvi-scripts09
     SUBDIR += libquvi09
     SUBDIR += librav1e
+    SUBDIR += librespot
     SUBDIR += librtmp
     SUBDIR += libtheora
     SUBDIR += libtuner
@@ -353,6 +354,7 @@
     SUBDIR += qmmp-qt5
     SUBDIR += qt-faststart
     SUBDIR += qt5-multimedia
+    SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09
     SUBDIR += rage
@@ -441,6 +443,7 @@
     SUBDIR += vlc
     SUBDIR += vmaf
     SUBDIR += vtkmpeg2encode
+    SUBDIR += vvdec
     SUBDIR += w_scan2
     SUBDIR += webcamd
     SUBDIR += webcamoid

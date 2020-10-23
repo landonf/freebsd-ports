@@ -632,6 +632,18 @@
     SUBDIR += php74-pdo_sqlite
     SUBDIR += php74-pgsql
     SUBDIR += php74-sqlite3
+    SUBDIR += php80-dba
+    SUBDIR += php80-mysqli
+    SUBDIR += php80-odbc
+    SUBDIR += php80-pdo
+    SUBDIR += php80-pdo_dblib
+    SUBDIR += php80-pdo_firebird
+    SUBDIR += php80-pdo_mysql
+    SUBDIR += php80-pdo_odbc
+    SUBDIR += php80-pdo_pgsql
+    SUBDIR += php80-pdo_sqlite
+    SUBDIR += php80-pgsql
+    SUBDIR += php80-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -803,6 +815,7 @@
     SUBDIR += py-redis2
     SUBDIR += py-sispy
     SUBDIR += py-south
+    SUBDIR += py-sqlalchemy-json
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy-utils
     SUBDIR += py-sqlalchemy10

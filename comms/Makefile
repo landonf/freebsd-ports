@@ -18,7 +18,6 @@
     SUBDIR += bluegps
     SUBDIR += bluez-firmware
     SUBDIR += bpl+
-    SUBDIR += chirp
     SUBDIR += chu
     SUBDIR += comserv
     SUBDIR += concordance
@@ -140,6 +139,7 @@
     SUBDIR += py-libconcord
     SUBDIR += py-lirc
     SUBDIR += py-pyserial
+    SUBDIR += py-qt5-sensors
     SUBDIR += py-qt5-serialport
     SUBDIR += py-xmodem
     SUBDIR += pyla

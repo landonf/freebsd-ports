@@ -165,6 +165,7 @@
     SUBDIR += cfengine315
     SUBDIR += checkrestart
     SUBDIR += chgrep
+    SUBDIR += choria
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
     SUBDIR += cinnamon-settings-daemon
@@ -434,7 +435,6 @@
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
-    SUBDIR += gnome-mount
     SUBDIR += gnome-power-manager
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
@@ -909,6 +909,8 @@
     SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
+    SUBDIR += php80-fileinfo
+    SUBDIR += php80-posix
     SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
@@ -923,10 +925,10 @@
     SUBDIR += plasma5-kmenuedit
     SUBDIR += plasma5-ksysguard
     SUBDIR += plasma5-libksysguard
+    SUBDIR += plasma5-plasma-disks
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
-    SUBDIR += plasma5-user-manager
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
@@ -975,6 +977,7 @@
     SUBDIR += py-borgmatic
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
+    SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
     SUBDIR += py-distro
@@ -1009,6 +1012,7 @@
     SUBDIR += py-ptyprocess
     SUBDIR += py-py-cpuinfo
     SUBDIR += py-python-consul
+    SUBDIR += py-python-consul2
     SUBDIR += py-python-crontab
     SUBDIR += py-python-nomad
     SUBDIR += py-pytsk
@@ -1017,6 +1021,7 @@
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-rdiff-backup
+    SUBDIR += py-resolve-march-native
     SUBDIR += py-salt
     SUBDIR += py-salt-2019
     SUBDIR += py-scandir
@@ -1273,10 +1278,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng320
-    SUBDIR += syslog-ng321
-    SUBDIR += syslog-ng322
-    SUBDIR += syslog-ng323
     SUBDIR += syslog-ng324
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
@@ -1298,6 +1299,7 @@
     SUBDIR += tealdeer
     SUBDIR += tenshi
     SUBDIR += terraform
+    SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale
     SUBDIR += terraform-provider-vultr
     SUBDIR += terragrunt

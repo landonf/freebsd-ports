@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	redo
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	devel
 MASTER_SITES=	https://jdebp.eu/Repository/freebsd/
 
@@ -10,6 +10,8 @@ COMMENT=	Incremental build system
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/source/COPYING
+
+USES=		compiler:c++11-lang
 
 NO_WRKSUBDIR=	yes
 
