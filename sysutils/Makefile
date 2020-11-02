@@ -522,6 +522,7 @@
     SUBDIR += istatserver
     SUBDIR += istio
     SUBDIR += jadm
+    SUBDIR += jail_exporter
     SUBDIR += jail-primer
     SUBDIR += jailadmin
     SUBDIR += jaildaemon
@@ -1041,6 +1042,7 @@
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qjail
+    SUBDIR += qjail54
     SUBDIR += qlogtools
     SUBDIR += qsudo
     SUBDIR += qt5-qtdiag

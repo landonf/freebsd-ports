@@ -98,6 +98,7 @@
     SUBDIR += libdjbdns
     SUBDIR += libidn
     SUBDIR += libidn2
+    SUBDIR += libmicrodns
     SUBDIR += libnspsl
     SUBDIR += libpsl
     SUBDIR += linux-c7-libasyncns
@@ -180,6 +181,7 @@
     SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
     SUBDIR += py-dnspython
+    SUBDIR += py-dnspython2
     SUBDIR += py-easyzone
     SUBDIR += py-idna
     SUBDIR += py-idna_ssl

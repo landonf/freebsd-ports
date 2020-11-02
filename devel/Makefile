@@ -796,7 +796,6 @@
     SUBDIR += gitblit
     SUBDIR += gitflow
     SUBDIR += gitg
-    SUBDIR += gitg0
     SUBDIR += github-backup-utils
     SUBDIR += gitinspector
     SUBDIR += gitlab-runner
@@ -1289,7 +1288,6 @@
     SUBDIR += libshbuf
     SUBDIR += libshhmsg
     SUBDIR += libshhopt
-    SUBDIR += libsigc++12
     SUBDIR += libsigc++20
     SUBDIR += libsigrok
     SUBDIR += libsigrokdecode
@@ -3665,7 +3663,6 @@
     SUBDIR += pasm
     SUBDIR += patch
     SUBDIR += pcc-libs
-    SUBDIR += pccts
     SUBDIR += pcl
     SUBDIR += pcre
     SUBDIR += pcre++
@@ -4176,6 +4173,7 @@
     SUBDIR += py-azure-storage-blob
     SUBDIR += py-azure-storage-common
     SUBDIR += py-azure-synapse-accesscontrol
+    SUBDIR += py-azure-synapse-artifacts
     SUBDIR += py-azure-synapse-spark
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
@@ -4318,7 +4316,6 @@
     SUBDIR += py-daemonize
     SUBDIR += py-daemons
     SUBDIR += py-dal
-    SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
     SUBDIR += py-dataclasses
@@ -4443,7 +4440,6 @@
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
     SUBDIR += py-gast
-    SUBDIR += py-gdata
     SUBDIR += py-genson
     SUBDIR += py-genty
     SUBDIR += py-geojson
@@ -5007,7 +5003,6 @@
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
     SUBDIR += py-repoze.tm2
-    SUBDIR += py-repoze.what
     SUBDIR += py-repoze.who
     SUBDIR += py-repoze.who-testutil
     SUBDIR += py-repoze.xmliter
@@ -5054,7 +5049,6 @@
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-pkg
-    SUBDIR += py-setuptools_darcs
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
@@ -6619,6 +6613,7 @@
     SUBDIR += scandoc
     SUBDIR += sccache
     SUBDIR += scons
+    SUBDIR += sd-mux
     SUBDIR += sdl12
     SUBDIR += sdl20
     SUBDIR += sdl2pp
@@ -6815,6 +6810,9 @@
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
     SUBDIR += wandio
+    SUBDIR += wasi-compiler-rt11
+    SUBDIR += wasi-libc
+    SUBDIR += wasi-libcxx
     SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wf-config
