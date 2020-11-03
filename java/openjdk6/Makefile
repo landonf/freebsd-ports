@@ -65,6 +65,7 @@ EXTRA_PATCHES+=	${ICEDTEA_PATCHES}
 # java extracts directly to the cwd
 WRKSRC=		${WRKDIR}
 
+USE_GCC=	yes
 USE_XORG=	x11 xext xi xt xtst
 
 # do not depend on devel/apache-ant to avoid circular dependency, but
