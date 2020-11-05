@@ -5143,7 +5143,6 @@
     SUBDIR += py-trollius
     SUBDIR += py-ttictoc
     SUBDIR += py-ttystatus
-    SUBDIR += py-twext
     SUBDIR += py-twiggy
     SUBDIR += py-twilio
     SUBDIR += py-twine

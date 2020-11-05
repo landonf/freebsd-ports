@@ -211,6 +211,7 @@
     SUBDIR += mate-applets
     SUBDIR += mate-base
     SUBDIR += mate-desktop
+    SUBDIR += mate-dock-applet
     SUBDIR += mate-menus
     SUBDIR += mate-panel
     SUBDIR += mate-screensaver
@@ -467,6 +468,7 @@
     SUBDIR += xmsg
     SUBDIR += xmx
     SUBDIR += xnee
+    SUBDIR += xnotify
     SUBDIR += xob
     SUBDIR += xorg
     SUBDIR += xorg-apps

@@ -3,6 +3,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.15.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
@@ -32,6 +33,7 @@ OPTIONS_EXCLUDE_aarch64=	DTRACE
 OPTIONS_EXCLUDE_armv6=		DTRACE
 OPTIONS_EXCLUDE_armv7=		DTRACE
 OPTIONS_EXCLUDE_powerpc64=	DTRACE
+OPTIONS_EXCLUDE_powerpc64le=	DTRACE
 
 BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
 BUNDLED_SSL_USES_OFF=		ssl
@@ -82,7 +84,7 @@ LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 
 .include <bsd.port.options.mk>
 
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
+.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
 EXTRA_PATCHES=		${PATCHDIR}/extra-patch-common.gypi
 .endif
 
