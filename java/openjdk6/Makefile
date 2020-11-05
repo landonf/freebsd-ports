@@ -65,7 +65,6 @@ EXTRA_PATCHES+=	${ICEDTEA_PATCHES}
 # java extracts directly to the cwd
 WRKSRC=		${WRKDIR}
 
-USE_GCC=	yes
 USE_XORG=	x11 xext xi xt xtst
 
 # do not depend on devel/apache-ant to avoid circular dependency, but
@@ -117,7 +116,8 @@ MAKE_ENV=	OS= \
 		BUILD_NUMBER=${PORTVERSION} \
 		NO_DOCS=true \
 		MILESTONE=fcs \
-		JDK_UPDATE_VERSION=${UPDATE_VERSION}
+		JDK_UPDATE_VERSION=${UPDATE_VERSION} \
+		_HAS_HASH_STYLE_GNU=""
 
 # XXX Turn off parallel build by default.
 MAKE_JOBS_UNSAFE=	yes
