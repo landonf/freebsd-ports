@@ -1228,6 +1228,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-anyascii
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
     SUBDIR += py-asonic
@@ -1241,6 +1242,7 @@
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
+    SUBDIR += py-collective.checkdocs
     SUBDIR += py-colorclass
     SUBDIR += py-creole
     SUBDIR += py-cssselect2
@@ -1268,6 +1270,7 @@
     SUBDIR += py-feedparser
     SUBDIR += py-fingerprints
     SUBDIR += py-ftfy
+    SUBDIR += py-furo
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-gensim
@@ -1332,6 +1335,7 @@
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
     SUBDIR += py-pdftotext
+    SUBDIR += py-petl
     SUBDIR += py-pikepdf
     SUBDIR += py-precis_i18n
     SUBDIR += py-pss
@@ -1638,6 +1642,7 @@
     SUBDIR += rubygem-rouge318
     SUBDIR += rubygem-rouge319
     SUBDIR += rubygem-rouge321
+    SUBDIR += rubygem-rouge324
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

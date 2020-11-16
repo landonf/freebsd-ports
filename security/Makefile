@@ -915,7 +915,6 @@
     SUBDIR += py-libnacl
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
-    SUBDIR += py-mcrypt
     SUBDIR += py-merkletools
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
@@ -957,6 +956,7 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-pysodium
+    SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
     SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-gnupg
@@ -988,6 +988,7 @@
     SUBDIR += py-spake2
     SUBDIR += py-ssh
     SUBDIR += py-ssh-audit
+    SUBDIR += py-sshpubkeys
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-stix2
@@ -1003,6 +1004,7 @@
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3
     SUBDIR += py-vulndb
+    SUBDIR += py-webauthn
     SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
@@ -1204,6 +1206,7 @@
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
+    SUBDIR += spectre-meltdown-checker
     SUBDIR += spm
     SUBDIR += spybye
     SUBDIR += sqlmap

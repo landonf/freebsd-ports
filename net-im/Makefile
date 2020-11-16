@@ -61,7 +61,6 @@
     SUBDIR += libqtelegram-ae
     SUBDIR += libsignon-glib
     SUBDIR += libstrophe
-    SUBDIR += libtelepathy
     SUBDIR += licq
     SUBDIR += licq-icq
     SUBDIR += licq-jabber
@@ -178,7 +177,6 @@
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client
-    SUBDIR += zephyr
     SUBDIR += zoom
 
 .include <bsd.port.subdir.mk>

@@ -64,6 +64,7 @@
     SUBDIR += aview
     SUBDIR += avir
     SUBDIR += azpainter
+    SUBDIR += azpainterb
     SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
@@ -399,6 +400,7 @@
     SUBDIR += kipi-plugins
     SUBDIR += klatexformula
     SUBDIR += kludge3d
+    SUBDIR += kmscube
     SUBDIR += kolourpaint
     SUBDIR += kooka
     SUBDIR += kphotoalbum
@@ -587,6 +589,7 @@
     SUBDIR += openimageio
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
+    SUBDIR += openjph
     SUBDIR += openjump
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
@@ -648,6 +651,11 @@
     SUBDIR += p5-GraphViz-Data-Structure
     SUBDIR += p5-GraphViz-Traverse
     SUBDIR += p5-GraphViz2
+    SUBDIR += p5-GraphViz2-DBI
+    SUBDIR += p5-GraphViz2-Data-Grapher
+    SUBDIR += p5-GraphViz2-Parse-ISA
+    SUBDIR += p5-GraphViz2-Parse-RecDescent
+    SUBDIR += p5-GraphViz2-Parse-XML
     SUBDIR += p5-Graphics-Color
     SUBDIR += p5-Graphics-ColorNames
     SUBDIR += p5-Graphics-ColorNames-WWW
@@ -832,6 +840,7 @@
     SUBDIR += py-mapclassify
     SUBDIR += py-mcomix
     SUBDIR += py-ming
+    SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
     SUBDIR += py-open3d-python
@@ -1012,7 +1021,6 @@
     SUBDIR += svgalib
     SUBDIR += svgbob
     SUBDIR += swappy
-    SUBDIR += swfdec
     SUBDIR += swfmill
     SUBDIR += swftools
     SUBDIR += sxiv
