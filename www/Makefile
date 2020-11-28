@@ -171,6 +171,7 @@
     SUBDIR += fpc-httpd22
     SUBDIR += fpc-httpd24
     SUBDIR += fpc-libmicrohttpd
+    SUBDIR += fpc-webidl
     SUBDIR += free-sa-devel
     SUBDIR += fswiki
     SUBDIR += fusionpbx
@@ -1497,6 +1498,7 @@
     SUBDIR += py-django-filter
     SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
+    SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings-update
     SUBDIR += py-django-haystack
@@ -1681,6 +1683,7 @@
     SUBDIR += py-pecan
     SUBDIR += py-pelican
     SUBDIR += py-planet
+    SUBDIR += py-postorius
     SUBDIR += py-praw
     SUBDIR += py-prawcore
     SUBDIR += py-priority
@@ -1860,6 +1863,7 @@
     SUBDIR += rubygem-em-websocket
     SUBDIR += rubygem-emk-sinatra-url-for
     SUBDIR += rubygem-erubi
+    SUBDIR += rubygem-erubi19
     SUBDIR += rubygem-erubis
     SUBDIR += rubygem-ethon
     SUBDIR += rubygem-eventmachine_httpserver
