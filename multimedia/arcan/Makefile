@@ -2,6 +2,7 @@
 
 PORTNAME=	arcan
 DISTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -11,6 +12,7 @@ PATCHFILES+=	b519eb023e20.patch:-p2 # https://github.com/letoram/arcan/pull/205
 PATCHFILES+=	d6b52b1b3601.patch:-p2 # https://github.com/letoram/arcan/pull/205
 PATCHFILES+=	d8a262d6d19a.patch:-p2 # https://github.com/letoram/arcan/pull/205
 PATCHFILES+=	f724b748cc72.patch:-p2 # https://github.com/letoram/arcan/pull/205
+PATCHFILES+=	06ca1fd319bf.patch:-p2 # https://github.com/letoram/arcan/pull/209
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Display Server, Multimedia Framework, Game Engine
@@ -32,6 +34,7 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	letoram
 WRKSRC_SUBDIR=	src
 CMAKE_ON=	HYBRID_HEADLESS
+CMAKE_OFF=	STATIC_LIBUVC
 CMAKE_ARGS=	-DENGINE_BUILDTAG:STRING="${DISTVERSIONFULL}"
 LDFLAGS+=	-Wl,--as-needed # bzip2, ffmpeg, librt, libutil, lzma, zlib
 LDFLAGS_i386=	-Wl,-z,notext
@@ -40,7 +43,6 @@ OPTIONS_DEFINE=	ESPEAK FFMPEG LUAJIT SDL TESSERACT UVC VLC VNC WAYLAND
 OPTIONS_DEFAULT=ESPEAK FFMPEG LUAJIT SDL TESSERACT UVC VLC VNC WAYLAND
 OPTIONS_EXCLUDE_aarch64=	LUAJIT # bug 225342
 OPTIONS_EXCLUDE_powerpc64=	LUAJIT
-OPTIONS_EXCLUDE_FreeBSD_11=	VLC # no Qt5
 OPTIONS_SUB=	yes
 
 ESPEAK_DESC=		Text to speech via eSpeak
