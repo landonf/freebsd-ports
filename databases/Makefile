@@ -53,10 +53,9 @@
     SUBDIR += credis
     SUBDIR += cutelyst-asql
     SUBDIR += dalmp
-    SUBDIR += datamodeler
     SUBDIR += db
+    SUBDIR += db18
     SUBDIR += db5
-    SUBDIR += db6
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -746,6 +745,7 @@
     SUBDIR += py-MySQLdb
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
+    SUBDIR += py-aesqlapius
     SUBDIR += py-agate-sql
     SUBDIR += py-aiopg
     SUBDIR += py-aioredis
