@@ -15,6 +15,7 @@
     SUBDIR += accounts-qml-module
     SUBDIR += accountsservice
     SUBDIR += acerhdf-kmod
+    SUBDIR += acfgfs
     SUBDIR += acltool
     SUBDIR += acpi_call
     SUBDIR += acpica-tools
@@ -232,6 +233,7 @@
     SUBDIR += daggy
     SUBDIR += dar
     SUBDIR += datadog-agent
+    SUBDIR += datadog-integrations
     SUBDIR += dateutils
     SUBDIR += dc3dd
     SUBDIR += dcfldd
@@ -655,6 +657,7 @@
     SUBDIR += mate-system-monitor
     SUBDIR += mbgtools
     SUBDIR += mcelog
+    SUBDIR += mcfly
     SUBDIR += mcollective
     SUBDIR += mcollective-actionpolicy-auth
     SUBDIR += mcollective-nettest-agent
@@ -792,6 +795,7 @@
     SUBDIR += p5-BSD-Jail-Object
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
+    SUBDIR += p5-BSD-getloadavg
     SUBDIR += p5-BackupPC-XS
     SUBDIR += p5-Brackup
     SUBDIR += p5-Dir-Purge
@@ -1292,7 +1296,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng324
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
     SUBDIR += syslog-ng327
@@ -1402,6 +1405,7 @@
     SUBDIR += u-boot-rpi3
     SUBDIR += u-boot-rpi3-32
     SUBDIR += u-boot-rpi4
+    SUBDIR += u-boot-rpi-arm64
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi

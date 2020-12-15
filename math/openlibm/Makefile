@@ -18,6 +18,7 @@ BROKEN_armv6=	fails to compile: a parameter list without types is only allowed i
 BROKEN_armv7=	fails to compile: a parameter list without types is only allowed in a function definition
 BROKEN_mips=	fails to compile: No rule to make target mips/Make.files
 BROKEN_mips64=	fails to compile: No rule to make target mips64/Make.files
+BROKEN_riscv64=	fails to compile: No rule to make target riscv64/Make.files
 
 USES=		gmake
 USE_GITHUB=	yes

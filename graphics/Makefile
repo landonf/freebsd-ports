@@ -46,6 +46,7 @@
     SUBDIR += agg
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
     SUBDIR += ampasCTL
@@ -404,6 +405,7 @@
     SUBDIR += kludge3d
     SUBDIR += kmscube
     SUBDIR += kolourpaint
+    SUBDIR += kontrast
     SUBDIR += kooka
     SUBDIR += kphotoalbum
     SUBDIR += kqtquickcharts
@@ -804,6 +806,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-altair
     SUBDIR += py-beziers
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -865,6 +868,7 @@
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
+    SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet150
     SUBDIR += py-pygraphviz
