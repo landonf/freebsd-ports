@@ -590,6 +590,8 @@
     SUBDIR += libcpuid
     SUBDIR += libdnf
     SUBDIR += libfvde
+    SUBDIR += libg15
+    SUBDIR += libg15render
     SUBDIR += libgksu
     SUBDIR += libieee1284
     SUBDIR += libretto-config
