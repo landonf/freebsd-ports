@@ -4156,6 +4156,7 @@
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
     SUBDIR += py-babelfish
+    SUBDIR += py-babi_grammars
     SUBDIR += py-backcall
     SUBDIR += py-backports
     SUBDIR += py-backports.csv
@@ -4659,6 +4660,7 @@
     SUBDIR += py-oletools
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
+    SUBDIR += py-onigurumacffi
     SUBDIR += py-opcodes
     SUBDIR += py-openapi-codec
     SUBDIR += py-openapi-spec-validator
