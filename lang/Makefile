@@ -185,6 +185,9 @@
     SUBDIR += mmix
     SUBDIR += mono
     SUBDIR += mono-basic
+    SUBDIR += mono5.10
+    SUBDIR += mono5.20
+    SUBDIR += mono6.8
     SUBDIR += mosh
     SUBDIR += mosml
     SUBDIR += mtasc
