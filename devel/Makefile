@@ -3892,6 +3892,7 @@
     SUBDIR += phabricator
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
+    SUBDIR += php-composer2
     SUBDIR += php-geshi
     SUBDIR += php-ice37
     SUBDIR += php-libawl
@@ -6178,6 +6179,7 @@
     SUBDIR += rubygem-inflecto
     SUBDIR += rubygem-iniparse
     SUBDIR += rubygem-insist
+    SUBDIR += rubygem-inspec-core
     SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-console
