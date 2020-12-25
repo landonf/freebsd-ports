@@ -116,6 +116,7 @@
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
+    SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += e107
@@ -2139,6 +2140,8 @@
     SUBDIR += smarty3
     SUBDIR += smb_auth
     SUBDIR += snarf
+    SUBDIR += sogo
+    SUBDIR += sogo-activesync
     SUBDIR += sogo2
     SUBDIR += sogo2-activesync
     SUBDIR += sogo4
