@@ -9,6 +9,7 @@
     SUBDIR += 915resolution
     SUBDIR += LPRng
     SUBDIR += LPRngTool
+    SUBDIR += R-cran-processx
     SUBDIR += R-cran-ps
     SUBDIR += UEFITool
     SUBDIR += abduco
@@ -159,16 +160,12 @@
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine-masterfiles311
-    SUBDIR += cfengine-masterfiles312
-    SUBDIR += cfengine-masterfiles313
     SUBDIR += cfengine-masterfiles314
     SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine310
     SUBDIR += cfengine311
-    SUBDIR += cfengine312
-    SUBDIR += cfengine313
     SUBDIR += cfengine314
     SUBDIR += cfengine315
     SUBDIR += cfengine316
@@ -178,7 +175,6 @@
     SUBDIR += chgrep
     SUBDIR += choria
     SUBDIR += chyves
-    SUBDIR += cinnamon-control-center
     SUBDIR += cinnamon-settings-daemon
     SUBDIR += ciso
     SUBDIR += ciso-maker
@@ -794,9 +790,7 @@
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
-    SUBDIR += ori
     SUBDIR += osinfo-db-tools
-    SUBDIR += osquery
     SUBDIR += p5-App-RunCron
     SUBDIR += p5-App-ZFSCurses
     SUBDIR += p5-BSD-Jail-Object
@@ -924,8 +918,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php72-fileinfo
-    SUBDIR += php72-posix
     SUBDIR += php73-fileinfo
     SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
@@ -1048,7 +1040,6 @@
     SUBDIR += py-salt-2019
     SUBDIR += py-scandir
     SUBDIR += py-scarab
-    SUBDIR += py-shutilwhich
     SUBDIR += py-supervisor
     SUBDIR += py-tarsnapper
     SUBDIR += py-tmuxp
@@ -1133,7 +1124,6 @@
     SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
-    SUBDIR += rubygem-chef-zero5
     SUBDIR += rubygem-chef12
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
@@ -1305,11 +1295,7 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng325
-    SUBDIR += syslog-ng326
     SUBDIR += syslog-ng327
-    SUBDIR += syslog-ng328
-    SUBDIR += syslog-ng329
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += sysvbanner
@@ -1430,7 +1416,6 @@
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
     SUBDIR += uefi-edk2-bhyve
-    SUBDIR += uefi-edk2-bhyve-csm
     SUBDIR += uefi-edk2-bhyve-devel
     SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch

@@ -36,7 +36,6 @@
     SUBDIR += bogofilter-kc
     SUBDIR += bogofilter-lmdb
     SUBDIR += bogofilter-sqlite
-    SUBDIR += bogofilter-tc
     SUBDIR += bsfilter
     SUBDIR += bsmtp
     SUBDIR += bulk_mailer
@@ -135,7 +134,6 @@
     SUBDIR += findmaildirs
     SUBDIR += geary
     SUBDIR += gensig
-    SUBDIR += getmail
     SUBDIR += getmail6
     SUBDIR += gmime2
     SUBDIR += gmime2-sharp
@@ -270,7 +268,6 @@
     SUBDIR += opensmtpd-extras-table-mysql
     SUBDIR += opensmtpd-extras-table-passwd
     SUBDIR += opensmtpd-extras-table-postgresql
-    SUBDIR += opensmtpd-extras-table-python
     SUBDIR += opensmtpd-extras-table-redis
     SUBDIR += opensmtpd-extras-table-socketmap
     SUBDIR += opensmtpd-extras-table-sqlite
@@ -453,7 +450,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php72-imap
     SUBDIR += php73-imap
     SUBDIR += php74-imap
     SUBDIR += php80-imap

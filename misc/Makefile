@@ -354,7 +354,6 @@
     SUBDIR += pecl-timezonedb
     SUBDIR += perkeep
     SUBDIR += pfm
-    SUBDIR += php72-calendar
     SUBDIR += php73-calendar
     SUBDIR += php74-calendar
     SUBDIR += php80-calendar
@@ -481,6 +480,7 @@
     SUBDIR += teseq
     SUBDIR += thefuck
     SUBDIR += thrill
+    SUBDIR += timezonemap
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp

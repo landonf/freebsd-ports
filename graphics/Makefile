@@ -141,7 +141,6 @@
     SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
-    SUBDIR += drm-legacy-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
     SUBDIR += dssim
@@ -281,7 +280,6 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
-    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -751,8 +749,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php72-exif
-    SUBDIR += php72-gd
     SUBDIR += php73-exif
     SUBDIR += php73-gd
     SUBDIR += php74-exif
@@ -841,7 +837,6 @@
     SUBDIR += py-hiplot
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
-    SUBDIR += py-imageio24
     SUBDIR += py-imagesize
     SUBDIR += py-img2pdf
     SUBDIR += py-leather
@@ -859,7 +854,6 @@
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
-    SUBDIR += py-pillow6
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
@@ -1017,7 +1011,6 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simpleviewer
-    SUBDIR += sk1libs
     SUBDIR += skanlite
     SUBDIR += spectacle
     SUBDIR += spirv-tools
@@ -1059,7 +1052,6 @@
     SUBDIR += tumble
     SUBDIR += tweeny
     SUBDIR += ufraw
-    SUBDIR += uniconvertor
     SUBDIR += unpaper
     SUBDIR += urho3d
     SUBDIR += urt

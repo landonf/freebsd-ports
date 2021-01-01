@@ -84,6 +84,7 @@
     SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloudflared
+    SUBDIR += cloudquery
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
@@ -430,7 +431,6 @@
     SUBDIR += mdns-repeater
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
-    SUBDIR += mediatomb
     SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
@@ -947,14 +947,9 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
-    SUBDIR += pecl-yaz
     SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
-    SUBDIR += php72-ldap
-    SUBDIR += php72-soap
-    SUBDIR += php72-sockets
-    SUBDIR += php72-xmlrpc
     SUBDIR += php73-ldap
     SUBDIR += php73-soap
     SUBDIR += php73-sockets
@@ -1022,7 +1017,6 @@
     SUBDIR += py-httpstat
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
-    SUBDIR += py-ipaddress
     SUBDIR += py-iplib
     SUBDIR += py-iptools
     SUBDIR += py-kafka-python

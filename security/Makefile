@@ -54,7 +54,6 @@
     SUBDIR += boringssl
     SUBDIR += botan110
     SUBDIR += botan2
-    SUBDIR += broccoli
     SUBDIR += bruteblock
     SUBDIR += bruteforceblocker
     SUBDIR += bsdsfv
@@ -428,7 +427,6 @@
     SUBDIR += openvpn-devel
     SUBDIR += openvpn-mbedtls
     SUBDIR += ophcrack
-    SUBDIR += orthrus
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
     SUBDIR += ossec-hids-agent-config
@@ -783,10 +781,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php72-filter
-    SUBDIR += php72-hash
-    SUBDIR += php72-openssl
-    SUBDIR += php72-sodium
     SUBDIR += php73-filter
     SUBDIR += php73-hash
     SUBDIR += php73-openssl
@@ -852,7 +846,6 @@
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-authlib
-    SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
@@ -1163,7 +1156,6 @@
     SUBDIR += samhain-client
     SUBDIR += samhain-server
     SUBDIR += sancp
-    SUBDIR += sandsifter
     SUBDIR += sasp
     SUBDIR += scanlogd
     SUBDIR += scanssh
@@ -1215,6 +1207,7 @@
     SUBDIR += sqlmap
     SUBDIR += sqlninja
     SUBDIR += srm
+    SUBDIR += ssb
     SUBDIR += ssdeep
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-vault
@@ -1303,6 +1296,7 @@
     SUBDIR += xml-security
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
+    SUBDIR += xray-core
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara
