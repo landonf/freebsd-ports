@@ -409,6 +409,7 @@
     SUBDIR += kooka
     SUBDIR += kphotoalbum
     SUBDIR += kqtquickcharts
+    SUBDIR += kquickimageeditor
     SUBDIR += krita
     SUBDIR += ksnip
     SUBDIR += kxstitch
@@ -808,6 +809,7 @@
     SUBDIR += py-beziers
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
+    SUBDIR += py-box2d-py
     SUBDIR += py-cairo
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
@@ -825,6 +827,7 @@
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
+    SUBDIR += py-giddy
     SUBDIR += py-gizeh
     SUBDIR += py-glfw
     SUBDIR += py-glooey
@@ -842,6 +845,7 @@
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
     SUBDIR += py-mcomix
+    SUBDIR += py-mgwr
     SUBDIR += py-ming
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
@@ -857,9 +861,11 @@
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
+    SUBDIR += py-pointpats
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
+    SUBDIR += py-pydotplus
     SUBDIR += py-pyepsg
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
@@ -883,6 +889,7 @@
     SUBDIR += py-qrencode
     SUBDIR += py-qt5-svg
     SUBDIR += py-rasterio
+    SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
@@ -933,6 +940,7 @@
     SUBDIR += rayshade
     SUBDIR += reactphysics3d
     SUBDIR += reallyslick
+    SUBDIR += realsr-ncnn-vulkan
     SUBDIR += recoverjpeg
     SUBDIR += renrot
     SUBDIR += repng2jpeg

@@ -32,7 +32,9 @@
     SUBDIR += arirang
     SUBDIR += arpCounterattack
     SUBDIR += asignify
+    SUBDIR += assh
     SUBDIR += autossh
+    SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
     SUBDIR += aws-vault
     SUBDIR += axTLS
@@ -195,6 +197,7 @@
     SUBDIR += gpgme-cpp
     SUBDIR += gpgme-qt5
     SUBDIR += gputty
+    SUBDIR += greenbone-security-assistant
     SUBDIR += greenbone-security-assistant8
     SUBDIR += greenbone-security-assistant9
     SUBDIR += gringotts
@@ -202,6 +205,9 @@
     SUBDIR += gss
     SUBDIR += gstreamer1-plugins-dtls
     SUBDIR += gtkpasman
+    SUBDIR += gvm
+    SUBDIR += gvmd
+    SUBDIR += gvm-libs
     SUBDIR += gwee
     SUBDIR += hackbot
     SUBDIR += hardening-check
@@ -409,6 +415,7 @@
     SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
+    SUBDIR += openvas
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
     SUBDIR += openvas8-libraries
@@ -899,6 +906,7 @@
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi
     SUBDIR += py-gtts-token
+    SUBDIR += py-gvm-tools
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
@@ -922,6 +930,7 @@
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
     SUBDIR += py-ospd
+    SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
     SUBDIR += py-paramiko1
     SUBDIR += py-pass-audit
@@ -954,6 +963,7 @@
     SUBDIR += py-python-axolotl
     SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-gnupg
+    SUBDIR += py-python-gvm
     SUBDIR += py-python-jose
     SUBDIR += py-python-nss
     SUBDIR += py-python-openid
@@ -1139,6 +1149,7 @@
     SUBDIR += rubygem-safety_net_attestation
     SUBDIR += rubygem-scrypt
     SUBDIR += rubygem-securecompare
+    SUBDIR += rubygem-securerandom
     SUBDIR += rubygem-signet
     SUBDIR += rubygem-six
     SUBDIR += rubygem-sshkey

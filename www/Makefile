@@ -409,6 +409,7 @@
     SUBDIR += mod_xmlns
     SUBDIR += mod_xsendfile
     SUBDIR += mohawk
+    SUBDIR += moinmoin
     SUBDIR += moinmoincli
     SUBDIR += mongoose
     SUBDIR += mongrel2
@@ -454,6 +455,8 @@
     SUBDIR += nibbleblog
     SUBDIR += nift
     SUBDIR += node
+    SUBDIR += node10
+    SUBDIR += node12
     SUBDIR += node14
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -1857,6 +1860,7 @@
     SUBDIR += rubygem-ethon
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
+    SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -1965,6 +1969,7 @@
     SUBDIR += rubygem-multipart-post
     SUBDIR += rubygem-nanoc
     SUBDIR += rubygem-nested_form
+    SUBDIR += rubygem-net-http
     SUBDIR += rubygem-net-http-digest_auth
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent2
@@ -2179,6 +2184,7 @@
     SUBDIR += tomcat85
     SUBDIR += tomcat9
     SUBDIR += tomee
+    SUBDIR += trac-devel
     SUBDIR += trafficserver
     SUBDIR += transmission-web
     SUBDIR += transproxy
@@ -2278,7 +2284,6 @@
     SUBDIR += wsdlpull
     SUBDIR += wsmake
     SUBDIR += wt
-    SUBDIR += wt3
     SUBDIR += wuzz
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
