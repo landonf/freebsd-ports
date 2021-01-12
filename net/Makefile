@@ -1017,7 +1017,6 @@
     SUBDIR += py-httpstat
     SUBDIR += py-ifaddr
     SUBDIR += py-impacket
-    SUBDIR += py-ipaddress
     SUBDIR += py-iplib
     SUBDIR += py-iptools
     SUBDIR += py-kafka-python
@@ -1176,6 +1175,7 @@
     SUBDIR += rtptools
     SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-activestorage60
+    SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
