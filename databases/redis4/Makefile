@@ -5,7 +5,7 @@ PORTNAME=	redis4
 PORTVERSION=	4.0.14
 PORTREVISION=	2
 CATEGORIES=	databases
-MASTER_SITES=	http://download.redis.io/releases/
+MASTER_SITES=	https://download.redis.io/releases/
 DISTNAME=	redis-${PORTVERSION}
 
 MAINTAINER=	osa@FreeBSD.org
@@ -13,6 +13,9 @@ COMMENT=	Persistent key-value database with built-in net interface
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	EOLed upstream
+EXPIRATION_DATE=2021-03-31
 
 OPTIONS_DEFINE=	TESTS TRIB
 OPTIONS_RADIO=	EXTLUA
