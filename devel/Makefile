@@ -153,7 +153,6 @@
     SUBDIR += api-sanity-autotest
     SUBDIR += apitrace
     SUBDIR += app-builder
-    SUBDIR += appmenu-gtk-module
     SUBDIR += appstream-glib
     SUBDIR += apr1
     SUBDIR += arachne-pnr
