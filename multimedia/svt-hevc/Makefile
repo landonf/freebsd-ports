@@ -24,7 +24,13 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	OpenVisualCloud
 GH_PROJECT=	SVT-HEVC
-CMAKE_OFF=	NATIVE
+
+OPTIONS_DEFINE=	NATIVE
+NATIVE_DESC=	Build with native optimizations (-march=native)
+NATIVE_CMAKE_BOOL=	NATIVE
+
+CFLAGS+=	-O3 -flto
+LDFLAGS+=	-flto
 
 post-patch:
 # Keep using nasm and drop vendor -O/-g
