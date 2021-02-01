@@ -2,7 +2,7 @@
 
 PORTNAME=	netbox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.3
+DISTVERSION=	2.10.4
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	kai@FreeBSD.org
@@ -31,7 +31,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django31>=3.1.3<3.2:www/py-django31@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}dj31-django-filter>=2.4.0<2.5:www/py-dj31-django-filter@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj31-django-mptt>=0.11.0<0.12:www/py-dj31-django-mptt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj31-django-prometheus>=2.1.0<2.2:www/py-dj31-django-prometheus@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dj31-django-rq>=2.3.2<2.5:devel/py-dj31-django-rq@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}dj31-django-rq>=2.4.0<2.5:devel/py-dj31-django-rq@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj31-django-tables2>=2.3.3<2.4:www/py-dj31-django-tables2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj31-django-taggit>=1.3.0<2:www/py-dj31-django-taggit@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj31-django-timezone-field>=4.0<5:www/py-dj31-django-timezone-field@${PY_FLAVOR} \
@@ -48,7 +48,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django31>=3.1.3<3.2:www/py-django31@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.3.1<6:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gunicorn>=19.9.0<21:www/py-gunicorn@${PY_FLAVOR}
 
-USES=		pgsql:9.6+ python:3.6+
+USES=		pgsql:9.6+ python:3.7+
 USE_GITHUB=	yes
 GH_ACCOUNT=	netbox-community
 

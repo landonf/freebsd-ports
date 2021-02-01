@@ -5,11 +5,13 @@
 
     SUBDIR += R-cran-RgoogleMaps
     SUBDIR += R-cran-Rook
+    SUBDIR += R-cran-bslib
     SUBDIR += R-cran-crosstalk
     SUBDIR += R-cran-downloader
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
+    SUBDIR += R-cran-jquerylib
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
@@ -286,7 +288,6 @@
     SUBDIR += kf5-kjsembed
     SUBDIR += kiwix-tools
     SUBDIR += kohana
-    SUBDIR += kurly
     SUBDIR += larbin
     SUBDIR += libapreq2
     SUBDIR += libdom
@@ -1742,7 +1743,6 @@
     SUBDIR += py-tornado
     SUBDIR += py-tornado4
     SUBDIR += py-tornado5
-    SUBDIR += py-tornado6
     SUBDIR += py-treq
     SUBDIR += py-ttrv
     SUBDIR += py-tuir
@@ -2147,8 +2147,6 @@
     SUBDIR += sogo-activesync
     SUBDIR += sogo2
     SUBDIR += sogo2-activesync
-    SUBDIR += sogo4
-    SUBDIR += sogo4-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spreadlogd
     SUBDIR += sqstat
@@ -2272,6 +2270,7 @@
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
+    SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser
     SUBDIR += webcopy

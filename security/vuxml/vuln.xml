@@ -77,6 +77,133 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="8ec7d426-055d-46bc-8f5a-a9d73a5a71ab">
+    <topic>minio -- Server Side Request Forgery</topic>
+    <affects>
+      <package>
+	<name>minio</name>
+	<range><lt>2021.01.30.00.20.58</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Minio developers report:</p>
+	<blockquote cite="https://github.com/minio/minio/security/advisories/GHSA-m4qq-5f7c-693q">
+	  <p>Thanks to @phith0n from our community upon a code review, discovered an SSRF (Server Side Request Forgery) in our Browser API implementation. We have not observed this report/attack in the wild or reported elsewhere in the community at large.</p>
+	  <p>All users are advised to upgrade ASAP.</p>
+	  <p>The target application may have functionality for importing data from a URL, publishing data to a URL, or otherwise reading data from a URL that can be tampered with. The attacker modifies the calls to this functionality by supplying a completely different URL or by manipulating how URLs are built (path traversal etc.).</p>
+	  <p>In a Server-Side Request Forgery (SSRF) attack, the attacker can abuse functionality on the server to read or update internal resources. The attacker can supply or modify a URL which the code running on the server will read or submit data, and by carefully selecting the URLs, the attacker may be able to read server configuration such as AWS metadata, connect to internal services like HTTP enabled databases, or perform post requests towards internal services which are not intended to be exposed.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/minio/minio/security/advisories/GHSA-m4qq-5f7c-693q</url>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5d91370b-61fd-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Xen guests can triger backend Out Of Memory</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_3</lt></range>
+	<range><ge>12.1</ge><lt>12.1_13</lt></range>
+	<range><ge>11.4</ge><lt>11.4_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Some OSes (including Linux, FreeBSD, and NetBSD) are processing watch
+	events using a single thread.  If the events are received faster than
+	the thread is able to handle, they will get queued.</p>
+	<p>As the queue is unbound, a guest may be able to trigger a OOM in
+	the backend.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-29568</cvename>
+      <freebsdsa>SA-21:02.xenoom</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a9c6e9be-61fb-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Uninitialized kernel stack leaks in several file systems</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_3</lt></range>
+	<range><ge>12.1</ge><lt>12.1_13</lt></range>
+	<range><ge>11.4</ge><lt>11.4_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Several file systems were not properly initializing the d_off field
+	of the dirent structures returned by VOP_READDIR. In particular,
+	tmpfs(5), smbfs(5), autofs(5) and mqueuefs(5) were failing to do so.
+	As a result, eight uninitialized kernel stack bytes may be leaked to
+	userspace by these file systems. This problem is not present in
+	FreeBSD 11.</p>
+	<p>Additionally, msdosfs(5) was failing to zero-fill a pair of padding
+	fields in the dirent structure, resulting in a leak of three
+	uninitialized bytes.</p>
+	<h1>Impact:</h1>
+	<p>Kernel stack disclosures may leak sensitive information which could
+	be used to compromise the security of the system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25578</cvename>
+      <cvename>CVE-2020-25579</cvename>
+      <freebsdsa>SA-21:01.fsdisclosure</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-01-29</discovery>
+      <entry>2021-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="13ca36b8-6141-11eb-8a36-7085c2fb2c14">
+    <topic>pngcheck -- Buffer-overrun vulnerability</topic>
+    <affects>
+      <package>
+	<name>pngcheck</name>
+	<range><lt>3.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The libpng project reports:</p>
+	<blockquote cite="http://www.libpng.org/pub/png/apps/pngcheck.html">
+	  <p>pngcheck versions 3.0.0 and earlier have a pair of buffer-overrun
+	    bugs related to the sPLT and PPLT chunks (the latter is a MNG-only
+	    chunk, but it gets noticed even in PNG files if the -s option is used).
+	    Both bugs are fixed in version 3.0.1, released on 24 January 2021.
+	    Again, while all known vulnerabilities are fixed in this version,
+	    the code is quite crufty, so it would be safest to assume there are
+	    still some problems hidden in there. As always, use at your own risk.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.libpng.org/pub/png/apps/pngcheck.html</url>
+    </references>
+    <dates>
+      <discovery>2021-01-24</discovery>
+      <entry>2021-01-28</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="f3cf4b33-6013-11eb-9a0e-206a8a720317">
     <topic>sudo -- Multiple vulnerabilities</topic>
     <affects>
