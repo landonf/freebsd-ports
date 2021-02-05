@@ -221,7 +221,6 @@
     SUBDIR += gregarius
     SUBDIR += groupoffice
     SUBDIR += grr
-    SUBDIR += gstreamer-plugins-neon
     SUBDIR += gstreamer1-plugins-neon
     SUBDIR += gtkhtml3
     SUBDIR += gtkhtml4
@@ -288,13 +287,13 @@
     SUBDIR += kf5-kjsembed
     SUBDIR += kiwix-tools
     SUBDIR += kohana
+    SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
     SUBDIR += libdom
     SUBDIR += libecap
     SUBDIR += libepc
     SUBDIR += libevhtp
-    SUBDIR += libgtkhtml
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -476,8 +475,6 @@
     SUBDIR += onionbalance
     SUBDIR += onionshare
     SUBDIR += opencart
-    SUBDIR += opera
-    SUBDIR += opera-linuxplugins
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
     SUBDIR += osticket
@@ -2161,7 +2158,6 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
-    SUBDIR += syndigator
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
     SUBDIR += tdiary
