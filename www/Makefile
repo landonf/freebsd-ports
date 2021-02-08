@@ -17,6 +17,7 @@
     SUBDIR += R-cran-selectr
     SUBDIR += R-cran-servr
     SUBDIR += R-cran-shiny
+    SUBDIR += R-cran-webshot
     SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += adguardhome
@@ -2309,6 +2310,7 @@
     SUBDIR += yourls
     SUBDIR += youtube_dl
     SUBDIR += youtube_dlc
+    SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zend-framework

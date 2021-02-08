@@ -3,6 +3,7 @@
 PORTNAME=	rnp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.14.0
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	se@FreeBSD.org
@@ -19,7 +20,7 @@ LICENSE_PERMS_OCB_Patent=	dist-mirror dist-sell pkg-mirror pkg-sell \
 LIB_DEPENDS=	libbotan-2.so:security/botan2 \
 		libjson-c.so:devel/json-c
 
-USES=		cmake pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	rnpgp
 USE_LDCONFIG=	yes
