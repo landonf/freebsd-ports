@@ -286,30 +286,6 @@
      return (error);
  }
  
-@@ -370,7 +591,11 @@
-         mtx_lock_spin(&pThis->u.s.inq.ifq_mtx);
-         _IF_ENQUEUE(&pThis->u.s.inq, m);
-         mtx_unlock_spin(&pThis->u.s.inq.ifq_mtx);
-+#if __FreeBSD_version >= 1100100
-+        taskqueue_enqueue(taskqueue_fast, &pThis->u.s.tskin);
-+#else
-         taskqueue_enqueue_fast(taskqueue_fast, &pThis->u.s.tskin);
-+#endif
-     }
-     /*
-      * Handle mbufs on the outgoing hook, frames going to the interface
-@@ -388,7 +613,11 @@
-         mtx_lock_spin(&pThis->u.s.outq.ifq_mtx);
-         _IF_ENQUEUE(&pThis->u.s.outq, m);
-         mtx_unlock_spin(&pThis->u.s.outq.ifq_mtx);
-+#if __FreeBSD_version >= 1100100
-+        taskqueue_enqueue(taskqueue_fast, &pThis->u.s.tskout);
-+#else
-         taskqueue_enqueue_fast(taskqueue_fast, &pThis->u.s.tskout);
-+#endif
-     }
-     else
-     {
 @@ -428,6 +657,8 @@
      struct ifnet *ifp = pThis->u.s.ifp;
      unsigned int cSegs = 0;

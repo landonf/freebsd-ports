@@ -193,7 +193,6 @@
     SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
-    SUBDIR += mg-static
     SUBDIR += micro
     SUBDIR += mined
     SUBDIR += mle
@@ -232,6 +231,10 @@
     SUBDIR += setzer
     SUBDIR += shed
     SUBDIR += slime
+    SUBDIR += sly
+    SUBDIR += sly-asdf
+    SUBDIR += sly-named-readtables
+    SUBDIR += sly-quicklisp
     SUBDIR += ssed
     SUBDIR += sted
     SUBDIR += tamago

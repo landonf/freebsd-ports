@@ -62,6 +62,7 @@
     SUBDIR += R-cran-gmp
     SUBDIR += R-cran-gower
     SUBDIR += R-cran-gpclib
+    SUBDIR += R-cran-gsl
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
     SUBDIR += R-cran-haven
@@ -97,6 +98,7 @@
     SUBDIR += R-cran-pls
     SUBDIR += R-cran-polynom
     SUBDIR += R-cran-prodlim
+    SUBDIR += R-cran-proxy
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
     SUBDIR += R-cran-qualityTools
@@ -402,6 +404,8 @@
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
+    SUBDIR += mathics-django
+    SUBDIR += mathicsscript
     SUBDIR += mathmod
     SUBDIR += mathomatic
     SUBDIR += matio
@@ -435,6 +439,7 @@
     SUBDIR += mumps
     SUBDIR += mumps4
     SUBDIR += muparser
+    SUBDIR += muparserx
     SUBDIR += nanoflann
     SUBDIR += nauty
     SUBDIR += ndiff
@@ -510,6 +515,7 @@
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
     SUBDIR += octave-forge-outliers
+    SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
@@ -525,11 +531,13 @@
     SUBDIR += octave-forge-splines
     SUBDIR += octave-forge-statistics
     SUBDIR += octave-forge-stk
+    SUBDIR += octave-forge-strings
     SUBDIR += octave-forge-struct
     SUBDIR += octave-forge-symband
     SUBDIR += octave-forge-symbolic
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
+    SUBDIR += octave-forge-video
     SUBDIR += octave-forge-zenity
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
@@ -749,6 +757,7 @@
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-autograd
+    SUBDIR += py-baycomp
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-benford_py
     SUBDIR += py-bitmath
@@ -782,6 +791,7 @@
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
+    SUBDIR += py-iminuit
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
     SUBDIR += py-jax
@@ -793,6 +803,7 @@
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
     SUBDIR += py-mathics
+    SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib
     SUBDIR += py-matplotlib-scalebar
     SUBDIR += py-matplotlib2
@@ -807,6 +818,7 @@
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
     SUBDIR += py-numpy-stl
+    SUBDIR += py-openTSNE
     SUBDIR += py-opt-einsum
     SUBDIR += py-optuna
     SUBDIR += py-or-tools

@@ -2,8 +2,8 @@
 
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	1.20.0-816
-DISTVERSIONSUFFIX=	-g5429791b1
+DISTVERSION=	1.20.0-875
+DISTVERSIONSUFFIX=	-g376eaadde
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
 
@@ -43,7 +43,9 @@ MESON_ARGS=	-D${PORTNAME}=true \
 		-Dudev_kms=false \
 		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
 PLIST_FILES=	bin/Xwayland \
+		"@comment lib/xorg/protocol.txt" \
 		libdata/pkgconfig/xwayland.pc \
+		"@comment man/man1/Xserver.1.gz" \
 		man/man1/Xwayland.1.gz
 
 # Keep in sync with xorg-server
@@ -63,14 +65,5 @@ OPTIONS_DEFINE=	NVIDIA
 NVIDIA_DESC=		EGLStream support for glamor on Xwayland
 NVIDIA_BUILD_DEPENDS=	egl-wayland>0:graphics/egl-wayland
 NVIDIA_MESON_TRUE=	xwayland_eglstream
-
-do-install:
-# XXX Prevent Meson from installing unrelated files
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/hw/xwayland/Xwayland \
-		${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${BUILD_WRKSRC}/hw/xwayland/xwayland.pc \
-		${STAGEDIR}${PREFIX}/libdata/pkgconfig
-	${INSTALL_MAN} ${BUILD_WRKSRC}/hw/xwayland/Xwayland.1 \
-		${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>

@@ -53,9 +53,11 @@
     SUBDIR += ampasCTL
     SUBDIR += animorph
     SUBDIR += ansilove
+    SUBDIR += anttweakbar
     SUBDIR += aoi
     SUBDIR += apngasm
     SUBDIR += apngdis
+    SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
     SUBDIR += asciio
@@ -78,6 +80,7 @@
     SUBDIR += blender-doc
     SUBDIR += bmeps
     SUBDIR += bmp2html
+    SUBDIR += bonzomatic
     SUBDIR += box
     SUBDIR += bsd-plotutils
     SUBDIR += c-a-i-r
@@ -137,6 +140,7 @@
     SUBDIR += djview4
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
+    SUBDIR += drawing
     SUBDIR += drawpile
     SUBDIR += drm-current-kmod
     SUBDIR += drm-devel-kmod
@@ -209,6 +213,7 @@
     SUBDIR += fraqtive
     SUBDIR += freeglut
     SUBDIR += freeimage
+    SUBDIR += freetype-gl
     SUBDIR += frei0r
     SUBDIR += frei0r-plugins
     SUBDIR += frei0r-plugins-gavl
@@ -390,6 +395,7 @@
     SUBDIR += kf5-kplotting
     SUBDIR += kf5-kquickcharts
     SUBDIR += kf5-prison
+    SUBDIR += kgeotag
     SUBDIR += kgraphviewer
     SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
@@ -824,7 +830,6 @@
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
-    SUBDIR += py-graph-core
     SUBDIR += py-graphviz
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
@@ -847,6 +852,8 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
+    SUBDIR += py-osmnet
+    SUBDIR += py-pandana
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -865,6 +872,7 @@
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet150
+    SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
     SUBDIR += py-pymaging
@@ -894,6 +902,8 @@
     SUBDIR += py-tifffile
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
+    SUBDIR += py-urbanaccess
+    SUBDIR += py-urbansim
     SUBDIR += py-utm
     SUBDIR += py-vecrec
     SUBDIR += py-visvis
@@ -927,6 +937,7 @@
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
+    SUBDIR += rawstudio
     SUBDIR += rawtherapee
     SUBDIR += rayshade
     SUBDIR += reactphysics3d

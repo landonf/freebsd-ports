@@ -30,6 +30,7 @@
     SUBDIR += amavisd-new
     SUBDIR += apache-xml-security-c
     SUBDIR += apg
+    SUBDIR += apkid
     SUBDIR += arirang
     SUBDIR += arpCounterattack
     SUBDIR += asignify
@@ -106,6 +107,7 @@
     SUBDIR += cracklib
     SUBDIR += crackpkcs12
     SUBDIR += create-cert
+    SUBDIR += crowdsec
     SUBDIR += cryptlib
     SUBDIR += cryptopp
     SUBDIR += ct-submit
@@ -414,6 +416,7 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-devel
+    SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
@@ -845,6 +848,9 @@
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-authlib
+    SUBDIR += py-azure-keyvault-certificates
+    SUBDIR += py-azure-keyvault-keys
+    SUBDIR += py-azure-keyvault-secrets
     SUBDIR += py-bcrypt
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
@@ -1266,6 +1272,8 @@
     SUBDIR += truecrypt
     SUBDIR += tthsum
     SUBDIR += u2f-devd
+    SUBDIR += uacme
+    SUBDIR += ubuntu-keyring
     SUBDIR += unhide
     SUBDIR += unicornscan
     SUBDIR += vanguards-tor

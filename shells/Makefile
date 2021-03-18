@@ -11,6 +11,7 @@
     SUBDIR += bash
     SUBDIR += bash-completion
     SUBDIR += bash-static
+    SUBDIR += bashc
     SUBDIR += bicon
     SUBDIR += ch
     SUBDIR += dash
@@ -30,6 +31,7 @@
     SUBDIR += ksh93
     SUBDIR += ksh93-devel
     SUBDIR += mksh
+    SUBDIR += modernish
     SUBDIR += nologinmsg
     SUBDIR += ohmyzsh
     SUBDIR += oksh

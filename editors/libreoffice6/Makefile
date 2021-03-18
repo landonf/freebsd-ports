@@ -1,5 +1,5 @@
 # $FreeBSD$
-PORTREVISION=	4
+PORTREVISION=	6
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -286,6 +286,10 @@ MAKE_ENV+=	verbose=1
 
 .if ${PORT_OPTIONS:MGTK3}
 WARNING=	"GTK3 visual style is incomplete yet, build at your own risk"
+.endif
+
+.if ${ARCH:Mpowerpc*}
+EXTRA_PATCHES+=	${FILESDIR}/powerpc64
 .endif
 
 .if ${CHOSEN_COMPILER_TYPE} == clang

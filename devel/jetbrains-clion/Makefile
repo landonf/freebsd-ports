@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	clion
-PORTVERSION=	2020.3.2
+PORTVERSION=	2020.3.3
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cf.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -30,24 +30,29 @@ SHEBANG_FILES=	bin/printenv.py bin/restart.py
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-SUB_FILES=	clion clion.desktop pkg-message
+SUB_FILES=	${PORTNAME} ${PORTNAME}.desktop pkg-message
 
 WRKSRC=		${WRKDIR}/clion-${PORTVERSION}
 
 CLION_CLANG=	bin/clang/linux
 
 do-install:
+# Initial JDK 15+ support
+	@${REINPLACE_CMD} '/UseConcMarkSweepGC/d' ${WRKSRC}/bin/${PORTNAME}.vmoptions
+	@${REINPLACE_CMD} '/UseConcMarkSweepGC/d' ${WRKSRC}/bin/${PORTNAME}64.vmoptions
 # Linux/Windows/OS X only so remove them
-	@${RM} -r ${WRKSRC}/bin/fsnotifier \
+	@${RM} -r \
+		${WRKSRC}/bin/cmake/linux \
+		${WRKSRC}/bin/fsnotifier \
 		${WRKSRC}/bin/fsnotifier-arm \
 		${WRKSRC}/bin/fsnotifier64 \
-		${WRKSRC}/bin/cmake/linux \
 		${WRKSRC}/bin/gdb/linux \
 		${WRKSRC}/bin/lldb/linux \
+		${WRKSRC}/jbr \
+		${WRKSRC}/jre64 \
 		${WRKSRC}/lib/pty4j-native \
 		${WRKSRC}/plugins/performanceTesting/bin
-# Remove bundled linux JetBrains Runtime and OpenJDK
-	@${RM} -r ${WRKSRC}/jbr ${WRKSRC}/jre64
+
 # Use cmake binaries provided by devel/cmake
 	${MKDIR} ${WRKSRC}/bin/cmake/linux/bin
 .for f in ccmake cmake cpack ctest
@@ -56,12 +61,12 @@ do-install:
 
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
-		"! -path \./${CLION_CLANG}/* ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
+		"! -path \./${CLION_CLANG}/* ! -name *\.bak ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} ${CLION_CLANG} ${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR} "-name *\.sh")
-	${INSTALL_SCRIPT} ${WRKDIR}/clion ${STAGEDIR}${PREFIX}/bin/clion
-	${INSTALL_MAN} ${FILESDIR}/clion.1 ${STAGEDIR}${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKDIR}/clion.desktop ${STAGEDIR}${PREFIX}/share/applications/
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${FILESDIR}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/
 # Use fsnotifier replacement provided by java/intellij-fsnotifier
 	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/intellij/bin/fsnotifier" >> ${STAGEDIR}${DATADIR}/bin/idea.properties
 # Use pty4j replacement provided by java/intellij-pty4j

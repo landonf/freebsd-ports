@@ -388,6 +388,7 @@
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-mozjs
+    SUBDIR += libproxy-pacrunner
     SUBDIR += libproxy-perl
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit3
@@ -544,6 +545,7 @@
     SUBDIR += opennx
     SUBDIR += openpgm
     SUBDIR += openradius
+    SUBDIR += openrsync
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -635,6 +637,11 @@
     SUBDIR += p5-Net-CascadeCopy
     SUBDIR += p5-Net-Cassandra
     SUBDIR += p5-Net-Cassandra-Easy
+    SUBDIR += p5-Net-Connection
+    SUBDIR += p5-Net-Connection-Match
+    SUBDIR += p5-Net-Connection-Sort
+    SUBDIR += p5-Net-Connection-lsof
+    SUBDIR += p5-Net-Connection-ncnetstat
     SUBDIR += p5-Net-DAV-Server
     SUBDIR += p5-Net-DHCP
     SUBDIR += p5-Net-DHCP-Watch
@@ -1010,6 +1017,7 @@
     SUBDIR += py-eventlet
     SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gdown
+    SUBDIR += py-geopy
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-h11

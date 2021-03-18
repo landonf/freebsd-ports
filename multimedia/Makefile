@@ -64,6 +64,7 @@
     SUBDIR += ffmpeg2theora
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
+    SUBDIR += filebot
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
     SUBDIR += flvtool++
@@ -147,13 +148,14 @@
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kmplayer
     SUBDIR += kodi
-    SUBDIR += kodi-addon-inputstream.adaptive-devel
-    SUBDIR += kodi-addon-peripheral-joystick
-    SUBDIR += kodi-addon-peripheral.joystick-devel
-    SUBDIR += kodi-addon-pvr-hts
-    SUBDIR += kodi-addon-pvr-iptvsimple
-    SUBDIR += kodi-addon-vfs.libarchive-devel
-    SUBDIR += kodi-devel
+    SUBDIR += kodi-addon-inputstream.adaptive
+    SUBDIR += kodi-addon-peripheral.joystick
+    SUBDIR += kodi-addon-pvr.hts
+    SUBDIR += kodi-addon-pvr.iptvsimple
+    SUBDIR += kodi-addon-screensaver.biogenesis
+    SUBDIR += kodi-addon-screensaver.matrixtrails
+    SUBDIR += kodi-addon-screensaver.stars
+    SUBDIR += kodi-addon-visualization.fishbmc
     SUBDIR += kvazaar
     SUBDIR += l-smash
     SUBDIR += libaacs
@@ -359,6 +361,7 @@
     SUBDIR += smplayer-themes
     SUBDIR += sms1xxx-kmod
     SUBDIR += smtube
+    SUBDIR += snapcast
     SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook
@@ -376,6 +379,7 @@
     SUBDIR += tautulli
     SUBDIR += tcmplex-panteltje
     SUBDIR += termplay
+    SUBDIR += tinyobjloader
     SUBDIR += tivodecode
     SUBDIR += totem
     SUBDIR += totem-pl-parser

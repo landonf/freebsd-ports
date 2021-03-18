@@ -106,6 +106,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += gjs
+    SUBDIR += gleam
     SUBDIR += gnat_util
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
@@ -176,6 +177,7 @@
     SUBDIR += maude
     SUBDIR += mawk
     SUBDIR += mdk
+    SUBDIR += mecrisp-stellaris
     SUBDIR += micropython
     SUBDIR += mit-scheme
     SUBDIR += mixal
@@ -327,6 +329,7 @@
     SUBDIR += sketchy
     SUBDIR += slib
     SUBDIR += slib-guile
+    SUBDIR += slib-guile1
     SUBDIR += slib-guile2
     SUBDIR += slisp
     SUBDIR += smalltalk

@@ -58,6 +58,7 @@
     SUBDIR += cp2k
     SUBDIR += cp2k-data
     SUBDIR += crf++
+    SUBDIR += dakota
     SUBDIR += dalton
     SUBDIR += dcl
     SUBDIR += devisor
@@ -120,6 +121,7 @@
     SUBDIR += libccp4
     SUBDIR += libcint
     SUBDIR += libctl
+    SUBDIR += libecpint
     SUBDIR += libefp
     SUBDIR += libgeodecomp
     SUBDIR += libghemical

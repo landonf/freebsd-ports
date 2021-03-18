@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	river
-PORTVERSION=	s20210210
+PORTVERSION=	s20210314
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -22,11 +23,11 @@ USES=		pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	pixman
 GH_ACCOUNT=	ifreund
-GH_TAGNAME=	945b7dc
+GH_TAGNAME=	c9a4dde
 GH_TUPLE=	ifreund:zig-pixman:7847fd1:zig_pixman/deps/zig-pixman \
-		ifreund:zig-wayland:6880196:zig_wayland/deps/zig-wayland \
+		ifreund:zig-wayland:5def9c5:zig_wayland/deps/zig-wayland \
 		ifreund:zig-xkbcommon:9e4d41f:zig_xkbcommon/deps/zig-xkbcommon \
-		swaywm:zig-wlroots:5bc7fcf:zig_wlroots/deps/zig-wlroots
+		swaywm:zig-wlroots:35e5676:zig_wlroots/deps/zig-wlroots
 MAKE_ENV=	DESTDIR="${STAGEDIR}"
 CONFIGURE_ARGS=	--prefix "${PREFIX}" \
 		${WITH_DEBUG:U-Drelease-fast=true} \
@@ -35,7 +36,10 @@ NO_INSTALL=	yes # strip(1) breaks runtime
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}ctl \
 		bin/${PORTNAME}tile \
-		${ETCDIR}/init
+		"@sample ${ETCDIR}/init.sample" \
+		share/bash-completion/completions/${PORTNAME}ctl \
+		share/zsh/site-functions/_${PORTNAME}ctl \
+		${NULL}
 
 OPTIONS_DEFINE=	MANPAGES X11
 OPTIONS_DEFAULT=MANPAGES X11
@@ -62,5 +66,9 @@ do-build:
 
 do-test:
 	@(cd ${WRKSRC} && ${TEST_ENV} zig build test ${CONFIGURE_ARGS})
+
+post-install:
+# Let @sample handle default files under etc/
+	@${MV} ${STAGEDIR}${ETCDIR}/init ${STAGEDIR}${ETCDIR}/init.sample
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@
 
 PORTNAME=	jpeg-xl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.2
+DISTVERSION=	0.3.4
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -20,19 +20,21 @@ USE_GITHUB=	nodefault
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 GH_TUPLE=	barmco:skcms:6437475:skcms/third_party/skcms \
-		google:highway:v0.7.0:highway/third_party/highway \
+		google:highway:0.11.1:highway/third_party/highway \
 		lvandeve:lodepng:48e5364:lodepng/third_party/lodepng \
 		webmproject:sjpeg:868ab55:sjpeg/third_party/sjpeg \
 		${NULL}
 GL_ACCOUNT=	wg1
-GL_COMMIT=	e2b1e60f5fda02f5fb395b0b6113f64d33cbb91d
+GL_COMMIT=	f2aeba7e3d091314eaccb64748791e1f4e2cf0a6
 CMAKE_ON=	JPEGXL_ENABLE_PLUGINS
 CMAKE_OFF=	JPEGXL_WARNINGS_AS_ERRORS ${BENCHMARK FUZZERS TCMALLOC:L:S/^/JPEGXL_ENABLE_/}
 CMAKE_OFF+=	${OpenGL GLUT:L:S/^/CMAKE_DISABLE_FIND_PACKAGE_/} # sjpeg
 LDFLAGS+=	-Wl,--as-needed # brotlicommon, GIMP/OPENEXR/PNG deps
 
-OPTIONS_DEFINE=	GIF GIMP JPEG OPENEXR PIXBUF PNG TEST
-OPTIONS_DEFAULT=GIF GIMP JPEG OPENEXR PIXBUF PNG
+OPTIONS_DEFINE=	GIF GIMP JPEG LTO OPENEXR PIXBUF PNG TEST
+OPTIONS_DEFAULT=GIF GIMP JPEG LTO OPENEXR PIXBUF PNG
+OPTIONS_EXCLUDE_i386=	LTO # ConvolutionWithTranspose(): JXL_CHECK: out->xsize() == in.ysize()
+OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # LLVM bug 47353
 OPTIONS_SUB=	yes
 
 GIF_LIB_DEPENDS=	libgif.so:graphics/giflib
@@ -45,7 +47,13 @@ GIMP_LIB_DEPENDS=	libgegl-0.4.so:graphics/gegl \
 
 JPEG_USES=		jpeg
 JPEG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_JPEG
-JPEG_BROKEN_OFF=	https://gitlab.com/wg1/jpeg-xl/-/issues/65
+
+LTO_CMAKE_BOOL=		CMAKE_INTERPROCEDURAL_OPTIMIZATION
+LTO_CMAKE_ON=		-DCMAKE_POLICY_DEFAULT_CMP0069:STRING=NEW
+.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
+# --plugin isn't supported by old GNU ld.bfd in base
+LTO_LDFLAGS=		-fuse-ld=lld
+.endif
 
 OPENEXR_LIB_DEPENDS=	libHalf.so:graphics/ilmbase \
 			libIlmImf.so:graphics/openexr

@@ -94,6 +94,7 @@ include/openssl/pkcs12.h
 include/openssl/pkcs12err.h
 include/openssl/pkcs7.h
 include/openssl/pkcs7err.h
+include/openssl/proverr.h
 include/openssl/provider.h
 include/openssl/rand.h
 include/openssl/randerr.h
@@ -218,6 +219,7 @@ man/man1/tsget.1.gz
 %%MAN3%%man/man3/ASN1_TIME_set.3.gz
 %%MAN3%%man/man3/ASN1_TYPE_get.3.gz
 %%MAN3%%man/man3/ASN1_generate_nconf.3.gz
+%%MAN3%%man/man3/ASN1_item_sign.3.gz
 %%MAN3%%man/man3/ASYNC_WAIT_CTX_new.3.gz
 %%MAN3%%man/man3/ASYNC_start_job.3.gz
 %%MAN3%%man/man3/BF_encrypt.3.gz
@@ -231,6 +233,7 @@ man/man1/tsget.1.gz
 %%MAN3%%man/man3/BIO_f_md.3.gz
 %%MAN3%%man/man3/BIO_f_null.3.gz
 %%MAN3%%man/man3/BIO_f_prefix.3.gz
+%%MAN3%%man/man3/BIO_f_readbuffer.3.gz
 %%MAN3%%man/man3/BIO_f_ssl.3.gz
 %%MAN3%%man/man3/BIO_find_type.3.gz
 %%MAN3%%man/man3/BIO_get_data.3.gz
@@ -472,6 +475,7 @@ man/man1/tsget.1.gz
 %%MAN3%%man/man3/OSSL_CMP_exec_certreq.3.gz
 %%MAN3%%man/man3/OSSL_CMP_log_open.3.gz
 %%MAN3%%man/man3/OSSL_CMP_validate_msg.3.gz
+%%MAN3%%man/man3/OSSL_CORE_MAKE_FUNC.3.gz
 %%MAN3%%man/man3/OSSL_CRMF_MSG_get0_tmpl.3.gz
 %%MAN3%%man/man3/OSSL_CRMF_MSG_set0_validity.3.gz
 %%MAN3%%man/man3/OSSL_CRMF_MSG_set1_regCtrl_regToken.3.gz
@@ -479,13 +483,14 @@ man/man1/tsget.1.gz
 %%MAN3%%man/man3/OSSL_CRMF_pbmp_new.3.gz
 %%MAN3%%man/man3/OSSL_DECODER.3.gz
 %%MAN3%%man/man3/OSSL_DECODER_CTX.3.gz
-%%MAN3%%man/man3/OSSL_DECODER_CTX_new_by_EVP_PKEY.3.gz
+%%MAN3%%man/man3/OSSL_DECODER_CTX_new_for_pkey.3.gz
 %%MAN3%%man/man3/OSSL_DECODER_from_bio.3.gz
 %%MAN3%%man/man3/OSSL_ENCODER.3.gz
 %%MAN3%%man/man3/OSSL_ENCODER_CTX.3.gz
-%%MAN3%%man/man3/OSSL_ENCODER_CTX_new_by_EVP_PKEY.3.gz
+%%MAN3%%man/man3/OSSL_ENCODER_CTX_new_for_pkey.3.gz
 %%MAN3%%man/man3/OSSL_ENCODER_to_bio.3.gz
 %%MAN3%%man/man3/OSSL_HTTP_REQ_CTX.3.gz
+%%MAN3%%man/man3/OSSL_HTTP_parse_url.3.gz
 %%MAN3%%man/man3/OSSL_HTTP_transfer.3.gz
 %%MAN3%%man/man3/OSSL_LIB_CTX.3.gz
 %%MAN3%%man/man3/OSSL_PARAM.3.gz
@@ -542,6 +547,7 @@ man/man1/tsget.1.gz
 %%MAN3%%man/man3/RAND_egd.3.gz
 %%MAN3%%man/man3/RAND_get0_primary.3.gz
 %%MAN3%%man/man3/RAND_load_file.3.gz
+%%MAN3%%man/man3/RAND_set_DRBG_type.3.gz
 %%MAN3%%man/man3/RAND_set_rand_method.3.gz
 %%MAN3%%man/man3/RC4_set_key.3.gz
 %%MAN3%%man/man3/RIPEMD160_Init.3.gz

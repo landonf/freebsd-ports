@@ -234,6 +234,7 @@
     SUBDIR += mrxvt
     SUBDIR += mrxvt-devel
     SUBDIR += multi-aterm
+    SUBDIR += mxascii
     SUBDIR += mxico
     SUBDIR += nezd
     SUBDIR += numlockx
@@ -293,6 +294,7 @@
     SUBDIR += rofi
     SUBDIR += rofi-calc
     SUBDIR += rofi-pass
+    SUBDIR += rofi-wayland
     SUBDIR += roxterm
     SUBDIR += rsibreak
     SUBDIR += rubygem-gnome
@@ -343,6 +345,7 @@
     SUBDIR += tint
     SUBDIR += trayer
     SUBDIR += tycoon
+    SUBDIR += ulauncher
     SUBDIR += urxvt-font-size
     SUBDIR += urxvt-perls
     SUBDIR += vdesk

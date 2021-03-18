@@ -2,13 +2,11 @@
 
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.6087
+DISTVERSION=	1.0.6646
 CATEGORIES=	devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	d878880cbb3b.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/129
-PATCHFILES+=	f44eb990ac84.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/156
-PATCHFILES+=	02d82a7ccbe6.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/156
+PATCHFILES+=	996e2fe60899.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/173
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
@@ -25,7 +23,7 @@ USES=		bison cmake compiler:c++17-lang python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	intel
-GH_TUPLE=	intel:vc-intrinsics:ad99fd7:vcintrin/../vc-intrinsics
+GH_TUPLE=	intel:vc-intrinsics:e7837b2:vcintrin/../vc-intrinsics
 CMAKE_OFF=	INSTALL_SPIRVDLL
 CFLAGS+=	-Wno-macro-redefined # __fastcall
 PLIST_SUB=	ARCH_SUFX=${ARCH:S/i386/32/:S/amd//:S/x86_//}
@@ -47,8 +45,8 @@ post-patch:
 pre-configure:
 # Only one libLLVM can be loaded, so use the same version as devel/opencl-clang
 	@for f in ${LOCALBASE}/lib/libopencl-clang.so.*; do \
-		${REINPLACE_CMD} "/set.*LLVM_VERSION/s/\".*\"/\"$${f##*so.}\"/" \
-			${WRKSRC}/IGC/CMakeLists.txt; \
+		${REINPLACE_CMD} "/set.*LLVM.*VERSION/s/\".*\"/\"$${f##*so.}\"/" \
+			${WRKSRC}/external/llvm/llvm_preferred_version.cmake; \
 	done
 
 .include <bsd.port.mk>

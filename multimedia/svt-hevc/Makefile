@@ -3,6 +3,7 @@
 PORTNAME=	svt-hevc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -43,6 +44,16 @@ WITHOUT_NO_STRICT_ALIASING=yes
 
 CFLAGS+=	-O3 -flto
 LDFLAGS+=	-flto
+
+OPTIONS_DEFINE=	LTO
+OPTIONS_DEFAULT=LTO
+
+LTO_CMAKE_BOOL=		CMAKE_INTERPROCEDURAL_OPTIMIZATION
+LTO_CMAKE_ON=		-DCMAKE_POLICY_DEFAULT_CMP0069:STRING=NEW
+.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
+# --plugin isn't supported by old GNU ld.bfd in base
+LTO_LDFLAGS=		-fuse-ld=lld
+.endif
 
 post-patch:
 # Keep using nasm and drop vendor -O/-g
