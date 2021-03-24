@@ -241,6 +241,7 @@
     SUBDIR += hlmaster
     SUBDIR += honeyd
     SUBDIR += hostapd
+    SUBDIR += hostapd-devel
     SUBDIR += hping
     SUBDIR += hping3
     SUBDIR += hsflowd
@@ -524,6 +525,7 @@
     SUBDIR += nyancat
     SUBDIR += nylon
     SUBDIR += ocserv
+    SUBDIR += oha
     SUBDIR += olsrd
     SUBDIR += omnitty
     SUBDIR += onedrive
@@ -1527,6 +1529,8 @@
     SUBDIR += widentd
     SUBDIR += wireguard
     SUBDIR += wireguard-go
+    SUBDIR += wireguard-kmod
+    SUBDIR += wireguard-tools
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
