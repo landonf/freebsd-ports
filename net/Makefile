@@ -958,6 +958,7 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
+    SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
@@ -1123,6 +1124,7 @@
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio
+    SUBDIR += py-tweepy
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
