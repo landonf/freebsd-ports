@@ -2,7 +2,7 @@
 # $FreeBSD: head/www/chromium/Makefile 563913 2021-02-03 19:46:35Z sunpoet $
 
 PORTNAME=	chromium
-PORTVERSION=	89.0.4389.90
+PORTVERSION=	89.0.4389.114
 CATEGORIES=	www java
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		LOCAL/rene/chromium/:fonts
@@ -65,7 +65,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
-USES=		bison cpe desktop-file-utils dos2unix gl gnome jpeg localbase:ldflags \
+USES=		bison compiler:c++17-lang cpe desktop-file-utils dos2unix gl gnome jpeg localbase:ldflags \
 		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz xorg
 
 MAKE_ARGS=	-C out/${BUILDTYPE}
@@ -198,16 +198,17 @@ TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX} \
 			test_fonts-85${EXTRACT_SUFX}:fonts
 
 .include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
+.if ${COMPILER_VERSION} < 120
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-build_config_compiler_pgo_pgo.gni
 
 .if ${PORT_OPTIONS:MLTO}
-BROKEN+=	does not build with LTO on FreeBSD < 13, needs LLVM 11+
+BROKEN+=	does not build with LTO needs LLVM 12+
 .endif
 .endif
 
@@ -352,4 +353,4 @@ post-install-DRIVER-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chromedriver \
 		${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
