@@ -18,9 +18,10 @@ LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
 RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 		intellij-pty4j>=0.11.4:java/intellij-pty4j \
-		lsof:sysutils/lsof
+		lsof:sysutils/lsof \
+		cmake>=3.14.3:devel/cmake
 
-USES=		python:run shebangfix
+USES=		linux python:run shebangfix
 
 USE_JAVA=	yes
 JAVA_VERSION=	11+
@@ -33,14 +34,15 @@ SUB_FILES=	${PORTNAME} ${PORTNAME}.desktop pkg-message
 
 WRKSRC=		${WRKDIR}/clion-${PORTVERSION}
 
+CLION_CLANG=	bin/clang/linux
+
 do-install:
 # Initial JDK 15+ support
 	@${REINPLACE_CMD} '/UseConcMarkSweepGC/d' ${WRKSRC}/bin/${PORTNAME}.vmoptions
 	@${REINPLACE_CMD} '/UseConcMarkSweepGC/d' ${WRKSRC}/bin/${PORTNAME}64.vmoptions
 # Linux/Windows/OS X only so remove them
 	@${RM} -r \
-		${WRKSRC}/bin/clang \
-		${WRKSRC}/bin/cmake \
+		${WRKSRC}/bin/cmake/linux \
 		${WRKSRC}/bin/fsnotifier \
 		${WRKSRC}/bin/fsnotifier-arm \
 		${WRKSRC}/bin/fsnotifier64 \
@@ -50,9 +52,17 @@ do-install:
 		${WRKSRC}/jre64 \
 		${WRKSRC}/lib/pty4j-native \
 		${WRKSRC}/plugins/performanceTesting/bin
+
+# Use cmake binaries provided by devel/cmake
+	${MKDIR} ${WRKSRC}/bin/cmake/linux/bin
+.for f in ccmake cmake cpack ctest
+	${LN} -sf ${PREFIX}/bin/${f} ${WRKSRC}/bin/cmake/linux/bin/${f}
+.endfor
+
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
-		"! -name *\.bak ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
+		"! -path \./${CLION_CLANG}/* ! -name *\.bak ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh")
+	@(cd ${WRKSRC} && ${COPYTREE_BIN} ${CLION_CLANG} ${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR} "-name *\.sh")
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${FILESDIR}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
