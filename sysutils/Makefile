@@ -473,6 +473,7 @@
     SUBDIR += gsmartcontrol
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
+    SUBDIR += gtime
     SUBDIR += gtk-imonc
     SUBDIR += hardlink
     SUBDIR += hare
