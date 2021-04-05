@@ -25,7 +25,25 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	OpenVisualCloud
 GH_PROJECT=	SVT-HEVC
-CMAKE_OFF=	NATIVE
+
+OPTIONS_DEFINE=	NATIVE
+OPTIONS_RADIO=	PROF
+OPTIONS_RADIO_PROF=	PROFILE PGO
+OPTIONS_DEFAULT=	PGO
+
+NATIVE_DESC=	Build with native optimizations (-march=native)
+PROF_DESC=	Profile-guided Optimization
+PROFILE_DESC=	Generate instrumented code
+PGO_DESC=	Enable profile-guided optimizations
+
+NATIVE_CMAKE_BOOL=	NATIVE
+PROFILE_CFLAGS=	-fprofile-instr-generate=/dev/null
+PGO_CFLAGS=	-fprofile-instr-use=${FILESDIR}/svt-hevc.profdata
+
+WITHOUT_NO_STRICT_ALIASING=yes
+
+CFLAGS+=	-O3 -flto
+LDFLAGS+=	-flto
 
 OPTIONS_DEFINE=	LTO
 OPTIONS_DEFAULT=LTO
