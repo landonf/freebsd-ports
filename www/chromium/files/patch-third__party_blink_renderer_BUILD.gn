@@ -1,21 +1,13 @@
---- third_party/blink/renderer/BUILD.gn.orig	2021-03-12 23:57:29 UTC
+--- third_party/blink/renderer/BUILD.gn.orig	2021-01-18 21:29:03 UTC
 +++ third_party/blink/renderer/BUILD.gn
-@@ -46,10 +46,16 @@ config("inside_blink") {
+@@ -46,8 +46,8 @@ config("inside_blink") {
        "-Wconversion",
        "-Wno-float-conversion",
        "-Wno-sign-conversion",
 -      "-Wno-implicit-float-conversion",
 -      "-Wno-implicit-int-conversion",
-       "-Wno-shorten-64-to-32",
++#      "-Wno-implicit-float-conversion",
++#      "-Wno-implicit-int-conversion",
      ]
-+
-+    if (is_bsd) {
-+      cflags += [
-+        "-Wno-implicit-float-conversion",
-+        "-Wno-implicit-int-conversion",
-+        "-Wno-implicit-int-float-conversion",
-+      ]
-+    }
  
-     if (!is_chromeos_ash ||
-         default_toolchain != "//build/toolchain/cros:target") {
+     if (!is_ash || default_toolchain != "//build/toolchain/cros:target") {
