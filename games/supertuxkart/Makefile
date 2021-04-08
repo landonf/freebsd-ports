@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD$
-
 PORTNAME=	supertuxkart
 PORTVERSION=	1.2
 CATEGORIES=	games

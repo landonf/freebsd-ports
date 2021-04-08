@@ -1,5 +1,4 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libtorrent-rasterbar
 DISTVERSIONPREFIX=	libtorrent-
@@ -31,6 +30,8 @@ WRKSRC_SUBDIR=	bindings/python
 # ensure python paths are correctly identified
 CONFIGURE_ENV=	PYTHON_INCLUDEDIR="${PYTHON_INCLUDEDIR}" \
 		PYTHON_VERSION="${PYTHON_VERSION}"
+
+PORTSCOUT=	limit:^1.* # 2.x is WIP and we don't accept it before qBittorrent does
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/libtorrent*.so

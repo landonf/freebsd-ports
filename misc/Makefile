@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = Miscellaneous utilities
 
     SUBDIR += R-cran-mime
@@ -34,7 +31,6 @@
     SUBDIR += broot
     SUBDIR += bsod
     SUBDIR += buffer
-    SUBDIR += cave
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
@@ -102,7 +98,6 @@
     SUBDIR += findutils
     SUBDIR += firestring
     SUBDIR += flag
-    SUBDIR += floatator
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
     SUBDIR += fortune-mod-epictetus

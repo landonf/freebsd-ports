@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	wyrmsun
 PORTVERSION=	4.1.3
 DISTVERSIONPREFIX=	v

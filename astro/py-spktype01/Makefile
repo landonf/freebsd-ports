@@ -1,8 +1,8 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	spktype01
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	astro python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,8 +11,8 @@ COMMENT=	Supporting module for jplephem to handle data type 1
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${NUMPY}
-RUN_DEPENDS=	${NUMPY}	\
+BUILD_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYNUMPY}	\
 		${PYTHON_PKGNAMEPREFIX}jplephem>0:astro/py-jplephem@${PY_FLAVOR}
 
 USE_GITHUB=	yes

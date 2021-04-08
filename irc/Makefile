@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = Internet Relay Chat utilities
 
     SUBDIR += anope
@@ -32,7 +29,6 @@
     SUBDIR += gruftistats
     SUBDIR += hexchat
     SUBDIR += hexchat-fish
-    SUBDIR += hybserv
     SUBDIR += icbirc
     SUBDIR += ii
     SUBDIR += infobot
@@ -116,7 +112,6 @@
     SUBDIR += unreal
     SUBDIR += weechat
     SUBDIR += weechat-otr
-    SUBDIR += xaric
     SUBDIR += znc
     SUBDIR += znc-push
 

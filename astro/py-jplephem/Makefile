@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	jplephem
 PORTVERSION=	2.15
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	astro python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,8 +12,8 @@ COMMENT=	Python version of NASA DE4xx ephemerides
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${NUMPY}
-RUN_DEPENDS=	${NUMPY}
+BUILD_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYNUMPY}
 TEST_DEPENDS=	bash:shells/bash	\
 		${PYTHON_PKGNAMEPREFIX}unittest2>0:devel/py-unittest2@${PY_FLAVOR}
 

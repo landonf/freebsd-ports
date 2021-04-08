@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = CAD tools
 
     SUBDIR += NASTRAN-95
@@ -120,9 +117,7 @@
     SUBDIR += sweethome3d
     SUBDIR += tkgate
     SUBDIR += tochnog
-    SUBDIR += transcalc
     SUBDIR += uranium
-    SUBDIR += varkon
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
     SUBDIR += veroroute

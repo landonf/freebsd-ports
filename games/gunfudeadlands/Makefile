@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	gunfudeadlands
 PORTVERSION=	1.01
 PORTREVISION=	4

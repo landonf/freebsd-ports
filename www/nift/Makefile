@@ -1,9 +1,8 @@
 # Created by: Mohammad S. Babaei <info@babaei.net>
-# $FreeBSD$
 
 PORTNAME=	nift
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.3
+DISTVERSION=	2.4.10
 CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net

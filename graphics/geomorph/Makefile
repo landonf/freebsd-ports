@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD$
-
 PORTNAME=	geomorph
 PORTVERSION=	0.60.1
 PORTREVISION=	11

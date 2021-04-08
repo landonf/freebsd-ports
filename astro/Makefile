@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = Astronomical ports
 
     SUBDIR += R-cran-maptools
@@ -104,9 +101,7 @@
     SUBDIR += qmapshack
     SUBDIR += readosm
     SUBDIR += rmap
-    SUBDIR += roadmap
     SUBDIR += routino
-    SUBDIR += saoimage
     SUBDIR += sextractor
     SUBDIR += siril
     SUBDIR += sofa

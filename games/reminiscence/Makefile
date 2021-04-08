@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD$
-
 PORTNAME=	REminiscence
 PORTVERSION=	0.4.6
 CATEGORIES=	games

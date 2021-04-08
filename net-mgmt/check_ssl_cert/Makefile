@@ -1,8 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	check_ssl_cert
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.146.0
+DISTVERSION=	2.0.1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	cmt@FreeBSD.org

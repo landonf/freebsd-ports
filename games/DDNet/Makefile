@@ -1,6 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD$
-
 PORTNAME=	DDNet
 PORTVERSION=	15.4
 CATEGORIES=	games

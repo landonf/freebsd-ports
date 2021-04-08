@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	casadi
 DISTVERSION=	3.5.5
 CATEGORIES=	math
@@ -66,5 +64,7 @@ CPP=		clang-cpp${LLVM_DEFAULT}
 CC=		clang${LLVM_DEFAULT}
 CXX=		clang++${LLVM_DEFAULT}
 .endif
+
+PORTSCOUT=	limit:^.*[1-9]\..* # prevent tags like ge2
 
 .include <bsd.port.mk>
