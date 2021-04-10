@@ -287,6 +287,7 @@
     SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
+    SUBDIR += gula-plugins-lv2
     SUBDIR += guspat
     SUBDIR += gvolwheel
     SUBDIR += gxmms2
@@ -327,6 +328,7 @@
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
+    SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
     SUBDIR += kid3-kf5
     SUBDIR += kid3-qt5
@@ -452,6 +454,7 @@
     SUBDIR += mac
     SUBDIR += madfufw
     SUBDIR += madplay
+    SUBDIR += madronalib
     SUBDIR += malint
     SUBDIR += mate-media
     SUBDIR += mclk-lv2
@@ -521,6 +524,7 @@
     SUBDIR += musicpc
     SUBDIR += musicpd
     SUBDIR += mythplugin-mythmusic
+    SUBDIR += myxer
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
