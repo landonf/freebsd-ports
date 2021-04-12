@@ -1,13 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	datagrip
-PORTVERSION=	2019.2.2
+PORTVERSION=	2021.1
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cf.jetbrains.com/datagrip/
 PKGNAMEPREFIX=	jetbrains-
 DIST_SUBDIR=	jetbrains
 
-MAINTAINER=	dmitry.wagin@ya.ru
+MAINTAINER=	landonf@FreeBSD.org
 COMMENT=	JetBrains DataGrip IDE
 
 LICENSE=	IntelliJ-DataGrip
