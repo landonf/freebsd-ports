@@ -20,7 +20,7 @@ RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier
 USES=		python:run shebangfix
 
 USE_JAVA=	yes
-JAVA_VERSION=	8+
+JAVA_VERSION=	11+
 
 SHEBANG_FILES=	bin/printenv.py bin/restart.py
 
