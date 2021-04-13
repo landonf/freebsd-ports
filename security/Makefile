@@ -26,6 +26,7 @@
     SUBDIR += amavisd-milter
     SUBDIR += amavisd-new
     SUBDIR += apache-xml-security-c
+    SUBDIR += apg
     SUBDIR += apkid
     SUBDIR += arirang
     SUBDIR += arpCounterattack
@@ -368,7 +369,6 @@
     SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
-    SUBDIR += netpgp
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
