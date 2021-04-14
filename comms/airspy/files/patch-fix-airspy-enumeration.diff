@@ -1,0 +1,85 @@
+diff --git a/airspy-tools/src/airspy_info.c b/airspy-tools/src/airspy_info.c
+index 5b5d13f..3d1c3c8 100644
+--- airspy-tools/src/airspy_info.c
++++ airspy-tools/src/airspy_info.c
+@@ -34,10 +34,8 @@ typedef int bool;
+ #define false 0
+ #endif
+ 
+-#define AIRSPY_MAX_DEVICE (32)
+ char version[255 + 1];
+ airspy_read_partid_serialno_t read_partid_serialno;
+-struct airspy_device* devices[AIRSPY_MAX_DEVICE+1] = { NULL };
+ 
+ int parse_u64(char* s, uint64_t* const value) {
+ 	uint_fast8_t base = 10;
+@@ -86,6 +84,9 @@ int main(int argc, char** argv)
+ 	uint32_t serial_number_msb_val;
+ 	uint32_t serial_number_lsb_val;
+ 	airspy_lib_version_t lib_version;
++    struct airspy_device **devices;
++    uint64_t *device_serials;
++	int device_count;
+ 	uint8_t board_id = AIRSPY_BOARD_ID_INVALID;
+ 
+ 	while( (opt = getopt(argc, argv, "s:")) != EOF )
+@@ -123,17 +124,39 @@ int main(int argc, char** argv)
+ 
+ 	airspy_lib_version(&lib_version);
+ 	printf("airspy_lib_version: %d.%d.%d\n", 
+-					lib_version.major_version, lib_version.minor_version, lib_version.revision); 
+-
+-	for (i = 0; i < AIRSPY_MAX_DEVICE; i++)
+-	{
+-		if(serial_number == true)
+-		{
+-			result = airspy_open_sn(&devices[i], serial_number_val);
+-		}else
+-		{
+-			result = airspy_open(&devices[i]);
+-		}
++					lib_version.major_version, lib_version.minor_version, lib_version.revision);
++
++	/* Fetch total count */
++    device_count = airspy_list_devices(NULL, 0);
++    if (device_count < 0) {
++        fprintf(stderr, "airspy_list_devices() failed: %s (%d)\n",
++                airspy_error_name(device_count), device_count);
++        return EXIT_FAILURE;
++    }
++
++    /* Allocate space for the serials */
++    device_serials = malloc(sizeof(*device_serials) * device_count);
++    if (device_serials == NULL) {
++        fprintf(stderr, "malloc() failed\n");
++        return EXIT_FAILURE;
++    }
++
++    /* Fetch the serial list */
++    device_count = airspy_list_devices(device_serials, device_count);
++    if (device_count < 0) {
++        fprintf(stderr, "airspy_list_devices() failed: %s (%d)\n",
++                airspy_error_name(device_count), device_count);
++        return EXIT_FAILURE;
++    }
++
++    devices = malloc(sizeof(*devices) * device_count);
++	for (i = 0; i < device_count; i++) {
++		if (serial_number == true && device_serials[i] != serial_number_val) {
++		    devices[i] = NULL;
++            continue;
++        }
++
++        result = airspy_open_sn(&devices[i], device_serials[i]);
+ 		if (result != AIRSPY_SUCCESS)
+ 		{
+ 			if(i == 0)
+@@ -145,7 +168,7 @@ int main(int argc, char** argv)
+ 		}
+ 	}
+ 
+-	for(i = 0; i < AIRSPY_MAX_DEVICE; i++)
++	for(i = 0; i < device_count; i++)
+ 	{
+ 		if(devices[i] != NULL)
+ 		{
