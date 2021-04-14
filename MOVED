@@ -13913,7 +13913,6 @@ www/ljdump||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/monast||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/py-django-paging||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/py-fcgi||2020-01-27|Has expired: Unmaintained, uses EOLed python27
-www/py-http-parser||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/py-meld||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/py-mt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 www/py-rhodecode||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -16183,6 +16182,7 @@ audio/fplib||2021-03-07|Dead service since 2015
 sysutils/prelink||2021-03-11|Has expired: Have no users in the ports tree
 x11-fonts/vtfontcvt-ng||2021-03-12|no longer useful on any supported releases; use vtfontcvt(8) instead
 biology/py-fastTSNE|math/py-openTSNE|2021-03-13|project renamed/reimplemented under a different name
+misc/py-XlsxWriter|textproc/py-xlsxwriter|2021-03-13|Remove duplicate
 emulators/open-vm-tools-nox11|emulators/open-vm-tools@nox11|2021-03-17|Moved to a flavored, generic, version
 math/s2geometry|graphics/s2|2021-03-22|Remove duplicate port
 net-p2p/sonarr-devel|net-p2p/sonarr|2021-03-23|Removed, use net-p2p/sonarr instead
