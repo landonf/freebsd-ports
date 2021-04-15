@@ -480,6 +480,7 @@
     SUBDIR += healthd
     SUBDIR += heirloom
     SUBDIR += helm
+    SUBDIR += helmfile
     SUBDIR += hexpeek
     SUBDIR += hextools
     SUBDIR += hexyl
