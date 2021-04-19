@@ -768,6 +768,7 @@
     SUBDIR += pecl-libsodium
     SUBDIR += pecl-mcrypt
     SUBDIR += pecl-pam
+    SUBDIR += pecl-pkcs11
     SUBDIR += pecl-scrypt
     SUBDIR += pecl-ssh2
     SUBDIR += peda
@@ -802,6 +803,7 @@
     SUBDIR += pkcs11-dump
     SUBDIR += pkcs11-gateway
     SUBDIR += pkcs11-helper
+    SUBDIR += pkcs11-tools
     SUBDIR += pkesh
     SUBDIR += pks
     SUBDIR += pktsuckers

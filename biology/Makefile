@@ -6,6 +6,7 @@
     SUBDIR += avida
     SUBDIR += babel
     SUBDIR += bamtools
+    SUBDIR += bbmap
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += bioawk
@@ -148,6 +149,7 @@
     SUBDIR += python-nexus
     SUBDIR += rainbow
     SUBDIR += rampler
+    SUBDIR += readseq
     SUBDIR += recombine
     SUBDIR += ruby-bio
     SUBDIR += rubygem-bio
@@ -166,6 +168,7 @@
     SUBDIR += sim4
     SUBDIR += slclust
     SUBDIR += smithwaterman
+    SUBDIR += snpeff
     SUBDIR += spoa
     SUBDIR += stacks
     SUBDIR += star
