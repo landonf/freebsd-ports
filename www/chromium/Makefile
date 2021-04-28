@@ -138,7 +138,6 @@ CODECS_DESC=		Compile and enable patented codecs like H.264
 DRIVER_DESC=		Install chromedriver
 HEIMDAL_BASE_DESC=	Heimdal Kerberos (base)
 HEIMDAL_DESC=		Heimdal Kerberos (security/heimdal)
-LTO_DESC=		Link time optimizations
 MIT_DESC=		MIT Kerberos (security/krb5)
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
