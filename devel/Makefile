@@ -1350,6 +1350,7 @@
     SUBDIR += libtextstyle
     SUBDIR += libthai
     SUBDIR += libthmap
+    SUBDIR += libtickit
     SUBDIR += libtifiles2
     SUBDIR += libtool
     SUBDIR += libtpl
@@ -1656,6 +1657,7 @@
     SUBDIR += p5-Acme-Comment
     SUBDIR += p5-Acme-Damn
     SUBDIR += p5-Acme-MetaSyntactic
+    SUBDIR += p5-Adapter-Async
     SUBDIR += p5-Agent
     SUBDIR += p5-Algorithm-Accounting
     SUBDIR += p5-Algorithm-Annotate
@@ -2629,6 +2631,7 @@
     SUBDIR += p5-Lingua-JA-Fold
     SUBDIR += p5-Lingua-Translit
     SUBDIR += p5-List-AllUtils
+    SUBDIR += p5-List-BinarySearch
     SUBDIR += p5-List-Cycle
     SUBDIR += p5-List-Flatten
     SUBDIR += p5-List-Gen
@@ -2739,6 +2742,7 @@
     SUBDIR += p5-Module-Build-Pluggable
     SUBDIR += p5-Module-Build-Pluggable-ReadmeMarkdownFromPod
     SUBDIR += p5-Module-Build-Tiny
+    SUBDIR += p5-Module-Build-Using-PkgConfig
     SUBDIR += p5-Module-Build-WithXSpp
     SUBDIR += p5-Module-Build-XSUtil
     SUBDIR += p5-Module-CPANTS-Analyse
@@ -3027,6 +3031,7 @@
     SUBDIR += p5-Parse-Yapp
     SUBDIR += p5-ParseLex
     SUBDIR += p5-ParseTemplate
+    SUBDIR += p5-Parser-MGC
     SUBDIR += p5-PatchReader
     SUBDIR += p5-Path-Abstract
     SUBDIR += p5-Path-Class
@@ -3522,6 +3527,9 @@
     SUBDIR += p5-Thrift
     SUBDIR += p5-Thrift-XS
     SUBDIR += p5-Throwable
+    SUBDIR += p5-Tickit
+    SUBDIR += p5-Tickit-Widget-Table
+    SUBDIR += p5-Tickit-Widgets
     SUBDIR += p5-Tie-Array-Pack
     SUBDIR += p5-Tie-Array-Sorted
     SUBDIR += p5-Tie-CPHash
@@ -3620,6 +3628,7 @@
     SUBDIR += p5-VCS-CVS
     SUBDIR += p5-VCS-Lite
     SUBDIR += p5-Validation-Class
+    SUBDIR += p5-Variable-Disposition
     SUBDIR += p5-Variable-Eject
     SUBDIR += p5-Variable-Magic
     SUBDIR += p5-Want
@@ -4916,6 +4925,8 @@
     SUBDIR += py-pylama
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
+    SUBDIR += py-pylint-django
+    SUBDIR += py-pylint-plugin-utils
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pyls-black
@@ -5708,6 +5719,7 @@
     SUBDIR += rubygem-aws-sdk-mediastore
     SUBDIR += rubygem-aws-sdk-mediastoredata
     SUBDIR += rubygem-aws-sdk-mediatailor
+    SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
     SUBDIR += rubygem-aws-sdk-migrationhubconfig
     SUBDIR += rubygem-aws-sdk-mobile
