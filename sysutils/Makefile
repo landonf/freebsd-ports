@@ -789,6 +789,7 @@
     SUBDIR += opa
     SUBDIR += open
     SUBDIR += opencorsairlink
+    SUBDIR += opendircolors
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
@@ -956,8 +957,6 @@
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
-    SUBDIR += policykit
-    SUBDIR += policykit-gnome
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt

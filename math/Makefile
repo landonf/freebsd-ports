@@ -133,6 +133,7 @@
     SUBDIR += adol-c
     SUBDIR += algae
     SUBDIR += alglib
+    SUBDIR += alps
     SUBDIR += alt-ergo
     SUBDIR += amath
     SUBDIR += ambit
@@ -154,6 +155,7 @@
     SUBDIR += atlas
     SUBDIR += barvinok
     SUBDIR += bcal
+    SUBDIR += bcps
     SUBDIR += bitwise
     SUBDIR += blacs
     SUBDIR += blas
@@ -275,6 +277,7 @@
     SUBDIR += flexfloat
     SUBDIR += flint2
     SUBDIR += flintqs
+    SUBDIR += flopc++
     SUBDIR += form
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
@@ -326,6 +329,7 @@
     SUBDIR += gsl
     SUBDIR += half
     SUBDIR += hexcalc
+    SUBDIR += highs
     SUBDIR += hipmcl
     SUBDIR += hmat-oss
     SUBDIR += hpcombi
@@ -806,6 +810,7 @@
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
     SUBDIR += py-matplotlib
+    SUBDIR += py-matplotlib-inline
     SUBDIR += py-matplotlib-scalebar
     SUBDIR += py-matplotlib2
     SUBDIR += py-mip

@@ -842,7 +842,6 @@
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
     SUBDIR += gnome-common
-    SUBDIR += gnome-vfs
     SUBDIR += gnu-efi
     SUBDIR += gnucflow
     SUBDIR += gnulib
@@ -1116,7 +1115,6 @@
     SUBDIR += libbegemot
     SUBDIR += libbfd
     SUBDIR += libbinio
-    SUBDIR += libbonobo
     SUBDIR += libbpfjit
     SUBDIR += libbson
     SUBDIR += libburn
@@ -2488,7 +2486,6 @@
     SUBDIR += p5-Git-Wrapper
     SUBDIR += p5-Glib
     SUBDIR += p5-Glib-Object-Introspection
-    SUBDIR += p5-Gnome2-GConf
     SUBDIR += p5-Goo-Canvas
     SUBDIR += p5-Goo-Canvas2
     SUBDIR += p5-Google-Checkout
@@ -3503,6 +3500,7 @@
     SUBDIR += p5-Test-YAML-Valid
     SUBDIR += p5-Test-utf8
     SUBDIR += p5-Test2-Harness
+    SUBDIR += p5-Test2-Plugin-Cover
     SUBDIR += p5-Test2-Plugin-DBIProfile
     SUBDIR += p5-Test2-Plugin-IOEvents
     SUBDIR += p5-Test2-Plugin-MemUsage
@@ -5701,6 +5699,7 @@
     SUBDIR += rubygem-aws-sdk-licensemanager
     SUBDIR += rubygem-aws-sdk-lightsail
     SUBDIR += rubygem-aws-sdk-locationservice
+    SUBDIR += rubygem-aws-sdk-lookoutequipment
     SUBDIR += rubygem-aws-sdk-lookoutforvision
     SUBDIR += rubygem-aws-sdk-lookoutmetrics
     SUBDIR += rubygem-aws-sdk-machinelearning
@@ -5729,6 +5728,7 @@
     SUBDIR += rubygem-aws-sdk-neptune
     SUBDIR += rubygem-aws-sdk-networkfirewall
     SUBDIR += rubygem-aws-sdk-networkmanager
+    SUBDIR += rubygem-aws-sdk-nimblestudio
     SUBDIR += rubygem-aws-sdk-opsworks
     SUBDIR += rubygem-aws-sdk-opsworkscm
     SUBDIR += rubygem-aws-sdk-organizations
@@ -6084,6 +6084,7 @@
     SUBDIR += rubygem-devise-rails5
     SUBDIR += rubygem-devise-rails52
     SUBDIR += rubygem-devise-rails60
+    SUBDIR += rubygem-devise47-rails60
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6318,7 +6319,6 @@
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-licensee
-    SUBDIR += rubygem-licensee8
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-local_time
@@ -6548,7 +6548,6 @@
     SUBDIR += rubygem-ruby-libvirt
     SUBDIR += rubygem-ruby-macho
     SUBDIR += rubygem-ruby-magic
-    SUBDIR += rubygem-ruby-magic-static
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof
     SUBDIR += rubygem-ruby-progressbar
@@ -7009,6 +7008,7 @@
     SUBDIR += xorg-macros
     SUBDIR += xparam
     SUBDIR += xsd
+    SUBDIR += xsimd
     SUBDIR += xtensa-esp32-elf
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
