@@ -1,8 +1,8 @@
 # Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	13.11.2
-PORTREVISION=	1
+PORTVERSION=	13.11.3
+PORTREVISION=	0
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -24,7 +24,7 @@ MY_DEPENDS=	git>=2.31.0:devel/git \
 	yarn>=1.10.0:www/yarn \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
-	rubygem-rails60>=6.0.3.6<6.1:www/rubygem-rails60 \
+	rubygem-rails60>=6.0.3.6<6.0.4:www/rubygem-rails60 \
 	rubygem-bootsnap14>=1.4.6<2.0:devel/rubygem-bootsnap14 \
 	rubygem-responders-rails60>=3.0<4.0:www/rubygem-responders-rails60 \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
@@ -269,7 +269,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT?=	gitlab-org
 GL_PROJECT?=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT?=	d8d57a90208c62b29e5218f97525404859232a55
+GL_COMMIT?=	b321336e4437c4fc1693be95ec7e5319cace9510
 
 USERS=	git
 GROUPS=	git

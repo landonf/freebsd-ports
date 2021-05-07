@@ -150,6 +150,7 @@
     SUBDIR += arpack++
     SUBDIR += arpack-ng
     SUBDIR += ascent
+    SUBDIR += asl
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
@@ -185,6 +186,7 @@
     SUBDIR += cglm
     SUBDIR += chaco
     SUBDIR += chryzodus
+    SUBDIR += chuffed
     SUBDIR += clasp
     SUBDIR += clblas
     SUBDIR += clblast
@@ -292,6 +294,7 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
+    SUBDIR += gecode
     SUBDIR += gemmlowp
     SUBDIR += geogebra
     SUBDIR += geogram
@@ -344,6 +347,7 @@
     SUBDIR += ipopt
     SUBDIR += ised
     SUBDIR += jacal
+    SUBDIR += jacop
     SUBDIR += jags
     SUBDIR += jama
     SUBDIR += jeuclid
@@ -422,6 +426,7 @@
     SUBDIR += minisat
     SUBDIR += minizinc
     SUBDIR += minizinc-ide
+    SUBDIR += minizinc-solvers
     SUBDIR += miracl
     SUBDIR += mlpack
     SUBDIR += moab

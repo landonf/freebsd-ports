@@ -382,6 +382,7 @@
     SUBDIR += libosip2
     SUBDIR += libpcap
     SUBDIR += libpcapnav
+    SUBDIR += libpfctl
     SUBDIR += libproxy
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
@@ -1455,6 +1456,7 @@
     SUBDIR += tcpwatch
     SUBDIR += tcpxd
     SUBDIR += tcpxtract
+    SUBDIR += td-system-tools
     SUBDIR += tdetect
     SUBDIR += termshark
     SUBDIR += tftpgrab
