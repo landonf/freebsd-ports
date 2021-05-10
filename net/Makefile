@@ -170,6 +170,7 @@
     SUBDIR += fspd
     SUBDIR += fsplib
     SUBDIR += gdrive
+    SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
     SUBDIR += geoipupdate
@@ -283,6 +284,7 @@
     SUBDIR += jgroups
     SUBDIR += jicmp
     SUBDIR += jicmp6
+    SUBDIR += jose
     SUBDIR += jrdesktop
     SUBDIR += jsch
     SUBDIR += jumpgate
