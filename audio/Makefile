@@ -663,9 +663,11 @@
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl
+    SUBDIR += qmidinet
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
+    SUBDIR += qxgedit
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
@@ -804,6 +806,7 @@
     SUBDIR += umodplayer
     SUBDIR += umurmur
     SUBDIR += vamp-plugin-sdk
+    SUBDIR += vban
     SUBDIR += vgmplay
     SUBDIR += vimpc
     SUBDIR += virtual_oss

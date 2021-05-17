@@ -2,6 +2,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	4.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -77,11 +78,6 @@ OPTIONS_EXCLUDE+=	KLVANC
 .if !exists(${.CURDIR:H:H}/science/openvino)
 # https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/ff37ebaf30e6
 OPTIONS_EXCLUDE+=	OPENVINO
-.endif
-
-.if !exists(${.CURDIR:H:H}/net/srt)
-# https://git.ffmpeg.org/gitweb/ffmpeg.git/commitdiff/a2fc8dbae853
-OPTIONS_EXCLUDE+=	SRT
 .endif
 
 .if !exists(${.CURDIR:H:H}/science/tensorflow)
@@ -463,7 +459,7 @@ SSH_LIB_DEPENDS=	libssh.so:security/libssh
 SSH_CONFIGURE_ENABLE=	libssh
 
 # srt
-SRT_LIB_DEPENDS=	libsrt.so:net/srt
+SRT_LIB_DEPENDS=	libsrt.so:www/srt
 SRT_CONFIGURE_ENABLE=	libsrt
 
 # svt-av1
