@@ -102,6 +102,7 @@
     SUBDIR += crackpkcs12
     SUBDIR += create-cert
     SUBDIR += crowdsec
+    SUBDIR += crowdsec-firewall-bouncer
     SUBDIR += cryptlib
     SUBDIR += cryptopp
     SUBDIR += ct-submit
@@ -310,6 +311,7 @@
     SUBDIR += libpwstor
     SUBDIR += libressl
     SUBDIR += libressl-devel
+    SUBDIR += libreswan
     SUBDIR += libretls
     SUBDIR += libscep
     SUBDIR += libscrypt
@@ -397,11 +399,13 @@
     SUBDIR += openbsm
     SUBDIR += openca-tools-forked
     SUBDIR += openconnect
+    SUBDIR += openconnect-freebsd-daemon
     SUBDIR += openconnect-gui
     SUBDIR += opencryptoki
     SUBDIR += openct
     SUBDIR += openfortivpn
     SUBDIR += openiked
+    SUBDIR += openiked-portable
     SUBDIR += opensaml
     SUBDIR += opensc
     SUBDIR += openscep

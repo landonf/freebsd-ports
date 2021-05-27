@@ -67,6 +67,7 @@
     SUBDIR += R-cran-optparse
     SUBDIR += R-cran-pillar
     SUBDIR += R-cran-pkgbuild
+    SUBDIR += R-cran-pkgcache
     SUBDIR += R-cran-pkgconfig
     SUBDIR += R-cran-pkgload
     SUBDIR += R-cran-pkgmaker
@@ -1628,7 +1629,6 @@
     SUBDIR += okteta
     SUBDIR += omake
     SUBDIR += omniORB
-    SUBDIR += omnisharp-server
     SUBDIR += onetbb
     SUBDIR += oniguruma
     SUBDIR += open-beagle
@@ -3427,6 +3427,7 @@
     SUBDIR += p5-Test-MockObject
     SUBDIR += p5-Test-MockRandom
     SUBDIR += p5-Test-MockTime
+    SUBDIR += p5-Test-MockTime-HiRes
     SUBDIR += p5-Test-Modern
     SUBDIR += p5-Test-Module-Used
     SUBDIR += p5-Test-Moose-More
@@ -4305,6 +4306,7 @@
     SUBDIR += py-configparser
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-confuse
+    SUBDIR += py-connection_pool
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-contextlib2
@@ -4593,12 +4595,12 @@
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
     SUBDIR += py-jsonsir
+    SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-core
     SUBDIR += py-jupyter-packaging
     SUBDIR += py-jupyter-server
     SUBDIR += py-jupyter-server-mathjax
     SUBDIR += py-jupyter-telemetry
-    SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab-server
@@ -4815,6 +4817,7 @@
     SUBDIR += py-pefile
     SUBDIR += py-pendulum
     SUBDIR += py-pep517
+    SUBDIR += py-pep562
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-persistent
@@ -5045,8 +5048,10 @@
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
     SUBDIR += py-pyyaml-include
+    SUBDIR += py-pyzipper
     SUBDIR += py-q
     SUBDIR += py-qasync
+    SUBDIR += py-qstylizer
     SUBDIR += py-qt5
     SUBDIR += py-qt5-core
     SUBDIR += py-qt5-dbus
@@ -5571,10 +5576,12 @@
     SUBDIR += rubygem-aws-sdk-appflow
     SUBDIR += rubygem-aws-sdk-appintegrationsservice
     SUBDIR += rubygem-aws-sdk-applicationautoscaling
+    SUBDIR += rubygem-aws-sdk-applicationcostprofiler
     SUBDIR += rubygem-aws-sdk-applicationdiscoveryservice
     SUBDIR += rubygem-aws-sdk-applicationinsights
     SUBDIR += rubygem-aws-sdk-appmesh
     SUBDIR += rubygem-aws-sdk-appregistry
+    SUBDIR += rubygem-aws-sdk-apprunner
     SUBDIR += rubygem-aws-sdk-appstream
     SUBDIR += rubygem-aws-sdk-appsync
     SUBDIR += rubygem-aws-sdk-athena
@@ -6111,6 +6118,7 @@
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
     SUBDIR += rubygem-docile
+    SUBDIR += rubygem-drb
     SUBDIR += rubygem-dry-configurable
     SUBDIR += rubygem-dry-container
     SUBDIR += rubygem-dry-core

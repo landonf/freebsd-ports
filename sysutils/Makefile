@@ -46,8 +46,6 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible2
-    SUBDIR += ansible27
-    SUBDIR += ansible28
     SUBDIR += anvil
     SUBDIR += apache-mesos
     SUBDIR += apachetop
@@ -126,6 +124,7 @@
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
     SUBDIR += brasero
+    SUBDIR += brename
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
@@ -996,6 +995,7 @@
     SUBDIR += pwol
     SUBDIR += pwsafe
     SUBDIR += pxattr
+    SUBDIR += pxp-agent
     SUBDIR += py-ansible-base
     SUBDIR += py-ansible-core
     SUBDIR += py-ansible-lint
@@ -1223,6 +1223,7 @@
     SUBDIR += runit-faster
     SUBDIR += runj
     SUBDIR += runwhen
+    SUBDIR += rush
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6

@@ -627,6 +627,7 @@
     SUBDIR += naev-data
     SUBDIR += narcissu2
     SUBDIR += nazghul
+    SUBDIR += nbsdgames
     SUBDIR += nehquake
     SUBDIR += neo-cowsay
     SUBDIR += nethack32
@@ -840,6 +841,7 @@
     SUBDIR += rocksndiamonds
     SUBDIR += rocksndiamonds-data
     SUBDIR += rottdc
+    SUBDIR += rpg-cli
     SUBDIR += rubix
     SUBDIR += rubygem-fortune_gem
     SUBDIR += rubygem-lolcat
@@ -1083,6 +1085,8 @@
     SUBDIR += xmris
     SUBDIR += xmulti
     SUBDIR += xneko
+    SUBDIR += xnethack
+    SUBDIR += xnethack-nox11
     SUBDIR += xoct
     SUBDIR += xoids
     SUBDIR += xoj
