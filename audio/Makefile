@@ -58,6 +58,7 @@
     SUBDIR += bjumblr-lv2
     SUBDIR += bliss
     SUBDIR += blop
+    SUBDIR += boca
     SUBDIR += boops-lv2
     SUBDIR += bristol
     SUBDIR += bschaffl-lv2
@@ -199,6 +200,7 @@
     SUBDIR += fpc-modplug
     SUBDIR += fpc-oggvorbis
     SUBDIR += fpc-openal
+    SUBDIR += freac
     SUBDIR += freealut
     SUBDIR += freedesktop-sound-theme
     SUBDIR += freepats
@@ -782,6 +784,7 @@
     SUBDIR += tcd
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
+    SUBDIR += tetraproc
     SUBDIR += thunar-media-tags-plugin
     SUBDIR += tiatracker
     SUBDIR += timely-lv2

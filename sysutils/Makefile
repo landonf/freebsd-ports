@@ -229,6 +229,7 @@
     SUBDIR += ctop
     SUBDIR += currtime
     SUBDIR += cw
+    SUBDIR += czkawka
     SUBDIR += daa2iso
     SUBDIR += dae
     SUBDIR += daemonize
@@ -434,6 +435,7 @@
     SUBDIR += gconf-editor
     SUBDIR += gdisk
     SUBDIR += gdmap
+    SUBDIR += gdu
     SUBDIR += genisoimage
     SUBDIR += geomWatch
     SUBDIR += getdelta
@@ -459,6 +461,7 @@
     SUBDIR += go-wtf
     SUBDIR += goaccess
     SUBDIR += goawk
+    SUBDIR += gobi_loader
     SUBDIR += gomi
     SUBDIR += gomplate
     SUBDIR += google-compute-engine-oslogin

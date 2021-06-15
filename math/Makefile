@@ -122,6 +122,7 @@
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
     SUBDIR += R-cran-uroot
+    SUBDIR += R-cran-wk
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
     SUBDIR += SCIP
@@ -366,6 +367,7 @@
     SUBDIR += kalgebra
     SUBDIR += kbruch
     SUBDIR += kcalc
+    SUBDIR += kfr
     SUBDIR += kig
     SUBDIR += kktdirect
     SUBDIR += kmplot

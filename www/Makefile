@@ -1655,6 +1655,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
     SUBDIR += py-hyper
     SUBDIR += py-hypercorn
@@ -1721,6 +1722,7 @@
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests-unixsocket
     SUBDIR += py-requests_ntlm
+    SUBDIR += py-respx
     SUBDIR += py-restclient
     SUBDIR += py-rfc3986
     SUBDIR += py-rfc3987
@@ -2022,6 +2024,7 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-proxy
+    SUBDIR += rubygem-rack-proxy06
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout

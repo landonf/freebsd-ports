@@ -46,6 +46,8 @@ CONFLICTS_INSTALL?=	rust-nightly
 
 OPTIONS_DEFINE=		DOCS GDB SOURCES WASM
 OPTIONS_DEFAULT=	SOURCES WASM
+OPTIONS_EXCLUDE_armv6=	DOCS
+OPTIONS_EXCLUDE_armv7=	DOCS
 
 GDB_DESC=	Install ports gdb (necessary for debugging rust programs)
 SOURCES_DESC=	Install source files
@@ -165,6 +167,9 @@ do-configure:
 	@${ECHO_CMD} 'sysconfdir="${PREFIX}/etc"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} '[rust]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'channel="${PKGNAMESUFFIX:Ustable:S/^-//}"' >> ${WRKSRC}/config.toml
+.if defined(NIGHTLY_DATE)
+	@${ECHO_CMD} 'codegen-units=1' >> ${WRKSRC}/config.toml
+.endif
 	@${ECHO_CMD} 'default-linker="${CC}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'deny-warnings=false' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'verbose-tests=true' >> ${WRKSRC}/config.toml

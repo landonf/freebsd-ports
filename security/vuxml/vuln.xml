@@ -76,6 +76,236 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="9f27ac74-cdee-11eb-930d-fc4dd43e2b6a">
+    <topic>ircII -- denial of service</topic>
+    <affects>
+      <package>
+	<name>ircii</name>
+	<range><lt>20210314</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Michael Ortmann reports:</p>
+	<blockquote cite="https://www.openwall.com/lists/oss-security/2021/03/24/2">
+	  <p>ircii has a bug in parsing CTCP UTC messages.</p>
+	  <p>Its unknown if this could also be used for arbitrary code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-29376</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29376</url>
+    </references>
+    <dates>
+      <discovery>2021-03-02</discovery>
+      <entry>2021-03-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cce76eca-ca16-11eb-9b84-d4c9ef517024">
+    <topic>Apache httpd -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.48</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <ul>
+	    <li>moderate: mod_proxy_wstunnel tunneling of non Upgraded
+	      connections (CVE-2019-17567)</li>
+	    <li>moderate: Improper Handling of Insufficient Privileges
+	      (CVE-2020-13938)</li>
+	    <li>low: mod_proxy_http NULL pointer dereference
+	      (CVE-2020-13950)</li>
+	    <li>low: mod_auth_digest possible stack overflow by one nul byte
+	      (CVE-2020-35452)</li>
+	    <li>low: mod_session NULL pointer dereference (CVE-2021-26690)</li>
+	    <li>low: mod_session response handling heap overflow (CVE-2021-26691)</li>
+	    <li>moderate: Unexpected URL matching with 'MergeSlashes OFF'
+	      (CVE-2021-30641)</li>
+	    <li>important: NULL pointer dereference on specially crafted HTTP/2
+	      request (CVE-2021-31618)</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2019-17567</cvename>
+      <cvename>CVE-2020-13938</cvename>
+      <cvename>CVE-2020-13950</cvename>
+      <cvename>CVE-2020-35452</cvename>
+      <cvename>CVE-2021-26690</cvename>
+      <cvename>CVE-2021-26691</cvename>
+      <cvename>CVE-2021-30641</cvename>
+      <cvename>CVE-2021-31618</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2021-06-09</discovery>
+      <entry>2021-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c9e2a1a7-caa1-11eb-904f-14dae9d5a9d2">
+    <topic>dragonfly -- argument injection</topic>
+    <affects>
+      <package>
+	<name>rubygem-dragonfly</name>
+	<range><lt>2.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2021-33564">
+	  <p>An argument injection vulnerability in the Dragonfly
+	  gem before 1.4.0 for Ruby allows remote attackers to read
+	  and write to arbitrary files via a crafted URL when the
+	  verify_url option is disabled. This may lead to code
+	  execution. The problem occurs because the generate and
+	  process features mishandle use of the ImageMagick convert
+	  utility.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-33564</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2021-33564</url>
+      <url>https://github.com/mlr0p/CVE-2021-33564</url>
+      <url>https://zxsecurity.co.nz/research/argunment-injection-ruby-dragonfly/</url>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33564</url>
+    </references>
+    <dates>
+      <discovery>2021-05-24</discovery>
+      <entry>2021-06-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e4cd0b38-c9f9-11eb-87e1-08002750c711">
+    <topic>cacti -- SQL Injection was possible due to incorrect validation order</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><ge>1.2</ge><lt>1.2.17</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cati team reports:</p>
+	<blockquote cite="https://github.com/Cacti/cacti/issues/4022">
+	  <p>Due to a lack of validation, data_debug.php can be the source of a SQL injection.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>2020-35701</cvename>
+      <url>https://github.com/Cacti/cacti/issues/4022</url>
+    </references>
+    <dates>
+      <discovery>2020-12-24</discovery>
+      <entry>2021-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="20b3ab21-c9df-11eb-8558-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>91.0.4472.101</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/06/stable-channel-update-for-desktop.html">
+	  <p>This release contains 14 security fixes, including:</p>
+	  <ul>
+	    <li>[1212618] Critical CVE-2021-30544: Use after free in BFCache.
+	      Reported by Rong Jian and Guang Gong of 360 Alpha Lab on
+	      2021-05-24</li>
+	    <li>[1201031] High CVE-2021-30545: Use after free in Extensions.
+	      Reported by kkwon with everpall and kkomdal on 2021-04-21</li>
+	    <li>[1206911] High CVE-2021-30546: Use after free in Autofill.
+	      Reported by Abdulrahman Alqabandi, Microsoft Browser Vulnerability
+	      Research on 2021-05-08</li>
+	    <li>[1210414] High CVE-2021-30547: Out of bounds write in ANGLE.
+	      Reported by Seong-Hwan Park (SeHwa) of SecunologyLab on
+	      2021-05-18</li>
+	    <li>[1210487] High CVE-2021-30548: Use after free in Loader.
+	      Reported by Yangkang(@dnpushme) &amp; Wanglu of Qihoo360 Qex Team
+	      on 2021-05-18</li>
+	    <li>[1212498] High CVE-2021-30549: Use after free in Spell check.
+	      Reported by David Erceg on 2021-05-23</li>
+	    <li>[1212500] High CVE-2021-30550: Use after free in Accessibility.
+	      Reported by David Erceg on 2021-05-23</li>
+	    <li>[1216437] High CVE-2021-30551: Type Confusion in V8. Reported by
+	      Sergei Glazunov of Google Project Zero on 2021-06-04</li>
+	    <li>[1200679] Medium CVE-2021-30552: Use after free in Extensions.
+	      Reported by David Erceg on 2021-04-20</li>
+	    <li>[1209769] Medium CVE-2021-30553: Use after free in Network
+	      service. Reported by Anonymous on 2021-05-17</li>
+	  </ul>
+	  <p>Google is aware that an exploit for CVE-2021-30551 exists in the
+	    wild.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-30544</cvename>
+      <cvename>CVE-2021-30545</cvename>
+      <cvename>CVE-2021-30546</cvename>
+      <cvename>CVE-2021-30547</cvename>
+      <cvename>CVE-2021-30548</cvename>
+      <cvename>CVE-2021-30549</cvename>
+      <cvename>CVE-2021-30550</cvename>
+      <cvename>CVE-2021-30551</cvename>
+      <cvename>CVE-2021-30552</cvename>
+      <cvename>CVE-2021-30553</cvename>
+      <url>https://chromereleases.googleblog.com/2021/06/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-06-10</discovery>
+      <entry>2021-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc1bcbca-c88b-11eb-9120-f02f74d0e4bd">
+    <topic>dino -- Path traversal in Dino file transfers</topic>
+    <affects>
+      <package>
+	<name>dino</name>
+	<range><lt>0.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dino team reports:</p>
+	<blockquote cite="https://dino.im/security/cve-2021-33896/">
+	  <p>It was discovered that when a user receives and downloads
+	  a file in Dino, URI-encoded path separators in the file name
+	  will be decoded, allowing an attacker to traverse
+	  directories and create arbitrary files in the context of the
+	  user.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-33896</cvename>
+      <mlist msgid="392f934a-f937-7b29-5f7f-5df3ee60d8a8@.larma.de">https://marc.info/?l=oss-security&amp;m=162308719412719</mlist>
+      <url>https://dino.im/security/cve-2021-33896/</url>
+    </references>
+    <dates>
+      <discovery>2021-06-07</discovery>
+      <entry>2021-06-08</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="45b8716b-c707-11eb-b9a0-6805ca0b3d42">
     <topic>pglogical -- shell command injection in pglogical.create_subscription()</topic>
     <affects>

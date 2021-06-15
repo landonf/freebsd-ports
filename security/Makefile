@@ -954,6 +954,7 @@
     SUBDIR += py-pyotp2289
     SUBDIR += py-pysaml2
     SUBDIR += py-pysaml24
+    SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-pysodium
@@ -994,6 +995,7 @@
     SUBDIR += py-stix2
     SUBDIR += py-stix2-patterns
     SUBDIR += py-taxii2-client
+    SUBDIR += py-tls-parser
     SUBDIR += py-tlslite
     SUBDIR += py-trezor
     SUBDIR += py-trustme

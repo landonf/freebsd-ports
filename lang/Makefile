@@ -98,7 +98,6 @@
     SUBDIR += gcc6-aux
     SUBDIR += gcc7
     SUBDIR += gcc8
-    SUBDIR += gcc8-devel
     SUBDIR += gcc9
     SUBDIR += gcc9-devel
     SUBDIR += gforth
@@ -306,6 +305,7 @@
     SUBDIR += ruby26
     SUBDIR += ruby27
     SUBDIR += ruby30
+    SUBDIR += rubygem-ruby_language_server
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-bootstrap

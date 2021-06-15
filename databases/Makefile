@@ -198,6 +198,7 @@
     SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
     SUBDIR += mongodb49
+    SUBDIR += mongodb50
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
@@ -569,7 +570,6 @@
     SUBDIR += pg_hashids
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
-    SUBDIR += pg_reorg
     SUBDIR += pg_repack
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
@@ -580,7 +580,6 @@
     SUBDIR += pgbarman
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
-    SUBDIR += pgespresso
     SUBDIR += pgfouine
     SUBDIR += pgloader3
     SUBDIR += pglogical
@@ -708,14 +707,6 @@
     SUBDIR += postgresql14-plpython
     SUBDIR += postgresql14-pltcl
     SUBDIR += postgresql14-server
-    SUBDIR += postgresql95-client
-    SUBDIR += postgresql95-contrib
-    SUBDIR += postgresql95-docs
-    SUBDIR += postgresql95-pgtcl
-    SUBDIR += postgresql95-plperl
-    SUBDIR += postgresql95-plpython
-    SUBDIR += postgresql95-pltcl
-    SUBDIR += postgresql95-server
     SUBDIR += postgresql96-client
     SUBDIR += postgresql96-contrib
     SUBDIR += postgresql96-docs
@@ -1008,6 +999,7 @@
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser
     SUBDIR += sqliteconvert
+    SUBDIR += sqlitecpp
     SUBDIR += sqlitemanager
     SUBDIR += sqliteodbc
     SUBDIR += sqlitestudio
