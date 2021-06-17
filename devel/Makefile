@@ -816,6 +816,7 @@
     SUBDIR += git-lfs
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
+    SUBDIR += git-remote-hg
     SUBDIR += git-review
     SUBDIR += git-subrepo
     SUBDIR += git-town
