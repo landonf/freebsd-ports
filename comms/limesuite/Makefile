@@ -67,7 +67,7 @@ SOAPYSDR_LIB_DEPENDS=	libSoapySDR.so:misc/soapysdr
 USES+=		gl xorg
 USE_XORG+=	x11 ice sm xcursor xext xfixes xinerama xft xrender
 USE_GL+=		gl glu
-USE_WX+=		3.1
+USE_WX+=		3.0
 WX_COMPS+=	wx:lib
 LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig
 .endif
