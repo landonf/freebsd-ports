@@ -77,6 +77,7 @@
     SUBDIR += mapm3
     SUBDIR += migrate
     SUBDIR += minimap2
+    SUBDIR += mmseqs2
     SUBDIR += molden
     SUBDIR += mopac
     SUBDIR += mothur
@@ -175,6 +176,7 @@
     SUBDIR += smithwaterman
     SUBDIR += snpeff
     SUBDIR += spoa
+    SUBDIR += sra-tools
     SUBDIR += stacks
     SUBDIR += star
     SUBDIR += stringtie

@@ -579,7 +579,6 @@
     SUBDIR += elixir-quantum
     SUBDIR += elixir-smppex
     SUBDIR += elixir-timex
-    SUBDIR += elixir-tirexs
     SUBDIR += elixir-trailing_format_plug
     SUBDIR += elixir-tzdata
     SUBDIR += elixir-unsafe
@@ -5032,6 +5031,7 @@
     SUBDIR += py-qt5-designerplugin
     SUBDIR += py-qt5-help
     SUBDIR += py-qt5-location
+    SUBDIR += py-qt5-positioning
     SUBDIR += py-qt5-qscintilla2
     SUBDIR += py-qt5-remoteobjects
     SUBDIR += py-qt5-sip

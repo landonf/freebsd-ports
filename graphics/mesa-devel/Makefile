@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	21.1-branchpoint-3189
-DISTVERSIONSUFFIX=	-g82de184c3a2
-PORTREVISION=	1
+DISTVERSION=	21.1-branchpoint-3477
+DISTVERSIONSUFFIX=	-gd22cdcd33a4
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -12,7 +11,7 @@ PATCHFILES+=	cb8f7a253934.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	e141af3ac859.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
 PATCHFILES+=	167fa293d7b7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5464
-PATCHFILES+=	19e001833ec1.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7778
+PATCHFILES+=	d58b934a6aa7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7778
 PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	79a9c5e470c2.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/8221
 PATCHFILES+=	891152495cf7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9168
@@ -93,7 +92,6 @@ anv_DESC=		Haswell and newer
 radv_DESC=		Southern Islands and newer (implies LLVM)
 
 COINST_DESC=		Allow co-installation with another Mesa port
-COINST_VARS=		LLVM_DEFAULT=11 # chase intel-compute-runtime
 COINST_MESON_ON=	-Degl-lib-suffix=${PKGNAMESUFFIX}
 COINST_PLIST_SUB=	SUFFIX=${PKGNAMESUFFIX}
 COINST_SUB_FILES=	libmap.conf
@@ -144,6 +142,13 @@ X11_MESON_OFF=		-Dglx=disabled
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
+
+.include <bsd.port.options.mk>
+
+# Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
+.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
+LLVM_DEFAULT=	12 # bump if not latest release
+.endif
 
 post-extract:
 # Work around Meson lookup order e.g., llvm-config
