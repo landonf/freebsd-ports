@@ -223,6 +223,7 @@
     SUBDIR += py-babi
     SUBDIR += py-editorconfig
     SUBDIR += py-pynvim
+    SUBDIR += py-vim-bridge
     SUBDIR += quilter
     SUBDIR += rehex
     SUBDIR += rubygem-neovim
@@ -254,6 +255,7 @@
     SUBDIR += tweak
     SUBDIR += uemacs
     SUBDIR += uzap
+    SUBDIR += ved
     SUBDIR += vigor
     SUBDIR += vile
     SUBDIR += vim

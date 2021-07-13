@@ -143,6 +143,7 @@
     SUBDIR += byobu
     SUBDIR += catfish
     SUBDIR += cbsd
+    SUBDIR += cbsd-mq-api
     SUBDIR += cbsd-mq-router
     SUBDIR += ccd2iso
     SUBDIR += cciss_vol_status
@@ -155,23 +156,22 @@
     SUBDIR += cdrkit
     SUBDIR += cdroot
     SUBDIR += cdrtools
-    SUBDIR += cdrtools-devel
     SUBDIR += cfengine
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine-masterfiles311
-    SUBDIR += cfengine-masterfiles314
     SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
+    SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine310
     SUBDIR += cfengine311
-    SUBDIR += cfengine314
     SUBDIR += cfengine315
     SUBDIR += cfengine316
     SUBDIR += cfengine317
+    SUBDIR += cfengine318
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -422,6 +422,7 @@
     SUBDIR += fusefs-squashfuse
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
+    SUBDIR += fusefs-unreliablefs
     SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
@@ -472,6 +473,8 @@
     SUBDIR += graveman
     SUBDIR += graylog
     SUBDIR += grub2-bhyve
+    SUBDIR += grub2-efi
+    SUBDIR += grub2-pcbsd
     SUBDIR += gsh
     SUBDIR += gsmartcontrol
     SUBDIR += gstopd
@@ -709,6 +712,7 @@
     SUBDIR += mixer
     SUBDIR += mkdesktop
     SUBDIR += mkfwimage
+    SUBDIR += mkjail
     SUBDIR += mkntpwd
     SUBDIR += mmc-utils
     SUBDIR += mmve
@@ -987,10 +991,8 @@
     SUBDIR += pstree
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet5
     SUBDIR += puppet6
     SUBDIR += puppet7
-    SUBDIR += puppetserver5
     SUBDIR += puppetserver6
     SUBDIR += puppetserver7
     SUBDIR += pv
@@ -1250,6 +1252,7 @@
     SUBDIR += scanmem
     SUBDIR += scct
     SUBDIR += schedutils
+    SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screenfetch
     SUBDIR += screenfetch-nox11
@@ -1263,7 +1266,7 @@
     SUBDIR += sensu-go
     SUBDIR += serf
     SUBDIR += setcdboot
-    SUBDIR += sformat
+    SUBDIR += setsid
     SUBDIR += sg3_utils
     SUBDIR += shim
     SUBDIR += shlock
@@ -1297,7 +1300,6 @@
     SUBDIR += squashfs-tools
     SUBDIR += ssd_report
     SUBDIR += sshsudo
-    SUBDIR += ssid
     SUBDIR += ssync
     SUBDIR += stalepid
     SUBDIR += stanchion
@@ -1396,6 +1398,7 @@
     SUBDIR += u-boot-nanopi-neo
     SUBDIR += u-boot-nanopi-neo-air
     SUBDIR += u-boot-nanopi-neo2
+    SUBDIR += u-boot-nanopi-r4s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2
@@ -1460,7 +1463,6 @@
     SUBDIR += uptimed
     SUBDIR += usb_modeswitch
     SUBDIR += usbhid-dump
-    SUBDIR += usbhotkey
     SUBDIR += usbtop
     SUBDIR += usbutils
     SUBDIR += uschedule

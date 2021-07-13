@@ -465,6 +465,7 @@
     SUBDIR += libkexiv2
     SUBDIR += libkipi
     SUBDIR += libksane
+    SUBDIR += libliftoff
     SUBDIR += liblqr-1
     SUBDIR += liblug
     SUBDIR += libmng
@@ -976,6 +977,7 @@
     SUBDIR += rubygem-gitlab_emoji
     SUBDIR += rubygem-goocanvas
     SUBDIR += rubygem-gruff
+    SUBDIR += rubygem-histogram
     SUBDIR += rubygem-image_processing
     SUBDIR += rubygem-image_science
     SUBDIR += rubygem-imagesize
@@ -986,6 +988,7 @@
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png
     SUBDIR += rubygem-railroad
+    SUBDIR += rubygem-red-colors
     SUBDIR += rubygem-rmagick
     SUBDIR += rubygem-rsvg2
     SUBDIR += rubygem-ruby-graphviz
@@ -1043,6 +1046,7 @@
     SUBDIR += swftools
     SUBDIR += sxiv
     SUBDIR += synaesthesia
+    SUBDIR += synfig
     SUBDIR += synfigstudio
     SUBDIR += tachyon
     SUBDIR += telak

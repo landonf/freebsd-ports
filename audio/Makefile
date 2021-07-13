@@ -48,6 +48,7 @@
     SUBDIR += aylet
     SUBDIR += bambootracker
     SUBDIR += bamp-lv2
+    SUBDIR += bangr-lv2
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
@@ -115,6 +116,7 @@
     SUBDIR += denemo
     SUBDIR += din
     SUBDIR += discid
+    SUBDIR += dmidiplayer
     SUBDIR += dpf-plugins-lv2
     SUBDIR += dragonfly-reverb-lv2
     SUBDIR += drumgizmo
@@ -129,6 +131,7 @@
     SUBDIR += easytag
     SUBDIR += eawpats
     SUBDIR += eawplus
+    SUBDIR += ebumeter
     SUBDIR += ecasound
     SUBDIR += elisa
     SUBDIR += emms
@@ -292,7 +295,6 @@
     SUBDIR += gula-plugins-lv2
     SUBDIR += guspat
     SUBDIR += gvolwheel
-    SUBDIR += gxmms2
     SUBDIR += gxplugins-lv2
     SUBDIR += harp
     SUBDIR += headsetcontrol
@@ -326,7 +328,9 @@
     SUBDIR += jalv
     SUBDIR += jalv-select
     SUBDIR += jamulus
+    SUBDIR += jconvolver
     SUBDIR += jid3lib
+    SUBDIR += jmatconvol
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
@@ -452,7 +456,6 @@
     SUBDIR += lv2lint
     SUBDIR += lv2proc
     SUBDIR += lvtk
-    SUBDIR += lxmusic
     SUBDIR += mac
     SUBDIR += madfufw
     SUBDIR += madplay
@@ -626,6 +629,7 @@
     SUBDIR += pragha
     SUBDIR += prelude-lv2
     SUBDIR += protracker
+    SUBDIR += psindustrializer
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
@@ -737,6 +741,7 @@
     SUBDIR += sox
     SUBDIR += spc2it
     SUBDIR += spectacle-lv2
+    SUBDIR += spectmorph
     SUBDIR += spectrogram
     SUBDIR += speech-denoiser-lv2
     SUBDIR += speex
@@ -858,7 +863,6 @@
     SUBDIR += xmix
     SUBDIR += xmixer
     SUBDIR += xmmix
-    SUBDIR += xmms2
     SUBDIR += xmp
     SUBDIR += xmradio
     SUBDIR += xoscope
@@ -868,8 +872,15 @@
     SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
+    SUBDIR += zita-alsa-pcmi
+    SUBDIR += zita-at1
+    SUBDIR += zita-bls1
     SUBDIR += zita-convolver
+    SUBDIR += zita-dpl1
+    SUBDIR += zita-mu1
+    SUBDIR += zita-njbridge
     SUBDIR += zita-resampler
+    SUBDIR += zita-rev1
     SUBDIR += zrythm
     SUBDIR += zynaddsubfx
 
