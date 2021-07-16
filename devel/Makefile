@@ -5215,6 +5215,7 @@
     SUBDIR += py-typed-ast
     SUBDIR += py-typer
     SUBDIR += py-types-PyYAML
+    SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-requests
     SUBDIR += py-typing-extensions
@@ -6176,6 +6177,7 @@
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-flipper-ui017
     SUBDIR += rubygem-flipper017
+    SUBDIR += rubygem-flipper021
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
