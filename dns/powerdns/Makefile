@@ -10,10 +10,11 @@ COMMENT=	Advanced DNS server with multiple backends including SQL
 LICENSE=	GPLv2
 
 BROKEN_sparc64=	Does not compile: error: to_string is not a member of std
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	archs with 32-bits time_t are no longer supported by upstream
 
 LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
-		libcurl.so:ftp/curl \
-		libprotobuf.so:devel/protobuf
+		libcurl.so:ftp/curl
 
 USES=		autoreconf compiler:c++11-lib cpe gmake libtool \
 		localbase:ldflags pathfix pkgconfig ssl tar:bzip2
@@ -27,8 +28,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--sysconfdir="${PREFIX}/etc/pdns" \
 		--with-boost="${LOCALBASE}" \
 		--with-dynmodules="pipe bind ${MODULES}" \
-		--with-modules="" \
-		--with-protobuf
+		--with-modules=""
 
 SCRIPTS_ENV=	CURDIR2="${.CURDIR}" \
 		DISTNAME="${DISTNAME}" \
