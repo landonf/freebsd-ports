@@ -237,8 +237,8 @@ victoria-metrics:*:289:289::0:0:VictoriaMetrics user:/nonexistent:/usr/sbin/nolo
 _gmid:*:290:290::0:0:gmid daemon user:/var/empty:/usr/sbin/nologin
 pydio:*:291:291::0:0:pydio cells user:/var/pydio:/bin/sh
 sftpgo:*:292:292::0:0:SFTPGo user:/nonexistent:/usr/sbin/nologin
-# free: 293
-# free: 294
+biboumi:*:293:293::0:0:biboumi:/nonexistent:/usr/sbin/nologin
+krill:*:294:294::0:0:krill Pseudo User:/nonexistent:/usr/sbin/nologin
 # free: 295
 # free: 296
 # free: 297

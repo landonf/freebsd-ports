@@ -105,6 +105,7 @@
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
     SUBDIR += R-cran-tinytest
+    SUBDIR += R-cran-tzdb
     SUBDIR += R-cran-uuid
     SUBDIR += R-cran-vcd
     SUBDIR += R-cran-vctrs
@@ -537,8 +538,8 @@
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += electron12
-    SUBDIR += elf-dissector
     SUBDIR += elf
+    SUBDIR += elf-dissector
     SUBDIR += elfio
     SUBDIR += elfkickers
     SUBDIR += elfsh
@@ -631,6 +632,7 @@
     SUBDIR += erlang-syslog
     SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
+    SUBDIR += esbuild
     SUBDIR += estd
     SUBDIR += etcd
     SUBDIR += etcd31
@@ -707,6 +709,7 @@
     SUBDIR += fpc-regexpr
     SUBDIR += fpc-sdl
     SUBDIR += fpc-symbolic
+    SUBDIR += fpc-tplylib
     SUBDIR += fpc-zlib
     SUBDIR += fpp
     SUBDIR += frama-c
@@ -2738,6 +2741,7 @@
     SUBDIR += p5-Mixin-Linewise
     SUBDIR += p5-Mknod
     SUBDIR += p5-Mo
+    SUBDIR += p5-Mock-MonkeyPatch
     SUBDIR += p5-Mock-Quick
     SUBDIR += p5-Module-Build
     SUBDIR += p5-Module-Build-Convert
@@ -4316,6 +4320,7 @@
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-contextlib2
+    SUBDIR += py-contextvars
     SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
     SUBDIR += py-copier
@@ -4512,6 +4517,7 @@
     SUBDIR += py-greenlet
     SUBDIR += py-grizzled
     SUBDIR += py-grpc-google-iam-v1
+    SUBDIR += py-grpc-stubs
     SUBDIR += py-grpcio
     SUBDIR += py-grpcio-gcp
     SUBDIR += py-grpcio-tools
@@ -4893,6 +4899,7 @@
     SUBDIR += py-pycmd
     SUBDIR += py-pycodeexport
     SUBDIR += py-pycodestyle
+    SUBDIR += py-pycognito
     SUBDIR += py-pycompilation
     SUBDIR += py-pycparser
     SUBDIR += py-pydantic
@@ -5040,6 +5047,7 @@
     SUBDIR += py-pyzipper
     SUBDIR += py-q
     SUBDIR += py-qasync
+    SUBDIR += py-qcs-api-client
     SUBDIR += py-qstylizer
     SUBDIR += py-qt5
     SUBDIR += py-qt5-core
@@ -5082,6 +5090,7 @@
     SUBDIR += py-responses
     SUBDIR += py-retrying
     SUBDIR += py-retype
+    SUBDIR += py-rfc3339
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5192,6 +5201,7 @@
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
     SUBDIR += py-thriftpy
+    SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
     SUBDIR += py-timelib
     SUBDIR += py-tinyarray
@@ -5395,6 +5405,7 @@
     SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythontidy
+    SUBDIR += pytype
     SUBDIR += qbs
     SUBDIR += qca
     SUBDIR += qca-legacy
@@ -6238,7 +6249,6 @@
     SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-license
     SUBDIR += rubygem-gitlab-pygments.rb
-    SUBDIR += rubygem-gitlab-rdoc
     SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_chronic_duration
     SUBDIR += rubygem-gitlab_git
@@ -6262,7 +6272,6 @@
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
-    SUBDIR += rubygem-grape-entity07
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
@@ -6731,6 +6740,7 @@
     SUBDIR += rubygem-to_regexp
     SUBDIR += rubygem-tool
     SUBDIR += rubygem-tracer
+    SUBDIR += rubygem-trailblazer-option
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop
@@ -7085,6 +7095,7 @@
     SUBDIR += zapcc
     SUBDIR += zeal
     SUBDIR += zfp
+    SUBDIR += zls
     SUBDIR += zookeeper
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc
