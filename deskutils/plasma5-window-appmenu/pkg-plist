@@ -1,7 +1,6 @@
 %%QT_PLUGINDIR%%/plasma/applets/plasma_applet_windowappmenu.so
 %%QT_QMLDIR%%/org/kde/private/windowAppMenu/libappmenuplugin.so
 %%QT_QMLDIR%%/org/kde/private/windowAppMenu/qmldir
-share/kservices5/plasma-applet-org.kde.windowappmenu.desktop
 share/metainfo/org.kde.windowappmenu.appdata.xml
 share/plasma/plasmoids/org.kde.windowappmenu/contents/code/util.js
 share/plasma/plasmoids/org.kde.windowappmenu/contents/config/config.qml
