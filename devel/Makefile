@@ -2780,6 +2780,7 @@
     SUBDIR += p5-Module-Install-Template
     SUBDIR += p5-Module-Install-TestBase
     SUBDIR += p5-Module-Install-XSUtil
+    SUBDIR += p5-Module-Installed-Tiny
     SUBDIR += p5-Module-List
     SUBDIR += p5-Module-Load
     SUBDIR += p5-Module-Load-Conditional
@@ -3993,6 +3994,7 @@
     SUBDIR += phpunit6
     SUBDIR += phpunit7
     SUBDIR += phpunit8
+    SUBDIR += phpunit9
     SUBDIR += physfs
     SUBDIR += pickle
     SUBDIR += picojson
@@ -5601,6 +5603,8 @@
     SUBDIR += rubygem-aws-sdk-braket
     SUBDIR += rubygem-aws-sdk-budgets
     SUBDIR += rubygem-aws-sdk-chime
+    SUBDIR += rubygem-aws-sdk-chimesdkidentity
+    SUBDIR += rubygem-aws-sdk-chimesdkmessaging
     SUBDIR += rubygem-aws-sdk-cloud9
     SUBDIR += rubygem-aws-sdk-clouddirectory
     SUBDIR += rubygem-aws-sdk-cloudformation
@@ -5792,6 +5796,9 @@
     SUBDIR += rubygem-aws-sdk-robomaker
     SUBDIR += rubygem-aws-sdk-route53
     SUBDIR += rubygem-aws-sdk-route53domains
+    SUBDIR += rubygem-aws-sdk-route53recoverycluster
+    SUBDIR += rubygem-aws-sdk-route53recoverycontrolconfig
+    SUBDIR += rubygem-aws-sdk-route53recoveryreadiness
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s3control
