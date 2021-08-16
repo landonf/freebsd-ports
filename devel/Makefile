@@ -5234,10 +5234,18 @@
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
     SUBDIR += py-typer
+    SUBDIR += py-types-Flask
+    SUBDIR += py-types-Jinja2
+    SUBDIR += py-types-MarkupSafe
+    SUBDIR += py-types-Pillow
     SUBDIR += py-types-PyYAML
+    SUBDIR += py-types-Werkzeug
+    SUBDIR += py-types-click
     SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
+    SUBDIR += py-types-psycopg2
     SUBDIR += py-types-requests
+    SUBDIR += py-types-xxhash
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
     SUBDIR += py-tzlocal
@@ -6404,6 +6412,7 @@
     SUBDIR += rubygem-middleware
     SUBDIR += rubygem-mini_histogram
     SUBDIR += rubygem-mini_portile2
+    SUBDIR += rubygem-mini_portile2-25
     SUBDIR += rubygem-minitest
     SUBDIR += rubygem-mixlib-archive
     SUBDIR += rubygem-mixlib-authentication
@@ -7038,6 +7047,7 @@
     SUBDIR += varconf
     SUBDIR += vasm
     SUBDIR += vc
+    SUBDIR += vc-intrinsics
     SUBDIR += vcglib
     SUBDIR += vera++
     SUBDIR += vexcl

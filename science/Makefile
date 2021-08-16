@@ -65,6 +65,7 @@
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
     SUBDIR += dvc
+    SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
     SUBDIR += elmerfem
@@ -173,6 +174,7 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
@@ -336,6 +338,7 @@
     SUBDIR += scidavis
     SUBDIR += segyio
     SUBDIR += shelxle
+    SUBDIR += siconos
     SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware

@@ -347,6 +347,7 @@
     SUBDIR += lame
     SUBDIR += lash
     SUBDIR += lenticular-lv2
+    SUBDIR += lewton
     SUBDIR += liba52
     SUBDIR += libaacplus
     SUBDIR += libadplug
@@ -887,6 +888,7 @@
     SUBDIR += zita-njbridge
     SUBDIR += zita-resampler
     SUBDIR += zita-rev1
+    SUBDIR += zplugins-lv2
     SUBDIR += zrythm
     SUBDIR += zynaddsubfx
 
