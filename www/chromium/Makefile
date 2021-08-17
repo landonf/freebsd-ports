@@ -1,7 +1,7 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 
 PORTNAME=	chromium
-PORTVERSION=	92.0.4515.107
+PORTVERSION=	92.0.4515.159
 CATEGORIES=	www
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		LOCAL/rene/chromium/:fonts
@@ -66,7 +66,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
 USES=		bison compiler:c++17-lang cpe desktop-file-utils dos2unix gl gnome jpeg localbase:ldflags \
-		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz xorg
+		ninja perl5 pkgconfig python:build shebangfix tar:xz xorg
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
@@ -84,7 +84,7 @@ SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper buildtools/linux64/clang-
 MAKE_ARGS=	-C out/${BUILDTYPE}
 ALL_TARGET=	chrome
 
-BINARY_ALIAS=	python=${PYTHON_CMD}
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-clang
 
 # TODO bz@ : install libwidevinecdm.so (see third_party/widevine/cdm/BUILD.gn)
@@ -260,14 +260,6 @@ pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
 		ffmpeg flac fontconfig freetype harfbuzz-ng libdrm libpng libwebp libxml libxslt openh264 opus snappy || ${FALSE}
-
-	# We need the site package from xcbgen, which installs as python3.x (really: default version), while the chromium
-	# build still needs to use python2.7. It works, because xcbgen can run with both versions, but we want to avoid
-	# having the pre-compiled pyc files from 2.7 in the 3.x site packages
-	# Remove this as soon as chromium uses python3.x as well
-	@${MKDIR} ${WRKDIR}/site-packages/xcbgen
-	${CP} ${PYTHONBASE}/lib/python${PYTHON_DEFAULT}/site-packages/xcbgen/*.py \
-		${WRKDIR}/site-packages/xcbgen
 
 do-configure:
 	# GN generator bootstrapping and generating ninja files
