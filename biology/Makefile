@@ -13,6 +13,7 @@
     SUBDIR += biococoa
     SUBDIR += biolibc
     SUBDIR += bioparser
+    SUBDIR += biosig
     SUBDIR += biosoup
     SUBDIR += biostar-tools
     SUBDIR += bolt-lmm
@@ -174,6 +175,7 @@
     SUBDIR += seqio
     SUBDIR += seqkit
     SUBDIR += seqtk
+    SUBDIR += sigviewer
     SUBDIR += sim4
     SUBDIR += slclust
     SUBDIR += smithwaterman
