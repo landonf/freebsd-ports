@@ -279,6 +279,7 @@ do-configure:
 	@${MKDIR} ${WRKSRC}/buildtools/freebsd
 	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/freebsd
 	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/freebsd
+	${LN} -sf /usr/bin/strip ${WRKSRC}/buildtools/freebsd/strip
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
