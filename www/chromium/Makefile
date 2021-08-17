@@ -28,7 +28,8 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${LOCALBASE}/share/usbids/usb.ids:misc/usbids \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
-		${LOCALBASE}/include/va/va.h:multimedia/libva
+		${LOCALBASE}/include/va/va.h:multimedia/libva \
+		${LOCALBASE}/bin/python2.7:lang/python27
 
 LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libatspi.so:accessibility/at-spi2-core \
@@ -84,7 +85,8 @@ SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper buildtools/linux64/clang-
 MAKE_ARGS=	-C out/${BUILDTYPE}
 ALL_TARGET=	chrome
 
-BINARY_ALIAS=	python3=${PYTHON_CMD}
+BINARY_ALIAS=	python=${LOCALBASE}/bin/python2.7 \
+		python3=${PYTHON_CMD}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-clang
 
 # TODO bz@ : install libwidevinecdm.so (see third_party/widevine/cdm/BUILD.gn)
