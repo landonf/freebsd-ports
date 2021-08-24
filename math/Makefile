@@ -763,6 +763,7 @@
     SUBDIR += plplot-ada
     SUBDIR += poly2tri
     SUBDIR += polylib
+    SUBDIR += polymake
     SUBDIR += primegen
     SUBDIR += primesieve
     SUBDIR += primme
@@ -873,6 +874,7 @@
     SUBDIR += py-pyhull
     SUBDIR += py-pyipopt
     SUBDIR += py-pymc3
+    SUBDIR += py-pynauty
     SUBDIR += py-pyneqsys
     SUBDIR += py-pynleq2
     SUBDIR += py-pynndescent

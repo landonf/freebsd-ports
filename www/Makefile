@@ -221,6 +221,7 @@
     SUBDIR += guile-www
     SUBDIR += gurl
     SUBDIR += gwsocket
+    SUBDIR += h2c
     SUBDIR += h2o
     SUBDIR += h2o-devel
     SUBDIR += habari
@@ -2333,6 +2334,7 @@
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
     SUBDIR += writeas-cli
+    SUBDIR += writefreely
     SUBDIR += wsdlpull
     SUBDIR += wslay
     SUBDIR += wsmake
