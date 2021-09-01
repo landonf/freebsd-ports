@@ -1,6 +1,6 @@
 PORTNAME=	llvm
-DISTVERSION=	13.0.0rc1
-PORTREVISION=	0
+DISTVERSION=	13.0.0rc2
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
@@ -30,7 +30,7 @@ LLVM_PREFIX=	${PREFIX}/${LLVM_DIR}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
-USES=		cmake compiler:c++11-lib perl5 tar:xz \
+USES=		cmake compiler:c++11-lib cpe perl5 tar:xz \
 		shebangfix
 _USES_PYTHON?=	python:3.6+,build
 USES+=		${_USES_PYTHON}
@@ -90,7 +90,7 @@ OPTIONS_DEFINE_powerpc=	GOLD
 OPTIONS_DEFINE_powerpc64=	GOLD OPENMP
 OPTIONS_DEFINE_powerpc64le=	GOLD OPENMP
 OPTIONS_DEFINE_riscv64=	OPENMP
-OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD CLANG EXTRAS LIT LLD LLDB MLIR PYCLANG
+OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD CLANG EXTRAS FLANG LIT LLD LLDB MLIR PYCLANG
 OPTIONS_DEFAULT_aarch64=	OPENMP
 OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
@@ -99,6 +99,7 @@ OPTIONS_DEFAULT_powerpc64=	${OPTIONS_DEFAULT_powerpc64_${OSREL:R}} OPENMP
 OPTIONS_DEFAULT_powerpc64_13=	GOLD
 OPTIONS_DEFAULT_powerpc64_14=	GOLD
 OPTIONS_DEFAULT_powerpc64le=	GOLD OPENMP
+OPTIONS_EXCLUDE_FreeBSD_11=	COMPILER_RT
 OPTIONS_EXCLUDE_i386=	FLANG
 OPTIONS_EXCLUDE_powerpc=	FLANG
 OPTIONS_DEFAULT_riscv64=	OPENMP
@@ -137,7 +138,7 @@ COMPILER_RT_CMAKE_ON=	-DCOMPILER_RT_INSTALL_PATH=${LLVM_PREFIX}/lib/clang/${LLVM
 COMPILER_RT_USES=	localbase
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS:S|^|${_CRTLIBDIR}/|} \
 			${_COMPILER_RT_BLACKLISTS:S|^|${_CRTBLDIR}/|}
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR} \
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
 DOCS_CONFLICTS_BUILD=	commonmark-cmark-*
 DOCS_PORTDOCS=		llvm
@@ -391,7 +392,7 @@ _BE_LIBS_PowerPC=	AsmParser Disassembler
 _BE_LIBS_RISCV=		AsmParser Disassembler
 _BE_LIBS_Sparc=		AsmParser Disassembler
 _BE_LIBS_SystemZ=	AsmParser Disassembler
-_BE_LIBS_WebAssembly=	AsmParser Disassembler
+_BE_LIBS_WebAssembly=	AsmParser Disassembler Utils
 _BE_LIBS_X86=		AsmParser Disassembler
 _BE_LIBS_XCore=		Disassembler
 .for BE in FREEBSD NATIVE STANDARD
@@ -444,6 +445,7 @@ _COMPILER_RT_LIBS= \
 	libclang_rt.msan-x86_64.a.syms \
 	libclang_rt.msan_cxx-x86_64.a \
 	libclang_rt.msan_cxx-x86_64.a.syms \
+	libclang_rt.orc-x86_64.a \
 	libclang_rt.profile-x86_64.a \
 	libclang_rt.safestack-x86_64.a \
 	libclang_rt.stats-x86_64.a \
@@ -598,6 +600,7 @@ do-test:
 	fi
 
 build-plist:
+	@[ -d ${STAGEDIR} ] || (echo "Can't make plist before package is staged ${STAGEDIR}" && exit 1)
 	${RM} ${PLIST} ${PLIST}.tmp
 	${ECHO_CMD} "@comment >>>>> GENERATED FILE, DO NOT EDIT <<<<<" >> ${PLIST}.tmp
 	${ECHO_CMD} "@comment Alter build-plist target and regenerate as required" >> ${PLIST}.tmp

@@ -75,6 +75,7 @@
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
+    SUBDIR += cinny
     SUBDIR += civetweb
     SUBDIR += ckeditor
     SUBDIR += cl-lml
@@ -467,6 +468,7 @@
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
+    SUBDIR += openarc
     SUBDIR += opencart
     SUBDIR += orangehrm
     SUBDIR += osrm-backend

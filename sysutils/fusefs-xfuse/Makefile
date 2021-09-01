@@ -1,6 +1,7 @@
 PORTNAME=	xfuse
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.0-alpha
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
 
@@ -14,7 +15,6 @@ USES=		cargo fuse
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	KhaledEmaraDev
-GH_PROJECT=	xfuse
 GH_TAGNAME=	9c8824
 
 CARGO_CRATES=	ansi_term-0.11.0 \

@@ -1503,7 +1503,6 @@
     SUBDIR += mage
     SUBDIR += magit
     SUBDIR += magit-devel
-    SUBDIR += magit-popup
     SUBDIR += make++
     SUBDIR += makedepend
     SUBDIR += marisa-trie
@@ -6483,7 +6482,6 @@
     SUBDIR += rubygem-p4ruby
     SUBDIR += rubygem-paint
     SUBDIR += rubygem-paint1
-    SUBDIR += rubygem-paperclip
     SUBDIR += rubygem-paperclip-rails5
     SUBDIR += rubygem-paperclip-rails50
     SUBDIR += rubygem-parser
@@ -6816,6 +6814,7 @@
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
+    SUBDIR += rubygem-warning
     SUBDIR += rubygem-wdm
     SUBDIR += rubygem-weakref
     SUBDIR += rubygem-web-console-rails60

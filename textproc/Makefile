@@ -439,6 +439,7 @@
     SUBDIR += mathml-xsd
     SUBDIR += md4c
     SUBDIR += mdbook
+    SUBDIR += mdbook-linkcheck
     SUBDIR += mdocml
     SUBDIR += meld
     SUBDIR += metauml
@@ -1711,7 +1712,6 @@
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-rexml
     SUBDIR += rubygem-ri_cal
-    SUBDIR += rubygem-rich
     SUBDIR += rubygem-rly
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
