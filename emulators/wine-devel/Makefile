@@ -2,6 +2,7 @@
 
 PORTNAME=	wine
 DISTVERSION=	6.16
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -22,8 +23,10 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex
 LIB_DEPENDS=	libFAudio.so:audio/faudio \
 		libxml2.so:textproc/libxml2
 
-USES=		bison desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
+USES=		bison cpe desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
 USE_GCC=	yes
+
+CPE_VENDOR=	winehq
 
 CONFLICTS_INSTALL=	wine-[0-9]* i386-wine-[0-9]* i386-wine-devel-[0-9]*
 

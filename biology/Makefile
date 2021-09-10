@@ -156,6 +156,7 @@
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
     SUBDIR += py-python-libsbml
+    SUBDIR += py-pywgsim
     SUBDIR += py-resdk
     SUBDIR += py-scikit-bio
     SUBDIR += py-xenaPython
@@ -170,6 +171,7 @@
     SUBDIR += rubygem-bio-executables
     SUBDIR += rubygem-bio-old-biofetch-emulator
     SUBDIR += rubygem-bio-shell
+    SUBDIR += sam2pairwise
     SUBDIR += samtools
     SUBDIR += scrm
     SUBDIR += seaview
