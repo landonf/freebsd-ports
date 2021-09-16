@@ -1,3 +1,167 @@
+  <vuln vid="49c35943-0eeb-421c-af4f-78e04582e5fb">
+    <topic>seatd-launch -- privilege escalation with SUID</topic>
+    <affects>
+      <package>
+	<name>seatd</name>
+	<range><ge>0.6.0</ge><lt>0.6.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kenny Levinsen reports:</p>
+	<blockquote cite="https://lists.sr.ht/~kennylevinsen/seatd-announce/%3CGJ2IZQ.HCKS1J0LSI803%40kl.wtf%3E">
+	  <p>seatd-launch used execlp, which reads the PATH environment variable to
+	     search for the requested executable, to execute seatd. This meant that
+	     the caller could freely control what executable was loaded by adding a
+	     user-writable directory to PATH.</p>
+	  <p>If seatd-launch had the SUID bit set, this could be used by a
+	     malicious user with the ability to execute seatd-launch to mount a
+	     privilege escalation attack to the owner of seatd-launch, which is
+	     likely root.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.sr.ht/~kennylevinsen/seatd-announce/%3CGJ2IZQ.HCKS1J0LSI803%40kl.wtf%3E</url>
+    </references>
+    <dates>
+      <discovery>2021-09-16</discovery>
+      <entry>2021-09-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="47b571f2-157b-11ec-ae98-704d7b472482">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>93.0.4577.82</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html">
+	  <p>This release includes 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1237533] High CVE-2021-30625: Use after free in Selection API.
+	      Reported by Marcin Towalski of Cisco Talos on 2021-08-06</li>
+	    <li>[1241036] High CVE-2021-30626: Out of bounds memory access in
+	      ANGLE. Reported by Jeonghoon Shin of Theori on 2021-08-18</li>
+	    <li>[1245786] High CVE-2021-30627: Type Confusion in Blink layout.
+	      Reported by Aki Helin of OUSPG on 2021-09-01</li>
+	    <li>[1241123] High CVE-2021-30628: Stack buffer overflow in ANGLE.
+	      Reported by Jaehun Jeong(@n3sk) of Theori on 2021-08-18</li>
+	    <li>[1243646] High CVE-2021-30629: Use after free in Permissions.
+	      Reported by Weipeng Jiang (@Krace) from Codesafe Team of Legendsec
+	      at Qi'anxin Group on 2021-08-26</li>
+	    <li>[1244568] High CVE-2021-30630: Inappropriate implementation in
+	      Blink. Reported by SorryMybad (@S0rryMybad) of Kunlun Lab on
+	      2021-08-30</li>
+	    <li>[1246932] High CVE-2021-30631: Type Confusion in Blink layout.
+	      Reported by Atte Kettunen of OUSPG on 2021-09-06</li>
+	    <li>[1247763] High CVE-2021-30632: Out of bounds write in V8.
+	      Reported by Anonymous on 2021-09-08</li>
+	    <li>[1247766] High CVE-2021-30633: Use after free in Indexed DB API.
+	      Reported by Anonymous on 2021-09-08</li>
+	  </ul>
+	  <p>Google is aware that exploits for CVE-2021-30632 and CVE-2021-30633
+	     exist in the wild.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-30625</cvename>
+      <cvename>CVE-2021-30626</cvename>
+      <cvename>CVE-2021-30627</cvename>
+      <cvename>CVE-2021-30628</cvename>
+      <cvename>CVE-2021-30629</cvename>
+      <cvename>CVE-2021-30630</cvename>
+      <cvename>CVE-2021-30631</cvename>
+      <cvename>CVE-2021-30632</cvename>
+      <cvename>CVE-2021-30633</cvename>
+      <url>https://chromereleases.googleblog.com/2021/09/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-09-13</discovery>
+      <entry>2021-09-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="93eb0e48-14ba-11ec-875e-901b0e9408dc">
+    <topic>Matrix clients -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cinny</name>
+	<range><lt>1.2.1</lt></range>
+      </package>
+      <package>
+	<name>element-web</name>
+	<range><lt>1.8.3</lt></range>
+      </package>
+      <package>
+	<name>nheko</name>
+	<range><le>0.8.2_2</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://matrix.org/blog/2021/09/13/vulnerability-disclosure-key-sharing">
+	  <p>Today we are disclosing a critical security issue affecting
+	  multiple Matrix clients and libraries including Element
+	  (Web/Desktop/Android), FluffyChat, Nheko, Cinny, and SchildiChat.</p>
+	  <p>Specifically, in certain circumstances it may be possible to
+	  trick vulnerable clients into disclosing encryption keys for
+	  messages previously sent by that client to user accounts later
+	  compromised by an attacker.</p>
+	  <p>Exploiting this vulnerability to read encrypted messages requires
+	  gaining control over the recipient’s account. This requires either
+	  compromising their credentials directly or compromising their homeserver.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-40823</cvename>
+      <cvename>CVE-2021-40824</cvename>
+      <url>https://matrix.org/blog/2021/09/13/vulnerability-disclosure-key-sharing</url>
+    </references>
+    <dates>
+      <discovery>2021-08-23</discovery>
+      <entry>2021-09-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="376df2f1-1295-11ec-859e-000c292ee6b8">
+    <topic>consul -- rpc: authorize raft requests</topic>
+    <affects>
+      <package>
+	<name>consul</name>
+	<range><lt>1.10.2</lt></range>
+	<range><lt>1.9.9</lt></range>
+	<range><lt>1.8.15</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Hashicorp reports:</p>
+	<blockquote cite="https://github.com/hashicorp/consul/releases/tag/v1.9.9">
+	  <p>HashiCorp Consul Raft RPC layer allows non-server agents with a
+	    valid certificate signed by the same CA to access server-only
+	    functionality, enabling privilege escalation.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-37219</cvename>
+      <url>https://github.com/hashicorp/consul/releases/tag/v1.9.9</url>
+    </references>
+    <dates>
+      <discovery>2021-08-27</discovery>
+      <entry>2021-09-11</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4ea1082a-1259-11ec-b4fa-dd5a552bdd17">
     <topic>go -- archive/zip: overflow in preallocation check can cause OOM panic</topic>
     <affects>

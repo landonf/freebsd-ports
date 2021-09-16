@@ -25,6 +25,7 @@
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += apbs
+    SUBDIR += ascent
     SUBDIR += atompaw
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
@@ -104,6 +105,7 @@
     SUBDIR += hdf5
     SUBDIR += hdf5-18
     SUBDIR += healpix
+    SUBDIR += helfem
     SUBDIR += hepmc3
     SUBDIR += highfive
     SUBDIR += hypre
@@ -290,6 +292,7 @@
     SUBDIR += py-pygeodesy
     SUBDIR += py-pygeometa
     SUBDIR += py-pygmo2
+    SUBDIR += py-pyked
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
