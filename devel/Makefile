@@ -893,6 +893,7 @@
     SUBDIR += googletest
     SUBDIR += goprotobuf
     SUBDIR += goredo
+    SUBDIR += goreleaser
     SUBDIR += gorm
     SUBDIR += goswagger
     SUBDIR += got
@@ -3677,6 +3678,7 @@
     SUBDIR += p5-ZML
     SUBDIR += p5-accessors
     SUBDIR += p5-accessors-fast
+    SUBDIR += p5-alias-module
     SUBDIR += p5-aliased
     SUBDIR += p5-asa
     SUBDIR += p5-autobox
@@ -3855,7 +3857,6 @@
     SUBDIR += pear-PEAR_PackageFileManager
     SUBDIR += pear-PEAR_PackageFileManager2
     SUBDIR += pear-PEAR_PackageFileManager_Plugins
-    SUBDIR += pear-PHPDoc
     SUBDIR += pear-PHPTAL
     SUBDIR += pear-PHPUnit_MockObject
     SUBDIR += pear-PHP_ArrayOf
@@ -4065,6 +4066,7 @@
     SUBDIR += ptmalloc2
     SUBDIR += ptypes
     SUBDIR += publib
+    SUBDIR += purescript-language-server
     SUBDIR += pushmi
     SUBDIR += py-Automat
     SUBDIR += py-BTrees
@@ -4110,7 +4112,6 @@
     SUBDIR += py-apispec
     SUBDIR += py-apns2
     SUBDIR += py-appdirs
-    SUBDIR += py-application
     SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
@@ -4236,6 +4237,7 @@
     SUBDIR += py-backcall
     SUBDIR += py-backports
     SUBDIR += py-backports.csv
+    SUBDIR += py-backports.entry-points-selectable
     SUBDIR += py-backports.zoneinfo
     SUBDIR += py-banal
     SUBDIR += py-bandit
@@ -4862,6 +4864,7 @@
     SUBDIR += py-pkgconfig
     SUBDIR += py-plac
     SUBDIR += py-plan
+    SUBDIR += py-platformdirs
     SUBDIR += py-plette
     SUBDIR += py-plex
     SUBDIR += py-pluggy
@@ -5029,6 +5032,7 @@
     SUBDIR += py-pytest-xdist
     SUBDIR += py-pytest-xprocess
     SUBDIR += py-python-Levenshtein
+    SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-dbusmock
     SUBDIR += py-python-distutils-extra
@@ -5258,6 +5262,7 @@
     SUBDIR += py-types-PyYAML
     SUBDIR += py-types-Werkzeug
     SUBDIR += py-types-click
+    SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psycopg2
@@ -7085,6 +7090,7 @@
     SUBDIR += wasi-compiler-rt11
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
+    SUBDIR += wasm3
     SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wf-config
