@@ -1635,6 +1635,7 @@
     SUBDIR += py-frozen-flask
     SUBDIR += py-gandi.cli
     SUBDIR += py-gevent-websocket
+    SUBDIR += py-ghp-import
     SUBDIR += py-google
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
@@ -1712,7 +1713,7 @@
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
     SUBDIR += py-pygsheets
-    SUBDIR += py-pyjwt
+    SUBDIR += py-pyjwt1
     SUBDIR += py-pylsqpack
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
@@ -2195,7 +2196,6 @@
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-devel
-    SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav

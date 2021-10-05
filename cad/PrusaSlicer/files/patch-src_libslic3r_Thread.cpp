@@ -1,7 +1,3 @@
-Note that this patch may be removed after FreeBSD 11.x EoL
-as latest FreeBSD versions have proper
-pthread_setname_np/pthread_getname_np support.
-
 --- src/libslic3r/Thread.cpp.orig	2021-07-16 10:14:03 UTC
 +++ src/libslic3r/Thread.cpp
 @@ -9,10 +9,10 @@

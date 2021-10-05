@@ -1,5 +1,5 @@
 PORTNAME=	llvm
-DISTVERSION=	13.0.0rc3
+DISTVERSION=	13.0.0rc4
 PORTREVISION=	0
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
@@ -99,7 +99,6 @@ OPTIONS_DEFAULT_powerpc64=	${OPTIONS_DEFAULT_powerpc64_${OSREL:R}} OPENMP
 OPTIONS_DEFAULT_powerpc64_13=	GOLD
 OPTIONS_DEFAULT_powerpc64_14=	GOLD
 OPTIONS_DEFAULT_powerpc64le=	GOLD OPENMP
-OPTIONS_EXCLUDE_FreeBSD_11=	COMPILER_RT
 OPTIONS_EXCLUDE_i386=	FLANG
 OPTIONS_EXCLUDE_powerpc=	FLANG
 OPTIONS_DEFAULT_riscv64=	OPENMP
@@ -174,6 +173,7 @@ LLDB_USES=		lua:53 libedit
 LLDB_VARS=		_USES_PYTHON=python:3.6+
 MLIR_DESC=		Multi-Level Intermediate Representation
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
+OPENMP_CMAKE_ON=	-DLIBOMPTARGET_BUILD_AMDGCN_BCLIB=OFF
 OPENMP_PORTDOCS=	openmp
 PYCLANG_DESC=	Install python bindings to libclang
 PYCLANG_IMPLIES=	CLANG
@@ -473,12 +473,6 @@ _COMPILER_RT_LIBS+=	${_COMPILER_RT_LIBS_i386}
 .if ${ARCH} == "i386"
 _COMPILER_RT_BLACKLISTS+=	asan_ignorelist.txt
 _COMPILER_RT_LIBS+=	${_COMPILER_RT_LIBS_i386}
-.endif
-
-# Use lld for armv6 on clang 7 and up to avoid binutils ld issues
-# PR: 235282
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 70
-LDFLAGS_armv6=-fuse-ld=lld
 .endif
 
 .if ${ARCH} == "armv6"

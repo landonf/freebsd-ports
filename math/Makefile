@@ -252,6 +252,7 @@
     SUBDIR += dune-istl
     SUBDIR += dune-localfunctions
     SUBDIR += dune-metagrid
+    SUBDIR += dune-multidomaingrid
     SUBDIR += dune-pdelab
     SUBDIR += dune-polygongrid
     SUBDIR += dune-spgrid
@@ -371,6 +372,7 @@
     SUBDIR += jtransforms
     SUBDIR += jts
     SUBDIR += kalgebra
+    SUBDIR += kalker
     SUBDIR += kbruch
     SUBDIR += kcalc
     SUBDIR += kfr
@@ -752,6 +754,7 @@
     SUBDIR += pecl-bitset
     SUBDIR += pecl-stats2
     SUBDIR += permlib
+    SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += php73-bcmath
     SUBDIR += php73-gmp
@@ -793,6 +796,7 @@
     SUBDIR += py-amply
     SUBDIR += py-apgl
     SUBDIR += py-arviz
+    SUBDIR += py-arybo
     SUBDIR += py-autograd
     SUBDIR += py-baycomp
     SUBDIR += py-bayesian-optimization
@@ -894,6 +898,7 @@
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
     SUBDIR += py-pysym
+    SUBDIR += py-pytanque
     SUBDIR += py-python-fcl
     SUBDIR += py-python-igraph
     SUBDIR += py-python-louvain
@@ -938,6 +943,7 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
+    SUBDIR += qhull8
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc

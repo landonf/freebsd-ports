@@ -1,8 +1,7 @@
 # Created by: Dave McKay <dave@mu.org>
 
 PORTNAME=	seahorse
-PORTVERSION=	40.0
-PORTREVISION=	1
+PORTVERSION=	41.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -56,11 +55,5 @@ AVAHI_LIB_DEPENDS=	libavahi-client.so:net/avahi-app
 AVAHI_MESON_TRUE=	key-sharing
 LDAP_USE=		OPENLDAP=yes
 LDAP_MESON_TRUE=	ldap-support
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-LDFLAGS+=	-fuse-ld=lld
-.endif
 
 .include <bsd.port.mk>

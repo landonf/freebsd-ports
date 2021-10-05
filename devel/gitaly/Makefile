@@ -1,5 +1,5 @@
 PORTNAME=	gitaly
-DISTVERSION=	14.3.0
+DISTVERSION=	14.3.2
 PORTREVISION=	0
 CATEGORIES=	devel
 
@@ -36,6 +36,8 @@ LIB_DEPENDS=	libgit2.so:devel/libgit2
 USES=		cpe gmake go:modules,no_targets pkgconfig
 USE_RUBY=	yes
 
+CPE_VENDOR=	gitlab
+
 MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 # make sure to pass go build options into make process
 MAKE_ENV+=	${GO_ENV}
@@ -43,7 +45,7 @@ MAKE_ENV+=	${GO_ENV}
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find this here: https://gitlab.com/gitlab-org/gitaly/-/tags
-GL_COMMIT=	1a0e5d9b50a5ae76b5a11fd09cf66d2213ffbef6
+GL_COMMIT=	52407ecfce7fc39b4f5f6db15cc6cb4e9a8c1f60
 
 # for go dependencies
 USE_GITHUB=	nodefault
