@@ -5245,7 +5245,6 @@
     SUBDIR += py-testtools
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
-    SUBDIR += py-thriftpy
     SUBDIR += py-thriftpy2
     SUBDIR += py-tiamat
     SUBDIR += py-timelib
@@ -5578,6 +5577,7 @@
     SUBDIR += rubygem-actionview52
     SUBDIR += rubygem-actionview60
     SUBDIR += rubygem-actionview61
+    SUBDIR += rubygem-actionview613
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob4
     SUBDIR += rubygem-activejob5
@@ -5585,6 +5585,7 @@
     SUBDIR += rubygem-activejob52
     SUBDIR += rubygem-activejob60
     SUBDIR += rubygem-activejob61
+    SUBDIR += rubygem-activejob613
     SUBDIR += rubygem-activemessaging
     SUBDIR += rubygem-activerecord-deprecated_finders
     SUBDIR += rubygem-activesupport4
@@ -5593,6 +5594,7 @@
     SUBDIR += rubygem-activesupport52
     SUBDIR += rubygem-activesupport60
     SUBDIR += rubygem-activesupport61
+    SUBDIR += rubygem-activesupport613
     SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
@@ -6188,8 +6190,10 @@
     SUBDIR += rubygem-devise-rails52
     SUBDIR += rubygem-devise-rails60
     SUBDIR += rubygem-devise-rails61
+    SUBDIR += rubygem-devise-rails613
     SUBDIR += rubygem-devise47-rails60
     SUBDIR += rubygem-devise47-rails61
+    SUBDIR += rubygem-devise47-rails613
     SUBDIR += rubygem-did_you_mean
     SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
@@ -6305,6 +6309,7 @@
     SUBDIR += rubygem-gettext_i18n_rails_js-rails52
     SUBDIR += rubygem-gettext_i18n_rails_js-rails60
     SUBDIR += rubygem-gettext_i18n_rails_js-rails61
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails613
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
@@ -6547,6 +6552,7 @@
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
     SUBDIR += rubygem-peek-rails61
+    SUBDIR += rubygem-peek-rails613
     SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
@@ -6595,6 +6601,7 @@
     SUBDIR += rubygem-rails-i18n-rails52
     SUBDIR += rubygem-rails-i18n-rails60
     SUBDIR += rubygem-rails-i18n-rails61
+    SUBDIR += rubygem-rails-i18n-rails613
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -6868,6 +6875,7 @@
     SUBDIR += rubygem-weakref
     SUBDIR += rubygem-web-console-rails60
     SUBDIR += rubygem-web-console-rails61
+    SUBDIR += rubygem-web-console-rails613
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-web-console3-rails5
     SUBDIR += rubygem-web-console3-rails50
@@ -6876,6 +6884,7 @@
     SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails60
     SUBDIR += rubygem-webpacker-rails61
+    SUBDIR += rubygem-webpacker-rails613
     SUBDIR += rubygem-webpacker4-rails5
     SUBDIR += rubygem-webpacker4-rails50
     SUBDIR += rubygem-webpacker4-rails60
