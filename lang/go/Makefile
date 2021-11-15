@@ -1,8 +1,8 @@
 # Created by: Devon H. O'Dell <devon.odell@gmail.com>
 
 PORTNAME=	go
-PORTVERSION?=	1.17.1
-PORTREVISION?=	0
+PORTVERSION?=	1.17.3
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	lang
 MASTER_SITES?=	https://golang.org/dl/ \
@@ -106,6 +106,7 @@ do-test:
 		GOARCH=${GOARCH_${ARCH}} \
 		GO386=${GO386} \
 		GOARM=${GOARM_${ARCH}} \
+		CC=${CC} \
 		${SH} run.bash -no-rebuild
 
 .if !defined(_GO_MAKESUM_GUARD)

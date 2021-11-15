@@ -2,6 +2,7 @@
 
 PORTNAME=	handbrake
 DISTVERSION=	1.4.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/HandBrake/HandBrake/releases/download/${DISTVERSION}/
 MASTER_SITES+=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/:contrib
@@ -62,7 +63,7 @@ LIB_DEPENDS+=	libdvdcss.so:multimedia/libdvdcss
 GNU_CONFIGURE=	yes
 MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 
-BINARY_ALIAS=   python3=${PYTHON_VERSION}
+BINARY_ALIAS=	python3=${PYTHON_VERSION} ldconfig=${FALSE}
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build

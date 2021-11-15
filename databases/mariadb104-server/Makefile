@@ -1,8 +1,8 @@
 # Created by: Bernard Spil <brnrd@FreeBSD.org>
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.21
-PORTREVISION?=	1
+PORTVERSION=	10.4.22
+PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
 		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
@@ -201,8 +201,8 @@ PLIST_SUB+=	WSREP="@comment "
 .endif
 
 .if ${ARCH} == i386
-USE_GCC=       yes
-CFLAGS+=       -latomic -fasynchronous-unwind-tables
+USE_GCC=	yes
+CFLAGS+=	-latomic -fasynchronous-unwind-tables
 .endif
 
 .if ${OPSYS} == DragonFly

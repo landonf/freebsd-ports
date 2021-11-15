@@ -1,7 +1,6 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
-PORTREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/:chromium \
 		https://commondatastorage.googleapis.com/chromium-fonts/:chromium_testfonts
@@ -16,6 +15,8 @@ COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
+
+BROKEN_i386=	LLVM ERROR: out of memory
 
 FETCH_DEPENDS=		yarn-node14>0:www/yarn-node14
 EXTRACT_DEPENDS=	yarn-node14>0:www/yarn-node14
@@ -54,8 +55,9 @@ TEST_DEPENDS=		git:devel/git \
 			${PYTHON_PKGNAMEPREFIX}python-dbusmock>0:devel/py-python-dbusmock@${PY_FLAVOR} \
 			npm-node14>0:www/npm-node14
 
-USES=		bison dos2unix gettext-tools gl gnome jpeg localbase:ldflags \
+USES=		bison dos2unix cpe gettext-tools gl gnome jpeg localbase:ldflags \
 		ninja pkgconfig python:2.7,build,test shebangfix tar:xz xorg
+CPE_VENDOR=	electronjs
 DOS2UNIX_FILES=	third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
 USE_GITHUB=	yes
 GH_TAGNAME=	${DISTVERSIONPREFIX}${ELECTRON_VER}

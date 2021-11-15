@@ -255,6 +255,8 @@
     SUBDIR += desktop-installer
     SUBDIR += detox
     SUBDIR += devcpu-data
+    SUBDIR += devcpu-data-amd
+    SUBDIR += devcpu-data-intel
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -828,6 +830,7 @@
     SUBDIR += p5-BSD-getloadavg
     SUBDIR += p5-BackupPC-XS
     SUBDIR += p5-Brackup
+    SUBDIR += p5-Device-RAID-Poller
     SUBDIR += p5-Dir-Purge
     SUBDIR += p5-File-BackupCopy
     SUBDIR += p5-File-Cmp
@@ -1153,15 +1156,12 @@
     SUBDIR += rubygem-chef
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-bin
+    SUBDIR += rubygem-chef-cleanroom
     SUBDIR += rubygem-chef-config
-    SUBDIR += rubygem-chef-config15
-    SUBDIR += rubygem-chef-dk
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
-    SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
-    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -1190,13 +1190,13 @@
     SUBDIR += rubygem-itamae
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-license-acceptance
+    SUBDIR += rubygem-license_scout
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
     SUBDIR += rubygem-mogilefs-client
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
-    SUBDIR += rubygem-ohai15
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
     SUBDIR += rubygem-puppetfile-resolver
@@ -1518,6 +1518,7 @@
     SUBDIR += wmapmload
     SUBDIR += wmbluecpu
     SUBDIR += wmbsdbatt
+    SUBDIR += wmcpuload
     SUBDIR += wmcube
     SUBDIR += wmdiskmon
     SUBDIR += wmflame
@@ -1588,6 +1589,7 @@
     SUBDIR += znapzend
     SUBDIR += zogftw
     SUBDIR += zoxide
+    SUBDIR += zpool-iostat-viz
     SUBDIR += zrep
     SUBDIR += zrepl
     SUBDIR += zsd

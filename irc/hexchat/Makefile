@@ -19,15 +19,15 @@ LIB_DEPENDS=	libproxy.so:net/libproxy \
 		libfreetype.so:print/freetype2
 RUN_DEPENDS=	${LOCALBASE}/share/xml/iso-codes/iso_639.xml:misc/iso-codes
 
-USES=		compiler:c++11-lang desktop-file-utils gettext-tools gnome \
+USES=		compiler:c++11-lang cpe desktop-file-utils gettext-tools gnome \
 		libtool localbase meson ninja pkgconfig python:3.5+ shebangfix \
 		ssl xorg
+CPE_VENDOR=	${PORTNAME}_project
 USE_GNOME=	cairo gtk20 intltool libxml2
 USE_XORG=	x11
 USE_GITHUB=	yes
 
 MESON_ARGS=	-Dtls=enabled -Dgtk-frontend=true -Dwith-python=python-${PYTHON_VER}
-INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 LIBS+=		-lX11
@@ -39,7 +39,7 @@ PORTDOCS=	*
 OPTIONS_DEFINE=		CA_BUNDLE CANBERRA DBUS DOCS FISHLIM LUA PERL TEXTFE \
 			SYSINFO
 
-OPTIONS_DEFAULT=	CA_BUNDLE CANBERRA DBUS NOTIFY PERL
+OPTIONS_DEFAULT=	CA_BUNDLE CANBERRA DBUS PERL
 
 OPTIONS_SUB=	yes
 
@@ -50,8 +50,6 @@ TEXTFE_DESC=		Text frontend
 SYSINFO_DESC=		Sysinfo plugin
 
 CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
-CA_BUNDLE_VARS=	CA_BUNDLE="${LOCALBASE}/share/certs/ca-root-nss.crt"
-CA_BUNDLE_VARS_OFF=	CA_BUNDLE=NULL
 CANBERRA_LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 CANBERRA_MESON_ON=	-Dlibcanberra=enabled
 CANBERRA_MESON_OFF=	-Dlibcanberra=disabled
@@ -62,9 +60,7 @@ FISHLIM_MESON_TRUE=	with-fishlim
 LUA_MESON_ON=		-Dwith-lua=lua-${LUA_VER}
 LUA_MESON_OFF=		-Dwith-lua=false
 LUA_USES=		lua
-LUA_USE=		GCC=any
-NOTIFY_LIB_DEPENDS=	libnotify.so:devel/libnotify
-NOTIFY_MESON_TRUE=	with-libnotify
+LUA_USE=		GCC=yes
 PERL_MESON_TRUE=	with-perl
 PERL_USES=		perl5
 TEXTFE_MESON_TRUE=	text-frontend

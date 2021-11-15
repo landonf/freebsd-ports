@@ -1,18 +1,14 @@
 PORTNAME=	mesa
-DISTVERSION=	21.2-branchpoint-3275
-DISTVERSIONSUFFIX=	-g0209311c6e8
+DISTVERSION=	21.3-branchpoint-923
+DISTVERSIONSUFFIX=	-g01d36149cdd
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	55822330540d.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	f6c7569ad9ea.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	cb8f7a253934.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/3568
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	e141af3ac859.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
-PATCHFILES+=	167fa293d7b7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5464
 PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
-PATCHFILES+=	891152495cf7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9168
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
@@ -32,7 +28,8 @@ LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
-USES=		bison compiler:c++11-lib meson pkgconfig python:3.6+,build shebangfix
+USES=		bison cpe compiler:c++11-lib meson pkgconfig python:3.6+,build shebangfix
+CPE_VENDOR=	mesa3d
 USE_GITHUB=	yes
 GH_ACCOUNT=	mesa3d
 USE_LDCONFIG=	yes

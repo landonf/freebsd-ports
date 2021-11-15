@@ -36,6 +36,7 @@
     SUBDIR += assh
     SUBDIR += authenticator
     SUBDIR += autossh
+    SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
     SUBDIR += aws-vault
@@ -336,6 +337,7 @@
     SUBDIR += libu2f-host
     SUBDIR += libuecc
     SUBDIR += libwhisker
+    SUBDIR += libxcrypt
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
     SUBDIR += linux-bitwarden-cli
@@ -387,6 +389,8 @@
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
+    SUBDIR += nextcloud-twofactor_admin
+    SUBDIR += nextcloud-twofactor_nextcloud_notification
     SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += nextcloud-twofactor_webauthn
@@ -897,6 +901,7 @@
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
+    SUBDIR += py-django-auth-kerberos
     SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa
     SUBDIR += py-ed25519ll
@@ -1073,7 +1078,6 @@
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails60
     SUBDIR += rubygem-devise-two-factor-rails61
-    SUBDIR += rubygem-devise-two-factor-rails613
     SUBDIR += rubygem-devise-two-factor30-rails52
     SUBDIR += rubygem-devise-two-factor30-rails60
     SUBDIR += rubygem-devise_pam_authenticatable2
@@ -1225,6 +1229,7 @@
     SUBDIR += snort3
     SUBDIR += snortsam
     SUBDIR += snortsnarf
+    SUBDIR += snowflake-tor
     SUBDIR += snuffleupagus
     SUBDIR += softether
     SUBDIR += softether-devel
@@ -1323,6 +1328,7 @@
     SUBDIR += wazuh-agent
     SUBDIR += webfwlog
     SUBDIR += webscarab
+    SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssh

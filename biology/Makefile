@@ -6,6 +6,7 @@
     SUBDIR += avida
     SUBDIR += babel
     SUBDIR += bamtools
+    SUBDIR += bamutil
     SUBDIR += bbmap
     SUBDIR += bcftools
     SUBDIR += bedtools
@@ -56,6 +57,7 @@
     SUBDIR += gemma
     SUBDIR += generand
     SUBDIR += gff2ps
+    SUBDIR += gffread
     SUBDIR += gmap
     SUBDIR += gperiodic
     SUBDIR += graphlan
@@ -76,6 +78,7 @@
     SUBDIR += lamarc
     SUBDIR += libbigwig
     SUBDIR += libgtextutils
+    SUBDIR += libneurosim
     SUBDIR += libnuml
     SUBDIR += libsbml
     SUBDIR += libsedml
@@ -136,12 +139,13 @@
     SUBDIR += psi88
     SUBDIR += py-Genesis-PyAPI
     SUBDIR += py-PySCeS
-    SUBDIR += py-bigwig
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-crossmap
     SUBDIR += py-cutadapt
+    SUBDIR += py-deeptools
+    SUBDIR += py-deeptoolsintervals
     SUBDIR += py-dnaio
     SUBDIR += py-ete3
     SUBDIR += py-gffutils
@@ -157,6 +161,8 @@
     SUBDIR += py-orange3-bioinformatics
     SUBDIR += py-orange3-single-cell
     SUBDIR += py-pandas-charm
+    SUBDIR += py-py2bit
+    SUBDIR += py-pybigwig
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
     SUBDIR += py-python-libsbml

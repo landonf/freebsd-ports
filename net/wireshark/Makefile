@@ -2,6 +2,7 @@
 
 PORTNAME?=	wireshark
 PORTVERSION=	3.4.9
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
 		http://ftp.uni-kl.de/pub/wireshark/src/ \
@@ -155,7 +156,6 @@ CMAKE_ARGS+=	-DBUILD_wireshark=OFF
 PLIST_SUB+=	GUI="@comment "
 .else
 USES+=		desktop-file-utils shared-mime-info
-INSTALLS_ICONS=	yes
 PLIST_SUB+=	GUI=""
 .endif
 

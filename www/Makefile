@@ -109,6 +109,7 @@
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
+    SUBDIR += dolibarr13
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += drupal7
@@ -266,6 +267,7 @@
     SUBDIR += jesred
     SUBDIR += jetty8
     SUBDIR += jetty9
+    SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
     SUBDIR += joomla3
@@ -455,6 +457,7 @@
     SUBDIR += node
     SUBDIR += node10
     SUBDIR += node14
+    SUBDIR += node16
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -462,6 +465,8 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node14
+    SUBDIR += npm-node16
+    SUBDIR += npm-node17
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -949,6 +954,7 @@
     SUBDIR += p5-HTTP-Tiny-Multipart
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
+    SUBDIR += p5-HTTP-Tiny-UNIX
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTP-XSCookies
     SUBDIR += p5-HTTPD-Log-Filter
@@ -1548,6 +1554,7 @@
     SUBDIR += py-django-post_office
     SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
+    SUBDIR += py-django-radius
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha
     SUBDIR += py-django-redis
@@ -1838,14 +1845,12 @@
     SUBDIR += rubygem-actioncable52
     SUBDIR += rubygem-actioncable60
     SUBDIR += rubygem-actioncable61
-    SUBDIR += rubygem-actioncable613
     SUBDIR += rubygem-actionpack4
     SUBDIR += rubygem-actionpack5
     SUBDIR += rubygem-actionpack50
     SUBDIR += rubygem-actionpack52
     SUBDIR += rubygem-actionpack60
     SUBDIR += rubygem-actionpack61
-    SUBDIR += rubygem-actionpack613
     SUBDIR += rubygem-activeresource
     SUBDIR += rubygem-activeresource4
     SUBDIR += rubygem-acts-as-taggable-on
@@ -1997,7 +2002,6 @@
     SUBDIR += rubygem-kaminari-rails52
     SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kaminari-rails61
-    SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less
@@ -2009,7 +2013,6 @@
     SUBDIR += rubygem-lograge-rails52
     SUBDIR += rubygem-lograge-rails60
     SUBDIR += rubygem-lograge-rails61
-    SUBDIR += rubygem-lograge-rails613
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2075,7 +2078,6 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
-    SUBDIR += rubygem-rails613
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
@@ -2086,7 +2088,6 @@
     SUBDIR += rubygem-railties52
     SUBDIR += rubygem-railties60
     SUBDIR += rubygem-railties61
-    SUBDIR += rubygem-railties613
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
@@ -2108,7 +2109,6 @@
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
-    SUBDIR += rubygem-responders-rails613
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2251,6 +2251,7 @@
     SUBDIR += transproxy
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tusc
     SUBDIR += tusd
     SUBDIR += twiki
     SUBDIR += twiki-BehaviourContrib
@@ -2365,6 +2366,8 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node14
+    SUBDIR += yarn-node16
+    SUBDIR += yarn-node17
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

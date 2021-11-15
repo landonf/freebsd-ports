@@ -2,7 +2,6 @@
 
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
-PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 # MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
@@ -13,10 +12,11 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
 
 USE_GITHUB=	yes
-GH_ACCOUNT=     networkupstools 
-GH_TAGNAME=     15cebc68
-NUT_COMMIT_DATE=	2021.10.04
+GH_ACCOUNT=	networkupstools
+GH_TAGNAME=	bca96173
+NUT_COMMIT_DATE=	2021.11.08
 
+MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python:build
@@ -68,6 +68,9 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-user=${NUT_USER} \
 		--with-group=${NUT_GROUP} \
 		--with-dev
+
+CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
+LIB_DEPENDS+=	libltdl.so:devel/libltdl
 
 BUILD_DEPENDS=	asciidoc:textproc/asciidoc
 

@@ -63,7 +63,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  In this case, incrementing PORTEPOCH forces the revision.
 #				  Default: 0 (no effect).
 # PKGNAME		- Always defined as
-#				  ${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}.
+#				  ${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}.
 #				  Do not define this in your Makefile.
 # PKGNAMEPREFIX	- Prefix to specify that port is language-specific, etc.
 #				  Optional.
@@ -1545,6 +1545,12 @@ ${v}+=	${${FLAVOR}_${v}}
 ${v}=	flavor "${FLAVOR}" ${${FLAVOR}_${v}}
 .endif
 .endfor
+.if defined(FLAVORS_SUB)
+PLIST_SUB+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment " NO_${v:tu}=""@}
+PLIST_SUB+=	${FLAVOR:tu}="" NO_${FLAVOR:tu}="@comment "
+SUB_LIST+=	${FLAVORS:N${FLAVOR}:@v@${v:tu}="\@comment " NO_${v:tu}=""@}
+SUB_LIST+=	${FLAVOR:tu}="" NO_${FLAVOR:tu}="@comment "
+.endif
 .endif # defined(${FLAVOR})
 
 
@@ -3353,6 +3359,7 @@ check-build-conflicts:
 .endif
 
 .if !target(identify-install-conflicts)
+CONFLICT_WARNING_WAIT?=	10
 identify-install-conflicts:
 .if ( defined(CONFLICTS) || defined(CONFLICTS_INSTALL) ) && !defined(DISABLE_CONFLICTS)
 	@conflicts_with=$$( \
@@ -3371,7 +3378,7 @@ identify-install-conflicts:
 		${ECHO_MSG}; \
 		${ECHO_MSG} "      They install files into the same place."; \
 		${ECHO_MSG} "      You may want to stop build with Ctrl + C."; \
-		sleep 10; \
+		sleep ${CONFLICT_WARNING_WAIT}; \
 	fi
 .endif
 .endif
@@ -3973,7 +3980,9 @@ _CHECKSUM_INIT_ENV= \
 # checksum and sizes checks.
 makesum: check-sanity
 	@cd ${.CURDIR} && ${MAKE} fetch NO_CHECKSUM=yes \
-			DISABLE_SIZE=yes DISTFILES="${DISTFILES}"
+			DISABLE_SIZE=yes DISTFILES="${DISTFILES}" \
+			MASTER_SITES="${MASTER_SITES}" \
+			PATCH_SITES="${PATCH_SITES}"
 	@${SETENV} \
 			${_CHECKSUM_INIT_ENV} \
 			dp_CHECKSUM_ALGORITHMS='${CHECKSUM_ALGORITHMS:tu}' \
