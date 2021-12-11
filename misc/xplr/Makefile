@@ -1,6 +1,7 @@
 PORTNAME=	xplr
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.15.2
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -151,6 +152,11 @@ _ICONS=		${STAGEDIR}${PREFIX}/share/icons/hicolor
 .if ${ARCH:Mpowerpc64*}
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-Cargo.toml
 LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
+.endif
+
+.if ${ARCH} == powerpc
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-Cargo.toml
+LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
 .endif
 
 post-install:

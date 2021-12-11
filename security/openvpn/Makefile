@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-strict
 # set PLUGIN_LIBDIR so that unqualified plugin paths are found:
 CONFIGURE_ENV+=		PLUGINDIR="${PREFIX}/lib/openvpn/plugins"
 
-CONFLICTS_INSTALL?=	openvpn-2.[!5].* openvpn-devel-[0-9]* openvpn-mbedtls-[0-9]*
+CONFLICTS_INSTALL?=	openvpn-2.[!5].* openvpn-devel openvpn-mbedtls
 
 SUB_FILES=		pkg-message openvpn-client
 
@@ -93,6 +93,7 @@ CFLAGS+=		-DLOG_OPENVPN=${LOG_OPENVPN}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMBEDTLS}
+BROKEN_FreeBSD_14=      OpenVPN-mbedTLS fails on FreeBSD 14
 _tlslibs=libmbedtls libmbedx509 libmbedcrypto
 .else
 # OpenSSL

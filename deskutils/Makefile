@@ -128,6 +128,7 @@
     SUBDIR += just
     SUBDIR += kaddressbook
     SUBDIR += kalarm
+    SUBDIR += kalendar
     SUBDIR += kcharselect
     SUBDIR += kchmviewer
     SUBDIR += kdeconnect-kde
@@ -244,6 +245,7 @@
     SUBDIR += thinkingrock
     SUBDIR += timewarrior
     SUBDIR += todo
+    SUBDIR += todour
     SUBDIR += toolboxkit
     SUBDIR += tpb
     SUBDIR += treeline

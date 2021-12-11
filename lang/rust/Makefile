@@ -1,7 +1,7 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
 
 PORTNAME=	rust
-PORTVERSION?=	1.56.0
+PORTVERSION?=	1.57.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -37,6 +37,7 @@ USES=		cpe ninja:build pkgconfig python:3.6+,build ssl tar:xz
 CPE_VENDOR=	rust-lang
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \
+		LIBGIT2_NO_PKG_CONFIG=1 \
 		OPENSSL_DIR="${OPENSSLBASE}" \
 		RUST_BACKTRACE=1
 TEST_ENV=	${MAKE_ENV} \
@@ -66,9 +67,9 @@ WASM_VARS=		_RUST_BUILD_WASM=true \
 			_RUST_TARGETS+=wasm32-unknown-unknown
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
-# See WRKSRC/src/stage0.txt for the date and version values.
-BOOTSTRAPS_DATE?=		2021-09-09
-RUST_BOOTSTRAP_VERSION?=	1.55.0
+# See WRKSRC/src/stage0.json for the date and version values
+BOOTSTRAPS_DATE?=		2021-10-21
+RUST_BOOTSTRAP_VERSION?=	1.56.0
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
@@ -114,7 +115,9 @@ EXTRA_PATCHES+=	${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX}
 # anyway...
 .if exists(${PATCHDIR}/no-hardlinks)
 _KERN_OSRELDATE!=	${SYSCTL} -n kern.osreldate 2>/dev/null || echo 0
-.  if ${_KERN_OSRELDATE} < 1400040
+.  if ${_KERN_OSRELDATE} >= 1400040
+.  elif ${_KERN_OSRELDATE} >= 1300521
+.  else
 EXTRA_PATCHES+=		${PATCHDIR}/no-hardlinks
 .  endif
 .endif
@@ -166,6 +169,7 @@ do-configure:
 .endfor
 	@${ECHO_CMD} 'changelog-seen=2' > ${WRKSRC}/config.toml
 	@${ECHO_CMD} '[build]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'build-dir="${WRKDIR}/_build"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'build-stage=2' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'doc-stage=2' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'test-stage=2' >> ${WRKSRC}/config.toml

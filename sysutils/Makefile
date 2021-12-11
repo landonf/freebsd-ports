@@ -95,9 +95,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos17-client
-    SUBDIR += bareos17-client-static
-    SUBDIR += bareos17-server
     SUBDIR += bareos18-client
     SUBDIR += bareos18-server
     SUBDIR += bareos18-traymonitor
@@ -165,11 +162,9 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
-    SUBDIR += cfengine315
     SUBDIR += cfengine316
     SUBDIR += cfengine317
     SUBDIR += cfengine318
@@ -619,6 +614,7 @@
     SUBDIR += libg15render
     SUBDIR += libgksu
     SUBDIR += libieee1284
+    SUBDIR += libptytty
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
@@ -1487,6 +1483,7 @@
     SUBDIR += vchanger
     SUBDIR += vcp
     SUBDIR += vector
+    SUBDIR += viddy
     SUBDIR += videogen
     SUBDIR += vii
     SUBDIR += vils

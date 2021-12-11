@@ -1,6 +1,560 @@
+  <vuln vid="720505fe-593f-11ec-9ba8-002324b2fba8">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go</name>
+	<range><lt>1.17.5,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+  <blockquote cite="https://github.com/golang/go/issues/50058">
+	  <p>net/http: limit growth of header canonicalization cache. An
+	    attacker can cause unbounded memory growth in a Go server accepting
+	    HTTP/2 requests.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/golang/go/issues/50057">
+	  <p>syscall: don’t close fd 0 on ForkExec error. When a Go program
+	    running on a Unix system is out of file descriptors and calls
+	    syscall.ForkExec (including indirectly by using the os/exec
+	    package), syscall.ForkExec can close file descriptor 0 as it fails.
+	    If this happens (or can be provoked) repeatedly, it can result in
+	    misdirected I/O such as writing network traffic intended for one
+	    connection to a different connection, or content intended for one
+	    file to a different one.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44716</cvename>
+      <url>https://github.com/golang/go/issues/50058</url>
+      <cvename>CVE-2021-44717</cvename>
+      <url>https://github.com/golang/go/issues/50057</url>
+    </references>
+    <dates>
+      <discovery>2021-12-08</discovery>
+      <entry>2021-12-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="18ac074c-579f-11ec-aac7-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.93</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html">
+	  <p>This release contains 22 security fixes, including:</p>
+	  <ul>
+	    <li>[1267661] High CVE-2021-4052: Use after free in web apps.
+	      Reported by Wei Yuan of MoyunSec VLab on 2021-11-07</li>
+	    <li>[1267791] High CVE-2021-4053: Use after free in UI. Reported by
+	      Rox on 2021-11-08</li>
+	    <li>[1265806] High CVE-2021-4079: Out of bounds write in WebRTC.
+	      Reported by Brendon Tiszka on 2021-11-01</li>
+	    <li>[1239760] High CVE-2021-4054: Incorrect security UI in autofill.
+	      Reported by Alesandro Ortiz on 2021-08-13</li>
+	    <li>[1268738] High CVE-2021-4078: Type confusion in V8. Reported by
+	      Nan Wang (@eternalsakura13) and Guang Gong of 360 Alpha Lab on
+	      2021-11-09</li>
+	    <li>[1266510] High CVE-2021-4055: Heap buffer overflow in
+	      extensions. Reported by Chen Rong on 2021-11-03</li>
+	    <li>[1260939] High CVE-2021-4056: Type Confusion in loader. Reported
+	      by @__R0ng of 360 Alpha Lab on 2021-10-18</li>
+	    <li>[1262183] High CVE-2021-4057: Use after free in file API.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2021-10-21</li>
+	    <li>[1267496] High CVE-2021-4058: Heap buffer overflow in ANGLE.
+	      Reported by Abraruddin Khan and Omair on 2021-11-06</li>
+	    <li>[1270990] High CVE-2021-4059: Insufficient data validation in
+	      loader. Reported by Luan Herrera (@lbherrera_) on 2021-11-17</li>
+	    <li>[1271456] High CVE-2021-4061: Type Confusion in V8. Reported by
+	      Paolo Severini on 2021-11-18</li>
+	    <li>[1272403] High CVE-2021-4062: Heap buffer overflow in BFCache.
+	      Reported by Leecraso and Guang Gong of 360 Alpha Lab on
+	      2021-11-22</li>
+	    <li>[1273176] High CVE-2021-4063: Use after free in developer tools.
+	      Reported by Abdulrahman Alqabandi, Microsoft Browser Vulnerability
+	      Research on 2021-11-23</li>
+	    <li>[1273197] High CVE-2021-4064: Use after free in screen capture.
+	      Reported by @ginggilBesel on 2021-11-23</li>
+	    <li>[1273674] High CVE-2021-4065: Use after free in autofill.
+	      Reported by 5n1p3r0010 on 2021-11-25</li>
+	    <li>[1274499] High CVE-2021-4066: Integer underflow in ANGLE.
+	      Reported by Jaehun Jeong(@n3sk) of Theori on 2021-11-29</li>
+	    <li>[1274641] High CVE-2021-4067: Use after free in window manager.
+	      Reported by @ginggilBesel on 2021-11-29</li>
+	    <li>[1265197] Low CVE-2021-4068: Insufficient validation of
+	      untrusted input in new tab page. Reported by NDevTK on
+	      2021-10-31</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-4052</cvename>
+      <cvename>CVE-2021-4053</cvename>
+      <cvename>CVE-2021-4054</cvename>
+      <cvename>CVE-2021-4055</cvename>
+      <cvename>CVE-2021-4056</cvename>
+      <cvename>CVE-2021-4057</cvename>
+      <cvename>CVE-2021-4058</cvename>
+      <cvename>CVE-2021-4059</cvename>
+      <cvename>CVE-2021-4061</cvename>
+      <cvename>CVE-2021-4062</cvename>
+      <cvename>CVE-2021-4063</cvename>
+      <cvename>CVE-2021-4064</cvename>
+      <cvename>CVE-2021-4065</cvename>
+      <cvename>CVE-2021-4066</cvename>
+      <cvename>CVE-2021-4067</cvename>
+      <cvename>CVE-2021-4068</cvename>
+      <cvename>CVE-2021-4078</cvename>
+      <cvename>CVE-2021-4079</cvename>
+      <url>https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-06</discovery>
+      <entry>2021-12-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b299417a-5725-11ec-a587-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>14.5.0</ge><lt>14.5.2</lt></range>
+	<range><ge>14.4.0</ge><lt>14.4.4</lt></range>
+	<range><ge>0</ge><lt>14.3.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/">
+	  <p>Group members with developer role can escalate their privilege to maintainer on projects that they import</p>
+	  <p>When user registration is limited, external users that aren't developers shouldn't have access to the CI Lint API</p>
+	  <p>Collision in access memoization leads to potential elevated privileges on groups and projects</p>
+	  <p>Project access token names are returned for unauthenticated requesters</p>
+	  <p>Sensitive info disclosure in logs</p>
+	  <p>Disclosure of a user's custom project and group templates</p>
+	  <p>ReDoS in Maven package version</p>
+	  <p>Potential denial of service via the Diff feature</p>
+	  <p>Regular Expression Denial of Service via user comments</p>
+	  <p>Service desk email accessible by any project member</p>
+	  <p>Regular Expression Denial of Service via quick actions</p>
+	  <p>IDOR in "external status check" API leaks data about any status check on the instance</p>
+	  <p>Default branch name visible in public projects restricting access to the source code repository</p>
+	  <p>Deploy token allows access to disabled project Wiki</p>
+	  <p>Regular Expression Denial of Service via deploy Slash commands</p>
+	  <p>Users can reply to Vulnerability Report discussions despite Only Project Members settings</p>
+	  <p>Unauthorised deletion of protected branches</p>
+	  <p>Author can approve Merge Request after having access revoked</p>
+	  <p>HTML Injection via Swagger UI</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-39944</cvename>
+      <cvename>CVE-2021-39935</cvename>
+      <cvename>CVE-2021-39937</cvename>
+      <cvename>CVE-2021-39915</cvename>
+      <cvename>CVE-2021-39919</cvename>
+      <cvename>CVE-2021-39930</cvename>
+      <cvename>CVE-2021-39940</cvename>
+      <cvename>CVE-2021-39932</cvename>
+      <cvename>CVE-2021-39933</cvename>
+      <cvename>CVE-2021-39934</cvename>
+      <cvename>CVE-2021-39917</cvename>
+      <cvename>CVE-2021-39916</cvename>
+      <cvename>CVE-2021-39941</cvename>
+      <cvename>CVE-2021-39936</cvename>
+      <cvename>CVE-2021-39938</cvename>
+      <cvename>CVE-2021-39918</cvename>
+      <cvename>CVE-2021-39931</cvename>
+      <cvename>CVE-2021-39945</cvename>
+      <cvename>CVE-2021-39910</cvename>
+      <url>https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-06</discovery>
+      <entry>2021-12-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="47695a9c-5377-11ec-8be6-d4c9ef517024">
+    <topic>NSS -- Memory corruption</topic>
+    <affects>
+      <package>
+	<name>nss</name>
+	<range><lt>3.73</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla project reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/">
+	  <p>Memory corruption in NSS via DER-encoded DSA and RSA-PSS signatures (Critical)</p>
+	  <p>NSS (Network Security Services) versions prior to 3.73 or 3.68.1 ESR
+	    are vulnerable to a heap overflow when handling DER-encoded DSA or
+	    RSA-PSS signatures. Applications using NSS for handling signatures
+	    encoded within CMS, S/MIME, PKCS #7, or PKCS #12 are likely to be
+	    impacted. Applications using NSS for certificate validation or other
+	    TLS, X.509, OCSP or CRL functionality may be impacted, depending on
+	    how they configure NSS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43527</cvename>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-01</discovery>
+      <entry>2021-12-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0d6efbe3-52d9-11ec-9472-e3667ed6088e">
+	  <topic>mailman &lt; 2.1.38 -- CSRF vulnerability of list mod or member against list admin page</topic>
+    <affects>
+      <package>
+	<name>mailman</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mark Sapiro reports:</p>
+	<blockquote cite="https://bugs.launchpad.net/mailman/+bug/1952384">
+	  <p>A list moderator or list member can potentially carry out a CSRF attack
+	    by getting a list admin to visit a crafted web page.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44227</cvename>
+      <url>https://bugs.launchpad.net/mailman/+bug/1952384</url>
+      <url>https://www.mail-archive.com/mailman-users@python.org/msg73979.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-25</discovery>
+      <entry>2021-12-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4548ec97-4d38-11ec-a539-0800270512f4">
+    <topic>rubygem-cgi -- cookie prefix spoofing in CGI::Cookie.parse</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby26</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-cgi</name>
+	<range><lt>0.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/">
+	  <p>
+	    The old versions of <code>CGI::Cookie.parse</code> applied
+	    URL decoding to cookie names. An attacker could exploit
+	    this vulnerability to spoof security prefixes in cookie
+	    names, which may be able to trick a vulnerable
+	    application.
+	  </p>
+	  <p>
+	    By this fix, <code>CGI::Cookie.parse</code> no longer
+	    decodes cookie names. Note that this is an incompatibility
+	    if cookie names that you are using include
+	    non-alphanumeric characters that are URL-encoded.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41819</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-24</discovery>
+      <entry>2021-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2c6af5c3-4d36-11ec-a539-0800270512f4">
+    <topic>rubygem-cgi -- buffer overrun in CGI.escape_html</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-cgi</name>
+	<range><lt>0.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>chamal reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/">
+	  <p>
+	    A security vulnerability that causes buffer overflow when
+	    you pass a very large string (&gt; 700 MB) to
+	    <code>CGI.escape_html</code> on a platform where
+	    <code>long</code> type takes 4 bytes, typically, Windows.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41816</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-24</discovery>
+      <entry>2021-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="27aa2253-4c72-11ec-b6b9-e86a64caca56">
+    <topic>py-matrix-synapse -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py36-matrix-synapse</name>
+	<name>py37-matrix-synapse</name>
+	<name>py38-matrix-synapse</name>
+	<name>py39-matrix-synapse</name>
+	<name>py310-matrix-synapse</name>
+	<range><lt>1.47.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://matrix.org/blog/2021/11/23/synapse-1-47-1-released">
+	    <p>This release patches one high severity issue affecting
+    Synapse installations 1.47.0 and earlier using the media repository.
+    An attacker could cause these Synapses to download a remote file
+    and store it in a directory outside the media repository.</p>
+      <p>Note that:</p>
+    <ul>
+      <li>This only affects homeservers using Synapse's built-in media
+      repository, as opposed to synapse-s3-storage-provider or
+      matrix-media-repo.</li>
+      <li>Attackers cannot control the exact name or destination of the
+      stored file.</li>
+    </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <freebsdpr>ports/259994</freebsdpr>
+      <cvename>CVE-2021-41281</cvename>
+      <url>https://matrix.org/blog/2021/11/23/synapse-1-47-1-released</url>
+    </references>
+    <dates>
+      <discovery>2021-11-18</discovery>
+      <entry>2021-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0bf816f6-3cfe-11ec-86cd-dca632b19f10">
+    <topic>advancecomp -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>advancecomp</name>
+	<range><lt>2.1.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Joonun Jang reports:</p>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=889270">
+	  <p>heap buffer overflow running advzip with "-l poc" option</p>
+	  <p>Running 'advzip -l poc' with the attached file raises heap buffer overflow
+	  which may allow a remote attacker to cause unspecified impact including denial-of-service attack.
+	  I expected the program to terminate without segfault, but the program crashes as follow. [...]
+	  </p>
+	</blockquote>
+	<p>and other vulnerabilities.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2018-1056</cvename>
+      <cvename>CVE-2019-8379</cvename>
+      <cvename>CVE-2019-8383</cvename>
+      <cvename>CVE-2019-9210</cvename>
+    </references>
+    <dates>
+      <discovery>2018-07-29</discovery>
+      <entry>2021-11-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b8c0cbca-472d-11ec-83dc-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.45</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html">
+	  <p>This release contains 25 security fixes, including:</p>
+	  <ul>
+	    <li>[1263620] High CVE-2021-38008: Use after free in media. Reported
+	      by Marcin Towalski of Cisco Talos on 2021-10-26</li>
+	    <li>[1260649] High CVE-2021-38009: Inappropriate implementation in
+	      cache. Reported by Luan Herrera (@lbherrera_) on 2021-10-16</li>
+	    <li>[1240593] High CVE-2021-38006: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-17</li>
+	    <li>[1254189] High CVE-2021-38007: Type Confusion in V8. Reported by
+	      Polaris Feng and SGFvamll at Singular Security Lab on
+	      2021-09-29</li>
+	    <li>[1241091] High CVE-2021-38005: Use after free in loader.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-18</li>
+	    <li>[1264477] High CVE-2021-38010: Inappropriate implementation in
+	      service workers. Reported by Sergei Glazunov of Google Project
+	      Zero on 2021-10-28</li>
+	    <li>[1268274] High CVE-2021-38011: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-11-09</li>
+	    <li>[1262791] Medium CVE-2021-38012: Type Confusion in V8. Reported
+	      by Yonghwi Jin (@jinmo123) on 2021-10-24</li>
+	    <li>[1242392] Medium CVE-2021-38013: Heap buffer overflow in
+	      fingerprint recognition. Reported by raven (@raid_akame) on
+	      2021-08-23</li>
+	    <li>[1248567] Medium CVE-2021-38014: Out of bounds write in
+	      Swiftshader. Reported by Atte Kettunen of OUSPG on 2021-09-10</li>
+	    <li>[957553] Medium CVE-2021-38015: Inappropriate implementation in
+	      input. Reported by David Erceg on 2019-04-29</li>
+	    <li>[1244289] Medium CVE-2021-38016: Insufficient policy
+	      enforcement in background fetch. Reported by Maurice Dauer on
+	      2021-08-28</li>
+	    <li>[1256822] Medium CVE-2021-38017: Insufficient policy enforcement
+	      in iframe sandbox. Reported by NDevTK on 2021-10-05</li>
+	    <li>[1197889] Medium CVE-2021-38018: Inappropriate implementation in
+	      navigation. Reported by Alesandro Ortiz on 2021-04-11</li>
+	    <li>[1251179] Medium CVE-2021-38019: Insufficient policy enforcement
+	      in CORS. Reported by Maurice Dauer on 2021-09-20</li>
+	    <li>[1259694] Medium CVE-2021-38020: Insufficient policy enforcement
+	      in contacts picker. Reported by Luan Herrera (@lbherrera_) on
+	      2021-10-13</li>
+	    <li>[1233375] Medium CVE-2021-38021: Inappropriate implementation in
+	      referrer. Reported by Prakash (@1lastBr3ath) and Jun Kokatsu on
+	      2021-07-27</li>
+	    <li>[1248862] Low CVE-2021-38022: Inappropriate implementation in
+	      WebAuthentication. Reported by Michal Kepkowski on 2021-09-13</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-38005</cvename>
+      <cvename>CVE-2021-38006</cvename>
+      <cvename>CVE-2021-38007</cvename>
+      <cvename>CVE-2021-38008</cvename>
+      <cvename>CVE-2021-38009</cvename>
+      <cvename>CVE-2021-38010</cvename>
+      <cvename>CVE-2021-38011</cvename>
+      <cvename>CVE-2021-38012</cvename>
+      <cvename>CVE-2021-38013</cvename>
+      <cvename>CVE-2021-38014</cvename>
+      <cvename>CVE-2021-38015</cvename>
+      <cvename>CVE-2021-38016</cvename>
+      <cvename>CVE-2021-38017</cvename>
+      <cvename>CVE-2021-38018</cvename>
+      <cvename>CVE-2021-38019</cvename>
+      <cvename>CVE-2021-38020</cvename>
+      <cvename>CVE-2021-38021</cvename>
+      <cvename>CVE-2021-38022</cvename>
+      <url>https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-15</discovery>
+      <entry>2021-11-16</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="6916ea94-4628-11ec-bbe2-0800270512f4">
     <topic>rubygem-date -- Regular Expression Denial of Service Vunlerability of Date Parsing Methods</topic>
     <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby26</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
       <package>
 	<name>rubygem-date</name>
 	<range><lt>3.2.1</lt></range>
@@ -27,6 +581,7 @@
     <dates>
       <discovery>2021-11-15</discovery>
       <entry>2021-11-15</entry>
+      <modified>2021-11-24</modified>
     </dates>
   </vuln>
 
@@ -2932,7 +3487,7 @@ The string hashing algorithm has been replaced with a better one, and now also u
     <affects>
       <package>
 	<name>bouncycastle15</name>
-	<range><lt>1.67</lt></range>
+	<range><ge>1.65</ge><lt>1.67</lt></range>
       </package>
     </affects>
     <description>
@@ -2959,10 +3514,14 @@ The string hashing algorithm has been replaced with a better one, and now also u
   </vuln>
 
   <vuln vid="89d5bca6-0150-11ec-bf0c-080027eedc6a">
-    <topic>bouncycastle15 -- EC math vulnerability</topic>
+    <topic>The Bouncy Castle Crypto APIs -- EC math vulnerability</topic>
     <affects>
       <package>
 	<name>bouncycastle15</name>
+	<range><lt>1.66</lt></range>
+      </package>
+      <package>
+	<name>bouncycastle</name>
 	<range><lt>1.66</lt></range>
       </package>
     </affects>

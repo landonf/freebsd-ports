@@ -23,6 +23,12 @@ PORTDOCS=	AUTHORS ChangeLog ChangeLog.1 ChangeLog.2 ChangeLog.3 NEWS \
 
 OPTIONS_DEFINE=	DOCS
 
+.include <bsd.port.options.mk>
+
+.if ${FLAVOR:Ufull:Mfull}
+PKGNAMESUFFIX=	-emacs
+.endif
+
 post-install:
 	@${MKDIR} ${STAGEDIR}${LISPDIR}/contrib
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} contrib  ${STAGEDIR}${LISPDIR})

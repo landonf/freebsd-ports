@@ -133,6 +133,7 @@
     SUBDIR += frugally-deep
     SUBDIR += ftdi-eeprom
     SUBDIR += fxload
+    SUBDIR += g810-led
     SUBDIR += gedkeeper
     SUBDIR += geekcode
     SUBDIR += getopt
@@ -516,6 +517,7 @@
     SUBDIR += urh
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
+    SUBDIR += usd
     SUBDIR += utftools
     SUBDIR += utouch-kmod
     SUBDIR += valentina

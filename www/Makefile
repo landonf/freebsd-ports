@@ -41,7 +41,6 @@
     SUBDIR += bacula-web
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bareos17-webui
     SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
     SUBDIR += beehive
@@ -284,6 +283,7 @@
     SUBDIR += kf5-kjsembed
     SUBDIR += kiwix-tools
     SUBDIR += kohana
+    SUBDIR += kristall
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
@@ -292,6 +292,7 @@
     SUBDIR += libecap
     SUBDIR += libepc
     SUBDIR += libevhtp
+    SUBDIR += libhsts
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -335,6 +336,7 @@
     SUBDIR += mediawiki131
     SUBDIR += mediawiki135
     SUBDIR += mediawiki136
+    SUBDIR += mediawiki137
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -1587,6 +1589,7 @@
     SUBDIR += py-django22
     SUBDIR += py-django31
     SUBDIR += py-django32
+    SUBDIR += py-django40
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -2078,6 +2081,7 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
+    SUBDIR += rubygem-rails61-node16
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
@@ -2149,6 +2153,7 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
+    SUBDIR += rubygem-uglifier-node16
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
@@ -2343,6 +2348,7 @@
     SUBDIR += webstone-ssl
     SUBDIR += webtrees
     SUBDIR += webtrees20
+    SUBDIR += wget2
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
     SUBDIR += wordpress
@@ -2357,6 +2363,7 @@
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
     SUBDIR += xapian-omega12
+    SUBDIR += xcaddy
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xh
     SUBDIR += xist
