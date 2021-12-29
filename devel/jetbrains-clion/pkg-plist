@@ -6,6 +6,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/clangd
 %%DATADIR%%/bin/clang/linux/clazy-standalone
 %%DATADIR%%/bin/clang/linux/include/CMakeLists.txt
+%%DATADIR%%/bin/clang/linux/include/__clang_cuda_texture_intrinsics.h
 %%DATADIR%%/bin/clang/linux/include/__clang_cuda_builtin_vars.h
 %%DATADIR%%/bin/clang/linux/include/__clang_cuda_cmath.h
 %%DATADIR%%/bin/clang/linux/include/__clang_cuda_complex_builtins.h
@@ -38,6 +39,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/avx512dqintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512erintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512fintrin.h
+%%DATADIR%%/bin/clang/linux/include/avx512fp16intrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512ifmaintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512ifmavlintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512pfintrin.h
@@ -49,6 +51,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/avx512vlbwintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512vlcdintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512vldqintrin.h
+%%DATADIR%%/bin/clang/linux/include/avx512vlfp16intrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512vlintrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512vlvbmi2intrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512vlvnniintrin.h
@@ -61,6 +64,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/avxvnniintrin.h
 %%DATADIR%%/bin/clang/linux/include/bmi2intrin.h
 %%DATADIR%%/bin/clang/linux/include/bmiintrin.h
+%%DATADIR%%/bin/clang/linux/include/builtins.h
 %%DATADIR%%/bin/clang/linux/include/cet.h
 %%DATADIR%%/bin/clang/linux/include/cetintrin.h
 %%DATADIR%%/bin/clang/linux/include/cldemoteintrin.h
@@ -68,6 +72,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/clwbintrin.h
 %%DATADIR%%/bin/clang/linux/include/clzerointrin.h
 %%DATADIR%%/bin/clang/linux/include/cpuid.h
+%%DATADIR%%/bin/clang/linux/include/crc32intrin.h
 %%DATADIR%%/bin/clang/linux/include/cuda_wrappers/algorithm
 %%DATADIR%%/bin/clang/linux/include/cuda_wrappers/complex
 %%DATADIR%%/bin/clang/linux/include/cuda_wrappers/new
@@ -79,9 +84,13 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/fmaintrin.h
 %%DATADIR%%/bin/clang/linux/include/fxsrintrin.h
 %%DATADIR%%/bin/clang/linux/include/gfniintrin.h
+%%DATADIR%%/bin/clang/linux/include/hexagon_circ_brev_intrinsics.h
+%%DATADIR%%/bin/clang/linux/include/hexagon_protos.h
+%%DATADIR%%/bin/clang/linux/include/hexagon_types.h
 %%DATADIR%%/bin/clang/linux/include/hresetintrin.h
 %%DATADIR%%/bin/clang/linux/include/htmintrin.h
 %%DATADIR%%/bin/clang/linux/include/htmxlintrin.h
+%%DATADIR%%/bin/clang/linux/include/hvx_hexagon_protos.h
 %%DATADIR%%/bin/clang/linux/include/ia32intrin.h
 %%DATADIR%%/bin/clang/linux/include/immintrin.h
 %%DATADIR%%/bin/clang/linux/include/intrin.h
@@ -162,7 +171,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/xsavesintrin.h
 %%DATADIR%%/bin/clang/linux/include/xtestintrin.h
 %%DATADIR%%/bin/clang/linux/libclazyPlugin.so
-%%DATADIR%%/bin/clang/linux/libclazyPlugin.so.13git
+%%DATADIR%%/bin/clang/linux/libclazyPlugin.so.14git
 %%DATADIR%%/bin/clang/linux/llvm-symbolizer
 %%DATADIR%%/bin/brokenPlugins.db
 %%DATADIR%%/bin/clion.png
