@@ -10,6 +10,7 @@
     SUBDIR += bochs
     SUBDIR += bsvc
     SUBDIR += cannonball
+    SUBDIR += catapult
     SUBDIR += cemu
     SUBDIR += cingb
     SUBDIR += citra
@@ -22,6 +23,7 @@
     SUBDIR += dolphin-emu
     SUBDIR += dosbox
     SUBDIR += dosbox-staging
+    SUBDIR += dps8m
     SUBDIR += dynamips-community
     SUBDIR += edumips64
     SUBDIR += elliott-803
@@ -155,6 +157,7 @@
     SUBDIR += vmips
     SUBDIR += vmsbackup
     SUBDIR += vmw
+    SUBDIR += vt100
     SUBDIR += vxtools
     SUBDIR += wine
     SUBDIR += wine-devel

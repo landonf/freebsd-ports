@@ -599,6 +599,7 @@
     SUBDIR += p5-Algorithm-Combinatorics
     SUBDIR += p5-Algorithm-CurveFit
     SUBDIR += p5-Algorithm-Munkres
+    SUBDIR += p5-Alien-GSL
     SUBDIR += p5-Bit-ShiftReg
     SUBDIR += p5-Bit-Vector
     SUBDIR += p5-Bit-Vector-Minimal
@@ -765,7 +766,9 @@
     SUBDIR += php74-bcmath
     SUBDIR += php74-gmp
     SUBDIR += php80-bcmath
+    SUBDIR += php81-bcmath
     SUBDIR += php80-gmp
+    SUBDIR += php81-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha

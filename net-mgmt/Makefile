@@ -3,6 +3,7 @@
     SUBDIR += 2ping
     SUBDIR += TkTopNetFlows
     SUBDIR += adcli
+    SUBDIR += adguard-exporter
     SUBDIR += aggregate
     SUBDIR += aircrack-ng
     SUBDIR += alertmanager
@@ -281,6 +282,7 @@
     SUBDIR += php73-snmp
     SUBDIR += php74-snmp
     SUBDIR += php80-snmp
+    SUBDIR += php81-snmp
     SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += phpweathermap

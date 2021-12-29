@@ -171,6 +171,7 @@
     SUBDIR += mencal
     SUBDIR += menumaker
     SUBDIR += meteo
+    SUBDIR += mindforger
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += myitcrm
@@ -178,6 +179,7 @@
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
     SUBDIR += note
+    SUBDIR += notekit
     SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
