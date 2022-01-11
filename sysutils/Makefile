@@ -957,8 +957,8 @@
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
     SUBDIR += php80-fileinfo
-    SUBDIR += php81-fileinfo
     SUBDIR += php80-posix
+    SUBDIR += php81-fileinfo
     SUBDIR += php81-posix
     SUBDIR += phybs
     SUBDIR += pick
@@ -1062,6 +1062,7 @@
     SUBDIR += py-psutil
     SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
+    SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
     SUBDIR += py-python-consul
     SUBDIR += py-python-consul2
@@ -1249,7 +1250,6 @@
     SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
-    SUBDIR += sample
     SUBDIR += sanoid
     SUBDIR += sanoid-devel
     SUBDIR += sas2ircu

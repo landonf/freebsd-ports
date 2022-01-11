@@ -1,7 +1,7 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
 
 PORTNAME=	django
-PORTVERSION=	2.2.25
+PORTVERSION=	2.2.26
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		https://www.djangoproject.com/m/releases/${PORTVERSION}/
@@ -32,8 +32,7 @@ PORTDOCS=	*
 SHEBANG_FILES=	django/bin/django-admin.py \
 		django/conf/project_template/manage.py-tpl
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django30 \
-			${PYTHON_PKGNAMEPREFIX}django31 ${PYTHON_PKGNAMEPREFIX}django32
+CONFLICTS_INSTALL=	py*-django* # bin/django-admin
 
 CPE_VENDOR=	djangoproject
 

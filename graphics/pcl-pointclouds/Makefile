@@ -1,8 +1,10 @@
 PORTNAME=	pcl
-DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	1.12.0
+DISTVERSION=	1.12.1
 CATEGORIES=	graphics math
+MASTER_SITES=	https://github.com/PointCloudLibrary/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 PKGNAMESUFFIX=	-pointclouds
+DISTNAME=	source
+DIST_SUBDIR=	${PORTNAME}${PKGNAMESUFFIX}/${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Point Cloud Library
@@ -18,15 +20,26 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libexpat.so:textproc/expat2 \
 		libflann_cpp.so:math/flann \
 		libfreetype.so:print/freetype2 \
+		liblz4.so:archivers/liblz4 \
 		libpcap.so:net/libpcap \
 		libtiff.so:graphics/tiff
 
-USES=		cmake compiler:c++14-lang eigen:3 jpeg python xorg
-LLD_UNSAFE=	yes
-USE_GITHUB=	yes
-GH_ACCOUNT=	PointCloudLibrary
+USES=		cmake:testing compiler:c++14-lang eigen:3 jpeg localbase:ldflags python xorg
 USE_XORG=	x11 xext xt ice sm
 USE_LDCONFIG=	yes
+
+USE_GITHUB=	nodefault
+GH_ACCOUNT=	google:gtest
+GH_PROJECT=	googletest:gtest
+GH_TAGNAME=	release-1.11.0:gtest
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} # workaround, otherwise USE_GITHUB=nodefault doesn't work #'
+
+CMAKE_TESTING_ON=	BUILD_global_tests # 6 tests are known to fail: https://github.com/PointCloudLibrary/pcl/issues/5127
+CMAKE_TESTING_TARGET=	tests
+CMAKE_ARGS=		-DGTEST_SRC_DIR=${WRKSRC_gtest}/googletest -DGTEST_INCLUDE_DIR=${WRKSRC_gtest}/googletest/include
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_SUB=	SHL3=${DISTVERSION} SHL2=${DISTVERSION:R}
 
@@ -45,7 +58,7 @@ PNG_LIB_DEPENDS=	libpng.so:graphics/png
 
 QHULL_DESC=		Include convex-hull operations
 QHULL_CMAKE_BOOL=	WITH_QHULL
-QHULL_LIB_DEPENDS=	libqhull.so:math/qhull
+QHULL_LIB_DEPENDS=	libqhull_r.so:math/qhull8
 
 QT5_CMAKE_BOOL=		WITH_QT
 QT5_BROKEN=		WITH_QT doesn't do anything, should be used by apps, but apps is also broken: see https://github.com/PointCloudLibrary/pcl/issues/2642
@@ -55,9 +68,4 @@ VTK_CMAKE_BOOL=		WITH_VTK
 VTK_LIB_DEPENDS=	libvtkCommonCore-8.2.so:math/vtk8
 VTK_BROKEN=		VTK has missing ompxx symbols: https://gitlab.kitware.com/vtk/vtk/issues/17444
 
-.include <bsd.port.pre.mk>
-
-post-patch:  # 10 doesn't have std::sqrt, switching to ::sqrt from math.h
-	@${GREP} -rl std::sqrt ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e 's|::std::sqrt|::sqrt|g ; s|std::sqrt|::sqrt|g'
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

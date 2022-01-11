@@ -1,7 +1,14 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20211225
+PORTVERSION=	s20220109
 PORTREVISION?=	0
 CATEGORIES=	emulators
+.if make(makesum)
+MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
+.else
+MASTER_SITES=	LOCAL/jbeich:gamedb
+.endif
+DISTFILES=	${PORTNAME}/compatibility_list.json:gamedb
+EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	6904f055db88.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/6598 mainline-merge
@@ -36,11 +43,11 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	292dfac25
+GH_TAGNAME=	b3308830b
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-32-ga3fdfe8:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
 		KhronosGroup:Vulkan-Headers:v1.2.202:Vulkan_Headers/externals/Vulkan-Headers \
-		MerryMage:dynarmic:r5-127-gcce7e4ee:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:r5-134-g1635958d:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:a395963:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
@@ -55,7 +62,7 @@ USE_GCC=	yes:build # libc++ lacks std::atomic_ref, std::ranges
 USE_SDL=	sdl2
 CMAKE_ON=	Boost_USE_STATIC_LIBS
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
-CMAKE_OFF=	YUZU_USE_EXTERNAL_SDL2 ENABLE_GNUTLS ENABLE_MBEDTLS
+CMAKE_OFF=	YUZU_USE_BUNDLED_OPUS YUZU_USE_EXTERNAL_SDL2 ENABLE_GNUTLS ENABLE_MBEDTLS
 LDFLAGS+=	-static-libstdc++ # avoid libc++ conflict, requires files/patch-fmt
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 
@@ -110,5 +117,9 @@ post-patch:
 post-patch-VAAPI-off:
 	@${REINPLACE_CMD} -i .nova '/pkg_check.*libva/d' \
 		${WRKSRC}/CMakeLists.txt
+
+post-configure:
+	@${CP} ${DISTFILES:M*\:gamedb:C/\:.*//:S,^,${_DISTDIR},} \
+		${BUILD_WRKSRC}/dist/compatibility_list/
 
 .include <bsd.port.mk>
