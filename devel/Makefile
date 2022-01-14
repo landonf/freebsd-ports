@@ -4773,6 +4773,7 @@
     SUBDIR += py-mediafile
     SUBDIR += py-medikit
     SUBDIR += py-meliae
+    SUBDIR += py-memory-allocator
     SUBDIR += py-memory-profiler
     SUBDIR += py-mergedeep
     SUBDIR += py-microversion-parse
