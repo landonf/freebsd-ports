@@ -1,4 +1,4 @@
---- chrome/browser/chrome_browser_main_posix.cc.orig	2021-04-14 18:40:52 UTC
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2022-02-07 13:39:41 UTC
 +++ chrome/browser/chrome_browser_main_posix.cc
 @@ -72,7 +72,7 @@ void ExitHandler::ExitWhenPossibleOnUIThread(int signa
    } else {

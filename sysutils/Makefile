@@ -46,6 +46,7 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible2
+    SUBDIR += ansible4
     SUBDIR += anvil
     SUBDIR += apache-mesos
     SUBDIR += apachetop
@@ -100,6 +101,9 @@
     SUBDIR += bareos19-client
     SUBDIR += bareos19-server
     SUBDIR += bareos19-traymonitor
+    SUBDIR += bareos20-client
+    SUBDIR += bareos20-server
+    SUBDIR += bareos20-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -119,6 +123,7 @@
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
+    SUBDIR += bkt
     SUBDIR += boot-extract
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
@@ -136,6 +141,7 @@
     SUBDIR += bstack
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
+    SUBDIR += bupstash
     SUBDIR += burp
     SUBDIR += burp-devel
     SUBDIR += busybox
@@ -300,6 +306,7 @@
     SUBDIR += duplicity
     SUBDIR += duply
     SUBDIR += dupmerge
+    SUBDIR += dust
     SUBDIR += dvd+rw-tools
     SUBDIR += dvdbackup
     SUBDIR += dvdimagecmp
@@ -339,6 +346,7 @@
     SUBDIR += f2
     SUBDIR += f3
     SUBDIR += facter
+    SUBDIR += fand
     SUBDIR += fanout
     SUBDIR += fatback
     SUBDIR += fcode-utils
@@ -472,6 +480,7 @@
     SUBDIR += gomplate
     SUBDIR += google-compute-engine-oslogin
     SUBDIR += gotop
+    SUBDIR += govmomi
     SUBDIR += gpart
     SUBDIR += graffer
     SUBDIR += graveman
@@ -527,7 +536,6 @@
     SUBDIR += installwatch
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
-    SUBDIR += intel-pcm-devel
     SUBDIR += intel-undervolt
     SUBDIR += inxi
     SUBDIR += ioc
@@ -952,8 +960,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php73-fileinfo
-    SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
     SUBDIR += php80-fileinfo
@@ -1016,6 +1022,7 @@
     SUBDIR += pxp-agent
     SUBDIR += py-ansible-base
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core211
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-azure-cli
@@ -1046,6 +1053,7 @@
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
+    SUBDIR += py-ioztat
     SUBDIR += py-jailconf
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
@@ -1132,6 +1140,7 @@
     SUBDIR += rhc
     SUBDIR += rinse
     SUBDIR += rmlint
+    SUBDIR += rocinante
     SUBDIR += rocr
     SUBDIR += roct
     SUBDIR += root-tail
@@ -1294,6 +1303,7 @@
     SUBDIR += smartmontools
     SUBDIR += smenu
     SUBDIR += smp_utils
+    SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
     SUBDIR += snmp_exporter

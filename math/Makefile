@@ -65,6 +65,7 @@
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
     SUBDIR += R-cran-haven
+    SUBDIR += R-cran-hexbin
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
     SUBDIR += R-cran-inline
@@ -239,6 +240,7 @@
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
+    SUBDIR += dionysus
     SUBDIR += disco
     SUBDIR += djbfft
     SUBDIR += drgeo
@@ -339,7 +341,6 @@
     SUBDIR += gnuplot
     SUBDIR += gnuplot-lite
     SUBDIR += gnuplot-tex-extras
-    SUBDIR += gotoblas
     SUBDIR += gp2c
     SUBDIR += grace
     SUBDIR += graphthing
@@ -358,6 +359,7 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
+    SUBDIR += hsl
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -435,7 +437,6 @@
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
-    SUBDIR += mathics-django
     SUBDIR += mathicsscript
     SUBDIR += mathmod
     SUBDIR += mathomatic
@@ -762,8 +763,7 @@
     SUBDIR += permlib
     SUBDIR += petanque
     SUBDIR += petiga
-    SUBDIR += php73-bcmath
-    SUBDIR += php73-gmp
+    SUBDIR += pffft
     SUBDIR += php74-bcmath
     SUBDIR += php74-gmp
     SUBDIR += php80-bcmath
@@ -826,8 +826,10 @@
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
     SUBDIR += py-deap
+    SUBDIR += py-dionysus
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
+    SUBDIR += py-faiss
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw
     SUBDIR += py-flax
@@ -944,6 +946,7 @@
     SUBDIR += py-symcxx
     SUBDIR += py-sympy
     SUBDIR += py-theano
+    SUBDIR += py-topologic
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
@@ -954,7 +957,7 @@
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
-    SUBDIR += qhull8
+    SUBDIR += qhull7
     SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot-doc
@@ -992,6 +995,7 @@
     SUBDIR += sc
     SUBDIR += sc-im
     SUBDIR += scalapack
+    SUBDIR += scalapackfx
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
     SUBDIR += scs
@@ -1055,8 +1059,10 @@
     SUBDIR += tomsfastmath
     SUBDIR += topaz
     SUBDIR += topcom
+    SUBDIR += topologic
     SUBDIR += triangle
     SUBDIR += trlan
+    SUBDIR += trlib
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
@@ -1076,6 +1082,7 @@
     SUBDIR += wxmaxima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin
+    SUBDIR += xgap
     SUBDIR += xgraph
     SUBDIR += xlapack
     SUBDIR += xldlas

@@ -1,6 +1,7 @@
 PORTNAME=	qtractor
 DISTVERSIONPREFIX=	qtractor_
 DISTVERSION=	0_9_25
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/rncbc/qtractor/archive/refs/tags/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
@@ -38,8 +39,6 @@ USE_GNOME=	atk cairo gdkpixbuf2 gtk20 gtkmm24 pango
 USE_QT=		core gui widgets xml buildtools_build linguisttools_build qmake_build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}_${DISTVERSION}
-
-INSTALLS_ICONS=	yes
 
 post-patch:
 	@${REINPLACE_CMD} \

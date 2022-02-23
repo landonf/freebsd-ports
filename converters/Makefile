@@ -22,6 +22,7 @@
     SUBDIR += convmv
     SUBDIR += dosunix
     SUBDIR += drg2sbg
+    SUBDIR += dumpasn1
     SUBDIR += enca
     SUBDIR += erlang-base64url
     SUBDIR += fconv
@@ -101,7 +102,6 @@
     SUBDIR += p5-JSON-Tiny
     SUBDIR += p5-JSON-XS
     SUBDIR += p5-JSON-XS-VersionOneAndTwo
-    SUBDIR += p5-JSON1
     SUBDIR += p5-LaTeXML
     SUBDIR += p5-MIME-Base32
     SUBDIR += p5-MIME-Base64
@@ -135,9 +135,6 @@
     SUBDIR += pear-Services_JSON
     SUBDIR += pecl-igbinary
     SUBDIR += php-bsdconv
-    SUBDIR += php73-iconv
-    SUBDIR += php73-mbstring
-    SUBDIR += php73-recode
     SUBDIR += php74-iconv
     SUBDIR += php74-mbstring
     SUBDIR += php80-iconv
@@ -150,6 +147,7 @@
     SUBDIR += py-better-bencode
     SUBDIR += py-bsdconv
     SUBDIR += py-rencode
+    SUBDIR += py-svglib
     SUBDIR += py-text-unidecode
     SUBDIR += py-unidecode
     SUBDIR += py-webencodings

@@ -28,8 +28,10 @@
     SUBDIR += R-cran-chron
     SUBDIR += R-cran-classInt
     SUBDIR += R-cran-cli
+    SUBDIR += R-cran-cliapp
     SUBDIR += R-cran-clipr
     SUBDIR += R-cran-clisymbols
+    SUBDIR += R-cran-collapse
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
     SUBDIR += R-cran-crayon
@@ -60,6 +62,7 @@
     SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
     SUBDIR += R-cran-gtools
+    SUBDIR += R-cran-hardhat
     SUBDIR += R-cran-hms
     SUBDIR += R-cran-ini
     SUBDIR += R-cran-iterators
@@ -74,6 +77,7 @@
     SUBDIR += R-cran-microbenchmark
     SUBDIR += R-cran-mockery
     SUBDIR += R-cran-optparse
+    SUBDIR += R-cran-pak
     SUBDIR += R-cran-parallelly
     SUBDIR += R-cran-pillar
     SUBDIR += R-cran-pkgbuild
@@ -147,6 +151,7 @@
     SUBDIR += allegro5
     SUBDIR += alog
     SUBDIR += aml
+    SUBDIR += ammonite
     SUBDIR += amqp-cpp
     SUBDIR += android-tools-adb
     SUBDIR += android-tools-fastboot
@@ -207,6 +212,7 @@
     SUBDIR += asyncplusplus
     SUBDIR += atf
     SUBDIR += athens
+    SUBDIR += atlantis
     SUBDIR += atlas
     SUBDIR += atlas-devel
     SUBDIR += aunit
@@ -442,6 +448,7 @@
     SUBDIR += cut
     SUBDIR += cutils
     SUBDIR += cutter
+    SUBDIR += cvise
     SUBDIR += cvs
     SUBDIR += cvs+ipv6
     SUBDIR += cvs-devel
@@ -547,7 +554,6 @@
     SUBDIR += dxa65
     SUBDIR += dyncall
     SUBDIR += e00compr
-    SUBDIR += e2fsprogs-libss
     SUBDIR += eastl
     SUBDIR += easyexif
     SUBDIR += easygit
@@ -614,6 +620,7 @@
     SUBDIR += envsubst
     SUBDIR += epl.el
     SUBDIR += epm
+    SUBDIR += eql5
     SUBDIR += eric6
     SUBDIR += eris
     SUBDIR += erlang-backoff
@@ -934,6 +941,7 @@
     SUBDIR += grpc
     SUBDIR += grpc130
     SUBDIR += grpc134
+    SUBDIR += grpc142
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
     SUBDIR += gsoap
@@ -1020,6 +1028,7 @@
     SUBDIR += include-what-you-use
     SUBDIR += indi
     SUBDIR += indicators
+    SUBDIR += influx-pkg-config
     SUBDIR += inifiled
     SUBDIR += inih
     SUBDIR += inilib
@@ -1479,6 +1488,7 @@
     SUBDIR += llvm11
     SUBDIR += llvm12
     SUBDIR += llvm13
+    SUBDIR += llvm14
     SUBDIR += llvm70
     SUBDIR += llvm80
     SUBDIR += llvm90
@@ -1551,7 +1561,6 @@
     SUBDIR += maven
     SUBDIR += maven-wrapper
     SUBDIR += maven3
-    SUBDIR += maven31
     SUBDIR += maven33
     SUBDIR += mcpp
     SUBDIR += mdb
@@ -1579,6 +1588,7 @@
     SUBDIR += mm
     SUBDIR += mm-common
     SUBDIR += modd
+    SUBDIR += mold
     SUBDIR += mongo-c-driver
     SUBDIR += mono-addins
     SUBDIR += monotone
@@ -4017,16 +4027,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php73-gettext
-    SUBDIR += php73-intl
-    SUBDIR += php73-json
-    SUBDIR += php73-pcntl
-    SUBDIR += php73-readline
-    SUBDIR += php73-shmop
-    SUBDIR += php73-sysvmsg
-    SUBDIR += php73-sysvsem
-    SUBDIR += php73-sysvshm
-    SUBDIR += php73-tokenizer
     SUBDIR += php74-ffi
     SUBDIR += php74-gettext
     SUBDIR += php74-intl
@@ -4589,6 +4589,7 @@
     SUBDIR += py-google-pasta
     SUBDIR += py-google-re2
     SUBDIR += py-googleapis-common-protos
+    SUBDIR += py-gpxpy
     SUBDIR += py-grab
     SUBDIR += py-graphene
     SUBDIR += py-graphene-django
@@ -4761,12 +4762,14 @@
     SUBDIR += py-macholib
     SUBDIR += py-magic
     SUBDIR += py-mailcap-fix
+    SUBDIR += py-makefun
     SUBDIR += py-manuel
     SUBDIR += py-marrow.mailer
     SUBDIR += py-marrow.util
     SUBDIR += py-marshmallow
     SUBDIR += py-marshmallow-enum
     SUBDIR += py-matrix-angular-sdk
+    SUBDIR += py-matrix-common
     SUBDIR += py-maturin
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
@@ -4909,6 +4912,7 @@
     SUBDIR += py-pendulum
     SUBDIR += py-pep517
     SUBDIR += py-pep562
+    SUBDIR += py-pep621
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-persistent
@@ -5157,23 +5161,15 @@
     SUBDIR += py-qcs-api-client
     SUBDIR += py-qstylizer
     SUBDIR += py-qt5
-    SUBDIR += py-qt5-core
-    SUBDIR += py-qt5-dbus
-    SUBDIR += py-qt5-dbussupport
-    SUBDIR += py-qt5-designer
-    SUBDIR += py-qt5-designerplugin
-    SUBDIR += py-qt5-help
-    SUBDIR += py-qt5-location
-    SUBDIR += py-qt5-positioning
+    SUBDIR += py-qt5-pyqt
     SUBDIR += py-qt5-qscintilla2
-    SUBDIR += py-qt5-remoteobjects
     SUBDIR += py-qt5-sip
-    SUBDIR += py-qt5-test
     SUBDIR += py-qtbuilder
     SUBDIR += py-qtconsole
     SUBDIR += py-qutip
     SUBDIR += py-ramlfications
     SUBDIR += py-rapidfuzz
+    SUBDIR += py-rapidfuzz-capi
     SUBDIR += py-ratelimiter
     SUBDIR += py-rauth
     SUBDIR += py-raven
@@ -5200,6 +5196,7 @@
     SUBDIR += py-retrying
     SUBDIR += py-retype
     SUBDIR += py-rfc3339
+    SUBDIR += py-rfc3339-validator
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5252,6 +5249,7 @@
     SUBDIR += py-simpletal
     SUBDIR += py-simpy
     SUBDIR += py-sip
+    SUBDIR += py-sip4
     SUBDIR += py-six
     SUBDIR += py-smmap
     SUBDIR += py-smmap2
@@ -6381,7 +6379,6 @@
     SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
     SUBDIR += rubygem-gettext_i18n_rails_js-rails52
-    SUBDIR += rubygem-gettext_i18n_rails_js-rails60
     SUBDIR += rubygem-gettext_i18n_rails_js-rails61
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
@@ -6462,6 +6459,7 @@
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-io-nonblock
     SUBDIR += rubygem-io-wait
+    SUBDIR += rubygem-io-wait01
     SUBDIR += rubygem-iobuffer
     SUBDIR += rubygem-iostruct
     SUBDIR += rubygem-ipynbdiff
@@ -6562,6 +6560,7 @@
     SUBDIR += rubygem-multi_test
     SUBDIR += rubygem-murmurhash3
     SUBDIR += rubygem-mustache
+    SUBDIR += rubygem-mustache-sinatra
     SUBDIR += rubygem-mustache0
     SUBDIR += rubygem-mustermann
     SUBDIR += rubygem-mustermann-grape
@@ -7201,7 +7200,6 @@
     SUBDIR += wand-libconfig
     SUBDIR += wandio
     SUBDIR += wasi-compiler-rt11
-    SUBDIR += wasi-compiler-rt12
     SUBDIR += wasi-compiler-rt13
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
@@ -7212,6 +7210,7 @@
     SUBDIR += wininfo
     SUBDIR += wizardkit
     SUBDIR += woff2
+    SUBDIR += wrangler
     SUBDIR += wxformbuilder
     SUBDIR += xa65
     SUBDIR += xbyak

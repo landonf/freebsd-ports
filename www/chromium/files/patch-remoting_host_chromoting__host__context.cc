@@ -1,6 +1,6 @@
---- remoting/host/chromoting_host_context.cc.orig	2021-06-10 11:44:05 UTC
+--- remoting/host/chromoting_host_context.cc.orig	2022-02-07 13:39:41 UTC
 +++ remoting/host/chromoting_host_context.cc
-@@ -139,11 +139,11 @@ std::unique_ptr<ChromotingHostContext> ChromotingHostC
+@@ -143,7 +143,7 @@ std::unique_ptr<ChromotingHostContext> ChromotingHostC
    // on a UI thread.
    scoped_refptr<AutoThreadTaskRunner> input_task_runner =
        AutoThread::CreateWithType("ChromotingInputThread", ui_task_runner,
@@ -9,8 +9,3 @@
                                   base::MessagePumpType::UI);
  #else
                                   base::MessagePumpType::IO);
--#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
- 
-   return base::WrapUnique(new ChromotingHostContext(
-       ui_task_runner, audio_task_runner, file_task_runner, input_task_runner,

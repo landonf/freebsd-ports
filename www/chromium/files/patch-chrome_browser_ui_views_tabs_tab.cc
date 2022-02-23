@@ -1,6 +1,6 @@
---- chrome/browser/ui/views/tabs/tab.cc.orig	2021-09-24 04:26:00 UTC
+--- chrome/browser/ui/views/tabs/tab.cc.orig	2022-02-07 13:39:41 UTC
 +++ chrome/browser/ui/views/tabs/tab.cc
-@@ -580,7 +580,7 @@ void Tab::MaybeUpdateHoverStatus(const ui::MouseEvent&
+@@ -576,7 +576,7 @@ void Tab::MaybeUpdateHoverStatus(const ui::MouseEvent&
    if (mouse_hovered_ || !GetWidget()->IsMouseEventsEnabled())
      return;
  

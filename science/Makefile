@@ -44,9 +44,11 @@
     SUBDIR += cgribex
     SUBDIR += checkmol
     SUBDIR += chemical-mime-data
+    SUBDIR += chemicalfun
     SUBDIR += chemps2
     SUBDIR += chemtool
     SUBDIR += chemtool-devel
+    SUBDIR += chimes-calculator
     SUBDIR += chrono
     SUBDIR += clhep
     SUBDIR += clipper
@@ -135,7 +137,9 @@
     SUBDIR += libint2
     SUBDIR += libkml
     SUBDIR += liblinear
+    SUBDIR += libmbd
     SUBDIR += libmsym
+    SUBDIR += libnegf
     SUBDIR += liboglappth
     SUBDIR += libquantum
     SUBDIR += libssm
@@ -262,6 +266,7 @@
     SUBDIR += py-dlib
     SUBDIR += py-eccodes
     SUBDIR += py-esda
+    SUBDIR += py-fresnel
     SUBDIR += py-geolinks
     SUBDIR += py-geomet
     SUBDIR += py-geometer
@@ -271,6 +276,7 @@
     SUBDIR += py-h5json
     SUBDIR += py-h5py
     SUBDIR += py-hiphive
+    SUBDIR += py-hoomd-blue
     SUBDIR += py-inequality
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query
@@ -325,6 +331,7 @@
     SUBDIR += py-scoria
     SUBDIR += py-segregation
     SUBDIR += py-segyio
+    SUBDIR += py-sklearn-pandas
     SUBDIR += py-skrebate
     SUBDIR += py-spaghetti
     SUBDIR += py-spglib
@@ -364,6 +371,7 @@
     SUBDIR += simgrid
     SUBDIR += simint
     SUBDIR += simlib
+    SUBDIR += simple-dftd3
     SUBDIR += simsmith
     SUBDIR += smoldyn
     SUBDIR += sparta
@@ -371,6 +379,7 @@
     SUBDIR += step
     SUBDIR += svmlight
     SUBDIR += szip
+    SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel
     SUBDIR += tfel-edf

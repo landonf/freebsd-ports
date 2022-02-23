@@ -3,7 +3,7 @@
 PORTNAME=	libzbxpgsql
 PORTVERSION=	1.1.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	databases
 PKGNAMEPREFIX=	zabbix3-
 
@@ -12,6 +12,9 @@ COMMENT=	Zabbix agent module for comprehensive monitoring of PostgreSQL servers
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=Upstream EOL reached on 2021-02-28
+EXPIRATION_DATE=2022-02-27
 
 BUILD_DEPENDS=	${NONEXISTENT}:net-mgmt/${PKGNAMEPREFIX}agent:patch
 RUN_DEPENDS=	zabbix_agentd:net-mgmt/${PKGNAMEPREFIX}agent

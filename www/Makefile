@@ -24,7 +24,6 @@
     SUBDIR += amfora
     SUBDIR += amphetadesk
     SUBDIR += analog
-    SUBDIR += annie
     SUBDIR += anyremote2html
     SUBDIR += anyterm
     SUBDIR += apache-mode.el
@@ -43,6 +42,7 @@
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
     SUBDIR += bareos19-webui
+    SUBDIR += bareos20-webui
     SUBDIR += beehive
     SUBDIR += bkmrkconv
     SUBDIR += bluefish
@@ -179,6 +179,7 @@
     SUBDIR += g-gcl
     SUBDIR += gallery-dl
     SUBDIR += gallery2
+    SUBDIR += garage
     SUBDIR += gatling
     SUBDIR += gauche-makiki
     SUBDIR += gecko-mediaplayer
@@ -319,9 +320,11 @@
     SUBDIR += logtools
     SUBDIR += ls-qpack
     SUBDIR += lua-resty-core
+    SUBDIR += lua-resty-http
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lynx
     SUBDIR += lynx-current
@@ -373,6 +376,7 @@
     SUBDIR += mod_cfg_ldap
     SUBDIR += mod_cloudflare
     SUBDIR += mod_dav_svn
+    SUBDIR += mod_defensible
     SUBDIR += mod_dnssd
     SUBDIR += mod_evasive
     SUBDIR += mod_fastcgi
@@ -391,7 +395,6 @@
     SUBDIR += mod_mono
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_perl2
-    SUBDIR += mod_php73
     SUBDIR += mod_php74
     SUBDIR += mod_php80
     SUBDIR += mod_php81
@@ -475,6 +478,7 @@
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
+    SUBDIR += onlyoffice-documentserver
     SUBDIR += openarc
     SUBDIR += opencart
     SUBDIR += orangehrm
@@ -1375,9 +1379,6 @@
     SUBDIR += pglogd
     SUBDIR += phalcon
     SUBDIR += phalcon4
-    SUBDIR += php73-opcache
-    SUBDIR += php73-session
-    SUBDIR += php73-tidy
     SUBDIR += php74-opcache
     SUBDIR += php74-session
     SUBDIR += php74-tidy
@@ -1450,6 +1451,7 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-dj-database-url
     SUBDIR += py-dj32-django-auth-ldap
     SUBDIR += py-dj32-django-cacheops
     SUBDIR += py-dj32-django-cors-headers
@@ -1591,6 +1593,7 @@
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
+    SUBDIR += py-fastapi-users
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
@@ -1671,6 +1674,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
     SUBDIR += py-hyper
@@ -1724,11 +1728,7 @@
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
-    SUBDIR += py-qt5-webchannel
     SUBDIR += py-qt5-webengine
-    SUBDIR += py-qt5-webkit
-    SUBDIR += py-qt5-webkitwidgets
-    SUBDIR += py-qt5-websockets
     SUBDIR += py-quilt3
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
@@ -1822,6 +1822,7 @@
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
+    SUBDIR += reproxy
     SUBDIR += resin3
     SUBDIR += restbed
     SUBDIR += retawq
@@ -1898,10 +1899,12 @@
     SUBDIR += rubygem-faraday-em_http
     SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-httpclient
+    SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday-patron
     SUBDIR += rubygem-faraday-rack
+    SUBDIR += rubygem-faraday-retry
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
@@ -2033,6 +2036,7 @@
     SUBDIR += rubygem-ostatus2
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
+    SUBDIR += rubygem-patron
     SUBDIR += rubygem-platform-api
     SUBDIR += rubygem-propshaft
     SUBDIR += rubygem-protocol-hpack
@@ -2320,6 +2324,7 @@
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta
+    SUBDIR += vultr-cli
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
@@ -2379,7 +2384,6 @@
     SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zend-framework
-    SUBDIR += zend-framework1
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
     SUBDIR += zola

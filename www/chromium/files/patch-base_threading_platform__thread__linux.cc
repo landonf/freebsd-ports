@@ -1,4 +1,4 @@
---- base/threading/platform_thread_linux.cc.orig	2021-10-01 01:36:37 UTC
+--- base/threading/platform_thread_linux.cc.orig	2022-02-07 13:39:41 UTC
 +++ base/threading/platform_thread_linux.cc
 @@ -29,7 +29,9 @@
  
@@ -19,16 +19,25 @@
  const FilePath::CharType kCgroupDirectory[] =
      FILE_PATH_LITERAL("/sys/fs/cgroup");
  
-@@ -300,7 +302,7 @@ const ThreadPriorityToNiceValuePair kThreadPriorityToN
+@@ -286,7 +288,7 @@ void SetThreadCgroupsForThreadPriority(PlatformThreadI
+ namespace internal {
  
- absl::optional<bool> CanIncreaseCurrentThreadPriorityForPlatform(
-     ThreadPriority priority) {
+ namespace {
+-#if !defined(OS_NACL)
++#if !defined(OS_NACL) && !defined(OS_BSD)
+ const struct sched_param kRealTimePrio = {8};
+ #endif
+ }  // namespace
+@@ -299,7 +301,7 @@ const ThreadPriorityToNiceValuePair kThreadPriorityToN
+ };
+ 
+ bool CanSetThreadPriorityToRealtimeAudio() {
 -#if !defined(OS_NACL)
 +#if !defined(OS_NACL) && !defined(OS_BSD)
    // A non-zero soft-limit on RLIMIT_RTPRIO is required to be allowed to invoke
    // pthread_setschedparam in SetCurrentThreadPriorityForPlatform().
    struct rlimit rlim;
-@@ -313,7 +315,7 @@ absl::optional<bool> CanIncreaseCurrentThreadPriorityF
+@@ -310,7 +312,7 @@ bool CanSetThreadPriorityToRealtimeAudio() {
  }
  
  bool SetCurrentThreadPriorityForPlatform(ThreadPriority priority) {
@@ -37,7 +46,16 @@
    // For legacy schedtune interface
    SetThreadCgroupsForThreadPriority(PlatformThread::CurrentId(), priority);
  
-@@ -350,7 +352,7 @@ absl::optional<ThreadPriority> GetCurrentThreadPriorit
+@@ -328,7 +330,7 @@ bool SetCurrentThreadPriorityForPlatform(ThreadPriorit
+ }
+ 
+ absl::optional<ThreadPriority> GetCurrentThreadPriorityForPlatform() {
+-#if !defined(OS_NACL)
++#if !defined(OS_NACL) && !defined(OS_BSD)
+   int maybe_sched_rr = 0;
+   struct sched_param maybe_realtime_prio = {0};
+   if (pthread_getschedparam(pthread_self(), &maybe_sched_rr,
+@@ -347,7 +349,7 @@ absl::optional<ThreadPriority> GetCurrentThreadPriorit
  void PlatformThread::SetName(const std::string& name) {
    ThreadIdNameManager::GetInstance()->SetName(name);
  
@@ -46,7 +64,7 @@
    // On linux we can get the thread names to show up in the debugger by setting
    // the process name for the LWP.  We don't want to do this for the main
    // thread because that would rename the process, causing tools like killall
-@@ -380,8 +382,10 @@ void PlatformThread::SetThreadPriority(ProcessId proce
+@@ -377,8 +379,10 @@ void PlatformThread::SetThreadPriority(ProcessId proce
    // priority.
    CHECK_NE(thread_id, process_id);
  
@@ -57,14 +75,3 @@
  
  #if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS)
    // For upstream uclamp interface. We try both legacy (schedtune, as done
-@@ -438,7 +442,9 @@ void InitThreading() {}
- void TerminateOnThread() {}
- 
- size_t GetDefaultThreadStackSize(const pthread_attr_t& attributes) {
--#if !defined(THREAD_SANITIZER)
-+#if defined(OS_BSD)
-+  return (1 << 23);
-+#elif !defined(THREAD_SANITIZER)
-   return 0;
- #else
-   // ThreadSanitizer bloats the stack heavily. Evidence has been that the

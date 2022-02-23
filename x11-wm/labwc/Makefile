@@ -1,5 +1,5 @@
 PORTNAME=	labwc
-DISTVERSION=	0.4.0
+DISTVERSION=	0.5.0
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -49,6 +49,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
 		-e 's,/usr/local,${PREFIX},' \
 		${WRKSRC}/docs/${PORTNAME}-config.5.scd \
+		${WRKSRC}/docs/${PORTNAME}-environment.5.scd \
 		${WRKSRC}/src/common/dir.c
 
 .include <bsd.port.mk>

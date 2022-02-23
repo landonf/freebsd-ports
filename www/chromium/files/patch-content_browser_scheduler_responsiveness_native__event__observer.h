@@ -1,6 +1,6 @@
---- content/browser/scheduler/responsiveness/native_event_observer.h.orig	2021-09-14 01:51:56 UTC
+--- content/browser/scheduler/responsiveness/native_event_observer.h.orig	2022-02-07 13:39:41 UTC
 +++ content/browser/scheduler/responsiveness/native_event_observer.h
-@@ -16,7 +16,7 @@
+@@ -15,7 +15,7 @@
  #include "content/public/browser/native_event_processor_observer_mac.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "ui/aura/window_event_dispatcher_observer.h"
  #endif
  
-@@ -41,7 +41,7 @@ namespace responsiveness {
+@@ -40,7 +40,7 @@ namespace responsiveness {
  class CONTENT_EXPORT NativeEventObserver
  #if defined(OS_MAC)
      : public NativeEventProcessorObserver
@@ -18,16 +18,16 @@
      : public aura::WindowEventDispatcherObserver
  #elif defined(OS_WIN)
      : public base::MessagePumpForUI::Observer
-@@ -58,7 +58,7 @@ class CONTENT_EXPORT NativeEventObserver
+@@ -57,7 +57,7 @@ class CONTENT_EXPORT NativeEventObserver
    NativeEventObserver(WillRunEventCallback will_run_event_callback,
                        DidRunEventCallback did_run_event_callback);
  
 -#if defined(OS_LINUX) || defined(OS_CHROMEOS)
 +#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
-   ~NativeEventObserver() override;
- #else
-   virtual ~NativeEventObserver();
-@@ -70,7 +70,7 @@ class CONTENT_EXPORT NativeEventObserver
+ 
+   NativeEventObserver(const NativeEventObserver&) = delete;
+   NativeEventObserver& operator=(const NativeEventObserver&) = delete;
+@@ -73,7 +73,7 @@ class CONTENT_EXPORT NativeEventObserver
    // Exposed for tests.
    void WillRunNativeEvent(const void* opaque_identifier) override;
    void DidRunNativeEvent(const void* opaque_identifier) override;
@@ -36,7 +36,7 @@
    // aura::WindowEventDispatcherObserver overrides:
    void OnWindowEventDispatcherStartedProcessing(
        aura::WindowEventDispatcher* dispatcher,
-@@ -87,7 +87,7 @@ class CONTENT_EXPORT NativeEventObserver
+@@ -90,7 +90,7 @@ class CONTENT_EXPORT NativeEventObserver
    void RegisterObserver();
    void DeregisterObserver();
  

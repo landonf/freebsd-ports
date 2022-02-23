@@ -258,6 +258,7 @@
     SUBDIR += fightorperish
     SUBDIR += fillets-ng
     SUBDIR += filters
+    SUBDIR += fishfight
     SUBDIR += fishsupper
     SUBDIR += five-or-more
     SUBDIR += fkiss
@@ -447,6 +448,7 @@
     SUBDIR += kobodeluxe
     SUBDIR += kodi-addon-game.libretro
     SUBDIR += kodi-addon-game.libretro.beetle-psx
+    SUBDIR += kodi-addon-game.libretro.fceumm
     SUBDIR += kodi-addon-game.libretro.genplus
     SUBDIR += kodi-addon-game.libretro.pcsx-rearmed
     SUBDIR += kodi-addon-game.libretro.picodrive

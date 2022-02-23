@@ -62,7 +62,7 @@ IMAGEMAGICK_DEFAULT?=	7
 JAVA_DEFAULT?=		8
 # Possible values: 2.0.12, 2.3.0
 .if !defined(WANT_LAZARUS_DEVEL)
-LAZARUS_DEFAULT?=       2.0.12
+LAZARUS_DEFAULT?=       2.2.0
 .else
 LAZARUS_DEFAULT?=       2.3.0
 .endif
@@ -107,8 +107,8 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
 # Possible values: 9.6, 10, 11, 12, 13, 14
 PGSQL_DEFAULT?=		13
-# Possible values: 7.3, 7.4, 8.0, 8.1
-PHP_DEFAULT?=		7.4
+# Possible values: 7.4, 8.0, 8.1
+PHP_DEFAULT?=		8.0
 # Possible values: 2.7, 3.7, 3.8, 3.9, 3.10, 3.11
 PYTHON_DEFAULT?=	3.8
 # Possible values: 2.7

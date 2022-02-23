@@ -1,5 +1,5 @@
-TIMESTAMP = 1641257028
-SHA256 (cfengine-core-3.2022.01.03-9bdaecc79_GH0.tar.gz) = 0de8c475f4901dec22e3eb8921ccaac6e49b0fb8dcdd36038230fafbe45b3639
-SIZE (cfengine-core-3.2022.01.03-9bdaecc79_GH0.tar.gz) = 2371561
-SHA256 (cfengine-libntech-66274a1_GH0.tar.gz) = 637ef0b8381cdd34d97c8851aff9fadd2122e0f2998c420c79affa8dded88ea4
-SIZE (cfengine-libntech-66274a1_GH0.tar.gz) = 374139
+TIMESTAMP = 1645551933
+SHA256 (cfengine-core-3.2022.02.22-0c1203982_GH0.tar.gz) = 6b496761eb8bb051fdd155d4e53d09ec9e77b944a1aa275c3df48fbada51a245
+SIZE (cfengine-core-3.2022.02.22-0c1203982_GH0.tar.gz) = 2377030
+SHA256 (cfengine-libntech-036c173_GH0.tar.gz) = 6d819d8fd8ac836ab4af59d3b40f30ab086b3e359618f6e2c57e2af3947f054b
+SIZE (cfengine-libntech-036c173_GH0.tar.gz) = 374522

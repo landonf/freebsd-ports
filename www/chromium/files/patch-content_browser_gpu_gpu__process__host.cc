@@ -1,22 +1,28 @@
---- content/browser/gpu/gpu_process_host.cc.orig	2021-09-24 04:26:05 UTC
+--- content/browser/gpu/gpu_process_host.cc.orig	2022-02-07 13:39:41 UTC
 +++ content/browser/gpu/gpu_process_host.cc
-@@ -231,8 +231,8 @@ static const char* const kSwitchNames[] = {
-     sandbox::policy::switches::kNoSandbox,
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if defined(OS_LINUX) && !BUILDFLAG(IS_CHROMEOS_ASH) && \
--    !BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if defined(OS_BSD) || (defined(OS_LINUX) && !BUILDFLAG(IS_CHROMEOS_ASH) && \
-+    !BUILDFLAG(IS_CHROMEOS_LACROS))
-     switches::kDisableDevShmUsage,
+@@ -101,7 +101,7 @@
+ #include "ui/ozone/public/ozone_switches.h"
  #endif
- #if defined(OS_WIN)
-@@ -1130,7 +1130,7 @@ bool GpuProcessHost::LaunchGpuProcess() {
-   std::unique_ptr<base::CommandLine> cmd_line =
-       std::make_unique<base::CommandLine>(base::CommandLine::NO_PROGRAM);
- #else
--#if defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
-   int child_flags = gpu_launcher.empty() ? ChildProcessHost::CHILD_ALLOW_SELF
-                                          : ChildProcessHost::CHILD_NORMAL;
- #elif defined(OS_MAC)
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ #include "ui/gfx/switches.h"
+ #endif
+ 
+@@ -254,6 +254,7 @@ static const char* const kSwitchNames[] = {
+     switches::kEnableBackgroundThreadPool,
+     switches::kEnableGpuRasterization,
+     switches::kEnableLogging,
++    switches::kDisableUnveil,
+     switches::kEnableDeJelly,
+     switches::kDeJellyScreenWidth,
+     switches::kDocumentTransitionSlowdownFactor,
+@@ -295,7 +296,7 @@ static const char* const kSwitchNames[] = {
+     switches::kOzoneDumpFile,
+     switches::kDisableBufferBWCompression,
+ #endif
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+     switches::kX11Display,
+     switches::kNoXshm,
+ #endif

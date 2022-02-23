@@ -78,6 +78,7 @@
     SUBDIR += blender
     SUBDIR += blender-doc
     SUBDIR += blender-lts28
+    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -99,6 +100,7 @@
     SUBDIR += chafa
     SUBDIR += charls
     SUBDIR += cimg
+    SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
@@ -114,6 +116,7 @@
     SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += curator
+    SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += darktable
     SUBDIR += darktable38
@@ -259,12 +262,15 @@
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
     SUBDIR += gimp-gmic-plugin
+    SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
     SUBDIR += gimp-refocus-plugin
     SUBDIR += gimp-resynthesizer
     SUBDIR += gkrellkam2
     SUBDIR += glad
+    SUBDIR += glaxnimate
+    SUBDIR += glbinding
     SUBDIR += gle
     SUBDIR += glee
     SUBDIR += glew
@@ -358,6 +364,7 @@
     SUBDIR += imageworsener
     SUBDIR += imc
     SUBDIR += imlib2
+    SUBDIR += imlib2-jxl
     SUBDIR += imlib2-webp
     SUBDIR += imlib2_loaders
     SUBDIR += impressive
@@ -407,6 +414,7 @@
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kmscube
+    SUBDIR += knotter
     SUBDIR += kolourpaint
     SUBDIR += kontrast
     SUBDIR += kooka
@@ -542,6 +550,7 @@
     SUBDIR += mapcache
     SUBDIR += mapserver
     SUBDIR += mapyrus
+    SUBDIR += matplotplusplus
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
@@ -588,6 +597,7 @@
     SUBDIR += opencollada
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
+    SUBDIR += opencoloriov1
     SUBDIR += opencsg
     SUBDIR += opencv
     SUBDIR += opendx
@@ -598,6 +608,7 @@
     SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
+    SUBDIR += openimageio-ociov1
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
     SUBDIR += openjph
@@ -761,8 +772,6 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php73-exif
-    SUBDIR += php73-gd
     SUBDIR += php74-exif
     SUBDIR += php74-gd
     SUBDIR += php80-exif
@@ -905,7 +914,6 @@
     SUBDIR += py-pyvips
     SUBDIR += py-pyx
     SUBDIR += py-qrencode
-    SUBDIR += py-qt5-svg
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
@@ -954,7 +962,6 @@
     SUBDIR += quesoglc
     SUBDIR += quickqanava
     SUBDIR += qvge
-    SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
@@ -999,6 +1006,7 @@
     SUBDIR += rubygem-imagesize
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
+    SUBDIR += rubygem-mini_magick410
     SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
@@ -1046,6 +1054,7 @@
     SUBDIR += showimage
     SUBDIR += silgraphite
     SUBDIR += simage
+    SUBDIR += simple-scan
     SUBDIR += simpleviewer
     SUBDIR += skanlite
     SUBDIR += skanpage

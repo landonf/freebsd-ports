@@ -88,6 +88,7 @@
     SUBDIR += mar
     SUBDIR += maxcso
     SUBDIR += minizip
+    SUBDIR += minizip-ng
     SUBDIR += mscompress
     SUBDIR += mtf
     SUBDIR += nfpm
@@ -152,10 +153,6 @@
     SUBDIR += php-lz4
     SUBDIR += php-snappy
     SUBDIR += php-zstd
-    SUBDIR += php73-bz2
-    SUBDIR += php73-phar
-    SUBDIR += php73-zip
-    SUBDIR += php73-zlib
     SUBDIR += php74-bz2
     SUBDIR += php74-phar
     SUBDIR += php74-zip
@@ -188,6 +185,7 @@
     SUBDIR += py-lzstring
     SUBDIR += py-python-lhafile
     SUBDIR += py-python-lzo
+    SUBDIR += py-python-rpm-packaging
     SUBDIR += py-python-snappy
     SUBDIR += py-rarfile
     SUBDIR += py-rcssmin
@@ -265,6 +263,7 @@
     SUBDIR += zip-ada
     SUBDIR += zipmix
     SUBDIR += zipper
+    SUBDIR += zlib-ng
     SUBDIR += zoo
     SUBDIR += zopfli
     SUBDIR += zstd

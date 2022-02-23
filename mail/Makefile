@@ -30,8 +30,8 @@
     SUBDIR += bincimap
     SUBDIR += bmf
     SUBDIR += bogofilter
+    SUBDIR += bogofilter-bdb
     SUBDIR += bogofilter-kc
-    SUBDIR += bogofilter-lmdb
     SUBDIR += bogofilter-sqlite
     SUBDIR += bsfilter
     SUBDIR += bsmtp
@@ -94,6 +94,7 @@
     SUBDIR += dma
     SUBDIR += dot-forward
     SUBDIR += dovecot
+    SUBDIR += dovecot-fts-flatcurve
     SUBDIR += dovecot-fts-xapian
     SUBDIR += dovecot-pigeonhole
     SUBDIR += dspam
@@ -250,6 +251,7 @@
     SUBDIR += neomutt
     SUBDIR += nextcloud-mail
     SUBDIR += nmh
+    SUBDIR += nmh-devel
     SUBDIR += noattach
     SUBDIR += nocc
     SUBDIR += normalizemime
@@ -448,7 +450,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php73-imap
     SUBDIR += php74-imap
     SUBDIR += php80-imap
     SUBDIR += php81-imap

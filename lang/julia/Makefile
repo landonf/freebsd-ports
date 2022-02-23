@@ -1,9 +1,8 @@
 # Created by: Iblis Lin <iblis@hs.ntnu.edu.tw>
 
 PORTNAME=	julia
-DISTVERSION=	1.7.1
+DISTVERSION=	1.7.2
 DISTVERSIONSUFFIX=	-full
-PORTREVISION=	1
 CATEGORIES=	lang math
 MASTER_SITES=	https://github.com/JuliaLang/julia/releases/download/v${DISTVERSION}/
 
@@ -95,6 +94,12 @@ GPL_LIBS_MAKE_ARGS=	USE_SYSTEM_LIBSUITESPARSE=1 \
 
 NATIVE_DESC=		Build with native CPU JIT tuning
 NATIVE_MAKE_ARGS=	MARCH=native
+
+post-extract:
+	${MKDIR} ${WRKSRC}/stdlib/Downloads-26d79afcde9cf837a331fce023b31f1d3699700c/
+	${TAR} -C ${WRKSRC}/stdlib/Downloads-26d79afcde9cf837a331fce023b31f1d3699700c/ --strip-components 1 \
+		-xf ${WRKSRC}/stdlib/srccache/Downloads-26d79afcde9cf837a331fce023b31f1d3699700c.tar.gz
+	echo "1" > ${WRKSRC}/stdlib/Downloads-26d79afcde9cf837a331fce023b31f1d3699700c/source-extracted
 
 post-patch:
 	echo "override TAGGED_RELEASE_BANNER=\"FreeBSD port lang/${PORTNAME} build\"" >> ${WRKSRC}/Make.user

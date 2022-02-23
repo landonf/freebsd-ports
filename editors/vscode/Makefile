@@ -1,6 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.63.2
-PORTREVISION=	2
+DISTVERSION=	1.64.2
 CATEGORIES=	editors
 MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
 		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
@@ -21,9 +20,6 @@ COMMENT=	Visual Studio Code - Open Source ("Code - OSS")
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-
-DEPRECATED=	Uses EOL Python 2.7 via devel/electron13
-EXPIRATION_DATE=2021-06-23
 
 ONLY_FOR_ARCHS=	amd64
 
@@ -73,7 +69,7 @@ USES=		desktop-file-utils gl gmake gnome jpeg pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	899d46d82c4c95423fb7e10e68eba52050e30ba3
+SOURCE_COMMIT_HASH=	f80445acd5a3dadef24aa209168452a3d97cc326
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -88,7 +84,7 @@ USE_LDCONFIG=	${DATADIR}
 NODE_VER=	14.16.0
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 # See ${WRKSRC}/build/package.json for ESBUILD_VER_BUILD
-ESBUILD_VER_BUILD=	0.12.6
+ESBUILD_VER_BUILD=	0.14.2
 # See ${WRKSRC}/extensions/package.json for ESBUILD_VER_EXTENSIONS
 ESBUILD_VER_EXTENSIONS=	0.11.23
 
@@ -189,10 +185,12 @@ pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		yarn --frozen-lockfile --offline
 	# copy rg binary files to vscode-ripgrep module directory
+	${MKDIR} ${WRKSRC}/node_modules/@vscode/ripgrep/bin
+	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/@vscode/ripgrep/bin
 	${MKDIR} ${WRKSRC}/node_modules/vscode-ripgrep/bin
 	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/vscode-ripgrep/bin
-	${MKDIR} ${WRKSRC}/remote/node_modules/vscode-ripgrep/bin
-	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/remote/node_modules/vscode-ripgrep/bin
+	${MKDIR} ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
+	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
 
 do-build:
 	# setup download cache for gulp-atom-electron

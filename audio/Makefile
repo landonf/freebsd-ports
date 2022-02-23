@@ -3,6 +3,7 @@
     SUBDIR += GxSwitchlessWah-lv2
     SUBDIR += HVSC-Update
     SUBDIR += Maaate
+    SUBDIR += a2jmidid
     SUBDIR += aacgain
     SUBDIR += aacplusenc
     SUBDIR += abcde
@@ -73,6 +74,7 @@
     SUBDIR += cantata
     SUBDIR += caps-lv2
     SUBDIR += caps-plugins
+    SUBDIR += cardinal
     SUBDIR += carla
     SUBDIR += cava
     SUBDIR += ccaudio2
@@ -322,6 +324,7 @@
     SUBDIR += invada-studio-plugins-lv2
     SUBDIR += ir-lv2
     SUBDIR += jack
+    SUBDIR += jack-example-tools
     SUBDIR += jack-keyboard
     SUBDIR += jack-smf-utils
     SUBDIR += jack_ghero
@@ -536,7 +539,6 @@
     SUBDIR += ncmpcpp
     SUBDIR += ncpamixer
     SUBDIR += ncspot
-    SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
     SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize

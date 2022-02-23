@@ -4,6 +4,9 @@ DISTVERSIONPREFIX=	Natron-
 PORTREVISION=	47
 CATEGORIES=	graphics
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	bc06a46bb1ccef8f7da6caf17faf165fbac662db.diff:-p1
+
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Extra OpenFX plugins for Natron
 

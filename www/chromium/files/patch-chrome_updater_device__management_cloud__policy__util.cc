@@ -1,6 +1,6 @@
---- chrome/updater/device_management/cloud_policy_util.cc.orig	2021-09-24 18:39:26 UTC
+--- chrome/updater/device_management/cloud_policy_util.cc.orig	2022-02-07 13:39:41 UTC
 +++ chrome/updater/device_management/cloud_policy_util.cc
-@@ -21,7 +21,7 @@
+@@ -22,7 +22,7 @@
  #include <wincred.h>
  #endif
  
@@ -9,7 +9,7 @@
  #include <pwd.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -35,7 +35,7 @@
+@@ -36,7 +36,7 @@
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -18,7 +18,7 @@
  #include <limits.h>  // For HOST_NAME_MAX
  #endif
  
-@@ -62,7 +62,7 @@
+@@ -63,7 +63,7 @@
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -27,19 +27,16 @@
  #include "base/system/sys_info.h"
  #endif
  
-@@ -115,6 +115,11 @@ std::string GetMachineName() {
+@@ -111,7 +111,7 @@ std::string GetPolicyVerificationKey() {
+ std::string GetMachineName() {
+ // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if defined(OS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || defined(OS_BSD)
+   char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-   return std::string();
-+#elif defined(OS_BSD)
-+  char hostname[MAXHOSTNAMELEN];
-+  if (gethostname(hostname, MAXHOSTNAMELEN) == 0)  // Success.
-+    return hostname;
-+  return std::string();
- #elif defined(OS_MAC)
-   // Do not use NSHost currentHost, as it's very slow. http://crbug.com/138570
-   SCDynamicStoreContext context = {0, NULL, NULL, NULL};
-@@ -160,7 +165,7 @@ std::string GetMachineName() {
+@@ -161,7 +161,7 @@ std::string GetMachineName() {
  }
  
  std::string GetOSVersion() {

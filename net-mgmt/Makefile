@@ -45,6 +45,7 @@
     SUBDIR += check_ups_health
     SUBDIR += chillispot
     SUBDIR += choparp
+    SUBDIR += chronograf
     SUBDIR += cidr
     SUBDIR += ciscoconf
     SUBDIR += clog
@@ -275,10 +276,8 @@
     SUBDIR += pandorafms_agent
     SUBDIR += pandorafms_console
     SUBDIR += pandorafms_server
-    SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
     SUBDIR += php-fpm_exporter
-    SUBDIR += php73-snmp
     SUBDIR += php74-snmp
     SUBDIR += php80-snmp
     SUBDIR += php81-snmp
@@ -315,6 +314,7 @@
     SUBDIR += py-opn-cli
     SUBDIR += py-pdagent
     SUBDIR += py-pdagent-integrations
+    SUBDIR += py-phonebox-plugin
     SUBDIR += py-prometheus-client
     SUBDIR += py-pyIOSXR
     SUBDIR += py-pyang
@@ -411,5 +411,10 @@
     SUBDIR += zabbix54-java
     SUBDIR += zabbix54-proxy
     SUBDIR += zabbix54-server
+    SUBDIR += zabbix6-agent
+    SUBDIR += zabbix6-frontend
+    SUBDIR += zabbix6-java
+    SUBDIR += zabbix6-proxy
+    SUBDIR += zabbix6-server
 
 .include <bsd.port.subdir.mk>

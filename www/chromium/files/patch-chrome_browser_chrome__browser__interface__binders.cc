@@ -1,37 +1,56 @@
---- chrome/browser/chrome_browser_interface_binders.cc.orig	2021-09-24 04:25:58 UTC
+--- chrome/browser/chrome_browser_interface_binders.cc.orig	2022-02-07 13:39:41 UTC
 +++ chrome/browser/chrome_browser_interface_binders.cc
-@@ -155,7 +155,7 @@
- #include "ui/webui/resources/cr_components/most_visited/most_visited.mojom.h"
+@@ -97,7 +97,7 @@
+ #endif  // BUILDFLAG(FULL_SAFE_BROWSING)
+ 
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS_ASH)
++    BUILDFLAG(IS_CHROMEOS_ASH) || defined(OS_BSD)
+ #include "chrome/browser/ui/webui/connectors_internals/connectors_internals.mojom.h"
+ #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
+ #endif
+@@ -165,7 +165,7 @@
  #endif  // defined(OS_ANDROID)
  
--#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
-+#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || defined(OS_BSD) || \
-     defined(OS_CHROMEOS)
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    defined(OS_CHROMEOS)
++    defined(OS_CHROMEOS) || defined(OS_BSD)
  #include "chrome/browser/ui/webui/discards/discards.mojom.h"
  #include "chrome/browser/ui/webui/discards/discards_ui.h"
-@@ -637,14 +637,14 @@ void PopulateChromeFrameBinders(
-       base::BindRepeating(&BindSpeechRecognitionRecognizerClientHandler));
+ #include "chrome/browser/ui/webui/discards/site_data.mojom.h"
+@@ -654,7 +654,7 @@ void PopulateChromeFrameBinders(
  #endif
  
--#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || defined(OS_BSD)
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    defined(OS_CHROMEOS)
++    defined(OS_CHROMEOS) || defined(OS_BSD)
    if (!render_frame_host->GetParent()) {
      map->Add<chrome::mojom::DraggableRegions>(
          base::BindRepeating(&DraggableRegionsHostImpl::CreateIfAllowed));
-   }
+@@ -662,7 +662,7 @@ void PopulateChromeFrameBinders(
  #endif
  
--#if defined(OS_CHROMEOS) || defined(OS_LINUX) || defined(OS_MAC) || \
-+#if defined(OS_CHROMEOS) || defined(OS_LINUX) || defined(OS_MAC) || defined(OS_BSD) || \
-     defined(OS_WIN)
+ #if defined(OS_CHROMEOS) || defined(OS_LINUX) || defined(OS_MAC) || \
+-    defined(OS_WIN)
++    defined(OS_WIN) || defined(OS_BSD)
    if (base::FeatureList::IsEnabled(blink::features::kDesktopPWAsSubApps) &&
        !render_frame_host->GetParent()) {
-@@ -952,7 +952,7 @@ void PopulateChromeWebUIFrameBinders(
-   }
+     map->Add<blink::mojom::SubAppsProvider>(
+@@ -702,7 +702,7 @@ void PopulateChromeWebUIFrameBinders(
+       SegmentationInternalsUI>(map);
+ 
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS_ASH)
++    BUILDFLAG(IS_CHROMEOS_ASH) || defined(OS_BSD)
+   RegisterWebUIControllerInterfaceBinder<
+       connectors_internals::mojom::PageHandler,
+       enterprise_connectors::ConnectorsInternalsUI>(map);
+@@ -1003,7 +1003,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif
  
--#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
-+#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || defined(OS_BSD) || \
-     defined(OS_CHROMEOS)
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    defined(OS_CHROMEOS)
++    defined(OS_CHROMEOS) || defined(OS_BSD)
    RegisterWebUIControllerInterfaceBinder<discards::mojom::DetailsProvider,
                                           DiscardsUI>(map);
+ 
