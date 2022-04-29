@@ -17,6 +17,7 @@
     SUBDIR += arandr
     SUBDIR += arcan-trayicon
     SUBDIR += aterm
+    SUBDIR += autorandr
     SUBDIR += babl
     SUBDIR += bbappconf
     SUBDIR += bbdock
@@ -259,6 +260,7 @@
     SUBDIR += nwg-dock
     SUBDIR += nwg-drawer
     SUBDIR += nwg-launchers
+    SUBDIR += nwg-look
     SUBDIR += nwg-menu
     SUBDIR += nxcomp
     SUBDIR += p5-Clipboard

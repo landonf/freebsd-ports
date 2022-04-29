@@ -2,7 +2,7 @@
 
 PORTNAME=	seexpr
 PORTVERSION=	3.4.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics math
 MASTER_SITES=	https://download.kde.org/stable/${PORTNAME}/
 
@@ -20,6 +20,8 @@ USE_LDCONFIG=	yes
 USE_QT=		buildtools_build qmake_build core gui opengl widgets
 
 MAKE_JOBS_UNSAFE=	yes	# https://github.com/wdas/seexpr/issues/40
+
+CONFLICTS_INSTALL=	kseexpr
 
 OPTIONS_DEFINE=	ANIMCURVE DEEPWATER LLVM NLS PYTHON
 OPTIONS_DEFAULT=	DEEPWATER

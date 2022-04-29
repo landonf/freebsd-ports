@@ -1,6 +1,6 @@
 PORTNAME=	authenticator
 DISTVERSION=	4.0.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	security
 
 PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
@@ -12,6 +12,8 @@ COMMENT=	Generate Two-Factor Codes
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+IGNORE=		crashes with libadwaita >= 1.0
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libgraphene-1.0.so:graphics/graphene \

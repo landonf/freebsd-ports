@@ -1,11 +1,11 @@
---- extensions/browser/extension_prefs.cc.orig	2022-02-07 13:39:41 UTC
+--- extensions/browser/extension_prefs.cc.orig	2022-04-21 18:48:31 UTC
 +++ extensions/browser/extension_prefs.cc
-@@ -2252,7 +2252,7 @@ void ExtensionPrefs::RegisterProfilePrefs(
-   registry->RegisterStringPref(pref_names::kLastChromeVersion, std::string());
+@@ -2270,7 +2270,7 @@ void ExtensionPrefs::RegisterProfilePrefs(
    registry->RegisterDictionaryPref(kInstallSignature);
    registry->RegisterListPref(kExternalUninstalls);
--#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    registry->RegisterBooleanPref(pref_names::kChromeAppsEnabled, false);
  #endif
    registry->RegisterBooleanPref(pref_names::kU2fSecurityKeyApiEnabled, false);

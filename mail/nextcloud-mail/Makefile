@@ -1,7 +1,7 @@
 # Created by: Bernard Spil <brnrd@freebsd.org>
 
 PORTNAME=	mail
-DISTVERSION=	1.11.6
+DISTVERSION=	1.11.7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/nextcloud-releases/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
@@ -21,6 +21,7 @@ RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=20:www/nextcloud@${PHP_FLAVOR}
 
 USES=		cpe gettext php:flavors
 USE_PHP=	imap
+IGNORE_WITH_PHP=81
 
 CPE_VENDOR=	nextcloud
 

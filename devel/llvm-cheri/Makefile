@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 PORTVERSION=	${LLVM_MAJOR}.0.d${SNAPDATE}
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
 
@@ -64,7 +64,9 @@ GH_ACCOUNT=	CTSRD-CHERI
 GH_TAGNAME=	${LLVM_COMMIT}
 .endif
 
-.sinclude "${.CURDIR}/Makefile.snapshot"
+.ifndef SNAPDATE
+.sinclude "${.PARSEDIR}/Makefile.snapshot"
+.endif
 
 OPTIONS_DEFINE=	CLANG DOCS LIT LLD
 OPTIONS_DEFAULT=	CLANG LIT LLD
@@ -113,9 +115,9 @@ CONFIGURE_TARGET:=${ARCH:C/amd64/x86_64/:C/armv6hf/armv6/}-portbld-${OPSYS:tl}${
 LLVM_ENABLE_PROJECTS+=	clang
 COMMANDS+=	${CLANG_COMMANDS}
 MAN1SRCS+=	clang.1 \
-		clang-tblgen.1 \
 		diagtool.1 \
 		scan-build.1
+MAN1SRCS+=	clang-tblgen.1
 #DOCS_PLIST_FILES+=	man/man1/scan-build${LLVM_SUFFIX}.1.gz
 USES+=		gnome
 .endif
@@ -171,7 +173,6 @@ MAN1SRCS+=	bugpoint.1 \
 		llvm-nm.1 \
 		llvm-objcopy.1 \
 		llvm-objdump.1 \
-		llvm-otool.1 \
 		llvm-pdbutil.1 \
 		llvm-profdata.1 \
 		llvm-profgen.1 \
@@ -183,8 +184,11 @@ MAN1SRCS+=	bugpoint.1 \
 		llvm-strings.1 \
 		llvm-strip.1 \
 		llvm-symbolizer.1 \
+		opt.1
+
+MAN1SRCS+= \
+		llvm-otool.1 \
 		llvm-tblgen.1 \
-		opt.1 \
 		tblgen.1
 
 .include <bsd.port.pre.mk>
@@ -233,6 +237,9 @@ post-install-DOCS-on:
 	${RM} ${STAGEDIR}${LLVM_PREFIX}/share/man/man1/mlir-tblgen.1
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/man1/
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/
+
+post-install-LLD-on:
+	${LN} -s ld.lld ${STAGEDIR}${LLVM_PREFIX}/bin/ld
 
 post-install-LLDB-on:
 .if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang

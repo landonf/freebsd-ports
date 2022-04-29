@@ -1,6 +1,6 @@
 PORTNAME=	shortwave
 DISTVERSION=	2.0.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	audio
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -8,6 +8,8 @@ COMMENT=	Listen to internet radio
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING.md
+
+IGNORE=		crashes with libadwaita >= 1.0
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus
 

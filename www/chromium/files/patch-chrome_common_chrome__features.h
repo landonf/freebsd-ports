@@ -1,56 +1,47 @@
---- chrome/common/chrome_features.h.orig	2022-02-07 13:39:41 UTC
+--- chrome/common/chrome_features.h.orig	2022-04-21 18:48:31 UTC
 +++ chrome/common/chrome_features.h
-@@ -92,7 +92,7 @@ extern const base::Feature kArcPiGhostWindow;
+@@ -95,7 +95,7 @@ extern const base::Feature kArcPiGhostWindow;
  COMPONENT_EXPORT(CHROME_FEATURES) extern const base::Feature kAsyncDns;
  
- #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS) || defined(OS_FUCHSIA)
-+    defined(OS_CHROMEOS) || defined(OS_FUCHSIA) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kAutofillAddressSurvey;
  COMPONENT_EXPORT(CHROME_FEATURES)
-@@ -101,7 +101,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -104,7 +104,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kAutofillPasswordSurvey;
  #endif
  
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kBackgroundModeAllowRestart;
- #endif  // defined(OS_WIN) || defined(OS_LINUX) || defined(OS_CHROMEOS)
-@@ -118,7 +118,7 @@ extern const base::Feature kBrowserAppInstanceTracking
- COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kChangePictureVideoMode;
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+@@ -219,7 +219,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+ extern const base::Feature kDesktopPWAsWebBundles;
  
--#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kChromeAppsDeprecation;
- #endif
-@@ -183,7 +183,7 @@ extern const base::Feature kPreinstalledWebAppInstalla
- #endif
- 
- #if BUILDFLAG(IS_CHROMEOS_ASH) || defined(OS_MAC) || defined(OS_LINUX) || \
--    defined(OS_FUCHSIA)
-+    defined(OS_FUCHSIA) || defined(OS_BSD)
+ extern const base::Feature kDesktopPWAsWebAppSettingsPage;
  COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kDesktopPWAsAppIconShortcutsMenuUI;
- #endif
-@@ -418,7 +418,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kIncognitoNtpRevamp;
- 
- #if defined(OS_MAC) || defined(OS_WIN) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS) || defined(OS_FUCHSIA)
-+    defined(OS_CHROMEOS) || defined(OS_FUCHSIA) || defined(OS_BSD)
- COMPONENT_EXPORT(CHROME_FEATURES)
- extern const base::Feature kIncognitoBrandConsistencyForDesktop;
- 
-@@ -445,7 +445,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -440,7 +440,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kKernelnextVMs;
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS)
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::Feature kLinuxLowMemoryMonitor;
  COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -449,7 +449,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+ extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
+ #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ COMPONENT_EXPORT(CHROME_FEATURES)
+ extern const base::Feature kListWebAppsSwitch;
+ #endif

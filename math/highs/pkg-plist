@@ -48,6 +48,7 @@ include/mip/HighsMipSolver.h
 include/mip/HighsMipSolverData.h
 include/mip/HighsModkSeparator.h
 include/mip/HighsNodeQueue.h
+include/mip/HighsObjectiveFunction.h
 include/mip/HighsPathSeparator.h
 include/mip/HighsPrimalHeuristics.h
 include/mip/HighsPseudocost.h
@@ -80,7 +81,7 @@ include/presolve/Presolve.h
 include/presolve/PresolveAnalysis.h
 include/presolve/PresolveComponent.h
 include/presolve/PresolveUtils.h
-include/qpsolver/solver.hpp
+include/qpsolver/quass.hpp
 include/qpsolver/vector.hpp
 include/simplex/HApp.h
 include/simplex/HEkk.h
@@ -131,6 +132,6 @@ lib/cmake/highs/highs-targets.cmake
 lib/libbasiclu.so
 lib/libhighs.so
 lib/libhighs.so.1.2
-lib/libhighs.so.1.2.0
+lib/libhighs.so.1.2.1
 lib/libipx.so
 libdata/pkgconfig/highs.pc

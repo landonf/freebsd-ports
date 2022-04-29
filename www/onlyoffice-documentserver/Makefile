@@ -1,18 +1,20 @@
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.0.0.133
-PORTREVISION=	1
+DISTVERSION=	7.0.1.50
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	LOCAL/mikael/v8/:source1 \
 		LOCAL/mikael/onlyoffice/:source2 \
-		https://nodejs.org/dist/v16.13.0/:source3 \
+		https://nodejs.org/dist/v${NODE_VERSION_PKGFETCH}/:source3 \
+		https://nodejs.org/dist/v${NODE_VERSION_PORTS}/:source3 \
 		SF/optipng/OptiPNG/optipng-0.7.7/:source4
 DISTFILES+=	v8-6.8.275.32_all.tar.gz:source1 \
 		v8-6.8.275.32_122aarch64.tar.gz:source1 \
 		v8-6.8.275.32_122amd64.tar.gz:source1 \
-		node-v16.13.0.tar.gz:source3 \
-		npm-cache-onlyoffice-${DISTVERSION}.tar.gz:source2 \
-		optipng-0.7.7.tar.gz:source4
+		node-v${NODE_VERSION_PKGFETCH}.tar.gz:source3 \
+		node-v${NODE_VERSION_PORTS}.tar.gz:source3 \
+		optipng-0.7.7.tar.gz:source4 \
+		onlyoffice-${DISTVERSION}-npm-cache.tar.gz:source2 \
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Secure office and productivity apps
@@ -23,13 +25,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	uses aarch64 or amd64 binaries
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=0:devel/py-Jinja2@${PY_FLAVOR} \
-		binutils>=0:devel/binutils \
-		boost-libs>0:devel/boost-libs \
+BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		glib>=2.54:devel/glib20 \
-		gn:devel/gn \
 		java:java/openjdk11 \
-		ninja:devel/ninja \
 		npm:www/npm-node16
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
@@ -41,13 +39,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}supervisor>0:sysutils/py-supervisor@${PY_FLA
 		rabbitmq>0:net/rabbitmq \
 		webfonts>=0:x11-fonts/webfonts
 
-USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv nodejs:16,build pkgconfig \
-		python:3.7+,build qt:5
+USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv localbase nodejs:16,build pkgconfig \
+		python:3.7+,build qt:5 trigger
 USE_QT=		qmake_build
 USE_GITHUB=	yes
 GH_ACCOUNT=	ONLYOFFICE
 GH_PROJECT=	DocumentServer
-GH_TAGNAME=	v7.0.0
+GH_TAGNAME=	v7.0.1
 GH_TUPLE=	ONLYOFFICE:core:v${DISTVERSION}:core/core \
 		ONLYOFFICE:core-fonts:v${DISTVERSION}:corefonts/core-fonts \
 		ONLYOFFICE:dictionaries:v${DISTVERSION}:dictionaries/dictionaries \
@@ -77,9 +75,9 @@ OPTIONS_SINGLE=		DB
 OPTIONS_SINGLE_DB=	MYSQL PGSQL
 OPTIONS_DEFAULT=	PGSQL
 
-MYSQL_USES+=	mysql:server
+MYSQL_USES+=	mysql:client
 PGSQL_USES+=	pgsql
-PGSQL_VARS=	WANT_PGSQL=server
+PGSQL_VARS=	WANT_PGSQL=client
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 USE_LDCONFIG=	yes
@@ -101,9 +99,18 @@ SUB_LIST=	ETCDIR=${ETCDIR} \
 		PREFIX=${PREFIX} \
 		WWWDIR=${WWWDIR}
 
+# node version used with "npm install pkg@5.5.1"
+NODE_VERSION_PKGFETCH=	16.13.0
+# node version used in the ports tree
+NODE_VERSION_PORTS=	16.14.2
+
 MAKE_ENV=	BUILD_NUMBER="1" \
 		PKG_CACHE_PATH=${WRKDIR}/.pkg-cache \
 		PRODUCT_VERSION="${DISTVERSION}"
+
+# Don't create __pycache__ directory when executing node-gyp
+# This is a workaround to avoid filesystem violations during poudriere build
+MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 
 DOS2UNIX_FILES=	document-server-package/common/documentserver/nginx/includes/http-common.conf.m4
 
@@ -115,10 +122,13 @@ post-extract:
 	@${MV} ${WRKDIR}/v8_obj_122${ARCH}/obj ${WRKSRC}/core/Common/3dParty/v8/v8/out.gn/freebsd_64
 
 	@${MKDIR} ${WRKDIR}/.pkg-cache/node
-	@${CP} ${DISTDIR}/node-v16.13.0.tar.gz ${WRKDIR}/.pkg-cache/node
-# Checksum can be verified here: https://nodejs.org/dist/v16.13.0/SHASUMS256.txt
-	@${ECHO} "9c00e5b6024cfcbc9105f9c58cf160762e78659a345d100c5bd80a7fb38c684f  node-v16.13.0.tar.gz" > \
-		${WRKDIR}/.pkg-cache/node/node-v16.13.0.tar.gz.sha256sum
+	@${CP} ${DISTDIR}/node-v${NODE_VERSION_PKGFETCH}.tar.gz ${DISTDIR}/node-v${NODE_VERSION_PORTS}.tar.gz \
+		${WRKDIR}/.pkg-cache/node
+# Checksum can be verified here: https://nodejs.org/dist/v${NODE_VERSION_PKGFETCH}/SHASUMS256.txt
+	@${ECHO} "9c00e5b6024cfcbc9105f9c58cf160762e78659a345d100c5bd80a7fb38c684f  node-v${NODE_VERSION_PKGFETCH}.tar.gz" > \
+		${WRKDIR}/.pkg-cache/node/node-v${NODE_VERSION_PKGFETCH}.tar.gz.sha256sum
+	@${ECHO} "082170f362c4da0e97f3a1899e3f5e4c998bbc245b803c77c6ab113a2b5cbd5f  node-v${NODE_VERSION_PKGPORTS}.tar.gz" > \
+		${WRKDIR}/.pkg-cache/node/node-v${NODE_VERSION_PORTS}.tar.gz.sha256sum
 
 	@${MKDIR} ${WRKSRC}/sdkjs-plugins/v1
 	@${CP} ${WRKSRC}/onlyoffice.github.io/sdkjs-plugins/v1/* ${WRKSRC}/sdkjs-plugins/v1

@@ -9,16 +9,10 @@
     SUBDIR += R-cran-fastmap
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
-    SUBDIR += adabase
     SUBDIR += adminer
-    SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
-    SUBDIR += apq
-    SUBDIR += apq-mysql
-    SUBDIR += apq-odbc
-    SUBDIR += apq-pgsql
     SUBDIR += arrow
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
@@ -110,7 +104,6 @@
     SUBDIR += grass7
     SUBDIR += grass8
     SUBDIR += hashtypes
-    SUBDIR += hbase
     SUBDIR += hiredis
     SUBDIR += hsqldb
     SUBDIR += influxdb
@@ -121,7 +114,6 @@
     SUBDIR += ipa_sdb
     SUBDIR += iplike
     SUBDIR += isql-viewer
-    SUBDIR += jasperreports
     SUBDIR += jdb
     SUBDIR += jdbc-oracle11g
     SUBDIR += jetbrains-datagrip
@@ -250,7 +242,6 @@
     SUBDIR += ods2sql
     SUBDIR += opendbviewer
     SUBDIR += opendbx
-    SUBDIR += opentsdb
     SUBDIR += ora2pg
     SUBDIR += oracle8-client
     SUBDIR += p5-Amazon-SimpleDB
@@ -419,6 +410,7 @@
     SUBDIR += p5-DBIx-Skinny-Schema-Loader
     SUBDIR += p5-DBIx-Sunny
     SUBDIR += p5-DBIx-TableHash
+    SUBDIR += p5-DBIx-Tracer
     SUBDIR += p5-DBIx-TransactionManager
     SUBDIR += p5-DBIx-Tree
     SUBDIR += p5-DBIx-VersionedDDL
@@ -719,14 +711,6 @@
     SUBDIR += postgresql14-plpython
     SUBDIR += postgresql14-pltcl
     SUBDIR += postgresql14-server
-    SUBDIR += postgresql96-client
-    SUBDIR += postgresql96-contrib
-    SUBDIR += postgresql96-docs
-    SUBDIR += postgresql96-pgtcl
-    SUBDIR += postgresql96-plperl
-    SUBDIR += postgresql96-plpython
-    SUBDIR += postgresql96-pltcl
-    SUBDIR += postgresql96-server
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect
@@ -755,6 +739,7 @@
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
     SUBDIR += py-alembic14
+    SUBDIR += py-alembic16
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
@@ -866,8 +851,8 @@
     SUBDIR += recutils
     SUBDIR += redis
     SUBDIR += redis-devel
-    SUBDIR += redis5
     SUBDIR += redis6
+    SUBDIR += redis62
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
@@ -986,6 +971,7 @@
     SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-actionpack-rails61
+    SUBDIR += rubygem-redis-actionpack52-rails61
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis44
     SUBDIR += rubygem-sdbm
@@ -1059,7 +1045,6 @@
     SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += xtrabackup8
-    SUBDIR += zabbix3-libzbxpgsql
     SUBDIR += zodb
 
 .include <bsd.port.subdir.mk>

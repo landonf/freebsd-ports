@@ -34,7 +34,6 @@
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
     SUBDIR += UCD
-    SUBDIR += adabrowse
     SUBDIR += add-css-links
     SUBDIR += addts
     SUBDIR += af-aspell
@@ -53,6 +52,7 @@
     SUBDIR += apache-poi
     SUBDIR += apache-solr
     SUBDIR += apertium
+    SUBDIR += apertium-eng
     SUBDIR += artha
     SUBDIR += asciidoc
     SUBDIR += asm-xml
@@ -88,6 +88,7 @@
     SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
+    SUBDIR += cg3
     SUBDIR += cgrep
     SUBDIR += chkascii
     SUBDIR += chpp
@@ -107,7 +108,6 @@
     SUBDIR += consul-template
     SUBDIR += cpp-peglib
     SUBDIR += crex
-    SUBDIR += crimson
     SUBDIR += crunch
     SUBDIR += cs-aspell
     SUBDIR += cs-hunspell
@@ -136,6 +136,7 @@
     SUBDIR += diffmark
     SUBDIR += diffsplit
     SUBDIR += diffstat
+    SUBDIR += difftastic
     SUBDIR += diffutils
     SUBDIR += dikt
     SUBDIR += discount
@@ -255,7 +256,6 @@
     SUBDIR += gtkspell
     SUBDIR += gtkspell3
     SUBDIR += gu-aspell
-    SUBDIR += gutenmark
     SUBDIR += gv-aspell
     SUBDIR += halibut
     SUBDIR += heirloom-doctools
@@ -320,12 +320,14 @@
     SUBDIR += jade
     SUBDIR += jalingo
     SUBDIR += jarnal
+    SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
     SUBDIR += jaxup
     SUBDIR += jdictionary
     SUBDIR += jdictionary-int-eng
     SUBDIR += jid
     SUBDIR += jing
+    SUBDIR += jless
     SUBDIR += jo
     SUBDIR += jq
     SUBDIR += jql
@@ -339,7 +341,6 @@
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
-    SUBDIR += kibana6
     SUBDIR += kibana7
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -410,6 +411,7 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++26
     SUBDIR += libxml2
+    SUBDIR += libxmlb
     SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
@@ -434,7 +436,6 @@
     SUBDIR += lua-lyaml
     SUBDIR += luaexpat
     SUBDIR += lucene
-    SUBDIR += lucene4
     SUBDIR += lucene5
     SUBDIR += luceneplusplus
     SUBDIR += lv-aspell
@@ -451,6 +452,7 @@
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
+    SUBDIR += mdbook-mermaid
     SUBDIR += mdocml
     SUBDIR += meilisearch
     SUBDIR += meld
@@ -1172,6 +1174,7 @@
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
     SUBDIR += p5-podlators
+    SUBDIR += p5-utf8-all
     SUBDIR += p5-xmltv
     SUBDIR += pa-aspell
     SUBDIR += pageedit
@@ -1288,6 +1291,7 @@
     SUBDIR += py-dbfread
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
+    SUBDIR += py-docstring-parser
     SUBDIR += py-docutils
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
@@ -1326,11 +1330,13 @@
     SUBDIR += py-html2text2018
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
+    SUBDIR += py-ini2toml
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
     SUBDIR += py-iso3166
     SUBDIR += py-j2cli
+    SUBDIR += py-jarowinkler
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
@@ -1362,14 +1368,20 @@
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mkdocs
+    SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
     SUBDIR += py-mkdocs-material-extensions
+    SUBDIR += py-mkdocs-mermaid2-plugin
     SUBDIR += py-mkdocs-nature
+    SUBDIR += py-mkdocs-redirects
+    SUBDIR += py-mkdocs-simple-hooks
+    SUBDIR += py-mkdocstrings
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
     SUBDIR += py-nbsphinx
     SUBDIR += py-nltk
     SUBDIR += py-normality
+    SUBDIR += py-ntc-templates
     SUBDIR += py-numpydoc
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
@@ -1436,6 +1448,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytkdocs
     SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
@@ -1464,6 +1477,7 @@
     SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
+    SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
@@ -1552,7 +1566,6 @@
     SUBDIR += rapidxml
     SUBDIR += raptor
     SUBDIR += raptor2
-    SUBDIR += rarian
     SUBDIR += rasqal
     SUBDIR += re-flex
     SUBDIR += re_graph
@@ -1624,12 +1637,12 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin22
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
-    SUBDIR += rubygem-diffy330
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
@@ -1691,6 +1704,7 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
+    SUBDIR += rubygem-kramdown23
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -1746,6 +1760,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge312
+    SUBDIR += rubygem-rouge327
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1883,7 +1898,6 @@
     SUBDIR += te-aspell
     SUBDIR += te-hunspell
     SUBDIR += teckit
-    SUBDIR += templates_parser
     SUBDIR += tet-aspell
     SUBDIR += texi2db
     SUBDIR += texi2html
@@ -1953,7 +1967,6 @@
     SUBDIR += wikiman
     SUBDIR += word2x
     SUBDIR += wordnet
-    SUBDIR += words
     SUBDIR += write-good
     SUBDIR += wv
     SUBDIR += wv2
@@ -1977,7 +1990,6 @@
     SUBDIR += xml-format
     SUBDIR += xml-lite.el
     SUBDIR += xml2rfc
-    SUBDIR += xmlada
     SUBDIR += xmlcatmgr
     SUBDIR += xmlcharent
     SUBDIR += xmlenc
@@ -2009,10 +2021,12 @@
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yq
+    SUBDIR += zed
     SUBDIR += zenxml
     SUBDIR += zorba
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
     SUBDIR += zxing-cpp
+    SUBDIR += zq
 
 .include <bsd.port.subdir.mk>

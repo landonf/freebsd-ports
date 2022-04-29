@@ -2,18 +2,15 @@
 
     SUBDIR += J
     SUBDIR += abcl
-    SUBDIR += adacontrol
     SUBDIR += alchemist.el
     SUBDIR += algol68g
     SUBDIR += angelscript
     SUBDIR += apache-commons-jelly
-    SUBDIR += asis
     SUBDIR += asn1c
     SUBDIR += atlast
     SUBDIR += awka
     SUBDIR += bas2tap
     SUBDIR += basic256
-    SUBDIR += bf2c
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
@@ -92,7 +89,6 @@
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
     SUBDIR += gcc10
-    SUBDIR += gcc10-devel
     SUBDIR += gcc11
     SUBDIR += gcc11-devel
     SUBDIR += gcc12-devel
@@ -100,12 +96,10 @@
     SUBDIR += gcc6-aux
     SUBDIR += gcc8
     SUBDIR += gcc9
-    SUBDIR += gcc9-devel
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += gjs
     SUBDIR += gleam
-    SUBDIR += gnat_util
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-binutils
@@ -117,6 +111,7 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
+    SUBDIR += go117
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -166,7 +161,6 @@
     SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-dotnet11-sdk
     SUBDIR += linux-j
-    SUBDIR += lua-ada
     SUBDIR += lua51
     SUBDIR += lua52
     SUBDIR += lua53
@@ -196,7 +190,6 @@
     SUBDIR += munger
     SUBDIR += myrddin
     SUBDIR += nawk
-    SUBDIR += nbc
     SUBDIR += nbfc
     SUBDIR += neko
     SUBDIR += nesasm
@@ -204,6 +197,7 @@
     SUBDIR += nhc98
     SUBDIR += nickle
     SUBDIR += nim
+    SUBDIR += njs
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
@@ -302,10 +296,10 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
-    SUBDIR += ruby26
     SUBDIR += ruby27
     SUBDIR += ruby30
     SUBDIR += ruby31
+    SUBDIR += ruby32
     SUBDIR += rubygem-ruby_language_server
     SUBDIR += runawk
     SUBDIR += rust
@@ -336,6 +330,7 @@
     SUBDIR += solidity
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey78
+    SUBDIR += spidermonkey91
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

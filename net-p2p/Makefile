@@ -6,7 +6,6 @@
     SUBDIR += autoscan
     SUBDIR += awgg
     SUBDIR += bazarr
-    SUBDIR += bazarr-devel
     SUBDIR += bitcoin
     SUBDIR += bitcoin-daemon
     SUBDIR += bitcoin-utils
@@ -80,6 +79,7 @@
     SUBDIR += qbittorrent
     SUBDIR += qtum
     SUBDIR += radarr
+    SUBDIR += readarr
     SUBDIR += retroshare
     SUBDIR += rslsync
     SUBDIR += rtorrent

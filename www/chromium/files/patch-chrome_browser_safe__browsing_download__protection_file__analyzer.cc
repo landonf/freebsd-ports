@@ -1,29 +1,29 @@
---- chrome/browser/safe_browsing/download_protection/file_analyzer.cc.orig	2022-02-07 13:39:41 UTC
+--- chrome/browser/safe_browsing/download_protection/file_analyzer.cc.orig	2022-03-25 21:59:56 UTC
 +++ chrome/browser/safe_browsing/download_protection/file_analyzer.cc
-@@ -19,7 +19,7 @@
- #include "components/safe_browsing/core/common/features.h"
+@@ -21,7 +21,7 @@
  #include "content/public/browser/browser_thread.h"
+ #include "url/gurl.h"
  
--#if defined(OS_LINUX) || defined(OS_WIN)
-+#if defined(OS_LINUX) || defined(OS_WIN) | defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) | BUILDFLAG(IS_BSD)
  #include "chrome/browser/safe_browsing/download_protection/document_analysis_service.h"
  #endif
  
-@@ -100,7 +100,7 @@ void FileAnalyzer::Start(const base::FilePath& target_
+@@ -102,7 +102,7 @@ void FileAnalyzer::Start(const base::FilePath& target_
    } else if (inspection_type == DownloadFileType::DMG) {
      StartExtractDmgFeatures();
  #endif
--#if defined(OS_LINUX) || defined(OS_WIN)
-+#if defined(OS_LINUX) || defined(OS_WIN) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    } else if (base::FeatureList::IsEnabled(
                   safe_browsing::kClientSideDetectionDocumentScanning) &&
               inspection_type == DownloadFileType::OFFICE_DOCUMENT) {
-@@ -284,7 +284,7 @@ void FileAnalyzer::OnDmgAnalysisFinished(
+@@ -286,7 +286,7 @@ void FileAnalyzer::OnDmgAnalysisFinished(
  }
- #endif  // defined(OS_MAC)
+ #endif  // BUILDFLAG(IS_MAC)
  
--#if defined(OS_LINUX) || defined(OS_WIN)
-+#if defined(OS_LINUX) || defined(OS_WIN) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  void FileAnalyzer::StartExtractDocumentFeatures() {
    DCHECK_CURRENTLY_ON(BrowserThread::UI);
  

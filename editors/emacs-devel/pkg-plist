@@ -779,7 +779,7 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/nxml/README
 %%DATADIR%%/%%EMACS_VER%%/etc/nxml/test-invalid.xml
 %%DATADIR%%/%%EMACS_VER%%/etc/nxml/test-valid.xml
-%%GSETTINGS%%%%DATADIR%%/%%EMACS_VER%%/etc/org.gnu.emacs.defaults.gschema.valid
+%%PGTK%%%%GSETTINGS%%%%DATADIR%%/%%EMACS_VER%%/etc/org.gnu.emacs.defaults.gschema.valid
 %%DATADIR%%/%%EMACS_VER%%/etc/org.gnu.emacs.defaults.gschema.xml
 %%DATADIR%%/%%EMACS_VER%%/etc/org/OrgOdtContentTemplate.xml
 %%DATADIR%%/%%EMACS_VER%%/etc/org/OrgOdtStyles.xml
@@ -1651,6 +1651,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/multisession.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/nadvice.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/nadvice.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/oclosure.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/oclosure.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/package-x.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/package-x.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/package.el.gz
@@ -1709,6 +1711,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/trace.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/warnings.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/warnings.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lock.el.gz
@@ -2584,6 +2588,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/footnote.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/hashcash.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/hashcash.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/mail/ietf-drums-date.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/mail/ietf-drums-date.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/ietf-drums.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/ietf-drums.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/mail/mail-extr.el.gz
@@ -4193,6 +4199,7 @@ share/applications/emacsclient-mail.desktop
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/search.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/sheap.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/sheap.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/sort.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/sound.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/sqlite.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/syntax.c

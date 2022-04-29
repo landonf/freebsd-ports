@@ -1,7 +1,7 @@
 # Created by: Matthias Fechner <mfechner@FreeBSD.org>
 
 PORTNAME=	gitlab-agent
-PORTVERSION=	14.7.0
+PORTVERSION=	14.10.0
 PORTREVISION=	0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net

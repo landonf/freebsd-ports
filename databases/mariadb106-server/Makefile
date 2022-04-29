@@ -2,16 +2,20 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	10.6.7
-PORTREVISION?=	1
+PORTREVISION?=	3
 CATEGORIES=	databases
-MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
-		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
-		http://gd.tuwien.ac.at/db/${SITESDIR}/ \
-		http://mirrors.fe.up.pt/pub/${SITESDIR}/ \
-		http://mirror.de.gsnw.de:56431/${SITESDIR}/ \
-		http://mirror.layerjet.com/${SITESDIR}/ \
-		http://mirror.switch.ch/mirror/${SITESDIR}/ \
-		http://ftp.osuosl.org/pub/${SITESDIR}/
+MASTER_SITES=	https://downloads.mariadb.org/rest-api/mariadb/${PORTVERSION}/ \
+		https://mirror.nodesdirect.com/${SITESDIR}/ \
+		https://mirror.one.com/${SITESDIR}/ \
+		https://ftp.nluug.nl/db/${SITESDIR}/ \
+		https://ftp.icm.edu.pl/pub/unix/database/${SITESDIR}/ \
+		https://mirror.truenetwork.ru/${SITESDIR}/ \
+		https://mirrors.aliyun.com/${SITESDIR}/ \
+		https://ftp.ubuntu-tw.org/mirror/${SITESDIR}/ \
+		https://mirror.kku.ac.th/${SITESDIR}/ \
+		https://espejito.fder.edu.uy/${SITESDIR}/ \
+		https://mirror1.cl.netactuate.com/${SITESDIR}/ \
+		https://ftp.osuosl.org/pub/${SITESDIR}/
 PKGNAMESUFFIX?=	106-server
 
 MAINTAINER=	brnrd@FreeBSD.org
@@ -19,8 +23,6 @@ COMMENT?=	Multithreaded SQL database (server)
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_riscv64=	fails to compile: needs FP_X_INV from empty sys/riscv/include/ieeefp.h
 
 LIB_DEPENDS+=	libpcre2-8.so:devel/pcre2
 
@@ -60,6 +62,7 @@ OPTIONS_DEFINE_amd64=	WSREP
 OPTIONS_DEFINE_aarch64=	WSREP
 OPTIONS_DEFINE_powerpc64le=	WSREP
 OPTIONS_DEFINE_powerpc64=	WSREP
+OPTIONS_DEFINE_riscv64=	WSREP
 OPTIONS_GROUP_COMPRESSION=	LZ4 LZO SNAPPY ZSTD
 OPTIONS_GROUP_ENGINES=	COLUMNSTORE INNOBASE MROONGA OQGRAPH ROCKSDB S3 SPHINX SPIDER
 OPTIONS_GROUP_GROONGA=	ZMQ MSGPACK
@@ -116,7 +119,7 @@ DISABLED_PLUGINS+=	AUTH_TEST_PLUGIN DAEMON_EXAMPLE DIALOG_EXAMPLES \
 DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
 
-CONFLICTS_INSTALL=	mariadb10[0-46-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
+CONFLICTS_INSTALL=	mariadb10[0-57-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysqlwsrep* \
 			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-*
@@ -200,7 +203,7 @@ CMAKE_ARGS+=		-DPLUGIN_${PLUGIN}=NO
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200057
+.if ${OPSYS} == FreeBSD
 SUB_LIST+=	LEGACY_LIMITS="@comment " MODERN_LIMITS=""
 .else
 SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "

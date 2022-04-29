@@ -14,8 +14,10 @@ LICENSE=	PSFL
 
 OPTIONS_DEFINE=	DOCS
 
-USES=		gettext-runtime:run python:3.6+ zip
+USES=		dos2unix gettext-runtime:run python:3.6+ zip
 USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	*

@@ -46,6 +46,7 @@ LLVM_COMMANDS=	\
 		llvm-readelf \
 		llvm-readobj \
 		llvm-reduce \
+		llvm-remark-size-diff \
 		llvm-rtdyld \
 		llvm-sim \
 		llvm-size \
@@ -73,6 +74,7 @@ CLANG_COMMANDS=	\
 		clang-cpp \
 		clang-extdef-mapping \
 		clang-format \
+		clang-linker-wrapper \
 		clang-nvlink-wrapper \
 		clang-offload-bundler \
 		clang-offload-wrapper \
@@ -92,6 +94,7 @@ EXTRAS_COMMANDS= \
 		clang-doc \
 		clang-include-fixer \
 		clang-move \
+		clang-pseudo \
 		clang-query \
 		clang-rename \
 		clang-reorder-fields \
@@ -101,6 +104,7 @@ EXTRAS_COMMANDS= \
 		pp-trace
 
 FLANG_COMMANDS=	\
+		bbc \
 		f18-parse-demo \
 		fir-opt \
 		flang \
@@ -131,6 +135,7 @@ MLIR_COMMANDS=	\
 		mlir-lsp-server \
 		mlir-opt \
 		mlir-pdll \
+		mlir-pdll-lsp-server \
 		mlir-reduce \
 		mlir-tblgen \
 		mlir-translate

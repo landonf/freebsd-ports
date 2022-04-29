@@ -1,8 +1,7 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
 
 PORTNAME=	remind
-DISTVERSION=	03.04.00
-PORTREVISION=	1
+DISTVERSION=	04.00.00
 CATEGORIES=	deskutils
 # upstream moves distfiles to OLD once a new release appears
 MASTER_SITES=	https://dianne.skoll.ca/projects/remind/download/ \
@@ -14,15 +13,16 @@ COMMENT=	Sophisticated calendar and alarm program
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-perl-build-artifacts
 MAKE_ARGS=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 INSTALL_TARGET=	${WITH_DEBUG:Dinstall-nostripped:Uinstall}
 
 OPTIONS_DEFINE=	A4 TCLTK REM2HTML REM2PDF
 OPTIONS_DEFAULT=	LANG_US REM2HTML REM2PDF
 OPTIONS_SINGLE=	LANGUAGE
-OPTIONS_SINGLE_LANGUAGE= \
-		LANG_US LANG_DE LANG_NL LANG_FI LANG_FR LANG_NN LANG_DA \
-		LANG_PL LANG_PBR LANG_IT LANG_RO LANG_ES LANG_IS
+OPTIONS_SINGLE_LANGUAGE=	LANG_US LANG_DE LANG_NL LANG_FI LANG_FR \
+				LANG_NN LANG_DA LANG_PL LANG_PBR LANG_IT \
+				LANG_RO LANG_ES LANG_IS
 OPTIONS_SUB=	yes
 A4_DESC=	Use A4 instead of Letter paper
 LANGUAGE_DESC=	User interface language

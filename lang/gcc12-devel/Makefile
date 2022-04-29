@@ -1,7 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	gcc
-PORTVERSION=	12.0.0.s20220116
+PORTVERSION=	12.0.1.s20220306
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -41,9 +42,17 @@ SUFFIX=		${PORTVERSION:C/([0-9]+).*/\1/}
 CFLAGS:=	${CFLAGS:N-mretpoline}
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
 
-OPTIONS_DEFINE=		BOOTSTRAP GRAPHITE
-OPTIONS_DEFAULT=	BOOTSTRAP
-BOOTSTRAP_DESC=		Build using a full bootstrap
+OPTIONS_DEFINE=		GRAPHITE
+OPTIONS_DEFAULT_aarch64=LTO_BOOTSTRAP
+OPTIONS_DEFAULT_amd64=	LTO_BOOTSTRAP
+OPTIONS_DEFAULT_i386=	LTO_BOOTSTRAP
+OPTIONS_DEFAULT_powerpc=LTO_BOOTSTRAP
+OPTIONS_DEFAULT_powerpc64=LTO_BOOTSTRAP
+OPTIONS_DEFAULT_powerpc64le=LTO_BOOTSTRAP
+OPTIONS_RADIO=	BOOTSTRAP
+OPTIONS_RADIO_BOOTSTRAP=	LTO_BOOTSTRAP STANDARD_BOOTSTRAP
+LTO_BOOTSTRAP_DESC=	Build using a full LTO bootstrap
+STANDARD_BOOTSTRAP_DESC=	Build using a full bootstrap without LTO
 GRAPHITE_DESC=		Support for Graphite loop optimizations
 
 .if exists(/usr/lib32/libc.so)
@@ -69,7 +78,7 @@ CONFIGURE_ARGS+=	--with-abi=elfv2
 . endif
 USE_GCC=	yes
 
-.elif ${ARCH} == powerpc64le || ${ARCH} == powerpc
+.elif ${ARCH} == powerpc64le
 USE_GCC=	yes
 .endif
 
@@ -79,8 +88,11 @@ TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
 GNU_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
-.if empty(PORT_OPTIONS:MBOOTSTRAP)
+.if empty(PORT_OPTIONS:M*BOOTSTRAP)
 CONFIGURE_ARGS+=--disable-bootstrap
+.elif ${PORT_OPTIONS:MLTO_BOOTSTRAP}
+CONFIGURE_ARGS+=--with-build-config=bootstrap-lto-noplugin
+ALL_TARGET=	bootstrap-lean
 .else
 CONFIGURE_ARGS+=--with-build-config=bootstrap-debug
 ALL_TARGET=	bootstrap-lean

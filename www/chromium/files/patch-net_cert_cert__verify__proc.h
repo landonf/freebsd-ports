@@ -1,11 +1,11 @@
---- net/cert/cert_verify_proc.h.orig	2022-02-07 13:39:41 UTC
+--- net/cert/cert_verify_proc.h.orig	2022-03-25 21:59:56 UTC
 +++ net/cert/cert_verify_proc.h
-@@ -65,7 +65,7 @@ class NET_EXPORT CertVerifyProc
-     kMaxValue = kChainLengthOne
+@@ -79,7 +79,7 @@ class NET_EXPORT CertVerifyProc
+     kMaxValue = kOther
    };
  
--#if !(defined(OS_FUCHSIA) || defined(OS_LINUX) || defined(OS_CHROMEOS))
-+#if !(defined(OS_FUCHSIA) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD))
+-#if !(BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
++#if !(BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD))
    // Creates and returns a CertVerifyProc that uses the system verifier.
    // |cert_net_fetcher| may not be used, depending on the implementation.
    static scoped_refptr<CertVerifyProc> CreateSystemVerifyProc(

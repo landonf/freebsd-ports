@@ -1,8 +1,8 @@
 # Created by: Randall Hopper
 
 PORTNAME=	gdal
-PORTVERSION=	3.4.1
-PORTREVISION=	5
+PORTVERSION=	3.4.2
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -23,12 +23,13 @@ LIB_DEPENDS=	libgeotiff.so:graphics/libgeotiff \
 		libqhull_r.so:math/qhull \
 		libtiff.so:graphics/tiff
 
-OPTIONS_DEFINE=	ARMADILLO CFITSIO CHARLS CRYPTOPP CURL DEFLATE DODS ECW EXPAT EXR FREEXL GEOS GTA HDF5 HEIF JASPER KML LERC LIBXML2 LZ4 MYSQL NETCDF ODBC OPENJPEG PCRE PCRE2 PGSQL RASTERLITE2 SFCGAL SPATIALITE SQLITE TILEDB WEBP XERCES ZSTD
+OPTIONS_DEFINE=	ARMADILLO BRUNSLI CFITSIO CHARLS CRYPTOPP CURL DEFLATE DODS ECW EXPAT EXR FREEXL GEOS GTA HDF5 HEIF JASPER KML LERC LIBXML2 LZ4 MYSQL NETCDF ODBC OPENJPEG PCRE PCRE2 PGSQL RASTERLITE2 SFCGAL SPATIALITE SQLITE TILEDB WEBP XERCES ZSTD
 OPTIONS_RADIO=	PDF
 OPTIONS_RADIO_PDF=	PODOFO POPPLER
 OPTIONS_DEFAULT=CURL EXPAT FREEXL GEOS JASPER LIBXML2 LZ4 OPENJPEG PCRE2 PGSQL POPPLER WEBP ZSTD \
 		HDF5 KML NETCDF SPATIALITE SFCGAL SQLITE XERCES
 OPTIONS_SUB=	yes
+BRUNSLI_DESC=	Brunsli support via libbrunsli library
 CHARLS_DESC=	JPEG-Lossless support via charls
 CRYPTOPP_DESC=	Cryptopp support
 DEFLATE_DESC=	Faster deflate support via libdeflate library
@@ -41,7 +42,7 @@ PCRE2_DESC=	Regular expression support for SQLite
 RASTERLITE2_DESC=	RasterLite2 support
 TILEDB_DESC=	TileDB support
 
-USES=		compiler:c++14-lang cpe gmake iconv jpeg localbase pkgconfig ssl tar:xz
+USES=		compiler:c++17-lang cpe gmake iconv jpeg localbase pkgconfig ssl tar:xz
 
 CFLAGS+=	-fPIC
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share \
@@ -56,6 +57,7 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share \
 		--with-liblzma=yes \
 		--with-libtiff=yes \
 		--with-libz=/usr \
+		--with-msg=no \
 		--with-pcidsk=internal \
 		--with-pcraster=internal \
 		--with-png=yes \
@@ -68,7 +70,7 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share \
 GNU_CONFIGURE=	yes
 LDFLAGS+=	${ICONV_LIB}
 MAKEFILE=	GNUmakefile
-USE_CXXSTD=	c++14
+USE_CXXSTD=	c++17
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
@@ -96,6 +98,8 @@ HEADER_FILES=	alg/gdalwarpkernel_opencl.h \
 ARMADILLO_CONFIGURE_OFF=--with-armadillo=no
 ARMADILLO_CONFIGURE_ON=	--with-armadillo=${LOCALBASE}
 ARMADILLO_LIB_DEPENDS=	libarmadillo.so:math/armadillo
+BRUNSLI_CONFIGURE_WITH=	brunsli
+BRUNSLI_LIB_DEPENDS=	libbrunslidec-c.so:graphics/brunsli
 CFITSIO_CONFIGURE_WITH=	cfitsio
 CFITSIO_LIB_DEPENDS=	libcfitsio.so:astro/cfitsio
 CHARLS_CONFIGURE_WITH=	charls

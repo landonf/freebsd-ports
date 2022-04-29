@@ -1,3 +1,3 @@
-TIMESTAMP = 1644232755
-SHA256 (KDE/release-service/21.12.2/kimap-21.12.2.tar.xz) = 0393c8d4d4588d0cf8ad9b50e83abb06df569513860ff620448a9b6927d2aa69
-SIZE (KDE/release-service/21.12.2/kimap-21.12.2.tar.xz) = 128176
+TIMESTAMP = 1650101861
+SHA256 (KDE/release-service/22.04.0/kimap-22.04.0.tar.xz) = ee211f269a9660988424690f2b686e9f9a35c6db6ecf37626cfcd604b174c08a
+SIZE (KDE/release-service/22.04.0/kimap-22.04.0.tar.xz) = 130140

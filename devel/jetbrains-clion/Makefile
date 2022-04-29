@@ -1,5 +1,5 @@
 PORTNAME=	clion
-PORTVERSION=	2021.3.3
+PORTVERSION=	2022.1
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cdn.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -19,12 +19,14 @@ RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 		lsof:sysutils/lsof \
 		cmake>=3.14.3:devel/cmake
 
-USES=		linux python:run shebangfix
+USES=		cpe linux python:run shebangfix
 
 USE_JAVA=	yes
 JAVA_VERSION=	11+
 
-SHEBANG_FILES=	bin/printenv.py bin/restart.py \
+CPE_VENDOR=	jetbrains
+
+SHEBANG_FILES=	bin/restart.py \
 		plugins/python-ce/helpers/typeshed/scripts/generate_proto_stubs.sh
 
 NO_ARCH=	yes

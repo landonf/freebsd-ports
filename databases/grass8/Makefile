@@ -1,5 +1,6 @@
 PORTNAME=	grass
-DISTVERSION=	8.0.0
+DISTVERSION=	8.0.1
+PORTREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -46,8 +47,8 @@ nviz_CMD=	${PREFIX}/${GRASS_INST_DIR}/bin/nviz
 USE_XORG=	sm ice x11 xext xi xmu xrender xt
 USE_GL=		gl glu
 USE_GNOME=	cairo
-USE_WX=		3.0
-WX_COMPS=	wx:build python:run
+USE_WX=		3.1
+WX_COMPS=	wx python:run
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--with-includes=${LOCALBASE}/include \
@@ -108,14 +109,14 @@ PDAL_LIB_DEPENDS=	libpdal_base.so:math/pdal
 PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	postgres
 
+.if exists(/usr/include/omp.h)
+CONFIGURE_ARGS+=	--with-openmp
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if !defined (GRASS_INST_DIR)
 GRASS_INST_DIR=	${PORTNAME}${VER}
-.endif
-
-.if ${ARCH} != powerpc
-CONFIGURE_ARGS+=	--with-openmp
 .endif
 
 MANDIRS=	${PREFIX}/grass${VER}/docs/man/man1

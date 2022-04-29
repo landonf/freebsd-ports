@@ -1,7 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
 
 PORTNAME=	tesseract
-PORTVERSION=	5.0.1
+PORTVERSION=	5.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkubaj@FreeBSD.org

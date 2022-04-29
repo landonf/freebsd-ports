@@ -1,5 +1,5 @@
 PORTNAME=	dolphin
-DISTVERSION=	21.12.2.1 # ${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-fm kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -10,7 +10,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${QT_PLUGINDIR}/ffmpegthumbs.so:multimedia/kdemultimedia-ffmpegthumbs \
 		${QT_PLUGINDIR}/gsthumbnail.so:graphics/kdegraphics-thumbnailers \
-		${QT_PLUGINDIR}/imagethumbnail.so:devel/kio-extras
+		${QT_PLUGINDIR}/kf5/kio/thumbnail.so:devel/kio-extras
 
 USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:5 qt:5 tar:xz
 USE_KDE=	activities attica auth baloo baloo-widgets bookmarks codecs \

@@ -1,3 +1,3 @@
-TIMESTAMP = 1643133829
-SHA256 (rubygem/aws-sdk-appstream-1.62.0.gem) = 695a089940cb24efb8e40eea472dc5c665e15630173162d5fe6a5d154b089951
-SIZE (rubygem/aws-sdk-appstream-1.62.0.gem) = 77824
+TIMESTAMP = 1650228852
+SHA256 (rubygem/aws-sdk-appstream-1.65.0.gem) = 2427b5636fd0bed2e9f6fa193dc4694517d40c7bb89c9de21fe42b8b59dfc638
+SIZE (rubygem/aws-sdk-appstream-1.65.0.gem) = 78336

@@ -1,3 +1,3 @@
-TIMESTAMP = 1644232763
-SHA256 (KDE/release-service/21.12.2/kldap-21.12.2.tar.xz) = f4e2d54afc8e9a25017e43dfc8698e9059d11df86db10a1b1c30161c9c20aaf5
-SIZE (KDE/release-service/21.12.2/kldap-21.12.2.tar.xz) = 172076
+TIMESTAMP = 1650101859
+SHA256 (KDE/release-service/22.04.0/kldap-22.04.0.tar.xz) = 317853dc9a7291c4325336fbfef3003c955de93db00107c11b5f27e6f3acd3fc
+SIZE (KDE/release-service/22.04.0/kldap-22.04.0.tar.xz) = 172588

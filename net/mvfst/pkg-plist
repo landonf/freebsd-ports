@@ -48,6 +48,7 @@ include/quic/common/Timers.h
 include/quic/common/TransportKnobs.h
 include/quic/common/Variant.h
 include/quic/common/WindowedCounter.h
+include/quic/common/third-party/enum.h
 include/quic/congestion_control/Bandwidth.h
 include/quic/congestion_control/Bbr.h
 include/quic/congestion_control/BbrBandwidthSampler.h
@@ -62,6 +63,7 @@ include/quic/congestion_control/Pacer.h
 include/quic/congestion_control/QuicCCP.h
 include/quic/congestion_control/QuicCubic.h
 include/quic/congestion_control/ServerCongestionControllerFactory.h
+include/quic/congestion_control/StaticCwndCongestionController.h
 include/quic/congestion_control/TokenlessPacer.h
 include/quic/congestion_control/third_party/ccp/libstartccp.h
 include/quic/congestion_control/third_party/windowed_filter.h

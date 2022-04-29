@@ -214,8 +214,6 @@ lib/emby-server/system/arm64/libSkiaSharp.dll
 lib/emby-server/system/dashboard-ui/apikeys/apikeys.js
 lib/emby-server/system/dashboard-ui/app.js
 lib/emby-server/system/dashboard-ui/apploader.js
-lib/emby-server/system/dashboard-ui/bower_components/Swiper/css/swiper.css
-lib/emby-server/system/dashboard-ui/bower_components/Swiper/js/swiper.js
 lib/emby-server/system/dashboard-ui/bower_components/abortcontroller-polyfill/umd-polyfill.js
 lib/emby-server/system/dashboard-ui/bower_components/css-vars-ponyfill/css-vars-ponyfill.js
 lib/emby-server/system/dashboard-ui/bower_components/fetch/fetch.js
@@ -278,8 +276,6 @@ lib/emby-server/system/dashboard-ui/home_horiz/home.html
 lib/emby-server/system/dashboard-ui/home_horiz/home.js
 lib/emby-server/system/dashboard-ui/home_horiz/spotlight.js
 lib/emby-server/system/dashboard-ui/home_horiz/tabbedpage.js
-lib/emby-server/system/dashboard-ui/home_horiz/views.channels.html
-lib/emby-server/system/dashboard-ui/home_horiz/views.channels.js
 lib/emby-server/system/dashboard-ui/home_horiz/views.generic.html
 lib/emby-server/system/dashboard-ui/home_horiz/views.generic.js
 lib/emby-server/system/dashboard-ui/home_horiz/views.livetv.html
@@ -379,11 +375,11 @@ lib/emby-server/system/dashboard-ui/modules/common/input/api.js
 lib/emby-server/system/dashboard-ui/modules/common/inputmanager.js
 lib/emby-server/system/dashboard-ui/modules/common/itemhelper.js
 lib/emby-server/system/dashboard-ui/modules/common/itemsrefresher.js
+lib/emby-server/system/dashboard-ui/modules/common/methodtimer.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/experimentalwarnings.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playaccessvalidation.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playbackmanager.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playbackvalidation.js
-lib/emby-server/system/dashboard-ui/modules/common/playback/playmethodhelper.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playqueueconfirmation.js
 lib/emby-server/system/dashboard-ui/modules/common/playback/playqueuemanager.js
 lib/emby-server/system/dashboard-ui/modules/common/pluginmanager.js
@@ -702,6 +698,8 @@ lib/emby-server/system/dashboard-ui/modules/polyfills/weakmap.js
 lib/emby-server/system/dashboard-ui/modules/prompt/prompt.js
 lib/emby-server/system/dashboard-ui/modules/prompt/prompt.template.html
 lib/emby-server/system/dashboard-ui/modules/querystring/querystring.js
+lib/emby-server/system/dashboard-ui/modules/recordingcreator/channelrecording.template.html
+lib/emby-server/system/dashboard-ui/modules/recordingcreator/channelrecordingcreator.js
 lib/emby-server/system/dashboard-ui/modules/recordingcreator/recordingbutton.js
 lib/emby-server/system/dashboard-ui/modules/recordingcreator/recordingcreator.css
 lib/emby-server/system/dashboard-ui/modules/recordingcreator/recordingcreator.js

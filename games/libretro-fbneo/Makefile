@@ -1,8 +1,8 @@
 PORTNAME=	libretro-fbneo
-PORTVERSION=	0.20211215
+PORTVERSION=	0.20220406
 CATEGORIES=	games
 
-MAINTAINER=	menelkir@itroll.org
+MAINTAINER=	dmenelkir@gmail.com
 COMMENT=	Final Burn Alpha fork for libretro
 
 LICENSE=	FBNeo
@@ -19,7 +19,7 @@ PLIST_FILES=	lib/libretro/fbneo_libretro.so
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
 GH_PROJECT=	FBNeo
-GH_TAGNAME=	bbe3c05
+GH_TAGNAME=	01bf2e1
 
 MAKEFILE=	Makefile.freebsd
 

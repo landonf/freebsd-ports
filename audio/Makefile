@@ -86,7 +86,6 @@
     SUBDIR += cheesecutter
     SUBDIR += chordpack
     SUBDIR += chromaprint
-    SUBDIR += clementine-player
     SUBDIR += cli-visualizer
     SUBDIR += clunk
     SUBDIR += cmp3
@@ -116,6 +115,7 @@
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += dekagen
     SUBDIR += denemo
+    SUBDIR += dexed
     SUBDIR += din
     SUBDIR += discid
     SUBDIR += dmidiplayer
@@ -212,6 +212,7 @@
     SUBDIR += freepats
     SUBDIR += ft2play
     SUBDIR += funktrackergold
+    SUBDIR += furnace
     SUBDIR += ganv
     SUBDIR += gbemol
     SUBDIR += gbsplay
@@ -418,6 +419,7 @@
     SUBDIR += libsndfile
     SUBDIR += libsonic
     SUBDIR += libsoxr
+    SUBDIR += libspecbleach
     SUBDIR += libtremor
     SUBDIR += libumidi
     SUBDIR += libvorbis
@@ -660,6 +662,7 @@
     SUBDIR += py-pylast
     SUBDIR += py-pyliblo
     SUBDIR += py-pymad
+    SUBDIR += py-pyogg
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
     SUBDIR += py-soundcloud
@@ -716,6 +719,7 @@
     SUBDIR += schismtracker
     SUBDIR += screcord-lv2
     SUBDIR += sdl2_mixer
+    SUBDIR += sdl2_sound
     SUBDIR += sdl_mixer
     SUBDIR += sdl_sound
     SUBDIR += sfizz
@@ -779,6 +783,7 @@
     SUBDIR += suil
     SUBDIR += supercollider
     SUBDIR += surge-synthesizer-lv2
+    SUBDIR += surge-synthesizer-xt-lv2
     SUBDIR += sweep
     SUBDIR += swh-lv2
     SUBDIR += swhplugins
