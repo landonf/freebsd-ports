@@ -58,7 +58,6 @@
     SUBDIR += jcommon
     SUBDIR += jd-gui
     SUBDIR += jdk11-doc
-    SUBDIR += jdk12-doc
     SUBDIR += jdk8-doc
     SUBDIR += jdom
     SUBDIR += jflex
@@ -88,11 +87,6 @@
     SUBDIR += netty
     SUBDIR += openjdk11
     SUBDIR += openjdk11-jre
-    SUBDIR += openjdk12
-    SUBDIR += openjdk13
-    SUBDIR += openjdk14
-    SUBDIR += openjdk15
-    SUBDIR += openjdk16
     SUBDIR += openjdk17
     SUBDIR += openjdk17-jre
     SUBDIR += openjdk18
@@ -122,6 +116,9 @@
     SUBDIR += wildfly16
     SUBDIR += wildfly17
     SUBDIR += wildfly18
+    SUBDIR += wildfly24
+    SUBDIR += wildfly25
+    SUBDIR += wildfly26
     SUBDIR += wildfly90
 
 .include <bsd.port.subdir.mk>

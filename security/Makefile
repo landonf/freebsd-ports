@@ -194,7 +194,8 @@
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
     SUBDIR += gpgme-qt5
-    SUBDIR += greenbone-security-assistant
+    SUBDIR += gsa
+    SUBDIR += gsad
     SUBDIR += gsasl
     SUBDIR += gss
     SUBDIR += gstreamer1-plugins-dtls
@@ -238,7 +239,6 @@
     SUBDIR += kdbxviewer
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
-    SUBDIR += keepassx-devel
     SUBDIR += keepassxc
     SUBDIR += keybase
     SUBDIR += keychain
@@ -257,6 +257,7 @@
     SUBDIR += krb5
     SUBDIR += krb5-118
     SUBDIR += krb5-119
+    SUBDIR += krb5-120
     SUBDIR += krb5-appl
     SUBDIR += krb5-devel
     SUBDIR += kstart
@@ -313,6 +314,7 @@
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
+    SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
@@ -774,6 +776,8 @@
     SUBDIR += php80-sodium
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
+    SUBDIR += php82-filter
+    SUBDIR += php82-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -822,6 +826,7 @@
     SUBDIR += py-ailment
     SUBDIR += py-angr
     SUBDIR += py-argon2-cffi
+    SUBDIR += py-argon2-cffi-bindings
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-authlib
@@ -911,7 +916,6 @@
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
     SUBDIR += py-oscrypto
-    SUBDIR += py-ospd
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
     SUBDIR += py-pass-audit
@@ -1046,6 +1050,7 @@
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
+    SUBDIR += rubygem-haiti-hash
     SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh
@@ -1271,6 +1276,7 @@
     SUBDIR += wolfssl
     SUBDIR += wpa_supplicant
     SUBDIR += wpa_supplicant-devel
+    SUBDIR += wpa_supplicant29
     SUBDIR += xca
     SUBDIR += xinetd
     SUBDIR += xml-security

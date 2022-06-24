@@ -237,9 +237,7 @@
     SUBDIR += haproxy-devel
     SUBDIR += haproxy17
     SUBDIR += haproxy18
-    SUBDIR += haproxy19
     SUBDIR += haproxy20
-    SUBDIR += haproxy21
     SUBDIR += haproxy22
     SUBDIR += haproxy23
     SUBDIR += haproxy24
@@ -249,6 +247,7 @@
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
+    SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
     SUBDIR += htpdate
@@ -363,7 +362,6 @@
     SUBDIR += libfabric
     SUBDIR += libfb
     SUBDIR += libfixbuf
-    SUBDIR += libgnetwork
     SUBDIR += libgravatar
     SUBDIR += libgrss
     SUBDIR += libgweather
@@ -468,7 +466,6 @@
     SUBDIR += mpd-l2tp-ipv6pd-client
     SUBDIR += mpd5
     SUBDIR += mpich
-    SUBDIR += mpich2
     SUBDIR += mpifx
     SUBDIR += mping
     SUBDIR += mptsd
@@ -496,6 +493,7 @@
     SUBDIR += ndpi
     SUBDIR += ndproxy
     SUBDIR += neatvnc
+    SUBDIR += nemesis
     SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
@@ -978,7 +976,6 @@
     SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
-    SUBDIR += pfinger
     SUBDIR += php74-ldap
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
@@ -989,6 +986,9 @@
     SUBDIR += php81-ldap
     SUBDIR += php81-soap
     SUBDIR += php81-sockets
+    SUBDIR += php82-ldap
+    SUBDIR += php82-soap
+    SUBDIR += php82-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1141,8 +1141,7 @@
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle
     SUBDIR += py-stomp.py
-    SUBDIR += py-suds-community
-    SUBDIR += py-suds-jurko
+    SUBDIR += py-suds
     SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
     SUBDIR += py-tofu
@@ -1322,6 +1321,7 @@
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
+    SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
@@ -1392,6 +1392,7 @@
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
+    SUBDIR += sakisafecli
     SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samplicator
@@ -1562,6 +1563,8 @@
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wifibox
+    SUBDIR += wifibox-alpine
+    SUBDIR += wifibox-core
     SUBDIR += wireguard
     SUBDIR += wireguard-go
     SUBDIR += wireguard-kmod

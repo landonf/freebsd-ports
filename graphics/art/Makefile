@@ -1,6 +1,5 @@
 PORTNAME=	art
-DISTVERSION=	1.12.1
-PORTREVISION=	2
+DISTVERSION=	1.13
 CATEGORIES=	graphics
 MASTER_SITES=	https://bitbucket.org/agriggio/art/downloads/
 PKGNAMESUFFIX=	-raw-image-editor
@@ -32,6 +31,8 @@ USE_GNOME=	atk atkmm cairo cairomm glibmm gtkmm30 librsvg2
 USE_XORG=	x11
 
 EXTRACT_CMD=	gtar
+
+LDFLAGS+=	-lpthread # otherwise build breaks on some systems: error: undefined symbol: pthread_create
 
 OPTIONS_DEFINE=		OPENMP
 #OPTIONS_DEFAULT=	OPENMP

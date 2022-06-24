@@ -13,6 +13,7 @@
     SUBDIR += artikulate
     SUBDIR += asbutton
     SUBDIR += asr-manpages
+    SUBDIR += astc-encoder
     SUBDIR += bb
     SUBDIR += bbjd
     SUBDIR += bdelta
@@ -62,6 +63,7 @@
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += ctm
+    SUBDIR += cuttlefish
     SUBDIR += cxxmatrix
     SUBDIR += dahdi
     SUBDIR += dahdi-kmod
@@ -81,6 +83,7 @@
     SUBDIR += dynomite
     SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
+    SUBDIR += edfbrowser
     SUBDIR += edflib
     SUBDIR += elixir-mime
     SUBDIR += elixir-uuid
@@ -118,6 +121,7 @@
     SUBDIR += freebsd-doc-es
     SUBDIR += freebsd-doc-fr
     SUBDIR += freebsd-doc-hu
+    SUBDIR += freebsd-doc-id
     SUBDIR += freebsd-doc-it
     SUBDIR += freebsd-doc-ja
     SUBDIR += freebsd-doc-ko
@@ -361,6 +365,7 @@
     SUBDIR += php74-calendar
     SUBDIR += php80-calendar
     SUBDIR += php81-calendar
+    SUBDIR += php82-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -380,6 +385,7 @@
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
     SUBDIR += py-emoji
+    SUBDIR += py-ezc3d
     SUBDIR += py-fast-histogram
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
@@ -417,6 +423,7 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
     SUBDIR += py-spinners
+    SUBDIR += py-tes
     SUBDIR += py-tflearn
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
@@ -480,6 +487,7 @@
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
+    SUBDIR += swissfileknife
     SUBDIR += sword
     SUBDIR += table.el
     SUBDIR += talkfilters
@@ -524,6 +532,7 @@
     SUBDIR += vdmfec
     SUBDIR += veles
     SUBDIR += vera
+    SUBDIR += vfc
     SUBDIR += vifm
     SUBDIR += visp
     SUBDIR += viz

@@ -59,6 +59,7 @@
     SUBDIR += erlang-runtime22
     SUBDIR += erlang-runtime23
     SUBDIR += erlang-runtime24
+    SUBDIR += erlang-runtime25
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -91,6 +92,7 @@
     SUBDIR += gcc10
     SUBDIR += gcc11
     SUBDIR += gcc11-devel
+    SUBDIR += gcc12
     SUBDIR += gcc12-devel
     SUBDIR += gcc13-devel
     SUBDIR += gcc48
@@ -113,6 +115,7 @@
     SUBDIR += go
     SUBDIR += go-devel
     SUBDIR += go117
+    SUBDIR += go118
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -247,9 +250,9 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.30
     SUBDIR += perl5.32
     SUBDIR += perl5.34
+    SUBDIR += perl5.36
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -260,6 +263,8 @@
     SUBDIR += php80-extensions
     SUBDIR += php81
     SUBDIR += php81-extensions
+    SUBDIR += php82
+    SUBDIR += php82-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl

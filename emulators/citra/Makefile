@@ -1,5 +1,5 @@
 PORTNAME=	citra
-PORTVERSION=	s20220423
+PORTVERSION=	s20220611
 PORTREVISION?=	0
 CATEGORIES=	emulators
 .if make(makesum)
@@ -30,9 +30,9 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	1382035d4
+GH_TAGNAME=	88a475970
 GH_TUPLE=	citra-emu:ext-boost:36603a1:boost/externals/boost \
-		citra-emu:ext-libressl-portable:8289d0d:libressl/externals/libressl \
+		citra-emu:ext-libressl-portable:8929f81:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		MerryMage:dynarmic:r3-222-gaf0d4a7c:dynarmic/externals/dynarmic \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \

@@ -112,6 +112,7 @@
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += dolibarr13
+    SUBDIR += dolibarr14
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += drupal7
@@ -274,6 +275,7 @@
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
     SUBDIR += joomla3
+    SUBDIR += joomla4
     SUBDIR += jwt-cli
     SUBDIR += kanboard
     SUBDIR += kannel
@@ -342,6 +344,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki136
     SUBDIR += mediawiki137
+    SUBDIR += mediawiki138
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -398,6 +401,7 @@
     SUBDIR += mod_php74
     SUBDIR += mod_php80
     SUBDIR += mod_php81
+    SUBDIR += mod_php82
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -468,7 +472,7 @@
     SUBDIR += npm
     SUBDIR += npm-node14
     SUBDIR += npm-node16
-    SUBDIR += npm-node17
+    SUBDIR += npm-node18
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -476,7 +480,6 @@
     SUBDIR += onionbalance
     SUBDIR += onionshare
     SUBDIR += onlyoffice-documentserver
-    SUBDIR += openarc
     SUBDIR += opencart
     SUBDIR += openresty
     SUBDIR += orangehrm
@@ -1389,6 +1392,9 @@
     SUBDIR += php81-opcache
     SUBDIR += php81-session
     SUBDIR += php81-tidy
+    SUBDIR += php82-opcache
+    SUBDIR += php82-session
+    SUBDIR += php82-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1438,6 +1444,7 @@
     SUBDIR += py-bleach
     SUBDIR += py-bokeh
     SUBDIR += py-boto3
+    SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
@@ -1470,6 +1477,20 @@
     SUBDIR += py-dj32-django-treebeard
     SUBDIR += py-dj32-djangorestframework
     SUBDIR += py-dj32-drf-yasg
+    SUBDIR += py-dj40-django-auth-ldap
+    SUBDIR += py-dj40-django-cors-headers
+    SUBDIR += py-dj40-django-debug-toolbar
+    SUBDIR += py-dj40-django-filter
+    SUBDIR += py-dj40-django-graphiql-debug-toolbar
+    SUBDIR += py-dj40-django-js-asset
+    SUBDIR += py-dj40-django-mptt
+    SUBDIR += py-dj40-django-prometheus
+    SUBDIR += py-dj40-django-redis
+    SUBDIR += py-dj40-django-tables2
+    SUBDIR += py-dj40-django-taggit
+    SUBDIR += py-dj40-django-timezone-field
+    SUBDIR += py-dj40-djangorestframework
+    SUBDIR += py-dj40-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
@@ -1540,6 +1561,7 @@
     SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
+    SUBDIR += py-django-permissionedforms
     SUBDIR += py-django-pglocks
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
@@ -1677,6 +1699,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
@@ -1738,6 +1761,7 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
+    SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-mock
@@ -1903,13 +1927,20 @@
     SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-http-cache
     SUBDIR += rubygem-faraday-httpclient
+    SUBDIR += rubygem-faraday-httpclient1
     SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
+    SUBDIR += rubygem-faraday-net_http1
     SUBDIR += rubygem-faraday-net_http_persistent
+    SUBDIR += rubygem-faraday-net_http_persistent1
     SUBDIR += rubygem-faraday-patron
+    SUBDIR += rubygem-faraday-patron1
     SUBDIR += rubygem-faraday-rack
+    SUBDIR += rubygem-faraday-rack1
     SUBDIR += rubygem-faraday-retry
+    SUBDIR += rubygem-faraday-retry1
     SUBDIR += rubygem-faraday0
+    SUBDIR += rubygem-faraday1
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -2197,6 +2228,7 @@
     SUBDIR += smarty3
     SUBDIR += smb_auth
     SUBDIR += snarf
+    SUBDIR += so
     SUBDIR += sogo
     SUBDIR += sogo-activesync
     SUBDIR += sogo2
@@ -2219,6 +2251,7 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
+    SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
     SUBDIR += tdiary
@@ -2254,6 +2287,7 @@
     SUBDIR += transproxy
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tuifeed
     SUBDIR += tusc
     SUBDIR += tusd
     SUBDIR += twiki
@@ -2376,7 +2410,7 @@
     SUBDIR += yarn
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
-    SUBDIR += yarn-node17
+    SUBDIR += yarn-node18
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

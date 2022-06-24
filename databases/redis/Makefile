@@ -1,7 +1,7 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
 
 PORTNAME=	redis
-DISTVERSION=	7.0.0
+DISTVERSION=	7.0.2
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=		JEMALLOC TESTS TLS TRIB
 OPTIONS_RADIO=		EXTLUA
 OPTIONS_RADIO_EXTLUA=	LUA LUAJIT LUAJITOR
 OPTIONS_SUB=		yes
+OPTIONS_DEFAULT+=	TLS
 
 JEMALLOC_DESC=	Use jemalloc
 LUAJITOR_DESC=	Use lang/luajit-openresty instead of builtin lua

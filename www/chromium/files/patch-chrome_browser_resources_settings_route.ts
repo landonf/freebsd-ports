@@ -1,6 +1,6 @@
---- chrome/browser/resources/settings/route.ts.orig	2022-03-25 21:59:56 UTC
+--- chrome/browser/resources/settings/route.ts.orig	2022-06-17 14:20:10 UTC
 +++ chrome/browser/resources/settings/route.ts
-@@ -185,7 +185,7 @@ function createBrowserSettingsRoutes(): SettingsRoutes
+@@ -190,7 +190,7 @@ function createBrowserSettingsRoutes(): SettingsRoutes
  
      r.ACCESSIBILITY = r.ADVANCED.createSection('/accessibility', 'a11y');
  

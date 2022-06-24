@@ -1,4 +1,4 @@
---- base/threading/platform_thread_linux.cc.orig	2022-02-28 16:54:41 UTC
+--- base/threading/platform_thread_linux.cc.orig	2022-06-17 14:20:10 UTC
 +++ base/threading/platform_thread_linux.cc
 @@ -29,7 +29,9 @@
  
@@ -12,7 +12,7 @@
  #include <sys/types.h>
 @@ -132,7 +134,7 @@ int sched_setattr(pid_t pid,
  #endif  // !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_AIX)
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS)
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if !BUILDFLAG(IS_NACL)
 +#if !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_BSD)
@@ -73,5 +73,5 @@
    SetThreadCgroupsForThreadPriority(thread_id, priority);
 +#endif
  
- #if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS)
+ #if BUILDFLAG(IS_CHROMEOS)
    // For upstream uclamp interface. We try both legacy (schedtune, as done

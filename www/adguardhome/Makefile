@@ -1,7 +1,6 @@
 PORTNAME=	adguardhome
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.107.0-b.7
-PORTREVISION=	2
+DISTVERSION=	0.107.7
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +12,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USES=		cpe go:modules
 
 GO_MODULE=	github.com/AdguardTeam/AdGuardHome
-GO_PORT=	lang/go117 # quic-go does not build on Go 1.18 yet
 
 # to rebuild the deps archives:
 #   1. set DEV_UPDATE_MODE=yes
@@ -43,8 +41,6 @@ do-build:
 MASTER_SITES=	LOCAL/yuri/:deps
 DISTFILES=	${PORTNAME}-html-build-${DISTVERSION}${EXTRACT_SUFX}:deps \
 		${PORTNAME}-html-build2-${DISTVERSION}${EXTRACT_SUFX}:deps
-EXTRACT_ONLY=	${PORTNAME}-html-build-${DISTVERSION}${EXTRACT_SUFX} \
-		${PORTNAME}-html-build2-${DISTVERSION}${EXTRACT_SUFX}
 
 pre-build:
 	@${CP} -r ${WRKDIR}/build ${WRKDIR}/build2 ${WRKSRC}/

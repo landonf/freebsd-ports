@@ -1,15 +1,15 @@
---- chrome/browser/ui/tab_helpers.cc.orig	2022-04-21 18:48:31 UTC
+--- chrome/browser/ui/tab_helpers.cc.orig	2022-06-17 14:20:10 UTC
 +++ chrome/browser/ui/tab_helpers.cc
-@@ -181,7 +181,7 @@
+@@ -196,7 +196,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/autofill_assistant/common_dependencies_chrome.h"
+ #include "chrome/browser/autofill_assistant/platform_dependencies_desktop.h"
  #include "chrome/browser/ui/blocked_content/framebust_block_tab_helper.h"
- #include "chrome/browser/ui/browser_finder.h"
- #include "chrome/browser/ui/hats/hats_helper.h"
-@@ -505,13 +505,13 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
+@@ -532,13 +532,13 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -25,12 +25,12 @@
    if (base::FeatureList::IsEnabled(
            features::kHappinessTrackingSurveysForDesktopDemo) ||
        base::FeatureList::IsEnabled(features::kTrustSafetySentimentSurvey) ||
-@@ -522,7 +522,7 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
+@@ -553,7 +553,7 @@ void TabHelpers::AttachTabHelpers(WebContents* web_con
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   SharedHighlightingPromo::CreateForWebContents(web_contents);
- #endif
- 
+   if (base::FeatureList::IsEnabled(
+           autofill_assistant::features::kAutofillAssistantDesktop)) {
+     autofill_assistant::CreateForWebContents(

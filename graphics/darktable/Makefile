@@ -2,7 +2,7 @@
 
 PORTNAME=	darktable
 PORTVERSION=	3.8.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
@@ -15,7 +15,7 @@ ONLY_FOR_ARCHS=		aarch64 amd64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	uses 64-bit address space
 
 BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
-		${P5_POD_PARSER} \
+		p5-Pod-Parser>=0:textproc/p5-Pod-Parser \
 		po4a-translate:textproc/po4a \
 		xsltproc:textproc/libxslt \
 		bash:shells/bash

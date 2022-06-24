@@ -1,6 +1,6 @@
---- chrome/browser/profiles/profile_impl.cc.orig	2022-04-21 18:48:31 UTC
+--- chrome/browser/profiles/profile_impl.cc.orig	2022-06-17 14:20:10 UTC
 +++ chrome/browser/profiles/profile_impl.cc
-@@ -266,6 +266,10 @@
+@@ -259,6 +259,10 @@
  #include "chrome/browser/spellchecker/spellcheck_service.h"
  #endif
  
@@ -11,7 +11,7 @@
  using bookmarks::BookmarkModel;
  using content::BrowserThread;
  using content::DownloadManagerDelegate;
-@@ -852,7 +856,17 @@ void ProfileImpl::DoFinalInit(CreateMode create_mode) 
+@@ -845,7 +849,17 @@ void ProfileImpl::DoFinalInit(CreateMode create_mode) 
  }
  
  base::FilePath ProfileImpl::last_selected_directory() {

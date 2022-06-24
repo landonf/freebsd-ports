@@ -2,6 +2,7 @@
 
 PORTNAME=	bkt
 PORTVERSION=	0.5.4
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	ehaupt@FreeBSD.org

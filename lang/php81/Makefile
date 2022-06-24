@@ -1,5 +1,5 @@
 PORTNAME=	php81
-DISTVERSION=	8.1.5
+DISTVERSION=	8.1.7
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -127,7 +127,6 @@ CONFIGURE_ENV+=	ac_cv_decimal_fp_supported="no" \
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/ext/php_config.h
-	@${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
 
 post-patch-FPM-on:
 	@${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \

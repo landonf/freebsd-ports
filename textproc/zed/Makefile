@@ -1,6 +1,7 @@
 PORTNAME?=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0
+DISTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	meta@FreeBSD.org
@@ -9,7 +10,9 @@ COMMENT=	Command-line tool to manage and query Zed data lakes
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=	go:modules
+BROKEN_i386=	fails to build: cannot use math.MaxUint32 (untyped int constant 4294967295) as int value in assignment (overflows)
+
+USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	brimdata
 GH_PROJECT=	zed
@@ -58,7 +61,7 @@ GH_TUPLE=	\
 		paulbellamy:ratecounter:v0.2.0:paulbellamy_ratecounter/vendor/github.com/paulbellamy/ratecounter \
 		pbnjay:memory:974d429e7ae4:pbnjay_memory/vendor/github.com/pbnjay/memory \
 		peterh:liner:v1.1.0:peterh_liner/vendor/github.com/peterh/liner \
-		pierrec:lz4:v4.1.0:pierrec_lz4_v4/vendor/github.com/pierrec/lz4/v4 \
+		pierrec:lz4:v4.1.14:pierrec_lz4_v4/vendor/github.com/pierrec/lz4/v4 \
 		pkg:browser:681adbf594b8:pkg_browser/vendor/github.com/pkg/browser \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
 		prometheus:client_golang:v1.7.1:prometheus_client_golang/vendor/github.com/prometheus/client_golang \

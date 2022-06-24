@@ -1,4 +1,4 @@
---- extensions/browser/extension_prefs.cc.orig	2022-04-21 18:48:31 UTC
+--- extensions/browser/extension_prefs.cc.orig	2022-06-17 14:20:10 UTC
 +++ extensions/browser/extension_prefs.cc
 @@ -2270,7 +2270,7 @@ void ExtensionPrefs::RegisterProfilePrefs(
    registry->RegisterDictionaryPref(kInstallSignature);

@@ -16,6 +16,7 @@
     SUBDIR += R-cran-etm
     SUBDIR += R-cran-fastICA
     SUBDIR += R-cran-kernlab
+    SUBDIR += R-cran-ks
     SUBDIR += R-cran-snow
     SUBDIR += R-cran-som
     SUBDIR += R-cran-udunits2
@@ -90,6 +91,7 @@
     SUBDIR += fvcom-mpi
     SUBDIR += gabedit
     SUBDIR += gamess-us
+    SUBDIR += gbtolib
     SUBDIR += gchemutils
     SUBDIR += gdma
     SUBDIR += getdp
@@ -145,6 +147,7 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
+    SUBDIR += libtensorflow1
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
@@ -169,6 +172,7 @@
     SUBDIR += molgif
     SUBDIR += molscript
     SUBDIR += molsketch
+    SUBDIR += mopac
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += msms
@@ -189,6 +193,7 @@
     SUBDIR += openkim
     SUBDIR += openkim-models
     SUBDIR += openmc
+    SUBDIR += openmolcas
     SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
@@ -231,11 +236,13 @@
     SUBDIR += packmol
     SUBDIR += pagmo2
     SUBDIR += paje
+    SUBDIR += paraview
     SUBDIR += pastix
     SUBDIR += pcmsolver
     SUBDIR += phonopy
     SUBDIR += plumed
     SUBDIR += pnetcdf
+    SUBDIR += precice
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy
@@ -250,6 +257,7 @@
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
+    SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
@@ -304,6 +312,7 @@
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
+    SUBDIR += py-py3Dmol
     SUBDIR += py-pyaixi
     SUBDIR += py-pyberny
     SUBDIR += py-pycsw
@@ -315,6 +324,7 @@
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
+    SUBDIR += py-pyprecice
     SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
@@ -339,17 +349,20 @@
     SUBDIR += py-spaghetti
     SUBDIR += py-spglib
     SUBDIR += py-tensorflow
+    SUBDIR += py-thewalrus
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
     SUBDIR += py-veusz
     SUBDIR += pybrain
     SUBDIR += pynn
+    SUBDIR += q
     SUBDIR += qbox
     SUBDIR += qcl
     SUBDIR += qiskit-aer
     SUBDIR += qmcpack
     SUBDIR += quantum-espresso
     SUBDIR += quantum-espresso-pseudopotentials
+    SUBDIR += quantum-jet
     SUBDIR += qwalk
     SUBDIR += rdkit
     SUBDIR += rmf
@@ -382,7 +395,6 @@
     SUBDIR += spglib
     SUBDIR += step
     SUBDIR += svmlight
-    SUBDIR += szip
     SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel
@@ -390,6 +402,7 @@
     SUBDIR += thermofun
     SUBDIR += tinker
     SUBDIR += udunits
+    SUBDIR += ukrmol+
     SUBDIR += v_sim
     SUBDIR += vipster
     SUBDIR += vmd

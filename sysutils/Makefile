@@ -45,7 +45,6 @@
     SUBDIR += ansible-kld
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
-    SUBDIR += ansible2
     SUBDIR += ansible4
     SUBDIR += anvil
     SUBDIR += apache-mesos
@@ -54,7 +53,9 @@
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += aptly
+    SUBDIR += arc_summary
     SUBDIR += arcconf
+    SUBDIR += archey4
     SUBDIR += archivemount
     SUBDIR += ascpu
     SUBDIR += asfsm
@@ -76,6 +77,7 @@
     SUBDIR += avfs
     SUBDIR += azure-agent
     SUBDIR += b2sum
+    SUBDIR += b3sum
     SUBDIR += b43-fwcutter
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
@@ -138,6 +140,7 @@
     SUBDIR += bsdisks
     SUBDIR += bsdstats
     SUBDIR += bstack
+    SUBDIR += btop
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
@@ -332,6 +335,7 @@
     SUBDIR += env4801
     SUBDIR += envconsul
     SUBDIR += epazote
+    SUBDIR += equinix-metal-cli
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += etcupdate
@@ -359,12 +363,14 @@
     SUBDIR += file
     SUBDIR += filedupe
     SUBDIR += filelight
+    SUBDIR += filemon
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
     SUBDIR += filevercmp
     SUBDIR += filewatcherd
     SUBDIR += finfo
+    SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
     SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
@@ -656,6 +662,7 @@
     SUBDIR += logstash7
     SUBDIR += logtool
     SUBDIR += logwatch
+    SUBDIR += loki
     SUBDIR += lookat
     SUBDIR += lr
     SUBDIR += lsblk
@@ -803,6 +810,7 @@
     SUBDIR += nss_ndb
     SUBDIR += nsysctl
     SUBDIR += ntfy
+    SUBDIR += ntpstat
     SUBDIR += nut
     SUBDIR += nut-devel
     SUBDIR += nvclock
@@ -874,6 +882,7 @@
     SUBDIR += p5-MogileFS-Server
     SUBDIR += p5-MogileFS-Utils
     SUBDIR += p5-Monitor-Simple
+    SUBDIR += p5-POSIX-Run-Capture
     SUBDIR += p5-Plugtools
     SUBDIR += p5-Plugtools-Plugins-HomeOU
     SUBDIR += p5-Probe-Perl
@@ -969,6 +978,8 @@
     SUBDIR += php80-posix
     SUBDIR += php81-fileinfo
     SUBDIR += php81-posix
+    SUBDIR += php82-fileinfo
+    SUBDIR += php82-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1455,6 +1466,7 @@
     SUBDIR += u-boot-rpi3-32
     SUBDIR += u-boot-rpi4
     SUBDIR += u-boot-sifive-fu540
+    SUBDIR += u-boot-sifive-fu740
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
@@ -1468,9 +1480,7 @@
     SUBDIR += ucspi-tcp
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
-    SUBDIR += uefi-edk2-bhyve
     SUBDIR += uefi-edk2-bhyve-csm
-    SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
     SUBDIR += ufs_copy
     SUBDIR += uhidd
@@ -1578,6 +1588,7 @@
     SUBDIR += xstow
     SUBDIR += xsysstats
     SUBDIR += xvidcap
+    SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
     SUBDIR += z

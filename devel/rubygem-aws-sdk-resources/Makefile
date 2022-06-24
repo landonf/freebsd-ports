@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.130.0
+PORTVERSION=	3.135.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -82,6 +82,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-computeoptimizer>=1<2:devel/rubygem-aws-sdk-computeoptimizer \
 		rubygem-aws-sdk-configservice>=1<2:devel/rubygem-aws-sdk-configservice \
 		rubygem-aws-sdk-connect>=1<2:devel/rubygem-aws-sdk-connect \
+		rubygem-aws-sdk-connectcampaignservice>=1<2:devel/rubygem-aws-sdk-connectcampaignservice \
 		rubygem-aws-sdk-connectcontactlens>=1<2:devel/rubygem-aws-sdk-connectcontactlens \
 		rubygem-aws-sdk-connectparticipant>=1<2:devel/rubygem-aws-sdk-connectparticipant \
 		rubygem-aws-sdk-connectwisdomservice>=1<2:devel/rubygem-aws-sdk-connectwisdomservice \
@@ -120,6 +121,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-elastictranscoder>=1<2:devel/rubygem-aws-sdk-elastictranscoder \
 		rubygem-aws-sdk-emr>=1<2:devel/rubygem-aws-sdk-emr \
 		rubygem-aws-sdk-emrcontainers>=1<2:devel/rubygem-aws-sdk-emrcontainers \
+		rubygem-aws-sdk-emrserverless>=1<2:devel/rubygem-aws-sdk-emrserverless \
 		rubygem-aws-sdk-eventbridge>=1<2:devel/rubygem-aws-sdk-eventbridge \
 		rubygem-aws-sdk-finspace>=1<2:devel/rubygem-aws-sdk-finspace \
 		rubygem-aws-sdk-finspacedata>=1<2:devel/rubygem-aws-sdk-finspacedata \
@@ -194,6 +196,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-machinelearning>=1<2:devel/rubygem-aws-sdk-machinelearning \
 		rubygem-aws-sdk-macie>=1<2:devel/rubygem-aws-sdk-macie \
 		rubygem-aws-sdk-macie2>=1<2:devel/rubygem-aws-sdk-macie2 \
+		rubygem-aws-sdk-mainframemodernization>=1<2:devel/rubygem-aws-sdk-mainframemodernization \
 		rubygem-aws-sdk-managedblockchain>=1<2:devel/rubygem-aws-sdk-managedblockchain \
 		rubygem-aws-sdk-managedgrafana>=1<2:devel/rubygem-aws-sdk-managedgrafana \
 		rubygem-aws-sdk-marketplacecatalog>=1<2:devel/rubygem-aws-sdk-marketplacecatalog \
@@ -249,6 +252,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-recyclebin>=1<2:devel/rubygem-aws-sdk-recyclebin \
 		rubygem-aws-sdk-redshift>=1<2:devel/rubygem-aws-sdk-redshift \
 		rubygem-aws-sdk-redshiftdataapiservice>=1<2:devel/rubygem-aws-sdk-redshiftdataapiservice \
+		rubygem-aws-sdk-redshiftserverless>=1<2:devel/rubygem-aws-sdk-redshiftserverless \
 		rubygem-aws-sdk-rekognition>=1<2:devel/rubygem-aws-sdk-rekognition \
 		rubygem-aws-sdk-resiliencehub>=1<2:devel/rubygem-aws-sdk-resiliencehub \
 		rubygem-aws-sdk-resourcegroups>=1<2:devel/rubygem-aws-sdk-resourcegroups \
