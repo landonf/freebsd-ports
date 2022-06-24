@@ -30,6 +30,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/arm64intr.h
 %%DATADIR%%/bin/clang/linux/include/arm_acle.h
 %%DATADIR%%/bin/clang/linux/include/arm_cmse.h
+%%DATADIR%%/bin/clang/linux/include/arm_neon_sve_bridge.h
 %%DATADIR%%/bin/clang/linux/include/armintr.h
 %%DATADIR%%/bin/clang/linux/include/avx2intrin.h
 %%DATADIR%%/bin/clang/linux/include/avx512bf16intrin.h
@@ -171,7 +172,7 @@ share/applications/clion.desktop
 %%DATADIR%%/bin/clang/linux/include/xsavesintrin.h
 %%DATADIR%%/bin/clang/linux/include/xtestintrin.h
 %%DATADIR%%/bin/clang/linux/libclazyPlugin.so
-%%DATADIR%%/bin/clang/linux/libclazyPlugin.so.14git
+%%DATADIR%%/bin/clang/linux/libclazyPlugin.so.15git
 %%DATADIR%%/bin/clang/linux/llvm-symbolizer
 %%DATADIR%%/bin/brokenPlugins.db
 %%DATADIR%%/bin/clion.png
