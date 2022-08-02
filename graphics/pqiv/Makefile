@@ -1,8 +1,6 @@
-# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-
 PORTNAME=	pqiv
 PORTVERSION=	2.12
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics
 
 MAINTAINER=	danilo@FreeBSD.org

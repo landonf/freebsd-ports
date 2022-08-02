@@ -1,8 +1,6 @@
-# Created by: Mikael Urankar <mikael.urankar@gmail.com>
-
 PORTNAME=	raspberrypi-userland
 PORTVERSION=	20161026
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 
 MAINTAINER=	ports@FreeBSD.org

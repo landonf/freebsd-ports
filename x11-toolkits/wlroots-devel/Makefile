@@ -1,5 +1,5 @@
 PORTNAME=	wlroots
-DISTVERSION=	0.15.0-291
+DISTVERSION=	0.15.0-313
 DISTVERSIONSUFFIX=	-g${GL_COMMIT:C/(.{12}).*/\1/}
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	-devel
@@ -29,12 +29,13 @@ USE_GL=		gbm
 USE_XORG=	pixman
 USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
-GL_COMMIT=	c20468cfa292e99357fd504fc5b5884f6078ca96
+GL_COMMIT=	7298c42139f9f8c5538dd0ba837699d63609839e
 MESON_ARGS=	-Dexamples=false -Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,}
 
 .ifdef PKGNAMESUFFIX
 PORTSCOUT=	ignore:1
 PREFIX=		${LOCALBASE}/${PKGBASE} # avoid conflict with the default
+MESON_ARGS+=	-Ddatadir="${LOCALBASE}/share"
 .endif
 
 OPTIONS_DEFINE=	DRM OPENGL VULKAN X11

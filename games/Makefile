@@ -182,6 +182,7 @@
     SUBDIR += cursive
     SUBDIR += cutemaze
     SUBDIR += cuyo
+    SUBDIR += cxxmatrix
     SUBDIR += d2x
     SUBDIR += dMagnetic
     SUBDIR += dangen
@@ -259,7 +260,6 @@
     SUBDIR += fightorperish
     SUBDIR += fillets-ng
     SUBDIR += filters
-    SUBDIR += fishfight
     SUBDIR += fishsupper
     SUBDIR += five-or-more
     SUBDIR += fkiss
@@ -416,6 +416,7 @@
     SUBDIR += jtans
     SUBDIR += julius
     SUBDIR += jumpnbump
+    SUBDIR += jumpy
     SUBDIR += jutils
     SUBDIR += jvgs
     SUBDIR += jzip

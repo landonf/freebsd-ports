@@ -1,9 +1,7 @@
-# Created by: Rod Person <rodperson@rodperson.com>
-
 PORTNAME=	dunst
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.8.1
-CATEGORIES=	sysutils
+DISTVERSION=	1.9.0
+CATEGORIES=	sysutils wayland
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Lightweight notification daemon

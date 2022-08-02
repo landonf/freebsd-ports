@@ -1,12 +1,10 @@
-# Created by: kbowling
-
 PORTNAME=		inn-current
 PORTVERSION=		${SNAPSHOT}
 MASTER_SITE_SUBDIR=	inn/snapshots
 DISTNAME=		inn-${BRANCH}-${SNAPSHOT}
 
 BRANCH=		2.7
-SNAPSHOT=	20220614
+SNAPSHOT=	20220627
 
 CONFLICTS=	inn-2.[0-9]*
 

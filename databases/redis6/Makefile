@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	redis6
 PORTVERSION=	6.0.16
 PORTREVISION=	1
@@ -29,6 +27,8 @@ TESTS_DESC=	Install lang/tcl for redis unit tests
 TRIB_DESC=	Install redis-trib.rb (lang/ruby req.)
 
 MAKE_ENV=	V=yo OPTIMIZATION=
+
+CONFLICTS_INSTALL=	redis redis-devel # etc/rc.d/redis
 
 JEMALLOC_MAKE_ENV=	USE_JEMALLOC=yes
 

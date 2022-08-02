@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	netgen
 PORTVERSION=	6.2.2203
 DISTVERSIONPREFIX=	v
@@ -32,7 +30,7 @@ LDFLAGS+=	-lexecinfo
 
 CMAKE_OFF=	USE_NATIVE_ARCH
 
-CONFLICTS_INSTALL=	libvisual netgen-lvs pybind11 # bin/netgen include/pybind11/attr.h lib/libvisual.so
+CONFLICTS_INSTALL=	libvisual pybind11 # bin/netgen include/pybind11/attr.h lib/libvisual.so
 
 OPTIONS_DEFINE=	JPEG MPEG CGNS
 

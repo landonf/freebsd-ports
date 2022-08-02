@@ -2,6 +2,7 @@
 
     SUBDIR += 2d-rewriter
     SUBDIR += ALPSCore
+    SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
     SUBDIR += PETSc
     SUBDIR += R-cran-AMORE
@@ -109,6 +110,7 @@
     SUBDIR += harminv
     SUBDIR += hdf
     SUBDIR += hdf5
+    SUBDIR += hdf5-110
     SUBDIR += hdf5-18
     SUBDIR += healpix
     SUBDIR += helfem
@@ -122,6 +124,7 @@
     SUBDIR += jstrack
     SUBDIR += kalzium
     SUBDIR += kim-api
+    SUBDIR += kplib
     SUBDIR += kst2
     SUBDIR += lammps
     SUBDIR += lamprop
@@ -133,6 +136,7 @@
     SUBDIR += libecpint
     SUBDIR += libefp
     SUBDIR += libgeodecomp
+    SUBDIR += libgetar
     SUBDIR += libghemical
     SUBDIR += libgridxc
     SUBDIR += libint
@@ -164,6 +168,7 @@
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
     SUBDIR += medit
+    SUBDIR += meep
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
@@ -272,6 +277,7 @@
     SUBDIR += py-cirq-google
     SUBDIR += py-cirq-ionq
     SUBDIR += py-cirq-pasqal
+    SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
     SUBDIR += py-dipy
     SUBDIR += py-dlib
@@ -293,7 +299,9 @@
     SUBDIR += py-kim-query
     SUBDIR += py-kinematics
     SUBDIR += py-kliff
+    SUBDIR += py-kpLib
     SUBDIR += py-liac-arff
+    SUBDIR += py-libgetar
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
@@ -401,6 +409,7 @@
     SUBDIR += tfel-edf
     SUBDIR += thermofun
     SUBDIR += tinker
+    SUBDIR += trilinos
     SUBDIR += udunits
     SUBDIR += ukrmol+
     SUBDIR += v_sim

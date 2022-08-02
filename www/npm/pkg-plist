@@ -87,6 +87,7 @@ lib/node_modules/npm/docs/content/using-npm/config.md
 lib/node_modules/npm/docs/content/using-npm/developers.md
 lib/node_modules/npm/docs/content/using-npm/logging.md
 lib/node_modules/npm/docs/content/using-npm/orgs.md
+lib/node_modules/npm/docs/content/using-npm/package-spec.md
 lib/node_modules/npm/docs/content/using-npm/registry.md
 lib/node_modules/npm/docs/content/using-npm/removal.md
 lib/node_modules/npm/docs/content/using-npm/scope.md
@@ -167,6 +168,7 @@ lib/node_modules/npm/docs/output/using-npm/config.html
 lib/node_modules/npm/docs/output/using-npm/developers.html
 lib/node_modules/npm/docs/output/using-npm/logging.html
 lib/node_modules/npm/docs/output/using-npm/orgs.html
+lib/node_modules/npm/docs/output/using-npm/package-spec.html
 lib/node_modules/npm/docs/output/using-npm/registry.html
 lib/node_modules/npm/docs/output/using-npm/removal.html
 lib/node_modules/npm/docs/output/using-npm/scope.html
@@ -275,6 +277,7 @@ lib/node_modules/npm/lib/utils/is-windows.js
 lib/node_modules/npm/lib/utils/log-file.js
 lib/node_modules/npm/lib/utils/log-shim.js
 lib/node_modules/npm/lib/utils/npm-usage.js
+lib/node_modules/npm/lib/utils/open-url-prompt.js
 lib/node_modules/npm/lib/utils/open-url.js
 lib/node_modules/npm/lib/utils/otplease.js
 lib/node_modules/npm/lib/utils/ping.js
@@ -367,6 +370,7 @@ lib/node_modules/npm/man/man7/dependency-selectors.7.gz
 lib/node_modules/npm/man/man7/developers.7.gz
 lib/node_modules/npm/man/man7/logging.7.gz
 lib/node_modules/npm/man/man7/orgs.7.gz
+lib/node_modules/npm/man/man7/package-spec.7.gz
 lib/node_modules/npm/man/man7/registry.7.gz
 lib/node_modules/npm/man/man7/removal.7.gz
 lib/node_modules/npm/man/man7/scope.7.gz
@@ -561,6 +565,7 @@ lib/node_modules/npm/node_modules/@npmcli/promise-spawn/LICENSE
 lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js
 lib/node_modules/npm/node_modules/@npmcli/promise-spawn/package.json
 lib/node_modules/npm/node_modules/@npmcli/run-script/LICENSE
+lib/node_modules/npm/node_modules/@npmcli/run-script/lib/escape.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/is-server-package.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/is-windows.js
 lib/node_modules/npm/node_modules/@npmcli/run-script/lib/make-spawn-args.js
@@ -1121,6 +1126,7 @@ lib/node_modules/npm/node_modules/libnpmversion/lib/version.js
 lib/node_modules/npm/node_modules/libnpmversion/lib/write-json.js
 lib/node_modules/npm/node_modules/libnpmversion/package.json
 lib/node_modules/npm/node_modules/lru-cache/LICENSE
+lib/node_modules/npm/node_modules/lru-cache/index.d.ts
 lib/node_modules/npm/node_modules/lru-cache/index.js
 lib/node_modules/npm/node_modules/lru-cache/package.json
 lib/node_modules/npm/node_modules/make-fetch-happen/LICENSE
@@ -1142,6 +1148,7 @@ lib/node_modules/npm/node_modules/minimatch/lib/path.js
 lib/node_modules/npm/node_modules/minimatch/minimatch.js
 lib/node_modules/npm/node_modules/minimatch/package.json
 lib/node_modules/npm/node_modules/minipass/LICENSE
+lib/node_modules/npm/node_modules/minipass/index.d.ts
 lib/node_modules/npm/node_modules/minipass/index.js
 lib/node_modules/npm/node_modules/minipass/package.json
 lib/node_modules/npm/node_modules/minipass-collect/LICENSE

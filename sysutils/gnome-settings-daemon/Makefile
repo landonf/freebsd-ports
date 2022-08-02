@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	42.2
 CATEGORIES=	sysutils gnome
@@ -7,7 +5,7 @@ MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 3 settings daemon
+COMMENT=	GNOME settings daemon
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

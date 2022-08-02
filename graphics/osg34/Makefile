@@ -1,9 +1,7 @@
-# Created by: Randall Hopper <aa8vb@nc.rr.com>
-
 PORTNAME=	osg
 PORTVERSION=	3.4.1
 DISTVERSIONPREFIX=	OpenSceneGraph-
-PORTREVISION=	38
+PORTREVISION=	39
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	34
 

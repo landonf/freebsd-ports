@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	5.0.9
+DISTVERSION=	5.0.10
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -44,7 +44,7 @@ MAKE_ARGS=	--cxx-std=17 \
 		AR=${PREFIX}/bin/ar \
 		VERBOSE=on
 
-CONFLICTS_INSTALL=	mongodb36 mongodb4[024]
+CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
 
 USERS=		mongodb
 GROUPS=		mongodb

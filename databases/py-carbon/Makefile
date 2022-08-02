@@ -1,7 +1,6 @@
-# Created by: Evan Sarmiento <bsdports@wayfair.com>
-
 PORTNAME=	carbon
 PORTVERSION=	1.1.10
+PORTREVISION=	2
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -42,4 +41,4 @@ post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/examples/init.d
 	${RMDIR} ${STAGEDIR}${PREFIX}/examples
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

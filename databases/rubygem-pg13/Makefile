@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pg
 PORTVERSION=	1.3.5
 CATEGORIES=	databases rubygems
@@ -20,5 +18,7 @@ USE_RUBY=	yes
 CONFIGURE_ARGS=	--with-pgsql-include-dir=`${PG_CONFIG} --includedir` \
 		--with-pgsql-lib-dir=`${PG_CONFIG} --libdir`
 PG_CONFIG=	${LOCALBASE}/bin/pg_config
+
+PORTSCOUT=	limit:^1\.3\.
 
 .include <bsd.port.mk>

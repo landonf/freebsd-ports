@@ -174,9 +174,6 @@
     SUBDIR += elasticsearch-plugin-head
     SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
-    SUBDIR += elixir-earmark
-    SUBDIR += elixir-funnel
-    SUBDIR += elixir-sweet_xml
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
     SUBDIR += en-mythes
@@ -184,10 +181,6 @@
     SUBDIR += enchant2
     SUBDIR += eo-aspell
     SUBDIR += eqe
-    SUBDIR += erlang-edown
-    SUBDIR += erlang-fast_xml
-    SUBDIR += erlang-p1_utils
-    SUBDIR += erlang-yamerl
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -412,6 +405,7 @@
     SUBDIR += libwps
     SUBDIR += libwps03
     SUBDIR += libxdiff
+    SUBDIR += libxml++
     SUBDIR += libxml++26
     SUBDIR += libxml2
     SUBDIR += libxmlb
@@ -1551,10 +1545,12 @@
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
     SUBDIR += py-ttp
+    SUBDIR += py-ttp-templates
     SUBDIR += py-typogrify
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-wcmatch
+    SUBDIR += py-whatthepatch
     SUBDIR += py-whoosh
     SUBDIR += py-wordcloud
     SUBDIR += py-wordnet
@@ -1638,7 +1634,6 @@
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
-    SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1025
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1678,7 +1673,6 @@
     SUBDIR += rubygem-elasticsearch713
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
-    SUBDIR += rubygem-escape_utils12
     SUBDIR += rubygem-extended-markdown-filter
     SUBDIR += rubygem-ezamar
     SUBDIR += rubygem-fast_xs
@@ -1776,8 +1770,7 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge312
-    SUBDIR += rubygem-rouge327
+    SUBDIR += rubygem-rouge329
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1970,6 +1963,7 @@
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
+    SUBDIR += vale
     SUBDIR += vbindiff
     SUBDIR += ve-hunspell
     SUBDIR += vgrep

@@ -1,8 +1,6 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	tracker-miners
 PORTVERSION=	2.3.5
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 

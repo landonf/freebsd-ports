@@ -1,10 +1,9 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
 #
 # Please update update atril-lite also
 
 PORTNAME=	atril
 PORTVERSION=	1.26.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate

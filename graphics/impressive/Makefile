@@ -1,8 +1,6 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	impressive
 DISTVERSION=	0.13.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${DISTVERSION}/
 DISTNAME=	Impressive-${DISTVERSION}

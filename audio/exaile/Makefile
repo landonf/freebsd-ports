@@ -8,10 +8,7 @@ COMMENT=	Full featured python-based music player for GTK+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-DEPRECATED=	Requires py-bsddb3 which requires upstream EOLd db5
-EXPIRATION_DATE=	2022-06-30
-
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb3>0:databases/py-bsddb3@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}berkeleydb>0:databases/py-berkeleydb@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gstreamer1>0:multimedia/py-gstreamer1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mutagen>0:audio/py-mutagen@${PY_FLAVOR}

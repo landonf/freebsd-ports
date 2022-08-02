@@ -1,8 +1,7 @@
-# Created by: Andrey Cherkashin <andoriyu@gmail.com>
-
 PORTNAME=	fd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	8.4.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-find
 

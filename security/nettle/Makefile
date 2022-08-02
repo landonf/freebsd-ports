@@ -1,7 +1,5 @@
-# Created by: ijliao
-
 PORTNAME=	nettle
-PORTVERSION=	3.8
+PORTVERSION=	3.8.1
 CATEGORIES=	security
 MASTER_SITES=	GNU \
 		https://www.lysator.liu.se/~nisse/archive/
@@ -35,10 +33,6 @@ EXAMPLES_CFLAGS=	-I${OPENSSLINC}
 EXAMPLES_USES=		ssl
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH} == "aarch64"
-CONFIGURE_ARGS+=--disable-assembler
-.endif
 
 .if ${ARCH} == "sparc64"
 CONFIGURE_ENV+=	CCPIC=-fPIC

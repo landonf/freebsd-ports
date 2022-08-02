@@ -1,7 +1,5 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Astro-SpaceTrack
-PORTVERSION=	0.153
+PORTVERSION=	0.155
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

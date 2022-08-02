@@ -1,8 +1,7 @@
 PORTNAME=	nwg-look
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.3
-PORTREVISION=	1
-CATEGORIES=	x11
+DISTVERSION=	0.1.4
+CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GTK3 settings editor for sway and other wlroots compositors

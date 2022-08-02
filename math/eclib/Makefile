@@ -1,7 +1,6 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	eclib
 PORTVERSION=	20210625
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org

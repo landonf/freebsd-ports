@@ -1,8 +1,6 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
-
 PORTNAME=	gitlab-ce
-PORTVERSION=	15.1.0
-PORTREVISION=	0
+PORTVERSION=	15.1.4
+PORTREVISION=	2
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -20,7 +18,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	gitlab-elasticsearch-indexer>=3.0.0:textproc/gitlab-elasticsearch-indexer \
 	gitlab-agent>=15.1.0:net/gitlab-agent \
 	gitlab-metrics-exporter>0:devel/gitlab-metrics-exporter \
-	gitlab-pages>=1.59.0:www/gitlab-pages \
+	gitlab-pages>=1.59.1:www/gitlab-pages \
 	gitlab-shell>=14.7.4:devel/gitlab-shell \
 	gitlab-workhorse>=${PORTVERSION}:www/gitlab-workhorse \
 	redis>=6.0.14:databases/redis \
@@ -28,7 +26,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
 	rubygem-rails61>=6.1.6.0<6.1.7:www/rubygem-rails61 \
-	rubygem-bootsnap>=1.12.0<1.13:devel/rubygem-bootsnap \
+	rubygem-bootsnap112>=1.12.0<1.13:devel/rubygem-bootsnap112 \
 	rubygem-responders-rails61>=3.0<4.0:www/rubygem-responders-rails61 \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
 	rubygem-view_component-rails61>=2.50.0<2.51:devel/rubygem-view_component-rails61 \
@@ -132,7 +130,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-asciidoctor-include-ext>=0.4.0<0.5.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml00>=0.0.12<0.1:textproc/rubygem-asciidoctor-plantuml00 \
 	rubygem-asciidoctor-kroki>=0.5.0<0.6:textproc/rubygem-asciidoctor-kroki \
-	rubygem-rouge>=3.29.0<3.30:textproc/rubygem-rouge \
+	rubygem-rouge329>=3.29.0<3.30:textproc/rubygem-rouge329 \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
 	rubygem-nokogiri>=1.13.6<1.14:textproc/rubygem-nokogiri \
@@ -140,7 +138,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-icalendar>=0:devel/rubygem-icalendar \
 	rubygem-diffy>=3.3<4:textproc/rubygem-diffy \
 	rubygem-diff_match_patch>=0.1.0<0.2.0:textproc/rubygem-diff_match_patch \
-	rubygem-rack>=2.2.3.0<2.2.4,3:www/rubygem-rack \
+	rubygem-rack223>=2.2.3.0<2.2.4:www/rubygem-rack223 \
 	rubygem-rack-timeout>=0.6.0<0.7:www/rubygem-rack-timeout \
 	rubygem-puma>=5.6.2<5.7:www/rubygem-puma \
 	rubygem-puma_worker_killer>=0.3.1:www/rubygem-puma_worker_killer \
@@ -282,7 +280,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	6bea43795252f980eeee7ce67413ef440da88a31
+GL_COMMIT=	39245e886b4dbeac096a3ee649464f293627ff77
 
 USERS=	git
 GROUPS=	git

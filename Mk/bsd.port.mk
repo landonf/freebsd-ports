@@ -325,17 +325,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # usage inside the ports framework, and the latter are reserved for user-
 # settable options.  (Setting USE_* in /etc/make.conf is always wrong).
 #
-# WITH_DEBUG            - If set, debugging flags are added to CFLAGS and the
-#                         binaries don't get stripped by INSTALL_PROGRAM or
-#                         INSTALL_LIB. Besides, individual ports might
-#                         add their specific to produce binaries for debugging
-#                         purposes. You can override the debug flags that are
-#                         passed to the compiler by setting DEBUG_FLAGS. It is
-#                         set to "-g" at default.
-#
-#			  NOTE: to override a globally defined WITH_DEBUG at a
-#			        later time ".undef WITH_DEBUG" can be used
-#
 # WITH_DEBUG_PORTS		- A list of origins for which WITH_DEBUG will be set
 #
 # WITHOUT_SSP	- Disable SSP.
@@ -1019,6 +1008,8 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
+_LIST_OF_WITH_FEATURES=	debug lto ssp
+_DEFAULT_WITH_FEATURES=	ssp
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		/usr/local
 LINUXBASE?=		/compat/linux
@@ -1050,7 +1041,8 @@ PORTS_FEATURES+=	FLAVORS
 MINIMAL_PKG_VERSION=	1.17.2
 
 _PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
-						${STAGEDIR}${PREFIX} ${WRKDIR}/pkg ${BINARY_LINKDIR}
+						${STAGEDIR}${PREFIX} ${WRKDIR}/pkg ${BINARY_LINKDIR} \
+						${PKGCONFIG_LINKDIR}
 
 # Ensure .CURDIR contains an absolute path without a trailing slash.  Failed
 # builds can occur when PORTSDIR is a symbolic link, or with something like
@@ -1309,6 +1301,11 @@ TMPDIR?=	/tmp
 .      if ${WITH_DEBUG_PORTS:M${PKGORIGIN}}
 WITH_DEBUG=	yes
 .      endif
+.    endif
+
+.    if defined(USE_LTO)
+WITH_LTO=	${USE_LTO}
+WARNING+=	USE_LTO is deprecated in favor of WITH_LTO
 .    endif
 
 .include "${PORTSDIR}/Mk/bsd.default-versions.mk"
@@ -1681,6 +1678,13 @@ MAKE_ENV+=			PATH=${PATH}
 CONFIGURE_ENV+=		PATH=${PATH}
 .    endif
 
+PKGCONFIG_LINKDIR=	${WRKDIR}/.pkgconfig
+PKGCONFIG_BASEDIR=	/usr/libdata/pkgconfig
+.    if !${MAKE_ENV:MPKG_CONFIG_LIBDIR=*} && !${CONFIGURE_ENV:MPKG_CONFIG_LIBDIR=*}
+MAKE_ENV+=			PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${LOCALBASE}/share/pkgconfig:${PKGCONFIG_BASEDIR}
+CONFIGURE_ENV+=		PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${LOCALBASE}/share/pkgconfig:${PKGCONFIG_BASEDIR}
+.    endif
+
 .    if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB) && empty(USE_GITHUB:Mnodefault)
 .      if defined(WRKSRC)
 DEV_WARNING+=	"You are using USE_GITHUB and WRKSRC is set which is wrong.  Set GH_PROJECT correctly or set WRKSRC_SUBDIR and remove WRKSRC entirely."
@@ -1758,27 +1762,11 @@ CFLAGS:=	${CFLAGS:C/${_CPUCFLAGS}//}
 .      endif
 .    endif
 
-# Reset value from bsd.own.mk.
-.    if defined(WITH_DEBUG)
-.      if !defined(INSTALL_STRIPPED)
-STRIP=	#none
-MAKE_ENV+=	DONTSTRIP=yes
-STRIP_CMD=	${TRUE}
+.    for f in ${_LIST_OF_WITH_FEATURES}
+.      if defined(WITH_${f:tu}) || ( ${_DEFAULT_WITH_FEATURES:M${f}} &&  !defined(WITHOUT_${f:tu}) )
+.include "${PORTSDIR}/Mk/Features/$f.mk"
 .      endif
-DEBUG_FLAGS?=	-g
-CFLAGS:=		${CFLAGS:N-O*:N-fno-strict*} ${DEBUG_FLAGS}
-.      if defined(INSTALL_TARGET)
-INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
-.      endif
-.    endif
-
-.    if defined(USE_LTO)
-.include "${PORTSDIR}/Mk/bsd.lto.mk"
-.    endif
-
-.    if !defined(WITHOUT_SSP)
-.include "${PORTSDIR}/Mk/bsd.ssp.mk"
-.    endif
+.    endfor
 
 # XXX PIE support to be added here
 MAKE_ENV+=	NO_PIE=yes
@@ -5147,6 +5135,20 @@ create-binary-alias: ${BINARY_LINKDIR}
 .      endif
 .    endif
 
+.    if !empty(PKGCONFIG_BASE)
+.      if !target(create-base-pkgconfig)
+create-base-pkgconfig: ${PKGCONFIG_LINKDIR}
+.        for pcfile in ${PKGCONFIG_BASE:S/$/.pc/}
+			@if `test -f ${PKGCONFIG_BASEDIR}/${pcfile}`; then \
+				${RLN} ${PKGCONFIG_BASEDIR}/${pcfile} ${PKGCONFIG_LINKDIR}/${pcfile}; \
+			else \
+				${ECHO_MSG} "===>  Missing \"${pcfile}\" to create a link at \"${PKGCONFIG_LINKDIR}/${pcfile}\"     "; \
+				${FALSE}; \
+			fi
+.        endfor
+.      endif
+.    endif
+
 .    if !empty(BINARY_WRAPPERS)
 .      if !target(create-binary-wrappers)
 create-binary-wrappers: ${BINARY_LINKDIR}
@@ -5256,7 +5258,7 @@ _PATCH_SEQ=		050:ask-license 100:patch-message 150:patch-depends \
 				${_OPTIONS_patch} ${_USES_patch}
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	150:build-depends 151:lib-depends 160:create-binary-alias \
-				161:create-binary-wrappers \
+				161:create-binary-wrappers 170:create-base-pkgconfig \
 				200:configure-message 210:apply-slist \
 				300:pre-configure 450:pre-configure-script \
 				490:run-autotools-fixup 500:do-configure 700:post-configure \

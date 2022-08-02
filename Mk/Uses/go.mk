@@ -60,7 +60,7 @@ _INCLUDE_USES_GO_MK=	yes
 
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-GO_VALID_VERSIONS=	1.17 1.18 1.19-devel
+GO_VALID_VERSIONS=	1.18 1.19 1.20-devel
 
 # Check arguments sanity
 .  if !empty(go_ARGS:N[1-9].[0-9][0-9]:N*-devel:Nmodules:Nno_targets:Nrun)
@@ -118,6 +118,7 @@ GO_WRKDIR_BIN=	${WRKDIR}/bin
 GO_ENV+=	CGO_ENABLED=${CGO_ENABLED} \
 		CGO_CFLAGS="${CGO_CFLAGS}" \
 		CGO_LDFLAGS="${CGO_LDFLAGS}" \
+		GOAMD64=${GOAMD64} \
 		GOARM=${GOARM}
 
 .  if ${go_ARGS:Mmodules}

@@ -1,7 +1,5 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	brial
-PORTVERSION=	1.2.10
+PORTVERSION=	1.2.11
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 

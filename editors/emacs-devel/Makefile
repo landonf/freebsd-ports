@@ -1,7 +1,5 @@
-# Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-
 PORTNAME=	emacs
-DISTVERSION=	29.0.50.20220615
+DISTVERSION=	29.0.50.20220731
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -25,7 +23,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	a29e0f1
+GH_TAGNAME=	3d6af11
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \

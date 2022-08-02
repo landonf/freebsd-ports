@@ -1,9 +1,7 @@
-# Created by: Juraj Lutter <otis@FreeBSD.org>
-
 PORTNAME=	oha
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	otis@FreeBSD.org
