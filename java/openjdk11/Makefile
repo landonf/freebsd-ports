@@ -141,9 +141,7 @@ CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFA
 			--with-extra-cxxflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	USE_CLANG=true
-.if ${COMPILER_VERSION} >= 130
-# PR258954: OpenJDK <= 13 crash due to undefined behavior with clang >= 13
-# See also https://bugs.openjdk.java.net/browse/JDK-8229258
+.if ${COMPILER_VERSION} >= 130 && ${ARCH:Mpowerpc64*}
 LLVM_VER=	12
 BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
 CC=		${LOCALBASE}/bin/clang${LLVM_VER}

@@ -855,6 +855,7 @@
     SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-dionysus
+    SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
     SUBDIR += py-faiss
@@ -890,6 +891,7 @@
     SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
+    SUBDIR += py-lmfit
     SUBDIR += py-luminol
     SUBDIR += py-mathics
     SUBDIR += py-mathics-scanner
@@ -907,6 +909,7 @@
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
     SUBDIR += py-nlopt
+    SUBDIR += py-numdifftools
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
@@ -959,6 +962,7 @@
     SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-rpy2
+    SUBDIR += py-rustworkx
     SUBDIR += py-rvlib
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-scs
@@ -979,11 +983,13 @@
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-sym
+    SUBDIR += py-symengine
     SUBDIR += py-sympy
     SUBDIR += py-theano
     SUBDIR += py-timple
     SUBDIR += py-topologic
     SUBDIR += py-triangle
+    SUBDIR += py-umap-learn
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
     SUBDIR += py-vincenty
@@ -1057,6 +1063,7 @@
     SUBDIR += spooles-mpich
     SUBDIR += spot
     SUBDIR += sprng
+    SUBDIR += ssht
     SUBDIR += stan
     SUBDIR += stanmath
     SUBDIR += stp

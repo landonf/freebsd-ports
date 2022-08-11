@@ -1,5 +1,6 @@
 PORTNAME=	wazuh
 DISTVERSION=	4.3.6
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/16/libraries/sources/:wazuh_sources \
@@ -21,6 +22,8 @@ LIB_DEPENDS+=	libgdbm.so:databases/gdbm \
 		libnghttp2.so:www/libnghttp2
 
 USES=		cpe gmake perl5 python:3.9 readline shebangfix sqlite:3 uidfix
+
+ONLY_FOR_ARCHS=	amd64
 
 USE_GITHUB=	yes
 USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
@@ -116,9 +119,14 @@ WAZUHPREFIX=	/var/ossec
 .if ${OSVERSION} >= 1200500 && ${OSVERSION} < 1300000
 WAZUH_CACHENAME=${PORTNAME}-cache-fbsd12-${ARCH}
 DISTFILES+=	${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache
-.elif ${OSVERSION} >= 1300500 && ${OSVERSION} < 1400000
+.elif ${OSVERSION} >= 1300139 && ${OSVERSION} < 1400000
 WAZUH_CACHENAME=${PORTNAME}-cache-fbsd13-${ARCH}
 DISTFILES+=	${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache
+.elif ${OSVERSION} >= 1400000
+WAZUH_CACHENAME=${PORTNAME}-cache-fbsd14-${ARCH}
+DISTFILES+=	${WAZUH_CACHENAME}${EXTRACT_SUFX}:wazuh_cache
+.else
+IGNORE=		FreeBSD ${OSVERSION} is not supported
 .endif
 
 post-extract:

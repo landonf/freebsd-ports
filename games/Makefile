@@ -250,6 +250,7 @@
     SUBDIR += exhaust-doc
     SUBDIR += exhaust-ma
     SUBDIR += exult
+    SUBDIR += exult-devel
     SUBDIR += ezquake
     SUBDIR += f1spirit-remake
     SUBDIR += fairymax
@@ -1009,6 +1010,7 @@
     SUBDIR += urbanterror-data
     SUBDIR += valyriatear
     SUBDIR += vamos
+    SUBDIR += vanilla-conquer
     SUBDIR += vavoom
     SUBDIR += vavoom-extras
     SUBDIR += vectoroids
