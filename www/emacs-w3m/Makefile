@@ -15,13 +15,13 @@ RUN_DEPENDS=	w3m:www/w3m
 
 USES=		autoreconf emacs tar:xz
 USE_GITHUB=	yes
-GH_TAGNAME=	9c9611e
+GH_TAGNAME=	9cd8135
 
 ALL_TARGET=	default
 INSTALL_TARGET=	install install-icons
 
 NO_ARCH=	yes
-SNAPDATE=	20221120
+SNAPDATE=	20221130
 MAKE_JOBS_UNSAFE=	yes
 
 GNU_CONFIGURE=	yes
