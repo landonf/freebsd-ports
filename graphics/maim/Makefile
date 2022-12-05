@@ -1,11 +1,12 @@
 PORTNAME=	maim
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.7.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Screenshot utility with performance improvements over scrot
+WWW=		https://github.com/naelstrof/maim
 
 LICENSE=	GPLv3
 

@@ -1,11 +1,12 @@
 PORTNAME=	spamcheck
-PORTVERSION=	0.1.0
-PORTREVISION=	2
+PORTVERSION=	1.0.0
+PORTREVISION=	0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Auto-generated gRPC client for SpamCheck
+WWW=		https://rubygems.org/gems/spamcheck
 
 LICENSE=	MIT
 

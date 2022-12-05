@@ -5,6 +5,7 @@ MASTER_SITES=	https://github.com/${GH_ACCOUNT}/xca/releases/download/RELEASE.${P
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Graphical certification authority
+WWW=		https://hohnstaedt.de/xca
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
@@ -14,7 +15,7 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl
 
 USES=		compiler:c++11-lang desktop-file-utils gmake localbase \
 		pkgconfig qt:5 shared-mime-info ssl
-USE_QT=		buildtools_build core gui help linguist_build sql widgets
+USE_QT=		buildtools:build core gui help linguist:build sql widgets
 USE_CXXSTD=	c++11
 
 GNU_CONFIGURE=	yes

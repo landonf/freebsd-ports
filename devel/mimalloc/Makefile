@@ -1,10 +1,11 @@
 PORTNAME=	mimalloc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.6
+DISTVERSION=	2.0.7
 CATEGORIES=	devel
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	General-purpose allocator with excellent performance characteristics
+WWW=		https://github.com/microsoft/mimalloc
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

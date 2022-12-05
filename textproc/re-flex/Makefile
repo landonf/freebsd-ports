@@ -1,10 +1,11 @@
 PORTNAME=	re-flex
-PORTVERSION=	3.2.8
+PORTVERSION=	3.2.11
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Regex-centric, fast and flexible scanner generator for C++
+WWW=		https://www.genivia.com/reflex.html
 
 LICENSE=	BSD3CLAUSE
 
@@ -19,6 +20,12 @@ CONFLICTS_INSTALL=	reflex
 USE_GITHUB=	yes
 GH_ACCOUNT=	Genivia
 GH_PROJECT=	RE-flex
+
+post-patch:
+	${MV} ${WRKSRC}/cmake/CMakeLists.cmake ${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} \
+		's|reflex_static_lib|reflex|; s|reflex_shared_lib|reflex|' \
+		${WRKSRC}/CMakeLists.txt
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/reflex

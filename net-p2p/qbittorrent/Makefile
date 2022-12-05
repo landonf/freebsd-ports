@@ -1,11 +1,11 @@
 PORTNAME=	qbittorrent
-DISTVERSION=	4.4.3.1
-PORTREVISION=	3
+DISTVERSION=	4.5.0
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Bittorrent client using Qt5 and libtorrent-rasterbar
+WWW=		https://www.qbittorrent.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,6 +14,8 @@ BROKEN_FreeBSD_12_powerpc64=	fails to build: ./base/tristatebool.h:44:5: 'conste
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs
 
+CXXFLAGS+=	-DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED # error: "Boost.Stacktrace requires `_Unwind_Backtrace` function. Define `_GNU_SOURCE` macro or `BOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED` if _Unwind_Backtrace is available without `_GNU_SOURCE`."
+
 FLAVORS=	default nox
 FLAVOR?=	${FLAVORS:[1]}
 nox_PKGNAMESUFFIX=	-nox
@@ -21,7 +23,7 @@ nox_PLIST=		${MASTERDIR}/pkg-plist-nox
 
 USES=			compiler:c++14-lang cpe pkgconfig qmake:no_env qt:5 ssl tar:xz
 GNU_CONFIGURE=		yes
-USE_QT=			core network sql xml buildtools_build linguisttools_build qmake_build
+USE_QT=			core network sql xml buildtools:build linguisttools:build qmake:build
 DESTDIRNAME=		INSTALL_ROOT
 CONFIGURE_ENV+=		openssl_CFLAGS="-I${OPENSSLINC}" openssl_LIBS="-L${OPENSSLLIB} -lssl"
 

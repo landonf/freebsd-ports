@@ -1,9 +1,10 @@
 PORTNAME=	fheroes2
-PORTVERSION=	0.9.18
+PORTVERSION=	0.9.21
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Free implementation of Heroes of Might and Magic II engine
+WWW=		https://ihhub.github.io/fheroes2/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

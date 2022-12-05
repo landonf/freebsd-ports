@@ -1,11 +1,12 @@
 PORTNAME=	avldrums
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
+DISTVERSION=	0.5.2
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dedicated AVLDrumkits LV2 Plugin
+WWW=		https://x42-plugins.com/x42/x42-avldrums
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,7 +17,7 @@ USES=		gl gmake gnome pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	x42
 GH_PROJECT=	${PORTNAME}.lv2
-GH_TUPLE=	x42:robtk:52e7789d1f013491d484cfe1a1adb2bde293e7a1:x42_robtk/robtk
+GH_TUPLE=	x42:robtk:1e82c83:x42_robtk/robtk
 USE_GL=		gl glu
 USE_GNOME=	glib20 pango cairo
 USE_XORG=	x11
@@ -35,6 +36,6 @@ OPTIONS_DEFINE_i386=	SSE
 OPTIONS_DEFAULT_amd64=	SSE
 OPTIONS_DEFAULT_i386=	SSE
 
-SSE_MAKE_ARGS=		PORT_SIMD_FLAGS="-msse -msse2 -mfpmath=sse"
+SSE_MAKE_ARGS=		HAVE_SSE=yes
 
 .include <bsd.port.mk>

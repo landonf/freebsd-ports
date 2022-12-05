@@ -1,10 +1,12 @@
 PORTNAME=	xgap
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.31
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Graphical user interface for GAP
+WWW=		https://gap-packages.github.io/xgap/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -23,7 +25,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	gap-packages
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gaproot=${LOCALBASE}/share/gap
+CONFIGURE_ARGS=	--with-gaproot=${LOCALBASE}/lib/gap
 
 ALL_TARGET=	default
 

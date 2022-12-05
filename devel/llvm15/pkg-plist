@@ -5154,6 +5154,7 @@ llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/FindOCaml.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/FindSphinx.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/FindTerminfo.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/FindZ3.cmake
+llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/Findzstd.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/GenerateVersionFromVCS.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/GetErrcMessages.cmake
 llvm%%LLVM_SUFFIX%%/lib/cmake/llvm/GetLibraryName.cmake
@@ -5517,6 +5518,7 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang-cpp.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_MAJOR%%
+%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclang.so.%%LLVM_RELEASE%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangAPINotes.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangARCMigrate.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangAST.a
@@ -5543,7 +5545,7 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangFrontendTool.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangHandleCXX.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangHandleLLVM.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangIncludeCleaner.a
+%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangIncludeCleaner.a
 %%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangIncludeFixer.a
 %%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangIncludeFixerPlugin.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangIndex.a
@@ -5552,10 +5554,10 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangLex.a
 %%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangMove.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangParse.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudo.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoCLI.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoCXX.a
-%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoGrammar.a
+%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudo.a
+%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoCLI.a
+%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoCXX.a
+%%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangPseudoGrammar.a
 %%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangQuery.a
 %%EXTRAS%%llvm%%LLVM_SUFFIX%%/lib/libclangReorderFields.a
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libclangRewrite.a

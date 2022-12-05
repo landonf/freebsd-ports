@@ -1,11 +1,11 @@
 PORTNAME=	armadillo
-DISTVERSION=	11.2.3
-PORTREVISION=	1
+DISTVERSION=	11.4.2
 CATEGORIES=	math
 MASTER_SITES=	SF/arma
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	C++ linear algebra library
+WWW=		http://arma.sourceforge.net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

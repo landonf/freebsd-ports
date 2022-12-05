@@ -1,11 +1,13 @@
 PORTNAME=	gnome-console
 PORTVERSION=	42.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Minimal terminal for GNOME
+WWW=		https://gitlab.gnome.org/GNOME/console
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,11 +1,12 @@
 PORTNAME=	websockets
-PORTVERSION=	10.3
+PORTVERSION=	10.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Implementation of the WebSocket Protocol (RFC 6455 and 7692)
+WWW=		https://pypi.org/project/websockets/
 
 LICENSE=	BSD3CLAUSE
 

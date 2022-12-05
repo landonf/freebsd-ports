@@ -1,11 +1,12 @@
 PORTNAME=	links
-PORTVERSION=	2.27
+PORTVERSION=	2.28
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Lynx-like text WWW browser
+WWW=		http://links.twibright.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

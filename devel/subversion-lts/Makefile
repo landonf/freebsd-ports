@@ -1,8 +1,9 @@
-PORTREVISION=	1
+PORTREVISION=	2
 PKGNAMESUFFIX=	-lts
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system, long-time-support version
+WWW=		https://subversion.apache.org/
 
 CONFLICTS_INSTALL=	subversion
 
@@ -37,7 +38,7 @@ TOOLS_DESC=		Install several tools
 FREEBSD_TEMPLATE_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-fbsd-template
 SVNSERVE_WRAPPER_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-svnserve-wrapper
 
-USES+=			shebangfix python:env
+USES+=			shebangfix python:env:2.7,env
 python_OLD_CMD+=	"/bin/env python"
 SHEBANG_REGEX=		./tools/.*
 

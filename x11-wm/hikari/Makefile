@@ -1,11 +1,12 @@
 PORTNAME=	hikari
 DISTVERSION=	2.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm wayland
 MASTER_SITES=	https://hikari.acmelabs.space/releases/
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Stacking Wayland compositor with tiling capabilities
+WWW=		https://hikari.acmelabs.space
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -47,4 +48,5 @@ post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/hikari.conf \
 		${STAGEDIR}${ETCDIR}/hikari.conf.sample
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

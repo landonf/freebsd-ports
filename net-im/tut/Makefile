@@ -1,10 +1,11 @@
 PORTNAME=	tut
-DISTVERSION=	1.0.11
+DISTVERSION=	1.0.17
 PORTREVISION=	2
 CATEGORIES=	net-im
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	TUI for Mastodon
+WWW=		https://github.com/RasmusLindroth/tut
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

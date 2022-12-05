@@ -1,6 +1,6 @@
 PORTNAME=	firebird
 PORTVERSION=	2.5.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES?=	databases
 MASTER_SITES=	https://github.com/FirebirdSQL/${PORTNAME}/releases/download/R2_5_9/
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
@@ -9,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT?=	Firebird-2 relational database (server)
+WWW=		https://www.firebirdsql.org/
 
 LICENSE=	IDPL IPL
 LICENSE_COMB=	multi

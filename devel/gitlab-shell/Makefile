@@ -1,10 +1,10 @@
 PORTNAME=	gitlab-shell
-PORTVERSION=	14.7.4
-PORTREVISION=	2
+PORTVERSION=	14.12.0
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	GitLab Shell handles git commands for GitLab
+WWW=		https://gitlab.com/gitlab-org/gitlab-shell
 
 LICENSE=	MIT
 
@@ -13,7 +13,7 @@ USES=		gmake go:modules,no_targets
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the commit hash here: https://gitlab.com/gitlab-org/gitlab-shell/tags
-GL_COMMIT=	44c66836a9e00ad691871050af98e92142aa95ea
+GL_COMMIT=	6888aaeeb3ebf7fa9e9958384df1ccb315b0e7f8
 
 USERS=		git
 GROUPS=		git

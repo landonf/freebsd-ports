@@ -1,11 +1,12 @@
 PORTNAME=	CAMotics
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.2-rc1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	cad
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	3-axis CNC GCode simulator
+WWW=		https://camotics.org/
 
 LICENSE=	GPLv2+
 

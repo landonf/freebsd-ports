@@ -1,11 +1,12 @@
 PORTNAME=	alure
 PORTVERSION=	1.2
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/alure-releases/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Utility library to help manage common tasks with OpenAL
+WWW=		https://kcat.strangesoft.net/alure.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

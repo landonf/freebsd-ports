@@ -5,9 +5,13 @@ CATEGORIES=	math
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Compiler-callable math intrinsics library
+WWW=		https://github.com/flang-compiler/flang
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+DEPRECATED=	Depends on end of life devel/llvm70
+EXPIRATION_DATE=2022-12-31
 
 ONLY_FOR_ARCHS=	amd64
 

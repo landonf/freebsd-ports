@@ -1,10 +1,11 @@
 PORTNAME=	hplip
-PORTVERSION=	3.22.4
+PORTVERSION=	3.22.10
 CATEGORIES=	print
 MASTER_SITES=	SF
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Drivers and utilities for HP printers and All-in-One devices
+WWW=		https://developers.hp.com/hp-linux-imaging-and-printing
 
 LICENSE=	GPLv2+ MIT BSD3CLAUSE
 LICENSE_COMB=	multi
@@ -67,7 +68,7 @@ NETWORK_CONFIGURE_ENABLE=	network-build
 X11_DESC=		Graphical User Interface (Qt)
 X11_CONFIGURE_ENABLE=	gui-build qt5
 X11_USES=		pyqt:5
-X11_USE=		PYQT=pyqt5_run
+X11_USE=		PYQT=pyqt5:run
 
 XSANE_DESC=		Install XSane for scanning (implies SCAN)
 XSANE_IMPLIES=		SCAN

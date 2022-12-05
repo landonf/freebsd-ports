@@ -1,9 +1,10 @@
 PORTNAME=	mgba
-DISTVERSION=	0.9.3
+DISTVERSION=	0.10.0
 CATEGORIES=	emulators
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Game Boy Advance (GBA) emulator/debugger
+WWW=		https://mgba.io
 
 LICENSE=	MPL20 BSD3CLAUSE LGPL21+
 LICENSE_COMB=	multi
@@ -65,7 +66,7 @@ MAGICK_USES=		magick:6
 MAGICK_CMAKE_BOOL=	USE_MAGICK
 
 QT5_USES=	desktop-file-utils qt:5
-QT5_USE=	qt=qmake_build,buildtools_build,core,gui,widgets,network,opengl,multimedia
+QT5_USE=	qt=qmake:build,buildtools:build,core,gui,widgets,network,opengl,multimedia
 QT5_CMAKE_BOOL=	BUILD_QT
 
 .include <bsd.port.mk>

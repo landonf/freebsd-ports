@@ -1,10 +1,11 @@
 PORTNAME=	rack-oauth2
-PORTVERSION=	1.19.0
+PORTVERSION=	1.21.3
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	OAuth 2.0 Server & Client Library
+WWW=		https://github.com/nov/rack-oauth2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

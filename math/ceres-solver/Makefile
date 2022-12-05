@@ -1,9 +1,11 @@
 PORTNAME=	ceres-solver
 DISTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Nonlinear least squares minimizer
+WWW=		http://ceres-solver.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

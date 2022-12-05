@@ -1,6 +1,6 @@
 PORTNAME=	openjfx
 DISTVERSION=	14.0.2.1+1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	java x11-toolkits devel
 MASTER_SITES=	https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-core/7.7.1/:core \
 		https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-grouping/7.7.1/:grouping \
@@ -18,6 +18,7 @@ DISTFILES=	lucene-core-7.7.1.jar:core \
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	JavaFX SDK overlay for OpenJDK 11
+WWW=		https://openjdk.java.net/projects/openjfx/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -70,7 +71,7 @@ TEST_VARS=	AWT_TEST=true FULL_TEST=true
 
 # Gradle calls CMake during the build
 WEBKIT_IMPLIES=	MEDIA
-WEBKIT_BUILD_DEPENDS=	cmake:devel/cmake
+WEBKIT_BUILD_DEPENDS=	cmake:devel/cmake-core
 WEBKIT_LIB_DEPENDS=	libicui18n.so:devel/icu
 WEBKIT_USES=	bison gmake gperf perl5 python:3.5+,build
 WEBKIT_USE=	GNOME=libxslt,libxml2 \

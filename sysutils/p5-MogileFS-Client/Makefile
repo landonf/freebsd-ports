@@ -8,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Client library for the MogileFS distributed file system
+WWW=		https://metacpan.org/release/MogileFS-Client
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-IO-Stringy>=2.102:devel/p5-IO-Stringy \
@@ -15,5 +16,7 @@ RUN_DEPENDS=	p5-IO-Stringy>=2.102:devel/p5-IO-Stringy \
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

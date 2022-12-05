@@ -7,6 +7,7 @@ PATCHFILES=	f1a415ebe08c01ccf317.patch:-p1
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Portable version of the original C&C engine
+WWW=		https://github.com/TheAssemblyArmada/Vanilla-Conquer
 
 LICENSE=	GPLv3+
 
@@ -29,6 +30,8 @@ LDFLAGS_i386=	-fuse-ld=bfd
 PLIST_FILES=	bin/vanillamix bin/vanillara bin/vanillatd \
 		share/icons/hicolor/scalable/apps/vanillara_icon.svg \
 		share/icons/hicolor/scalable/apps/vanillatd_icon.svg
+
+PORTSCOUT=	skipv:latest
 
 .include <bsd.port.pre.mk>
 

@@ -1,10 +1,12 @@
 PORTNAME=	dcmtk
 DISTVERSIONPREFIX=	${PORTNAME:tu}-
 DISTVERSION=	3.6.7
+PORTREVISION=	1
 CATEGORIES=	graphics devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DICOM ToolKit, libraries and applications for DICOM/MEDICOM standard
+WWW=		https://dcmtk.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
@@ -31,4 +33,13 @@ PORTDOCS=	*
 
 TEST_TARGET=	test test-exhaustive
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH:Mpowerpc*} && ${COMPILER_VERSION} == 140
+LLVM_VER=	15
+BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
+CC=		${LOCALBASE}/bin/clang${LLVM_VER}
+CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
+.endif
+
+.include <bsd.port.post.mk>

@@ -1,11 +1,11 @@
 PORTNAME=	gn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1962
-PORTREVISION=	1
+DISTVERSION=	2072
 CATEGORIES=	devel
 
 MAINTAINER=	o.hushchenkov@gmail.com
 COMMENT=	Gn meta build framework - standalone version
+WWW=		https://gn.googlesource.com/gn/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

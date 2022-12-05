@@ -1,11 +1,12 @@
 PORTNAME=	Log-Report
-PORTVERSION=	1.33
+PORTVERSION=	1.34
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Report a problem, pluggable handlers and language support
+WWW=		https://metacpan.org/release/Log-Report
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

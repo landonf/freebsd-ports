@@ -1,10 +1,11 @@
 PORTNAME=	crispy-doom
-PORTVERSION=	5.10.3
+PORTVERSION=	5.12.0
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	games
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Enhanced-resolution Doom source port based on Chocolate Doom
+WWW=		https://github.com/fabiangreffrath/crispy-doom
 
 LICENSE=	GPLv2
 

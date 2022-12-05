@@ -1,16 +1,15 @@
 PORTNAME=		dino
 DISTVERSIONPREFIX=	v
-DISTVERSION=		0.3.0
-PORTREVISION=		4
+DISTVERSION=		0.3.1
 CATEGORIES=		net-im
 
 MAINTAINER=		ashish@FreeBSD.org
 COMMENT=		Modern XMPP Chat Client using GTK+/Vala
+WWW=		https://dino.im
 
 LICENSE=		GPLv3
 LICENSE_FILE=		${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	vala:lang/vala
 LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 		libgee-0.8.so:devel/libgee \
 		libicuuc.so:devel/icu \
@@ -22,12 +21,12 @@ LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 		libsrtp2.so:net/libsrtp2
 
 USES=		cmake cpe desktop-file-utils gettext-tools gnome \
-		ninja pkgconfig
+		ninja pkgconfig vala:build
 
 USE_GITHUB=	yes
 
-OPTIONS_DEFINE=		OMEMO UPLOAD GNUPG ICE RTP
-OPTIONS_DEFAULT=	OMEMO UPLOAD GNUPG ICE RTP
+OPTIONS_DEFINE=		OMEMO UPLOAD GNUPG ICE RTP CANBERRA
+OPTIONS_DEFAULT=	OMEMO UPLOAD GNUPG ICE RTP CANBERRA
 OPTIONS_SUB=		yes
 
 HAS_CONFIGURE=	yes
@@ -37,6 +36,7 @@ USE_LDCONFIG=	yes
 
 USE_GNOME=	cairo gdkpixbuf2 glib20 gnomeprefix gtk30 intlhack
 
+CANBERRA_DESC=	Notifications sounds support
 ICE_DESC=		ICE NAT traversal plugin
 OMEMO_DESC=		OMEMO plugin
 RTP_DESC=		RTP plugin
@@ -57,16 +57,20 @@ OMEMO_LIB_DEPENDS=	libqrencode.so:graphics/libqrencode
 OMEMO_VARS=		ENABLED_PLUGINS+=omemo
 OMEMO_CMAKE_BOOL=	BUILD_LIBSIGNAL_IN_TREE
 OMEMO_VARS_OFF=		DISABLED_PLUGINS+=omemo
+UPLOAD_CMAKE_ON=		-DSOUP_VERSION:INT=2
 UPLOAD_VARS=		ENABLED_PLUGINS+=http-files
 UPLOAD_VARS_OFF=	DISABLED_PLUGINS+=http-files
 GNUPG_LIB_DEPENDS=	libgpgme.so:security/gpgme
 GNUPG_VARS=		ENABLED_PLUGINS+=openpgp
 GNUPG_VARS_OFF=		DISABLED_PLUGINS+=openpgp
+CANBERRA_VARS=		ENABLED_PLUGINS+=notification-sound
+CANBERRA_VARS_OFF=		DISABLED_PLUGINS+=notification-sound
+CANBERRA_LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 
 CMAKE_ARGS+=	-DENABLED_PLUGINS="${ENABLED_PLUGINS:S/ /;/gW}"
 CMAKE_ARGS+=	-DDISABLED_PLUGINS="${DISABLED_PLUGINS:S/ /;/gW}"
 
-pre-everything::
+pre-configure:
 	@if [ -z "${PACKAGE_BUILDING}" ]; then if ! ${PKG_BIN} query \
 			'%o-%Ok-%Od' databases/sqlite3 | \
 			${GREP} -F -wq databases/sqlite3-UNICODE61-on; then \

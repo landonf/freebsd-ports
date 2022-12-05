@@ -1,10 +1,11 @@
 PORTNAME=	pqiv
 PORTVERSION=	2.12
-PORTREVISION=	13
+PORTREVISION=	16
 CATEGORIES=	graphics
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Pretty Quick Image Viewer
+WWW=		https://github.com/phillipberndt/pqiv
 
 LICENSE=	GPLv2
 

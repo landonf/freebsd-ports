@@ -184,7 +184,7 @@ PHP_VER=	${FLAVOR:S/^php//}
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
 .    if ${PHP_VER} == 82
-PHP_EXT_DIR=   20210903
+PHP_EXT_DIR=   20220829
 PHP_EXT_INC=    hash json openssl pcre random spl
 .    elif ${PHP_VER} == 81
 PHP_EXT_DIR=   20210902
@@ -197,7 +197,7 @@ PHP_EXT_DIR=   20190902
 PHP_EXT_INC=    hash pcre spl
 .    else
 # (rene) default to DEFAULT_VERSIONS
-PHP_EXT_DIR=   20200930
+PHP_EXT_DIR=   20210902
 PHP_EXT_INC=    hash json openssl pcre spl
 .    endif
 
@@ -391,9 +391,9 @@ _USE_PHP_ALL=	bcmath bitset bz2 calendar ctype curl dba dom \
 		soap sockets sodium spl sqlite3 sysvmsg sysvsem sysvshm \
 		tidy tokenizer xml xmlreader xmlrpc xmlwriter xsl zip zlib
 # version specific components
-_USE_PHP_VER74=	${_USE_PHP_ALL} pdf
-_USE_PHP_VER80=	${_USE_PHP_ALL}
-_USE_PHP_VER81=	${_USE_PHP_ALL}
+_USE_PHP_VER74=	${_USE_PHP_ALL} pdf zephir_parser
+_USE_PHP_VER80=	${_USE_PHP_ALL} zephir_parser
+_USE_PHP_VER81=	${_USE_PHP_ALL} zephir_parser
 _USE_PHP_VER82=	${_USE_PHP_ALL}
 
 bcmath_DEPENDS=	math/php${PHP_VER}-bcmath
@@ -469,6 +469,7 @@ xmlrpc_DEPENDS=	net/php${PHP_VER}-xmlrpc
 .    endif
 xmlwriter_DEPENDS=	textproc/php${PHP_VER}-xmlwriter
 xsl_DEPENDS=	textproc/php${PHP_VER}-xsl
+zephir_parser_DEPENDS=	textproc/pecl-zephir_parser@${PHP_FLAVOR}
 zip_DEPENDS=	archivers/php${PHP_VER}-zip
 zlib_DEPENDS=	archivers/php${PHP_VER}-zlib
 

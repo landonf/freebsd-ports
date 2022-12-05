@@ -5,6 +5,7 @@ PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Simple front-end to w3m for emacs
+WWW=		http://emacs-w3m.namazu.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,13 +15,13 @@ RUN_DEPENDS=	w3m:www/w3m
 
 USES=		autoreconf emacs tar:xz
 USE_GITHUB=	yes
-GH_TAGNAME=	c3a3a94
+GH_TAGNAME=	9c9611e
 
 ALL_TARGET=	default
 INSTALL_TARGET=	install install-icons
 
 NO_ARCH=	yes
-SNAPDATE=	20220408
+SNAPDATE=	20221120
 MAKE_JOBS_UNSAFE=	yes
 
 GNU_CONFIGURE=	yes
@@ -48,11 +49,23 @@ OCTET_VIEWER_RUN_DEPENDS=\
 		wvHtml:textproc/wv \
 		xlhtml:textproc/xlhtml
 
+.include <bsd.port.pre.mk>
+
+.if ${EMACS_MAJOR_VER} == 28
+PLIST_SUB+=	EMACS28=""
+.else
+PLIST_SUB+=	EMACS28="@comment "
+.endif
+
 post-patch:
 	@${MV} ${WRKSRC}/aclocal.m4 ${WRKSRC}/acinclude.m4
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/w3m/mew-shimbun.elc \
+	      ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/w3m/mew-w3m.elc
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

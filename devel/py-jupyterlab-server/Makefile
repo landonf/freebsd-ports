@@ -1,5 +1,5 @@
 PORTNAME=	jupyterlab-server
-PORTVERSION=	2.15.0
+PORTVERSION=	2.15.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		https://github.com/jupyterlab/jupyterlab_server/releases/download/v${PORTVERSION}/
@@ -8,12 +8,13 @@ DISTNAME=	jupyterlab_server-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JupyterLab Server
+WWW=		https://jupyter.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=0:devel/py-babel@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Jinja2>=3.0.1:devel/py-Jinja2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}Jinja2>=3.0.3:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}json5>=0:devel/py-json5@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>=3.0.1:devel/py-jsonschema@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jupyter-server>=1.8<2:devel/py-jupyter-server@${PY_FLAVOR} \

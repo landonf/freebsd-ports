@@ -6,8 +6,12 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Full-text search engine for Java
+WWW=		https://www.elastic.co/
 
 LICENSE=	APACHE20
+
+DEPRECATED=	No longer maintained and supported.
+EXPIRATION_DATE=	2023-01-01
 
 BUILD_DEPENDS=	jna>0:devel/jna
 RUN_DEPENDS=	bash>0:shells/bash \

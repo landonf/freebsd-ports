@@ -1,12 +1,13 @@
 PORTNAME=	gdal
-PORTVERSION=	3.5.1
-PORTREVISION=	2
+PORTVERSION=	3.5.2
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Translator library for raster geospatial data formats
+WWW=		https://gdal.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT

@@ -1,11 +1,12 @@
 PORTNAME=	gzdoom
 PORTVERSION=	4.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	g
 CATEGORIES=	games
 
 MAINTAINER=	kevans@FreeBSD.org
 COMMENT=	GL-enhanced source port for Doom-engine games
+WWW=		https://zdoom.org/
 
 LICENSE=	BSD3CLAUSE GPLv3 LGPL3
 LICENSE_COMB=	multi

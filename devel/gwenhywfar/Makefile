@@ -1,11 +1,12 @@
 PORTNAME=	gwenhywfar
-PORTVERSION=	5.9.0
+PORTVERSION=	5.10.1
 PORTREVISION?=	0
 CATEGORIES=	devel net security
-MASTER_SITES=	https://www.aquamaniac.de/rdm/attachments/download/415/
+MASTER_SITES=	https://www.aquamaniac.de/rdm/attachments/download/465/
 
 MAINTAINER?=	jhale@FreeBSD.org
 COMMENT?=	Multi-platform helper library for networking and security applications
+WWW=		https://www.aquamaniac.de/rdm/projects/gwenhywfar
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -65,17 +66,19 @@ CONFIGURE_ARGS+=--with-fox-includes=${LOCALBASE}/include/fox-1.6 \
 		--with-fox-libs=${LOCALBASE}/lib
 .  elif ${SLAVEPORT}=="gtk2"
 LIB_DEPENDS+=	libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig
 USES+=		gnome
 USE_GNOME+=	cairo gdkpixbuf2 gtk20
 .  elif ${SLAVEPORT}=="gtk3"
+LIB_DEPENDS+=	libharfbuzz.so:print/harfbuzz
 USES+=		gnome
 USE_GNOME+=	cairo gdkpixbuf2 gtk30
 .  elif ${SLAVEPORT}=="qt5"
 USES+=		compiler:c++11-lang gl qmake:no_env qt:5
 USE_GL=		gl
 USE_QT=		core gui widgets \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 CONFIGURE_ARGS+=--with-qt5-qmake=${QMAKE} \
 		--with-qt5-moc=${MOC} \
 		--with-qt5-uic=${UIC}

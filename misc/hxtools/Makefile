@@ -1,20 +1,20 @@
 PORTNAME=	hxtools
-PORTVERSION=	20211204
+PORTVERSION=	20221120
 CATEGORIES=	misc
 MASTER_SITES=	http://inai.de/files/hxtools/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Collection of miscellaneous tools and scripts
+WWW=		https://inai.de/projects/hxtools/
 
 LIB_DEPENDS=	libHX.so:lang/libhx libpci.so:devel/libpci
 RUN_DEPENDS=	bash:shells/bash
 
 USES=		compiler:c++11-lang iconv perl5 pkgconfig shebangfix \
-		tar:xz xorg
+		tar:zst xorg
 GNU_CONFIGURE=	yes
 SHEBANG_FILES=	data/hxtools_bashrc.bash data/hxtools_profile.bash \
-		examples/colortable examples/git-deconstruct examples/neon \
-		examples/rc4 examples/unitable sadmin/hxnetload \
+		examples/git-deconstruct examples/rc4 sadmin/hxnetload \
 		sadmin/ldif-duplicate-attrs sadmin/ldif-leading-spaces \
 		sadmin/logontime sadmin/pmap_dirty sadmin/recursive_lower \
 		sadmin/vcsaview sdevel/checkbrack sdevel/cwdiff \

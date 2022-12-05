@@ -1,5 +1,6 @@
 PORTNAME=	webkit
 DISTVERSION=	2.34.6
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk4
@@ -8,6 +9,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Opensource browser engine using the GTK+ 4 toolkit
+WWW=		https://webkitgtk.org/
 
 LICENSE=	BSD2CLAUSE GPLv2
 LICENSE_COMB=	dual

@@ -1,12 +1,13 @@
 PORTNAME=	doublecmd
-PORTVERSION=	1.0.4
-PORTREVISION=	2
+PORTVERSION=	1.0.8
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	x11-fm
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
-MAINTAINER=	bbtruk@users.sourceforge.net
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Total Commander like file manager for the X Window System
+WWW=		https://doublecmd.sourceforge.io
 
 LICENSE=	GPLv2
 

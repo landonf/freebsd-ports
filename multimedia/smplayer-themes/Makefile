@@ -7,9 +7,10 @@ MASTER_SITES=	SF/smplayer/SMPlayer-themes/${PORTVERSION}/
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Themes for SMPlayer
+WWW=		http://smplayer.sourceforge.net/
 
 USES=		qt:5 tar:bzip2
-USE_QT=		buildtools_build
+USE_QT=		buildtools:build
 
 NO_ARCH=	yes
 

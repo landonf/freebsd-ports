@@ -6,11 +6,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Common runtime for AWS Python projects
+WWW=		https://github.com/awslabs/aws-crt-python
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 
 USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils

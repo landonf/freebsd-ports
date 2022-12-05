@@ -1,11 +1,12 @@
 PORTNAME=	iperf
-DISTVERSION=	3.11
+DISTVERSION=	3.12
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://downloads.es.net/pub/iperf/
 PKGNAMESUFFIX=	3
 
 MAINTAINER=	bmah@FreeBSD.org
 COMMENT=	Improved tool to measure TCP and UDP bandwidth
+WWW=		https://software.es.net/iperf/
 
 LICENSE=	BSD3CLAUSE MIT
 LICENSE_COMB=	multi

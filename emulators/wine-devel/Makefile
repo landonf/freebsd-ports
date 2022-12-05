@@ -1,5 +1,5 @@
 PORTNAME=	wine
-DISTVERSION=	7.14
+DISTVERSION=	7.21
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/7.x/
@@ -8,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	damjan.jov@gmail.com
 COMMENT=	Microsoft Windows compatibility environment
+WWW=		https://www.winehq.org
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
@@ -66,8 +67,8 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP OPENAL STAGING V4L WINEMAKER X11 GECKO MONO
-OPTIONS_DEFAULT=GNUTLS OPENAL OSS X11
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP STAGING V4L WINEMAKER X11 GECKO MONO
+OPTIONS_DEFAULT=GNUTLS OSS X11
 OPTIONS_RADIO=	AUDIO
 OPTIONS_RADIO_AUDIO=	ALSA OSS
 OPTIONS_SUB=	yes
@@ -96,9 +97,6 @@ LDAP_USE=		OPENLDAP=yes
 
 MONO_RUN_DEPENDS=	wine-mono-devel>0:emulators/wine-mono-devel
 
-OPENAL_CONFIGURE_WITH=	openal
-OPENAL_USES=		openal
-
 OSS_CONFIGURE_ON=	--without-alsa --with-oss
 
 STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
@@ -124,6 +122,10 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			libvulkan.so:graphics/vulkan-loader
 
 .include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MSTAGING} && ${OSVERSION} < 1300000
+BROKEN=		build failure
+.endif
 
 .if (${LLVM_DEFAULT} == 90 || ${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
 _LLVM_VERSION=	12

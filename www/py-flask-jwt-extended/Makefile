@@ -1,5 +1,5 @@
 PORTNAME=	flask-jwt-extended
-DISTVERSION=	4.4.3
+DISTVERSION=	4.4.4
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	Flask-JWT-Extended-${DISTVERSION}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Extended JWT integration with Flask
+WWW=		https://github.com/vimalloc/flask-jwt-extended
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

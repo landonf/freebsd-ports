@@ -1,6 +1,6 @@
 PORTNAME=	mimedefang
 PORTVERSION=	2.84
-PORTREVISION=	1
+PORTREVISION=	2
 
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mimedefang.org/static/ \
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.mimedefang.org/static/ \
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Milter based anti-spam and anti-virus filtering program
+WWW=		https://www.mimedefang.org/
 
 LICENSE=	GPLv2
 

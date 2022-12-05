@@ -1,10 +1,11 @@
 PORTNAME=	courier-unicode
-PORTVERSION=	2.2.4
+PORTVERSION=	2.2.5
 CATEGORIES=	devel mail
 MASTER_SITES=	SF/courier/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Courier implementation of Unicode Standard related algorithms
+WWW=		https://www.courier-mta.org/unicode/
 
 LICENSE=	GPLv3
 

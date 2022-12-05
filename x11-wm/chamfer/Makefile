@@ -1,9 +1,11 @@
 PORTNAME=	chamfer
 DISTVERSION=	s20210622
+PORTREVISION=	2
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Tiling X11 window manager with Vulkan compositor
+WWW=		https://jaelpark.github.io/chamferwm-docs/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,7 +24,7 @@ LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxcb-icccm.so:x11/xcb-util-wm
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}xlib>0:x11-toolkits/py-python-xlib@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}python-xlib>0:x11-toolkits/py-python-xlib@${PY_FLAVOR}
 
 USES=		compiler:c++17-lang meson localbase pkgconfig python:3.3+ xorg
 USE_GITHUB=	yes

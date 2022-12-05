@@ -13,6 +13,7 @@
     SUBDIR += akonadi
     SUBDIR += apache-commons-dbutils
     SUBDIR += arrow
+    SUBDIR += arrow-glib
     SUBDIR += ateam_mysql57_ldap_auth
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
@@ -66,7 +67,6 @@
     SUBDIR += firebird40-server
     SUBDIR += fortytwo-bdb
     SUBDIR += foundationdb
-    SUBDIR += foundationdb-devel
     SUBDIR += fpc-dblib
     SUBDIR += fpc-fpindexer
     SUBDIR += fpc-gdbm
@@ -191,10 +191,12 @@
     SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
     SUBDIR += mongodb50
+    SUBDIR += mongodb60
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
     SUBDIR += mysac
+    SUBDIR += mysql++
     SUBDIR += mysql-connector-c
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
@@ -227,6 +229,8 @@
     SUBDIR += ocaml-dbm
     SUBDIR += ocaml-mysql
     SUBDIR += ocaml-sqlite3
+    SUBDIR += octosql
+    SUBDIR += odbc-cpp-wrapper
     SUBDIR += ods2sql
     SUBDIR += opendbviewer
     SUBDIR += opendbx
@@ -550,6 +554,7 @@
     SUBDIR += percona57-client
     SUBDIR += percona57-pam-for-mysql
     SUBDIR += percona57-server
+    SUBDIR += pg-gvm
     SUBDIR += pg.el
     SUBDIR += pgFormatter
     SUBDIR += pg_activity
@@ -577,7 +582,6 @@
     SUBDIR += pglogical
     SUBDIR += pgmetrics
     SUBDIR += pgmodeler
-    SUBDIR += pg-gvm
     SUBDIR += pgpool-II-37
     SUBDIR += pgpool-II-40
     SUBDIR += pgpool-II-41
@@ -653,6 +657,7 @@
     SUBDIR += postgis30
     SUBDIR += postgis31
     SUBDIR += postgis32
+    SUBDIR += postgis33
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -664,6 +669,7 @@
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-prefix
+    SUBDIR += postgresql-promscale
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-rum
@@ -740,19 +746,18 @@
     SUBDIR += py-Pyrseas
     SUBDIR += py-aesqlapius
     SUBDIR += py-agate-sql
+    SUBDIR += py-aiomcache
     SUBDIR += py-aiomysql
     SUBDIR += py-aiopg
     SUBDIR += py-aioredis
     SUBDIR += py-aiosqlite
     SUBDIR += py-alembic
     SUBDIR += py-alembic14
-    SUBDIR += py-alembic16
     SUBDIR += py-apache-arrow
     SUBDIR += py-apsw
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
-    SUBDIR += py-bsddb3
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
     SUBDIR += py-caterva
@@ -809,6 +814,7 @@
     SUBDIR += py-pycql
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
+    SUBDIR += py-pymongo
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
     SUBDIR += py-pyodbc
@@ -833,6 +839,7 @@
     SUBDIR += py-sqlalchemy12
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
+    SUBDIR += py-sqlglot
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-utils
     SUBDIR += py-sqlite3
@@ -848,7 +855,6 @@
     SUBDIR += py-whisper
     SUBDIR += py-xapian
     SUBDIR += py-zodbpickle
-    SUBDIR += pymongo
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
     SUBDIR += qof
@@ -880,6 +886,7 @@
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
     SUBDIR += rubygem-active_model_serializers
+    SUBDIR += rubygem-active_model_serializers61
     SUBDIR += rubygem-active_record_query_trace
     SUBDIR += rubygem-activemodel-serializers-xml
     SUBDIR += rubygem-activemodel4
@@ -922,6 +929,7 @@
     SUBDIR += rubygem-dbf
     SUBDIR += rubygem-dbi
     SUBDIR += rubygem-dbm
+    SUBDIR += rubygem-discard-rails61
     SUBDIR += rubygem-dm-aggregates
     SUBDIR += rubygem-dm-chunked_query
     SUBDIR += rubygem-dm-constraints
@@ -942,6 +950,7 @@
     SUBDIR += rubygem-do_postgres
     SUBDIR += rubygem-do_sqlite3
     SUBDIR += rubygem-em-redis-unified
+    SUBDIR += rubygem-fabrication
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record-rails61
@@ -973,10 +982,16 @@
     SUBDIR += rubygem-pghero
     SUBDIR += rubygem-pghero-rails5
     SUBDIR += rubygem-pghero-rails50
+    SUBDIR += rubygem-pghero-rails61
     SUBDIR += rubygem-pl-puppetdb-ruby
     SUBDIR += rubygem-postgres_ext
     SUBDIR += rubygem-puppetdb_cli
     SUBDIR += rubygem-rbase
+    SUBDIR += rubygem-red-arrow
+    SUBDIR += rubygem-red-arrow-dataset
+    SUBDIR += rubygem-red-gandiva
+    SUBDIR += rubygem-red-parquet
+    SUBDIR += rubygem-red-plasma
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
@@ -984,10 +999,14 @@
     SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-actionpack-rails61
-    SUBDIR += rubygem-redis-actionpack52-rails61
+    SUBDIR += rubygem-redis-client
+    SUBDIR += rubygem-redis-cluster-client
+    SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
-    SUBDIR += rubygem-redis44
+    SUBDIR += rubygem-redis-namespace18
+    SUBDIR += rubygem-redis4
     SUBDIR += rubygem-sdbm
+    SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

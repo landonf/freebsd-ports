@@ -1,5 +1,5 @@
-TIMESTAMP = 1630812092
-SHA256 (go/security_cfssl/cfssl-v1.6.1/v1.6.1.mod) = a1ff14874ff60275deb254d52af60d83df15790c0fe9d04e8e08dd3f1d526cf2
-SIZE (go/security_cfssl/cfssl-v1.6.1/v1.6.1.mod) = 2828
-SHA256 (go/security_cfssl/cfssl-v1.6.1/v1.6.1.zip) = a7c3a29cd6af216f33ba76a48ffbbd54d288a1453ec94bd958265ede227aaa7b
-SIZE (go/security_cfssl/cfssl-v1.6.1/v1.6.1.zip) = 2112856
+TIMESTAMP = 1665217033
+SHA256 (go/security_cfssl/cfssl-v1.6.3/v1.6.3.mod) = 7fbf3189b2d138edebdbd230701db789c004976071e7d1e3bb98244c8c522bc8
+SIZE (go/security_cfssl/cfssl-v1.6.3/v1.6.3.mod) = 2678
+SHA256 (go/security_cfssl/cfssl-v1.6.3/v1.6.3.zip) = 8fb8f63d68e9a9ded84fb1690b19b220a6126b2bcbce4f048a2ba7e5ad96264d
+SIZE (go/security_cfssl/cfssl-v1.6.3/v1.6.3.zip) = 2112468

@@ -1,5 +1,5 @@
 PORTNAME=	hplip-plugin
-PORTVERSION=	3.22.4
+PORTVERSION=	3.22.10
 CATEGORIES=	print
 MASTER_SITES=	https://developers.hp.com/sites/default/files/
 DISTNAME=	hplip-${DISTVERSION}-plugin
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Binary plugin for some HP Printers and All-in-One devices
+WWW=		https://developers.hp.com/hp-linux-imaging-and-printing/binary_plugin.html
 
 # License agreement is required
 LICENSE=	HPLIP_PLUGIN

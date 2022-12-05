@@ -1,10 +1,12 @@
 PORTNAME=	triton
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dynamic Binary Analysis (DBA) framework
+WWW=		https://triton.quarkslab.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

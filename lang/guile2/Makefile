@@ -1,12 +1,13 @@
 PORTNAME=	guile
 PORTVERSION=	2.2.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang scheme
 MASTER_SITES=	GNU
 PKGNAMESUFFIX=	2
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GNU Ubiquitous Intelligent Language for Extension
+WWW=		https://www.gnu.org/software/guile/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi

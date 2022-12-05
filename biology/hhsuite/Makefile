@@ -6,9 +6,12 @@ CATEGORIES=	biology science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Remote protein homology detection suite
+WWW=		https://github.com/soedinglab/hh-suite
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+NOT_FOR_ARCHS=	armv6 armv7 i386 mips powerpc powerpcspe # not for 32-bit architectures, see https://github.com/soedinglab/hh-suite/issues/322#issuecomment-1264416293
 
 LIB_DEPENDS=	libmpi.so:net/openmpi
 

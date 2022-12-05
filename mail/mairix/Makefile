@@ -2,8 +2,9 @@ PORTNAME=	mairix
 DISTVERSION=	0.24
 CATEGORIES=	mail
 
-MAINTAINER=	jjuanino@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Indexing and searching in Maildir, MH, or mbox folders
+WWW=		http://www.rc0.org.uk/mairix/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

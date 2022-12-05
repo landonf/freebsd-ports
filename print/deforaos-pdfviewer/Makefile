@@ -1,6 +1,6 @@
 PORTNAME=	pdfviewer
 PORTVERSION=	0.0.2
-PORTREVISION=	38
+PORTREVISION=	41
 CATEGORIES=	print
 MASTER_SITES=	http://www.defora.org/os/download/download/4431/
 PKGNAMEPREFIX=	deforaos-
@@ -8,6 +8,7 @@ DISTNAME=	PDFViewer-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop PDF viewer
+WWW=		https://www.defora.org/
 
 LICENSE=	GPLv3
 

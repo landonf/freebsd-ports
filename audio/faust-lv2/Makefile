@@ -1,12 +1,13 @@
 PORTNAME=	faust
 DISTVERSION=	1.4.20180118
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	LV2 plugin architecture for the Faust programming language
+WWW=		https://bitbucket.org/agraef/faust-lv2
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,6 +1,6 @@
 PORTNAME=	cvc4
 DISTVERSION=	1.7
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math java
 MASTER_SITES+=	http://www.antlr3.org/download/:antlr3
 DISTFILES+=	antlr-3.4-complete.jar:antlr3
@@ -9,11 +9,14 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	fc8907afc08d.patch:-p1 # Install Java bindings
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatic theorem prover for SMT (Satisfiability Modulo Theories)
+WWW=		https://cvc4.cs.stanford.edu/web/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN=		Doesn't build, src/expr/expr_template.h:0: error: undefined replacement ${getConst_instantiations}
 
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libantlr3c.so:devel/libantlr3c \

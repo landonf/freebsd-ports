@@ -1,9 +1,11 @@
 PORTNAME=	desktop-installer
-DISTVERSION=	0.7.8
+DISTVERSION=	0.7.8-3
+DISTVERSIONSUFFIX=	-g6c86045
 CATEGORIES=	sysutils
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Quickly configure a FreeBSD desktop system
+WWW=		https://acadix.biz/desktop-installer.php
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

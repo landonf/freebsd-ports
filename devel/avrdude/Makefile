@@ -1,10 +1,11 @@
 PORTNAME=	avrdude
 PORTVERSION=	7.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	Program for programming the on-chip memory of Atmel AVR CPUs
+WWW=		https://www.nongnu.org/avrdude/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

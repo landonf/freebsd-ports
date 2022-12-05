@@ -1,10 +1,11 @@
 PORTNAME=	fennel
-DISTVERSION=	1.1.0
+DISTVERSION=	1.2.0
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/${PORTNAME}/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Lisp that compiles to Lua
+WWW=		https://fennel-lang.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

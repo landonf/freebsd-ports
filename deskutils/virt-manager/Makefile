@@ -1,11 +1,11 @@
 PORTNAME=	virt-manager
-PORTVERSION=	4.0.0
-PORTREVISION=	2
+PORTVERSION=	4.1.0
 CATEGORIES=	deskutils net-mgmt
 MASTER_SITES=	https://virt-manager.org/download/sources/${PORTNAME}/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Toolkit to interact with virtualization capabilities
+WWW=		https://virt-manager.org/
 
 LICENSE=	LGPL3
 

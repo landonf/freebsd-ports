@@ -1,5 +1,5 @@
-TIMESTAMP = 1654755023
-SHA256 (go/dns_subfinder/subfinder-v2.5.2/v2.5.2.mod) = 7be8aa07c368555f84de09d71838ec553151aa1ef1668569ae9ac922dc4937c1
-SIZE (go/dns_subfinder/subfinder-v2.5.2/v2.5.2.mod) = 1771
-SHA256 (go/dns_subfinder/subfinder-v2.5.2/v2.5.2.zip) = f8540a5a341ec121f78793a00d80aefd4a810226d9c1d2b22cdc6410c9b17e50
-SIZE (go/dns_subfinder/subfinder-v2.5.2/v2.5.2.zip) = 74780
+TIMESTAMP = 1668894121
+SHA256 (go/dns_subfinder/subfinder-v2.5.5/v2.5.5.mod) = 25934975f20399db01f52cd357b624b48898969f5ef08186b1274218994dcb64
+SIZE (go/dns_subfinder/subfinder-v2.5.5/v2.5.5.mod) = 2937
+SHA256 (go/dns_subfinder/subfinder-v2.5.5/v2.5.5.zip) = 5cddd5b9cbebdc0bfe1884fcc449036688493d9867d1db488e681d201d09cd3e
+SIZE (go/dns_subfinder/subfinder-v2.5.5/v2.5.5.zip) = 87436

@@ -1,0 +1,11 @@
+--- net/third_party/quiche/BUILD.gn.orig	2022-10-29 17:50:56 UTC
++++ net/third_party/quiche/BUILD.gn
+@@ -28,7 +28,7 @@ import("//build/config/chromeos/ui_mode.gni")
+ import("//testing/libfuzzer/fuzzer_test.gni")
+ import("//third_party/protobuf/proto_library.gni")
+ 
+-build_epoll_based_tools = is_linux || is_chromeos
++build_epoll_based_tools = (is_linux && !is_bsd) || is_chromeos
+ 
+ # TODO(crbug.com/1344231): Set this to always true. At which point, this
+ # variable can go away and the conditionals below that depends on it can be

@@ -1,4 +1,4 @@
---- content/browser/browser_main_loop.cc.orig	2022-07-22 17:30:31 UTC
+--- content/browser/browser_main_loop.cc.orig	2022-10-24 13:33:33 UTC
 +++ content/browser/browser_main_loop.cc
 @@ -241,6 +241,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
@@ -26,17 +26,8 @@
  #endif
  
    // GLib's spawning of new processes is buggy, so it's important that at this
-@@ -551,7 +563,7 @@ int BrowserMainLoop::EarlyInitialization() {
- 
-   // Up the priority of the UI thread unless it was already high (since Mac
-   // and recent versions of Android (O+) do this automatically).
--#if !BUILDFLAG(IS_MAC)
-+#if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(
-           features::kBrowserUseDisplayThreadPriority) &&
-       base::PlatformThread::GetCurrentThreadPriority() <
-@@ -562,7 +574,7 @@ int BrowserMainLoop::EarlyInitialization() {
- #endif  // !BUILDFLAG(IS_MAC)
+@@ -555,7 +567,7 @@ int BrowserMainLoop::EarlyInitialization() {
+   base::PlatformThread::SetCurrentThreadType(base::ThreadType::kCompositing);
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_ANDROID)

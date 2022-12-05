@@ -1,11 +1,12 @@
 PORTNAME=	xreader
 PORTVERSION=	3.2.2
-PORTREVISION=	9
+PORTREVISION=	12
 CATEGORIES=	print gnome
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multi-format document reader
+WWW=		https://github.com/linuxmint/xreader
 
 LICENSE=	GPLv2+
 

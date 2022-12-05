@@ -1,6 +1,6 @@
 PORTNAME=	cfdg
 PORTVERSION=	3.3
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	graphics math
 MASTER_SITES=	http://www.contextfreeart.org/download/ \
 		http://glyphic.s3.amazonaws.com/cfa/download/
@@ -8,6 +8,7 @@ DISTNAME=	ContextFreeSource${PORTVERSION}
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Context Free Design Grammar compiler
+WWW=		https://www.contextfreeart.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

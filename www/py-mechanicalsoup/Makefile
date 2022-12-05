@@ -1,5 +1,5 @@
 PORTNAME=	mechanicalsoup
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	MechanicalSoup-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python library for automating interaction with websites
+WWW=		https://github.com/MechanicalSoup/MechanicalSoup
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

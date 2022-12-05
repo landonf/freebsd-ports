@@ -1,12 +1,13 @@
 PORTNAME=	cyrus-imapd
 PORTVERSION=	2.5.17
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${PORTVERSION}/
 PKGNAMESUFFIX=	25
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Cyrus mail server, supporting POP3 and IMAP4 protocols
+WWW=		https://www.cyrusimap.org/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

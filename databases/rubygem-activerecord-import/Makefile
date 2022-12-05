@@ -1,10 +1,11 @@
 PORTNAME=	activerecord-import
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bulk import many records into an ActiveRecord DB
+WWW=		https://github.com/zdennis/activerecord-import
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

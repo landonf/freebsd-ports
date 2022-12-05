@@ -1,5 +1,5 @@
 PORTNAME=	fox
-PORTVERSION=	1.7.79
+PORTVERSION=	1.7.81
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://fox-toolkit.org/ftp/ \
 		ftp://ftp.fox-toolkit.org/pub/
@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Fast and extensive C++ GUI toolkit (development version)
+WWW=		http://www.fox-toolkit.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -48,9 +49,9 @@ DEBUG_CXXFLAGS_OFF=	-DNDEBUG
 JPEG_USES=		jpeg
 JPEG_CONFIGURE_ENABLE=	jpeg
 
-OPENJPEG_CFLAGS=	-I${LOCALBASE}/include/openjpeg-1.5
-OPENJPEG_LIB_DEPENDS=	libopenjpeg.so:graphics/openjpeg15
+OPENJPEG_LIB_DEPENDS=		libopenjpeg.so:graphics/openjpeg15
 OPENJPEG_CONFIGURE_ENABLE=	jp2
+OPENJPEG_CPPFLAGS=		-I${LOCALBASE}/include/openjpeg-1.5
 
 PROFILE_CONFIGURE_ON=	--with-profiling=gprof
 

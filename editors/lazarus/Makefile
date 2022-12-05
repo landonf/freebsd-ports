@@ -1,8 +1,8 @@
 PORTNAME=	lazarus
-PORTVERSION=	2.2.2
+PORTVERSION=	2.2.4
 DISTVERSIONSUFFIX=	-0
 PKGNAMESUFFIX?=  -gtk2
-PORTREVISION?=	1
+PORTREVISION?=	0
 CATEGORIES=	editors devel
 MASTER_SITES=	SF/${PORTNAME}/Lazarus%20Zip%20_%20GZip/Lazarus%20${PORTVERSION} \
 		LOCAL/acm/freepascal
@@ -10,6 +10,7 @@ DIST_SUBDIR=	freepascal
 
 MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	Portable Delphi-like IDE for the FreePascal compiler (GTK2)
+WWW=		https://www.lazarus-ide.org/
 
 CONFLICTS?=	${PORTNAME}-qt5
 

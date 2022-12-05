@@ -1,11 +1,13 @@
 PORTNAME=	qiskit-ibm-experiment
 DISTVERSION=	0.2.5
+PORTREVISION=	1
 CATEGORIES=	science python # quantum-computing
 #MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	IBM Experiment submodule for Quiskit framework for quantum computing
+WWW=		https://qiskit.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

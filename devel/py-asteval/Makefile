@@ -1,11 +1,12 @@
 PORTNAME=	asteval
-PORTVERSION=	0.9.27
+PORTVERSION=	0.9.28
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Safe, minimalistic evaluator of python expression using ast module
+WWW=		https://github.com/newville/asteval
 
 LICENSE=	MIT
 LICENSE_FILES=	${WRKSRC}/LICENSE

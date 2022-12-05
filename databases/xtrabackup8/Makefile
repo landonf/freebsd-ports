@@ -1,6 +1,6 @@
 PORTNAME=	xtrabackup
 PORTVERSION=	8.0.14
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	https://www.percona.com/downloads/Percona-XtraBackup-${PORTVERSION:R}/Percona-XtraBackup-${PORTVERSION}/source/tarball/:precona \
 		https://github.com/percona/percona-xtrabackup/archive/:percona \
@@ -12,6 +12,7 @@ DISTFILES=	percona-${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}:percona \
 
 MAINTAINER=	eugene@zhegan.in
 COMMENT=	Open-source backup tool for InnoDB and XtraDB
+WWW=		https://www.percona.com/doc/percona-xtrabackup/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

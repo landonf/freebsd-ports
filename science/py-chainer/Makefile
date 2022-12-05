@@ -1,12 +1,13 @@
 PORTNAME=	chainer
 DISTVERSION=	7.8.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science # machine-learning
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Deep learning framework
+WWW=		https://chainer.org/
 
 LICENSE=	MIT
 

@@ -8,6 +8,7 @@ DISTNAME=	qet-${DISTVERSION}
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Application to design electric diagrams
+WWW=		https://qelectrotech.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ USES=		compiler:c++11-lib desktop-file-utils gl kde:5 qmake qt:5 \
 USE_GL=		gl
 USE_QT=		concurrent core gui network printsupport sql sql-sqlite3 \
 		svg widgets xml \
-		buildtools_build
+		buildtools:build
 USE_KDE=	coreaddons widgetsaddons
 
 OPTIONS_DEFINE=	DEBUG DOCS

@@ -1,9 +1,10 @@
 PORTNAME=	libhtp
-PORTVERSION=	0.5.40
+PORTVERSION=	0.5.41
 CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Security-aware parser for the HTTP protocol
+WWW=		https://github.com/ironbee/libhtp
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

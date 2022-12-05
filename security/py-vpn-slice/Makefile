@@ -4,8 +4,9 @@ CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	jjuanino@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Customized VPN split-tunnel
+WWW=		https://github.com/dlenski/vpn-slice
 
 LICENSE=	GPLv3
 

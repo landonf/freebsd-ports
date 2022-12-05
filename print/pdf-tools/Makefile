@@ -1,12 +1,14 @@
 PORTNAME=	pdf-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.91-54
-DISTVERSIONSUFFIX=	-gbb0b71f
+DISTVERSION=	0.91-63
+DISTVERSIONSUFFIX=	-gaec8ecd
+PORTREVISION=	2
 CATEGORIES=	print elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Emacs support library for PDF files
+WWW=		https://github.com/vedang/pdf-tools
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -25,9 +27,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	vedang
 USE_GNOME=	cairo glib20
 
-CONFLICTS_INSTALL=	pdf-tools pdf-tools-emacs_* # bin/epdfinfo
-
 EMACS_FLAVORS_EXCLUDE=	devel_nox nox
+
+CONFLICTS_INSTALL=	pdf-tools pdf-tools-emacs_* # bin/epdfinfo
 
 do-build:
 	cd ${WRKSRC}/server && ./autogen.sh && ./configure -q && make

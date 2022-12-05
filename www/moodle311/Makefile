@@ -1,15 +1,16 @@
 PORTNAME=	moodle
-PORTVERSION=	3.11.8
+PORTVERSION=	3.11.11
 CATEGORIES=	www education
 MASTER_SITES=	SF/moodle/Moodle/stable311/
 PKGNAMESUFFIX=	${PKGORIGIN:T:S/moodle//}${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Course management system based on social constructionism
+WWW=		https://www.moodle.org/
 
 LICENSE=	GPLv3
 
-CONFLICTS=	moodle39-3.9.[0-9]* moodle310-3.10.[0-9]* moodle40-4.0.[0-9]*
+CONFLICTS=	moodle39-3.9.[0-9]* moodle40-4.0.[0-9]* moodle41-4.1
 
 USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \

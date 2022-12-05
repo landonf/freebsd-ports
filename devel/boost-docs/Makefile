@@ -1,10 +1,11 @@
 PORTNAME=	boost-docs
 COMMENT=	Documentation for libraries from boost.org
+WWW=		https://www.boost.org/
 
 USES=	python:env shebangfix
 
 LICENSE=	BSL
-LICENSE_FILE=	${WRKDIR}/${DISTNAME}/LICENSE_1_0.txt
+LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
 
 DOCSDIR=	${PREFIX}/share/doc/boost
 UNIQ=		/usr/bin/uniq
@@ -18,7 +19,7 @@ SHEBANG_GLOB=	*.py
 
 PORTDOCS=	*
 
-.include "${.CURDIR}/..//boost-all/common.mk"
+.include "${.CURDIR}/../boost-all/common.mk"
 
 do-install:
 # Documentation & examples

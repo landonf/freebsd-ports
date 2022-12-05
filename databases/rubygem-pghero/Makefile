@@ -1,15 +1,16 @@
 PORTNAME=	pghero
-PORTVERSION=	2.8.3
+PORTVERSION=	3.0.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Performance dashboard for Postgres
+WWW=		https://github.com/ankane/pghero
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	rubygem-activerecord60>=5:databases/rubygem-activerecord60
+RUN_DEPENDS=	rubygem-activerecord60>=6:databases/rubygem-activerecord60
 
 USES=		cpe gem
 USE_RUBY=	yes

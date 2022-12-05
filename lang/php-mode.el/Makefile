@@ -1,12 +1,12 @@
 PORTNAME=	php-mode.el
-PORTVERSION=	1.24.0
-PORTREVISION=	4
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.24.2
 CATEGORIES=	lang elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	marc@bumblingdork.com
 COMMENT=	PHP mode for GNU Emacs
+WWW=		https://github.com/emacs-php/php-mode
 
 LICENSE=	GPLv3
 
@@ -19,8 +19,16 @@ NO_ARCH=	yes
 
 LISP_FILES=	lisp/php-align.el \
 		lisp/php-align.elc \
+		lisp/php-complete.el \
+		lisp/php-complete.elc \
+		lisp/php-defs.el \
+		lisp/php-defs.elc \
 		lisp/php-face.el \
 		lisp/php-face.elc \
+		lisp/php-flymake.el \
+		lisp/php-flymake.elc \
+		lisp/php-local-manual.el \
+		lisp/php-local-manual.elc \
 		lisp/php-mode-debug.el \
 		lisp/php-mode-debug.elc \
 		lisp/php-mode.el \

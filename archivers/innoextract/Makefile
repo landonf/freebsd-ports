@@ -1,11 +1,12 @@
 PORTNAME=	innoextract
 PORTVERSION=	1.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	http://constexpr.org/innoextract/files/
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Program to extract Inno Setup files
+WWW=		https://constexpr.org/innoextract/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

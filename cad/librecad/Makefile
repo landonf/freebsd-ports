@@ -1,12 +1,14 @@
 PORTNAME=	librecad
-DISTVERSION=	2.2.0-rc3
+DISTVERSION=	2.2.0-rc4
+PORTREVISION=	1
 CATEGORIES=	cad
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	8c3b652a8813.patch:-p1 # https://github.com/LibreCAD/LibreCAD/issues/1488
+PATCH_SITES=	https://github.com/BSDKaffee/LibreCAD/commit/
+PATCHFILES=	d81cd49db2421bb4ca9a283638500ebf1c7d02e5.patch:-p1 # Fix ortho tool with Clang
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	2D CAD system
+WWW=		https://librecad.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/licenses/gpl-2.0.txt
@@ -21,7 +23,7 @@ GH_ACCOUNT=	LibreCAD
 GH_PROJECT=	LibreCAD
 USE_GL=		gl
 USE_QT=		core gui printsupport svg widgets \
-		buildtools_build linguisttools_build
+		buildtools:build linguisttools:build
 
 QMAKE_ARGS+=	BOOST_DIR="${LOCALBASE}"
 

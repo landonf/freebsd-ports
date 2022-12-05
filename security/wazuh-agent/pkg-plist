@@ -49,7 +49,7 @@
 @mode 660
 @owner root
 @group wazuh
-/var/ossec/etc/ossec.conf
+@sample /var/ossec/etc/ossec.conf.sample
 /var/ossec/etc/shared/cis_apache2224_rcl.txt
 /var/ossec/etc/shared/cis_debian_linux_rcl.txt
 /var/ossec/etc/shared/cis_mysql5-6_community_rcl.txt
@@ -203,6 +203,9 @@
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/rootcheck.agent.template
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/rootcheck.manager.template
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/sca.files
+/var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/rootcheck.agent.template
+/var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/rootcheck.manager.template
+/var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/sca.files
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/rootcheck.agent.template
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/rootcheck.manager.template
 /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/sca.files
@@ -291,6 +294,7 @@
 /var/ossec/packages_files/agent_installation_scripts/sca/rhel/6/cis_rhel6_linux.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/rhel/7/cis_rhel7_linux.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/rhel/8/cis_rhel8_linux.yml
+/var/ossec/packages_files/agent_installation_scripts/sca/rhel/9/cis_rhel9_linux.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/sles/11/cis_sles11_linux.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/sles/12/cis_sles12_linux.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/sles/15/cis_sles15_linux.yml
@@ -302,10 +306,11 @@
 /var/ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu20-04.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu22-04.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win10_enterprise.yml
+/var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win11_enterprise.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2012r2.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2016.yml
 /var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2019.yml
-/var/ossec/packages_files/agent_installation_scripts/sca/windows/sca_win_audit.yml
+/var/ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2022.yml
 /var/ossec/packages_files/agent_installation_scripts/src/init/adduser.sh
 /var/ossec/packages_files/agent_installation_scripts/src/init/darwin-addusers.sh
 /var/ossec/packages_files/agent_installation_scripts/src/init/darwin-delete-oldusers.sh
@@ -371,6 +376,7 @@
 /var/ossec/ruleset/sca/cis_rhel6_linux.yml
 /var/ossec/ruleset/sca/cis_rhel7_linux.yml
 /var/ossec/ruleset/sca/cis_rhel8_linux.yml
+/var/ossec/ruleset/sca/cis_rhel9_linux.yml
 /var/ossec/ruleset/sca/cis_sles11_linux.yml
 /var/ossec/ruleset/sca/cis_sles12_linux.yml
 /var/ossec/ruleset/sca/cis_sles15_linux.yml
@@ -387,11 +393,12 @@
 /var/ossec/ruleset/sca/cis_ubuntu20-04.yml
 /var/ossec/ruleset/sca/cis_ubuntu22-04.yml
 /var/ossec/ruleset/sca/cis_win10_enterprise.yml
+/var/ossec/ruleset/sca/cis_win11_enterprise.yml
 /var/ossec/ruleset/sca/cis_win2012r2.yml
 /var/ossec/ruleset/sca/cis_win2016.yml
 /var/ossec/ruleset/sca/cis_win2019.yml
+/var/ossec/ruleset/sca/cis_win2022.yml
 /var/ossec/ruleset/sca/sca_unix_audit.yml
-/var/ossec/ruleset/sca/sca_win_audit.yml
 /var/ossec/ruleset/sca/web_vulnerabilities.yml
 @mode 750
 @owner root
@@ -420,7 +427,7 @@
 @dir /var/ossec/backup
 @dir /var/ossec/bin
 @dir /var/ossec/etc/shared/default
-@dir /var/ossec/etc/shared
+@dir(root,wazuh,770) /var/ossec/etc/shared
 @dir(wazuh,wazuh,770) /var/ossec/etc
 @dir(root,wazuh,750) /var/ossec/lib
 @dir(wazuh,wazuh,750) /var/ossec/logs/wazuh
@@ -465,6 +472,7 @@
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/6
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/7
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8
+@dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/11
 @dir /var/ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/12
@@ -531,6 +539,7 @@
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/rhel/6
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/rhel/7
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/rhel/8
+@dir /var/ossec/packages_files/agent_installation_scripts/sca/rhel/9
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/rhel
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/sles/11
 @dir /var/ossec/packages_files/agent_installation_scripts/sca/sles/12

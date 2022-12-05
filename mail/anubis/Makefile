@@ -1,11 +1,12 @@
 PORTNAME=	anubis
 PORTVERSION=	4.2
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	mail
 MASTER_SITES=	GNU
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Outgoing SMTP mail processor
+WWW=		https://www.gnu.org/software/anubis/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

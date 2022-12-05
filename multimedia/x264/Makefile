@@ -16,7 +16,7 @@
 
 PORTNAME=	x264
 PORTVERSION=	0.${X264_BUILD}.${X264_REV}
-PORTREVISION?=	1
+PORTREVISION?=	0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://samples.mplayerhq.hu/yuv4mpeg2/:pgo
 DIST_SUBDIR=	x264
@@ -24,6 +24,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT?=	H.264/MPEG-4 AVC Video Encoding (Front End CLI)
+WWW=		https://www.videolan.org/x264.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -31,8 +32,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS?=	libx264.so:multimedia/libx264
 
-X264_BUILD=	163
-X264_REV=	3060
+X264_BUILD=	164
+X264_REV=	3095
 X264_GITVER=	${GL_COMMIT:C/^(.{7}).*/\1/}
 
 USES?=		pkgconfig
@@ -41,7 +42,7 @@ USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 GL_SITE=	https://code.videolan.org
 GL_ACCOUNT=	videolan
-GL_COMMIT=	5db6aa6cab1b146e07b60cc1736a01f21da01154
+GL_COMMIT=	baee400fa9ced6f5481a728138fed6e867b0ff7f
 HAS_CONFIGURE=	yes
 SHEBANG_FILES=	configure
 PLIST_FILES?=	bin/x264

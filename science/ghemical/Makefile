@@ -7,6 +7,7 @@ MASTER_SITE_SUBDIR=	release20111012 current
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computational chemistry software package
+WWW=		https://www.bioinformatics.org/ghemical/ghemical/index.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +20,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libint.so:science/libint \
 		liblapack.so:math/lapack \
 		liboglappth.so:science/liboglappth \
-		libmopac7.so:science/mopac \
+		libmopac.so:science/mopac \
 		libmpqc.so:science/mpqc
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 

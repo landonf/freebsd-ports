@@ -1,11 +1,13 @@
 PORTNAME=	ccmix
 PORTVERSION=	g20170612
+PORTREVISION=	1
 CATEGORIES=	archivers games
 MASTER_SITES=	SF/xccu/XCC%20Mixer/XCC%20Mixer%201.44:dat
 DISTFILES=	XCC_Mixer-1.44.zip:dat
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Westwood Studios MIX format file manipulator
+WWW=		https://github.com/OmniBlade/ccmix
 
 LICENSE=	GPLv2+
 
@@ -26,6 +28,8 @@ post-patch:
 	@${REINPLACE_CMD} -e '/ccmix program usage/s,/n,\\n, ; \
 		/gmd_dir/s,/usr/share/ccmix,${DATADIR},' \
 			${WRKSRC}/src/ccmix.cpp
+	@${REINPLACE_CMD} -e '/char2num/s,const static,& signed,' \
+		${WRKSRC}/src/mixkey/mix_dexoder.cpp
 
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/build/* \

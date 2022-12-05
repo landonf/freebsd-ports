@@ -4,8 +4,9 @@ CATEGORIES=	devel java python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	dbaio@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java Embedded Python
+WWW=		https://github.com/mrj0/jep
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,19 +1,17 @@
 PORTNAME=	gokart
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.0
-PORTREVISION=	4
+DISTVERSION=	0.5.1
 CATEGORIES=	security
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	Go Security Static Analysis
+WWW=		https://github.com/praetorian-inc/gokart
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=	go:modules
-
+USES=		go:modules
 GO_MODULE=	github.com/praetorian-inc/gokart
-
 GO_TARGET=	gokart
 
 PLIST_FILES=	bin/${PORTNAME}

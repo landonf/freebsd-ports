@@ -1,12 +1,13 @@
 PORTNAME=	sendmail
 PORTVERSION=	8.17.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Reliable, highly configurable mail transfer agent with utilities
+WWW=		https://www.sendmail.org/
 
 LICENSE=	Sendmail
 LICENSE_NAME=	Sendmail License

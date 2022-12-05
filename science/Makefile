@@ -4,8 +4,9 @@
     SUBDIR += ALPSCore
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
+    SUBDIR += InsightToolkit501
+    SUBDIR += InsightToolkit521
     SUBDIR += PETSc
-    SUBDIR += R-cran-AMORE
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
     SUBDIR += R-cran-FAdist
@@ -27,6 +28,7 @@
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += apbs
+    SUBDIR += arbor
     SUBDIR += ascent
     SUBDIR += atompaw
     SUBDIR += avogadro2
@@ -38,6 +40,7 @@
     SUBDIR += bodr
     SUBDIR += buddy
     SUBDIR += cantera
+    SUBDIR += cardioid
     SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
@@ -52,6 +55,7 @@
     SUBDIR += chemtool-devel
     SUBDIR += chimes-calculator
     SUBDIR += chrono
+    SUBDIR += cif-tools
     SUBDIR += clhep
     SUBDIR += clipper
     SUBDIR += code_saturne
@@ -65,14 +69,18 @@
     SUBDIR += dakota
     SUBDIR += dalton
     SUBDIR += dcl
+    SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
     SUBDIR += dftd4
+    SUBDIR += dimod
     SUBDIR += dirac
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
+    SUBDIR += dssp
     SUBDIR += dvc
+    SUBDIR += dwave-preprocessing
     SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
@@ -85,6 +93,7 @@
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fastjet
+    SUBDIR += feff10
     SUBDIR += fisicalab
     SUBDIR += fleur
     SUBDIR += frontistr
@@ -96,6 +105,7 @@
     SUBDIR += gbtolib
     SUBDIR += gchemutils
     SUBDIR += gdma
+    SUBDIR += gemmi
     SUBDIR += getdp
     SUBDIR += ghemical
     SUBDIR += ghmm
@@ -132,6 +142,7 @@
     SUBDIR += latte
     SUBDIR += libaec
     SUBDIR += libccp4
+    SUBDIR += libcifpp
     SUBDIR += libcint
     SUBDIR += libctl
     SUBDIR += libecpint
@@ -142,6 +153,7 @@
     SUBDIR += libgridxc
     SUBDIR += libint
     SUBDIR += libint2
+    SUBDIR += libint2-psi4
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += libmbd
@@ -170,6 +182,7 @@
     SUBDIR += mdynamix
     SUBDIR += medit
     SUBDIR += meep
+    SUBDIR += mercantile
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
@@ -181,6 +194,8 @@
     SUBDIR += mopac
     SUBDIR += mpb
     SUBDIR += mpqc
+    SUBDIR += mrchem
+    SUBDIR += mrcpp
     SUBDIR += msms
     SUBDIR += mstore
     SUBDIR += multicharge
@@ -191,8 +206,10 @@
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
+    SUBDIR += nlcglib
     SUBDIR += nwchem
     SUBDIR += nwchem-data
+    SUBDIR += ocean
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openems
@@ -232,6 +249,7 @@
     SUBDIR += p5-Chemistry-Reaction
     SUBDIR += p5-Chemistry-Ring
     SUBDIR += p5-Geo-BUFR
+    SUBDIR += p5-Geo-Calc
     SUBDIR += p5-Geo-Coordinates-Converter
     SUBDIR += p5-Geo-Coordinates-Converter-iArea
     SUBDIR += p5-Geo-WebService-Elevation-USGS
@@ -248,6 +266,7 @@
     SUBDIR += plumed
     SUBDIR += pnetcdf
     SUBDIR += precice
+    SUBDIR += psi4
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy
@@ -255,6 +274,8 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
+    SUBDIR += py-OpenFermion-Dirac
+    SUBDIR += py-OpenFermion-PySCF
     SUBDIR += py-OpenMC
     SUBDIR += py-PubChemPy
     SUBDIR += py-PyFR
@@ -262,11 +283,13 @@
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
+    SUBDIR += py-arbor
     SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
     SUBDIR += py-ase
+    SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
     SUBDIR += py-cdo
     SUBDIR += py-chainer
@@ -279,11 +302,26 @@
     SUBDIR += py-cirq-pasqal
     SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
+    SUBDIR += py-dimod
     SUBDIR += py-dipy
     SUBDIR += py-dlib
+    SUBDIR += py-dwave-cloud-client
+    SUBDIR += py-dwave-greedy
+    SUBDIR += py-dwave-hybrid
+    SUBDIR += py-dwave-inspector
+    SUBDIR += py-dwave-neal
+    SUBDIR += py-dwave-networkx
+    SUBDIR += py-dwave-ocean-sdk
+    SUBDIR += py-dwave-preprocessing
+    SUBDIR += py-dwave-samplers
+    SUBDIR += py-dwave-system
+    SUBDIR += py-dwave-tabu
+    SUBDIR += py-dwavebinarycsp
+    SUBDIR += py-earthpy
     SUBDIR += py-eccodes
     SUBDIR += py-esda
     SUBDIR += py-fresnel
+    SUBDIR += py-gemmi
     SUBDIR += py-geolinks
     SUBDIR += py-geomet
     SUBDIR += py-geometer
@@ -297,6 +335,7 @@
     SUBDIR += py-inequality
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query
+    SUBDIR += py-kimpy
     SUBDIR += py-kinematics
     SUBDIR += py-kliff
     SUBDIR += py-kpLib
@@ -305,18 +344,23 @@
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
+    SUBDIR += py-meshio
+    SUBDIR += py-mmcif
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
     SUBDIR += py-moltemplate
+    SUBDIR += py-mrchem
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
     SUBDIR += py-nibabel
     SUBDIR += py-nilearn
     SUBDIR += py-obspy
     SUBDIR += py-oddt
+    SUBDIR += py-openbabel
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
+    SUBDIR += py-penaltymodel
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
@@ -334,6 +378,7 @@
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
     SUBDIR += py-pyprecice
+    SUBDIR += py-pyqubo
     SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
@@ -342,6 +387,7 @@
     SUBDIR += py-qiskit
     SUBDIR += py-qiskit-aer
     SUBDIR += py-qiskit-experiments
+    SUBDIR += py-qiskit-finance
     SUBDIR += py-qiskit-ibm-experiment
     SUBDIR += py-qiskit-ibm-provider
     SUBDIR += py-qiskit-ibmq-provider
@@ -360,6 +406,7 @@
     SUBDIR += py-scimath
     SUBDIR += py-scipy
     SUBDIR += py-scoria
+    SUBDIR += py-sdf
     SUBDIR += py-segregation
     SUBDIR += py-segyio
     SUBDIR += py-sklearn-pandas
@@ -394,7 +441,9 @@
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
+    SUBDIR += sciplot
     SUBDIR += segyio
+    SUBDIR += serac
     SUBDIR += shelxle
     SUBDIR += siconos
     SUBDIR += siesta
@@ -409,6 +458,7 @@
     SUBDIR += simlib
     SUBDIR += simple-dftd3
     SUBDIR += simsmith
+    SUBDIR += sirius
     SUBDIR += smoldyn
     SUBDIR += sparta
     SUBDIR += spglib
@@ -421,6 +471,7 @@
     SUBDIR += thermofun
     SUBDIR += tinker
     SUBDIR += trilinos
+    SUBDIR += ttk
     SUBDIR += tweedledum
     SUBDIR += udunits
     SUBDIR += ukrmol+
@@ -438,5 +489,6 @@
     SUBDIR += xtb
     SUBDIR += yoda
     SUBDIR += zotero
+    SUBDIR += zx
 
 .include <bsd.port.subdir.mk>

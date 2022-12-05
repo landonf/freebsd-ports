@@ -6,12 +6,12 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Software typesetting package
+WWW=		https://www.gnu.org/software/groff/
 
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	psselect:print/psutils \
 		gsfonts>=0:print/gsfonts
-LIB_DEPENDS=	libuchardet.so:textproc/uchardet
 RUN_DEPENDS:=	psselect:print/psutils
 
 MAKE_JOBS_UNSAFE=	yes
@@ -45,6 +45,14 @@ INFO=	groff
 DATADIR=	${PREFIX}/share/${PORTNAME}/${PORTVERSION}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 EXAMPLESDIR=	${DOCSDIR}/examples
+
+OPTIONS_DEFINE=	UCHARDET
+OPTIONS_DEFAULT=	UCHARDET
+
+UCHARDET_DESC=	Automatic encoding detection in preconv(1)
+UCHARDET_LIB_DEPENDS=	libuchardet.so:textproc/uchardet
+UCHARDET_USES=	pkgconfig
+UCHARDET_CONFIGURE_OFF=	--with-uchardet=no
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mdoc.local ${STAGEDIR}${PREFIX}/share/groff/site-tmac

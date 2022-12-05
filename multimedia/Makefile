@@ -31,6 +31,7 @@
     SUBDIR += cheese
     SUBDIR += chilitags
     SUBDIR += cineencoder
+    SUBDIR += clapper
     SUBDIR += clutter-gst
     SUBDIR += clutter-gst3
     SUBDIR += cmrt
@@ -61,6 +62,7 @@
     SUBDIR += ffmpeg
     SUBDIR += ffmpegthumbnailer
     SUBDIR += ffms2
+    SUBDIR += ffnvcodec-headers
     SUBDIR += filebot
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
@@ -120,10 +122,10 @@
     SUBDIR += gstreamer1-plugins-x265
     SUBDIR += gstreamer1-qt
     SUBDIR += gstreamer1-rtsp-server
-    SUBDIR += gstreamer1-transcoder
     SUBDIR += gstreamer1-vaapi
     SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
+    SUBDIR += gtk-pipe-viewer
     SUBDIR += gtk-youtube-viewer
     SUBDIR += handbrake
     SUBDIR += haruna
@@ -294,6 +296,7 @@
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
     SUBDIR += php-pHash
+    SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
     SUBDIR += playerctl
@@ -328,9 +331,12 @@
     SUBDIR += py-subliminal
     SUBDIR += py-tvnamer
     SUBDIR += qmmp-plugin-pack-qt5
+    SUBDIR += qmmp-plugin-pack-qt6
     SUBDIR += qmmp-qt5
+    SUBDIR += qmmp-qt6
     SUBDIR += qpwgraph
     SUBDIR += qt5-multimedia
+    SUBDIR += qt6-multimedia
     SUBDIR += quodlibet
     SUBDIR += qwinff
     SUBDIR += rage
@@ -412,6 +418,7 @@
     SUBDIR += vdr-plugin-xvdr
     SUBDIR += vdr-plugins
     SUBDIR += vid.stab
+    SUBDIR += video-trimmer
     SUBDIR += vlc
     SUBDIR += vmaf
     SUBDIR += vtkmpeg2encode

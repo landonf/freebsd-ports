@@ -1,0 +1,17 @@
+--- third_party/wayland/features.gni.orig	2022-10-29 17:50:56 UTC
++++ third_party/wayland/features.gni
+@@ -17,8 +17,12 @@ declare_args() {
+   use_system_libwayland_server = false
+ 
+   # Path to wayland-scanner. Has effect only when the system libwayland is used.
+-  assert(host_os == "linux")
+-  system_wayland_scanner_path = "/usr/bin/wayland-scanner"
++  assert(host_os == "linux" || host_os == "freebsd")
++  if (is_bsd) {
++    system_wayland_scanner_path = "/usr/local/bin/wayland-scanner"
++  } else {
++    system_wayland_scanner_path = "/usr/bin/wayland-scanner"
++  }
+ 
+   # This may be set by Chromium packagers who do not wish to use the bundled
+   # wayland scanner.

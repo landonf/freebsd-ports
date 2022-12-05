@@ -1,10 +1,11 @@
 PORTNAME=	fossology
-PORTVERSION=	4.1.0
+PORTVERSION=	4.2.1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-nomos-standalone
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Standalone Nomos license scanner from fossology project
+WWW=		https://www.fossology.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

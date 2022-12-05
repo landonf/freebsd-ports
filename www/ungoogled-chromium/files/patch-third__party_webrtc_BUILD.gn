@@ -1,0 +1,12 @@
+--- third_party/webrtc/BUILD.gn.orig	2022-10-29 17:50:56 UTC
++++ third_party/webrtc/BUILD.gn
+@@ -206,6 +206,9 @@ config("common_inherited_config") {
+   if (is_linux || is_chromeos) {
+     defines += [ "WEBRTC_LINUX" ]
+   }
++  if (is_bsd) {
++    defines += [ "WEBRTC_BSD" ]
++  }
+   if (is_mac) {
+     defines += [ "WEBRTC_MAC" ]
+   }

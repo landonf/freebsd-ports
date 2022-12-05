@@ -6,6 +6,7 @@ DISTNAME=	${PORTNAME}-src-${DISTVERSION:C/\.//g}
 
 MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	Free, open source, cross-platform video editor
+WWW=		https://shotcut.org/
 
 LICENSE=	GPLv3
 
@@ -21,7 +22,7 @@ GH_ACCOUNT=	mltframework
 
 USE_GL=	gl
 USE_QT=		core declarative gui multimedia network opengl quickcontrols2 sql \
-		websockets widgets xml buildtools_build concurrent_build linguisttools_build
+		websockets widgets xml buildtools:build concurrent:build linguisttools:build
 USE_SDL=	sdl2
 USE_XORG=	x11
 # Needed to be able to correctly check for updates in-app.

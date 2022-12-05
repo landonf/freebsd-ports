@@ -1,5 +1,5 @@
 PORTNAME=	rtree
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	devel science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	Rtree-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	R-Tree Spatial Index For Python GIS
+WWW=		https://trac.gispython.org/projects/PCL/wiki/Rtree
 
 LICENSE=	LGPL21
 

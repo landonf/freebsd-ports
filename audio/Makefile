@@ -5,7 +5,6 @@
     SUBDIR += Maaate
     SUBDIR += a2jmidid
     SUBDIR += aacgain
-    SUBDIR += aacplusenc
     SUBDIR += abcde
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
@@ -15,6 +14,7 @@
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
+    SUBDIR += alacenc
     SUBDIR += alienwah
     SUBDIR += alo-lv2
     SUBDIR += alsa-lib
@@ -25,6 +25,7 @@
     SUBDIR += alure
     SUBDIR += amarok
     SUBDIR += amb-plugins
+    SUBDIR += amberol
     SUBDIR += ampache
     SUBDIR += ample
     SUBDIR += amsynth
@@ -58,6 +59,7 @@
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
     SUBDIR += beets
+    SUBDIR += bespokesynth
     SUBDIR += bharvestr-lv2
     SUBDIR += bjumblr-lv2
     SUBDIR += bliss
@@ -144,6 +146,7 @@
     SUBDIR += eq10q-lv2
     SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2
+    SUBDIR += essentia
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
@@ -225,6 +228,7 @@
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural
+    SUBDIR += gnome-metronome
     SUBDIR += gnome-music
     SUBDIR += gnome-podcasts
     SUBDIR += gnormalize
@@ -307,12 +311,14 @@
     SUBDIR += id3ren
     SUBDIR += id3tool
     SUBDIR += id3v2
+    SUBDIR += iir1
     SUBDIR += infamous-plugins-lv2
     SUBDIR += inscore
     SUBDIR += intersect-lv2
     SUBDIR += invada-studio-plugins-lv2
     SUBDIR += ir-lv2
     SUBDIR += jack
+    SUBDIR += jack-capture
     SUBDIR += jack-example-tools
     SUBDIR += jack-keyboard
     SUBDIR += jack-smf-utils
@@ -330,8 +336,7 @@
     SUBDIR += julius
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kexis
-    SUBDIR += kid3-kf5
-    SUBDIR += kid3-qt5
+    SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
@@ -410,7 +415,6 @@
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
     SUBDIR += libtremor
-    SUBDIR += libumidi
     SUBDIR += libvorbis
     SUBDIR += libworkman
     SUBDIR += libxmp
@@ -460,8 +464,6 @@
     SUBDIR += mamba
     SUBDIR += mate-media
     SUBDIR += mclk-lv2
-    SUBDIR += mctoolame-decoder
-    SUBDIR += mctoolame-encoder
     SUBDIR += mda-lv2
     SUBDIR += mhwaveedit
     SUBDIR += midi-matrix-lv2
@@ -484,6 +486,7 @@
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
+    SUBDIR += mousai-devel
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
     SUBDIR += mp3_check
@@ -593,6 +596,7 @@
     SUBDIR += paman
     SUBDIR += pamixer
     SUBDIR += paprefs
+    SUBDIR += patchage
     SUBDIR += pavucontrol
     SUBDIR += pavucontrol-qt
     SUBDIR += pavumeter
@@ -601,7 +605,6 @@
     SUBDIR += pd
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
-    SUBDIR += phaserotate-lv2
     SUBDIR += pianobar
     SUBDIR += pianobooster
     SUBDIR += pianod2
@@ -624,8 +627,8 @@
     SUBDIR += praat
     SUBDIR += pragha
     SUBDIR += prelude-lv2
-    SUBDIR += protracker
     SUBDIR += psindustrializer
+    SUBDIR += pt2-clone
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
@@ -638,6 +641,7 @@
     SUBDIR += py-audioread
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
+    SUBDIR += py-essentia
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gtts
@@ -647,13 +651,16 @@
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-opuslib
+    SUBDIR += py-pocketsphinx
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
+    SUBDIR += py-pyjacklib
     SUBDIR += py-pylast
     SUBDIR += py-pyliblo
     SUBDIR += py-pymad
     SUBDIR += py-pyogg
+    SUBDIR += py-pyradio
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
     SUBDIR += py-soundcloud
@@ -666,6 +673,7 @@
     SUBDIR += py-zita-audiotools
     SUBDIR += py-zita-jacktools
     SUBDIR += qaudiosonar
+    SUBDIR += qjackcapture
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl
@@ -692,6 +700,7 @@
     SUBDIR += rnnoise
     SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
+    SUBDIR += rsgain
     SUBDIR += rsynth
     SUBDIR += rtaudio
     SUBDIR += rtmidi
@@ -730,9 +739,12 @@
     SUBDIR += snd
     SUBDIR += sndio
     SUBDIR += so-synth-lv2
+    SUBDIR += solfege
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
+    SUBDIR += sonivox
+    SUBDIR += sonivox-eas
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab
@@ -756,6 +768,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-player
     SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd

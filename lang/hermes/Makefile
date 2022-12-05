@@ -1,12 +1,13 @@
 PORTNAME=	hermes
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.0
+DISTVERSION=	0.12.0
 PORTREVISION=	1
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-javascript-engine
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	JavaScript engine
+WWW=		https://github.com/facebook/hermes
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,12 +1,13 @@
 PORTNAME=	infix
 PORTVERSION=	19960628
-PORTREVISION=	74
+PORTREVISION=	76
 CATEGORIES=	devel lisp
 PKGNAMEPREFIX=	cl-
 DISTFILES=	# none
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Lisp macro to read math statements in infix notation
+WWW=		https://www.cliki.net/infix
 
 # Converted from NO_CDROM
 LICENSE=	infix

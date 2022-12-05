@@ -6,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Qt based dictionary program (stardict clone)
+WWW=		http://qstardict.ylsoftware.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,7 +15,7 @@ USES=		compiler:c++11-lang gl gnome pkgconfig qmake qt:5 tar:bzip2 xorg
 USE_GL=		gl
 USE_GNOME=	glib20
 USE_QT=		core dbus gui network printsupport widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_XORG=	x11
 
 USE_GITHUB=	yes

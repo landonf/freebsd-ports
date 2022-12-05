@@ -1,11 +1,12 @@
 PORTNAME=	transmission-rpc
-PORTVERSION=	3.3.2
+PORTVERSION=	3.4.0
 CATEGORIES=	net-p2p python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Python module for Transmission bittorent client JSON-RPC protocol
+WWW=		https://pypi.org/project/transmission-rpc/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

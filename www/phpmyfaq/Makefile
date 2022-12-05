@@ -1,10 +1,11 @@
 PORTNAME=	phpmyfaq
-PORTVERSION=	3.1.4
+PORTVERSION=	3.1.8
 CATEGORIES=	www
 MASTER_SITES=	https://download.phpmyfaq.de/files/
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Multilingual, completely database-driven FAQ-system
+WWW=		https://www.phpmyfaq.de/
 
 LICENSE=	MPL20
 

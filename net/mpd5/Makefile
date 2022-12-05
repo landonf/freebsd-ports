@@ -1,6 +1,6 @@
 PORTNAME=	mpd
 DISTVERSION=	5.9
-PORTREVISION=	9
+PORTREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Mpd5/Mpd-${PORTVERSION}
 PKGNAMESUFFIX=	5
@@ -8,6 +8,7 @@ DIST_SUBDIR=	mpd5
 
 MAINTAINER=	eugen@FreeBSD.org
 COMMENT=	Multi-link PPP daemon based on netgraph(4)
+WWW=		https://sourceforge.net/projects/mpd/
 
 LICENSE=	BSD3CLAUSE
 

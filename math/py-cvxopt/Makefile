@@ -1,10 +1,12 @@
 PORTNAME=	cvxopt
 DISTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python software for convex optimization
+WWW=		https://github.com/cvxopt/cvxopt
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

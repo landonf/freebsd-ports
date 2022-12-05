@@ -1,10 +1,11 @@
 PORTNAME=	libfido2
-PORTVERSION=	1.11.0
+PORTVERSION=	1.12.0
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/libfido2/Releases/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides library functionality for FIDO 2.0
+WWW=		https://developers.yubico.com/libfido2/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

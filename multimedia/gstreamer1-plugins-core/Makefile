@@ -1,5 +1,5 @@
 PORTNAME=	gstreamer1-plugins-core
-PORTVERSION=	1.16
+PORTVERSION=	1.20.4
 CATEGORIES=	multimedia audio
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -7,6 +7,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Core set of typical audio and video GStreamer plugins
+WWW=		http://gstreamer.net
 
 NO_ARCH=	yes
 NO_BUILD=	yes

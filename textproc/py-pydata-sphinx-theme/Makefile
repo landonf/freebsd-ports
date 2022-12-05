@@ -1,5 +1,6 @@
 PORTNAME=	pydata-sphinx-theme
 PORTVERSION=	0.8.1
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP \
 		LOCAL/sunpoet:static
@@ -9,6 +10,7 @@ DISTFILES=	pydata_sphinx_theme-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bootstrap-based Sphinx theme from the PyData community
+WWW=		https://github.com/pydata/pydata-sphinx-theme
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -28,6 +30,6 @@ post-patch:
 	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
 
 post-install:
-	cd ${WRKDIR}/static/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PYTHON_SITELIBDIR}/pydata_sphinx_theme/theme/pydata_sphinx_theme/static/
+	cd ${WRKDIR}/static/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PYTHON_SITELIBDIR}/pydata_sphinx_theme/
 
 .include <bsd.port.mk>

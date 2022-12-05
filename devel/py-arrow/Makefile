@@ -1,11 +1,12 @@
 PORTNAME=	arrow
-PORTVERSION=	1.2.2
+PORTVERSION=	1.2.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Better dates and times for Python
+WWW=		https://github.com/arrow-py/arrow
 
 LICENSE=	APACHE20
 

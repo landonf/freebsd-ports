@@ -1,10 +1,11 @@
 PORTNAME=	llhttp
-PORTVERSION=	6.0.7
+PORTVERSION=	8.1.0
 DISTVERSIONPREFIX=	 release/v
 CATEGORIES=	www
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Port of http_parser to llparse
+WWW=		https://llhttp.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
@@ -13,10 +14,9 @@ USES=		cmake cpe
 
 CMAKE_ON=	BUILD_SHARED_LIBS BUILD_STATIC_LIBS
 
+PLIST_SUB=	PORTVERSION=${PORTVERSION} SHLIB_VER=${PORTVERSION:R}
+
 GH_ACCOUNT=	nodejs
 USE_GITHUB=	yes
-
-post-patch:
-	@${CP} ${FILESDIR}/libllhttp.pc.in ${WRKSRC}/libllhttp.pc.in
 
 .include <bsd.port.mk>

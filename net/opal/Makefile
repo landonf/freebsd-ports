@@ -1,11 +1,12 @@
 PORTNAME=	opal
 PORTVERSION=	3.10.10
-PORTREVISION=	29
+PORTREVISION=	30
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VoIP abstraction library
+WWW=		http://opalvoip.org/
 
 LICENSE=	MPL10
 

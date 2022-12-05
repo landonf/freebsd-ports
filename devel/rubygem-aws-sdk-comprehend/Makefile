@@ -1,10 +1,11 @@
 PORTNAME=	aws-sdk-comprehend
-PORTVERSION=	1.61.0
+PORTVERSION=	1.62.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official AWS Ruby gem for Amazon Comprehend
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-comprehend
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,18 +1,17 @@
 PORTNAME=	gitty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.1
-PORTREVISION=	4
+DISTVERSION=	0.7.0
 CATEGORIES=	devel
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Smart terminal helper for git projects
+WWW=		https://github.com/muesli/gitty
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
-USE_GITHUB=	yes
-GH_ACCOUNT=	muesli
+GO_MODULE=	github.com/muesli/${PORTNAME}
 
 .include "${.CURDIR}/Makefile.deps"
 

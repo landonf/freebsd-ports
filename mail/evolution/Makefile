@@ -1,11 +1,13 @@
 PORTNAME=	evolution
-DISTVERSION=	3.44.3
+DISTVERSION=	3.44.4
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Integrated mail, calendar and address book distributed suite
+WWW=		https://wiki.gnome.org/Apps/Evolution
 
 LICENSE=	GFDL GPLv2+ LGPL21+ MPL11 OPENLDAP
 LICENSE_COMB=	multi

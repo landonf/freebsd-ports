@@ -1,11 +1,13 @@
 PORTNAME=	couchdb3
 PORTVERSION=	3.2.2
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	APACHE/couchdb/source/${DISTVERSION}
 DISTNAME=	apache-couchdb-${DISTVERSION}
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	JSON document database with HTTP API and scalable multi-master sync
+WWW=		https://couchdb.apache.org/
 
 LICENSE=	APACHE20 BSD3CLAUSE ISCL OFL11 WTFPL
 LICENSE_COMB=	multi
@@ -54,6 +56,7 @@ ERLVER?=	24
 LOGDIR?=	/var/log/${PORTNAME}
 LOGFILE?=	${LOGDIR}/couch.log
 RELDIR=		${APPDIR}/releases/${DISTVERSION}
+RUNDIR=		/var/run/${PORTNAME}
 
 .include <bsd.port.options.mk>
 
@@ -111,7 +114,8 @@ post-install:
 		-exec ${STRIP_CMD} {} +
 	@${MKDIR} \
 		${STAGEDIR}${DBDIR} \
-		${STAGEDIR}${LOGDIR}
+		${STAGEDIR}${LOGDIR} \
+		${STAGEDIR}${RUNDIR}
 # fauxton UI is a required component
 	(cd ${WRKSRC}/share/www && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR})
 

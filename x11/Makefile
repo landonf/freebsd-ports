@@ -67,6 +67,7 @@
     SUBDIR += eterm
     SUBDIR += evilvte
     SUBDIR += evtest
+    SUBDIR += eww
     SUBDIR += fbdesk
     SUBDIR += fbpanel
     SUBDIR += find-cursor
@@ -171,6 +172,7 @@
     SUBDIR += libXvMC
     SUBDIR += libXxf86dga
     SUBDIR += libXxf86vm
+    SUBDIR += libclipboard
     SUBDIR += libdmx
     SUBDIR += libexo
     SUBDIR += libfakekey
@@ -266,6 +268,7 @@
     SUBDIR += nwg-look
     SUBDIR += nwg-menu
     SUBDIR += nxcomp
+    SUBDIR += openrgb
     SUBDIR += p5-Clipboard
     SUBDIR += p5-X11-GUITest
     SUBDIR += p5-X11-IdleTime
@@ -295,6 +298,7 @@
     SUBDIR += pmenu
     SUBDIR += polybar
     SUBDIR += printscreen
+    SUBDIR += py-autotiling
     SUBDIR += py-caffeine-ng
     SUBDIR += py-i3-quickterm
     SUBDIR += py-i3ipc
@@ -313,6 +317,7 @@
     SUBDIR += rgb
     SUBDIR += rofi
     SUBDIR += rofi-calc
+    SUBDIR += rofi-emoji
     SUBDIR += rofi-pass
     SUBDIR += rofi-wayland
     SUBDIR += roxterm
@@ -321,6 +326,7 @@
     SUBDIR += runner
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
+    SUBDIR += salut
     SUBDIR += sbxkb
     SUBDIR += screen-message
     SUBDIR += screengrab
@@ -331,6 +337,7 @@
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap
+    SUBDIR += shotman
     SUBDIR += showkeys
     SUBDIR += showmethekey
     SUBDIR += simplestroke
@@ -359,6 +366,7 @@
     SUBDIR += swaylock-effects
     SUBDIR += swaync
     SUBDIR += swayr
+    SUBDIR += swayrbar
     SUBDIR += swaysettings
     SUBDIR += sxhkd
     SUBDIR += sxpc
@@ -373,6 +381,7 @@
     SUBDIR += tilda
     SUBDIR += tilix
     SUBDIR += tint
+    SUBDIR += tofi
     SUBDIR += trayer
     SUBDIR += ulauncher
     SUBDIR += urxvt-font-size
@@ -482,6 +491,7 @@
     SUBDIR += xfce4-terminal
     SUBDIR += xfce4-verve-plugin
     SUBDIR += xfce4-whiskermenu-plugin
+    SUBDIR += xfce4-windowck-plugin
     SUBDIR += xfd
     SUBDIR += xfishtank
     SUBDIR += xforward

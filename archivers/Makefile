@@ -92,6 +92,7 @@
     SUBDIR += minizip-ng
     SUBDIR += mscompress
     SUBDIR += mtf
+    SUBDIR += nevada-toolset
     SUBDIR += nfpm
     SUBDIR += nomarch
     SUBDIR += nwreckdum
@@ -103,6 +104,7 @@
     SUBDIR += p5-Archive-Any-Plugin-Rar
     SUBDIR += p5-Archive-Extract
     SUBDIR += p5-Archive-Extract-Libarchive
+    SUBDIR += p5-Archive-Libarchive
     SUBDIR += p5-Archive-Peek
     SUBDIR += p5-Archive-Rar
     SUBDIR += p5-Archive-SimpleExtractor
@@ -173,16 +175,17 @@
     SUBDIR += pixz
     SUBDIR += plzip
     SUBDIR += ppmd
-    SUBDIR += ppmd-7z
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-acefile
     SUBDIR += py-borgbackup
+    SUBDIR += py-borgbackup11
     SUBDIR += py-brotli
     SUBDIR += py-brotlicffi
     SUBDIR += py-brotlipy
     SUBDIR += py-bup
     SUBDIR += py-bz2file
+    SUBDIR += py-compressed-rtf
     SUBDIR += py-libarchive-c
     SUBDIR += py-lz4
     SUBDIR += py-lzma
@@ -232,6 +235,7 @@
     SUBDIR += szip
     SUBDIR += tar-stream-chunker
     SUBDIR += tardy
+    SUBDIR += tartest
     SUBDIR += thunar-archive-plugin
     SUBDIR += torrentzip
     SUBDIR += ucl
@@ -270,6 +274,7 @@
     SUBDIR += zlib-ng
     SUBDIR += zoo
     SUBDIR += zopfli
+    SUBDIR += zpaqfranz
     SUBDIR += zstd
     SUBDIR += zstr
     SUBDIR += zutils

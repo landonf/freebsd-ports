@@ -6,8 +6,12 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Server-side data ingestion and transformation tool
+WWW=		https://www.elastic.co/products/logstash
 
 LICENSE=	APACHE20
+
+DEPRECATED=	No longer maintained and supported.
+EXPIRATION_DATE=	2023-01-01
 
 RUN_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 

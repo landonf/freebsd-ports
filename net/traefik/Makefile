@@ -1,18 +1,18 @@
 PORTNAME=	traefik
-PORTVERSION=	2.8.1
-PORTREVISION=	1
+PORTVERSION=	2.9.5
 CATEGORIES=	net
 MASTER_SITES=	LOCAL/riggs/${PORTNAME}
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	High availability reverse proxy and load balancer
+WWW=		https://traefik.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BUILD_DEPENDS=	go-bindata:devel/go-bindata
 
-USES=		cpe go:1.18,modules tar:xz
+USES=		cpe go:modules tar:xz
 
 USE_RC_SUBR=	traefik
 

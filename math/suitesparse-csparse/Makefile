@@ -1,8 +1,9 @@
 PORTNAME=	${MPORTNAME:tl}
-PORTVERSION=	3.2.0
+PORTVERSION=	4.0.0
 CATEGORIES=	math
 
 COMMENT=	Concise Sparse Matrix package
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	LGPL21+
 

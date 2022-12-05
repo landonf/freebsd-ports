@@ -1,11 +1,13 @@
 PORTNAME=	github-backup-utils
 PORTVERSION=	3.5.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/github/backup-utils/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GitHub Enterprise Backup Utilities
+WWW=		https://github.com/github/backup-utils
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

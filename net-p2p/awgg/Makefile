@@ -1,22 +1,18 @@
 PORTNAME=	awgg
-PORTVERSION=	0.6.0
-PORTREVISION=	8
+DISTVERSION=	0.6.0.6034-beta
 CATEGORIES=	net-p2p
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Advanced wget GUI
-
-DEPRECATED=	Depends on expired ftp/axel
-EXPIRATION_DATE=2022-09-30
+WWW=		https://github.com/Nenirey/AWGG
 
 LICENSE=	GPLv2
 
 RUN_DEPENDS=	aria2c:www/aria2 \
 		wget:ftp/wget \
 		curl:ftp/curl \
-		yt-dlp:www/yt-dlp \
-		axel:ftp/axel
+		yt-dlp:www/yt-dlp
 
 gtk2_CONFLICTS_INSTALL=	${PORTNAME}-qt5
 qt5_CONFLICTS_INSTALL=	${PORTNAME}-gtk2
@@ -28,7 +24,7 @@ USE_XORG=	x11
 USE_GITHUB=	yes
 GH_ACCOUNT=	Nenirey
 GH_PROJECT=	AWGG
-GH_TAGNAME=	5dc1329
+GH_TAGNAME=	6daa550
 
 DESKTOP_ENTRIES="AWGG" \
 		"Advanced wget GUI" \

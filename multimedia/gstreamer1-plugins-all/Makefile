@@ -1,10 +1,10 @@
 PORTNAME=	gstreamer1-plugins-all
-PORTVERSION=	1.16
-PORTREVISION=	2
+PORTVERSION=	1.20
 CATEGORIES=	multimedia
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Meta-port of all GStreamer 1.x plugins
+WWW=		https://gstreamer.freedesktop.org/
 
 USES=		gstreamer metaport
 

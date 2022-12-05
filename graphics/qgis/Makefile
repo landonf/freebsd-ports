@@ -1,11 +1,11 @@
 PORTNAME=	qgis
-DISTVERSION=	3.26.1
-PORTREVISION=	2
+DISTVERSION=	3.28.1
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Free and Open Source Geographic Information System
+WWW=		https://qgis.org/en/site/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
@@ -45,7 +45,7 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libprotobuf-lite.so:devel/protobuf \
 		libqjson-qt5.so:devel/qjson \
 		libqscintilla2_qt5.so:devel/qscintilla2-qt5 \
-		libqt5keychain.so:security/qtkeychain \
+		libqt5keychain.so:security/qtkeychain@qt5 \
 		libqwt6.so:x11-toolkits/qwt6 \
 		libspatialindex.so:devel/spatialindex \
 		libspatialite.so:databases/spatialite \
@@ -70,6 +70,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=2.2.4:math/py-matplotlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>=3.0.5:devel/py-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}nbformat>=5.0.7:devel/py-nbformat@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}netCDF4>=1.6.0:science/py-netCDF4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}networkx>=2.1:math/py-networkx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}nltk>=3.4.1:textproc/py-nltk@${PY_FLAVOR} \
 		${PYNUMPY} \
@@ -98,30 +99,29 @@ RUN_DEPENDS=	astyle:devel/astyle \
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features desktop-file-utils \
-		fortran gl gmake gnome pgsql pyqt:5 python:3.7+ qca qt:5 \
+		fortran gl gmake gnome pgsql pyqt:5 python:3.8+ qca qt:5 \
 		shebangfix sqlite:3 tar:bz2
 USE_GL=		gl
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-USE_PYQT=	pyqt5 qscintilla2 pysip sip 
-USE_QT=		3d buildtools_build core concurrent dbus declarative \
-		designer_build qdoc_build gamepad gui linguist_build location \
-		network printsupport qmake_build script serialport \
-		sql sql-pgsql sql-sqlite3 svg uitools_build \
+USE_PYQT=	pyqt5 qscintilla2 pysip sip
+USE_QT=		3d buildtools:build core concurrent dbus declarative \
+		designer:build qdoc:build gamepad gui linguist:build location \
+		network printsupport qmake:build script serialport \
+		sql sql-pgsql sql-sqlite3 svg uitools:build \
 		webengine webkit widgets xml
 
 SHEBANG_FILES=	src/plugins/grass/scripts/*.py
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
-		-DCMAKE_POLICY_DEFAULT_CMP0056:STRING=NEW \
 		-DPYRCC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER} \
 		-DPYUIC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
 		-DQSCI_SIP_DIR:PATH=${PYQT_SIPDIR}/Qsci \
 		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt5/qwt6 \
 		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt5/libqwt6.so \
 		-DQGIS_MANUAL_SUBDIR:PATH=share/man
-CMAKE_ON=	USE_OPENCL WITH_3D WITH_ASTYLE \
-		WITH_BINDINGS WITH_CUSTOM_WIDGETS WITH_EPT  WITH_INTERNAL_LAZPERF \
+CMAKE_ON=	USE_OPENCL WITH_3D WITH_ASTYLE WITH_BINDINGS \
+		WITH_COPC WITH_CUSTOM_WIDGETS WITH_EPT  WITH_INTERNAL_LAZPERF \
 		WITH_POSTGRESQL WITH_PDAL
 CMAKE_OFF=	ENABLE_TESTS WITH_INTERNAL_MDAL WITH_QWTPOLAR
 

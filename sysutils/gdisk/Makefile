@@ -1,11 +1,13 @@
 PORTNAME=	gdisk
 PORTVERSION=	1.0.9
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/gptfdisk/gptfdisk/${PORTVERSION}
 DISTNAME=	gptfdisk-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GPT fdisk
+WWW=		https://www.rodsbooks.com/fixparts/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,5 @@
 PORTNAME=	enlightenment
-PORTVERSION=	0.25.3
+PORTVERSION=	0.25.4
 PORTEPOCH=	2
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/apps/${PORTNAME}/
@@ -7,6 +7,7 @@ DIST_SUBDIR=	enlightenment
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Artistic and fast X window manager
+WWW=		https://www.enlightenment.org/
 
 LICENSE=	BSD2CLAUSE
 
@@ -52,7 +53,7 @@ ENLIGHTENMENT_ARCH=	${OPSYS:tl}-arm
 ENLIGHTENMENT_ARCH=	${OPSYS:tl}-${CURRENT_ARCH}
 .endif
 
-ENLIGHTENMENT_VERSION=	0.25.3
+ENLIGHTENMENT_VERSION=	0.25.4
 PLIST_SUB=              ENLIGHTENMENT_ARCH=${ENLIGHTENMENT_ARCH}-${ENLIGHTENMENT_VERSION}
 
 .include <bsd.port.mk>

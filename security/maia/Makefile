@@ -1,10 +1,11 @@
 PORTNAME=	maia
 DISTVERSION=	1.0.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	security
 
 MAINTAINER=	ek@purplehat.org
 COMMENT=	Web-based management system based on amavisd-new and SpamAssassin
+WWW=		http://www.maiamailguard.com/
 
 LICENSE=GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,10 +1,11 @@
 PORTNAME=	pkgload
-DISTVERSION=	1.3.0
+DISTVERSION=	1.3.2
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Simulate Package Installation and Attach
+WWW=		https://github.com/r-lib/pkgload
 
 LICENSE=	GPLv3
 

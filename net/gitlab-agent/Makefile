@@ -1,11 +1,11 @@
 PORTNAME=	gitlab-agent
-PORTVERSION=	15.1.0
+PORTVERSION=	15.5.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	GitLab kubernetes agent
+WWW=		https://gitlab.com/gitlab-org/cluster-integration/gitlab-agent
 
 LICENSE=	MIT
 

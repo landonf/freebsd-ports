@@ -1,10 +1,11 @@
 PORTNAME=	broom
-DISTVERSION=	1.0.0
+DISTVERSION=	1.0.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Convert Statistical Analysis Objects into Tidy Data Frames
+WWW=		https://cran.r-project.org/web/packages/broom/
 
 LICENSE=	MIT
 

@@ -1,11 +1,12 @@
 PORTNAME=	zodbpickle
-PORTVERSION=	2.3
+PORTVERSION=	2.4
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python pickling interface for ZODB
+WWW=		https://github.com/zopefoundation/zodbpickle
 
 LICENSE=	PSFL ZPL21
 LICENSE_COMB=	multi

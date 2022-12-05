@@ -1,10 +1,11 @@
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.6
+DISTVERSION=	1.9.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Fast and lightweight data forwarder
+WWW=		https://fluentbit.io/
 
 LICENSE=	APACHE20
 

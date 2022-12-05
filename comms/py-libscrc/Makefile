@@ -1,11 +1,12 @@
 PORTNAME=	libscrc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.8
+DISTVERSION=	1.8.1
 CATEGORIES=	comms python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zarychtam@plan-b.pwste.edu.pl
 COMMENT=	Python library for calculating various types of CRC
+WWW=		https://github.com/hex-in/libscrc
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,6 +18,9 @@ GH_ACCOUNT=	hex-in
 USE_PYTHON=	autoplist distutils
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+
+post-install:
+	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
 
 do-test:
 	@cd ${TEST_WRKSRC} && for test in \

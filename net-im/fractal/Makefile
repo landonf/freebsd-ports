@@ -1,14 +1,15 @@
 PORTNAME=	fractal
 DISTVERSION=	4.4.0
-PORTREVISION=	10
+PORTREVISION=	13
 CATEGORIES=	net-im
 MASTER_SITES=	https://gitlab.gnome.org/World/fractal/uploads/${GL_HASH}/
 
 PATCH_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/commit/
 PATCHFILES+=	6fa1a23596d6.patch:-p1 # https://gitlab.gnome.org/GNOME/fractal/-/merge_requests/867
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	GTK+ Matrix IM client
+WWW=		https://wiki.gnome.org/Apps/Fractal
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

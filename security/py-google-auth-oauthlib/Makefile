@@ -1,11 +1,12 @@
 PORTNAME=	google-auth-oauthlib
-PORTVERSION=	0.5.2
+PORTVERSION=	0.5.3
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Authentication Library
+WWW=		https://github.com/googleapis/google-auth-library-python-oauthlib
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

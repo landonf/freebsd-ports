@@ -1,5 +1,6 @@
 PORTNAME=	mprime
 PORTVERSION=	30.7b9
+PORTREVISION=	1
 CATEGORIES=	math benchmarks net
 MASTER_SITES=	http://www.mersenne.org/ftp_root/gimps/ \
 		ftp://mersenne.org/gimps/
@@ -7,6 +8,7 @@ DISTNAME=	p95v${PORTVERSION:R}${PORTVERSION:E}.source
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Great Internet Mersenne Prime Search
+WWW=		https://www.mersenne.org/
 
 LICENSE=	EULA
 LICENSE_NAME=	EULA

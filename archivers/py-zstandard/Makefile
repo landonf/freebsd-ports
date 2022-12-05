@@ -1,11 +1,12 @@
 PORTNAME=	zstandard
-DISTVERSION=	0.18.0
+DISTVERSION=	0.19.0
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Zstandard bindings for Python, a full-featured version
+WWW=		https://github.com/indygreg/python-zstandard
 
 LICENSE=	BSD2CLAUSE
 

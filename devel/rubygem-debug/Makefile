@@ -1,10 +1,11 @@
 PORTNAME=	debug
-DISTVERSION=	1.6.2
+DISTVERSION=	1.6.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Debugging functionality for Ruby
+WWW=		https://rubygems.org/gems/debug
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

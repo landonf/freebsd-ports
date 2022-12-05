@@ -7,9 +7,12 @@ EXTRACT_SUFX=	-a1.tar.gz
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source re-implementation of Alien versus Predator
+WWW=		https://icculus.org/avp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		Doesn't build with NDEBUG defined, error: invalid operands to binary expression ('int' and 'std::nullptr_t')
 
 USES=		cmake compiler:c++11-lang gl openal sdl
 USE_GL=		gl

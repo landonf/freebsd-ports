@@ -1,10 +1,11 @@
 PORTNAME=	cp2k
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2022.1
+DISTVERSION=	2022.2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Quantum chemistry and solid state physics software package
+WWW=		https://www.cp2k.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

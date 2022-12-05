@@ -1,10 +1,11 @@
 PORTNAME=	tor
-DISTVERSION=	0.4.7.8
+DISTVERSION=	0.4.7.11
 CATEGORIES=	security net
 MASTER_SITES=	TOR
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Anonymizing overlay network for TCP
+WWW=		https://www.torproject.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

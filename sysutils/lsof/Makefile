@@ -2,12 +2,13 @@
 #       to commit it.  I (ler) don't have access to all the ARCH's
 
 PORTNAME=	lsof
-DISTVERSION=	4.95.0
+DISTVERSION=	4.96.4
 PORTEPOCH=	8
 CATEGORIES=	sysutils
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Lists information about open files (similar to fstat(1))
+WWW=		https://github.com/lsof-org/lsof
 
 LICENSE=	lsof
 LICENSE_NAME=	lsof

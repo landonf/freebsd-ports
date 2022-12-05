@@ -1,10 +1,12 @@
 PORTNAME=	guile
 PORTVERSION=	3.0.8
+PORTREVISION=	2
 CATEGORIES=	lang scheme
 MASTER_SITES=	GNU
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GNU Ubiquitous Intelligent Language for Extension
+WWW=		https://www.gnu.org/software/guile/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
@@ -21,7 +23,6 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 USES=		charsetfix compiler:gcc-c++11-lib cpe gmake iconv libtool \
 		makeinfo pathfix pkgconfig readline tar:lz
 CPE_VENDOR=	gnu
-USE_GCC=	12
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

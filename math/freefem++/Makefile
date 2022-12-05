@@ -1,11 +1,12 @@
 PORTNAME=	freefem++
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Partial differential equation solver
+WWW=		http://www.freefem.org/ff++/
 
 LICENSE=	LGPL3
 

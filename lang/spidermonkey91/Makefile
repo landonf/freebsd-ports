@@ -1,6 +1,6 @@
 PORTNAME=	spidermonkey
-DISTVERSION=	91.8.0
-PORTREVISION=	4
+DISTVERSION=	91.13.0
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source
 PKGNAMESUFFIX=	${SP_VER}
@@ -8,6 +8,7 @@ DISTNAME=	firefox-${DISTVERSION}esr.source
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Standalone JavaScript based from Mozilla 91-esr
+WWW=		https://spidermonkey.dev/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,7 +22,7 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 		libnspr4.so:devel/nspr
 
 USES=		compiler:c++17-lang gmake localbase pathfix pkgconfig \
-		python:build readline tar:xz
+		python:3.7-3.10,build readline tar:xz
 USE_LDCONFIG=	yes
 SP_VER=		91
 HAS_CONFIGURE=	yes

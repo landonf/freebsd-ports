@@ -5,18 +5,19 @@
 
 PORTNAME=	libgit2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.2
+DISTVERSION=	1.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
+WWW=		https://libgit2.github.com/
 
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libpcre2-8.so:devel/pcre2 \
 		libhttp_parser.so:www/http-parser
 
-USES=		cmake cpe pkgconfig ssl
+USES=		cmake cpe pkgconfig python:build ssl
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 

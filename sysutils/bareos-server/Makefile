@@ -1,6 +1,6 @@
 PORTNAME=	bareos
 DISTVERSIONPREFIX=	Release/
-DISTVERSION=	21.1.3
+DISTVERSION=	21.1.5
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 PKGNAMEPREFIX?=	#
@@ -8,6 +8,7 @@ PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT?=	Backup archiving recovery open sourced (server)
+WWW=		https://www.bareos.org/
 
 LICENSE=	AGPLv3 LGPL3
 LICENSE_COMB=	multi
@@ -73,8 +74,8 @@ SCSICRYPTO_CMAKE_OFF=	-Dscsi-crypto=OFF
 
 .if ${PKGNAMESUFFIX} == "-client" || ${PKGNAMESUFFIX} == "-server"  #Till end of the file
 PYTHON_USES=		python
-PYTHON_CMAKE_ON=	-Dpython=ON
-PYTHON_CMAKE_OFF=	-Dpython=OFF
+PYTHON_CMAKE_ON=	-DENABLE_PYTHON=ON
+PYTHON_CMAKE_OFF=	-DENABLE_PYTHON=OFF
 PYTHON_PLUGIN=		yes
 
 .if !defined(WITH_CLIENT_ONLY)
@@ -206,6 +207,9 @@ post-patch:
 .if ${PKGNAMESUFFIX} == "-server"
 	@${REINPLACE_CMD}  '45d' ${WRKSRC}/core/src/CMakeLists.txt
 	@${REINPLACE_CMD}  '51d' ${WRKSRC}/core/src/plugins/CMakeLists.txt
+.endif
+.if ${PKGNAMESUFFIX} == "-client"
+	@${REINPLACE_CMD} -e 's|-Werror -Wall|-Wall|g' ${PATCH_WRKSRC}/core/CMakeLists.txt
 .endif
 
 post-extract:

@@ -5,6 +5,7 @@ CATEGORIES=	irc kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	IRC client for KDE
+WWW=		http://www.kvirc.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/doc/ABOUT-LICENSE
@@ -20,7 +21,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons i18n notifications \
 		service widgetsaddons windowsystem xmlgui
 USE_QT=		core dbus gui multimedia network phonon4 printsupport sql svg \
 		webkit widgets x11extras xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext xrender xscrnsaver
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes

@@ -1,10 +1,12 @@
 PORTNAME=	gp2c
 DISTVERSION=	0.0.12
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/GP2C/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Package for translating GP routines into C
+WWW=		https://pari.math.u-bordeaux.fr/pub/pari/manuals/gp2c/gp2c.html
 
 LICENSE=	GPLv2
 

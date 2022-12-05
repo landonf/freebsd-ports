@@ -1,10 +1,12 @@
 PORTNAME=	libvmod-querystring
 DISTVERSION=	v2.0.3
+PORTREVISION=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Varnish Module (vmod) for query string manipulation
+WWW=		https://github.com/Dridi/libvmod-querystring
 
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/LICENSE

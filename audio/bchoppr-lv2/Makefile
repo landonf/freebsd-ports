@@ -1,10 +1,11 @@
 PORTNAME=	bchoppr
-DISTVERSION=	1.10.10
+DISTVERSION=	1.12.0
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Audio stream chopping LV2 plugin
+WWW=		https://github.com/sjaehn/BChoppr
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

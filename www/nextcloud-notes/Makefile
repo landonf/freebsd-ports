@@ -1,5 +1,5 @@
 PORTNAME=	notes
-PORTVERSION=	4.4.0
+PORTVERSION=	4.6.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www editors
 MASTER_SITES=	https://github.com/nextcloud/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
@@ -10,11 +10,12 @@ DIST_SUBDIR=	nextcloud/${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Notes app for Nextcloud
+WWW=		https://apps.nextcloud.com/apps/notes
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=22:www/nextcloud@${PHP_FLAVOR}
+RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=25:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
 IGNORE_WITH_PHP=	82

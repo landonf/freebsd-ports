@@ -1,11 +1,12 @@
 PORTNAME=	opentype-sanitizer
-PORTVERSION=	8.2.1
+PORTVERSION=	9.0.0
 CATEGORIES=	x11-fonts python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python wrapper for the OpenType Sanitizer
+WWW=		https://github.com/googlefonts/ots-python
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

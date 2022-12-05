@@ -1,5 +1,5 @@
 PORTNAME=	xwayland
-PORTVERSION=	22.1.3
+PORTVERSION=	22.1.5
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -11,6 +11,7 @@ PATCHFILES+=	1f7b28547011.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserve
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X11 server as Wayland Client
+WWW=		https://wayland.freedesktop.org/xserver.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

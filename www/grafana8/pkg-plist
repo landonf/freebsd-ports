@@ -3262,6 +3262,9 @@ bin/grafana-server
 %%DATADIR%%/public/build/1523.%%GRAFANA_BUILDHASH%%.js
 %%DATADIR%%/public/build/1549.%%GRAFANA_BUILDHASH%%.js
 %%DATADIR%%/public/build/1549.%%GRAFANA_BUILDHASH%%.js.map
+%%DATADIR%%/public/build/1603.%%GRAFANA_BUILDHASH%%.js
+%%DATADIR%%/public/build/1603.%%GRAFANA_BUILDHASH%%.js.LICENSE.txt
+%%DATADIR%%/public/build/1603.%%GRAFANA_BUILDHASH%%.js.map
 %%DATADIR%%/public/build/1657.%%GRAFANA_BUILDHASH%%.js
 %%DATADIR%%/public/build/1657.%%GRAFANA_BUILDHASH%%.js.LICENSE.txt
 %%DATADIR%%/public/build/1657.%%GRAFANA_BUILDHASH%%.js.map
@@ -3512,9 +3515,6 @@ bin/grafana-server
 %%DATADIR%%/public/build/7594.%%GRAFANA_BUILDHASH%%.js
 %%DATADIR%%/public/build/7594.%%GRAFANA_BUILDHASH%%.js.LICENSE.txt
 %%DATADIR%%/public/build/7594.%%GRAFANA_BUILDHASH%%.js.map
-%%DATADIR%%/public/build/7889.%%GRAFANA_BUILDHASH%%.js
-%%DATADIR%%/public/build/7889.%%GRAFANA_BUILDHASH%%.js.LICENSE.txt
-%%DATADIR%%/public/build/7889.%%GRAFANA_BUILDHASH%%.js.map
 %%DATADIR%%/public/build/7893.%%GRAFANA_BUILDHASH%%.js
 %%DATADIR%%/public/build/7893.%%GRAFANA_BUILDHASH%%.js.LICENSE.txt
 %%DATADIR%%/public/build/7893.%%GRAFANA_BUILDHASH%%.js.map

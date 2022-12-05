@@ -1,11 +1,11 @@
 PORTNAME=	lego
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.8.0
-PORTREVISION=	2
+DISTVERSION=	4.9.1
 CATEGORIES=	security
 
 MAINTAINER=	matt@matthoran.com
 COMMENT=	Let's Encrypt client and ACME library written in Go
+WWW=		https://github.com/go-acme/lego
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

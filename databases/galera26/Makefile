@@ -1,11 +1,12 @@
 PORTNAME=	galera
-PORTVERSION=	26.4.12
+PORTVERSION=	26.4.13
 DISTVERSIONPREFIX=	release_
 CATEGORIES=	databases
 PKGNAMESUFFIX=	26
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	Synchronous multi-master replication engine
+WWW=		https://galeracluster.com/
 
 LICENSE=	GPLv2
 
@@ -30,7 +31,7 @@ USES=		compiler:c++11-lang python:build cmake ssl
 
 USE_GITHUB=	yes
 GH_TUPLE?=	codership:galera:${DISTVERSIONPREFIX}${PORTVERSION}${DISTVERSIONSUFFIX} \
-		codership:wsrep-API:02ed17238cee97b5a3ea2495ca87b63570403f01:dummy/wsrep/src
+		codership:wsrep-API:694d6ca47f5eec7873be99b7d6babccf633d1231:dummy/wsrep/src
 
 CMAKE_ARGS+=	-DGALERA_REVISION=${GH_TAGNAME}
 

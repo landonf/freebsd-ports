@@ -1,10 +1,12 @@
 PORTNAME=	cloudcompare
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.12.4
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	3D point cloud processing software
+WWW=		https://www.cloudcompare.org/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
@@ -15,7 +17,7 @@ GH_ACCOUNT=	CloudCompare
 GH_PROJECT=	${GH_ACCOUNT}
 GH_TUPLE=	CloudCompare:CCCoreLib:f0d5450:CloudCompare/libs/qCC_db/extern/CCCoreLib
 
-USE_QT=		concurrent core gui opengl printsupport widgets buildtools_build qmake_build svg linguisttools_build
+USE_QT=		concurrent core gui opengl printsupport widgets buildtools:build qmake:build svg linguisttools:build
 USE_LDCONFIG=	yes
 
 # PDAL support disabled ATM
@@ -73,7 +75,7 @@ PLUGINS_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 			libfreetype.so:print/freetype2 \
 			libpng.so:graphics/png \
 			libtiff.so:graphics/tiff \
-			libvtkCommonCore-9.1.so:math/vtk9
+			libvtkCommonCore-${VTK_VER}.so:math/vtk${VTK_VER:R}
 PLUGINS_IMPLIES=	SHAPELIB
 
 pre-configure:
@@ -86,4 +88,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/snap/gui/cloudcompare.desktop ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/snap/gui/cloudcompare.png ${STAGEDIR}${PREFIX}/share/pixmaps
 
+.include <../../math/vtk9/Makefile.version>
 .include <bsd.port.mk>

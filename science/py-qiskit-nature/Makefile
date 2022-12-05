@@ -1,11 +1,11 @@
 PORTNAME=	qiskit-nature
-DISTVERSION=	0.4.3
+DISTVERSION=	0.4.5
 CATEGORIES=	science python # quantum-computing, quantum-chemistry
-#MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Natural science submodule for Quiskit framework for quantum computing
+WWW=		https://qiskit.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}h5py>0:science/py-h5py@${PY_FLAVOR} \
 		${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=5:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}qiskit-terra>=0.20.0:science/py-qiskit-terra@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}qiskit-terra>=0.21.0:science/py-qiskit-terra@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rustworkx>=0.10.1:math/py-rustworkx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=0.20.0:science/py-scikit-learn@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=1.4:science/py-scipy@${PY_FLAVOR} \
@@ -22,6 +22,8 @@ QC_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyscf>0:science/py-pyscf@${PY_FLAVOR} # quant
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS} \
 		${QC_DEPENDS}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ddt>0:devel/py-ddt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}joblib>0:devel/py-joblib@${PY_FLAVOR} # also threadctl is required but it is currently broken on FreeBSD
 
 USES=		python:3.7+
 USE_PYTHON=	distutils autoplist pytest # several tests fail with "No module named 'threadpoolctl'", see https://reviews.freebsd.org/D35513

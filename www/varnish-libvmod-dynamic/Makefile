@@ -1,10 +1,11 @@
 PORTNAME=	libvmod-dynamic
-PORTVERSION=	20220202
+PORTVERSION=	20221117
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Varnish Module (vmod) for dynamic backends
+WWW=		https://github.com/nigoroll/libvmod-dynamic
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -29,7 +30,7 @@ CFLAGS+=	-I${WRKSRC}/src
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nigoroll
-GH_TAGNAME=	9666973
+GH_TAGNAME=	5c702fa
 
 OPTIONS_DEFINE=	DOCS
 

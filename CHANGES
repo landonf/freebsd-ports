@@ -10,6 +10,82 @@ in the release notes and/or placed into UPDATING.
 
 All ports committers are allowed to commit to this file.
 
+20221026:
+AUTHOR: bapt@FreeBSD.org
+  3 new features are available now: PIE, RELRO, BIND_NOW, each port can
+  specify the inability to support any via <feature>_UNSAFE
+
+  All 3 are off by default, the intent is to activate following the freebsd
+  base activation of the same features.
+
+  End users can activate/deactivate globally via WITH_/WITHOUT_ <feature>
+
+20221014:
+AUTHOR: adamw@FreeBSD.org
+
+  USES=luajit has been added to support a unified luajit version. The
+  default here is luajit-devel, which should be the right version for
+  nearly everybody.
+
+  luajit-openresty is a drop-in replacement for anything that luajit-devel
+  works in, though not necessarily the other way around. If a program uses
+  the openresty-specific API then you will need USES=luajit:luajit-openresty.
+
+  The standard USES for most ports:
+    USES=luajit
+
+  For anything that requires the openresty API:
+    USES=luajit:luajit-openresty
+
+20220911:
+AUTHOR: zirias@FreeBSD.org
+
+  kde.mk, qt.mk and pyqt.mk now use a colon for component suffixes
+
+  Suffixes for build, run and test (for pyqt) dependencies used an underscore
+  previously. This was not in line with most other USES, using a colon for
+  that purpose.
+
+  So if you previously had for example
+
+	USE_QT=	buildtools_build
+
+  replace it with
+
+	USE_QT= buildtools:build
+
+20220907:
+AUTHOR: se@FreeBSD.org
+
+  The convention of a WWW: line at the end of each port's pkg-descr file
+  has been changed to a WWW= definition in the port's Makefile. All ports
+  have been converted to follow this new scheme.
+
+  The portlint and portfmt ports will be updated, but may erroneously flag
+  the new convention as incorrect until the new versions have been installed.
+
+20220826:
+AUTHOR: tcberner@FreeBSD.org
+
+  A new Uses for 'vala' has been added.
+
+  To depend on libvala, use
+  	USES=vala:lib
+  to only add a build-time dependency, use
+  	USES=vala:build
+
+20220821:
+AUTHOR: kde@FreeBSD.org
+
+  qt.mk now supports both Qt 5 and Qt 6.
+
+  To make use of Qt6 write:
+
+        USES=qt:6
+        USE_QT=list of Qt6 components
+
+  Please take a look at qt.mk to see the available components.
+
 20220722:
 AUTHOR: portmgr@FreeBSD.org
 

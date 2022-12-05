@@ -4,12 +4,13 @@
 
 PORTNAME=	dspam
 PORTVERSION=	3.10.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	danny@dannywarren.com
 COMMENT=	Bayesian spam filter
+WWW=		http://dspam.sourceforge.net/
 
 LICENSE=	AGPLv3
 

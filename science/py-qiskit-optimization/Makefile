@@ -1,5 +1,6 @@
 PORTNAME=	qiskit-optimization
 DISTVERSION=	0.4.0-3
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g750c2c8
 CATEGORIES=	science python # quantum-computing
 #MASTER_SITES=	CHEESESHOP
@@ -7,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Optimization submodule of the Quiskit framework for quantum computing
+WWW=		https://qiskit.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

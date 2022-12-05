@@ -1,12 +1,12 @@
 PORTNAME=	Email-Simple-FromHandle
-PORTVERSION=	0.054
-PORTREVISION=	1
+PORTVERSION=	0.055
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl library for making email objects from a filehandle
+WWW=		https://github.com/rjbs/Email-Simple-FromHandle
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

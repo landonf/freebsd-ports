@@ -1,11 +1,12 @@
 PORTNAME=	libfreefare
 PORTVERSION=	0.4.0
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	MIFARE contactless tag access library
+WWW=		https://github.com/nfc-tools/libfreefare/
 
 LICENSE=	LGPL3+
 

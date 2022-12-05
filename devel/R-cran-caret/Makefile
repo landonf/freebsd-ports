@@ -1,10 +1,11 @@
 PORTNAME=	caret
-DISTVERSION=	6.0-92
+DISTVERSION=	6.0-93
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Classification and Regression Training
+WWW=		https://topepo.github.io/caret/
 
 LICENSE=	GPLv2+
 

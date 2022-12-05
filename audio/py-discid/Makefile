@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Python libdiscid bindings
+WWW=		https://python-discid.readthedocs.io/en/latest/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
@@ -13,11 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 LIB_DEPENDS=	libdiscid.so:audio/libdiscid
 
 USES=		python:3.6+
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist distutils unittest
 
 NO_ARCH=	yes
-
-TEST_TARGET=	test
-DO_MAKE_TEST=	${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${PYSETUP}
 
 .include <bsd.port.mk>

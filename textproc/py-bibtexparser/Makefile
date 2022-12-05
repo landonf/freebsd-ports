@@ -1,11 +1,12 @@
 PORTNAME=	bibtexparser
-DISTVERSION=	1.3.0
+DISTVERSION=	1.4.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Bibtex parser
+WWW=		https://github.com/sciunto-org/python-bibtexparser
 
 LICENSE=	BSD3CLAUSE LGPL3
 LICENSE_COMB=	dual

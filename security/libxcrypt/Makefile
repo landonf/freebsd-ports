@@ -1,10 +1,11 @@
 PORTNAME=	libxcrypt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.4.28
+DISTVERSION=	4.4.33
 CATEGORIES=	security
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Extended crypt library for descrypt, md5crypt, bcrypt, and others
+WWW=		https://github.com/besser82/libxcrypt
 
 LICENSE=	LGPL21
 

@@ -1,11 +1,12 @@
 PORTNAME=	cmus
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.10.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Console-based music player with really cool features
+WWW=		https://cmus.github.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

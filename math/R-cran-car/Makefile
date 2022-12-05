@@ -1,10 +1,11 @@
 PORTNAME=	car
-DISTVERSION=	3.1-0
+DISTVERSION=	3.1-1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Companion to Applied Regression
+WWW=		https://r-forge.r-project.org/projects/car/
 
 LICENSE=	GPLv2+
 

@@ -1,10 +1,12 @@
 PORTNAME=	octave
 PORTVERSION=	${OCTAVE_VERSION}
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	GNU
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	High-level interactive language for numerical computations
+WWW=		https://www.octave.org/
 
 LICENSE=	GPLv3
 
@@ -34,6 +36,7 @@ LIB_DEPENDS=	libGraphicsMagick.so:graphics/GraphicsMagick \
 		libsuitesparseconfig.so:math/suitesparse-config \
 		libcxsparse.so:math/suitesparse-cxsparse \
 		libklu.so:math/suitesparse-klu \
+		libspqr.so:math/suitesparse-spqr \
 		libumfpack.so:math/suitesparse-umfpack \
 		libglpk.so:math/glpk \
 		libgl2ps.so:print/gl2ps \
@@ -51,7 +54,7 @@ USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}/${PORTVERSION}
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_QT=		core gui help network opengl \
-		qmake_build buildtools_build linguist_build \
+		qmake:build buildtools:build linguist:build \
 		printsupport sql widgets \
 		xml
 USE_XORG=	x11 xext xfixes xft \

@@ -1,5 +1,5 @@
 PORTNAME=	gmic
-DISTVERSION=	3.1.5
+DISTVERSION=	3.1.6
 PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://gmic.eu/files/source/
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Framework for image processing
+WWW=		https://gmic.eu/
 
 LICENSE=	CeCILL
 LICENSE_NAME=	CeCILL

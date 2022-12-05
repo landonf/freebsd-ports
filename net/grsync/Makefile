@@ -1,11 +1,13 @@
 PORTNAME=	grsync
 PORTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.opbyte.it/release/ \
 		LOCAL/martymac
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	GTK frontend for rsync
+WWW=		https://www.opbyte.it/grsync
 
 LICENSE=	GPLv2
 

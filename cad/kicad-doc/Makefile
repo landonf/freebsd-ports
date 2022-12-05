@@ -1,5 +1,5 @@
 PORTNAME=	kicad
-PORTVERSION=	6.0.7
+PORTVERSION=	6.0.9
 CATEGORIES=	cad
 MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/
 PKGNAMESUFFIX=	-doc
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	KiCad Documentation and Help Files
+WWW=		https://gitlab.com/kicad/services/kicad-doc
 
 LICENSE=	GPLv3+ CC-BY-3.0
 LICENSE_COMB=	dual

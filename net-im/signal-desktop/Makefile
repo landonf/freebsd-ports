@@ -1,6 +1,7 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.53.0
+DISTVERSION=	5.56.0
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:yarn \
 		LOCAL/mikael/signal-desktop/:electron_gyp \
@@ -13,6 +14,7 @@ DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz:yarn \
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Cross-platform centralized encrypted messaging service
+WWW=		https://signal.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,22 +38,15 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libexpat.so:textproc/expat2 \
 		libFLAC.so:audio/flac \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libharfbuzz-subset.so:print/harfbuzz \
 		libharfbuzz.so:print/harfbuzz \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
-		libnssutil3.so:security/nss \
 		libopenh264.so:multimedia/openh264 \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
-		libplc4.so:devel/nspr \
-		libplds4.so:devel/nspr \
 		libpng16.so:graphics/png \
-		libsmime3.so:security/nss \
 		libsnappy.so:archivers/snappy \
 		libwebp.so:graphics/webp \
-		libwebpdemux.so:graphics/webp \
-		libwebpmux.so:graphics/webp \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxshmfence.so:x11/libxshmfence
 
@@ -85,8 +80,8 @@ _BUILD_DATE=	$$(date +'%s')
 
 ELECTRON_VER_MAJOR=	19
 
-NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.18.1-6b499cdcc952f1981c6367f68484cf3275be3b31-integrity
-NPM_RINGRTC_DIR=	npm-ringrtc-2.20.12-d2a43fa1e5bf46f4fd2e0bb04c017f0d9e824c7e
+NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.19.2-319da45eac91fe0809bd602528f841346050b7f4-integrity
+NPM_RINGRTC_DIR=	npm-ringrtc-2.20.14-928dae72e8009c5cc4dfb218d3007e2808acf5ab
 NPM_SQLITE3_DIR=	npm-better-sqlite3-7.5.0-3c4a7eebba3d5f5d8cb88fe83be1c01b8c0dea7d
 NPM_PLAYWRITE_DIR=	npm-playwright-core-1.17.1-a16e0f89284a0ed8ae6d77e1c905c84b8a2ba022-integrity
 NPM_ESBUILD_VERS=	0.14.28

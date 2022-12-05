@@ -1,11 +1,11 @@
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.11.17.0
-PORTREVISION=	1
+DISTVERSION=	1.12.6.2
 CATEGORIES?=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT?=	Advanced shading language for production GI renderers
+WWW=		https://github.com/AcademySoftwareFoundation/OpenShadingLanguage
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
@@ -23,7 +23,7 @@ RUN_DEPENDS=	llvm-config${LLVM_VER}:devel/llvm${LLVM_VER}
 
 USES=		bison cmake compiler:c++14-lang localbase ncurses qt:5
 
-USE_QT=		buildtools_build qmake_build
+USE_QT=		buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AcademySoftwareFoundation
@@ -33,18 +33,13 @@ CMAKE_ON=	ENABLERTTI OSL_BUILD_TESTS USE_LLVM_BITCODE USE_LIBCPLUSPLUS
 CMAKE_OFF=	USE_BOOST_WAVE
 CMAKE_ARGS+=	-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VER}" \
 		-DCMAKE_INSTALL_DOCDIR:STRING=${DOCSDIR} -DCMAKE_CXX_STANDARD=14
-# This flag fixes linking with clang 9.0 ??
-CXXFLAGS+=	-DNDEBUG
 
-OPTIONS_DEFINE=		MATERIALX OSLTOY
+OPTIONS_DEFINE=		OSLTOY
 OPTIONS_SUB=		yes
-
-MATERIALX_DESC=		Install material library
-MATERIALX_CMAKE_BOOL=	OSL_BUILD_MATERIALX
 
 OSLTOY_DESC=		Interactive shader edit and visualize tool
 OSLTOY_CMAKE_BOOL=	USE_QT
-OSLTOY_USE=		QT=buildtools_build,core,gui,qmake_build,widgets
+OSLTOY_USE=		QT=buildtools:build,core,gui,qmake:build,widgets
 
 #CXXFLAGS+=	-I${STAGEDIR}/include
 
@@ -64,7 +59,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,%%DATADIR%%,${DATADIR},' \
 		-e 's,%%PYCMD%%,${PYTHON_CMD},' \
 		${WRKSRC}/src/shaders/CMakeLists.txt \
-		${WRKSRC}/src/shaders/MaterialX/CMakeLists.txt \
 		${WRKSRC}/src/doc/CMakeLists.txt \
 		${WRKSRC}/src/liboslexec/CMakeLists.txt
 

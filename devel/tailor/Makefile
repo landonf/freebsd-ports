@@ -1,9 +1,11 @@
 PORTNAME=	tailor
 DISTVERSION=	0.9.37
+PORTREVISION=	1
 CATEGORIES=	devel python
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Migrates changesets between version control systems
+WWW=		https://gitlab.com/ports1/tailor/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

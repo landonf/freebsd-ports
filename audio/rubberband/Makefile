@@ -1,10 +1,11 @@
 PORTNAME=	rubberband
-DISTVERSION=	3.0.0
+DISTVERSION=	3.1.0
 CATEGORIES=	audio
 MASTER_SITES=	https://breakfastquay.com/files/releases/
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Audio time-stretching and pitch-shifting library and utility program
+WWW=		https://breakfastquay.com/rubberband/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

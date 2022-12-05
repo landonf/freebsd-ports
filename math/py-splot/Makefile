@@ -1,11 +1,13 @@
 PORTNAME=	splot
 PORTVERSION=	1.1.5.post1
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Visual analytics for spatial analysis with PySAL
+WWW=		https://splot.readthedocs.io/en/latest/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

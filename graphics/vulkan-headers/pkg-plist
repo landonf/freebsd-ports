@@ -27,6 +27,7 @@ include/vulkan/vulkan_macos.h
 include/vulkan/vulkan_metal.h
 include/vulkan/vulkan_raii.hpp
 include/vulkan/vulkan_screen.h
+include/vulkan/vulkan_static_assertions.hpp
 include/vulkan/vulkan_structs.hpp
 include/vulkan/vulkan_to_string.hpp
 include/vulkan/vulkan_vi.h
@@ -35,10 +36,13 @@ include/vulkan/vulkan_win32.h
 include/vulkan/vulkan_xcb.h
 include/vulkan/vulkan_xlib.h
 include/vulkan/vulkan_xlib_xrandr.h
+share/cmake/VulkanHeaders/VulkanHeadersConfig.cmake
+share/cmake/VulkanHeaders/VulkanHeadersConfigVersion.cmake
 share/vulkan/registry/apiconventions.py
 share/vulkan/registry/cgenerator.py
 share/vulkan/registry/generator.py
 share/vulkan/registry/genvk.py
+share/vulkan/registry/profiles/VP_KHR_roadmap_2022.json
 share/vulkan/registry/reg.py
 share/vulkan/registry/spec_tools/conventions.py
 share/vulkan/registry/spec_tools/util.py

@@ -1,10 +1,11 @@
 PORTNAME=	vulkan-extension-layer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.224
+DISTVERSION=	1.3.235
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Layer providing Vulkan features when native support is unavailable
+WWW=		https://github.com/KhronosGroup/Vulkan-ExtensionLayer
 
 LICENSE=	APACHE20
 
@@ -15,5 +16,6 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	Vulkan-ExtensionLayer
+CMAKE_OFF=	BUILD_TESTS
 
 .include <bsd.port.mk>

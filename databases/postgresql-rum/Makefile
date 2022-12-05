@@ -1,11 +1,12 @@
 PORTNAME=	rum
-PORTVERSION=	1.3.7
+PORTVERSION=	1.3.13
 PORTREVISION=	0
 CATEGORIES=	databases
 PKGNAMEPREFIX=	postgresql${PGSQL_VER:S/.//}-
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Inverted index with additional information in posting lists
+WWW=		https://github.com/postgrespro/rum
 
 LICENSE=	PostgreSQL
 

@@ -1,17 +1,19 @@
 PORTNAME=	knot-resolver
-DISTVERSION=	5.5.0
+DISTVERSION=	5.5.2
+PORTREVISION=	2
 CATEGORIES=	dns
 MASTER_SITES=	https://secure.nic.cz/files/knot-resolver/ \
 		https://dns.company/downloads/knot-resolver/
 
 MAINTAINER=	freebsd@dns.company
 COMMENT=	Caching full resolver implementation
+WWW=		https://www.knot-resolver.cz/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		flake8:devel/py-flake8@${PY_FLAVOR} \
 		lua51-cqueues>=20200726_1:devel/lua-cqueues@lua51 \
 		luacheck:devel/lua-luacheck
@@ -20,15 +22,14 @@ LIB_DEPENDS=	libdnssec.so:dns/knot3-lib \
 		libgnutls.so:security/gnutls \
 		libknot.so:dns/knot3-lib \
 		liblmdb.so:databases/lmdb \
-		libluajit-5.1.so:lang/luajit-openresty \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv \
 		libzscanner.so:dns/knot3-lib
 
 RUN_DEPENDS=	lua51-cqueues>=20200726_1:devel/lua-cqueues@lua51
 
-USES=		compiler:c11 libedit libtool meson ncurses ninja pkgconfig \
-		python:3.5+,build shebangfix tar:xz
+USES=		compiler:c11 libedit libtool luajit meson ncurses ninja \
+		pkgconfig python:3.5+,build shebangfix tar:xz
 
 USE_CXXSTD=	c++11
 

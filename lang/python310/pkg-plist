@@ -2179,7 +2179,7 @@ lib/python%%XYDOT%%/ensurepip/_bundled/__init__.py
 lib/python%%XYDOT%%/ensurepip/_bundled/__pycache__/__init__.cpython-%%XY%%.opt-1.pyc
 lib/python%%XYDOT%%/ensurepip/_bundled/__pycache__/__init__.cpython-%%XY%%.opt-2.pyc
 lib/python%%XYDOT%%/ensurepip/_bundled/__pycache__/__init__.cpython-%%XY%%.pyc
-lib/python%%XYDOT%%/ensurepip/_bundled/pip-22.2.1-py3-none-any.whl
+lib/python%%XYDOT%%/ensurepip/_bundled/pip-22.2.2-py3-none-any.whl
 lib/python%%XYDOT%%/ensurepip/_bundled/setuptools-63.2.0-py3-none-any.whl
 lib/python%%XYDOT%%/ensurepip/_uninstall.py
 lib/python%%XYDOT%%/enum.py
@@ -6836,6 +6836,14 @@ lib/python%%XYDOT%%/test/tracedmodules/__pycache__/testmod.cpython-%%XY%%.opt-1.
 lib/python%%XYDOT%%/test/tracedmodules/__pycache__/testmod.cpython-%%XY%%.opt-2.pyc
 lib/python%%XYDOT%%/test/tracedmodules/__pycache__/testmod.cpython-%%XY%%.pyc
 lib/python%%XYDOT%%/test/tracedmodules/testmod.py
+lib/python%%XYDOT%%/test/typinganndata/__init__.py
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/__init__.cpython-%%XY%%.opt-1.pyc
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/__init__.cpython-%%XY%%.opt-2.pyc
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/__init__.cpython-%%XY%%.pyc
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/ann_module9.cpython-%%XY%%.opt-1.pyc
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/ann_module9.cpython-%%XY%%.opt-2.pyc
+lib/python%%XYDOT%%/test/typinganndata/__pycache__/ann_module9.cpython-%%XY%%.pyc
+lib/python%%XYDOT%%/test/typinganndata/ann_module9.py
 lib/python%%XYDOT%%/test/win_console_handler.py
 lib/python%%XYDOT%%/test/xmltestdata/c14n-20/README
 lib/python%%XYDOT%%/test/xmltestdata/c14n-20/c14nComment.xml

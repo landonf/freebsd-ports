@@ -6,12 +6,13 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	TV streaming server supporting DVB, IPTV, SAT>IP and more
+WWW=		https://tvheadend.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		liburiparser.so:net/uriparser \

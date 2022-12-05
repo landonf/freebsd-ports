@@ -1,19 +1,19 @@
 PORTNAME=	pycodestyle
-PORTVERSION=	2.9.1
+PORTVERSION=	2.10.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Python style guide checker
+WWW=		https://pycodestyle.readthedocs.io/en/latest/ \
+		https://pypi.org/project/pycodestyle/ \
+		https://github.com/pycqa/pycodestyle
 
 LICENSE=	MIT # mentioned as "Expat"
 
 USES=		python:3.6+
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	autoplist concurrent distutils pytest
 NO_ARCH=	yes
-
-do-test:
-	@cd ${WRKSRC} && ${PYTHON_CMD} -m unittest discover testsuite
 
 .include <bsd.port.mk>

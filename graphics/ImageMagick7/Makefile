@@ -1,6 +1,5 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	7.1.0-43
-PORTREVISION=	4
+DISTVERSION=	7.1.0-50
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/releases/ \
 		https://mirror.dogado.de/imagemagick/releases/ \
@@ -11,6 +10,7 @@ PKGNAMESUFFIX=	7
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Image processing tools
+WWW=		https://imagemagick.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,8 +24,8 @@ TESTS_DEPENDS=	gsfonts>=0:print/gsfonts
 CONFLICTS_INSTALL=	ImageMagick6 ImageMagick6-nox11
 
 # This port uses .la files, keep libtool:keepla! (magick/module.c)
-USES=		cpe gettext-runtime gmake gnome libtool:keepla \
-		localbase pathfix perl5 pkgconfig:both shebangfix tar:xz
+USES=		cpe gettext-runtime gmake gnome libtool:keepla localbase \
+		pathfix perl5 pkgconfig:both shebangfix tar:xz
 CPE_PRODUCT=	imagemagick
 CPE_VENDOR=	imagemagick
 SHEBANG_FILES=	www/source/examples.pl

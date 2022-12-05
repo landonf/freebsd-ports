@@ -1,5 +1,5 @@
 PORTNAME=	pysolfc
-DISTVERSION=	2.16.0
+DISTVERSION=	2.18.0
 CATEGORIES=	games python
 MASTER_SITES=	SF/${PORTNAME}/PySolFC/${PYSOLFCDIR} \
 		SF/${PORTNAME}/PySolFC-Cardsets/minimal/:cardsets \
@@ -11,6 +11,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Solitaire game, written in Python and the successor of PySol
+WWW=		https://pysolfc.sourceforge.io/
 
 LICENSE=	GPLv2+ GPLv3+
 LICENSE_COMB=	multi

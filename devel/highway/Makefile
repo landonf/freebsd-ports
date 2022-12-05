@@ -1,9 +1,10 @@
 PORTNAME=	highway
-DISTVERSION=	1.0.0
+DISTVERSION=	1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Performance-portable, length-agnostic SIMD with runtime dispatch
+WWW=		https://github.com/google/highway
 
 LICENSE=	APACHE20
 

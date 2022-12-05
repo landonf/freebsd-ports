@@ -1,5 +1,5 @@
 PORTNAME=	kicad
-PORTVERSION=	6.0.7
+PORTVERSION=	6.0.9
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/${PORTNAME}-templates/-/archive/${DISTVERSION}/
 PKGNAMESUFFIX=	-library-tmpl
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-templates-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Official KiCad project templates
+WWW=		https://gitlab.com/kicad/libraries/kicad-templates
 
 LICENSE=	GPLv2
 

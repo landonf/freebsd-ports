@@ -1,13 +1,13 @@
 PORTNAME=	gotosocial
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.7
-PORTREVISION=	2
+DISTVERSION=	0.5.2
 CATEGORIES=	net-im
 MASTER_SITES?=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/releases/download/v${DISTVERSION}/:web
 DISTFILES?=	${PORTNAME}_${DISTVERSION}_web-assets.tar.gz:web
 
 MAINTAINER=	me+freebsd@igalic.co
 COMMENT=	Golang fediverse server
+WWW=		https://docs.gotosocial.org/en/latest/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -32,13 +32,6 @@ GROUPS=		gotosocial
 DBDIR=		/var/db/${PORTNAME}
 
 PLIST_SUB=	WWWDIR="${WWWDIR}"
-
-# patch sample config for people who set a custom prefix
-.if "${PREFIX}" != "${LOCALBASE}"
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
-		${WRKSRC}/example/config.yaml
-.endif
 
 do-build:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

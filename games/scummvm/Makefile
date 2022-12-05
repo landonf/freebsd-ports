@@ -1,10 +1,11 @@
 PORTNAME=	scummvm
-PORTVERSION=	2.6.0
+PORTVERSION=	2.6.1
 CATEGORIES=	games emulators
 MASTER_SITES=	https://downloads.scummvm.org/frs/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Interpreter for several adventure games
+WWW=		https://www.scummvm.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

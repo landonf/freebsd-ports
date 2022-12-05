@@ -8,6 +8,7 @@
     SUBDIR += alarm-clock-applet
     SUBDIR += anydesk
     SUBDIR += appwrapper
+    SUBDIR += arttime
     SUBDIR += aspostit
     SUBDIR += ausweisapp2
     SUBDIR += autocutsel
@@ -111,6 +112,7 @@
     SUBDIR += gxmessage
     SUBDIR += gxneur
     SUBDIR += havoc
+    SUBDIR += health
     SUBDIR += hebcal
     SUBDIR += helpviewer
     SUBDIR += horde-groupware
@@ -123,6 +125,7 @@
     SUBDIR += i3lock
     SUBDIR += i3status
     SUBDIR += ical
+    SUBDIR += iconbrowser
     SUBDIR += itinerary
     SUBDIR += jjclient
     SUBDIR += jlj
@@ -145,6 +148,7 @@
     SUBDIR += kongress
     SUBDIR += kontact
     SUBDIR += korganizer
+    SUBDIR += kronometer
     SUBDIR += kruler
     SUBDIR += ktimetracker
     SUBDIR += kuserfeedback
@@ -153,7 +157,6 @@
     SUBDIR += libkdepim
     SUBDIR += libportal
     SUBDIR += ljclive
-    SUBDIR += lookbook
     SUBDIR += lumina-archiver
     SUBDIR += lumina-calculator
     SUBDIR += lumina-fileinfo
@@ -176,11 +179,11 @@
     SUBDIR += mindforger
     SUBDIR += moregroupware
     SUBDIR += mozo
-    SUBDIR += myitcrm
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
     SUBDIR += note
     SUBDIR += notekit
+    SUBDIR += notes
     SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
@@ -237,6 +240,7 @@
     SUBDIR += solanum
     SUBDIR += sowon
     SUBDIR += spice-gtk
+    SUBDIR += subsurface
     SUBDIR += synapse
     SUBDIR += syncthingtray
     SUBDIR += sysctlview

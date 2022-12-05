@@ -1,11 +1,12 @@
 PORTNAME=	irssi
-DISTVERSION=	1.4.2
+DISTVERSION=	1.4.3
 PORTEPOCH=	2
 CATEGORIES?=	irc
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DISTVERSION}/
 
 MAINTAINER=	dor.bsd@xm0.uk
 COMMENT=	Modular IRC client with many features
+WWW=		https://irssi.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

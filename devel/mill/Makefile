@@ -1,5 +1,5 @@
 PORTNAME=	mill
-DISTVERSION=	0.10.3
+DISTVERSION=	0.10.9
 CATEGORIES=	devel java
 MASTER_SITES=	https://github.com/lihaoyi/mill/releases/download/${PORTVERSION}/
 DISTNAME=	${PORTVERSION}-assembly
@@ -9,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	freebsd-ports@jan0sch.de
 COMMENT=	Java/Scala build tool
+WWW=		https://www.lihaoyi.com/mill/
 
 LICENSE=	MIT
 

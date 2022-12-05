@@ -9,6 +9,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Object-oriented interpreted scripting language
+WWW=		https://www.ruby-lang.org/en/
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
@@ -98,11 +99,11 @@ CONFIGURE_ARGS+=--disable-dtrace
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
 
-.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv1) || ${ARCH} == powerpc
+.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
 USE_GCC=	yes
 .endif
 
-.if ${ARCH} == armv6 || ${ARCH} == armv7
+.if ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == powerpc
 CONFIGURE_ARGS+=--with-setjmp-type=_setjmp
 CONFIGURE_ENV+=	ac_cv_func__setjmp=yes
 .endif
@@ -183,6 +184,10 @@ post-install:
 	${LN} -fs ${FILE}${RUBY_SUFFIX}.1.gz ${STAGEDIR}${MANPREFIX}/man/man1/${FILE}.1.gz
 . endfor
 .endif
+
+post-install-CAPIDOCS-on:
+	${RM} ${STAGEDIR}${PREFIX}/share/doc/ruby${RUBY_SUFFIX}/capi/.timestamp
+	cd ${STAGEDIR}${PREFIX} && ${FIND} share/doc/ruby${RUBY_SUFFIX}/capi/ -type f >> ${TMPPLIST}
 
 post-install-DEBUG-off:
 #

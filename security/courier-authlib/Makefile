@@ -1,5 +1,5 @@
 PORTNAME=	courier-authlib
-PORTVERSION=	0.71.5
+PORTVERSION=	0.71.6
 CATEGORIES?=	security mail
 .if defined(PKGNAMESUFFIX)
 MASTER_SITES=	SF/courier/authlib/${PORTVERSION}
@@ -11,6 +11,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT?=	Meta-port for the courier authentication library
+WWW=		https://www.Courier-MTA.org/authlib/
 
 CONFLICTS=	courier-0.45*
 

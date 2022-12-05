@@ -1,12 +1,13 @@
 PORTNAME=	spatialite
 PORTVERSION=	5.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/libspatialite-sources/
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Spatial Extensions for SQLite
+WWW=		https://www.gaia-gis.it/gaia-sins/
 
 LICENSE=	GPLv2 # Only GPLv2 since we enable rttopo and gcp
 LICENSE_FILE=	${WRKSRC}/COPYING

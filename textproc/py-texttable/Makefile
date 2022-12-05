@@ -1,11 +1,12 @@
 PORTNAME=	texttable
-PORTVERSION=	1.6.4
+PORTVERSION=	1.6.6
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Module for creating simple ASCII tables
+WWW=		https://pypi.org/project/texttable/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

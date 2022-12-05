@@ -1,12 +1,13 @@
 PORTNAME=	panomatic
 PORTVERSION=	0.9.4
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ii@any.com.ru
 COMMENT=	Tool that automates the creation of control points
+WWW=		http://aorlinsk2.free.fr/panomatic/
 
 BUILD_DEPENDS=	bjam:devel/boost-jam \
 		${LOCALBASE}/include/boost/format.hpp:devel/boost-libs

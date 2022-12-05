@@ -1,11 +1,12 @@
 PORTNAME=	puppetboard
-PORTVERSION=	4.0.3
+PORTVERSION=	4.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Web interface to PuppetDB
+WWW=		https://github.com/voxpupuli/puppetboard
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

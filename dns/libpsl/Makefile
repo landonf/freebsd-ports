@@ -1,11 +1,12 @@
 PORTNAME=	libpsl
 PORTVERSION=	0.21.1
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	dns
 MASTER_SITES=	https://github.com/rockdaboot/libpsl/releases/download/${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C library to handle the Public Suffix List
+WWW=		https://github.com/rockdaboot/libpsl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

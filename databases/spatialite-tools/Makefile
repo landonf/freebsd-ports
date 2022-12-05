@@ -1,11 +1,12 @@
 PORTNAME=	spatialite-tools
 PORTVERSION=	5.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Collection of CLI tools supporting SpatiaLite
+WWW=		http://www.gaia-gis.it/fossil/spatialite-tools/index
 
 LICENSE=	GPLv3
 

@@ -1,10 +1,11 @@
 PORTNAME=	puppet-lint
-PORTVERSION=	2.5.2
+PORTVERSION=	3.0.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Checks Puppet manifests against the style guide
+WWW=		http://puppet-lint.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

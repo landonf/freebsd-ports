@@ -1,9 +1,11 @@
 PORTNAME=	rime-middle-chinese
 DISTVERSION=	g20210926
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime Middle Chinese schema support
+WWW=		https://github.com/rime/rime-middle-chinese
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -5,6 +5,7 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/CNAME
 %%PORTDOCS%%%%DOCSDIR%%/CaseStudies.md
 %%PORTDOCS%%%%DOCSDIR%%/Cluster-VictoriaMetrics.md
+%%PORTDOCS%%%%DOCSDIR%%/ExtendedPromQL.md
 %%PORTDOCS%%%%DOCSDIR%%/FAQ.md
 %%PORTDOCS%%%%DOCSDIR%%/Gemfile
 %%PORTDOCS%%%%DOCSDIR%%/Makefile
@@ -14,21 +15,24 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/Quick-Start.md
 %%PORTDOCS%%%%DOCSDIR%%/README.md
 %%PORTDOCS%%%%DOCSDIR%%/Release-Guide.md
+%%PORTDOCS%%%%DOCSDIR%%/Single-server-VictoriaMetrics-sending_DD_metrics_to_VM.png
+%%PORTDOCS%%%%DOCSDIR%%/Single-server-VictoriaMetrics-sending_DD_metrics_to_VM_and_DD.png
 %%PORTDOCS%%%%DOCSDIR%%/Single-server-VictoriaMetrics.md
 %%PORTDOCS%%%%DOCSDIR%%/Troubleshooting.md
 %%PORTDOCS%%%%DOCSDIR%%/_config.yml
 %%PORTDOCS%%%%DOCSDIR%%/_includes/extra/head.html
 %%PORTDOCS%%%%DOCSDIR%%/_includes/extra/script.js
 %%PORTDOCS%%%%DOCSDIR%%/_includes/extra/styles.scss
-%%PORTDOCS%%%%DOCSDIR%%/_includes/img.html
 %%PORTDOCS%%%%DOCSDIR%%/assets/css/clipboard.css
 %%PORTDOCS%%%%DOCSDIR%%/assets/images/Naive_cluster_scheme.png
 %%PORTDOCS%%%%DOCSDIR%%/assets/images/favicon.svg
 %%PORTDOCS%%%%DOCSDIR%%/assets/images/vm_logo.svg
 %%PORTDOCS%%%%DOCSDIR%%/assets/js/clipboard.min.js
+%%PORTDOCS%%%%DOCSDIR%%/enterprise.md
 %%PORTDOCS%%%%DOCSDIR%%/googlec3812dcf278679ec.html
 %%PORTDOCS%%%%DOCSDIR%%/guides/README.md
 %%PORTDOCS%%%%DOCSDIR%%/guides/getting-started-with-vm-operator.md
+%%PORTDOCS%%%%DOCSDIR%%/guides/guide-delete-or-replace-metrics.md
 %%PORTDOCS%%%%DOCSDIR%%/guides/guide-vmcluster-dashes-agent.png
 %%PORTDOCS%%%%DOCSDIR%%/guides/guide-vmcluster-grafana-dash.png
 %%PORTDOCS%%%%DOCSDIR%%/guides/guide-vmcluster-k8s-dashboard.png
@@ -80,6 +84,10 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/quickstart-token-usage.png
 %%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/quickstart-tokens.png
 %%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/quickstart.md
+%%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/restore-password-email.png
+%%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/restore-password-profile.png
+%%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/restore-password-save-password.png
+%%PORTDOCS%%%%DOCSDIR%%/managed_victoriametrics/restore-password.png
 %%PORTDOCS%%%%DOCSDIR%%/operator/README.md
 %%PORTDOCS%%%%DOCSDIR%%/operator/VictoriaMetrics-Operator.md
 %%PORTDOCS%%%%DOCSDIR%%/operator/additional-scrape.MD
@@ -97,6 +105,7 @@ bin/victoria-metrics
 %%PORTDOCS%%%%DOCSDIR%%/operator/security.MD
 %%PORTDOCS%%%%DOCSDIR%%/operator/vars.MD
 %%PORTDOCS%%%%DOCSDIR%%/operator/vmalertmanager-configuration.MD
+%%PORTDOCS%%%%DOCSDIR%%/relabeling.md
 %%PORTDOCS%%%%DOCSDIR%%/sd_configs.md
 %%PORTDOCS%%%%DOCSDIR%%/url-examples.md
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_DATA%%

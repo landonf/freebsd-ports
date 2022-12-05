@@ -1,11 +1,12 @@
 PORTNAME=	python-bitcoinlib
-PORTVERSION=	0.11.0
+PORTVERSION=	0.11.2
 CATEGORIES=	finance python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Swiss Army Knife of the Bitcoin protocol
+WWW=		https://github.com/petertodd/python-bitcoinlib/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,10 +1,12 @@
 PORTNAME=	mkdocstrings
 DISTVERSION=	0.17.0
+PORTREVISION=	1
 CATEGORIES=	textproc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Automatic documentation from sources for MkDocs
+WWW=		https://github.com/mkdocstrings/mkdocstrings
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

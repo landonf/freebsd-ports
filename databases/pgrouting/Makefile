@@ -1,16 +1,17 @@
 PORTNAME=	pgrouting
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.1
+DISTVERSION=	3.4.1
 CATEGORIES=	databases geography
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Extension to PostGIS to provide geospatial routing functionality
+WWW=		https://pgrouting.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs
-RUN_DEPENDS=	${LOCALBASE}/share/postgresql/extension/postgis.control:databases/postgis31
+RUN_DEPENDS=	${LOCALBASE}/share/postgresql/extension/postgis.control:databases/postgis33
 
 USES=		compiler:c++14-lang cmake localbase perl5 pgsql:10+ pkgconfig
 WANT_PGSQL=	lib server

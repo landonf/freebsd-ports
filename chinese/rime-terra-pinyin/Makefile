@@ -1,9 +1,11 @@
 PORTNAME=	rime-terra-pinyin
 DISTVERSION=	g20210805
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime Terra Pinyin schema support
+WWW=		https://github.com/rime/rime-terra-pinyin
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

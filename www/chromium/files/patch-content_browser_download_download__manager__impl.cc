@@ -1,6 +1,6 @@
---- content/browser/download/download_manager_impl.cc.orig	2022-06-17 14:20:10 UTC
+--- content/browser/download/download_manager_impl.cc.orig	2022-10-24 13:33:33 UTC
 +++ content/browser/download/download_manager_impl.cc
-@@ -91,7 +91,7 @@
+@@ -92,7 +92,7 @@
  #include "third_party/blink/public/common/storage_key/storage_key.h"
  #include "url/origin.h"
  
@@ -18,7 +18,7 @@
  base::FilePath GetTemporaryDownloadDirectory() {
    std::unique_ptr<base::Environment> env(base::Environment::Create());
    return base::nix::GetXDGDirectory(env.get(), "XDG_DATA_HOME", ".local/share");
-@@ -656,7 +656,7 @@ bool DownloadManagerImpl::InterceptDownload(
+@@ -655,7 +655,7 @@ bool DownloadManagerImpl::InterceptDownload(
  
  base::FilePath DownloadManagerImpl::GetDefaultDownloadDirectory() {
    base::FilePath default_download_directory;

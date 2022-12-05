@@ -1,10 +1,12 @@
 PORTNAME=	exempi
 DISTVERSION=	2.6.2
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://libopenraw.freedesktop.org/download/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Port of Adobe XMP SDK to work on UNIX
+WWW=		http://libopenraw.freedesktop.org/wiki/Exempi
 
 BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
 LIB_DEPENDS=	libexpat.so:textproc/expat2

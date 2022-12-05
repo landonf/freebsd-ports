@@ -1,13 +1,14 @@
 PORTNAME=	softether
-DISTVERSION=	4.39-9772-beta
+DISTVERSION=	4.41-9782-beta
 PORTREVISION=	0
 CATEGORIES=	security net-vpn
-MASTER_SITES=	https://www.softether-download.com/files/softether/v${DISTVERSION}-2022.04.26-tree/Source_Code/
+MASTER_SITES=	https://www.softether-download.com/files/softether/v${DISTVERSION}-2022.11.17-tree/Source_Code/
 PKGNAMESUFFIX=	-devel
 DISTNAME=	${PORTNAME}-src-v${DISTVERSION}
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Softether VPN 4 (stable beta version)
+WWW=		https://www.softether.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,11 @@
 PORTNAME=	urca
-PORTREVISION=	5
-DISTVERSION=	1.3-0
+DISTVERSION=	1.3-3
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Unit root and cointegration tests for time series data
+WWW=		https://cran.r-project.org/web/packages/urca/
 
 LICENSE=	GPLv2+
 

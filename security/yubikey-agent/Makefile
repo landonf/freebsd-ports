@@ -1,16 +1,15 @@
 PORTNAME=	yubikey-agent
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.5
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	security sysutils
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Seamless ssh-agent for YubiKeys
+WWW=		https://filippo.io/yubikey-agent
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_i386=	constant 2148532270 overflows _Ctype_long
 
 LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
 RUN_DEPENDS=	RSA_SecurID_getpasswd:devel/libccid

@@ -2,10 +2,12 @@ PORTNAME=	ltfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.4.5.0
 DISTVERSIONSUFFIX=	-10502
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Reference implementation of LTFS for stand-alone tape drive
+WWW=		https://github.com/LinearTapeFileSystem/ltfs
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

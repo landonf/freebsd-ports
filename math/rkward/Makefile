@@ -1,10 +1,11 @@
 PORTNAME=	rkward
-PORTVERSION=	0.7.4
+PORTVERSION=	0.7.5
 CATEGORIES=	math
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	IDE/GUI for the R-project
+WWW=		https://rkward.kde.org/
 
 LICENSE=	GPLv2
 
@@ -18,11 +19,11 @@ TEST_DEPENDS=	${LR_MOD_DIR}/FAdist/INDEX:science/R-cran-FAdist
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext fortran	\
 		kde:5 php:cli qt:5 shared-mime-info xorg
 USE_QT=		buildtools concurrent core dbus declarative gui location	\
-		network printsupport qmake script webchannel webengine webkit	\
-		widgets xml
+		network printsupport qmake script testlib webchannel webengine	\
+		webkit widgets xml
 USE_XORG=	ice x11 xext
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets coreaddons\
-		crash doctools ecm i18n itemviews jobwidgets kate_run kdewebkit kio	\
+		crash doctools ecm i18n itemviews jobwidgets kate:run kdewebkit kio	\
 		notifications parts service solid sonnet syntaxhighlighting texteditor	\
 		textwidgets widgetsaddons windowsystem xmlgui
 
@@ -55,6 +56,7 @@ RUN_DEPENDS+=	${LR_MOD_DIR}/XML/INDEX:textproc/R-cran-XML		\
 		${LR_MOD_DIR}/moments/INDEX:math/R-cran-moments		\
 		${LR_MOD_DIR}/pwr/INDEX:math/R-cran-pwr			\
 		${LR_MOD_DIR}/hdrcde/INDEX:math/R-cran-hdrcde		\
+		${LR_MOD_DIR}/devtools/INDEX:devel/R-cran-devtools	\
 		${LR_MOD_DIR}/exactRankTests/INDEX:math/R-cran-exactRankTests
 .endif
 

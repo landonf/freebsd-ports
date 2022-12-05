@@ -1,10 +1,11 @@
 PORTNAME=	DT
-PORTVERSION=	0.23
+PORTVERSION=	0.25
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Wrapper of the JavaScript Library 'DataTables'
+WWW=		https://cran.r-project.org/web/packages/DT/
 
 LICENSE=	GPLv3
 

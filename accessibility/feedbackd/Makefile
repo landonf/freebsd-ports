@@ -1,9 +1,11 @@
 PORTNAME=	feedbackd
-PORTVERSION=	s20220208
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.0.1
 CATEGORIES=	accessibility
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Haptic/visual/audio feedback for GNOME
+WWW=		https://source.puri.sm/Librem5/feedbackd
 
 LICENSE=	GPLv3+ LGPL21+
 LICENSE_COMB=	multi
@@ -16,7 +18,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 GL_SITE=	https://source.puri.sm
 GL_ACCOUNT=	Librem5
-GL_COMMIT=	74b178a363f1e0e4b84309f2a1b1c1c41bf97248
+GL_COMMIT=	99c12e77d830ac8b0316c032bddd3ef082c66c72
 SHEBANG_FILES=	build-aux/post_install.py
 GLIB_SCHEMAS=	org.sigxcpu.feedbackd.gschema.xml
 
@@ -42,7 +44,7 @@ GIR_MESON_ENABLED=	introspection
 MANPAGES_BUILD_DEPENDS=	xsltproc:textproc/libxslt
 MANPAGES_MESON_TRUE=	man
 
-VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_USES=		vala:build
 VAPI_MESON_TRUE=	vapi
 VAPI_IMPLIES=		GIR
 

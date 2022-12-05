@@ -1,11 +1,12 @@
 PORTNAME=	luajit
-DISTVERSION=	2.1.0.20220807
+DISTVERSION=	2.1.0.20221122
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-devel
 DISTNAME=	LuaJIT-${DISTVERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Just-In-Time Compiler for Lua
+WWW=		https://luajit.org/luajit.html
 
 LICENSE=	MIT PD
 LICENSE_COMB=	multi
@@ -20,7 +21,7 @@ USE_LDCONFIG=	yes
 MAKE_ARGS=	CC=${CC} CCOPT= CCOPT_x86= Q=
 
 USE_GITHUB=	yes
-GH_TUPLE=	LuaJIT:LuaJIT:e61a1f9
+GH_TUPLE=	LuaJIT:LuaJIT:46aa45d
 
 LUAJIT_VERSION=	2.1.0-beta3
 LUAJIT_SOVERSION=	2.1.0
@@ -34,7 +35,7 @@ USE_GCC=yes
 .endif
 
 post-install:
-	${LN} -sf ${PORTNAME}-${DISTVERSION} \
+	${LN} -sf ${PORTNAME}-${LUAJIT_VERSION} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${WRKSRC}/etc/luajit.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 

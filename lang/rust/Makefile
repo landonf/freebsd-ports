@@ -1,5 +1,5 @@
 PORTNAME=	rust
-PORTVERSION?=	1.62.1
+PORTVERSION?=	1.65.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -15,6 +15,7 @@ DIST_SUBDIR?=	rust
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Language with a focus on memory safety and concurrency
+WWW=		https://www.rust-lang.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -26,7 +27,7 @@ ONLY_FOR_ARCHS?=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le \
 			powerpc riscv64
 ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
 USES=		cpe ninja:build pkgconfig python:3.7+,build shebangfix ssl tar:xz
@@ -68,8 +69,8 @@ WASM_VARS=		_COMPONENTS+="rust-analysis-${_PACKAGE_VERS}-wasm32-unknown-unknown 
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
 # See WRKSRC/src/stage0.json for the date and version values
-BOOTSTRAPS_DATE?=		2022-05-19
-RUST_BOOTSTRAP_VERSION?=	1.61.0
+BOOTSTRAPS_DATE?=		2022-09-22
+RUST_BOOTSTRAP_VERSION?=	1.64.0
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
@@ -110,6 +111,8 @@ IGNORE=		is only for FreeBSD
 .if ${ARCH} == powerpc
 # bfd to link rustc_driver; lld currently can't
 BUILD_DEPENDS+=	ld.bfd:devel/binutils
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+MAKE_ENV+=	RUSTFLAGS="-L/usr/local/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	RUST_BACKTRACE=1
 .endif

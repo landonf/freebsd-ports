@@ -4,8 +4,9 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another Configuration System
+WWW=		https://github.com/rbgirshick/yacs
 
 LICENSE=	APACHE20
 

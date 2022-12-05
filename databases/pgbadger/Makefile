@@ -1,10 +1,11 @@
 PORTNAME=	pgbadger
-PORTVERSION=	11.8
+PORTVERSION=	12.0
 DISTVERSIONPREFIX=v
 CATEGORIES=	databases
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Very competent log analyzer for PostgreSQL
+WWW=		http://dalibo.github.com/pgbadger/
 
 LICENSE=	PostgreSQL
 

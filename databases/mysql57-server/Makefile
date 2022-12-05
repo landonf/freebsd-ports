@@ -1,5 +1,5 @@
 PORTNAME?=	mysql
-PORTVERSION=	5.7.38
+PORTVERSION=	5.7.40
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	MYSQL/MySQL-5.7
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME}-boost-${PORTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
+WWW=		https://www.mysql.com/
 
 LICENSE=	GPLv2
 

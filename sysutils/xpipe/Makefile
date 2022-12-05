@@ -2,8 +2,9 @@ PORTNAME=	xpipe
 DISTVERSION=	g20200503
 CATEGORIES=	sysutils
 
-MAINTAINER=	jjuanino@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Split input and feed it into the given utility
+WWW=		https://github.com/jschauma/xpipe
 
 LICENSE=	BSD2CLAUSE
 

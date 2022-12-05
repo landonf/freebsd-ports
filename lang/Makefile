@@ -21,7 +21,7 @@
     SUBDIR += chaiscript
     SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
-    SUBDIR += chicken5
+    SUBDIR += chicken
     SUBDIR += cim
     SUBDIR += cjs
     SUBDIR += cling
@@ -32,6 +32,7 @@
     SUBDIR += clover
     SUBDIR += cocor
     SUBDIR += coffeescript
+    SUBDIR += colm
     SUBDIR += cparser
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
@@ -154,6 +155,7 @@
     SUBDIR += lci
     SUBDIR += ldc
     SUBDIR += lfe
+    SUBDIR += lfortran
     SUBDIR += libhx
     SUBDIR += libobjc2
     SUBDIR += librep
@@ -222,7 +224,6 @@
     SUBDIR += p5-ExtUtils-F77
     SUBDIR += p5-Interpolation
     SUBDIR += p5-JSAN
-    SUBDIR += p5-JavaScript-SpiderMonkey
     SUBDIR += p5-JavaScript-Squish
     SUBDIR += p5-JavaScript-Value-Escape
     SUBDIR += p5-List-MoreUtils
@@ -336,7 +337,7 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spidermonkey17
+    SUBDIR += spidermonkey102
     SUBDIR += spidermonkey78
     SUBDIR += spidermonkey91
     SUBDIR += spl
@@ -368,6 +369,7 @@
     SUBDIR += yap
     SUBDIR += yorick
     SUBDIR += ypsilon
+    SUBDIR += zephir
     SUBDIR += zig
     SUBDIR += zig-devel
 

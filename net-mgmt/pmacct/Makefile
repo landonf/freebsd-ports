@@ -1,10 +1,12 @@
 PORTNAME=	pmacct
 DISTVERSION=	1.7.7
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.pmacct.net/
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Accounting and aggregation tool for IPv4 and IPv6 traffic
+WWW=		http://www.pmacct.net/
 
 LICENSE=	GPLv2
 
@@ -44,7 +46,7 @@ SQLITE3_VARS=		SQLDOC=""
 LAYER2_CONFIGURE_ENABLE=	l2
 DEBUG_CONFIGURE_ENABLE=		debug
 
-RABBITMQ_LIB_DEPENDS=		librabbitmq.so:net/rabbitmq-c-devel
+RABBITMQ_LIB_DEPENDS=		librabbitmq.so:net/rabbitmq-c
 RABBITMQ_CONFIGURE_ENABLE=	rabbitmq
 
 REDIS_LIB_DEPENDS=		libhiredis.so:databases/hiredis

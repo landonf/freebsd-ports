@@ -1,10 +1,12 @@
 PORTNAME=	qiskit-ibm-provider
 PORTVERSION=	g20220804
+PORTREVISION=	1
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qiskit Provider for accessing IBM quantum devices and simulators
+WWW=		https://qiskit.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,11 +1,12 @@
 PORTNAME=	kosmorrolib
-PORTVERSION=	1.0.6
+PORTVERSION=	1.0.7
 CATEGORIES=	astro python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Library that computes the ephemerides
+WWW=		https://kosmorro.space/
 
 LICENSE=	CeCILL-C
 LICENSE_NAME=	${LICENSE}
@@ -23,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}skyfield>0:astro/py-skyfield@${PY_FLAVOR}\
 #GH_ACCOUNT=	Kosmorro
 #GH_PROJECT=	lib
 
-USES=		python:3.7+
+USES=		python:3.8+
 USE_PYTHON=	distutils
 
 NO_ARCH=	yes

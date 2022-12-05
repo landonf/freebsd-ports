@@ -3,6 +3,7 @@
     SUBDIR += 0d1n
     SUBDIR += 1password-client
     SUBDIR += 1password-client2
+    SUBDIR += 1password-client2-beta
     SUBDIR += 2fa
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
@@ -38,6 +39,7 @@
     SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
     SUBDIR += aws-vault
+    SUBDIR += axc
     SUBDIR += barnyard2
     SUBDIR += barnyard2-sguil
     SUBDIR += bastillion
@@ -118,6 +120,7 @@
     SUBDIR += dehydrated
     SUBDIR += denyhosts
     SUBDIR += destroy
+    SUBDIR += diffcode
     SUBDIR += digestpp
     SUBDIR += dirbuster
     SUBDIR += dirmngr
@@ -201,6 +204,7 @@
     SUBDIR += heaan
     SUBDIR += headscale
     SUBDIR += heimdal
+    SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
     SUBDIR += highwayhash
@@ -212,6 +216,7 @@
     SUBDIR += hpenc
     SUBDIR += hs-cryptol
     SUBDIR += hydra
+    SUBDIR += hyperhotp
     SUBDIR += i2p
     SUBDIR += i2pd
     SUBDIR += iaikpkcs11wrapper
@@ -280,6 +285,7 @@
     SUBDIR += libmcrypt
     SUBDIR += libnitrokey
     SUBDIR += libntlm
+    SUBDIR += libomemo
     SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
@@ -317,6 +323,7 @@
     SUBDIR += linux-c7-libtasn1
     SUBDIR += linux-c7-nettle
     SUBDIR += linux-c7-nss
+    SUBDIR += linux-c7-openssl-devel
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
     SUBDIR += logcheck
@@ -355,7 +362,6 @@
     SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_admin
     SUBDIR += nextcloud-twofactor_nextcloud_notification
-    SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
     SUBDIR += ngrok
@@ -365,6 +371,7 @@
     SUBDIR += nmap
     SUBDIR += nss
     SUBDIR += nss_compat_ossl
+    SUBDIR += nuclei
     SUBDIR += nyx
     SUBDIR += oath-toolkit
     SUBDIR += obfs4proxy-tor
@@ -526,6 +533,7 @@
     SUBDIR += p5-Crypt-OpenSSL-PKCS10
     SUBDIR += p5-Crypt-OpenSSL-RSA
     SUBDIR += p5-Crypt-OpenSSL-Random
+    SUBDIR += p5-Crypt-OpenSSL-Verify
     SUBDIR += p5-Crypt-OpenSSL-X509
     SUBDIR += p5-Crypt-PBKDF2
     SUBDIR += p5-Crypt-PKCS10
@@ -649,6 +657,7 @@
     SUBDIR += p5-Net-OpenID-Server
     SUBDIR += p5-Net-Radius-Server
     SUBDIR += p5-Net-SAML
+    SUBDIR += p5-Net-SAML2
     SUBDIR += p5-Net-SSH-AuthorizedKeysFile
     SUBDIR += p5-Net-SSL-ExpireDate
     SUBDIR += p5-Net-SSLGlue
@@ -681,6 +690,7 @@
     SUBDIR += p5-Text-Password-Pronounceable
     SUBDIR += p5-Tie-EncryptedHash
     SUBDIR += p5-Tree-Authz
+    SUBDIR += p5-URN-OASIS-SAML2
     SUBDIR += p5-Unix-Passwd-File
     SUBDIR += p5-Unix-setuid
     SUBDIR += p5-Yahoo-BBAuth
@@ -807,7 +817,6 @@
     SUBDIR += pvk
     SUBDIR += pwauth
     SUBDIR += pwman
-    SUBDIR += pwman3
     SUBDIR += pwned-check
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
@@ -838,12 +847,14 @@
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
     SUBDIR += py-certbot-dns-dnsmadeeasy
+    SUBDIR += py-certbot-dns-gandi
     SUBDIR += py-certbot-dns-gehirn
     SUBDIR += py-certbot-dns-google
     SUBDIR += py-certbot-dns-linode
     SUBDIR += py-certbot-dns-luadns
     SUBDIR += py-certbot-dns-nsone
     SUBDIR += py-certbot-dns-ovh
+    SUBDIR += py-certbot-dns-powerdns
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
     SUBDIR += py-certbot-dns-sakuracloud
@@ -966,6 +977,7 @@
     SUBDIR += py-scp
     SUBDIR += py-scramp
     SUBDIR += py-scrypt
+    SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-sequoia
     SUBDIR += py-service_identity
@@ -1017,6 +1029,7 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += rnp
+    SUBDIR += rotate
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1026,18 +1039,21 @@
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-cose
+    SUBDIR += rubygem-cvss-suite
     SUBDIR += rubygem-declarative_policy
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise-two-factor-rails70
     SUBDIR += rubygem-devise_pam_authenticatable2
+    SUBDIR += rubygem-devise_pam_authenticatable2-rails61
     SUBDIR += rubygem-digest
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
+    SUBDIR += rubygem-doorkeeper-rails61
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
@@ -1079,11 +1095,13 @@
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
     SUBDIR += rubygem-omniauth-cas3
+    SUBDIR += rubygem-omniauth-cas3-oauth2
     SUBDIR += rubygem-omniauth-dingtalk-oauth2
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-oauth2-generic
+    SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-omniauth1
@@ -1091,10 +1109,13 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
+    SUBDIR += rubygem-openssl2
+    SUBDIR += rubygem-openssl221
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
     SUBDIR += rubygem-pundit
+    SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
@@ -1143,7 +1164,7 @@
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += rustscan
-    SUBDIR += s2n
+    SUBDIR += s2n-tls
     SUBDIR += safesh
     SUBDIR += samhain
     SUBDIR += samhain-client
@@ -1164,6 +1185,7 @@
     SUBDIR += setaudit
     SUBDIR += sha1collisiondetection
     SUBDIR += sha2wordlist
+    SUBDIR += shibboleth-idp
     SUBDIR += shibboleth-sp
     SUBDIR += sig2dot
     SUBDIR += signify
@@ -1230,6 +1252,7 @@
     SUBDIR += teleport
     SUBDIR += testssl.sh
     SUBDIR += tfhe
+    SUBDIR += tfsec
     SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
@@ -1238,6 +1261,7 @@
     SUBDIR += tor
     SUBDIR += tor-devel
     SUBDIR += totp-cli
+    SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools
     SUBDIR += tpm2-abrmd
     SUBDIR += tpm2-tools
@@ -1265,7 +1289,10 @@
     SUBDIR += vxquery
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
+    SUBDIR += wazuh-dashboard
+    SUBDIR += wazuh-indexer
     SUBDIR += wazuh-manager
+    SUBDIR += wazuh-server
     SUBDIR += webfwlog
     SUBDIR += weggli
     SUBDIR += whatweb

@@ -9,6 +9,7 @@
     SUBDIR += apel
     SUBDIR += asedit
     SUBDIR += beav
+    SUBDIR += bee-host
     SUBDIR += biew
     SUBDIR += bitedit
     SUBDIR += boiling-egg
@@ -77,6 +78,7 @@
     SUBDIR += kibi
     SUBDIR += kile
     SUBDIR += komodo-edit
+    SUBDIR += lapce
     SUBDIR += lazarus
     SUBDIR += lazarus-devel
     SUBDIR += lazarus-qt5
@@ -195,6 +197,7 @@
     SUBDIR += linux-sublime3
     SUBDIR += linux-wps-office
     SUBDIR += lite
+    SUBDIR += lite-xl
     SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
@@ -210,6 +213,7 @@
     SUBDIR += neovim
     SUBDIR += neovim-qt
     SUBDIR += notepadnext
+    SUBDIR += novelwriter
     SUBDIR += nvi-m17n
     SUBDIR += nvi2
     SUBDIR += o
@@ -259,6 +263,7 @@
     SUBDIR += texworks
     SUBDIR += the
     SUBDIR += treeform
+    SUBDIR += turbo
     SUBDIR += tweak
     SUBDIR += uemacs
     SUBDIR += uzap
@@ -266,6 +271,7 @@
     SUBDIR += vigor
     SUBDIR += vile
     SUBDIR += vim
+    SUBDIR += vim-colorschemes-legacy
     SUBDIR += vscode
     SUBDIR += web-mode
     SUBDIR += with-editor

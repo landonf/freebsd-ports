@@ -1,11 +1,12 @@
 PORTNAME=	libmesh
 DISTVERSION=	1.7.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/libMesh/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Numerical simulation of partial differential equations
+WWW=		https://libmesh.github.io
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

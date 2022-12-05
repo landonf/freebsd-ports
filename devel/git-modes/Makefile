@@ -1,12 +1,13 @@
 PORTNAME=	git-modes
 DISTVERSION=	1.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	GNU Emacs modes for Git-related files
+WWW=		https://github.com/magit/git-modes
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

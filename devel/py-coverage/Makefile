@@ -1,11 +1,12 @@
 PORTNAME=	coverage
-PORTVERSION=	6.4.2
+PORTVERSION=	6.5.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Code coverage measurement for Python
+WWW=		https://coverage.readthedocs.io/
 
 LICENSE=	BSD2CLAUSE
 

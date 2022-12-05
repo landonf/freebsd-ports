@@ -1,9 +1,10 @@
 PORTNAME=	rehex
-DISTVERSION=	0.5.3
+DISTVERSION=	0.5.4
 CATEGORIES=	editors
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Hex editor for reverse engineering
+WWW=		https://github.com/solemnwarning/rehex
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

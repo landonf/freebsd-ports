@@ -1,10 +1,11 @@
 PORTNAME=	commonmarker
-PORTVERSION=	0.23.5
+PORTVERSION=	0.23.6
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby wrapper for libcmark (CommonMark parser)
+WWW=		https://github.com/gjtorikian/commonmarker
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

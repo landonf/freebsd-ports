@@ -1,11 +1,12 @@
 PORTNAME=	code_saturne
 PORTVERSION=	7.1.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	science parallel
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	EDF's general purpose Computational Fluid Dynamics (CFD) software
+WWW=		https://www.code-saturne.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

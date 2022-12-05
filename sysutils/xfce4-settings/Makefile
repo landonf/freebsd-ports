@@ -1,11 +1,12 @@
 PORTNAME=	xfce4-settings
-PORTVERSION=	4.16.3
+PORTVERSION=	4.16.5
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce 4 settings application
+WWW=		https://docs.xfce.org/xfce/xfce4-settings/start
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

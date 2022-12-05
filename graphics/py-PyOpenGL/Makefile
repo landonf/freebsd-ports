@@ -8,11 +8,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	OpenGL (and related library) interface for Python
+WWW=		http://pyopengl.sourceforge.net/
 
 BUILD_DEPENDS=	${PYNUMPY} \
 		${PY_PILLOW}
 RUN_DEPENDS=	${PYNUMPY} \
 		${PY_PILLOW}
+
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=	TKINTER
 OPTIONS_DEFAULT=	TKINTER

@@ -1,11 +1,12 @@
 PORTNAME=	chafa
-PORTVERSION=	1.12.3
+PORTVERSION=	1.12.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://hpjansson.org/chafa/releases/ \
 		https://github.com/hpjansson/chafa/releases/download/${PORTVERSION}/
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Character art facsimile generator
+WWW=		https://hpjansson.org/chafa/
 
 LICENSE=	GPLv3 LGPL3+
 LICENSE_COMB=	multi

@@ -1,7 +1,8 @@
 PORTNAME=	mysqlwsrep
-PORTVERSION?=	5.7.35
+PORTVERSION?=	5.7.39
 DISTVERSIONPREFIX?=	wsrep_
-DISTVERSIONSUFFIX?=	-25.27
+DISTVERSIONSUFFIX?=	-25.31
+PORTREVISION=	0
 CATEGORIES=	databases
 MASTER_SITES+=	SF/boost/boost/1.59.0:boost
 PKGNAMESUFFIX=	57-server
@@ -9,6 +10,7 @@ DISTFILES+=	boost_1_59_0${EXTRACT_SUFX}:boost
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
+WWW=		https://galeracluster.com/
 
 LICENSE=	GPLv2
 
@@ -66,7 +68,8 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DWITH_ZLIB=system \
 		-DINSTALL_MYSQLTESTDIR=0 \
 		-DDOWNLOAD_BOOST=1 \
-		-DWITH_WSREP=1
+		-DWITH_WSREP=1 \
+		-DWITH_INNODB_MEMCACHED=1
 
 SHEBANG_FILES=	scripts/*.pl* scripts/*.sh scripts/wsrep_sst_*
 
@@ -83,8 +86,8 @@ PLIST_SUB=	MY_DBDIR=${MY_DBDIR} \
 		MY_TMPDIR=${MY_TMPDIR}
 
 CONFLICTS_INSTALL=	mariadb*-server \
-			mysql*-server \
-			mysqlwsrep*-server \
+			mysql??-server \
+			mysqlwsrep56-server \
 			percona*-server
 
 USE_RC_SUBR=	mysql-server
@@ -174,12 +177,6 @@ CXXFLAGS+=	-DLZ4_DISABLE_DEPRECATE_WARNINGS
 LDFLAGS+=	-L${LOCALBASE}/lib
 .if ${CHOSEN_COMPILER_TYPE} == clang
 CXXFLAGS+=	-Wno-c++11-narrowing
-.endif
-
-# Ensure that assertions are not turned on in non-debug builds.
-.if !defined(WITH_DEBUG)
-CFLAGS+=	-DNDEBUG
-CXXFLAGS+=	-DNDEBUG
 .endif
 
 # Plugin innodb_memcached requires -fcommon to avoid duplicate symbol linker

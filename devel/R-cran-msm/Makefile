@@ -1,10 +1,11 @@
 PORTNAME=	msm
-PORTVERSION=	1.6.9
+PORTVERSION=	1.7
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Multi-State Markov and Hidden Markov Models in Continuous Time
+WWW=		https://cran.r-project.org/package=msm
 
 LICENSE=	GPLv2+
 

@@ -1,10 +1,11 @@
 PORTNAME=	set
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class to deal with collections of unordered, unique values
+WWW=		https://github.com/ruby/set
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

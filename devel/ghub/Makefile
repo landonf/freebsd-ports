@@ -1,12 +1,13 @@
 PORTNAME=	ghub
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.5.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Client libraries for the APIs of various Git forges
+WWW=		https://github.com/magit/ghub
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

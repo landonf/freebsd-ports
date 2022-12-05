@@ -1,11 +1,12 @@
 PORTNAME=	mediawiki
-PORTVERSION=	1.38.2
+PORTVERSION=	1.38.4
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${PORTVERSION:R}/
 PKGNAMESUFFIX=	138${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Wiki engine used by Wikipedia
+WWW=		https://www.mediawiki.org/
 
 LICENSE=	GPLv2
 

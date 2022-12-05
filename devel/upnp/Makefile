@@ -1,11 +1,12 @@
 PORTNAME=	upnp
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	1.14.13
+DISTVERSION=	1.14.15
 PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Universal Plug and Play Software Development Kit
+WWW=		http://pupnp.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

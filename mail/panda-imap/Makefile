@@ -1,10 +1,11 @@
 PORTNAME=	panda-imap
 PORTVERSION=	20130621
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	IMAP4rev1/POP2/POP3 mail servers forked from imap-uw
+WWW=		https://github.com/jonabbey/panda-imap
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libc-client.so.2010:mail/panda-cclient
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jonabbey
-GH_TAGNAME=	3452f1598a8b4eeb44b38aead1c1598e379b05de
+GH_TAGNAME=	01eaaa96c85c5791d5cffdf20c360b329bc44d88
 
 CONFLICTS_INSTALL=	imap-uw # bin/dmail
 

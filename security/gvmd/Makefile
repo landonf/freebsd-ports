@@ -1,10 +1,12 @@
 PORTNAME=	gvmd
 DISTVERSION=	22.4.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Greenbone Vulnerability Manager central management service
+WWW=		https://github.com/greenbone/gvmd
 
 LICENSE=	AGPLv3+
 
@@ -48,8 +50,7 @@ post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/src/manage_sql.c
 	${REINPLACE_CMD} -e 's|+660|660|g' ${WRKSRC}/tools/greenbone-feed-sync.in
 	${REINPLACE_CMD} -e 's|#include <bsd/unistd.h>||g' ${WRKSRC}/src/manage.c \
-		${WRKSRC}/src/gvmd.c ${WRKSRC}/src/manage_sql_secinfo.c \
-		${WRKSRC}/src/manage_sql.c ${WRKSRC}/src/manage_sql_report_formats.c
+		${WRKSRC}/src/gvmd.c ${WRKSRC}/src/manage_sql_secinfo.c
 
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/lib/gvm/gvmd/gnupg

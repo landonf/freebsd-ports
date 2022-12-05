@@ -1,11 +1,13 @@
 PORTNAME=	maude
 PORTVERSION=	2.7.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://maude.cs.illinois.edu/w/images/d/d8/
 DISTNAME=	Maude-${PORTVERSION}
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High-performance reflective language
+WWW=		https://maude.cs.uiuc.edu/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

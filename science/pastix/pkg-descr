@@ -6,4 +6,5 @@ symmetric matrices having a symmetric pattern). This solver also provides some
 low-rank compression methods to reduce the memory footprint and/or the
 time-to-solution.
 
-WWW: https://solverstack.gitlabpages.inria.fr/pastix/
+It is bundled with SPM (SParse Matrix Package).
+See also https://gitlab.inria.fr/solverstack/spm

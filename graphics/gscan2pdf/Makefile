@@ -1,10 +1,11 @@
 PORTNAME=	gscan2pdf
-PORTVERSION=	2.12.8
+PORTVERSION=	2.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Produce PDF from scanned documents
+WWW=		https://sourceforge.net/projects/gscan2pdf/
 
 LICENSE=	GPLv3
 

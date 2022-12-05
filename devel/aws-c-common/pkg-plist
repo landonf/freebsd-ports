@@ -31,6 +31,7 @@ include/aws/common/exports.h
 include/aws/common/fifo_cache.h
 include/aws/common/file.h
 include/aws/common/hash_table.h
+include/aws/common/json.h
 include/aws/common/lifo_cache.h
 include/aws/common/linked_hash_table.h
 include/aws/common/linked_list.h
@@ -72,6 +73,7 @@ include/aws/common/task_scheduler.h
 include/aws/common/thread.h
 include/aws/common/thread_scheduler.h
 include/aws/common/time.h
+include/aws/common/uri.h
 include/aws/common/uuid.h
 include/aws/common/xml_parser.h
 include/aws/common/zero.h

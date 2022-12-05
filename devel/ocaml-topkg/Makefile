@@ -1,11 +1,13 @@
 PORTNAME=	topkg
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/topkg/releases/
 PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Transitory OCaml software packager
+WWW=		https://erratique.ch/software/topkg
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

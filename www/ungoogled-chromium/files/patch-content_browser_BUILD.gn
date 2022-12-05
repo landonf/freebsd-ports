@@ -1,0 +1,16 @@
+--- content/browser/BUILD.gn.orig	2022-10-29 17:50:56 UTC
++++ content/browser/BUILD.gn
+@@ -2484,6 +2484,13 @@ source_set("browser") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "sandbox_ipc_linux.cc",
++      "sandbox_ipc_linux.h",
++    ]
++  }
++
+   if (is_chromeos) {
+     deps += [ "//components/value_store:value_store" ]
+     sources += [

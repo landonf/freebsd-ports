@@ -1,5 +1,5 @@
 PORTNAME=	cde
-DISTVERSION=	2.5.0
+DISTVERSION=	2.5.1
 CATEGORIES=	x11
 MASTER_SITES=	SF/cdesktopenv/src/
 .if !defined(MASTERDIR)
@@ -8,11 +8,10 @@ PKGNAMESUFFIX=	-25
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Common Desktop Environment
+WWW=		https://sourceforge.net/p/cdesktopenv/wiki/Home/
 
 LICENSE=	LGPL21
 
-BROKEN_mips64=		fails to build: ./config/imake/imake: No such file or directory
-BROKEN_powerpc64=	fails to build: ./config/imake/imake: No such file or directory
 BROKEN_i386=		cannot bind to a temporary of type va_list
 
 # For concurrent testing purposes only. Define DT_ID in make.conf to build
@@ -115,6 +114,5 @@ post-install:
 	@cd ${STAGEDIR}/${DT_PREFIX}; ${LN} -s share/examples
 	# Only a problem on armv7 so far
 	${FIND} ${STAGEDIR}/${DT_PREFIX} -type f -name 'ecp.*' -delete
-
 
 .include <bsd.port.mk>

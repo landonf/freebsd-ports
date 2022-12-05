@@ -1,10 +1,11 @@
 PORTNAME=	coppermine
-PORTVERSION=	1.6.19
+PORTVERSION=	1.6.20
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Web picture gallery script
+WWW=		https://coppermine-gallery.net/
 
 LICENSE=	GPLv3
 

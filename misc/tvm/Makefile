@@ -1,10 +1,11 @@
 PORTNAME=	tvm
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.0
+DISTVERSION=	0.10.0
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Deep learning compiler stack for cpu, gpu and specialized accelerators
+WWW=		https://tvm.ai/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -42,7 +43,7 @@ LLVM_RUN_DEPENDS=	llvm-config${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 CMAKE_ARGS+=	-DUSE_RPC:BOOL=OFF
 .endif
 
-post-test:
+post-test: # 1 test fails, see https://github.com/apache/tvm/issues/13131
 	@cd ${TEST_WRKSRC} && ./cpptest
 
 .include <bsd.port.mk>

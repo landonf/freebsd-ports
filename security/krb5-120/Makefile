@@ -1,5 +1,5 @@
 PORTNAME=		krb5
-PORTVERSION=		1.20
+PORTVERSION=		1.20.1
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 .if !defined(MASTERDIR)
@@ -11,13 +11,12 @@ PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		cy@FreeBSD.org
 COMMENT=		MIT implementation of RFC 4120 network authentication service
+WWW=			https://web.mit.edu/kerberos/
 
 LICENSE=		MIT
 
-CONFLICTS=		heimdal krb5 krb5-*
+CONFLICTS=		heimdal krb5 krb5-11*
 CONFLICTS_BUILD=	boringssl
-
-IGNORE_SSL=		libressl libressl-devel
 
 KERBEROSV_URL=		http://web.mit.edu/kerberos/
 USES=			compiler:c++11-lang cpe gmake gettext-runtime \

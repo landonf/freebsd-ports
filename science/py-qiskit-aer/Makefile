@@ -9,12 +9,13 @@ PATCHFILES=	46d86944f349a177acb40fb8a3adc301c395fe60.patch:-p1 # https://github.
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Aer submodule of the Quiskit framework for quantum computing
+WWW=		https://qiskit.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}scikit-build>0:devel/py-scikit-build@${PY_FLAVOR} \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		nlohmann-json>0:devel/nlohmann-json \
 		${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pybind11>0:devel/py-pybind11@${PY_FLAVOR} \

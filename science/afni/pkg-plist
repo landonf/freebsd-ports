@@ -514,6 +514,12 @@ bin/afni_seeds_per_space.txt
 bin/afni_skeleton.py
 bin/afni_system_check.py
 bin/afni_vcheck
+bin/afnisumafatcat_logo_128sq.png
+bin/afnisumafatcat_logo_905sq.png
+bin/afnisumagui_logo_128sq.jpg
+bin/afnisumagui_logo_128sq.png
+bin/afnisumagui_logo_905sq.jpg
+bin/afnisumagui_logo_905sq.png
 bin/aiv
 bin/align_epi_anat.py
 bin/ap_run_simple_rest.tcsh
@@ -556,10 +562,14 @@ bin/fat_proc_imit2w_from_t1w
 bin/fat_proc_map_to_dti
 bin/fat_proc_select_vols
 bin/fat_roi_row.py
+bin/fatcat_logo_128sq.jpg
+bin/fatcat_logo_128sq.png
+bin/fatcat_logo_orig1200sq.png
 bin/fdrval
 bin/fftest
 bin/file_tool
 bin/fim2
+bin/find_variance_lines.tcsh
 bin/float_scan
 bin/from3d
 bin/gen_epi_review.py
@@ -630,6 +640,10 @@ bin/stimband
 bin/strblast
 bin/suma
 bin/suma_change_spec
+bin/sumagui_logo_128sq.jpg
+bin/sumagui_logo_128sq.png
+bin/sumagui_logo_905sq.jpg
+bin/sumagui_logo_905sq.png
 bin/tedana_wrapper.py
 bin/tfim
 bin/timing_tool.py
@@ -780,6 +794,7 @@ lib/afni/plug_vol2surf.so
 lib/afni/plug_volreg.so
 lib/afni/plug_wavelets.so
 lib/afni/plug_zeropad.so
+ %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_instacorr_tcat.py
 %%PYTHON_SITELIBDIR%%/afnipy/__init__.py
 %%PYTHON_SITELIBDIR%%/afnipy/abids_lib.py
 %%PYTHON_SITELIBDIR%%/afnipy/afni_base.py
@@ -798,6 +813,7 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_ap_examples.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_html.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_html_css.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_instacorr.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_io.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_stats_dset.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_tcsh.py
@@ -845,6 +861,12 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/afnigui_cursor1030.jpg
 %%DATADIR%%/afnigui_cursor1100.jpg
 %%DATADIR%%/afnigui_logo.jpg
+%%DATADIR%%/afnigui_logo.png
+%%DATADIR%%/afnigui_logo_128sq.jpg
+%%DATADIR%%/afnigui_logo_128sq.png
+%%DATADIR%%/afnigui_logo_905sq.jpg
+%%DATADIR%%/afnigui_logo_905sq.png
+%%DATADIR%%/afnigui_logo_ORIG.jpg
 %%DATADIR%%/funstuff/afnimusic.au
 %%DATADIR%%/funstuff/face_15k_jjlr.jpg
 %%DATADIR%%/funstuff/face_7Tesla.jpg
@@ -858,6 +880,8 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_JimEliassen.jpg
 %%DATADIR%%/funstuff/face_JohannaBaas.jpg
 %%DATADIR%%/funstuff/face_JulieFrost.jpg
+%%DATADIR%%/funstuff/face_LABlab1b.jpg
+%%DATADIR%%/funstuff/face_LABlab2b.jpg
 %%DATADIR%%/funstuff/face_MallaKing.jpg
 %%DATADIR%%/funstuff/face_MallaQueen.jpg
 %%DATADIR%%/funstuff/face_PhilippeGoldin.jpg
@@ -883,6 +907,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_alexandrakofinis.jpg
 %%DATADIR%%/funstuff/face_alexmartin.jpg
 %%DATADIR%%/funstuff/face_alexmartin2.jpg
+%%DATADIR%%/funstuff/face_alexp.jpg
 %%DATADIR%%/funstuff/face_aliceh.jpg
 %%DATADIR%%/funstuff/face_alkattan.jpg
 %%DATADIR%%/funstuff/face_allyson_rosen.jpg
@@ -1303,6 +1328,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_sudre_gustavo.jpg
 %%DATADIR%%/funstuff/face_sule_tinaz.jpg
 %%DATADIR%%/funstuff/face_sumabucks.jpg
+%%DATADIR%%/funstuff/face_sumagui_logo.jpg
 %%DATADIR%%/funstuff/face_tainan.jpg
 %%DATADIR%%/funstuff/face_tammy_tran.jpg
 %%DATADIR%%/funstuff/face_tang.jpg
@@ -1961,3 +1987,4 @@ lib/afni/plug_zeropad.so
 %%PORTDOCS%%%%DOCSDIR%%/README.volreg
 %%PORTDOCS%%%%DOCSDIR%%/README.web
 %%PORTDOCS%%%%DOCSDIR%%/README.ziad
+

@@ -1,12 +1,13 @@
 PORTNAME=	protobuf
-PORTVERSION=	3.20.1
+PORTVERSION=	3.21.7
 DISTVERSIONPREFIX=	cpp-
 PORTEPOCH=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/protocolbuffers/protobuf/releases/download/v${PORTVERSION}/
+MASTER_SITES=	https://github.com/protocolbuffers/protobuf/releases/download/v${PORTVERSION:R:E}.${PORTVERSION:E}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data interchange format library
+WWW=		https://github.com/protocolbuffers/protobuf
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

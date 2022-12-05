@@ -1,7 +1,7 @@
 PORTNAME=	wayfire-plugins-extra
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -9,6 +9,7 @@ PATCHFILES+=	cf95ac721fb1.patch:-p1 # https://github.com/WayfireWM/wayfire-plugi
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Additional plugins for Wayfire
+WWW=		https://wayfire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -49,4 +50,5 @@ post-patch:
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/subprojects/windecor/deco-theme.cpp
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

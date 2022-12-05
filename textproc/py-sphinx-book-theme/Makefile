@@ -1,5 +1,6 @@
 PORTNAME=	sphinx-book-theme
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP \
 		LOCAL/sunpoet:static
@@ -9,6 +10,7 @@ DISTFILES=	sphinx_book_theme-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bootstrap-based Sphinx theme from the PyData community
+WWW=		https://github.com/executablebooks/sphinx-book-theme
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,6 +29,6 @@ post-patch:
 	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
 
 post-install:
-	cd ${WRKDIR}/static/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PYTHON_SITELIBDIR}/sphinx_book_theme/theme/sphinx_book_theme/static/
+	cd ${WRKDIR}/static/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PYTHON_SITELIBDIR}/sphinx_book_theme/
 
 .include <bsd.port.mk>

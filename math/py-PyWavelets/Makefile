@@ -1,11 +1,12 @@
 PORTNAME=	PyWavelets
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Discrete Wavelet Transforms in Python
+WWW=		https://github.com/PyWavelets/pywt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

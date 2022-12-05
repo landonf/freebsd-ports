@@ -1,10 +1,12 @@
 PORTNAME=	gsad
 DISTVERSIONPREFIX=	v
 DISTVERSION=	22.4.0
+PORTREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Greenbone Security Assistant HTTP server
+WWW=		https://github.com/greenbone/gsa
 
 LICENSE=	AGPLv3+
 

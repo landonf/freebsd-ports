@@ -1,9 +1,11 @@
 PORTNAME=	BRiAl
 PORTVERSION=	1.2.11
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Library for polynomials over boolean rings
+WWW=		https://github.com/BRiAl/BRiAl
 
 LICENSE=	GPLv2
 

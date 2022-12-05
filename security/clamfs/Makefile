@@ -1,10 +1,12 @@
 PORTNAME=	clamfs
 PORTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/burghardt/${PORTNAME}/releases/download/${PORTNAME}-${PORTVERSION}/
 
 MAINTAINER=	anastasios@mageirias.com
 COMMENT=	User-space fs with on-access antivirus scanning
+WWW=		https://github.com/burghardt/clamfs
 
 LICENSE=	GPLv2
 

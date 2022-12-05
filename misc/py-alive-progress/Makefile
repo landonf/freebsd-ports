@@ -4,8 +4,9 @@ CATEGORIES=	misc
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced Python Progress Bar
+WWW=		https://pypi.org/project/alive-progress/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

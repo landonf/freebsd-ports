@@ -1,11 +1,12 @@
 PORTNAME=	mailsuite
-DISTVERSION=	1.7.3
+DISTVERSION=	1.9.14
 CATEGORIES=	mail python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Python package to simplify receiving, parsing, and sending email
+WWW=		https://github.com/seanthegeek/mailsuite
 
 LICENSE=	APACHE20
 
@@ -19,5 +20,8 @@ USES=		python:3.4+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+post-patch:
+	${RM} ${WRKSRC}/pyproject.toml
 
 .include <bsd.port.mk>

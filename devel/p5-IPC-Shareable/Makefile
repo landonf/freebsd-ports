@@ -1,11 +1,12 @@
 PORTNAME=	IPC-Shareable
-PORTVERSION=	1.12
+PORTVERSION=	1.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Share Perl variables between processes
+WWW=		https://metacpan.org/release/IPC-Shareable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

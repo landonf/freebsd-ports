@@ -1,11 +1,13 @@
 PORTNAME=	freeciv
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/freeciv/Freeciv%20${PORTVERSION:R}/${PORTVERSION} \
 		http://files.freeciv.org/stable/
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Free turn-based multiplayer strategy
+WWW=		https://www.freeciv.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,8 +16,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libicuuc.so:devel/icu \
 		libltdl.so:devel/libltdl
 
-USES=		autoreconf compiler:c++11-lang cpe gmake iconv libtool lua:53 \
-		pkgconfig readline ssl tar:xz
+USES=		autoreconf compiler:c++11-lang cpe desktop-file-utils gmake \
+		iconv:wchar_t libtool lua:53 pkgconfig readline ssl tar:xz
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
@@ -27,7 +30,7 @@ CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG} \
 		--enable-mapimg=no \
 		--enable-shared
 
-LDFLAGS+=	-Wl,--as-needed
+LDFLAGS+=	-Wl,--as-needed ${ICONV_LIB}
 
 PORTDATA=	*
 
@@ -75,7 +78,7 @@ PGSQL_CONFIGURE_ON=	--with-postgres-prefix=${LOCALBASE}
 PGSQL_VARS=		_FREECIV_DB+=postgres
 
 QT5_USES=		qt:5 sdl
-QT5_USE=		QT=core,gui,widgets,buildtools_build \
+QT5_USE=		QT=core,gui,widgets,buildtools:build \
 			SDL=mixer2
 QT5_CONFIGURE_ON=	--with-qt5-includes=${LOCALBASE}/${QT_INCDIR_REL} \
 			--with-qt5-libs=${LOCALBASE}/${QT_LIBDIR_REL}

@@ -47,6 +47,7 @@
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += alizams
     SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
@@ -117,8 +118,8 @@
     SUBDIR += curator
     SUBDIR += curtail
     SUBDIR += cuttlefish
+    SUBDIR += cxxplot
     SUBDIR += darktable
-    SUBDIR += darktable40
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -132,8 +133,10 @@
     SUBDIR += dia
     SUBDIR += diff-pdf
     SUBDIR += diffpdf
+    SUBDIR += dify
     SUBDIR += digikam
     SUBDIR += dilay
+    SUBDIR += diplib
     SUBDIR += ditaa
     SUBDIR += djview4
     SUBDIR += djvulibre
@@ -141,9 +144,7 @@
     SUBDIR += drawing
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
-    SUBDIR += drm-54-kmod
     SUBDIR += drm-fbsd12.0-kmod
-    SUBDIR += drm-fbsd13-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
@@ -155,6 +156,7 @@
     SUBDIR += edje_viewer
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
+    SUBDIR += elastix
     SUBDIR += electricsheep
     SUBDIR += elementary-photos
     SUBDIR += embree
@@ -187,6 +189,7 @@
     SUBDIR += feh
     SUBDIR += fig2sxd
     SUBDIR += figurine
+    SUBDIR += filament
     SUBDIR += filmulator
     SUBDIR += flam3
     SUBDIR += flasm
@@ -243,7 +246,6 @@
     SUBDIR += geos
     SUBDIR += geoserver
     SUBDIR += gexiv2
-    SUBDIR += giblib
     SUBDIR += giflib
     SUBDIR += gifmerge
     SUBDIR += gifsicle
@@ -276,6 +278,7 @@
     SUBDIR += glosm
     SUBDIR += glpng
     SUBDIR += glslang
+    SUBDIR += glvis
     SUBDIR += glx-utils
     SUBDIR += gmic
     SUBDIR += gmic-qt
@@ -291,6 +294,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -352,6 +356,7 @@
     SUBDIR += icoutils
     SUBDIR += ida
     SUBDIR += iec16022
+    SUBDIR += igt-gpu-tools
     SUBDIR += iiview
     SUBDIR += ikona
     SUBDIR += imageindex
@@ -418,6 +423,7 @@
     SUBDIR += kqtquickcharts
     SUBDIR += kquickimageeditor
     SUBDIR += krita
+    SUBDIR += ksanecore
     SUBDIR += kseexpr
     SUBDIR += ksnip
     SUBDIR += kxstitch
@@ -546,7 +552,6 @@
     SUBDIR += mapyrus
     SUBDIR += matplotlib-cpp
     SUBDIR += matplotplusplus
-    SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
@@ -582,6 +587,7 @@
     SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
+    SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
     SUBDIR += ocrad
@@ -614,6 +620,7 @@
     SUBDIR += openorienteering-mapper
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
+    SUBDIR += openslide
     SUBDIR += opensubdiv
     SUBDIR += openvkl
     SUBDIR += optar
@@ -624,6 +631,7 @@
     SUBDIR += ospray
     SUBDIR += ospray-studio
     SUBDIR += ossim
+    SUBDIR += oxipng
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
     SUBDIR += p5-Algorithm-Line-Bresenham
@@ -806,6 +814,7 @@
     SUBDIR += poppler-data
     SUBDIR += poppler-glib
     SUBDIR += poppler-qt5
+    SUBDIR += poppler-qt6
     SUBDIR += poppler-utils
     SUBDIR += potrace
     SUBDIR += povray-meta
@@ -838,11 +847,13 @@
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
     SUBDIR += py-cogdumper
+    SUBDIR += py-colorcet
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
     SUBDIR += py-exifread
+    SUBDIR += py-f3d
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models
     SUBDIR += py-fiona
@@ -855,6 +866,7 @@
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
+    SUBDIR += py-gprof2dot
     SUBDIR += py-graphlib-backport
     SUBDIR += py-graphviz
     SUBDIR += py-graphy
@@ -866,6 +878,7 @@
     SUBDIR += py-imagesize
     SUBDIR += py-img2pdf
     SUBDIR += py-leather
+    SUBDIR += py-lerc
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
@@ -879,6 +892,8 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
+    SUBDIR += py-openslide-python
+    SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
     SUBDIR += py-photocollage
@@ -899,6 +914,7 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet1
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -956,6 +972,11 @@
     SUBDIR += qt5-pixeltool
     SUBDIR += qt5-svg
     SUBDIR += qt5-wayland
+    SUBDIR += qt6-3d
+    SUBDIR += qt6-imageformats
+    SUBDIR += qt6-lottie
+    SUBDIR += qt6-svg
+    SUBDIR += qt6-wayland
     SUBDIR += qtawesome
     SUBDIR += qtpbfimageplugin
     SUBDIR += qtqr
@@ -984,6 +1005,7 @@
     SUBDIR += ristretto
     SUBDIR += rlottie
     SUBDIR += ruby-gd
+    SUBDIR += rubygem-blurhash
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png
@@ -1058,6 +1080,7 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simple-scan
+    SUBDIR += simpleitk
     SUBDIR += simpleviewer
     SUBDIR += skanlite
     SUBDIR += skanpage

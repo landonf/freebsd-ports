@@ -1,5 +1,6 @@
 PORTNAME=	asymptote
 PORTVERSION=	2.81
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -9,6 +10,7 @@ PATCHFILES+=	fa28442195bd99b9bac87e3ff752953ac57ee172.patch:-p1 # backport fix f
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Powerful script-based vector graphics language
+WWW=		https://asymptote.sourceforge.io/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual
@@ -29,7 +31,7 @@ USE_GL=		gl glu glut
 USE_GNOME=	librsvg2:run
 USE_PERL5=	build
 USE_TEX=	dvipsk formats
-USE_PYQT=	pyqt5_run
+USE_PYQT=	pyqt5:run
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes

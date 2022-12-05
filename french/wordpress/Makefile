@@ -1,5 +1,5 @@
 PORTNAME=	wordpress
-DISTVERSION=	6.0
+DISTVERSION=	6.1.1
 DISTVERSIONSUFFIX=	-fr_FR
 PORTEPOCH=	1
 CATEGORIES=	french www
@@ -7,6 +7,7 @@ MASTER_SITES=	https://fr.wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://fr.wordpress.org/
 
 LICENSE=	GPLv2
 

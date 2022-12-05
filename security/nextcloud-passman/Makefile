@@ -1,5 +1,5 @@
 PORTNAME=	passman
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 CATEGORIES=	security
 MASTER_SITES=	https://releases.passman.cc/
 PKGNAMEPREFIX=	nextcloud-
@@ -9,6 +9,7 @@ DIST_SUBDIR=	nextcloud
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Full featured password manager for Nextcloud
+WWW=		https://passman.cc
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

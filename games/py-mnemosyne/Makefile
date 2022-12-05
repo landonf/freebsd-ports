@@ -8,6 +8,7 @@ DISTNAME=	Mnemosyne-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flash-card tool which optimises your learning process
+WWW=		https://www.mnemosyne-proj.org/
 
 LICENSE=	LGPL3
 
@@ -21,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}gtts>=0:audio/py-gtts@${PY_FLAVOR}
 
 USES=		pyqt:5 python:3.7+ shebangfix dos2unix #due textproc/py-googletrans
-USE_PYQT=	pyqt5_run sip_run webengine_run
+USE_PYQT=	pyqt5:run sip:run webengine:run
 USE_PYTHON=	autoplist concurrent distutils
 
 DOS2UNIX_GLOB=	*.py

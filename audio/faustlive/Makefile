@@ -1,9 +1,10 @@
 PORTNAME=	faustlive
-DISTVERSION=	2.5.11
+DISTVERSION=	2.5.12
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Standalone application that embeds Faust
+WWW=		https://github.com/grame-cncm/faustlive
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/GPL.txt
@@ -19,12 +20,12 @@ LIB_DEPENDS=	libLLVM-${LLVM_VERSION}.so:devel/llvm${LLVM_VERSION} \
 		libsndfile.so:audio/libsndfile # audio/alsa-lib isn't really needed: https://github.com/grame-cncm/faustlive/issues/3
 
 USES=		compiler:c++11-lang gl pkgconfig qmake qt:5 shebangfix
-USE_QT=		core gui network widgets buildtools_build
+USE_QT=		core gui network widgets buildtools:build
 USE_GL=		gl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	grame-cncm
-GH_TUPLE=	grame-cncm:faustlibraries:1b09fde:grame_cncm_faustlibraries/Resources/Libs
+GH_TUPLE=	grame-cncm:faustlibraries:f9efea9:grame_cncm_faustlibraries/Resources/Libs
 
 SHEBANG_GLOB=	build install makelibs
 

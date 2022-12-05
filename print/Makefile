@@ -147,6 +147,7 @@
     SUBDIR += pdfchain
     SUBDIR += pdflib
     SUBDIR += pdflib-perl
+    SUBDIR += pdfmixtool
     SUBDIR += pdfstitch
     SUBDIR += pdftk
     SUBDIR += pear-File_PDF
@@ -181,12 +182,12 @@
     SUBDIR += py-frescobaldi
     SUBDIR += py-glyphsets
     SUBDIR += py-glyphtools
-    SUBDIR += py-pdf
-    SUBDIR += py-pdf2
     SUBDIR += py-pollyreports
     SUBDIR += py-preppy
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
+    SUBDIR += py-pypdf
+    SUBDIR += py-pypdf2
     SUBDIR += py-pypdf3
     SUBDIR += py-python-ly
     SUBDIR += py-relatorio
@@ -205,6 +206,7 @@
     SUBDIR += rubygem-afm
     SUBDIR += rubygem-color
     SUBDIR += rubygem-color-tools
+    SUBDIR += rubygem-color_diff
     SUBDIR += rubygem-pdf-core
     SUBDIR += rubygem-pdf-reader
     SUBDIR += rubygem-pdf-writer

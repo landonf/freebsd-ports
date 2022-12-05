@@ -1,11 +1,12 @@
 PORTNAME=	wordpress
-DISTVERSION=	6.0
+DISTVERSION=	6.1.1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	https://wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://wordpress.org/
 
 LICENSE=	GPLv2
 

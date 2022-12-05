@@ -1,11 +1,12 @@
 PORTNAME=	aioitertools
-PORTVERSION=	0.10.0
+PORTVERSION=	0.11.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Itertools and builtins for AsyncIO and mixed iterables
+WWW=		https://github.com/omnilib/aioitertools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

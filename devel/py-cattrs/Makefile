@@ -1,11 +1,12 @@
 PORTNAME=	cattrs
-PORTVERSION=	22.1.0
+PORTVERSION=	22.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Composable complex class support for attrs and dataclasses
+WWW=		https://github.com/python-attrs/cattrs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,7 +25,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}typing-extensions>=0:devel/py-typing-extens
 .endif
 
 .if ${PYTHON_REL} < 31100
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}exceptiongroup>=1.0.0rc3:devel/py-exceptiongroup@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}exceptiongroup>=0:devel/py-exceptiongroup@${PY_FLAVOR}
 .endif
 
 .include <bsd.port.post.mk>

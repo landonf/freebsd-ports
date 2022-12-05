@@ -1,12 +1,12 @@
 PORTNAME=	Lektor
-PORTVERSION=	3.3.6
-PORTREVISION=	1
+PORTVERSION=	3.3.7
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Static content management system written in Python
+WWW=		https://www.getlektor.com/
 
 LICENSE=	BSD3CLAUSE
 

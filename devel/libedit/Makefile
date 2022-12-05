@@ -7,12 +7,13 @@ DISTNAME=	${PORTNAME}-${EDITDATE}-${EDITVERSION}
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Command line editor library
+WWW=		https://thrysoee.dk/editline/
 
 LICENSE=	BSD2CLAUSE
 
 USES=		cpe libtool localbase ncurses pathfix
 EDITVERSION=	3.1
-EDITDATE=	20210910
+EDITDATE=	20221030
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip

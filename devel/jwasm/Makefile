@@ -1,10 +1,11 @@
 PORTNAME=	jwasm
-PORTVERSION=	2.15
+PORTVERSION=	2.16
 PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Fork of OpenWatcom x86 assembler with AMD64 support
+WWW=		https://github.com/Baron-von-Riedesel/JWasm
 
 LICENSE=	OpenWatcom
 LICENSE_NAME=	Sybase Open Watcom Public License version 1.0
@@ -16,7 +17,7 @@ USES=		alias dos2unix gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	Baron-von-Riedesel
 GH_PROJECT=	JWasm
-GH_TAGNAME=	5a5714d
+GH_TAGNAME=	v2.16
 
 OPTIONS_DEFINE=	DOCS
 

@@ -1,11 +1,12 @@
 PORTNAME=	courier-imap
-PORTVERSION=	5.1.8
+PORTVERSION=	5.1.9
 PORTEPOCH=	2
 CATEGORIES=	mail
 MASTER_SITES=	SF/courier/imap/${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	IMAP (and POP3) server that provides access to Maildir mailboxes
+WWW=		https://www.courier-mta.org/imap/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

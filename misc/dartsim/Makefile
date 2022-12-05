@@ -1,10 +1,12 @@
 PORTNAME=	dartsim
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.12.2
+PORTREVISION=	3
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dynamic Animation and Robotics Toolkit
+WWW=		https://dartsim.github.io/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,7 +28,6 @@ LIB_DEPENDS=	libassimp.so:multimedia/assimp \
 		libosg.so:graphics/osg34 \
 		libnlopt.so:math/nlopt \
 		libpagmo.so:science/pagmo2 \
-		libtbb.so:devel/tbb \
 		libtinyxml2.so:textproc/tinyxml2 \
 		liburdfdom_world.so:devel/ros-urdfdom
 

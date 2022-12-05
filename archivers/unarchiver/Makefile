@@ -1,12 +1,13 @@
 PORTNAME=	unar
 PORTVERSION=	1.10.1
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	archivers gnustep
 MASTER_SITES=	http://wakaba.c3.cx/releases/TheUnarchiver/
 DISTNAME=	${PORTNAME}${PORTVERSION}_src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Unarchiver for a vast variety of file formats
+WWW=		https://unarchiver.c3.cx/commandline
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/License.txt

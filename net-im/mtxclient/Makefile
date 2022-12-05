@@ -1,10 +1,11 @@
 PORTNAME=		mtxclient
 DISTVERSIONPREFIX=	v
-DISTVERSION=		0.8.0
+DISTVERSION=		0.8.2
 CATEGORIES=		net-im
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Client API library for the Matrix protocol
+WWW=		https://nheko.im/nheko-reborn/mtxclient/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

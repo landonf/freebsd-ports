@@ -1,9 +1,10 @@
 PORTNAME=	varnish-modules
-PORTVERSION=	0.20.0
+PORTVERSION=	0.21.0
 CATEGORIES=	www
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Collection of Varnish Cache modules by Varnish Software
+WWW=		https://github.com/varnish/varnish-modules
 
 LICENSE=	BSD2CLAUSE
 

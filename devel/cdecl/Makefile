@@ -1,11 +1,11 @@
 PORTNAME=	cdecl
-PORTVERSION=	12.0
-PORTREVISION=	1
+PORTVERSION=	13.0
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Explains complicated C/C++ declarations in plain English
+WWW=		https://github.com/paul-j-lucas/cdecl
 
 LICENSE=	GPLv3
 

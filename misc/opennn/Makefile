@@ -1,11 +1,12 @@
 PORTNAME=	opennn
+DISTVERSIONPREFIX=	v
 DISTVERSION=	5.0.5
 PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
-MASTER_SITES=	https://github.com/Artelnics/opennn/archive/refs/tags/v${DISTVERSION}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open neural networks library
+WWW=		https://www.opennn.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -14,8 +15,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 BROKEN=		requires OpenMP support that is missing on this architecture
 .endif
 
-USES=		cmake:testing compiler:c++11-lang dos2unix zip
+USES=		cmake:testing compiler:c++11-lang dos2unix
 USE_LDCONFIG=	yes
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	Artelnics
 
 DOS2UNIX_FILES=	opennn/CMakeLists.txt
 

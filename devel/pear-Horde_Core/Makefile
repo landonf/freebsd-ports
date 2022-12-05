@@ -1,9 +1,11 @@
 PORTNAME=	Horde_Core
 DISTVERSION=	2.31.16
+PORTREVISION=	1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Core Framework libraries
+WWW=		https://pear.horde.org
 
 CONFLICTS=	horde-3*
 

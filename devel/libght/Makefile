@@ -1,11 +1,12 @@
 PORTNAME=	libght
 PORTVERSION=	0.1.0
-PORTREVISION=	5
+PORTREVISION=	7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel geography
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	GeoHashTree library for storing and accessing multi-dimensional point clouds
+WWW=		https://github.com/pramsey/libght
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

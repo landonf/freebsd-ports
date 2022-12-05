@@ -1,5 +1,6 @@
 PORTNAME=	FreeCAD
 DISTVERSION=	0.20.1
+PORTREVISION=	4
 # use these for bugfixes/snapshots
 # DISTVERSION=	0.18-16093 # git rev-list --count
 # DISTVERSIONSUFFIX=	-g690774c0e
@@ -7,6 +8,7 @@ CATEGORIES=	cad
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	General purpose 3D CAD modeller
+WWW=		https://www.freecadweb.org/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,25 +29,25 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libboost_thread.so:devel/boost-libs \
 		libarea.so:devel/libarea \
 		libmed.so:french/med \
-		libmpi.so:net/mpich \
 		libshiboken2.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}.so:devel/shiboken2@${PY_FLAVOR} \
 		libhdf5-110.so:science/hdf5-110
+
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR}
 
 USES=		dos2unix compiler:c++17-lang cmake cpe gl eigen:3 fortran jpeg \
-		localbase:ldflags pkgconfig python:3.7+ localbase qt:5 xorg
+		localbase:ldflags mpi:openmpi pkgconfig python:3.7+ localbase qt:5 xorg
 USE_GITHUB=	yes
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu
 USE_QT=		buildtools concurrent core declarative gui location network \
-		opengl printsupport qmake_build svg webchannel webengine \
-		widgets xml xmlpatterns
+		opengl printsupport qmake:build svg webchannel widgets xml \
+		xmlpatterns
 USE_LDCONFIG=	yes
 
 CPE_VENDOR=	freecad_project
 
-VTK_VER=	9.1
+VTK_VER=	9.2
 
 DOS2UNIX_GLOB=	*.txt *.h *.cpp *.py *.qss *.csv *.pov *.stp *.ui *.wrl *.WRL
 
@@ -75,6 +77,14 @@ COLLADA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycollada>0:graphics/py-pycollada@${
 
 DESKTOP_ENTRIES=${PORTNAME} "" "${PREFIX}/FreeCAD/data/freecad.svg" \
 		${PORTNAME} "Graphics;Engineering;" false
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386
+USE_QT+=	webengine
+.else
+USE_QT+=	webkit
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/self\.rev/s/Unknown/${DISTVERSION:C/.*-//}/' \

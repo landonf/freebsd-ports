@@ -1,5 +1,5 @@
 PORTNAME=	cryptography-vectors
-PORTVERSION=	3.4.8
+PORTVERSION=	38.0.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	cryptography_vectors-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test vectors for the cryptography package
+WWW=		https://github.com/pyca/cryptography/tree/main/vectors
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	dual

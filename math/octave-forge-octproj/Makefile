@@ -1,10 +1,13 @@
 PORTNAME=	octave-forge-octproj
-PORTVERSION=	2.0.1
-PORTREVISION=	6
+PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	math
+MASTER_SITES=	https://bitbucket.org/jgpallero/octproj/downloads/
+DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+WWW=		https://packages.octave.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
@@ -17,8 +20,6 @@ OCTSRC=		${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
-USES+=		compiler:gcc-c++11-lib
-
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-patch:
@@ -26,6 +27,6 @@ post-patch:
 
 post-build:
 	${RM} ${WRKSRC}/Makefile ${WRKSRC}/configure
-	cd ${WRKDIR} && ${TAR} cfz ${DISTNAME}.tar.gz ${OCTSRC}
+	cd ${WRKDIR} && ${TAR} cfz ${OCTAVE_DISTNAME}.tar.gz ${OCTSRC}
 
 .include <bsd.port.mk>

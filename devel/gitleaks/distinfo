@@ -1,5 +1,5 @@
-TIMESTAMP = 1659993971
-SHA256 (go/devel_gitleaks/gitleaks-v8.10.0/v8.10.0.mod) = 1b5404745bc6b401322116638ec8b2b9bf6f9fd835613abb9c0769ecda4596b1
-SIZE (go/devel_gitleaks/gitleaks-v8.10.0/v8.10.0.mod) = 1398
-SHA256 (go/devel_gitleaks/gitleaks-v8.10.0/v8.10.0.zip) = 4b3264e11776cb80956da760f7df0e31d8c38ba647075970e9c2aab69a7cf041
-SIZE (go/devel_gitleaks/gitleaks-v8.10.0/v8.10.0.zip) = 196858
+TIMESTAMP = 1669072015
+SHA256 (go/devel_gitleaks/gitleaks-v8.15.1/v8.15.1.mod) = e2ee6b75c4aa07e7d03da1242f9cc03cfe91843050ed3f1d99c6d5797a6f565c
+SIZE (go/devel_gitleaks/gitleaks-v8.15.1/v8.15.1.mod) = 1802
+SHA256 (go/devel_gitleaks/gitleaks-v8.15.1/v8.15.1.zip) = dc83c4c5c6fffbdfd23b3980dacf0982541ba2ea341841e0f14a4d36634b199c
+SIZE (go/devel_gitleaks/gitleaks-v8.15.1/v8.15.1.zip) = 203144

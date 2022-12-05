@@ -1,11 +1,12 @@
 PORTNAME=	haproxy
-DISTVERSION=	2.4.18
+DISTVERSION=	2.4.19
 CATEGORIES=	net www
 PKGNAMESUFFIX=	24
 MASTER_SITES=	http://www.haproxy.org/download/2.4/src/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
+WWW=		https://www.haproxy.org
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

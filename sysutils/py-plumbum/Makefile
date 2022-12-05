@@ -1,11 +1,12 @@
 PORTNAME=	plumbum
-PORTVERSION=	1.7.2
+PORTVERSION=	1.8.0
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Shell combinators library
+WWW=		https://github.com/tomerfiliba/plumbum
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,15 @@
 PORTNAME=	putty
-PORTVERSION=	0.77
+DISTVERSION=	0.78
+#DISTVERSIONSUFFIX=	.0c59d49
 CATEGORIES=	security
 MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PORTVERSION}/ \
-		ftp://ftp.chiark.greenend.org.uk/users/sgtatham/putty-latest/
+		ftp://ftp.chiark.greenend.org.uk/users/sgtatham/putty-latest/ \
+		LOCAL/mandree/
+#MASTER_SITES=	https://tartarus.org/~simon/putty-prerel-snapshots/ \
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Secure shell and telnet client including xterm emulator
+WWW=		https://www.chiark.greenend.org.uk/~sgtatham/putty/
 # test plan: test ALL 4 GSSAPI_* options, GTK3 yes/no, WITH_DEBUG=yes build.
 
 LICENSE=	MIT
@@ -14,13 +18,15 @@ LICENSE_FILE=	${PATCH_WRKSRC}/LICENCE
 USES=		cmake cpe perl5 pkgconfig
 USE_PERL5=	build
 
-CONFLICTS_INSTALL?=	pssh putty-nogtk
+CONFLICTS_INSTALL?=	pssh* putty-nogtk*
 
-PLIST_FILES=	bin/plink \
+PLIST_FILES=	bin/pageant \
+		bin/plink \
 		bin/pscp \
 		bin/psftp \
 		bin/psusan \
 		bin/puttygen \
+		share/man/man1/pageant.1.gz \
 		share/man/man1/plink.1.gz \
 		share/man/man1/pscp.1.gz \
 		share/man/man1/psftp.1.gz \
@@ -28,12 +34,10 @@ PLIST_FILES=	bin/plink \
 		share/man/man1/puttygen.1.gz
 
 OPTIONS_DEFINE=			GTK3
-OPTIONS_DEFAULT=		GSSAPI_NONE GTK3
+OPTIONS_DEFAULT=		GSSAPI_BASE GTK3
 OPTIONS_SINGLE=			GSSAPI_SELECT
-OPTIONS_SINGLE_GSSAPI_SELECT=	GSSAPI_MIT \
-				GSSAPI_DYNAMIC \
+OPTIONS_SINGLE_GSSAPI_SELECT=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT \
 				GSSAPI_NONE
-GSSAPI_DYNAMIC_DESC=	EXPERIMENTAL dynamic runtime load of GSS libs
 
 .include <bsd.port.options.mk>
 
@@ -50,10 +54,8 @@ USES+=		gnome
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 CMAKE_ARGS+=	-DPUTTY_GTK_VERSION:STRING=3
 
-PLIST_FILES+=	bin/pageant \
-		bin/pterm \
+PLIST_FILES+=	bin/pterm \
 		bin/putty \
-		share/man/man1/pageant.1.gz \
 		share/man/man1/pterm.1.gz \
 		share/man/man1/putty.1.gz \
 		share/pixmaps/putty.ico
@@ -64,38 +66,36 @@ DESKTOP_ENTRIES=	"PuTTY" \
 			"" \
 			false
 .else
-# XXX FIXME HACK ALERT
-# PUTTY_GTK_VERSION=OFF is not a valid choice, but manages to
-# skip all version comparisons for GTK in cmake/gtk.cmake:
-CMAKE_ARGS+=	-DPUTTY_GTK_VERSION:STRING=OFF
-# this is standard stuff:
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_X11:BOOL=TRUE 
+CMAKE_ARGS+=	-DPUTTY_GTK_VERSION:STRING=NONE
 .endif
 
-.if ${PORT_OPTIONS:MGSSAPI_HEIMDAL}
-# does not compile currently
-BROKEN=		GSSAPI_HEIMDAL does not compile as of putty 0.77
+.if ${PORT_OPTIONS:MGSSAPI_BASE} # Heimdal-like in base system
+USES+=		gssapi:base,flags
+CMAKE_ARGS+=	-DKRB5_CONFIG:PATH=${KRB5CONFIG} \
+		-DPUTTY_GSSAPI:STRING=STATIC
+.elif ${PORT_OPTIONS:MGSSAPI_HEIMDAL}
 USES+=		gssapi:heimdal,flags
-CMAKE_ARGS+=	-DPUTTY_GSSAPI:STRING=STATIC
+CMAKE_ARGS+=	-DKRB5_CONFIG:PATH=${KRB5CONFIG} \
+		-DPUTTY_GSSAPI:STRING=STATIC
 .elif ${PORT_OPTIONS:MGSSAPI_MIT}
 USES+=		gssapi:mit,flags
-CMAKE_ARGS+=	-DPUTTY_GSSAPI:STRING=STATIC
-.elif ${PORT_OPTIONS:MGSSAPI_DYNAMIC}
-CMAKE_ARGS+=	-DPUTTY_GSSAPI:STRING=DYNAMIC
+CMAKE_ARGS+=	-DKRB5_CONFIG:PATH=${KRB5CONFIG} \
+		-DPUTTY_GSSAPI:STRING=STATIC
 .else
-# XXX FIXME buglet in putty 0.77: PUTTY_GSSAPI=OFF 
-# does not appear to get NO_GSSAPI into .build/CMakeFiles/cmake.h,
-# so we shove it down explicitly:
-CMAKE_ARGS+=	-DPUTTY_GSSAPI:STRING=OFF -DNO_GSSAPI=ON
+CMAKE_ARGS+=	-DPUTTY_GSSAPI:STRING=OFF
 .endif
 
 post-patch:
-	# we don't want to inherit FreeBSD commits
-	# as PUTTY Git commit revisions,
-	# so pretend we do not have Git:
+# we don't want to inherit FreeBSD commits
+# as PUTTY Git commit revisions,
+# so pretend we do not have Git:
 	${REINPLACE_CMD} '/FindGit/d' \
 		${WRKSRC}/cmake/setup.cmake \
 		${WRKSRC}/doc/CMakeLists.txt
+# nuke pkg-config detection of GSSAPI/Kerberos libs,
+# it interferes with FreeBSD's krb5-config approach
+	${REINPLACE_CMD} '/pkg_check_modules(KRB5 krb5-gssapi)/d' \
+		${WRKSRC}/cmake/platforms/unix.cmake
 
 post-install:
 .if ${PORT_OPTIONS:MGTK3}

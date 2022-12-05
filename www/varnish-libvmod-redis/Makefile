@@ -1,10 +1,11 @@
 PORTNAME=	libvmod-redis
-PORTVERSION=	20220118
+PORTVERSION=	20221004
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Varnish Module (vmod) for redis
+WWW=		https://github.com/carlosabalde/libvmod-redis
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,7 +28,7 @@ CFLAGS+=	-I${WRKSRC}/src
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	carlosabalde
-GH_TAGNAME=	5e1c20e
+GH_TAGNAME=	652314e
 
 OPTIONS_DEFINE=	DOCS
 

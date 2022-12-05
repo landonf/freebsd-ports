@@ -1,11 +1,12 @@
 PORTNAME=	madedit
 PORTVERSION=	0.2.9
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/MadEdit/MadEdit-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open-source and cross-platform text/hex editor
+WWW=		http://madedit.sourceforge.net/
 
 LICENSE=	GPLv2
 

@@ -1,17 +1,18 @@
 PORTNAME=	pkg
-DISTVERSION=	1.18.99.3
+DISTVERSION=	1.18.99.6
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	pkg@FreeBSD.org
 COMMENT=	Package manager
+WWW=		https://github.com/freebsd/pkg
 
 LICENSE=	BSD2CLAUSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_TAGNAME=	7e1fe1fb
+GH_TAGNAME=	47e55a74
 
 CFLAGS+=	-O0 -g -Wno-error
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg

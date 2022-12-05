@@ -7,17 +7,16 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Common Desktop Environment
+WWW=		https://sourceforge.net/p/cdesktopenv/wiki/Home/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cschuber
 GH_PROJECT=	cdesktopenv-code
-GH_TAGNAME=	47cc5d4a7
-COMMIT_DATE=	2022.07.31
+GH_TAGNAME=	503d09172
+COMMIT_DATE=	2022.10.01
 
 LICENSE=	LGPL21
 
-BROKEN_mips64=		fails to build: ./config/imake/imake: No such file or directory
-BROKEN_powerpc64=	fails to build: ./config/imake/imake: No such file or directory
 BROKEN_i386=		cannot bind to a temporary of type va_list
 
 WRKSRC_SUBDIR=	${PORTNAME}
@@ -119,9 +118,8 @@ post-install:
 	@${ECHO_CMD} MANPATH /usr/local/dt/share/man >  ${STAGEDIR}/${PREFIX}/etc/man.d/cde${DT_ID}.conf
 	@${FIND} ${STAGEDIR}/${DT_PREFIX} -type f -exec ${SH} -c '${STRIP_CMD} {} > /dev/null 2>&1' \;
 	@cd ${WRKSRC}/examples && @${FIND} . | ${CPIO} -pd ${STAGEDIR}/${DT_PREFIX}/share
-	@cd ${STAGEDIR}/${DT_PREFIX}; ${LN} -s share/examples
+	@cd ${STAGEDIR}/${DT_PREFIX}; ${LN} -sf share/examples
 	# Only a problem on armv7 so far
 	${FIND} ${STAGEDIR}/${DT_PREFIX} -type f -name 'ecp.*' -delete
-
 
 .include <bsd.port.mk>

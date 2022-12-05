@@ -1,12 +1,12 @@
 PORTNAME=	polymake
-DISTVERSION=	4.6
-PORTREVISION=	4
+DISTVERSION=	4.7
 CATEGORIES=	math
 MASTER_SITES=	https://polymake.org/lib/exe/fetch.php/download/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-minimal
 
 MAINTAINER=	bsd@philippost.de
 COMMENT=	Software package for research in polyhedral geometry
+WWW=		https://www.polymake.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

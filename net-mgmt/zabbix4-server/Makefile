@@ -1,13 +1,14 @@
 PORTNAME=	zabbix4
-PORTVERSION=	4.0.30
+PORTVERSION=	4.0.44
 PORTREVISION?=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PORTVERSION:R}/
 PKGNAMESUFFIX?=	-server
 DISTNAME=	zabbix-${PORTVERSION}
 
-MAINTAINER=	pg@pakhom.spb.ru
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//}) LTS
+WWW=		https://www.zabbix.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

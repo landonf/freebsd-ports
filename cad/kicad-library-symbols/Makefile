@@ -1,5 +1,5 @@
 PORTNAME=	kicad
-PORTVERSION=	6.0.7
+PORTVERSION=	6.0.9
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/${PORTNAME}-symbols/-/archive/${DISTVERSION}/
 PKGNAMESUFFIX=	-library-symbols
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-symbols-${DISTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Official KiCad schematic symbol libraries
+WWW=		https://gitlab.com/kicad/libraries/kicad-symbols
 
 LICENSE=	GPLv2
 

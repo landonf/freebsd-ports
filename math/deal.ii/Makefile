@@ -1,11 +1,12 @@
 PORTNAME=	deal.II
 DISTVERSIONPREFIX=	v
 DISTVERSION=	9.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Finite element Differential Equations Analysis Library (DEAL)
+WWW=		https://www.dealii.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

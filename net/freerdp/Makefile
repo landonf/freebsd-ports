@@ -1,5 +1,6 @@
 PORTNAME=	freerdp
-DISTVERSION=	2.8.0
+DISTVERSION=	2.8.1
+PORTREVISION=	1
 CATEGORIES=	net comms wayland
 MASTER_SITES=	https://pub.freerdp.com/releases/ \
 		https://github.com/FreeRDP/FreeRDP/releases/download/${DISTVERSION}/
@@ -8,6 +9,7 @@ MASTER_SITES=	https://pub.freerdp.com/releases/ \
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Free implementation of Remote Desktop Protocol
+WWW=		https://www.freerdp.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

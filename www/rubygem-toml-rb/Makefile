@@ -1,10 +1,11 @@
 PORTNAME=	toml-rb
-PORTVERSION=	2.0.1
+PORTVERSION=	2.2.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	TOML parser using Citrus parsing library
+WWW=		https://github.com/emancu/toml-rb
 
 LICENSE=	MIT
 

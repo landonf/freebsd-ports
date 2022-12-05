@@ -1,10 +1,11 @@
 PORTNAME=	lynis
-PORTVERSION=	3.0.7
+PORTVERSION=	3.0.8
 CATEGORIES=	security
 MASTER_SITES=	https://cisofy.com/files/
 
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	Security and system auditing tool
+WWW=		https://cisofy.com/lynis/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

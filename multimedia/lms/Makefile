@@ -1,11 +1,11 @@
 PORTNAME=	lms
-DISTVERSION=	3.28.0
-PORTREVISION=	1
-MASTER_SITES=	https://github.com/epoupon/lms/archive/refs/tags/v${DISTVERSION}${EXTRACT_SUFX}?dummy=/
+DISTVERSIONPREFIX=	v
+DISTVERSION=	3.33.0
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightweight Music Server
+WWW=		https://github.com/epoupon/lms
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,6 +21,9 @@ LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
 
 USES=		cmake compiler:c++17-lang cpe pkgconfig
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	epoupon
 
 USER=		nobody
 GROUP=		nobody

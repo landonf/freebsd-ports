@@ -1,11 +1,12 @@
 PORTNAME=	sphinxcontrib-httpdomain
-PORTVERSION=	1.8.0
+PORTVERSION=	1.8.1
 CATEGORIES=	textproc
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Sphinx domain for HTTP APIs
+WWW=		https://github.com/sphinx-contrib/httpdomain
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

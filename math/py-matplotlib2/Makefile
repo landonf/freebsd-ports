@@ -1,6 +1,6 @@
 PORTNAME=	matplotlib
 DISTVERSION=	2.2.4
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -8,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	mainland@apeiron.net
 COMMENT=	Plotting library uses a syntax familiar to MATLAB users (legacy)
+WWW=		https://matplotlib.org/
 
 LICENSE=	PSFL
 

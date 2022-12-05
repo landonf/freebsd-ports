@@ -1,9 +1,11 @@
 PORTNAME=	hpx
 DISTVERSION=	1.8.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ Standard Library for Parallelism and Concurrency
+WWW=		https://hpx.stellar-group.org/
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt

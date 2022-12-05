@@ -25,7 +25,6 @@
     SUBDIR += granite
     SUBDIR += granite7
     SUBDIR += gstreamer1-plugins-gtk
-    SUBDIR += gstreamer1-plugins-gtk4
     SUBDIR += gstreamer1-plugins-pango
     SUBDIR += gtk-layer-shell
     SUBDIR += gtk-sharp-beans
@@ -76,6 +75,7 @@
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libsexy
+    SUBDIR += libshumate
     SUBDIR += libunique3
     SUBDIR += libwnck
     SUBDIR += libwnck3
@@ -97,8 +97,10 @@
     SUBDIR += ntk
     SUBDIR += nuklear
     SUBDIR += ocaml-lablgtk2
+    SUBDIR += ocaml-lablgtk3
     SUBDIR += ocaml-labltk
     SUBDIR += open-motif
+    SUBDIR += open-motif-devel
     SUBDIR += osm-gps-map
     SUBDIR += otk
     SUBDIR += p5-Alien-wxWidgets
@@ -157,6 +159,7 @@
     SUBDIR += py-guietta
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
+    SUBDIR += py-qt6-chart
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4
@@ -175,6 +178,13 @@
     SUBDIR += qt5-virtualkeyboard
     SUBDIR += qt5-widgets
     SUBDIR += qt5pas
+    SUBDIR += qt6-charts
+    SUBDIR += qt6-datavis3d
+    SUBDIR += qt6-declarative
+    SUBDIR += qt6-quick3d
+    SUBDIR += qt6-quicktimeline
+    SUBDIR += qt6-shadertools
+    SUBDIR += qt6-virtualkeyboard
     SUBDIR += qtermwidget
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6
@@ -216,17 +226,18 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
-    SUBDIR += wlroots-devel
+    SUBDIR += wlroots015
     SUBDIR += wmapp
     SUBDIR += wxgtk28
     SUBDIR += wxgtk28-common
     SUBDIR += wxgtk28-contrib
     SUBDIR += wxgtk28-contrib-common
     SUBDIR += wxgtk30
-    SUBDIR += wxgtk31
+    SUBDIR += wxgtk32
     SUBDIR += xbae
     SUBDIR += xforms
     SUBDIR += xmhtml
+    SUBDIR += xwallpaper
     SUBDIR += ztoolkit
 
 .include <bsd.port.subdir.mk>

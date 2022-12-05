@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.chillispot.info/download/ \
 
 MAINTAINER=	venture37@geeklan.co.uk
 COMMENT=	Wireless LAN Access Point Controller
+WWW=		http://www.chillispot.info
 
 CONFLICTS=	coovachilli
 
@@ -29,12 +30,6 @@ APACHE_USE=	apache_run=22+
 FREERADIUS_RUN_DEPENDS=	radiusd:net/freeradius
 OPENRADIUS_RUN_DEPENDS=	radiusd:net/openradius
 
-.include <bsd.port.pre.mk>
-
-.if ${CHOSEN_COMPILER_TYPE} == gcc && ${COMPILER_VERSION} <= 42
-CFLAGS+=	-fnested-functions
-.endif
-
 post-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/chilli.conf ${STAGEDIR}${DATADIR}/chilli.conf.sample
@@ -45,4 +40,4 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/pf.conf.sample ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${FILESDIR}/ipfw-config.sample ${STAGEDIR}${DATADIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

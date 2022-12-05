@@ -1,11 +1,12 @@
 PORTNAME=	e16
-PORTVERSION=	1.0.25
+PORTVERSION=	1.0.27
 PORTREVISION=	0
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	SF/enlightenment/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Enlightenment DR16 window manager
+WWW=		https://www.enlightenment.org/p.php?p=about/e16
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

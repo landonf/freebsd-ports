@@ -1,11 +1,12 @@
 PORTNAME=	opennx
 PORTVERSION=	0.16.0.729
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/CI-source
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Open source drop in replacement for NoMachine's NX client
+WWW=		http://opennx.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

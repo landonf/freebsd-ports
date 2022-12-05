@@ -1,11 +1,12 @@
 PORTNAME=	numdifftools
-DISTVERSION=	0.9.40
+DISTVERSION=	0.9.41
 CATEGORIES=	math
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Solve automatic numerical differentiation problems in 1+ variables
+WWW=		https://github.com/pbrod/numdifftools
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

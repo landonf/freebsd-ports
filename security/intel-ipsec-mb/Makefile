@@ -1,10 +1,11 @@
 PORTNAME=	intel-ipsec-mb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2
+DISTVERSION=	1.3
 CATEGORIES=	security
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Intel(R) Multi-Buffer Crypto for IPsec Library
+WWW=		https://github.com/intel/intel-ipsec-mb
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

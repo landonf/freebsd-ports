@@ -1,5 +1,5 @@
 PORTNAME=	tepl
-DISTVERSION=	6.0.1
+DISTVERSION=	6.2.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	6
@@ -7,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Text editor product line
+WWW=		https://wiki.gnome.org/Projects/Tepl
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-3.0-or-later.txt

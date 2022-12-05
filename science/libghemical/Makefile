@@ -1,12 +1,13 @@
 PORTNAME=	libghemical
 PORTVERSION=	3.0.0
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	science
 MASTER_SITES=	http://bioinformatics.org/ghemical/download/release20111012/	\
 		http://bioinformatics.org/ghemical/download/current/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Support libraries of science/ghemical port
+WWW=		https://www.bioinformatics.org/ghemical/ghemical/index.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

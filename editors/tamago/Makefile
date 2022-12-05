@@ -1,11 +1,13 @@
 PORTNAME=	tamago
 PORTVERSION=	4.0.6.0.20041122.19.15
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Egg V4, Multilingual Input Method for Emacsen
+WWW=		https://github.com/hrs-allbsd/tamago
 
 LICENSE=	GPLv2
 

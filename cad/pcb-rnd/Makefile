@@ -1,10 +1,11 @@
 PORTNAME=	pcb-rnd
-DISTVERSION=	3.0.5
+DISTVERSION=	3.0.6
 CATEGORIES=	cad
 MASTER_SITES=	http://repo.hu/projects/pcb-rnd/releases/
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Flexible, modular Printed Circuit Board editor
+WWW=		http://www.repo.hu/projects/pcb-rnd/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

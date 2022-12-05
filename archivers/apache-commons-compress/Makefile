@@ -1,5 +1,5 @@
 PORTNAME=	commons-compress
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	archivers java
 MASTER_SITES=	APACHE_COMMONS_BINARIES
 PKGNAMEPREFIX=	apache-
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Classes for working with various archivers
+WWW=		https://commons.apache.org/proper/commons-compress/
 
 LICENSE=	APACHE20
 

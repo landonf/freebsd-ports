@@ -4,8 +4,9 @@ DISTVERSIONSUFFIX=	-g4a083f4
 PORTREVISION=	12
 CATEGORIES=	graphics
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interactive field-aligned mesh generator
+WWW=		https://igl.ethz.ch/projects/instant-meshes/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

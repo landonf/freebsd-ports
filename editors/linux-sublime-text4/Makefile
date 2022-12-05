@@ -1,11 +1,12 @@
 PORTNAME=	sublime-text4
-PORTVERSION=	4131
+PORTVERSION=	4142
 CATEGORIES=	editors linux
 MASTER_SITES=	http://download.sublimetext.com/
 PKGNAMEPREFIX=	linux-
 
 MAINTAINER=	ericbsd@FreeBSD.org
 COMMENT=	Sophisticated text editor for code, markup and prose
+WWW=		https://www.sublimetext.com
 
 LICENSE=	SUBLIMEHQ
 LICENSE_NAME=	End User License Agreement

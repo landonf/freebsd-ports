@@ -1,9 +1,10 @@
 PORTNAME=	cbsd
-DISTVERSION=	13.1.3
+DISTVERSION=	13.1.17
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
 COMMENT=	Yet another FreeBSD Jail, XEN and Bhyve Management Utility
+WWW=		https://www.bsdstore.ru
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,6 +27,10 @@ SUB_FILES=	pkg-message
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
+OPTIONS_DEFINE=	BHYVE_GOP
+OPTIONS_DEFAULT=
+BHYVE_GOP_DESC=	Include bhyve UEFI firmware with GPU PPT+GOP support
+
 CBSD_HOME?=	${PREFIX}/cbsd
 
 .include <bsd.port.options.mk>
@@ -44,6 +49,12 @@ RUN_DEPENDS+=	sysrc:sysutils/sysrc
 PLIST_SUB+=	FBSD=""
 .endif
 
+.if !${PORT_OPTIONS:MBHYVE_GOP}
+PLIST_SUB+=	BHYVE_GOP="@comment "
+.else
+PLIST_SUB+=	BHYVE_GOP=""
+.endif
+
 do-install:
 	@${ECHO} "Installing in ${CBSD_HOME}"
 	${MKDIR} ${STAGEDIR}${CBSD_HOME}
@@ -58,6 +69,9 @@ do-install:
 		${STAGEDIR}${PREFIX}/cbsd/sbin/src \
 		${STAGEDIR}${PREFIX}/cbsd/tools/src
 	${INSTALL_MAN} ${WRKSRC}/man/cbsd.8 ${STAGEDIR}${PREFIX}/man/man8/cbsd.8
+.if !${PORT_OPTIONS:MBHYVE_GOP}
+	${RM} -f ${STAGEDIR}${PREFIX}/cbsd/upgrade/patch/efigop.fd
+.endif
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/bsdconfig

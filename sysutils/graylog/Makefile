@@ -1,5 +1,5 @@
 PORTNAME=	graylog
-DISTVERSION=	4.3.3
+DISTVERSION=	4.3.9
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.graylog.org/releases/
 DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX} \
@@ -7,6 +7,7 @@ DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Tool for centralized log collection
+WWW=		https://www.graylog.org/
 
 LICENSE=	APACHE20 SSPLv1
 LICENSE_COMB=	multi

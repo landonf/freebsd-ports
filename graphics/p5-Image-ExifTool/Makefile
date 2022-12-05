@@ -1,5 +1,5 @@
 PORTNAME=	Image-ExifTool
-PORTVERSION=	12.42
+PORTVERSION=	12.50
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://exiftool.org/ \
 		CPAN
@@ -8,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	devnull@apt322.org
 COMMENT=	Perl module for getting EXIF data from image files
+WWW=		https://exiftool.org
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

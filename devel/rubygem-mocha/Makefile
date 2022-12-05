@@ -1,10 +1,11 @@
 PORTNAME=	mocha
-PORTVERSION=	1.14.0
+PORTVERSION=	1.15.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Library for mocking and stubbing syntax like JMock and SchMock
+WWW=		https://mocha.jamesmead.org/
 
 LICENSE=	BSD2CLAUSE RUBY MIT
 LICENSE_COMB=	dual

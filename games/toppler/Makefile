@@ -1,9 +1,11 @@
 PORTNAME=	toppler
 PORTVERSION=	1.3
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Climb a tower and avoid monsters
+WWW=		https://gitlab.com/roever/toppler/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

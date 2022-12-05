@@ -1,5 +1,6 @@
 PORTNAME=	dust3d
 DISTVERSION=	1.0.0-rc.6
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
@@ -7,6 +8,7 @@ PATCHFILES=	f8339d25ddb79f893413.diff:-p1 821285de824baf01ae99.diff:-p1
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Open-source 3D modeling software
+WWW=		https://dust3d.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,13 +17,13 @@ BROKEN_aarch64=	build fails: use of undeclared identifier '__TBB_machine_fetchad
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/config.hpp:devel/boost-libs \
 		${LOCALBASE}/include/CGAL/Polygon_mesh_processing/corefinement.h:math/cgal \
-		cmake:devel/cmake
+		cmake:devel/cmake-core
 LIB_DEPENDS=	libgmp.so:math/gmp libmpfr.so:math/mpfr
 
 USES=		compiler:c++14-lang gmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	huxingyi
-USE_QT=		buildtools_build linguisttools_build qmake_build \
+USE_QT=		buildtools:build linguisttools:build qmake:build \
 		core gui network opengl widgets
 ALL_TARGET=	all
 
@@ -29,6 +31,8 @@ DESKTOP_ENTRIES="Dust3D" "${COMMENT}" "${PORTNAME}" "${PORTNAME}" \
 		"Application;" false
 
 PLIST_FILES=	bin/${PORTNAME}
+
+PORTSCOUT=	skipv:unstable
 
 .include <bsd.port.options.mk>
 

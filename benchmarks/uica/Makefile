@@ -9,6 +9,7 @@ EXTRACT_ONLY=	${DISTFILES:C,:[^:]*$,,:N*.xml}
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Code Analyzer from the uops.info project
+WWW=		https://uops.info/uiCA.html
 
 LICENSE=	AGPLv3 APACHE20
 LICENSE_COMB=	multi
@@ -28,7 +29,7 @@ SHEBANG_FILES=	uiCA.py
 # manually build a file name like instructions_Apr2022.xml from
 # the machine-sortable INSTRVERSION.  Use := to have date run only once
 INSTRVERSION=	2022.04
-INSTRUCTIONS:=	instructions_${LC_ALL=C date -j -f %Y.%m ${INSTRVERSION} +%b%Y:L:sh}.xml
+INSTRUCTIONS:=	instructions_${${SETENV} LC_ALL=C TZ=UTC date -j -f %Y.%m ${INSTRVERSION} +%b%Y:L:sh}.xml
 
 MFLAGS=		--compiler=${COMPILER_TYPE:S/gcc/gnu/} \
 		--cc=${CC} \

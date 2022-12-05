@@ -69,7 +69,7 @@
     SUBDIR += font-genjyuugothic
     SUBDIR += font-genshingothic
     SUBDIR += font-hackgen
-    SUBDIR += font-hackgen-nerd
+    SUBDIR += font-hackgen-nf
     SUBDIR += font-ipa
     SUBDIR += font-ipa-uigothic
     SUBDIR += font-ipaex
@@ -100,6 +100,7 @@
     SUBDIR += font-plemoljp
     SUBDIR += font-plemoljp-hs
     SUBDIR += font-plemoljp-nf
+    SUBDIR += font-plemoljp-nfj
     SUBDIR += font-ricty
     SUBDIR += font-ricty-discord
     SUBDIR += font-rounded-mgenplus

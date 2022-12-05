@@ -1,20 +1,23 @@
 PORTNAME=	osc
-PORTVERSION=	0.181.0
+PORTVERSION=	0.182.0
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Command Line Interface to work with an openSUSE Build Service
+WWW=		https://en.opensuse.org/openSUSE:OSC \
+		https://github.com/openSUSE/osc
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}m2crypto>0:security/py-m2crypto@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}m2crypto>=0:security/py-m2crypto@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}chardet>=0:textproc/py-chardet@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	openSUSE
 
-USES=		cpe python pytest
-USE_PYTHON=	autoplist distutils noflavors
+USES=		cpe python
+USE_PYTHON=	autoplist distutils noflavors pytest
 PLIST_FILES=	bin/osc
 NO_ARCH=	yes
 PYTEST_BROKEN_TESTS=	testPrdiffDiffstat

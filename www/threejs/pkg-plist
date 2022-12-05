@@ -245,7 +245,8 @@
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_fragment_begin.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_fragment_end.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_fragment_maps.glsl.js
-%%WWWDIR%%/renderers/shaders/ShaderChunk/lights_lambert_vertex.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/lights_lambert_fragment.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/lights_lambert_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_pars_begin.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_phong_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/lights_phong_pars_fragment.glsl.js
@@ -293,15 +294,16 @@
 %%WWWDIR%%/renderers/shaders/ShaderChunk/tonemapping_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/transmission_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/transmission_pars_fragment.glsl.js
-%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_fragment.glsl.js
-%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_vertex.glsl.js
-%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_vertex.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv_pars_fragment.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv_pars_vertex.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/uv_vertex.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_fragment.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_pars_vertex.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderChunk/uv2_vertex.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderChunk/worldpos_vertex.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderLib.js
 %%WWWDIR%%/renderers/shaders/ShaderLib/background.glsl.js
+%%WWWDIR%%/renderers/shaders/ShaderLib/backgroundCube.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderLib/cube.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderLib/depth.glsl.js
 %%WWWDIR%%/renderers/shaders/ShaderLib/distanceRGBA.glsl.js
@@ -356,6 +358,7 @@
 %%WWWDIR%%/scenes/FogExp2.js
 %%WWWDIR%%/scenes/Scene.js
 %%WWWDIR%%/textures/CanvasTexture.js
+%%WWWDIR%%/textures/CompressedArrayTexture.js
 %%WWWDIR%%/textures/CompressedTexture.js
 %%WWWDIR%%/textures/CubeTexture.js
 %%WWWDIR%%/textures/Data3DTexture.js

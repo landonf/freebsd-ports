@@ -8,6 +8,7 @@ DISTNAME=	Gauche-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL binding for Gauche
+WWW=		https://practical-scheme.net/gauche/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,7 +22,7 @@ USE_XORG=	ice sm x11 xext xmu xi
 USE_GL=		gl glu glut
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-GAUCHE_ABI=	0.97
+GAUCHE_ABI=	0.98
 
 DOCSDIR=	${PREFIX}/share/doc/gauche/${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/gauche/${PORTNAME}

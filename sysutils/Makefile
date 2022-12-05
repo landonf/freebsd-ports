@@ -120,6 +120,7 @@
     SUBDIR += beadm-devel
     SUBDIR += beats6
     SUBDIR += beats7
+    SUBDIR += beats8
     SUBDIR += bfs
     SUBDIR += bhyve+
     SUBDIR += bhyve-firmware
@@ -129,6 +130,7 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += boot-extract
+    SUBDIR += bottom
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
     SUBDIR += brasero
@@ -137,6 +139,7 @@
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
+    SUBDIR += bsdebfetch
     SUBDIR += bsdfan
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
@@ -145,6 +148,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
     SUBDIR += burp
@@ -209,6 +213,7 @@
     SUBDIR += conky
     SUBDIR += conky-awesome
     SUBDIR += conman
+    SUBDIR += conmon
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
@@ -217,6 +222,7 @@
     SUBDIR += consul_exporter
     SUBDIR += container-diff
     SUBDIR += containerd
+    SUBDIR += containers-common
     SUBDIR += contractor
     SUBDIR += copytape
     SUBDIR += coreos-ct
@@ -247,6 +253,7 @@
     SUBDIR += daggy
     SUBDIR += damager
     SUBDIR += dar
+    SUBDIR += darling-dmg
     SUBDIR += datadog-agent
     SUBDIR += datadog-integrations
     SUBDIR += dateutils
@@ -264,6 +271,7 @@
     SUBDIR += devcpu-data
     SUBDIR += devcpu-data-amd
     SUBDIR += devcpu-data-intel
+    SUBDIR += devctl-jail-kmod
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -324,12 +332,14 @@
     SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
+    SUBDIR += e2fsprogs-core
     SUBDIR += e2tools
     SUBDIR += ebsnvme-id
     SUBDIR += ec2-scripts
     SUBDIR += eclat
     SUBDIR += edid-decode
     SUBDIR += edk2
+    SUBDIR += egress-monitor
     SUBDIR += eject
     SUBDIR += eksctl
     SUBDIR += endian
@@ -428,6 +438,7 @@
     SUBDIR += fusefs-lkl
     SUBDIR += fusefs-mhddfs
     SUBDIR += fusefs-mp3fs
+    SUBDIR += fusefs-nbt
     SUBDIR += fusefs-ntfs
     SUBDIR += fusefs-ntfs-compression
     SUBDIR += fusefs-pod
@@ -452,7 +463,6 @@
     SUBDIR += g15daemon
     SUBDIR += gaffitter
     SUBDIR += ganglia-monitor-core
-    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -504,6 +514,7 @@
     SUBDIR += gstreamer1-plugins-cdio
     SUBDIR += gtime
     SUBDIR += gtk-imonc
+    SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
@@ -561,6 +572,7 @@
     SUBDIR += ipfs-go
     SUBDIR += ipfs-go-fs-repo-migrations
     SUBDIR += ipget
+    SUBDIR += ipmi_exporter
     SUBDIR += ipmitool
     SUBDIR += ipsc
     SUBDIR += isc-cron
@@ -662,6 +674,7 @@
     SUBDIR += logstash-forwarder
     SUBDIR += logstash6
     SUBDIR += logstash7
+    SUBDIR += logstash8
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += loki
@@ -770,6 +783,7 @@
     SUBDIR += most
     SUBDIR += mountsmb2
     SUBDIR += mping
+    SUBDIR += mprocs
     SUBDIR += mptd
     SUBDIR += msiklm
     SUBDIR += msktutil
@@ -822,6 +836,7 @@
     SUBDIR += oak
     SUBDIR += obliterate
     SUBDIR += oc
+    SUBDIR += ocijail
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -1004,6 +1019,8 @@
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
+    SUBDIR += podman
+    SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt
@@ -1036,7 +1053,6 @@
     SUBDIR += pwsafe
     SUBDIR += pxattr
     SUBDIR += pxp-agent
-    SUBDIR += py-ansible-base
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
     SUBDIR += py-ansible-core211
@@ -1069,10 +1085,12 @@
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
+    SUBDIR += py-howdoi
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
     SUBDIR += py-ioztat
     SUBDIR += py-jailconf
+    SUBDIR += py-keep
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
     SUBDIR += py-mitogen
@@ -1119,6 +1137,7 @@
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
+    SUBDIR += qflipper
     SUBDIR += qjail
     SUBDIR += qjail54
     SUBDIR += qlogtools
@@ -1139,6 +1158,7 @@
     SUBDIR += rclean
     SUBDIR += rcm
     SUBDIR += rdate
+    SUBDIR += rdfind
     SUBDIR += rdup
     SUBDIR += read-edid
     SUBDIR += recoverdm
@@ -1312,6 +1332,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
     SUBDIR += slst
@@ -1537,6 +1558,7 @@
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen
+    SUBDIR += waynergy
     SUBDIR += webmin
     SUBDIR += weedit
     SUBDIR += wemux

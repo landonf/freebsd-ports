@@ -1,5 +1,5 @@
 PORTNAME=	ntfs
-PORTVERSION=	2022.5.17
+PORTVERSION=	2022.10.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.tuxera.com/opensource/
 PKGNAMEPREFIX=	fusefs-
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-3g_ntfsprogs-${PORTVERSION}
 
 MAINTAINER=	freebsd@dussan.org
 COMMENT=	Mount NTFS partitions (read/write) and disk images
+WWW=		https://github.com/tuxera/ntfs-3g
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

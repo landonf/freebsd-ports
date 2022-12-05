@@ -1,5 +1,5 @@
 PORTNAME=	wordpress
-DISTVERSION=	6.0
+DISTVERSION=	6.1.1
 DISTVERSIONSUFFIX=	-zh_CN
 CATEGORIES=	chinese www
 MASTER_SITES=	https://cn.wordpress.org/
@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	-zh_CN
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://cn.wordpress.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt

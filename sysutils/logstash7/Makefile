@@ -1,5 +1,5 @@
 PORTNAME=	logstash
-PORTVERSION=	7.17.3
+PORTVERSION=	7.17.7
 DISTVERSIONSUFFIX=	-darwin-x86_64
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://artifacts.elastic.co/downloads/logstash/
@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	7
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Server-side data ingestion and transformation tool
+WWW=		https://www.elastic.co/products/logstash
 
 LICENSE=	APACHE20
 

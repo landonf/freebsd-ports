@@ -1,10 +1,11 @@
 PORTNAME=	swaylock
-DISTVERSION?=	1.6
-PORTREVISION?=	1
+DISTVERSION?=	1.7
+PORTREVISION?=	0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT?=	Screen locker for Wayland
+WWW?=		https://github.com/swaywm/swaylock
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

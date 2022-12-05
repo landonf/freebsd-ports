@@ -1,9 +1,11 @@
 PORTNAME=	libarea
 PORTVERSION=	20191031
+PORTREVISION=	1
 CATEGORIES=	devel cad
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CAM-related software for profile and pocketing operations
+WWW=		https://github.com/heeks/libarea
 
 LICENSE=	BSD3CLAUSE
 

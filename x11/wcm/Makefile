@@ -6,6 +6,7 @@ CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Wayfire Config Manager
+WWW=		https://wayfire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -34,4 +35,5 @@ WFSHELL_DESC=			Build with wf-shell support
 WFSHELL_BUILD_DEPENDS=		wf-shell>0:x11/wf-shell
 WFSHELL_MESON_ENABLED=		wf_shell
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

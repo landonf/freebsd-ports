@@ -32,6 +32,7 @@
     SUBDIR += broot
     SUBDIR += bsod
     SUBDIR += buffer
+    SUBDIR += caffe
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
@@ -82,6 +83,7 @@
     SUBDIR += dynomite
     SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
+    SUBDIR += ecflow
     SUBDIR += edfbrowser
     SUBDIR += edflib
     SUBDIR += elki
@@ -240,6 +242,7 @@
     SUBDIR += mc
     SUBDIR += mc-nox11
     SUBDIR += mdp
+    SUBDIR += meshoptimizer
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
     SUBDIR += mime-support
@@ -275,7 +278,6 @@
     SUBDIR += openr2
     SUBDIR += openvdb
     SUBDIR += orange3
-    SUBDIR += orion
     SUBDIR += orville-write
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
@@ -329,6 +331,7 @@
     SUBDIR += p5-I18N-Charset
     SUBDIR += p5-I18N-LangTags
     SUBDIR += p5-LEGO-RCX
+    SUBDIR += p5-Library-CallNumber-LC
     SUBDIR += p5-List-Compare
     SUBDIR += p5-List-Util-WeightedRoundRobin
     SUBDIR += p5-Locale-Codes
@@ -372,6 +375,7 @@
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
     SUBDIR += py-alive-progress
+    SUBDIR += py-apache-beam
     SUBDIR += py-boost-histogram
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
@@ -396,6 +400,9 @@
     SUBDIR += py-mxnet
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
+    SUBDIR += py-openpaperwork-core
+    SUBDIR += py-openpaperwork-gtk
+    SUBDIR += py-openvdb
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
@@ -407,8 +414,10 @@
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
     SUBDIR += py-pyEDFlib
+    SUBDIR += py-pyct
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
+    SUBDIR += py-pypatent
     SUBDIR += py-pyprind
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
@@ -437,6 +446,7 @@
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
+    SUBDIR += qt6-doc
     SUBDIR += quantum++
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
@@ -451,6 +461,7 @@
     SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5
     SUBDIR += rubygem-dotenv-rails-rails50
+    SUBDIR += rubygem-dotenv-rails-rails61
     SUBDIR += rubygem-haversine_distance
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
@@ -534,7 +545,9 @@
     SUBDIR += vifm
     SUBDIR += visp
     SUBDIR += viz
+    SUBDIR += vote
     SUBDIR += vxl
+    SUBDIR += wego
     SUBDIR += whichman
     SUBDIR += window
     SUBDIR += with

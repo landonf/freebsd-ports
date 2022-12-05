@@ -1,11 +1,13 @@
 PORTNAME=	gthumb
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Image viewer and browser for the GNOME environment
+WWW=		https://wiki.gnome.org/Apps/gthumb/
 
 LICENSE=	GPLv2+
 
@@ -65,9 +67,9 @@ GLIB_SCHEMAS=	org.gnome.gthumb.change-date.gschema.xml \
 		org.gnome.gthumb.catalogs.gschema.xml \
 		org.gnome.gthumb.terminal.gschema.xml
 
-OPTIONS_DEFINE=		BRASERO CLUTTER EXIV2 GSTREAMER RAW SECRET \
+OPTIONS_DEFINE=		BRASERO CLUTTER EXIV2 GSTREAMER JXL RAW SECRET \
 			WEBP WEBSERVICES YELP
-OPTIONS_DEFAULT=	BRASERO CLUTTER EXIV2 GSTREAMER RAW SECRET \
+OPTIONS_DEFAULT=	BRASERO CLUTTER EXIV2 GSTREAMER JXL RAW SECRET \
 			WEBP WEBSERVICES YELP
 OPTIONS_SUB=		yes
 
@@ -81,6 +83,8 @@ EXIV2_LIB_DEPENDS=	libexiv2.so:graphics/exiv2
 EXIV2_MESON_TRUE=	exiv2
 GSTREAMER_USES=		gstreamer
 GSTREAMER_MESON_TRUE=	gstreamer
+JXL_LIB_DEPENDS=	libjxl.so:graphics/libjxl
+JXL_MESON_TRUE=		libjxl
 RAW_DESC=		Raw image support via libraw
 RAW_LIB_DEPENDS=	libraw.so:graphics/libraw
 RAW_MESON_TRUE=		libraw

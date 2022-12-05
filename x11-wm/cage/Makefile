@@ -1,7 +1,7 @@
 PORTNAME=	cage
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -12,6 +12,7 @@ PATCHFILES+=	ee748fec3adf.patch:-p1 # https://github.com/Hjdskes/cage/pull/197
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Wayland kiosk
+WWW=		https://www.hjdskes.nl/projects/cage/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -44,4 +45,5 @@ post-patch:
 		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
 		${WRKSRC}/meson.build
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

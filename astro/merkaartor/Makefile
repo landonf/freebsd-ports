@@ -1,10 +1,11 @@
 PORTNAME=	merkaartor
 PORTVERSION=	0.19.0
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	astro
 
 MAINTAINER=	dev2@heesakkers.info
 COMMENT=	Openstreetmap mapping program
+WWW=		http://merkaartor.be/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +20,7 @@ GH_ACCOUNT=	openstreetmap
 USE_LDCONFIG=	yes
 
 QMAKE_ARGS=	SYSTEM_QUAZIP=1
-USE_QT=		buildtools_build \
+USE_QT=		buildtools:build \
 		concurrent core gui imageformats network printsupport svg \
 		webkit widgets xml
 
@@ -43,7 +44,7 @@ ZBAR_BROKEN=	Does not build with option ZBAR selected
 DEBUG_QMAKE_OFF=	NODEBUG=1 RELEASE=1
 
 NLS_USES=	qt:5
-NLS_USE=	QT=linguisttools_build
+NLS_USE=	QT=linguisttools:build
 
 OPTIONS_SUB=	yes
 

@@ -1,10 +1,11 @@
 PORTNAME=	net-ftp
-PORTVERSION=	0.1.3
+PORTVERSION=	0.2.0
 CATEGORIES=	ftp rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Support for the File Transfer Protocol
+WWW=		https://github.com/ruby/net-ftp
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

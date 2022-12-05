@@ -1,17 +1,20 @@
 PORTNAME=	monero-cli
 # To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
 PORTVERSION=	0.18.0.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines (use for example -git-HEAD or -git-b6420e1)
 #PORTVERSION=	0
 #PKGNAMESUFFIX=	-git-HEAD
 CATEGORIES=	net-p2p finance
 
-MAINTAINER=	vd@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Private, secure, untraceable, decentralised digital currency (CLI)
+WWW=		https://getmonero.org/
 
 LICENSE=	BSD3CLAUSE
 
+BROKEN_SSL=	libressl
 BROKEN_i386=	fails to compile: register r15d is only available in 64-bit mode
 BROKEN_aarch64=	fails to compile: uses unavailable HWCAP_AES and getauxval
 

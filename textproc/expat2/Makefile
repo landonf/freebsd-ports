@@ -1,10 +1,11 @@
 PORTNAME=	expat
-DISTVERSION=	2.4.8
+DISTVERSION=	2.5.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/libexpat/libexpat/releases/download/R_${DISTVERSION:S|.|_|g}/
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	XML 1.0 parser written in C
+WWW=		https://github.com/libexpat/libexpat
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,10 +1,11 @@
 PORTNAME=	lightning
-PORTVERSION=	2.1.3
+PORTVERSION=	2.2.0
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Generates assembly language code at run-time
+WWW=		https://www.gnu.org/software/lightning/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
@@ -30,9 +31,5 @@ OPTIONS_DEFINE=	ASSERTIONS
 ASSERTIONS_DESC=Enable runtime code generation assertions
 ASSERTIONS_CONFIGURE_ON=--enable-assertions=yes
 ASSERTIONS_CONFIGURE_OFF=--enable-assertions=no
-
-post-patch:
-	@${REINPLACE_CMD} -e \
-		's|"gcc -E|"${CC:T} -E|' ${WRKSRC}/check/lightning.c
 
 .include <bsd.port.mk>

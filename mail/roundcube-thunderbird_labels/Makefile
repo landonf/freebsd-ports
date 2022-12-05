@@ -1,19 +1,20 @@
 PORTNAME=	thunderbird_labels
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.11
+DISTVERSION=	1.6.0
 CATEGORIES=	mail
 PKGNAMEPREFIX=	roundcube-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	moiseev@mezonplus.ru
 COMMENT=	Thunderbird Labels plugin for RoundCube webmail
+WWW=		https://github.com/mike-kfed/roundcube-thunderbird_labels
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.4.0:mail/roundcube@${PHP_FLAVOR}
 
-IGNORE_WITH_PHP=	81 82
+IGNORE_WITH_PHP=	82
 USES=		php:flavors
 
 USE_GITHUB=	yes

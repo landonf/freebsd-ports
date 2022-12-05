@@ -10,6 +10,7 @@ PATCHFILES+=	c7728ea5aa2f4e58.patch:-p1 # GTimeVal -> gint64 transition
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Irssi plugin to connect to Jabber network
+WWW=		https://cybione.org/~irssi-xmpp/
 
 LICENSE=	GPLv2
 
@@ -26,10 +27,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
-CFLAGS_aarch64=	-fPIC
-CFLAGS_amd64=	-fPIC
-CFLAGS_i386=	-fPIC
-CFLAGS_powerpc64=	-fPIC
+CFLAGS+=	-fPIC
 
 DATADIR=	${PREFIX}/share/irssi
 DOCSDIR=	${PREFIX}/share/doc/irssi

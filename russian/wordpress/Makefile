@@ -1,11 +1,12 @@
 PORTNAME=	wordpress
-DISTVERSION=	6.0
+DISTVERSION=	6.1.1
 DISTVERSIONSUFFIX=	-ru_RU
 CATEGORIES=	russian www
 MASTER_SITES=	https://ru.wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://ru.wordpress.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt

@@ -1,6 +1,7 @@
 PORTNAME=	dwl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -8,6 +9,7 @@ PATCHFILES+=	cba259e9bf4a.patch:-p1 # https://github.com/djpohly/dwl/pull/212
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	dwm for Wayland
+WWW=		https://github.com/djpohly/dwl
 
 LICENSE=	CC0-1.0 GPLv3+ MIT
 LICENSE_COMB=	multi
@@ -66,4 +68,5 @@ do-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "${PORTDOCS}" \
 		${STAGEDIR}${DOCSDIR})
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

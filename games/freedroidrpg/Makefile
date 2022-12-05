@@ -2,12 +2,13 @@ PORTNAME=	freedroidrpg
 PORTVERSION=	0.16.1
 PORTREVISION=	3
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.osuosl.org/pub/freedroid/freedroidRPG-${PORTVERSION:R}/ \
-		http://mirror.amdmi3.ru/distfiles/
+MASTER_SITES=	https://ftp.osuosl.org/pub/freedroid/freedroidRPG-${PORTVERSION:R}/ \
+		https://mirror.amdmi3.ru/distfiles/
 DISTNAME=	freedroidRPG-${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Modification of the classical Freedroid engine into an RPG
+WWW=		https://www.freedroid.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -15,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpng.so:graphics/png
 
 GNU_CONFIGURE=	yes
-USES=		cpe jpeg gmake localbase lua:52+ python sdl xorg
+USES=		cpe jpeg gmake localbase lua:-53 python sdl xorg
 CPE_VENDOR=	freedroid
 USE_XORG=	x11
 USE_SDL=	sdl image gfx

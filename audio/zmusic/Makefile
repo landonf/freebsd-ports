@@ -1,9 +1,10 @@
 PORTNAME=	zmusic
-PORTVERSION=	1.1.8
+PORTVERSION=	1.1.10
 CATEGORIES=	audio
 
 MAINTAINER=	kevans@FreeBSD.org
 COMMENT=	GZDoom's music system as a standalone library
+WWW=		https://github.com/coelckers/ZMusic
 
 LICENSE=	BSD3CLAUSE GPLv3 LGPL3
 LICENSE_COMB=	multi

@@ -1,11 +1,12 @@
 PORTNAME=	nut
 PORTVERSION=	2.8.0
-PORTREVISION=	6
+PORTREVISION=	13
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
+WWW=		https://www.networkupstools.org/
 
 LICENSE=	GPLv2+ GPLv3+ ART10 GPLv1+
 LICENSE_COMB=	multi
@@ -94,9 +95,6 @@ PDU_CONFIGURE_WITH=	powerman
 MODBUS_LIB_DEPENDS+=	libmodbus.so:comms/libmodbus
 MODBUS_CONFIGURE_WITH=	modbus
 
-BASH_BUILD_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion.sh:shells/bash-completion
-BASH_RUN_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion.sh:shells/bash-completion
-
 AVAHI_BUILD_DEPENDS=	${LOCALBASE}/include/avahi-ui/avahi-ui.h:net/avahi-header
 AVAHI_BUILD_DEPENDS=	avahi-daemon:net/avahi-app
 AVAHI_RUN_DEPENDS=	avahi-daemon:net/avahi-app
@@ -142,6 +140,7 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${PATCHDIR}/nut.syslog ${STAGEDIR}${EXAMPLESDIR}/syslog.sample
 	${INSTALL_DATA} ${PATCHDIR}/nut.newsyslog ${STAGEDIR}${EXAMPLESDIR}/newsyslog.sample
+	${INSTALL_DATA} ${PATCHDIR}/nut_upslog.sample ${STAGEDIR}${EXAMPLESDIR}/nut_upslog.sample
 	${MKDIR} ${STAGEDIR}/var/log/nut
 	@${RM} ${STAGEDIR}${PREFIX}/etc/nut/solaris-init/nut
 	@${RMDIR} ${STAGEDIR}${PREFIX}/etc/nut/solaris-init

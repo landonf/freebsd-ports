@@ -6,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby extension to GDBM library
+WWW=		https://github.com/ruby/gdbm
 
 LICENSE=	BSD2CLAUSE
 

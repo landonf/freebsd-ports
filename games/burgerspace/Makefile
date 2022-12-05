@@ -1,11 +1,12 @@
 PORTNAME=	burgerspace
-PORTVERSION=	1.9.4
+PORTVERSION=	1.9.5
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/ \
 		LOCAL/martymac
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	BurgerTime clone
+WWW=		http://sarrazip.com/dev/burgerspace.html
 
 LICENSE=	GPLv2
 

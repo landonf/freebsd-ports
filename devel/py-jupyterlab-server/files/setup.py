@@ -24,7 +24,7 @@ setup(
     install_requires=[
         'babel',
         'importlib-metadata>=3.6; python_version < "3.10"',
-        'jinja2>=3.0.1',
+        'jinja2>=3.0.3',
         'json5',
         'jsonschema>=3.0.1',
         'jupyter-server<2,>=1.8',
@@ -40,7 +40,7 @@ setup(
             'codecov',
             'ipykernel',
             'jupyter-server[test]',
-            'openapi-core>=0.14.2',
+            'openapi_core~=0.14.2',
             'openapi-spec-validator<0.5',
             'pytest-console-scripts',
             'pytest-cov',

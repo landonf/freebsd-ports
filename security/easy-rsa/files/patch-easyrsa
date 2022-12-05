@@ -1,14 +1,13 @@
-Isolate date -j -f ... + ... from locale.
-Filed upstream as Issue #591 <https://github.com/OpenVPN/easy-rsa/issues/591>
+workaround to fix https://github.com/OpenVPN/easy-rsa/issues/725
 
---- easyrsa.orig	2022-05-19 01:53:50 UTC
+--- easyrsa.orig	2022-10-13 11:37:48 UTC
 +++ easyrsa
-@@ -3829,6 +3829,8 @@ VERSION_TEXT
- NL='
- '
+@@ -1317,7 +1317,7 @@ Missing X509-type 'COMMON'"
  
-+LC_TIME=C ; export LC_TIME ; unset LC_ALL
-+
- # Be secure with a restrictive umask
- [ -z "$EASYRSA_NO_UMASK" ] && umask "${EASYRSA_UMASK:-077}"
- 
+ 	# Check for insert-marker in ssl config file
+ 	if ! grep -q '^#%CA_X509_TYPES_EXTRA_EXTS%' "$EASYRSA_SSL_CONF"; then
+-		die "\
++		warn "\
+ The copy of openssl-easyrsa.cnf in use does not support X509-type 'ca'.
+ * $EASYRSA_SSL_CONF
+ Please update openssl-easyrsa.cnf to the latest official release."

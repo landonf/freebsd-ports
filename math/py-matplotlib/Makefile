@@ -1,12 +1,13 @@
 PORTNAME=	matplotlib
 PORTVERSION=	3.4.3
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mainland@apeiron.net
 COMMENT=	Plotting library uses a syntax familiar to MATLAB users
+WWW=		https://matplotlib.org/
 
 LICENSE=	PSFL
 

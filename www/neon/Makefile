@@ -1,10 +1,11 @@
 PORTNAME=	neon
-DISTVERSION=	0.32.2
+DISTVERSION=	0.32.4
 CATEGORIES=	www
 MASTER_SITES=	https://notroj.github.io/neon/
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	HTTP and WebDAV client library for Unix systems
+WWW=		https://notroj.github.io/neon/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/src/COPYING.LIB

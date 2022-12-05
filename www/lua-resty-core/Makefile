@@ -1,10 +1,11 @@
 PORTNAME=	lua-resty-core
-DISTVERSION=	0.1.23
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.1.24
 CATEGORIES=	www
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	New FFI-based Lua API for OpenResty NGINX Lua modules
+WWW=		https://github.com/openresty/lua-resty-core
 
 LICENSE=	BSD2CLAUSE
 

@@ -1,5 +1,5 @@
 PORTNAME=	jupyter-server
-PORTVERSION=	1.18.1
+PORTVERSION=	1.19.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		https://github.com/jupyter-server/jupyter_server/releases/download/v${PORTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	jupyter_server-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	The backend to Jupyter web applications
+WWW=		https://github.com/jupyter-server/jupyter_server
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING.md

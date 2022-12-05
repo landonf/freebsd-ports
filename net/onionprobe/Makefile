@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Test and monitor the status of Tor Onion Services
+WWW=		https://pypi.org/project/onionprobe
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,6 +23,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=0:security/py-cryptography@${P
 
 USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist distutils
+
+NO_ARCH=	yes
 
 SHEBANG_FILES=	packages/*.py \
 		packages/onionprobe/*.py

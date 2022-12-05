@@ -1,9 +1,11 @@
 PORTNAME=	rime-array
 DISTVERSION=	g20210824
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime Array input schema support
+WWW=		https://github.com/rime/rime-array
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

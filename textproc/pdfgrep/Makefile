@@ -1,11 +1,12 @@
 PORTNAME=	pdfgrep
 PORTVERSION=	2.1.1
-PORTREVISION=	41
+PORTREVISION=	44
 CATEGORIES=	textproc
 MASTER_SITES=	https://pdfgrep.org/download/
 
 MAINTAINER=	michael@ranner.eu
 COMMENT=	Tool to search text in PDF files
+WWW=		https://pdfgrep.org
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

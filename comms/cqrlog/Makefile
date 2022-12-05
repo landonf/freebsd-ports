@@ -1,11 +1,13 @@
 PORTNAME=	cqrlog
 PORTVERSION=	2.5.2
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	comms hamradio
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio logging application
+WWW=		https://www.cqrlog.com/
 
 LICENSE=	GPLv2
 

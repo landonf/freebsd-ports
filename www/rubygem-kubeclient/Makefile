@@ -1,10 +1,11 @@
 PORTNAME=	kubeclient
-PORTVERSION=	4.9.2
+PORTVERSION=	4.9.3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Client for Kubernetes REST API
+WWW=		https://github.com/abonas/kubeclient
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

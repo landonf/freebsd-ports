@@ -1,10 +1,11 @@
 PORTNAME=	libebml
-DISTVERSION=	1.4.2
+DISTVERSION=	1.4.4
 CATEGORIES=	textproc
 MASTER_SITES=	https://dl.matroska.org/downloads/libebml/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	EBML (Extensible Binary Meta Language), sort of binary version of XML
+WWW=		https://www.matroska.org/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE.LGPL

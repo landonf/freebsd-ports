@@ -1,10 +1,12 @@
 PORTNAME=	imp
 PORTVERSION=	6.2.27
+PORTREVISION=	1
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}horde-
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde web based webmail system
+WWW=		https://www.horde.org/apps/imp/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

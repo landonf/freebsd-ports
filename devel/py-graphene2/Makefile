@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GraphQL Framework for Python
+WWW=		https://github.com/graphql-python/graphene
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -23,6 +24,6 @@ NO_ARCH=	yes
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}graphene
 
-PORTSCOUT=	limmit:^2\.
+PORTSCOUT=	limit:^2\.
 
 .include <bsd.port.mk>

@@ -1,10 +1,11 @@
 PORTNAME=	dry-container
-PORTVERSION=	0.10.1
+PORTVERSION=	0.11.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple container intended for use as an IoC container
+WWW=		https://github.com/dry-rb/dry-container
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

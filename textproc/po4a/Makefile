@@ -1,11 +1,11 @@
 PORTNAME=	po4a
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.67
-PORTREVISION=	1
+DISTVERSION=	0.68
 CATEGORIES=	textproc perl5
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Brings gettext translation tools to all kinds of docs
+WWW=		https://po4a.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

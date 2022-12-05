@@ -1,10 +1,11 @@
 PORTNAME=	cpp-httplib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.1
+DISTVERSION=	0.11.2
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ header-only HTTP/HTTPS server and client library
+WWW=		https://github.com/yhirose/cpp-httplib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

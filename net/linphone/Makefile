@@ -1,10 +1,12 @@
 PORTNAME=	linphone
 PORTVERSION=	4.4.8
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	net
 
 MAINTAINER=	zirias@FreeBSD.org
 COMMENT=	SIP client supporting voice/video calls and text messaging
+WWW=		https://www.linphone.org/
 
 LICENSE=	GPLv3
 
@@ -21,8 +23,8 @@ GL_ACCOUNT=	public
 GL_PROJECT=	linphone-desktop
 GL_COMMIT=	da40aed848da44e851d67a2039e7e966c5257d3b
 USE_QT=		concurrent core dbus declarative gui linguisttools network \
-		quickcontrols2 speech svg testlib widgets buildtools_build \
-		qmake_build graphicaleffects_run quickcontrols_run
+		quickcontrols2 speech svg testlib widgets buildtools:build \
+		qmake:build graphicaleffects:run quickcontrols:run
 
 # Linphone's plugin API is implemented in a shared object with rather generic
 # SONAME and filename, libapp-plugin.so. For classic installation in the

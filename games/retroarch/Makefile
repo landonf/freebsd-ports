@@ -3,8 +3,9 @@ PORTVERSION=	1.10.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games emulators wayland
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross-platform entertainment system based on libretro API
+WWW=		https://github.com/libretro/RetroArch
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

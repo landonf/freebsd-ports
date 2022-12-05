@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Object for building queries with DBI/DBD::mysql
+WWW=		https://metacpan.org/pod/Relations::Query
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Relations>=0:databases/p5-Relations

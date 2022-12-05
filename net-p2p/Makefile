@@ -17,6 +17,9 @@
     SUBDIR += btcheck
     SUBDIR += btpd
     SUBDIR += c-lightning
+    SUBDIR += cardano-db-sync
+    SUBDIR += cardano-node
+    SUBDIR += cncli
     SUBDIR += cpuminer
     SUBDIR += createtorrent
     SUBDIR += ctcs
@@ -47,6 +50,7 @@
     SUBDIR += libtorrent
     SUBDIR += libtorrent-rasterbar
     SUBDIR += libtorrent-rasterbar2
+    SUBDIR += libutp
     SUBDIR += lidarr
     SUBDIR += linuxdcpp
     SUBDIR += litecoin
@@ -63,8 +67,10 @@
     SUBDIR += namecoin-daemon
     SUBDIR += namecoin-utils
     SUBDIR += ncdc
+    SUBDIR += ogmios
     SUBDIR += opendchub
     SUBDIR += openethereum
+    SUBDIR += oura
     SUBDIR += p5-Net-BitTorrent
     SUBDIR += p5-Net-BitTorrent-File
     SUBDIR += p5-Net-BitTorrent-PeerPacket
@@ -99,6 +105,7 @@
     SUBDIR += udpt
     SUBDIR += uhub
     SUBDIR += vuze
+    SUBDIR += xbt
     SUBDIR += xmrig
     SUBDIR += zetacoin
     SUBDIR += zetacoin-daemon

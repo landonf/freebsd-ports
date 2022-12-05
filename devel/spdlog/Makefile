@@ -1,10 +1,11 @@
 PORTNAME=	spdlog
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.0
+DISTVERSION=	1.11.0
 CATEGORIES=	devel
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Super fast C++ logging library
+WWW=		https://github.com/gabime/spdlog
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

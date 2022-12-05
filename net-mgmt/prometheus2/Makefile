@@ -1,7 +1,6 @@
 PORTNAME=	prometheus
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.36.0
-PORTREVISION=	3
+DISTVERSION=	2.39.1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod \
 		https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${DISTVERSIONFULL}/:ui
@@ -9,6 +8,7 @@ DISTFILES=	go.mod:gomod ${PORTNAME}-web-ui-${DISTVERSION}.tar.gz:ui
 
 MAINTAINER=	dor.bsd@xm0.uk
 COMMENT=	Systems monitoring and alerting toolkit
+WWW=		https://prometheus.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

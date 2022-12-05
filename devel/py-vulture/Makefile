@@ -1,11 +1,12 @@
 PORTNAME=	vulture
-PORTVERSION=	2.5
+PORTVERSION=	2.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Find dead code in Python programs
+WWW=		https://github.com/jendrikseipp/vulture
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,11 +1,12 @@
 PORTNAME=	sdl2
-DISTVERSION=	2.0.22
+DISTVERSION=	2.26.0
 CATEGORIES=	devel
 MASTER_SITES=	https://www.libsdl.org/release/
 DISTNAME=	SDL2-${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Cross-platform multimedia development API
+WWW=		https://www.libsdl.org/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -129,15 +130,13 @@ WAYLAND_IMPLIES=		OPENGLES2
 X11_CONFIGURE_ENABLE=		video-x11 x11-shared \
 				video-x11-xcursor \
 				video-x11-xdbe \
-				video-x11-xinerama \
 				video-x11-xinput \
 				video-x11-xfixes \
 				video-x11-xrandr \
 				video-x11-scrnsaver \
-				video-x11-xshape \
-				video-x11-vm
+				video-x11-xshape
 X11_USES=			xorg
-X11_USE=			XORG=xcursor,xext,xinerama,xi,xfixes,xrandr,xscrnsaver,xxf86vm
+X11_USE=			XORG=xcursor,xext,xi,xfixes,xrandr,xscrnsaver
 DBUS_LIB_DEPENDS=		libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_ENABLE=		dbus
 FCITX_LIB_DEPENDS=		libfcitx-config.so:chinese/fcitx

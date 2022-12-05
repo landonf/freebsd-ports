@@ -1,11 +1,13 @@
 PORTNAME=	OpenFermion
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.1
+PORTREVISION=	1
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Electronic structure package for quantum computers
+WWW=		https://github.com/quantumlib/OpenFermion
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,9 +1,11 @@
 PORTNAME=	openmolcas
 DISTVERSION=	22.06
+PORTREVISION=	1
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Quantum chemistry software package
+WWW=		https://gitlab.com/Molcas/OpenMolcas
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

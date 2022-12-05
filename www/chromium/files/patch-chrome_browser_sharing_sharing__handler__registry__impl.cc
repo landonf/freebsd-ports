@@ -1,6 +1,6 @@
---- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2022-02-28 16:54:41 UTC
+--- chrome/browser/sharing/sharing_handler_registry_impl.cc.orig	2022-10-24 13:33:33 UTC
 +++ chrome/browser/sharing/sharing_handler_registry_impl.cc
-@@ -24,7 +24,7 @@
+@@ -23,7 +23,7 @@
  #endif  // BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

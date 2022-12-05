@@ -4,6 +4,7 @@ CATEGORIES=	sysutils kde
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KDE utility that sums up disk usage for directory trees
+WWW=		https://github.com/jeromerobert/k4dirstat
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,7 +19,7 @@ CPE_VENDOR=	kdirstat_project
 CPE_PRODUCT=	kdirstat
 USE_KDE=	auth codecs completion config configwidgets coreaddons doctools \
 		i18n iconthemes jobwidgets kio service widgetsaddons xmlgui
-USE_QT=		buildtools_build core gui dbus network qmake_build widgets xml
+USE_QT=		buildtools:build core gui dbus network qmake:build widgets xml
 
 post-patch:
 	@${REINPLACE_CMD} -e \

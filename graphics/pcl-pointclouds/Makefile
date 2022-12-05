@@ -1,6 +1,6 @@
 PORTNAME=	pcl
 DISTVERSION=	1.12.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	graphics math
 MASTER_SITES=	https://github.com/PointCloudLibrary/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 PKGNAMESUFFIX=	-pointclouds
@@ -20,6 +20,7 @@ PATCHFILES+=	ba388061b0f9ed9584e57d6019c30b044a657c3e.patch:-p1 \
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Point Cloud Library
+WWW=		https://pointclouds.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -58,7 +59,7 @@ PLIST_SUB=	SHL3=${DISTVERSION} SHL2=${DISTVERSION:R}
 DATADIR=	${PREFIX}/share/${PORTNAME}-${DISTVERSION:R}  # match the directory where the project installs .cmake files
 
 OPTIONS_DEFINE=		OPENGL PNG QHULL QT5 VTK
-OPTIONS_DEFAULT=	PNG # QHULL is disabled due to conflicts qhull8 vs. qhull
+OPTIONS_DEFAULT=	PNG VTK # QHULL is disabled due to conflicts qhull8 vs. qhull
 OPTIONS_SUB=		yes
 
 OPENGL_CMAKE_BOOL=	WITH_OPENGL # it finds OpenGL, but no binaries are linked with it: https://github.com/PointCloudLibrary/pcl/issues/2641
@@ -70,7 +71,7 @@ PNG_LIB_DEPENDS=	libpng.so:graphics/png
 
 QHULL_DESC=		Include convex-hull operations
 QHULL_CMAKE_BOOL=	WITH_QHULL
-QHULL_LIB_DEPENDS=	libqhull_r.so:math/qhull8
+QHULL_LIB_DEPENDS=	libqhull_r.so:math/qhull
 
 QT5_CMAKE_ON=		-DWITH_QT=QT5
 QT5_CMAKE_OFF=		-DWITH_QT=NO
@@ -78,9 +79,10 @@ QT5_BROKEN=		WITH_QT doesn't do anything, should be used by apps, but apps is al
 
 VTK_DESC=		Build VTK visualizations
 VTK_USES=		gl qt:5
-VTK_USE=		GL=gl,glu QT=core,gui,opengl,widgets,buildtools_build,qmake_build
+VTK_USE=		GL=gl,glu QT=core,gui,opengl,widgets,buildtools:build,qmake:build
 VTK_CMAKE_BOOL=		WITH_VTK
-VTK_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.1
-VTK_LIB_DEPENDS=	libvtkCommonCore-9.1.so:math/vtk9
+VTK_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-${VTK_VER}
+VTK_LIB_DEPENDS=	libvtkCommonCore-${VTK_VER}.so:math/vtk${VTK_VER:R}
 
+.include <../../math/vtk9/Makefile.version>
 .include <bsd.port.mk>

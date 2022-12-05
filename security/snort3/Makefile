@@ -1,11 +1,12 @@
 PORTNAME=	snort
-DISTVERSION=	3.1.38.0
+DISTVERSION=	3.1.47.0
 PORTEPOCH=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	3
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Lightweight network intrusion detection system
+WWW=		https://www.snort.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libdaq.so:net/libdaq \
 		libpcre.so:devel/pcre \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-USES=		cmake compiler:c++14-lang cpe iconv localbase pathfix pkgconfig \
+USES=		cmake compiler:c++14-lang cpe iconv localbase luajit pathfix pkgconfig \
 		shebangfix ssl
 USE_GITHUB=	yes
 
@@ -31,8 +32,7 @@ CMAKE_ARGS+=	-DFLEX_INCLUDE_DIR_HINT:PATH=${PREFIX}/include/flex
 CONFLICTS=	snort-2*
 
 OPTIONS_DEFINE=		ADDRESSSANITIZER DEBUG DOCS FLATBUFFERS HYPERSCAN \
-			LARGEPCAP PIE STATICDAQ THREADSANITIZER
-OPTIONS_DEFINE_amd64=	TSC
+			LARGEPCAP PIE STATICDAQ THREADSANITIZER TSC
 OPTIONS_DEFAULT=	STATICDAQ
 OPTIONS_DEFAULT_amd64=	HYPERSCAN
 OPTIONS_SUB=		yes
@@ -60,12 +60,6 @@ THREADSANITIZER_CMAKE_BOOL=	ENABLE_THREAD_SANITIZER
 TSC_CMAKE_BOOL=			ENABLE_TSC_CLOCK
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH:Mpowerpc64*}
-LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit-openresty
-.else
-LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit
-.endif
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
 BUILD_DEPENDS=	flex>0:textproc/flex

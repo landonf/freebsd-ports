@@ -1,6 +1,6 @@
---- media/audio/sndio/audio_manager_sndio.cc.orig	2022-07-22 17:30:31 UTC
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2022-10-24 13:33:33 UTC
 +++ media/audio/sndio/audio_manager_sndio.cc
-@@ -0,0 +1,177 @@
+@@ -0,0 +1,181 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -70,9 +70,13 @@
 +    const std::string& device_id) {
 +  static const int kDefaultInputBufferSize = 1024;
 +
++  int user_buffer_size = GetUserBufferSize();
++  int buffer_size = user_buffer_size ?
++      user_buffer_size : kDefaultInputBufferSize;
++
 +  return AudioParameters(
-+      AudioParameters::AUDIO_PCM_LOW_LATENCY, CHANNEL_LAYOUT_STEREO,
-+      kDefaultSampleRate, kDefaultInputBufferSize);
++      AudioParameters::AUDIO_PCM_LOW_LATENCY, ChannelLayoutConfig::Stereo(),
++      kDefaultSampleRate, buffer_size);
 +}
 +
 +AudioManagerSndio::AudioManagerSndio(std::unique_ptr<AudioThread> audio_thread,
@@ -124,12 +128,12 @@
 +  DLOG_IF(ERROR, !output_device_id.empty()) << "Not implemented!";
 +  static const int kDefaultOutputBufferSize = 2048;
 +
-+  ChannelLayout channel_layout = CHANNEL_LAYOUT_STEREO;
++  ChannelLayoutConfig channel_layout_config = ChannelLayoutConfig::Stereo();
 +  int sample_rate = kDefaultSampleRate;
 +  int buffer_size = kDefaultOutputBufferSize;
 +  if (input_params.IsValid()) {
 +    sample_rate = input_params.sample_rate();
-+    channel_layout = input_params.channel_layout();
++    channel_layout_config = input_params.channel_layout_config();
 +    buffer_size = std::min(buffer_size, input_params.frames_per_buffer());
 +  }
 +
@@ -138,8 +142,8 @@
 +    buffer_size = user_buffer_size;
 +
 +  return AudioParameters(
-+      AudioParameters::AUDIO_PCM_LOW_LATENCY, channel_layout,
-+      sample_rate, buffer_size);
++      AudioParameters::AUDIO_PCM_LOW_LATENCY,
++      channel_layout_config, sample_rate, buffer_size);
 +}
 +
 +AudioInputStream* AudioManagerSndio::MakeInputStream(

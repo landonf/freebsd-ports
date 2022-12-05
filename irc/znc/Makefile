@@ -1,6 +1,6 @@
 PORTNAME=	znc
 PORTVERSION=	1.8.2
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	irc
 MASTER_SITES=	https://znc.in/releases/ \
 		https://znc.in/releases/archive/
@@ -11,6 +11,7 @@ PATCHFILES=	dcb5f3df82fcfec48aab356252067dc897fb98cf.patch:-p1
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Advanced IRC bouncer
+WWW=		https://wiki.znc.in/ZNC
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

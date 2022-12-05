@@ -6,16 +6,16 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for yet another messagepack streaming deserializer
+WWW=		https://metacpan.org/release/Data-MessagePack-Stream
 
 BROKEN_mips=	fails to build: atomic operations are not found
 BROKEN_mips64=	fails to build: atomic operations are not found
 BROKEN_sparc64=	fails to build: atomic operations are not found
 
-BUILD_DEPENDS=	msgpack>=3.3.0:devel/msgpack \
-		p5-File-Which>=0:sysutils/p5-File-Which \
+BUILD_DEPENDS=	p5-File-Which>=0:sysutils/p5-File-Which \
 		p5-Module-Build-XSUtil>=0:devel/p5-Module-Build-XSUtil \
 		${RUN_DEPENDS}
-LIB_DEPENDS=	libmsgpackc.so:devel/msgpack
+LIB_DEPENDS=	libmsgpackc.so:devel/msgpack-c
 RUN_DEPENDS=	p5-Data-MessagePack>=0:devel/p5-Data-MessagePack
 
 USES=		localbase:ldflags perl5

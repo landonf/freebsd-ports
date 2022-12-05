@@ -1,10 +1,12 @@
 PORTNAME=	rJava
 DISTVERSION=	1.0-6
+PORTREVISION=	1
 CATEGORIES=	devel java
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	R to Java interface
+WWW=		https://cran.r-project.org/package=rJava
 
 LICENSE=	LGPL21
 

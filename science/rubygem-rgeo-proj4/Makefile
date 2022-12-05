@@ -1,10 +1,12 @@
 PORTNAME=	rgeo-proj4
 PORTVERSION=	3.1.1
+PORTREVISION=	1
 CATEGORIES=	science rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Proj.4 extension for RGeo
+WWW=		https://github.com/rgeo/rgeo-proj4
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

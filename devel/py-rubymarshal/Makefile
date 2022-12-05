@@ -5,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Read and write Ruby-marshalled data
+WWW=		https://pypi.org/project/rubymarshal/
 
 LICENSE=	WTFPL
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,8 +17,8 @@ USE_GITHUB=	yes  # tests are missing from PyPI distribution
 GH_ACCOUNT=	d9pouces
 GH_PROJECT=	RubyMarshal
 
-USES=		python:3.6+ pytest
-USE_PYTHON=	autoplist distutils
+USES=		python:3.6+
+USE_PYTHON=	autoplist distutils pytest
 NO_ARCH=	yes
 
 .include <bsd.port.mk>

@@ -1,11 +1,12 @@
 PORTNAME=	importlab
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Calculate python dependency graphs
+WWW=		https://github.com/google/importlab
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

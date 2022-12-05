@@ -1,10 +1,12 @@
 PORTNAME=	irrlamb
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	3D physics-based puzzle game
+WWW=		https://github.com/jazztickets/irrlamb
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

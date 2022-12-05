@@ -1,11 +1,12 @@
 PORTNAME=	tweepy
-PORTVERSION=	4.10.0
+PORTVERSION=	4.12.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Twitter API library for Python
+WWW=		https://github.com/tweepy/tweepy
 
 LICENSE=	MIT
 

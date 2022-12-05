@@ -1,10 +1,11 @@
 PORTNAME=	traingame
 PORTVERSION=	0.3
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Game about Trains
+WWW=		https://www.doof.me.uk/train-game/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

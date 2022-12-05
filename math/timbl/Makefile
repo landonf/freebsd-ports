@@ -1,10 +1,12 @@
 PORTNAME=	timbl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.7
+PORTREVISION=	2
 CATEGORIES=	math education
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tilburg Memory Based Learner
+WWW=		https://ilk.uvt.nl/timbl/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

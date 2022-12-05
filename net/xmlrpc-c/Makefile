@@ -1,10 +1,11 @@
 PORTNAME=	xmlrpc-c
-PORTVERSION=	1.54.05
+PORTVERSION=	1.54.06
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Xmlrpc-c%20Super%20Stable/${PORTVERSION}
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	XML-RPC library for C and C++
+WWW=		http://xmlrpc-c.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 

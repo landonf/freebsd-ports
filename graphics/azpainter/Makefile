@@ -5,6 +5,7 @@ MASTER_SITES=	http://azsky2.html.xdomain.jp/arc/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	16-bit RGB full color painting application
+WWW=		http://azsky2.html.xdomain.jp/soft/azpainter.html
 
 LICENSE=	GPLv3
 
@@ -16,7 +17,7 @@ USES=		compiler:c11 desktop-file-utils gmake jpeg pkgconfig \
 		shared-mime-info tar:xz xorg
 USE_XORG=	x11 xext xi
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--docdir="${DOCSDIR}" CC="${CC}"
+CONFIGURE_ARGS=	--docdir="${DOCSDIR}" CC="${CC}" LIBS="-lz"
 
 PORTDOCS=	AUTHORS ChangeLog ReadMe_en ReadMe_ja manual_ja.html
 

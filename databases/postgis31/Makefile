@@ -1,12 +1,13 @@
 PORTNAME=	postgis
-PORTVERSION=	3.1.5
-PORTREVISION=	2
+PORTVERSION=	3.1.8
+PORTREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 PKGNAMESUFFIX=	31
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Geographic objects support for PostgreSQL databases
+WWW=		https://postgis.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,5 @@
 PORTNAME=	email-validator
-DISTVERSION=	1.2.1
+DISTVERSION=	1.3.0
 CATEGORIES=	mail python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	email_validator-${PORTVERSION}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Robust email address syntax and deliverability validation library
+WWW=		https://github.com/JoshData/python-email-validator
 
 LICENSE=	CC0-1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE

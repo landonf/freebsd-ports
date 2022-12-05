@@ -1,11 +1,12 @@
 PORTNAME=	deadbeef
 PORTVERSION=	0.7.2
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Ultimate music player for Unix-like systems
+WWW=		http://deadbeef.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual

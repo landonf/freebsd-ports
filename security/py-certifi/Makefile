@@ -1,11 +1,12 @@
 PORTNAME=	certifi
-PORTVERSION=	2022.6.15
+PORTVERSION=	2022.9.24
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mozilla SSL certificates
+WWW=		https://github.com/certifi/python-certifi
 
 LICENSE=	MPL20
 

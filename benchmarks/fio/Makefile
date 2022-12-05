@@ -1,11 +1,11 @@
 PORTNAME=	fio
-PORTVERSION=	3.30
-PORTREVISION=	1
+DISTVERSION=	3.33
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://brick.kernel.dk/snaps/
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Flexible IO tester
+WWW=		https://git.kernel.dk/?p=fio.git
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,8 +13,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		compiler:c11 gmake tar:bzip2
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-native
-
+CONFIGURE_ARGS=		--disable-native \
+			--disable-optimizations
+MAKE_ARGS=		DEBUGFLAGS= \
+			OPTFLAGS= \
+			V=1
 CONFLICTS_INSTALL=	py*-Fiona
 
 OPTIONS_DEFINE=	EXAMPLES GNUPLOT LIBNFS
@@ -24,7 +27,7 @@ LIBNFS_DESC=	Enable NFS support using libnfs
 GNUPLOT_BUILD_DEPENDS=	${LOCALBASE}/bin/gnuplot:math/gnuplot
 LIBNFS_LIB_DEPENDS=	libnfs.so:net/libnfs
 
-LIBNFS_CONFIGURE_OFF=	--disable-nfs
+LIBNFS_CONFIGURE_ENABLE=	libnfs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fio ${STAGEDIR}${PREFIX}/bin

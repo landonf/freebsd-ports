@@ -1,11 +1,12 @@
 PORTNAME=	flake8-builtins
-PORTVERSION=	1.5.3
+PORTVERSION=	2.0.1
 CATEGORIES=	devel
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Check for python builtins being used as variables or parameters
+WWW=		https://pypi.org/project/flake8-builtins/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

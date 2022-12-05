@@ -1,10 +1,11 @@
 PORTNAME=	libksba
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.2
 CATEGORIES=	security
 MASTER_SITES=	GNUPG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library to make X.509 certificates
+WWW=		https://www.gnupg.org/aegypten2/
 
 LICENSE=	GPLv2 GPLv3 LGPL3
 LICENSE_COMB=	dual

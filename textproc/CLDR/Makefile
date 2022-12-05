@@ -1,5 +1,5 @@
 PORTNAME=	CLDR
-PORTVERSION=	41.0
+PORTVERSION=	42.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://unicode.org/Public/cldr/${PORTVERSION:R}/:src	\
 		http://www.unicode.org/:lic
@@ -9,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Unicode Common Locale Data Repository
+WWW=		https://cldr.unicode.org/index
 
 LICENSE=	Unicode_License_Agreement
 LICENSE_NAME=	Unicode License Agreement

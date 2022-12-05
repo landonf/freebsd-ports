@@ -1,11 +1,12 @@
 PORTNAME=	sane-backends
 DISTVERSION=	1.1.1
-PORTREVISION=	8
+PORTREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/7d30fab4e115029d91027b6a58d64b43/
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	API for accessing scanners, digital cameras, frame grabbers, etc
+WWW=		http://www.sane-project.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

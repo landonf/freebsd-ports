@@ -1,6 +1,6 @@
 PORTNAME=	muse
 PORTVERSION=	3.20
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	textproc elisp
 MASTER_SITES=	http://download.gna.org/muse-el/ \
 		LOCAL/dryice \
@@ -9,6 +9,7 @@ PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Authoring and publishing environment for Emacs
+WWW=		https://www.emacswiki.org/cgi-bin/wiki/MuseMode
 
 USES=		emacs gmake makeinfo
 

@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	doconnor@gsoft.com.au
 COMMENT=	Extension to the Tk toolkit
+WWW=		https://wiki.tcl-lang.org/page/BLT
 
 LICENSE=	MIT
 

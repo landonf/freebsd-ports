@@ -1,10 +1,11 @@
 PORTNAME=	gnu-efi
-PORTVERSION=	3.0.14
+PORTVERSION=	3.0.15
 CATEGORIES=	devel
 MASTER_SITES=	SF/gnu-efi
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	SDK for EFI applications
+WWW=		http://gnu-efi.sourceforge.net/
 
 LICENSE=	GPLv2
 

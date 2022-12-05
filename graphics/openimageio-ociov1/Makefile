@@ -1,7 +1,7 @@
 PORTNAME=	openimageio
 DISTVERSIONPREFIX=	Release-
 DISTVERSION=	2.2.21.0
-PORTREVISION=	1
+PORTREVISION=	7
 CATEGORIES=	graphics multimedia
 PKGNAMESUFFIX=	-ociov1
 # special port to link oiio libs with ociov1
@@ -9,6 +9,7 @@ PKGNAMESUFFIX=	-ociov1
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT=	OpenImageIO graphics library linked to ocio v1
+WWW=		https://www.openimageio.org/
 
 LICENSE=	BSD3CLAUSE
 
@@ -29,6 +30,8 @@ USES=		cmake jpeg compiler:c++14-lang iconv:wchar_t
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenImageIO
 GH_PROJECT=	oiio
+
+PORTSCOUT=	limit:^2\.2\.
 
 CMAKE_ON=	USE_OCIO
 CMAKE_OFF=	BUILDSTATIC INSTALL_FONTS LINKSTATIC NOTHREADS \

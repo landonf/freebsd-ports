@@ -1,7 +1,7 @@
 PORTNAME=	gnudatalanguage
 PORTVERSION=	1.0.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	science lang
 .if defined(BUILD_PYTHON_MODULE)
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +9,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT?=	Free IDL-compatible incremental compiler
+WWW=		https://github.com/gnudatalanguage/gdl
 
 LICENSE=	GPLv2
 

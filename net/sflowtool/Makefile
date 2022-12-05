@@ -1,10 +1,11 @@
 PORTNAME=	sflowtool
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.07
+DISTVERSION=	5.08
 CATEGORIES=	net
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	sFlow capture and sFlow-to-NetFlow conversion tool
+WWW=		https://github.com/sflow/sflowtool/
 
 LICENSE=	InMon
 LICENSE_NAME=	InMon Corp

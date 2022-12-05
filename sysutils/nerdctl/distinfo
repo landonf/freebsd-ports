@@ -1,5 +1,5 @@
-TIMESTAMP = 1659445945
-SHA256 (go/sysutils_nerdctl/nerdctl-v0.22.2/v0.22.2.mod) = dddff6fe78396328dc68b6285bab661fc84f5511729847a7078c436e03f4c4a8
-SIZE (go/sysutils_nerdctl/nerdctl-v0.22.2/v0.22.2.mod) = 9428
-SHA256 (go/sysutils_nerdctl/nerdctl-v0.22.2/v0.22.2.zip) = 74aa664ce211b9351e423f5821bb4a5328f009621da6163ad952e2fba0357919
-SIZE (go/sysutils_nerdctl/nerdctl-v0.22.2/v0.22.2.zip) = 711537
+TIMESTAMP = 1667031685
+SHA256 (go/sysutils_nerdctl/nerdctl-v1.0.0/v1.0.0.mod) = 8a6657e75c9cc30d138538501c1e78b9706ca312c4ac2bd770714a0b66c8fbfa
+SIZE (go/sysutils_nerdctl/nerdctl-v1.0.0/v1.0.0.mod) = 8831
+SHA256 (go/sysutils_nerdctl/nerdctl-v1.0.0/v1.0.0.zip) = 817cc983589539bc31b783040527cc2846378698d20dcd81a6f1265178b1ce73
+SIZE (go/sysutils_nerdctl/nerdctl-v1.0.0/v1.0.0.zip) = 759963

@@ -1,10 +1,11 @@
 PORTNAME=	icewm
-PORTVERSION=	2.9.9
+PORTVERSION=	3.2.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://github.com/ice-wm/icewm/releases/download/${PORTVERSION}/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Window manager designed for speed and usability
+WWW=		https://ice-wm.org/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

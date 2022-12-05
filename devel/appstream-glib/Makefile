@@ -1,11 +1,12 @@
 PORTNAME=	appstream-glib
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
 CATEGORIES=	devel
 MASTER_SITES=	http://people.freedesktop.org/~hughsient/appstream-glib/releases/
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to help with AppStream metadata
+WWW=		https://github.com/hughsie/appstream-glib/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

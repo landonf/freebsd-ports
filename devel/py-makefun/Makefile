@@ -1,11 +1,12 @@
 PORTNAME=	makefun
-DISTVERSION=	1.14.0
+DISTVERSION=	1.15.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Dynamically create python functions with a proper signature
+WWW=		https://github.com/smarie/python-makefun
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

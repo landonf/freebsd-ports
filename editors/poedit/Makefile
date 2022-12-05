@@ -1,11 +1,12 @@
 PORTNAME=	poedit
 PORTVERSION=	3.0.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/vslavik/${PORTNAME}/releases/download/v${PORTVERSION}-oss/
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Gettext catalogs (.po files) editor
+WWW=		https://www.poedit.net/
 
 LICENSE=	BSD2CLAUSE
 

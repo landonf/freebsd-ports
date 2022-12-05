@@ -1,13 +1,15 @@
 PORTNAME=	mumps
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	3.0.2
+DISTVERSION=	3.0.3
+PORTREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	http://mumps.enseeiht.fr/:mumps
+MASTER_SITES=	http://coin-or-tools.github.io/ThirdParty-Mumps/:mumps
 PKGNAMEPREFIX=	coin-or-
 DISTFILES=	MUMPS_${MUMPS_VERSION}.tar.gz:mumps
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	COIN-OR autotools harness to build Mumps
+WWW=		https://github.com/coin-or-tools/ThirdParty-Mumps
 
 LICENSE=	EPL
 
@@ -24,9 +26,11 @@ GH_PROJECT=	ThirdParty-Mumps
 
 GNU_CONFIGURE=	yes
 
+MAKE_JOBS_UNSAFE=	yes # otherwise build doesn't find some *.mod files
+
 INSTALL_TARGET=	install-strip
 
-MUMPS_VERSION=	5.4.1 # from the script get.Mumps
+MUMPS_VERSION=	5.5.0 # from the script get.Mumps
 
 .include <bsd.port.pre.mk>
 
@@ -39,10 +43,9 @@ FFLAGS+=	-fallow-argument-mismatch
 post-extract: # link MUMPS into the location in the tree
 	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/MUMPS_${MUMPS_VERSION} MUMPS
 
-pre-build: # patching from get.Mumps
+post-patch: # patching from get.Mumps
 	@cd ${WRKSRC} && \
 		${PATCH} -p0 < mumps_mpi.patch && \
-		${MV} MUMPS/libseq/mpi.h MUMPS/libseq/mumps_mpi.h && \
-		${PATCH} -p0 < mumps_dump.patch
+		${MV} MUMPS/libseq/mpi.h MUMPS/libseq/mumps_mpi.h
 
 .include <bsd.port.post.mk>

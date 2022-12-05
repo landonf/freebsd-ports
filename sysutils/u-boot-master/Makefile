@@ -4,7 +4,6 @@
 
 PORTNAME=	u-boot
 PORTVERSION=	${UBOOT_VERSION}
-PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX?=	-${MODEL}
 MASTER_SITES=	https://ftp.denx.de/pub/u-boot/ \
@@ -13,6 +12,7 @@ DIST_SUBDIR=	u-boot
 
 MAINTAINER?=	uboot@FreeBSD.org
 COMMENT=	Cross-build das u-boot for model ${MODEL}
+WWW?=		https://www.denx.de/wiki/U-Boot
 
 LICENSE=	GPLv2
 
@@ -114,7 +114,7 @@ UBOOT_PLIST_QEMU=	u-boot.bin
 .if !defined(UBOOT_VERSION) && defined(UBOOT_VERSION_${FAMILY:tu})
 UBOOT_VERSION=${UBOOT_VERSION_${FAMILY:tu}}
 .endif
-UBOOT_VERSION?=	2022.04
+UBOOT_VERSION?=	2022.10
 
 # If a slave port defines a PORTREVISION use it
 .if defined(U_BOOT_SLAVE_PORTREVISION_${UBOOT_VERSION})

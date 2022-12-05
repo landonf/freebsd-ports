@@ -1,11 +1,12 @@
 PORTNAME=	jackett
-PORTVERSION=	0.20.989
+PORTVERSION=	0.20.2203
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/Jackett/Jackett/releases/download/
 DISTNAME=	v${PORTVERSION}/Jackett.Binaries.Mono
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Torznab proxy implementation of the Newznab API
+WWW=		https://github.com/Jackett/Jackett
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

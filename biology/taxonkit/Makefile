@@ -1,11 +1,11 @@
 PORTNAME=	taxonkit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.0
-PORTREVISION=	2
+DISTVERSION=	0.14.0
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Practical and efficient NCBI taxonomy toolkit
+WWW=		https://bioinf.shenwei.me/taxonkit/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

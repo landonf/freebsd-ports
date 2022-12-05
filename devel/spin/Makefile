@@ -3,8 +3,9 @@ PORTVERSION=	6.5.0
 DISTVERSIONPREFIX=	version-
 CATEGORIES=	devel
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	On-the-fly verification system for asynchronous concurrent systems
+WWW=		http://spinroot.com
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Src/LICENSE

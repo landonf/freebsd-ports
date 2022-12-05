@@ -1,10 +1,11 @@
 PORTNAME=	console
-PORTVERSION=	1.15.3
+PORTVERSION=	1.16.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Beautiful logging for Ruby
+WWW=		https://github.com/socketry/console
 
 LICENSE=	MIT
 

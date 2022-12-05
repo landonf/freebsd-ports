@@ -2,10 +2,12 @@ PORTNAME=	libnest2d-ultimaker
 # XXX there is no 4.13.1
 # https://github.com/Ultimaker/libnest2d/tags
 DISTVERSION=	4.12.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	2D irregular bin packaging and nesting library
+WWW=		https://github.com/Ultimaker/libnest2d
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

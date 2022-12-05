@@ -1,11 +1,12 @@
 PORTNAME=	cloak
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.0
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	security
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Command line OTP Authenticator application
+WWW=		https://github.com/evansmurithi/cloak
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

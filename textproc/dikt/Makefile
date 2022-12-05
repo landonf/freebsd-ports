@@ -6,6 +6,7 @@ MASTER_SITES=	OSDN/${PORTNAME}
 
 MAINTAINER=	info@dikt.tv
 COMMENT=	Dictionary for KDE
+WWW=		https://dikt.tv/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons dbusaddons guiaddons i18n iconthemes itemviews \
 		jobwidgets kio service solid widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus gui network printsupport svg widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 PLIST_FILES=	bin/dikt \
 		share/applications/dikt.desktop \

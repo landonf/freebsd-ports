@@ -1,6 +1,5 @@
 PORTNAME=	msmtp
-PORTVERSION=	1.8.20
-PORTREVISION=	1
+PORTVERSION=	1.8.22
 CATEGORIES=	mail
 MASTER_SITES=	https://marlam.de/msmtp/releases/
 
@@ -8,6 +7,7 @@ PATCH_SITES=	https://github.com/marlam/msmtp-mirror/commit/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	SMTP plugin for MUAs
+WWW=		https://marlam.de/msmtp/
 
 LICENSE=	GPLv3
 

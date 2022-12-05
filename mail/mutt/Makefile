@@ -1,5 +1,5 @@
 PORTNAME=	mutt
-DISTVERSION=	2.2.7
+DISTVERSION=	2.2.9
 CATEGORIES+=	mail
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 		https://bitbucket.org/mutt/mutt/downloads/ \
@@ -15,6 +15,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dereks@lifeofadishwasher.com
 COMMENT=	Small but powerful text based program for read/writing e-mail
+WWW=		http://www.mutt.org/
 
 LICENSE=	GPLv2+
 

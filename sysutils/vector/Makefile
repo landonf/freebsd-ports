@@ -1,11 +1,12 @@
 PORTNAME=	vector
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.0
-PORTREVISION=	17
+PORTREVISION=	20
 CATEGORIES=	sysutils
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High performance logs, metrics, and events router
+WWW=		https://vector.dev
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -403,7 +404,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		smpl_jwt-0.5.0 \
 		snafu-0.6.6 \
 		snafu-derive-0.6.6 \
-		socket2-0.3.11 \
+		socket2-0.3.19 \
 		sourcefile-0.1.4 \
 		standback-0.2.8 \
 		static_assertions-1.1.0 \

@@ -1,10 +1,11 @@
 PORTNAME=	libHX
-PORTVERSION=	4.6
+PORTVERSION=	4.7
 CATEGORIES=	lang
 MASTER_SITES=	https://inai.de/files/libhx/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	C/C++ library with common data structures and functions
+WWW=		https://inai.de/projects/libhx/
 
 LICENSE=	LGPL21+
 

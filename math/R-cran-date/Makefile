@@ -1,10 +1,11 @@
 PORTNAME=	date
-DISTVERSION=	1.2-39
+DISTVERSION=	1.2-40
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Functions for Handling Dates
+WWW=		https://CRAN.R-project.org/package=date
 
 LICENSE=	GPLv2
 

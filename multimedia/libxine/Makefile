@@ -1,6 +1,6 @@
 PORTNAME=	xine
 DISTVERSION=	1.2.12
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-lib/${PORTVERSION}
 PKGNAMEPREFIX=	lib
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME}-lib-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libraries for xine multimedia player
+WWW=		https://www.xine-project.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -169,6 +170,8 @@ pre-configure-GNUTLS-off:
 		${WRKSRC}/configure
 
 post-patch:
+	@${REINPLACE_CMD} -e '/xine_set_flags/s/XINE_PROTECTED//' \
+		${WRKSRC}/include/xine.h
 .if ${COMPILER_TYPE} == "clang"
 	@${REINPLACE_CMD} -e 's|-fno-rename-registers||' \
 		${WRKSRC}/src/libw32dll/Makefile.in

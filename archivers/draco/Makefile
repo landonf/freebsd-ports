@@ -1,10 +1,11 @@
 PORTNAME=	draco
-DISTVERSION=	1.5.2
+DISTVERSION=	1.5.5
 CATEGORIES=	archivers
 PKGNAMESUFFIX=	-3d-compression
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for compressing and decompressing 3D meshes and point clouds
+WWW=		https://google.github.io/draco/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

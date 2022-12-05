@@ -1,11 +1,12 @@
 PORTNAME=	h11
-PORTVERSION=	0.13.0
+PORTVERSION=	0.14.0
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Pure-Python, bring-your-own-I/O implementation of HTTP/1.1
+WWW=		https://pypi.org/project/h11/
 
 LICENSE=	MIT
 

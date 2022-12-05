@@ -1,5 +1,5 @@
 PORTNAME=	twisted
-PORTVERSION=	22.4.0
+PORTVERSION=	22.10.0
 CATEGORIES=	devel net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	Twisted-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Asynchronous networking framework written in Python
+WWW=		https://twistedmatrix.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

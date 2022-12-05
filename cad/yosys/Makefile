@@ -1,10 +1,11 @@
 PORTNAME=	yosys
 DISTVERSIONPREFIX=	yosys-
-DISTVERSION=	0.20
+DISTVERSION=	0.22
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Yosys Open SYnthesis Suite
+WWW=		https://yosyshq.net/yosys/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -22,7 +23,7 @@ USES=		bison compiler:c++11-lang gmake pkgconfig python:3.6+ readline \
 
 SHEBANG_FILES=	backends/smt2/smtbmc.py \
 		misc/yosys-config.in
-SHEBANG_GLOB=	*.sh
+SHEBANG_GLOB=	*.sh *.py
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ
@@ -31,7 +32,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD} tclsh=${TCLSH}
 MAKE_ARGS=	ABCEXTERNAL=abc
 MAKE_ENV=	MAKE=${GMAKE}
 
-TEST_TARGET=	test
+TEST_TARGET=	test # some tests fail, see https://github.com/YosysHQ/yosys/issues/3505
 
 post-patch:
 	${REINPLACE_CMD} -e '/^CXX =/d; s/^LD = .*/LD = $$(CXX)/' \

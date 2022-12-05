@@ -1,11 +1,13 @@
 PORTNAME=	opensips31
-DISTVERSION=	3.1.10
+DISTVERSION=	3.1.11
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://opensips.org/pub/opensips/${DISTVERSION}/
 DISTNAME=	opensips-${DISTVERSION}
 
 MAINTAINER=	bambyster@gmail.com
 COMMENT=	Open SIP Server
+WWW=		https://www.opensips.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -72,7 +74,7 @@ PYTHON_USES=		python
 PYTHON_MAKE_ENV=	PYTHON=${PYTHON_CMD}
 PYTHON_VARS=		EXTRA_MODULES+=python
 
-RABBITMQ_LIB_DEPENDS=	librabbitmq.so:net/rabbitmq-c-devel
+RABBITMQ_LIB_DEPENDS=	librabbitmq.so:net/rabbitmq-c
 RABBITMQ_VARS=		EXTRA_MODULES+="event_rabbitmq rabbitmq rabbitmq_consumer"
 
 RADIUS_LIB_DEPENDS=	libradiusclient-ng.so:net/radiusclient

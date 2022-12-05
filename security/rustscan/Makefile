@@ -1,10 +1,11 @@
 PORTNAME=	rustscan
-PORTVERSION=	2.1.0
-PORTREVISION=	2
+PORTVERSION=	2.1.1
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Faster Nmap Scanning with Rust
+WWW=		https://rustscan.github.io/RustScan/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -131,7 +132,7 @@ CARGO_CRATES=	addr2line-0.17.0 \
 		regex-syntax-0.6.25 \
 		resolv-conf-0.7.0 \
 		ring-0.16.20 \
-		rlimit-0.5.4 \
+		rlimit-0.8.3 \
 		rustc-demangle-0.1.21 \
 		rustls-0.17.0 \
 		ryu-1.0.9 \

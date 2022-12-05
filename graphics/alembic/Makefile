@@ -1,10 +1,10 @@
 PORTNAME=	alembic
-PORTVERSION=	1.8.3
-PORTREVISION=	2
+PORTVERSION=	1.8.4
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Open framework for storing and sharing graphic scene data
+WWW=		http://alembic.io/
 
 LICENSE=	BSD3CLAUSE
 

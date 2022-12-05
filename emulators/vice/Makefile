@@ -1,11 +1,12 @@
 PORTNAME=	vice
 PORTVERSION=	3.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	SF/vice-emu/releases
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Emulator for Commodore C64, C128, VIC20, PET, and CBM-II
+WWW=		https://vice-emu.sourceforge.io/
 
 LICENSE=	GPLv2 ROM
 LICENSE_COMB=	multi

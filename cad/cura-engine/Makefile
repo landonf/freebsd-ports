@@ -1,11 +1,13 @@
 PORTNAME=		CuraEngine
 PORTEPOCH=		1
 DISTVERSION=		4.13.1
+PORTREVISION=	1
 CATEGORIES=		cad
 DIST_SUBDIR=		Ultimaker
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Engine of slicing solution for RepRap 3D printers
+WWW=		http://wiki.ultimaker.com/Cura
 
 LICENSE=	AGPLv3
 

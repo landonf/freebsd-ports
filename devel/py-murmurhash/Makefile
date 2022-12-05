@@ -1,11 +1,12 @@
 PORTNAME=	murmurhash
-DISTVERSION=	1.0.7
+DISTVERSION=	1.0.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Cython bindings for MurmurHash2
+WWW=		https://github.com/explosion/murmurhash
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

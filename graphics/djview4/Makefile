@@ -6,6 +6,7 @@ MASTER_SITES=	SF/djvu/DjView/${PORTVERSION}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Standalone Djvu viewer and plugin based on Qt toolkit
+WWW=		http://djvu.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +21,7 @@ USES=		autoreconf desktop-file-utils gettext-runtime gl gmake gnome \
 USE_GL=		gl
 USE_GNOME=	glib20
 USE_QT=		core gui network opengl printsupport widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_XORG=	sm ice xext xt
 
 GNU_CONFIGURE=	yes

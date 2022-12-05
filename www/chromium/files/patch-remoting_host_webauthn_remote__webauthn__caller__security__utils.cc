@@ -1,4 +1,4 @@
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2022-06-17 14:20:10 UTC
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2022-10-24 13:33:33 UTC
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -9,7 +9,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -18,7 +18,7 @@
  
  constexpr auto kAllowedCallerPrograms =
      base::MakeFixedFlatSet<base::FilePath::StringPieceType>({
-@@ -76,7 +76,7 @@ bool IsLaunchedByTrustedProcess() {
+@@ -81,7 +81,7 @@ bool IsLaunchedByTrustedProcess() {
  #if !defined(NDEBUG)
    // Just return true on debug builds for the convenience of development.
    return true;
@@ -26,4 +26,4 @@
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    base::ProcessId parent_pid =
        base::GetParentProcessId(base::GetCurrentProcessHandle());
-   base::FilePath parent_image_path = GetProcessImagePath(parent_pid);
+   // Note that on Linux the process image may no longer exist in its original

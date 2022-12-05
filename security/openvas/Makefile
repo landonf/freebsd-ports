@@ -1,11 +1,12 @@
 PORTNAME=	openvas
 DISTVERSION=	22.4.0
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Open vulnerability assessment scanner
+WWW=		https://github.com/greenbone/openvas
 
 LICENSE=	GPLv2+
 

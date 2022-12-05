@@ -1,11 +1,13 @@
 PORTNAME=	rabbitmq
 DISTVERSION=	3.9.17
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/rabbitmq/rabbitmq-server/releases/download/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-server-${PORTVERSION}
 
 MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	Erlang implementation of AMQP
+WWW=		https://www.rabbitmq.com/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE-MPL-RabbitMQ

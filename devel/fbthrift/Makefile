@@ -1,10 +1,11 @@
 PORTNAME=	fbthrift
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2022.08.08.00
+DISTVERSION=	2022.11.28.00
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Facebook's branch of Apache Thrift, including a new C++ server
+WWW=		https://github.com/facebook/fbthrift
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,16 +27,21 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libwangle.so:net/wangle \
 		libzstd.so:archivers/zstd
 
-USES=		bison cmake compiler:c++17-lang ssl
-USE_GITHUB=	yes
-GH_ACCOUNT=	facebook
+USES=		bison cmake:testing compiler:c++17-lang ssl
 USE_LDCONFIG=	yes
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	facebook
+
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_TESTING_ON=	enable_tests
 
 CXXFLAGS+=	-fPIC # https://github.com/facebook/fbthrift/issues/399
 
 post-install: # https://github.com/facebook/fbthrift/issues/393
-	${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
+	@${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
+
+do-test: # no 'test' target, contrary to what the documentation says, see https://github.com/facebook/fbthrift/issues/533
+	@cd ${TEST_WRKSRC} && ${MAKE_CMD} test
 
 .include <bsd.port.mk>

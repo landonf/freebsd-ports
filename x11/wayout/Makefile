@@ -1,10 +1,11 @@
 PORTNAME=	wayout
-DISTVERSION=	0.1.2
+DISTVERSION=	0.1.4
 CATEGORIES=	x11 wayland
 MASTER_SITES=	https://git.sr.ht/~proycon/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Output simple text to a Wayland desktop widget
+WWW=		https://git.sr.ht/~proycon/wayout
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

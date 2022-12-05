@@ -5,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Add the mutation testing feature to pytest
+WWW=		https://pypi.org/project/pytest-mutagen/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,8 +17,8 @@ USE_GITHUB=	yes  # LICENSE and tests are missing from PyPI distribution
 GH_ACCOUNT=	timpaquatte
 GH_TAGNAME=	b4cc63c  # 1.3 tag is also missing
 
-USES=		python:3.6+ pytest
-USE_PYTHON=	autoplist distutils
+USES=		python:3.6+
+USE_PYTHON=	autoplist distutils pytest
 NO_ARCH=	yes
 PYTEST_BROKEN_TESTS=	test_BST_mutations test_short_example test_separate_files
 

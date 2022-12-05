@@ -1,4 +1,4 @@
---- net/dns/BUILD.gn.orig	2022-05-19 14:06:27 UTC
+--- net/dns/BUILD.gn.orig	2022-10-24 13:33:33 UTC
 +++ net/dns/BUILD.gn
 @@ -112,7 +112,7 @@ source_set("dns") {
        "dns_config_service_android.cc",
@@ -17,7 +17,7 @@
    ]
  
    allow_circular_includes_from = [
-@@ -413,9 +414,9 @@ source_set("tests") {
+@@ -414,9 +415,9 @@ source_set("tests") {
  
    if (is_android) {
      sources += [ "dns_config_service_android_unittest.cc" ]

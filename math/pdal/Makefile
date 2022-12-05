@@ -1,12 +1,13 @@
 PORTNAME=	pdal
 DISTVERSION=	2.3.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	math databases graphics
 MASTER_SITES=	https://github.com/PDAL/PDAL/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Library for translating and manipulating point cloud data
+WWW=		https://www.pdal.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

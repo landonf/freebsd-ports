@@ -7,17 +7,19 @@ PKGNAMESUFFIX=		-118
 .endif
 
 DEPECATED=		Desupported by MIT following 1.20
-EXPIRY=			2023-05-26
+EXPIRY=			2022-11-30
+IGNORE=			Affected by CVE-2022-42898: integer overflow vulnerabilities in PAC parsing
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
 
 MAINTAINER=		cy@FreeBSD.org
 COMMENT=		MIT implementation of RFC 4120 network authentication service
+WWW=			https://web.mit.edu/kerberos/
 
 LICENSE=		MIT
 
-CONFLICTS=		heimdal krb5 krb5-*
+CONFLICTS=		heimdal krb5 krb5-119 krb5-120
 CONFLICTS_BUILD=	boringssl
 
 KERBEROSV_URL=		http://web.mit.edu/kerberos/

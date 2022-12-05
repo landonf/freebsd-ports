@@ -58,6 +58,7 @@ lib/kitty/kittens/ssh/options/definition.py
 lib/kitty/kittens/ssh/options/parse.py
 lib/kitty/kittens/ssh/options/types.py
 lib/kitty/kittens/ssh/options/utils.py
+lib/kitty/kittens/ssh/utils.py
 lib/kitty/kittens/themes/__init__.py
 lib/kitty/kittens/themes/collection.py
 lib/kitty/kittens/themes/main.py
@@ -100,6 +101,7 @@ lib/kitty/kitty/choose_entry.py
 lib/kitty/kitty/cli.py
 lib/kitty/kitty/cli_stub.py
 lib/kitty/kitty/client.py
+lib/kitty/kitty/clipboard.py
 lib/kitty/kitty/complete.py
 lib/kitty/kitty/conf/__init__.py
 lib/kitty/kitty/conf/generate.py
@@ -108,6 +110,7 @@ lib/kitty/kitty/conf/utils.py
 lib/kitty/kitty/config.py
 lib/kitty/kitty/constants.py
 lib/kitty/kitty/debug_config.py
+lib/kitty/kitty/entry_points.py
 lib/kitty/kitty/fast_data_types.so
 lib/kitty/kitty/file_transmission.py
 lib/kitty/kitty/fonts/__init__.py
@@ -145,6 +148,7 @@ lib/kitty/kitty/options/parse.py
 lib/kitty/kitty/options/types.py
 lib/kitty/kitty/options/utils.py
 lib/kitty/kitty/os_window_size.py
+lib/kitty/kitty/prewarm.py
 lib/kitty/kitty/rc/__init__.py
 lib/kitty/kitty/rc/base.py
 lib/kitty/kitty/rc/close_tab.py
@@ -183,6 +187,7 @@ lib/kitty/kitty/rc/set_window_title.py
 lib/kitty/kitty/rc/signal_child.py
 lib/kitty/kitty/remote_control.py
 lib/kitty/kitty/rgb.py
+lib/kitty/kitty/search_query_parser.py
 lib/kitty/kitty/session.py
 lib/kitty/kitty/shell.py
 lib/kitty/kitty/shell_integration.py
@@ -204,6 +209,8 @@ lib/kitty/logo/beam-cursor@2x.png
 lib/kitty/logo/kitty-128.png
 lib/kitty/logo/kitty.png
 lib/kitty/shell-integration/bash/kitty.bash
+lib/kitty/shell-integration/fish/vendor_completions.d/clone-in-kitty.fish
+lib/kitty/shell-integration/fish/vendor_completions.d/edit-in-kitty.fish
 lib/kitty/shell-integration/fish/vendor_completions.d/kitty.fish
 lib/kitty/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish
 lib/kitty/shell-integration/ssh/askpass.py
@@ -215,6 +222,7 @@ lib/kitty/shell-integration/zsh/.zshenv
 lib/kitty/shell-integration/zsh/completions/_kitty
 lib/kitty/shell-integration/zsh/kitty-integration
 lib/kitty/shell-integration/zsh/kitty.zsh
+lib/kitty/terminfo/kitty.termcap
 lib/kitty/terminfo/kitty.terminfo
 lib/kitty/terminfo/x/xterm-kitty
 share/applications/kitty-open.desktop

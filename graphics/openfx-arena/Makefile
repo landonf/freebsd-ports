@@ -1,11 +1,12 @@
 PORTNAME=	openfx-arena
 PORTVERSION=	2.4.3
 DISTVERSIONPREFIX=	Natron-
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	graphics
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Extra OpenFX plugins for Natron
+WWW=		https://github.com/NatronGitHub/openfx-arena
 
 LICENSE=	GPLv2
 

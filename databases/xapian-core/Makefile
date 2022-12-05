@@ -1,5 +1,5 @@
 PORTNAME=	xapian-core
-PORTVERSION=	1.4.20
+PORTVERSION=	1.4.21
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION}/ \
@@ -7,6 +7,7 @@ MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION}/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Probabilistic text search database engine
+WWW=		https://xapian.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

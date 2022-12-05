@@ -1,11 +1,12 @@
 PORTNAME=	osgearth
 PORTVERSION=	3.2
-PORTREVISION=	1
 DISTVERSIONPREFIX=	${PORTNAME}-
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	C++ terrain rendering toolkit for OpenSceneGraph
+WWW=		http://osgearth.org/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

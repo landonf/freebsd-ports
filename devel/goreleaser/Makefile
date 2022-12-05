@@ -1,18 +1,18 @@
 PORTNAME=	goreleaser
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.3
-PORTREVISION=	1
+DISTVERSION=	1.13.0
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Deliver Go binaries as fast and easily as possible
+WWW=		https://goreleaser.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		go:modules
 GO_MODULE=	github.com/goreleaser/goreleaser
-GO_BUILDFLAGS=	-ldflags="-X main.version=${PKGVERSION} -X 'main.builtBy=FreeBSD ports'"
+GO_BUILDFLAGS=	-ldflags="-X main.version=${PKGVERSION} -X 'main.builtBy=FreeBSD ports' ${STRIP}"
 
 # TODO: generate documentation
 PLIST_FILES=	bin/goreleaser \

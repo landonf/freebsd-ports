@@ -1,10 +1,11 @@
 PORTNAME=	opentyrian
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1.20220318
+DISTVERSION=	2.1.20221123
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Arcade-style vertical scrolling shooter
+WWW=		https://github.com/opentyrian/opentyrian
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +14,7 @@ USES=		gmake pkgconfig sdl
 USE_GITHUB=	yes
 USE_SDL=	sdl2 net2
 
-MAKE_ENV=	VCS_IDREV="${DISTVERSION}" \
+MAKE_ENV=	VCS_IDREV="${ECHO_CMD} ${DISTVERSION}" \
 		gamesdir="${PREFIX}/share"
 
 DATADIR=	${PREFIX}/share/tyrian
@@ -25,9 +26,7 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/linux/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/
-	${INSTALL_DATA} ${WRKSRC}/linux/icons/tyrian-32.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/opentyrian
 	@${MKDIR} ${STAGEDIR}${DATADIR}
-	${TOUCH} ${STAGEDIR}${DATADIR}/.keepme
 
 .include <bsd.port.mk>

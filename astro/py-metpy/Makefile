@@ -1,5 +1,6 @@
 PORTNAME=	metpy
 PORTVERSION=	1.3.1
+PORTREVISION=	1
 CATEGORIES=	astro python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +8,7 @@ DISTNAME=	MetPy-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of tools for processing weather data
+WWW=		https://github.com/Unidata/MetPy
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

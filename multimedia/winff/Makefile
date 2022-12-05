@@ -1,6 +1,6 @@
 PORTNAME=	WinFF
 PORTVERSION=	1.5.5
-PORTREVISION=	24
+PORTREVISION=	26
 CATEGORIES=	multimedia
 MASTER_SITES=	LOCAL/thierry
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
@@ -8,6 +8,7 @@ DISTNAME=	${_PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Convert your videos quickly, easily, and all at once
+WWW=		https://www.biggmatt.com/p/winff.html
 
 LICENSE=	GPLv3
 

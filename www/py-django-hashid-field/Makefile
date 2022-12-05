@@ -1,11 +1,12 @@
 PORTNAME=	django-hashid-field
-PORTVERSION=	3.3.5
+PORTVERSION=	3.3.6
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Hashids obfuscated Django Model Field
+WWW=		https://github.com/nshafer/django-hashid-field
 
 LICENSE=	MIT
 

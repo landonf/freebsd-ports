@@ -7,6 +7,7 @@ EXTRACT_ONLY=	gcin-${PORTVERSION}.tar.xz
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Traditional Chinese input utility in X
+WWW=		https://hyperrate.com/dir.php?eid=67
 
 LICENSE=	LGPL21
 
@@ -14,7 +15,7 @@ LIB_DEPENDS=	libgcin-im-client.so:chinese/gcin
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/qt5-im
 USES=		compiler:c++11-lang gmake pkgconfig qt:5 tar:xz
-USE_QT=		qdbus qmake_build buildtools_build core gui
+USE_QT=		qdbus qmake:build buildtools:build core gui
 USE_CXXSTD=	c++11
 MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		MKDIR="${MKDIR}"

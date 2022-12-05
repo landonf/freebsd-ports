@@ -6,6 +6,7 @@ CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GTK3-based panel for wayfire
+WWW=		https://wayfire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -46,4 +47,5 @@ post-patch:
 		${WRKSRC}/src/dock/toplevel-icon.cpp \
 		${WRKSRC}/src/panel/widgets/window-list/toplevel.cpp
 
+.include "${.CURDIR:H:H}/x11-toolkits/wlroots015/override.mk"
 .include <bsd.port.mk>

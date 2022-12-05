@@ -1,11 +1,12 @@
 PORTNAME=	xmcd
 PORTVERSION=	3.3.2
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	audio
 MASTER_SITES=	http://freebsd.nsu.ru/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Motif CD player
+WWW=		https://www.ibiblio.org/tkan/xmcd/
 
 BROKEN_mips64=		Fails to compile: many undefined symbols in xorg.cf
 

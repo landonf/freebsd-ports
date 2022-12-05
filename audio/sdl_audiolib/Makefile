@@ -1,9 +1,11 @@
 PORTNAME=	sdl_audiolib
 PORTVERSION=	git20220713
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Audio decoding, resampling and mixing library for SDL
+WWW=		https://github.com/realnc/SDL_audiolib
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER

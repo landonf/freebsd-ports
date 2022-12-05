@@ -1,10 +1,11 @@
 PORTNAME=	phonopy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.15.1
+DISTVERSION=	2.16.3
 CATEGORIES=	science python
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Package for phonon calculations at harmonic and quasi-harmonic levels
+WWW=		https://phonopy.github.io/phonopy/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,6 +14,8 @@ USES=		cmake
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
+
+CMAKE_ON=	PHONOPY BUILD_SHARED_LIBRARIES
 
 PLIST_FILES=	include/phonopy.h \
 		lib/libphpy.a \

@@ -1,16 +1,15 @@
 PORTNAME=	horizon-eda
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.1
+DISTVERSION=	2.4.0
 PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	EDA package for printed circuit board design
+WWW=		https://horizon-eda.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_FreeBSD_14=		fails to compile (error: no matching function for call to '__search') due to this clang regression: https://github.com/llvm/llvm-project/issues/55683
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:devel/boost-libs \
 		cppzmq>0:net/cppzmq \

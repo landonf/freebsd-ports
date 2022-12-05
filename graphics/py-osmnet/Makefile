@@ -1,11 +1,13 @@
 PORTNAME=	osmnet
 PORTVERSION=	0.1.6
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tools for the extraction of OpenStreetMap street network data
+WWW=		https://github.com/UDST/osmnet
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

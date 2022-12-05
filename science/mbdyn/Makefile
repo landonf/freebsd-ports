@@ -1,11 +1,12 @@
 PORTNAME=	mbdyn
 DISTVERSION=	1.7.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	science
 MASTER_SITES=	https://www.mbdyn.org/userfiles/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	MultiBody Dynamics analysis system
+WWW=		https://www.mbdyn.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

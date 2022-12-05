@@ -1,11 +1,12 @@
 PORTNAME=	recordclass
-PORTVERSION=	0.17.2
+PORTVERSION=	0.18.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Mutable variants of tuple and collections.namedtuple
+WWW=		https://pypi.org/project/recordclass/
 
 LICENSE=	MIT
 

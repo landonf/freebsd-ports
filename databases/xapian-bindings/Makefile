@@ -1,9 +1,10 @@
 PORTNAME=	xapian-bindings
-PORTVERSION=	1.4.20
+PORTVERSION=	1.4.21
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bindings allowing Xapian to be used from various programming languages
+WWW=		https://xapian.org/
 
 LICENSE=	GPLv2
 

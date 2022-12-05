@@ -1,11 +1,12 @@
 PORTNAME=	rcssmin
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Fast CSS minifier for Python
+WWW=		https://github.com/ndparker/rcssmin
 
 LICENSE=	APACHE20
 

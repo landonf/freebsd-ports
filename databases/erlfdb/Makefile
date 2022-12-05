@@ -1,10 +1,12 @@
 PORTNAME=	erlfdb
 PORTVERSION=	1.3.5
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	FoundationDB client in Erlang via FDB C bindings
+WWW=		https://github.com/apache/couchdb-erlfdb
 
 LICENSE=	APACHE20
 

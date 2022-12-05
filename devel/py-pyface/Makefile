@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Enthought traits-capable windowing framework
+WWW=		https://docs.enthought.com/pyface/
 
 LICENSE=	BSD3CLAUSE EPL LGPL21 LGPL3
 LICENSE_COMB=	multi
@@ -36,7 +37,7 @@ OPTIONS_DEFAULT=	QT5
 
 QT5_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>0:textproc/py-pygments@${PY_FLAVOR}
 QT5_USES=		pyqt:5
-QT5_USE=		PYQT=pyqt5_run,pyqt5_test
+QT5_USE=		PYQT=pyqt5:run,pyqt5:test
 
 # These tests were extracted from etstool.py and adapted to the ports test framework
 # Note: The occurences of "qt4" aren't typos

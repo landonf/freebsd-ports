@@ -1,11 +1,12 @@
 PORTNAME=	mkvtoolnix
-PORTVERSION=	69.0.0
+PORTVERSION=	72.0.0
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://www.bunkus.org/videotools/mkvtoolnix/sources/ \
 		https://mkvtoolnix.download/sources/
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Tools to extract from/get info about/create Matroska media streams
+WWW=		https://www.bunkus.org/videotools/mkvtoolnix/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -25,10 +26,9 @@ LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 		libgmp.so:math/gmp
 
 USES=		compiler:c++17-lang iconv localbase pkgconfig qmake:no_env qt:5 tar:xz
-USE_QT=		buildtools_build concurrent core linguisttools_build multimedia svg
+USE_QT=		buildtools:build concurrent core linguisttools:build multimedia svg
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	ac_cv_path_PO4A=no
 CONFIGURE_ARGS=	--with-boost=${LOCALBASE} \
 		--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook \
 		--disable-qt6

@@ -1,11 +1,12 @@
 PORTNAME=	Mac-PropertyList
-PORTVERSION=	1.502
+PORTVERSION=	1.504
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Perl extension for parsing Mac OS X property lists
+WWW=		https://metacpan.org/release/Mac-PropertyList
 
 LICENSE=	ART20
 

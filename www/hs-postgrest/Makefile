@@ -1,19 +1,23 @@
 PORTNAME=	postgrest
-DISTVERSION=	9.0.1
+DISTVERSION=	10.1.0
+DISTVERSIONPREFIX=	v
 CATEGORIES=	www databases haskell
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	PostgREST create a REST API to an existing Postgres database
+WWW=		https://postgrest.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
 
-BUILD_DEPENDS=	pg_config:databases/postgresql${PGSQL_DEFAULT}-client \
-		ghc-8.10.7:lang/ghc810
+BUILD_DEPENDS=	pg_config:databases/postgresql${PGSQL_DEFAULT}-client
 
 USES=		cabal pgsql
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	PostgREST
 
 USE_RC_SUBR=	postgrest
 

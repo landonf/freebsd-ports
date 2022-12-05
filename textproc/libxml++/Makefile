@@ -1,11 +1,12 @@
 PORTNAME=	libxml++
-PORTVERSION=	5.0.1
+PORTVERSION=	5.0.2
 CATEGORIES=	textproc
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 
 MAINTAINER=	jcfyecrayz@liamekaens.com
 COMMENT=	XML API for C++
+WWW=		https://github.com/libxmlplusplus/libxmlplusplus
 
 LICENSE=	LGPL21+
 

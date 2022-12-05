@@ -1,6 +1,6 @@
 PORTNAME=	tin
 PORTVERSION=	2.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES+=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/v${PORTVERSION:R}/ \
 		ftp://ftp.sunet.se/pub/news/readers/tin/v${PORTVERSION:R}/ \
@@ -17,6 +17,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/v${PORTVERSION:R}/ \
 
 MAINTAINER?=	kbowling@FreeBSD.org
 COMMENT=	Easy-to-use threaded newsreader with NOV/NNTP support
+WWW=		http://www.tin.org/
 
 LICENSE=	BSD3CLAUSE
 

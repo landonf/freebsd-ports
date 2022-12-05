@@ -1,11 +1,12 @@
 PORTNAME=	httpx-oauth
-DISTVERSION=	0.8.0
+DISTVERSION=	0.10.1
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Async OAuth client using HTTPX
+WWW=		https://github.com/frankie567/httpx-oauth
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -6,12 +6,13 @@ CATEGORIES=	net-im
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unofficial Qt Slack client
+WWW=		https://github.com/MiT-Ufa/TeamWords
 
 LICENSE=	LGPL3
 
 USES=		compiler:c++11-lang gl qmake qt:5
 USE_LDCONFIG=	yes
-USE_QT=		core gui network webkit widgets buildtools_build
+USE_QT=		core gui network webkit widgets buildtools:build
 USE_GL=		gl
 
 QMAKE_ARGS=	CONFIG+="configure"

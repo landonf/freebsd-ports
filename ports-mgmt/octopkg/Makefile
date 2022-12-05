@@ -5,6 +5,7 @@ CATEGORIES=	ports-mgmt
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical front-end to the FreeBSD pkg-ng package manager
+WWW=		https://tintaescura.com/projects/octopkg/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	aarnt
 
 USE_QT=		core concurrent declarative gui linguist network xml widgets \
-		buildtools_build
+		buildtools:build
 
 PLIST_FILES=	bin/${PORTNAME} \
 		lib/${PORTNAME}/${PORTNAME}-doas \

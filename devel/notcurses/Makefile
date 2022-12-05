@@ -1,12 +1,14 @@
 PORTNAME=	notcurses
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ABIVERSION}.0.8
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/:docs
 DISTFILES=	${PORTNAME}-doc-${DISTVERSION}.tar.gz:docs
 
 MAINTAINER=	nickblack@linux.com
 COMMENT=	TUI library for modern terminal emulators
+WWW=		https://nick-black.com/dankwiki/index.php/Notcurses
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

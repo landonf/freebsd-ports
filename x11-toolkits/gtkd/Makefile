@@ -1,11 +1,13 @@
 PORTNAME=	gtkd
 PORTVERSION=	3.10.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	https://gtkd.org/Downloads/sources/
 DISTNAME=	GtkD-${PORTVERSION}
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	D binding and OO wrapper of GTK+
+WWW=		https://gtkd.org/index.html
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING

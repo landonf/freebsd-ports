@@ -1,10 +1,11 @@
 PORTNAME=	ddgr
-PORTVERSION=	2.0
+PORTVERSION=	2.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	DuckDuckGo from the terminal
+WWW=		https://github.com/jarun/ddgr
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USE_GITHUB=	yes
 GH_ACCOUNT=	jarun
 
-USES=		python:3.6+ shebangfix
+USES=		python:3.7+ shebangfix
 SHEBANG_FILES=	${PORTNAME}
 NO_ARCH=	yes
 NO_BUILD=	yes

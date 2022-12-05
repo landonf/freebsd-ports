@@ -1,11 +1,12 @@
 PORTNAME=	pipewire
-DISTVERSION=	0.3.54
+DISTVERSION=	0.3.61
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.freedesktop.org/pipewire/media-session/-/archive/${MEDIA_SESSION_VERSION}/:media_session
 DISTFILES=	media-session-${MEDIA_SESSION_VERSION}${EXTRACT_SUFX}:media_session
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Server and user space API to deal with multimedia pipelines
+WWW=		https://pipewire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

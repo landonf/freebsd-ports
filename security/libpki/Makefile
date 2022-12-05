@@ -1,7 +1,7 @@
 PORTNAME=	libpki
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 
 PATCH_SITES=	https://github.com/openca/libpki/commit/
@@ -9,11 +9,10 @@ PATCHFILES=	d7617046e9da97473a140c02582fa571f6359ae3.patch:-p1
 
 MAINTAINER=	bruno@ruomad.net
 COMMENT=	OpenCA PKI library (libpki) and tools
+WWW=		https://www.openca.org/projects/libpki
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-NOT_FOR_ARCHS=	arm64
 
 USES=		autoreconf gnome libtool ssl
 USE_GITHUB=	yes
@@ -26,6 +25,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-iphone
 
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 
 OPTIONS_DEFINE=	DNS LDAP MYSQL PGSQL
 

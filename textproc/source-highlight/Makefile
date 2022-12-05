@@ -1,11 +1,12 @@
 PORTNAME=	source-highlight
 DISTVERSION=	3.1.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	GNU/src-highlite
 
 MAINTAINER=	tcberner@FreeBSD.org
 COMMENT=	C/C++ and Java sources to HTML converter
+WWW=		https://www.gnu.org/software/src-highlite/source-highlight.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

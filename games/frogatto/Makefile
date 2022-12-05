@@ -1,10 +1,11 @@
 PORTNAME=	frogatto
 PORTVERSION=	1.3.1
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	games
 
 MAINTAINER=	fiziologus@gmail.com
 COMMENT=	Old-school 2D classic adventure platformer game
+WWW=		https://www.frogatto.com/
 
 LICENSE=	FROGATTO GPLv3
 LICENSE_COMB=	multi

@@ -5,6 +5,7 @@ MASTER_SITES=	SUNSITE/apps/sound/mixers
 
 MAINTAINER=	jerry@freebsd.se
 COMMENT=	ncurses-based console mixer
+WWW=		http://www.svgalib.org/rus/rexima.html
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,5 @@
 PORTNAME=	protobuf
-PORTVERSION=	3.20.1
+PORTVERSION=	4.21.7
 PORTEPOCH=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google protobuf Python Client Library
+WWW=		https://github.com/protocolbuffers/protobuf
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

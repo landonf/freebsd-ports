@@ -3,13 +3,14 @@
 
 PORTNAME=	atril
 PORTVERSION=	1.26.0
-PORTREVISION=	11
+PORTREVISION=	14
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE multi-format document viewer
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,10 +1,11 @@
 PORTNAME=	delayed_job
-PORTVERSION=	4.1.10
+PORTVERSION=	4.1.11
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Asynchronously executing longer tasks in the background
+WWW=		https://github.com/collectiveidea/delayed_job
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

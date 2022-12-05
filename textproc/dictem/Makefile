@@ -1,12 +1,13 @@
 PORTNAME=	dictem
 PORTVERSION=	1.0.4
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	textproc net elisp
 MASTER_SITES=	SF/dictem/dictem/dictem-${PORTVERSION}
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	max.n.boyarov@gmail.com
 COMMENT=	DICT protocol client for [X]Emacs
+WWW=		https://sourceforge.net/projects/dictem/
 
 LICENSE=	GPLv2
 

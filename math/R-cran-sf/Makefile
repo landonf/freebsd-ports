@@ -1,10 +1,12 @@
 PORTNAME=	sf
 DISTVERSION=	1.0-8
+PORTREVISION=	2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Simple Features for R
+WWW=		https://cran.r-project.org/web/packages/sf/
 
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	dual

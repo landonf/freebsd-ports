@@ -1,11 +1,13 @@
 PORTNAME=	access
 PORTVERSION=	1.1.8
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Calculate spatial accessibility metrics
+WWW=		https://access.readthedocs.io/en/latest/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,16 +1,19 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.23-14034 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-gc51d3b5465
+DISTVERSION=	0.0.25-14398 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-ge9e139c364
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
+WWW=		https://rpcs3.net/
 
 LICENSE=	APACHE20 ISCL GPLv2 MIT ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
+
+FLAVORS=	qt5 qt6
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
 LIB_DEPENDS=	libxxhash.so:devel/xxhash \
@@ -25,26 +28,47 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.12.0-2-gc2aa9dd:hidapi/3rdparty/hidapi/hidapi \
-		RPCS3:llvm-mirror:5521155be5c8:llvm/llvm \
+		RPCS3:llvm-mirror:9b52b6c39ae9:llvm/llvm \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:06d0bad:asmjit/3rdparty/asmjit/asmjit \
 		jbeder:yaml-cpp:yaml-cpp-0.7.0-1-g0b67821:yamlcpp/3rdparty/yaml-cpp/yaml-cpp \
-		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-152-g4995a2f:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
-		KhronosGroup:SPIRV-Tools:v2022.2:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
-		KhronosGroup:glslang:11.10.0:glslang/3rdparty/glslang/glslang \
-		kinetiknz:cubeb:cubeb-0.2-1381-g708f52c:cubeb/3rdparty/cubeb/cubeb \
-		wolfSSL:wolfssl:v5.4.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-187-g85a1ed2:spirv_headers/3rdparty/SPIRV/SPIRV-Headers \
+		KhronosGroup:SPIRV-Tools:v2022.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
+		KhronosGroup:glslang:11.12.0:glslang/3rdparty/glslang/glslang \
+		kinetiknz:cubeb:cubeb-0.2-1391-gdc511c6:cubeb/3rdparty/cubeb/cubeb \
+		wolfSSL:wolfssl:v5.5.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake compiler:c++17-lang elfctl gl iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig python:3.4+,build qt:5 xorg
 USE_GL=		gl glew
-USE_QT=		qmake_build buildtools_build core concurrent dbus gui multimedia svg widgets
+USE_QT=		qmake:build buildtools:build core concurrent dbus gui multimedia svg widgets
 USE_XORG=	x11
 CMAKE_ON=	CMAKE_SKIP_RPATH ${CURL FFMPEG FLATBUFFERS LIBPNG PUGIXML XXHASH:L:S/^/USE_SYSTEM_/}
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
 ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
+
+.if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
+PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
+PATCHFILES+=	052d8cceb679.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PKGNAMESUFFIX=	-${FLAVOR}
+USES:=		${USES:S/qt:5/qt:6/}
+USE_QT=		base multimedia svg
+PKGMESSAGE=	${.CURDIR}/pkg-message.${FLAVOR}
+
+CONFLICTS_INSTALL=	${PORTNAME}
+
+post-patch:	${FLAVOR}-post-patch
+${FLAVOR}-post-patch:
+# patch(1) doesn't support renames unlike git-apply(1)
+	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.cpp \
+		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
+	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.h \
+		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.h
+.else
+CONFLICTS_INSTALL=	${PORTNAME}-qt6
+.endif
 
 OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN
 OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SNDIO VULKAN

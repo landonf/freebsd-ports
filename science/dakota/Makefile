@@ -1,6 +1,6 @@
 PORTNAME=	dakota
 DISTVERSION=	6.16.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	science
 MASTER_SITES=	https://dakota.sandia.gov/sites/default/files/distributions/public/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-public-src-cli
@@ -8,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Interface between analysis codes & iterative systems analysis methods
+WWW=		https://dakota.sandia.gov/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

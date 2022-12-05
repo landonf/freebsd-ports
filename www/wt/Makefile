@@ -1,10 +1,14 @@
 PORTNAME=	wt
-DISTVERSION=	4.7.2
+DISTVERSION=	4.8.0
 PORTREVISION=	1
 CATEGORIES=	www
 
+PATCH_SITES=	https://github.com/emweb/wt/commit/
+PATCHFILES+=	450675abc789d135e456bf42a0eb7260bf3d9cbd.diff:-p1 # haru 2.4+
+
 MAINTAINER=	info@babaei.net
 COMMENT=	Widget-centric C++ library for developing web applications
+WWW=		https://www.webtoolkit.eu/wt
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -33,6 +37,7 @@ CMAKE_ARGS=	-DCONFIGDIR:STRING=${LOCALBASE}/etc/${PORTNAME} \
 		-DDESTDIR:STRING=${STAGEDIR}
 
 OPTIONS_DEFINE=	\
+	DEBUG \
 	EXAMPLES \
 	TESTS \
 	RESOURCES \
@@ -99,12 +104,12 @@ MYSQL_CMAKE_ON=		-DMYSQL_PREFIX:STRING=${LOCALBASE} \
 			-DENABLE_LIBWTDBO:BOOL=ON
 
 OPENGL_CMAKE_BOOL=	ENABLE_OPENGL
-OPENGL_USES=            gl xorg
-OPENGL_USE=             GL=gl,glew xorg=x11
+OPENGL_USES=		gl xorg
+OPENGL_USE=		GL=gl,glew xorg=x11
 
 PANGO_CMAKE_BOOL=	ENABLE_PANGO
 PANGO_USES=		gnome
-PANGO_USE=              GNOME=pango
+PANGO_USE=		GNOME=pango
 PANGO_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig
 
 POSTGRES_CMAKE_BOOL=	ENABLE_POSTGRES
@@ -114,7 +119,7 @@ POSTGRES_CMAKE_ON=	-DPOSTGRES_PREFIX:STRING=${LOCALBASE} \
 
 QT5_CMAKE_BOOL=		ENABLE_QT5
 QT5_USES=		qt:5
-QT5_USE=                qt=buildtools_build,core
+QT5_USE=		qt=buildtools:build,core,qmake:build
 
 RESOURCES_CMAKE_BOOL=	INSTALL_RESOURCES
 
@@ -141,6 +146,13 @@ PORTEXAMPLES=	*
 PLIST_SUB=	VERSION=${DISTVERSION}
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDEBUG} || defined(WITH_DEBUG)
+WITH_DEBUG?=	yes
+PLIST_SUB+=	DEBUG_LIBS_POSTFIX="d"
+.else
+PLIST_SUB+=	DEBUG_LIBS_POSTFIX=""
+.endif
 
 .if ${PORT_OPTIONS:MSQLITE3} || \
     ${PORT_OPTIONS:MPOSTGRES} || \

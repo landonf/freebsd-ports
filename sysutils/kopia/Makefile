@@ -1,11 +1,12 @@
 PORTNAME=	kopia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.3
-PORTREVISION=	3
+DISTVERSION=	0.12.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Fast and secure open-source backup/restore tool
+WWW=		https://kopia.io/
 
 LICENSE=	APACHE20
 

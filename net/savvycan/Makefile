@@ -1,17 +1,19 @@
 PORTNAME=	savvycan
 PORTVERSION=	1.0.245
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	CAN bus reverse engineering and capture tool
+WWW=		https://www.savvycan.com/
 
 LICENSE=	MIT
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang gmake python:build,3.6+ qmake qt:5
-USE_QT=		buildtools_build core gui help printsupport serialbus \
+USE_QT=		buildtools:build core gui help printsupport serialbus \
 		serialport websockets-qml widgets
 
 USE_GITHUB=	yes

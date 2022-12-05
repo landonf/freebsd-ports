@@ -1,11 +1,12 @@
 PORTNAME=	openbgpd
-PORTVERSION=	7.5
+PORTVERSION=	7.6
 CATEGORIES=	net
 MASTER_SITES=	OPENBSD/OpenBGPD
 PKGNAMESUFFIX=	7
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Free implementation of the Border Gateway Protocol, Version 4
+WWW=		https://www.openbgpd.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${FILESDIR}/COPYING

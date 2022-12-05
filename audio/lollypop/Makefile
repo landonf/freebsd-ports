@@ -2,8 +2,9 @@ PORTNAME=	lollypop
 DISTVERSION=	1.4.16
 CATEGORIES=	audio
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Play and organize your music collection
+WWW=		http://gnumdk.github.io/lollypop/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

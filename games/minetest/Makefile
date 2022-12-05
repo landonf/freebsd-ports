@@ -1,9 +1,10 @@
 PORTNAME=	minetest
-PORTVERSION=	5.6.0
+PORTVERSION=	5.6.1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Near-infinite-world block sandbox game
+WWW=		https://www.minetest.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/doc/lgpl-2.1.txt
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 USES=		cmake compiler:c++14-lang cpe iconv:wchar_t sqlite
 USE_GITHUB=	yes
 # check https://github.com/minetest/minetest/releases for applicable irrlichmt version
-GH_TUPLE=	minetest:irrlicht:1.9.0mt7:irrlicht/lib/irrlichtmt
+GH_TUPLE=	minetest:irrlicht:1.9.0mt8:irrlicht/lib/irrlichtmt
 
 CMAKE_ARGS=	-DCUSTOM_EXAMPLE_CONF_DIR="${PREFIX}/etc" \
 CMAKE_ON=	ENABLE_SYSTEM_JSONCPP
@@ -60,7 +61,7 @@ NCURSES_USES=		ncurses
 
 LUAJIT_DESC=		LuaJIT support
 LUAJIT_CMAKE_BOOL=	ENABLE_LUAJIT REQUIRE_LUAJIT
-LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
+LUAJIT_USES=		luajit:luajit-openresty
 
 PGSQL_USES=		pgsql
 PGSQL_CMAKE_BOOL=	ENABLE_POSTGRESQL

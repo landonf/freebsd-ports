@@ -1,11 +1,12 @@
 PORTNAME=	twofactor_gauthenticator
-PORTVERSION=	g20220403
+PORTVERSION=	g20220911
 CATEGORIES=	mail security
 PKGNAMEPREFIX=	roundcube-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Roundcube TOTP auth plugin
+WWW=		https://github.com/alexandregz/twofactor_gauthenticator
 
 LICENSE=	GPLv2
 
@@ -13,7 +14,7 @@ BUILD_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.0:mail/roundcube@${PHP_FLAVOR}
 RUN_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.0:mail/roundcube@${PHP_FLAVOR}
 
 USES=		php:flavors
-IGNORE_WITH_PHP=81 82
+IGNORE_WITH_PHP=82
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	alexandregz

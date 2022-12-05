@@ -1,10 +1,11 @@
 PORTNAME=	pak
-DISTVERSION=	0.3.0
+DISTVERSION=	0.3.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Another Approach to Package Installation
+WWW=		https://pak.r-lib.org/
 
 LICENSE=	GPLv3
 

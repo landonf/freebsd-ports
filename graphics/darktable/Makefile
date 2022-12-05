@@ -1,11 +1,12 @@
 PORTNAME=	darktable
-PORTVERSION=	3.8.1
-PORTREVISION=	8
+PORTVERSION=	4.0.1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
 MAINTAINER=	dumbbell@FreeBSD.org
 COMMENT=	Virtual lighttable and darkroom for photographers
+WWW=		https://www.darktable.org/
 
 LICENSE=	GPLv3
 

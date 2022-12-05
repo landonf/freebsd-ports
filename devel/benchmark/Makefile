@@ -1,10 +1,11 @@
 PORTNAME=	benchmark
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.0
+DISTVERSION=	1.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Microbenchmark support library
+WWW=		https://github.com/google/benchmark
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -25,5 +26,7 @@ CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
 CXXFLAGS_gcc=	-Wno-stringop-truncation
 
 BINARY_ALIAS=	git=false
+
+PLIST_SUB=	VERSION=${DISTVERSION}
 
 .include <bsd.port.mk>

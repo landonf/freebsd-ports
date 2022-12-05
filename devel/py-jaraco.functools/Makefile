@@ -1,11 +1,12 @@
 PORTNAME=	jaraco.functools
-PORTVERSION=	3.5.1
+PORTVERSION=	3.5.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Additional functools for Python
+WWW=		https://github.com/jaraco/jaraco.functools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

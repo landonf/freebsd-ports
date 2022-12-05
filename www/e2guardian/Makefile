@@ -1,11 +1,12 @@
 PORTNAME=	e2guardian
 PORTVERSION=	5.3.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	marcellocoutinho@gmail.com
 COMMENT=	Dansguardian fork with many improvements and bug fixes
+WWW=		http://e2guardian.org
 
 LICENSE=	GPLv2
 

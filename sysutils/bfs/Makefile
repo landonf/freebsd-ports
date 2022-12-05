@@ -1,9 +1,10 @@
 PORTNAME=	bfs
-DISTVERSION=	2.6.1
+DISTVERSION=	2.6.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Breadth-first version of the UNIX find command
+WWW=		https://github.com/tavianator/bfs
 
 LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

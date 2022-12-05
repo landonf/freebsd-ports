@@ -1,11 +1,12 @@
 PORTNAME=	g2o
 DISTVERSION=	20201223
 DISTVERSIONSUFFIX=	_git
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	General framework for graph optimization
+WWW=		https://openslam-org.github.io/g2o.html
 
 LICENSE=	LGPL3 GPLv3
 LICENSE_COMB=	dual
@@ -19,7 +20,7 @@ USES=		cmake compiler:c++11-lang gl eigen:3 blaslapack:netlib qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	RainerKuemmerle
 USE_GL=		gl glu
-USE_QT=		core gui opengl xml widgets buildtools_build qmake_build
+USE_QT=		core gui opengl xml widgets buildtools:build qmake:build
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	DO_SSE_AUTODETECT

@@ -1,11 +1,13 @@
 PORTNAME=	libgeotiff
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/geotiff/libgeotiff/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for reading and writing GeoTIFF information tags
+WWW=		https://github.com/OSGeo/libgeotiff
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

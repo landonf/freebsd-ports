@@ -6,6 +6,7 @@ DIST_SUBDIR=	lxqt
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	LXQt system settings center
+WWW=		https://lxqt-project.org
 
 LICENSE=	GPLv2 LGPL21+
 LICENSE_COMB=	multi
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libudev.so:devel/libudev-devd
 
 USES=	cmake compiler:c++14-lang kde:5 localbase:ldflags lxqt qt:5 \
 	pkgconfig tar:xz xorg gnome
-USE_QT=	buildtools_build qmake_build concurrent core dbus \
+USE_QT=	buildtools:build qmake:build concurrent core dbus \
 	gui linguisttools svg widgets x11extras xml
 USE_KDE=	libkscreen windowsystem
 USE_GNOME=	glib20

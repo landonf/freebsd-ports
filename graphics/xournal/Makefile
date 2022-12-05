@@ -1,11 +1,12 @@
 PORTNAME=	xournal
 PORTVERSION=	0.4.8.2016
-PORTREVISION=	40
+PORTREVISION=	43
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	me@janh.de
 COMMENT=	Notetaking application that can annotate PDFs
+WWW=		http://xournal.sourceforge.net
 
 LICENSE=	GPLv2
 

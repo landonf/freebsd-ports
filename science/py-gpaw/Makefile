@@ -1,11 +1,13 @@
 PORTNAME=	gpaw
 DISTVERSION=	22.1.0
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DFT and beyond within the projector-augmented wave method in chemistry
+WWW=		https://wiki.fysik.dtu.dk/gpaw/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

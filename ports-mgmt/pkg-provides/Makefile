@@ -1,10 +1,11 @@
 PORTNAME=	pkg-provides
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.2
+DISTVERSION=	0.7.3
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Pkg plugin for querying which package provides a particular file
+WWW=		https://github.com/rosorio/pkg-provides
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE BSD4CLAUSE
 LICENSE_COMB=	multi

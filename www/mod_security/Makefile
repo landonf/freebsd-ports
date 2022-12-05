@@ -1,7 +1,6 @@
 PORTNAME=	mod_security
 DISTVERSIONPREFIX=	v
-PORTVERSION=	2.9.5
-PORTREVISION=	2
+PORTVERSION=	2.9.6
 CATEGORIES=	www security
 MASTER_SITES=	https://github.com/SpiderLabs/ModSecurity/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -9,6 +8,7 @@ DISTNAME=	${PORTNAME:S/_//:S/2//}-${PORTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Intrusion detection and prevention engine
+WWW=		https://www.modsecurity.org/
 
 LICENSE=	APACHE20
 

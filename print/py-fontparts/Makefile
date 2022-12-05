@@ -1,5 +1,5 @@
 PORTNAME=	fontparts
-PORTVERSION=	0.10.7
+PORTVERSION=	0.10.8
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	fontParts-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	API for interacting with the parts of fonts during the font development process
+WWW=		https://github.com/robotools/fontParts
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

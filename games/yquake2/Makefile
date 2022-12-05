@@ -1,11 +1,12 @@
 PORTNAME=	yquake2
-PORTVERSION=	8.01
+PORTVERSION=	8.10
 CATEGORIES=	games
 MASTER_SITES=	https://deponie.yamagi.org/quake2/
 DISTNAME=	quake2-${PORTVERSION}
 
 MAINTAINER=	shamaz.mazum@gmail.com
 COMMENT=	Improved version of Icculus Quake II
+WWW=		https://www.yamagi.org/quake2/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

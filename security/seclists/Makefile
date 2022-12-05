@@ -1,9 +1,10 @@
 PORTNAME=	seclists
-DISTVERSION=	2022.3
+DISTVERSION=	2022.4
 CATEGORIES=	security www
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	Collection of multiple types of lists used during security assessments
+WWW=		https://github.com/danielmiessler/SecLists
 
 LICENSE=	GPLv2 GPLv2+ MIT
 LICENSE_COMB=	multi
@@ -18,7 +19,9 @@ GH_PROJECT=	SecLists
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-FILES_TO_BE_REMOVED=	CONTRIBUTING.md \
+FILES_TO_BE_REMOVED=	.gitattributes \
+			.gitignore \
+			CONTRIBUTING.md \
 			CONTRIBUTORS.md \
 			Discovery/Web-Content/Domino-Hunter/LICENCE \
 			LICENSE \

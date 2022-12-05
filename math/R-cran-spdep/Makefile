@@ -1,10 +1,11 @@
 PORTNAME=	spdep
-DISTVERSION=	1.2-4
+DISTVERSION=	1.2-5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Spatial dependence: weighting schemes, statistics, and models
+WWW=		https://cran.r-project.org/web/packages/spdep/
 
 LICENSE=	GPLv2+
 

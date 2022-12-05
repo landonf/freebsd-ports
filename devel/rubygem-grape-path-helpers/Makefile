@@ -1,11 +1,12 @@
 PORTNAME=	grape-path-helpers
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 PORTREVISION=	0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Route path helpers for Grape
+WWW=		https://gitlab.com/gitlab-org/grape-path-helpers
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

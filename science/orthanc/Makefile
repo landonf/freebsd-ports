@@ -1,12 +1,13 @@
 PORTNAME=	orthanc
 DISTVERSION=	1.11.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	science
 MASTER_SITES=	https://www.orthanc-server.com/downloads/get.php?path=/orthanc/
 DISTNAME=	Orthanc-${PORTVERSION}
 
 MAINTAINER=	maintainer.freebsd@xpoundit.com
 COMMENT=	Lightweight DICOM server for healthcare and medical research
+WWW=		https://www.orthanc-server.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

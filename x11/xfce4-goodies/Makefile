@@ -5,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Meta-port for software and artwork from the Xfce4 Goodies Project
+WWW=		https://goodies.xfce.org/
 
 USES=		metaport
 
@@ -70,7 +71,7 @@ OPTIONS_GROUP_PANELPLUGINS=	BATTERY CALCULATOR CLIPMAN CPUGRAPH DATETIME \
 				MAILWATCH MOUNT MPC NETLOAD NOTES PULSEAUDIO \
 				SMARTBOOKMARK STOPWATCH SYSTEMLOAD TIMER \
 				TIMEOUT VERVE WAVELAN WEATHER WHISKERMENU \
-				XKB
+				WINDOWCK XKB
 BATTERY_DESC=			Battery monitor panel plugin for Xfce4
 CALCULATOR_DESC=		Simple calculator for the Xfce panel
 CLIPMAN_DESC=			Clipboard manager for the Xfce panel
@@ -95,6 +96,7 @@ VERVE_DESC=			Command line plugin for the Xfce Desktop
 WAVELAN_DESC=			Displays information about a WaveLAN device
 WEATHER_DESC=			Weather plugin for the Xfce panel
 WHISKERMENU_DESC=		Alternate menu for the Xfce Desktop
+WINDOWCK_DESC=			Add window buttons to Xfce panel
 XKB_DESC=			Keyboard layout switching plugin for Xfce panel
 
 BATTERY_RUN_DEPENDS=		xfce4-battery-plugin>=0:sysutils/xfce4-battery-plugin
@@ -121,6 +123,7 @@ VERVE_RUN_DEPENDS=		xfce4-verve-plugin>=0:x11/xfce4-verve-plugin
 WAVELAN_RUN_DEPENDS=		xfce4-wavelan-plugin>=0:sysutils/xfce4-wavelan-plugin
 WEATHER_RUN_DEPENDS=		xfce4-weather-plugin>=0:misc/xfce4-weather-plugin
 WHISKERMENU_RUN_DEPENDS=	xfce4-whiskermenu-plugin>=0:x11/xfce4-whiskermenu-plugin
+WINDOWCK_RUN_DEPENDS=		xfce4-windowck-plugin>=0:x11/xfce4-windowck-plugin
 XKB_RUN_DEPENDS=		xfce4-xkb-plugin>=0:deskutils/xfce4-xkb-plugin
 
 OPTIONS_GROUP_THUNARPLUGINS=	ARCHIVE MEDIATAGS VCS

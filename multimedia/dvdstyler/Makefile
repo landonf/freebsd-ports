@@ -1,5 +1,6 @@
 PORTNAME=	dvdstyler
 PORTVERSION=	3.2.1
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
@@ -7,6 +8,7 @@ DISTNAME=	DVDStyler-${PORTVERSION}
 
 MAINTAINER=	ahicks@p-o.co.uk
 COMMENT=	WxWidgets frontend to dvd recoding and authoring programs
+WWW=		https://www.dvdstyler.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -33,7 +35,7 @@ RUN_DEPENDS=	zip:archivers/zip \
 
 USES=		autoreconf compiler:c++11-lib gettext gmake jpeg pkgconfig tar:bzip2
 
-USE_WX=		3.1
+USE_WX=		3.2
 WX_CONF_ARGS=	absolute
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_AVCONV_PATH="" OBJCXX="${CXX}"

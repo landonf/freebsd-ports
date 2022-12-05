@@ -1,5 +1,5 @@
 PORTNAME=	elasticsearch
-PORTVERSION=	7.17.3
+PORTVERSION=	7.17.7
 CATEGORIES=	textproc java devel
 MASTER_SITES=	https://artifacts.elastic.co/downloads/${PORTNAME}/
 PKGNAMESUFFIX=	7
@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-darwin-x86_64
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Full-text search engine for Java
+WWW=		https://www.elastic.co/
 
 LICENSE=	APACHE20
 

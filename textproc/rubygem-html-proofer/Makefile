@@ -1,10 +1,11 @@
 PORTNAME=	html-proofer
-PORTVERSION=	4.3.1
+PORTVERSION=	4.4.3
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test your rendered HTML files
+WWW=		https://github.com/gjtorikian/html-proofer
 
 LICENSE=	MIT
 
@@ -23,5 +24,9 @@ USE_RUBY=	yes
 NO_ARCH=	yes
 
 PLIST_FILES=	bin/htmlproofer
+
+# html-proofer 5+ requires async 2.1.0+ which requires Ruby 3.1+
+# Update to 5.* after Ruby 3.1 becomes the default version
+PORTSCOUT=	limit:^4\.
 
 .include <bsd.port.mk>

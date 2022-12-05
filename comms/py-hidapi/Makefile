@@ -4,8 +4,9 @@ CATEGORIES=	comms python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ehaupt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cython interface to comms/hidapi
+WWW=		https://pypi.org/project/hidapi/
 
 LICENSE=	GPLv3
 

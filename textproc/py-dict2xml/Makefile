@@ -1,11 +1,12 @@
 PORTNAME=	dict2xml
 DISTVERSIONPREFIX=release-
-DISTVERSION=	1.7.1
+DISTVERSION=	1.7.2
 CATEGORIES=	textproc devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Small utility to convert a python dictionary into an XML string
+WWW=		https://github.com/delfick/python-dict2xml
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

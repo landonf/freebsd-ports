@@ -1,10 +1,11 @@
 PORTNAME=	choria-mcorpc-support
-DISTVERSION=	2.26.0
+DISTVERSION=	2.26.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Ruby support for the Choria Orchestration Server
+WWW=		https://rubygems.org/gems/choria-mcorpc-support
 
 LICENSE=	APACHE20
 

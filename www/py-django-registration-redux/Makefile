@@ -1,12 +1,12 @@
 PORTNAME=	django-registration-redux
-PORTVERSION=	2.10
-PORTREVISION=	2
+PORTVERSION=	2.11
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	User-registration application for Django
+WWW=		https://github.com/macropin/django-registration
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,8 +1,9 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.3.6
+DISTVERSION=	4.3.10
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	https://packages.wazuh.com/deps/16/libraries/sources/:wazuh_sources
+MASTER_SITES=	https://packages.wazuh.com/deps/17/libraries/sources/:wazuh_sources
 PKGNAMESUFFIX=	-agent
 DISTFILES=	${EXTERNAL_DISTFILES}
 DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
@@ -10,11 +11,13 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Security tool to monitor and check logs and intrusions (agent)
+WWW=		https://github.com/wazuh/wazuh
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core
+LIB_DEPENDS=	libnghttp2.so:www/libnghttp2
 
 USES=		cpe gmake perl5 readline shebangfix sqlite:3 uidfix
 
@@ -126,7 +129,7 @@ do-install:
 	${INSTALL_DATA} /dev/null ${STAGEDIR}${WAZUHPREFIX}/etc/client.keys
 	${INSTALL_DATA} ${WRKSRC}/etc/wpk_root.pem ${STAGEDIR}${WAZUHPREFIX}/etc/
 
-	${INSTALL_DATA} ${WRKSRC}/etc/ossec-agent.conf ${STAGEDIR}${WAZUHPREFIX}/etc/ossec.conf
+	${INSTALL_DATA} ${WRKSRC}/etc/ossec-agent.conf ${STAGEDIR}${WAZUHPREFIX}/etc/ossec.conf.sample
 
 	${INSTALL_SCRIPT} ${WRKSRC}/src/agentlessd/scripts/* ${STAGEDIR}${WAZUHPREFIX}/agentless/
 

@@ -1,10 +1,12 @@
 PORTNAME=	ucto
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.25
+PORTREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Advanced rule-based (regular-expression) and unicode-aware tokenizer
+WWW=		https://languagemachines.github.io/ucto/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING

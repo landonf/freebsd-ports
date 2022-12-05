@@ -1,7 +1,7 @@
 PORTNAME=	votca
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2022
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	science
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
@@ -9,6 +9,7 @@ PATCHFILES=	078c6814797749cd1b92a2b19f0302265ccf6463.patch:-p1 # fix testsuite b
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	CSG and XTP: libraries for atomistic simulations
+WWW=		https://github.com/votca/votca
 
 LICENSE=	APACHE20
 

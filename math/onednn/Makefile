@@ -1,10 +1,11 @@
 PORTNAME=	onednn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.1
+DISTVERSION=	2.7.2
 CATEGORIES=	math # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel(R) Math Kernel Library for Deep Neural Networks
+WWW=		https://01.org/onednn
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -70,7 +71,7 @@ CXXFLAGS:=	${CXXFLAGS:S/-O2/-O3/} # clang writes wrong binary code when -O2 opti
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/share/doc
 
-do-test: # some tests are known to fail: https://github.com/intel/mkl-dnn/issues/350 (the upstream failed to reproduce it and closed the report)
+do-test:
 	@${REINPLACE_CMD} 's| /bin/bash | ${LOCALBASE}/bin/bash |' ${WRKSRC}/tests/CMakeLists.txt
 	@cd ${BUILD_WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DDNNL_BUILD_TESTS=ON ${CMAKE_SOURCE_PATH} && \

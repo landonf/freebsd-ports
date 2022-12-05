@@ -1,11 +1,12 @@
 PORTNAME=	pyelftools
-PORTVERSION=	0.27
+PORTVERSION=	0.29
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library for analyzing ELF files and DWARF debugging information
+WWW=		https://github.com/eliben/pyelftools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

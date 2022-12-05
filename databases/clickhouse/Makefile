@@ -4,8 +4,9 @@ DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=-stable
 CATEGORIES=	databases
 
-MAINTAINER=	olevole@olevole.ru
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast open-source OLAP database management system
+WWW=		https://clickhouse.tech/
 
 LICENSE=	APACHE20
 

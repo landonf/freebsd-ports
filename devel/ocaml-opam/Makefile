@@ -1,5 +1,6 @@
 PORTNAME=	opam
 PORTVERSION=	2.1.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ocaml/opam/releases/download/${DISTVERSION}/
 PKGNAMEPREFIX=	ocaml-
@@ -7,6 +8,7 @@ DISTNAME=	opam-full-${DISTVERSION}
 
 MAINTAINER=	hannes@mehnert.org
 COMMENT=	Source-based package manager for OCaml
+WWW=		https://opam.ocaml.org/
 
 LICENSE=	LGPL21
 
