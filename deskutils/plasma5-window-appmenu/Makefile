@@ -14,10 +14,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		cmake compiler:c++11-lib kde:5 qt:5 xorg
 USE_KDE=	auth codecs config configwidgets coreaddons decoration \
 		package plasma-framework service widgetsaddons windowsystem \
-		ecm_build
+		ecm:build
 USE_QT=		core dbus declarative gui multimedia network \
 		opengl printsupport widgets xml x11extras \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	xcb xrandr
 
 USE_GITHUB=	yes
