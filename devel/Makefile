@@ -577,6 +577,7 @@
     SUBDIR += eiffelstudio
     SUBDIR += electron18
     SUBDIR += electron19
+    SUBDIR += electron21
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -877,6 +878,7 @@
     SUBDIR += gpds
     SUBDIR += gperf
     SUBDIR += gpm
+    SUBDIR += gprbuild
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle-completion
@@ -1000,6 +1002,7 @@
     SUBDIR += jetbrains-clion
     SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
+    SUBDIR += jetbrains-pty4j
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
@@ -1222,6 +1225,7 @@
     SUBDIR += libgnuregex
     SUBDIR += libgpc
     SUBDIR += libgpkg
+    SUBDIR += libgpr
     SUBDIR += libgrading
     SUBDIR += libgraphqlparser
     SUBDIR += libgsf
@@ -1274,6 +1278,7 @@
     SUBDIR += libnaji
     SUBDIR += libnest2d-ultimaker
     SUBDIR += libnfc
+    SUBDIR += libnjs
     SUBDIR += libnotify
     SUBDIR += libnsutils
     SUBDIR += liboil
@@ -3981,7 +3986,6 @@
     SUBDIR += pecl-event
     SUBDIR += pecl-expect
     SUBDIR += pecl-grpc
-    SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
     SUBDIR += pecl-json_post
     SUBDIR += pecl-msgpack
@@ -4165,6 +4169,7 @@
     SUBDIR += py-arpeggio
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
+    SUBDIR += py-asgi-lifespan
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspy.yaml
     SUBDIR += py-asteval
@@ -4371,6 +4376,7 @@
     SUBDIR += py-click
     SUBDIR += py-click-completion
     SUBDIR += py-click-default-group
+    SUBDIR += py-click-default-group-wheel
     SUBDIR += py-click-log
     SUBDIR += py-click-plugins
     SUBDIR += py-click-threading
@@ -4649,6 +4655,7 @@
     SUBDIR += py-homebase
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
+    SUBDIR += py-hupper
     SUBDIR += py-hvac
     SUBDIR += py-hypothesis
     SUBDIR += py-hypothesmith
@@ -4692,6 +4699,7 @@
     SUBDIR += py-itemloaders
     SUBDIR += py-iteration-utilities
     SUBDIR += py-itypes
+    SUBDIR += py-janus
     SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.context
@@ -5442,6 +5450,7 @@
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
+    SUBDIR += py-ttkbootstrap
     SUBDIR += py-ttystatus
     SUBDIR += py-twiggy
     SUBDIR += py-twilio
@@ -5643,6 +5652,7 @@
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
+    SUBDIR += pydeps
     SUBDIR += pydio-packr
     SUBDIR += pyenv
     SUBDIR += pygobject3-common

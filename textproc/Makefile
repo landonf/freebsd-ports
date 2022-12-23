@@ -503,7 +503,9 @@
     SUBDIR += openfts
     SUBDIR += openjade
     SUBDIR += opensearch
+    SUBDIR += opensearch13
     SUBDIR += opensearch-dashboards
+    SUBDIR += opensearch-dashboards13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
@@ -1294,6 +1296,7 @@
     SUBDIR += py-chameleon
     SUBDIR += py-chardet
     SUBDIR += py-charset-normalizer
+    SUBDIR += py-chevron
     SUBDIR += py-citeproc-py
     SUBDIR += py-citeproc-py-styles
     SUBDIR += py-cjkwrap
@@ -1621,7 +1624,6 @@
     SUBDIR += replaceit
     SUBDIR += resume
     SUBDIR += resume-extensions
-    SUBDIR += retext
     SUBDIR += rfcdiff
     SUBDIR += ripgrep
     SUBDIR += ripgrep-all
@@ -1644,6 +1646,7 @@
     SUBDIR += rubygem-abbrev
     SUBDIR += rubygem-actionpack-xml_parser-rails5
     SUBDIR += rubygem-actionpack-xml_parser-rails52
+    SUBDIR += rubygem-actionpack-xml_parser-rails61
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-actiontext61
     SUBDIR += rubygem-actiontext70
@@ -2030,6 +2033,7 @@
     SUBDIR += xml-format
     SUBDIR += xml-lite.el
     SUBDIR += xml2rfc
+    SUBDIR += xmlada
     SUBDIR += xmlcatmgr
     SUBDIR += xmlcharent
     SUBDIR += xmlenc

@@ -122,6 +122,7 @@
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
     SUBDIR += drupal9
+    SUBDIR += drupal10
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -978,6 +979,7 @@
     SUBDIR += p5-LWP-Protocol-http10
     SUBDIR += p5-LWP-Protocol-https
     SUBDIR += p5-LWP-Protocol-socks
+    SUBDIR += p5-LWP-UserAgent-Cached
     SUBDIR += p5-LWP-UserAgent-Determined
     SUBDIR += p5-LWP-UserAgent-POE
     SUBDIR += p5-LWP-UserAgent-WithCache
@@ -1419,7 +1421,9 @@
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
     SUBDIR += py-aioquic
+    SUBDIR += py-aiostream
     SUBDIR += py-arxiv
+    SUBDIR += py-asgi-csrf
     SUBDIR += py-asgiref
     SUBDIR += py-autobahn
     SUBDIR += py-azure-common
@@ -1816,6 +1820,7 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += redmine42
+    SUBDIR += redmine50
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
@@ -2074,7 +2079,9 @@
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
+    SUBDIR += rubygem-rack22
     SUBDIR += rubygem-rack_csrf
+    SUBDIR += rubygem-rackup
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50
@@ -2266,6 +2273,7 @@
     SUBDIR += tomcat85
     SUBDIR += tomcat9
     SUBDIR += tomee
+    SUBDIR += tor-browser
     SUBDIR += trac-devel
     SUBDIR += trafficserver
     SUBDIR += transmission-web

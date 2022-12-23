@@ -83,6 +83,7 @@
     SUBDIR += cyrus-imapd30
     SUBDIR += cyrus-imapd32
     SUBDIR += cyrus-imapd34
+    SUBDIR += cyrus-imapd36
     SUBDIR += cyrus2courier
     SUBDIR += cyrus2dovecot
     SUBDIR += davmail
@@ -206,6 +207,7 @@
     SUBDIR += mailman-postfix
     SUBDIR += mailman3
     SUBDIR += mailscanner
+    SUBDIR += mailslurper
     SUBDIR += mailsync
     SUBDIR += mailutils
     SUBDIR += mailx
@@ -608,6 +610,7 @@
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails-rails4
     SUBDIR += rubygem-roadie-rails-rails52
+    SUBDIR += rubygem-roadie-rails-rails61
     SUBDIR += rubygem-roadie3
     SUBDIR += rubygem-ruby-qmail
     SUBDIR += rubygem-valid_email

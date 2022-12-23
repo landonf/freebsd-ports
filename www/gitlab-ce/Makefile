@@ -1,5 +1,5 @@
 PORTNAME=	gitlab-ce
-PORTVERSION=	15.5.4
+PORTVERSION=	15.5.6
 PORTREVISION=	1
 CATEGORIES=	www devel
 
@@ -109,9 +109,9 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-elasticsearch-model713>=7.2<8:textproc/rubygem-elasticsearch-model713 \
 	rubygem-elasticsearch-rails>=7.2<8:textproc/rubygem-elasticsearch-rails \
 	rubygem-elasticsearch-api713>=7.13.3<7.13.4:textproc/rubygem-elasticsearch-api713 \
-	rubygem-aws-sdk-core3159>=3.159.0<3.160:devel/rubygem-aws-sdk-core3159 \
+	rubygem-aws-sdk-core>=3.159.0<3.169:devel/rubygem-aws-sdk-core \
 	rubygem-aws-sdk-cloudformation>=1<2:devel/rubygem-aws-sdk-cloudformation \
-	rubygem-aws-sdk-s31114>=1.114.0<1.115:devel/rubygem-aws-sdk-s31114 \
+	rubygem-aws-sdk-s3>=1.114.0<1.118:devel/rubygem-aws-sdk-s3 \
 	rubygem-faraday_middleware-aws-sigv403>=0.3.0<0.4:devel/rubygem-faraday_middleware-aws-sigv403 \
 	rubygem-typhoeus>=1.4.0<1.5:www/rubygem-typhoeus \
 	rubygem-html-pipeline>=2.13.2<2.14:textproc/rubygem-html-pipeline \
@@ -136,7 +136,7 @@ MY_DEPENDS=	git>=2.32.0:devel/git \
 	rubygem-icalendar>=0:devel/rubygem-icalendar \
 	rubygem-diffy>=3.4<4:textproc/rubygem-diffy \
 	rubygem-diff_match_patch>=0.1.0<0.2.0:textproc/rubygem-diff_match_patch \
-	rubygem-rack>=2.2.4<2.3,3:www/rubygem-rack \
+	rubygem-rack22>=2.2.4<2.3,3:www/rubygem-rack22 \
 	rubygem-rack-timeout>=0.6.3<0.7:www/rubygem-rack-timeout \
 	rubygem-puma>=5.6.5<5.7:www/rubygem-puma \
 	rubygem-puma_worker_killer>=0.3.1:www/rubygem-puma_worker_killer \
@@ -277,7 +277,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	ee1b34560d908f44af7ed9b3fbc8c56595bbae81
+GL_COMMIT=	a2f39fb243f2ad2ba59939e2e6446ec9b19911f2
 
 USERS=	git
 GROUPS=	git

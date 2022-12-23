@@ -5,6 +5,55 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20221220:
+  AFFECTS: users of net-mgmt/unbound_exporter
+  AUTHOR: thomas@beingboiled.info
+
+  The config defaults for the log file and certificates have been changed.
+  See /usr/local/etc/rc.d/unbound_exporter for possible options and adjust
+  your rc.conf accordingly.
+
+20221215:
+  AFFECTS: users of security/clamav
+  AUTHOR: yasu@FreeBSD.org
+
+  Many users report that after updating ClamAV to 1.0.0 clamd and
+  freshclam fails to start with integrity check error of
+  databases. According to the result of investigation it happens with
+  following conditions.
+
+  1. ClamAV is built on non-cleanroom environment (that is, neither
+     FreeBSD official ClamAV package is used nor the package is built
+     by user with poudriere).
+  2. math/tomsfastmath is installed in the system that ClamAV is
+     built.
+
+  So if the errror happens on you system, uninstall TomsFastMath first
+  and then rebuild and reinstall ClamAV. The problem should disappear.
+
+20221128:
+  AFFECTS: devel/py-proxmoxer
+  AUTHOR: einar@isnic.is
+
+  AuthenticationError Moved
+
+  proxmoxer.backends.https.AuthenticationError was moved to
+  proxmoxer.AuthenticationError (the class itself is the same).
+  Any imports or references to proxmoxer.backends.https.AuthenticationError
+  should be changed to proxmoxer.AuthenticationError.
+
+  ProxmoxResourceBase Removed
+
+  While this should be a fully internal change, the ProxmoxResourceBase
+  class was removed. Use ProxmoxResource instead.
+
+  Removed ProxmoxHTTPTicketAuth
+
+  The auth_token and csrf_token arguments are no longer supported. If an
+  existing (still valid) token needs to be used, you can pass the token
+  as password and proxmoxer will attempt to renew the ticket and retrieve
+  a new token and CSRF token.
+
 20221126:
   AFFECTS: textproc/kibana8
   AUTHOR: otis@FreeBSD.org

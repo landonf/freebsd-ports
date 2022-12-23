@@ -103,6 +103,7 @@
     SUBDIR += create-cert
     SUBDIR += crlfuzz
     SUBDIR += crowdsec
+    SUBDIR += crowdsec-blocklist-mirror
     SUBDIR += crowdsec-firewall-bouncer
     SUBDIR += cryptlib
     SUBDIR += cryptopp
@@ -183,6 +184,7 @@
     SUBDIR += gopass
     SUBDIR += gorilla
     SUBDIR += gost-engine
+    SUBDIR += gostsum
     SUBDIR += gpa
     SUBDIR += gpg-gui
     SUBDIR += gpg-tui
@@ -326,6 +328,7 @@
     SUBDIR += linux-c7-openssl-devel
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
+    SUBDIR += local-php-security-checker
     SUBDIR += logcheck
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
@@ -420,6 +423,7 @@
     SUBDIR += ossec-hids-server
     SUBDIR += ossec-hids-server-config
     SUBDIR += osslsigncode
+    SUBDIR += osv-scanner
     SUBDIR += otpw
     SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
@@ -843,7 +847,6 @@
     SUBDIR += py-certbot
     SUBDIR += py-certbot-apache
     SUBDIR += py-certbot-dns-cloudflare
-    SUBDIR += py-certbot-dns-cloudxns
     SUBDIR += py-certbot-dns-cpanel
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple

@@ -1,12 +1,7 @@
 PORTNAME=	gopass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.10
-PORTREVISION=	1
+DISTVERSION=	1.15.2
 CATEGORIES=	security
-
-PATCH_SITES=	https://github.com/gopasspw/gopass/commit/
-PATCHFILES=	ce3c52182a198e35cb504835e8e7800a04a95a96.patch:-p1 \
-		7d58b78e9bfc1dff600e777eb9c0b37b2169482f.patch:-p1 # Handle vi variants, https://github.com/gopasspw/gopass/issues/2412
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Rewrite of the pass password manager in Go

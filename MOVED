@@ -10216,7 +10216,6 @@ mail/p5-Mail-Cache||2018-07-16|Has expired: Unmaintained
 www/p5-ZConf-RSS||2018-07-16|Has expired: Unmaintained
 www/p5-ZConf-RSS-GUI-GTK||2018-07-16|Has expired: Unmaintained
 devel/p5-ZConf-GUI||2018-07-16|Has expired: Unmaintained
-net-im/mastodon||2018-07-16|Has expired: Breaks too frequently
 x11-fm/p5-PerlFM||2018-07-16|Has expired: Unmaintained
 astro/p5-ZConf-Weather||2018-07-16|Has expired: Unmaintained
 sysutils/p5-ZConf-Cron||2018-07-16|Has expired: Unmaintained
@@ -15365,7 +15364,6 @@ biology/tophat||2020-09-19|Has expired: Uses deprecated version of python
 chinese/ibus-array||2020-09-19|Has expired: Uses deprecated version of python
 comms/congruity||2020-09-19|Has expired: Uses deprecated version of python
 comms/libbtbb||2020-09-19|Has expired: Uses deprecated version of python
-comms/quisk||2020-09-19|Has expired: Uses deprecated version of python
 databases/mtools-mongodb||2020-09-19|Has expired: Uses deprecated version of python
 databases/mydbf2mysql||2020-09-19|Has expired: Uses deprecated version of python
 databases/ntdb||2020-09-19|Has expired: Uses deprecated version of python
@@ -15702,10 +15700,8 @@ databases/py-bsddb||2020-12-29|Has expired: Uses deprecated version of python
 www/py-webhelpers||2020-12-29|Has expired: Uses deprecated version of python
 security/py-pyptlib||2020-12-29|Has expired: Uses deprecated version of python
 japanese/py-zinnia||2020-12-29|Has expired: Uses deprecated version of python
-math/slepc||2020-12-29|Has expired: Broken, uses deprecated version of python
 www/py-pastescript||2020-12-29|Has expired: Uses deprecated version of python
 databases/ldb14||2020-12-29|Has expired: Uses deprecated version of python
-math/py-slepc4py||2020-12-29|Has expired: Depends on broken and expiring math/slepc
 multimedia/py-kaa-base||2020-12-29|Has expired: Uses deprecated version of python
 devel/py-ydbf||2020-12-29|Has expired: Uses deprecated version of python
 devel/py-SymbolType||2020-12-29|Has expired: Uses deprecated version of python
@@ -16895,7 +16891,6 @@ devel/ahven||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/alog||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/aunit||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/florist-gpl||2022-02-28|Removed, depends on expired lang/gcc6-aux
-devel/gprbuild||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/libspark2012||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/matreshka||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/pcsc-ada||2022-02-28|Removed, depends on expired lang/gcc6-aux
@@ -16915,7 +16910,6 @@ security/libadacrypt||2022-02-28|Removed, depends on expired lang/gcc6-aux
 textproc/adabrowse||2022-02-28|Removed, depends on expired lang/gcc6-aux
 textproc/templates_parser||2022-02-28|Removed, depends on expired lang/gcc6-aux
 textproc/words||2022-02-28|Removed, depends on expired lang/gcc6-aux
-textproc/xmlada||2022-02-28|Removed, depends on expired lang/gcc6-aux
 x11-toolkits/gtkada||2022-02-28|Removed, depends on expired lang/gcc6-aux
 x11-toolkits/gtkada3||2022-02-28|Removed, depends on expired lang/gcc6-aux
 devel/py-zsm-lib|sysutils/zsm|2022-03-07|Remove obsoleted port. Use sysutils/zsm instead
@@ -17629,3 +17623,19 @@ textproc/google-translate-cli|textproc/translate-shell|2022-12-02|Renamed by ups
 net-mgmt/zabbix4-frontend||2022-12-05|Requires php74 which was EOL on 2022-11-28
 math/pecl-stats2||2022-12-05|Requires php74 which was EOL on 2022-11-28
 devel/pecl-jsmin||2022-12-05|Requires php74 which was EOL on 2022-11-28
+security/py-certbot-dns-cloudxns||2022-12-06|The CloudXNS DNS service is defunct and upstream removed plugin for it
+security/pam_krb5|security/pam_krb5@mit|2022-12-06|The pam_krb5 package is now the (default) mit flavor
+devel/pecl-hrtime||2022-12-08|Requires php74 which was EOL on 2022-11-28
+net-mgmt/zabbix5-frontend||2022-12-08|Requires php74 which was EOL on 2022-11-28
+multimedia/php-pHash||2022-12-08|Requires php74 which was EOL on 2022-11-28
+print/pecl-pdflib||2022-12-09|Requires php74 which was EOL on 2022-11-28
+ftp/php-fastdfs||2022-12-09|Requires php74 which was EOL on 2022-11-28
+multimedia/mlt7-qt5|multimedia/mlt7-qt|2022-12-10|Flavorized for Qt5 and Qt6
+sysutils/cfengine317||2022-12-10|Has expired: Expire one year after cfengine 3.19.0 released
+sysutils/cfengine-masterfiles317||2022-12-10|Has expired: Expire one year after cfengine-masterfiles 3.19.0 released
+net-mgmt/icingaweb2-module-ipl|net-mgmt/icinga-php-library|2022-12-13|Renamed by project
+x11/darkman|accessibility/darkman|2022-12-14|Moved to a better category
+net/samba412||2022-12-18|Has expired: Reached its EoL on September 20, 2021
+graphics/opencoloriov1|graphics/opencolorio|2022-12-20|Used by blender-lts28 which is EOL'd
+graphics/openimageio-ociov1|graphics/openimageio|2022-12-20|Used by blender-lts28 which is EOL'd
+textproc/retext|editors/retext|2022-12-21|Moved to a better category

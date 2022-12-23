@@ -20,6 +20,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
 MAKE_ENV+=	LOAD_PATH="-L ${WRKSRC}/lisp -L ${PREFIX}/${EMACS_SITE_LISPDIR} -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR} -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/compat"
+MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	lisp info
 
 CONFLICTS_INSTALL=	with-editor-emacs*
@@ -40,6 +41,7 @@ DOCS_BUILD_DEPENDS=	gsed:textproc/gsed
 DOCS_ALL_TARGET=	html
 DOCS_BINARY_ALIAS=	sed=gsed
 PDF_BUILD_DEPENDS=	texi2pdf:print/texinfo
+PDF_USES=		tex
 PDF_USE=		TEX=dvipdfmx:build
 PDF_ALL_TARGET=		pdf
 PDF_PLIST_FILES=	${DOCSDIR}/with-editor.pdf

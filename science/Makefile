@@ -72,6 +72,7 @@
     SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
+    SUBDIR += dftd3
     SUBDIR += dftd4
     SUBDIR += dimod
     SUBDIR += dirac
@@ -170,6 +171,7 @@
     SUBDIR += liggghts
     SUBDIR += linux-zotero
     SUBDIR += luscus
+    SUBDIR += m-aneos
     SUBDIR += madness
     SUBDIR += maeparser
     SUBDIR += massxpert
@@ -192,6 +194,7 @@
     SUBDIR += molscript
     SUBDIR += molsketch
     SUBDIR += mopac
+    SUBDIR += mp2d
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += mrchem
@@ -215,6 +218,7 @@
     SUBDIR += openems
     SUBDIR += openkim-models
     SUBDIR += openmc
+    SUBDIR += openmodelica
     SUBDIR += openmolcas
     SUBDIR += openmx
     SUBDIR += opensim-core
@@ -359,6 +363,7 @@
     SUBDIR += py-oddt
     SUBDIR += py-openbabel
     SUBDIR += py-openpiv
+    SUBDIR += py-optking
     SUBDIR += py-paida
     SUBDIR += py-paramz
     SUBDIR += py-penaltymodel
@@ -463,6 +468,7 @@
     SUBDIR += smoldyn
     SUBDIR += sparta
     SUBDIR += spglib
+    SUBDIR += spheral
     SUBDIR += step
     SUBDIR += svmlight
     SUBDIR += tblite

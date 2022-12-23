@@ -82,6 +82,9 @@
     SUBDIR += gsnmp
     SUBDIR += guifi-snpservices
     SUBDIR += hastmon
+    SUBDIR += icinga-ipl-i18n
+    SUBDIR += icinga-php-library
+    SUBDIR += icinga-php-thirdparty
     SUBDIR += icinga2
     SUBDIR += icingaweb2
     SUBDIR += icingaweb2-module-businessprocess
@@ -94,7 +97,6 @@
     SUBDIR += icingaweb2-module-graphite
     SUBDIR += icingaweb2-module-idoreports
     SUBDIR += icingaweb2-module-incubator
-    SUBDIR += icingaweb2-module-ipl
     SUBDIR += icingaweb2-module-jira
     SUBDIR += icingaweb2-module-map
     SUBDIR += icingaweb2-module-pdfexport
@@ -403,7 +405,6 @@
     SUBDIR += zabbix4-proxy
     SUBDIR += zabbix4-server
     SUBDIR += zabbix5-agent
-    SUBDIR += zabbix5-frontend
     SUBDIR += zabbix5-java
     SUBDIR += zabbix5-proxy
     SUBDIR += zabbix5-server

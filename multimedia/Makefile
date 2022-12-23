@@ -99,7 +99,6 @@
     SUBDIR += gstreamer1-plugins-gnonlin
     SUBDIR += gstreamer1-plugins-good
     SUBDIR += gstreamer1-plugins-hls
-    SUBDIR += gstreamer1-plugins-kate
     SUBDIR += gstreamer1-plugins-libde265
     SUBDIR += gstreamer1-plugins-mpeg2dec
     SUBDIR += gstreamer1-plugins-mpeg2enc
@@ -233,7 +232,7 @@
     SUBDIR += mlt6-qt5
     SUBDIR += mlt7
     SUBDIR += mlt7-glaxnimate
-    SUBDIR += mlt7-qt5
+    SUBDIR += mlt7-qt
     SUBDIR += motion
     SUBDIR += mp3cd
     SUBDIR += mp4v2
@@ -295,7 +294,6 @@
     SUBDIR += phonon-gstreamer
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
-    SUBDIR += php-pHash
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi

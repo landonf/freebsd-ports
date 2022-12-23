@@ -1,5 +1,6 @@
 PORTNAME=	iridium
-PORTVERSION=	2022.11.107
+PORTVERSION=	2022.12.108.1
+PORTREVISION=	1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://downloads.iridiumbrowser.de/source/
 PKGNAMESUFFIX=	-browser
@@ -15,7 +16,7 @@ LICENSE_COMB=	multi
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 PATCH_SITES=	https://nerd.hu/distfiles/
-PATCHFILES+=	disable-privacy-sandbox.patch:-p1
+PATCHFILES+=	disable-privacy-sandbox-352a8844b01a05a786ba76da599d106487f1533f.patch:-p1
 
 BUILD_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
@@ -196,6 +197,10 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
+
+.if ${OSREL} == "12.3"
+IGNORE=			does not compile, libc++ too old
+.endif
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
