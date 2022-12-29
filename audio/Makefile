@@ -30,7 +30,7 @@
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
-    SUBDIR += ardour6
+    SUBDIR += ardour
     SUBDIR += ario
     SUBDIR += arss
     SUBDIR += artyfx-lv2
@@ -826,6 +826,7 @@
     SUBDIR += traverso
     SUBDIR += tse3
     SUBDIR += tta
+    SUBDIR += tuner
     SUBDIR += tuneradio
     SUBDIR += twolame
     SUBDIR += uade

@@ -4016,17 +4016,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php74-ffi
-    SUBDIR += php74-gettext
-    SUBDIR += php74-intl
-    SUBDIR += php74-json
-    SUBDIR += php74-pcntl
-    SUBDIR += php74-readline
-    SUBDIR += php74-shmop
-    SUBDIR += php74-sysvmsg
-    SUBDIR += php74-sysvsem
-    SUBDIR += php74-sysvshm
-    SUBDIR += php74-tokenizer
     SUBDIR += php80-ffi
     SUBDIR += php80-gettext
     SUBDIR += php80-intl
@@ -4293,6 +4282,7 @@
     SUBDIR += py-babelfish
     SUBDIR += py-babi_grammars
     SUBDIR += py-backcall
+    SUBDIR += py-backoff
     SUBDIR += py-backports
     SUBDIR += py-backports.cached-property
     SUBDIR += py-backports.csv
@@ -4301,6 +4291,7 @@
     SUBDIR += py-banal
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-beartype
     SUBDIR += py-beautifultable
     SUBDIR += py-behave
     SUBDIR += py-beniget
@@ -4596,6 +4587,7 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
+    SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
     SUBDIR += py-geojson
@@ -4801,6 +4793,7 @@
     SUBDIR += py-logzero
     SUBDIR += py-louie
     SUBDIR += py-lru-dict
+    SUBDIR += py-lsprotocol
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-lxml-stubs
@@ -5043,6 +5036,7 @@
     SUBDIR += py-prompt-toolkit
     SUBDIR += py-prompt-toolkit1
     SUBDIR += py-prompt-toolkit2
+    SUBDIR += py-property-cached
     SUBDIR += py-proselint
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
@@ -7211,6 +7205,7 @@
     SUBDIR += rubymine
     SUBDIR += rudeconfig
     SUBDIR += rudiments
+    SUBDIR += ruff
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen
     SUBDIR += rust-cbindgen
