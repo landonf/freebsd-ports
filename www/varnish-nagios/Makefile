@@ -1,9 +1,9 @@
 PORTNAME=	varnish-nagios
 PORTVERSION=	1.1.20151214
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Nagios plugin to check status of Varnish
 WWW=		https://www.varnish-cache.org/utility/nagios-varnish-plugin
 

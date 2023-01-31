@@ -1,6 +1,6 @@
 PORTNAME=	punchy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.1
+DISTVERSION=	0.3.0
 CATEGORIES=	games wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -9,8 +9,6 @@ WWW=		https://fishfight.org/
 
 LICENSE=	CC-BY-NC-4.0 MIT
 LICENSE_COMB=	multi
-
-BROKEN_i386=	static_assert fails with "Source size mismatch"
 
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libudev.so:devel/libudev-devd

@@ -34,6 +34,7 @@
     SUBDIR += asignify
     SUBDIR += assh
     SUBDIR += authenticator
+    SUBDIR += authoscope
     SUBDIR += autossh
     SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
@@ -126,6 +127,7 @@
     SUBDIR += dirbuster
     SUBDIR += dirmngr
     SUBDIR += distcache
+    SUBDIR += diswall
     SUBDIR += doas
     SUBDIR += dotdotpwn
     SUBDIR += dropbear
@@ -236,7 +238,7 @@
     SUBDIR += isnprober
     SUBDIR += john
     SUBDIR += kbfsd
-    SUBDIR += kc24
+    SUBDIR += kc
     SUBDIR += kdbxviewer
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
@@ -245,6 +247,7 @@
     SUBDIR += keychain
     SUBDIR += keynote
     SUBDIR += keyprint
+    SUBDIR += keysmith
     SUBDIR += kf5-kdesu
     SUBDIR += kgpg
     SUBDIR += kickpass
@@ -331,6 +334,7 @@
     SUBDIR += linux-c7-trousers
     SUBDIR += local-php-security-checker
     SUBDIR += logcheck
+    SUBDIR += lua-argon2
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
     SUBDIR += lxqt-openssh-askpass
@@ -415,7 +419,9 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
+    SUBDIR += openvpn25
     SUBDIR += ophcrack
+    SUBDIR += opie
     SUBDIR += ossec-hids
     SUBDIR += ossec-hids-agent
     SUBDIR += ossec-hids-agent-config
@@ -836,6 +842,7 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-badkeys
     SUBDIR += py-base58
     SUBDIR += py-bcrypt
     SUBDIR += py-bitbox02
@@ -928,6 +935,7 @@
     SUBDIR += py-pass-git-helper
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
+    SUBDIR += py-pem
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
@@ -938,7 +946,6 @@
     SUBDIR += py-pyaxo
     SUBDIR += py-pyblake2
     SUBDIR += py-pyclamd
-    SUBDIR += py-pycrypto
     SUBDIR += py-pycryptodome
     SUBDIR += py-pycryptodome-test-vectors
     SUBDIR += py-pycryptodomex
@@ -1253,6 +1260,7 @@
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
     SUBDIR += teleport
+    SUBDIR += teleport5
     SUBDIR += testssl.sh
     SUBDIR += tfhe
     SUBDIR += tfsec

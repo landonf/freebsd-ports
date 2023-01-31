@@ -1,10 +1,11 @@
 PORTNAME=	pciids
-PORTVERSION=	20220909
+PORTVERSION=	20221219
 CATEGORIES=	misc
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Database of all known IDs used in PCI devices
-WWW=		https://github.com/pciutils/pciids
+WWW=		https://pci-ids.ucw.cz/ \
+		https://github.com/pciutils/pciids
 
 LICENSE=	BSD3CLAUSE GPLv2+
 LICENSE_COMB=	dual
@@ -15,7 +16,7 @@ NO_BUILD=	yes
 PORTDATA=	pci.ids
 
 GH_ACCOUNT=	pciutils
-GH_TAGNAME=	c9f0940
+GH_TAGNAME=	f9541af
 USE_GITHUB=	yes
 
 do-install:

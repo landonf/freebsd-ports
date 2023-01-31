@@ -1,0 +1,1139 @@
+  <vuln vid="98f78c7a-a08e-11ed-946e-002b67dfc673">
+    <topic>Plex Media Server -- security vulnerability</topic>
+    <affects>
+      <package>
+	<name>plexmediaserver</name>
+	<name>plexmediaserver-plexpass</name>
+	<range><lt>1.25.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Plex Security Team reports:</p>
+	<blockquote cite="https://forums.plex.tv/t/security-regarding-cve-2021-42835/761510">
+	  <p>We have recently been made aware of a security vulnerability in Plex Media Server versions prior to 1.25.0 that could allow a local Windows user to obtain administrator privileges without authorization. To be clear, this required the user to already have local, physical access to the computer (just with a different user account on Windows). There are no indications that this exploit could be used from a remote machine.</p>
+	  <p>Plex Media Server versions 1.25.0.5282 and newer are not subject to this vulnerability, and feature additional hardening to prevent similar issues from occurring in the future. Users running older server versions are encouraged to update their Plex Media Server installations.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-42835</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42835</url>
+    </references>
+    <dates>
+      <discovery>2021-10-22</discovery>
+      <entry>2023-01-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="791a09c5-a086-11ed-954d-b42e991fc52e">
+    <topic>prometheus2 -- basic authentication bypass</topic>
+    <affects>
+      <package>
+	<name>prometheus</name>
+	<range><lt>0.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Prometheus team reports:</p>
+	<blockquote cite="https://github.com/prometheus/exporter-toolkit/security/advisories/GHSA-7rg2-cxvp-9p7p">
+	<p>
+	  Prometheus and its exporters can be secured by a web.yml file that
+	  specifies usernames and hashed passwords for basic authentication.
+	  Passwords are hashed with bcrypt, which means that even if you have
+	  access to the hash, it is very hard to find the original password
+	  back. Passwords are hashed with bcrypt, which means that even if you
+	  have access to the hash, it is very hard to find the original
+	  password back. However, a flaw in the way this mechanism was
+	  implemented in the exporter toolkit makes it possible with people
+	  who know the hashed password to authenticate against Prometheus.
+	  A request can be forged by an attacker to poison the internal cache
+	  used to cache the computation of hashes and make subsequent requests
+	  successful. This cache is used in both happy and unhappy scenarios
+	  in order to limit side channel attacks that could tell an attacker
+	    if a user is present in the file or not.
+	</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-46146</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-46146</url>
+    </references>
+    <dates>
+      <discovery>2022-11-28</discovery>
+      <entry>2023-01-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3d0a3eb0-9ca3-11ed-a925-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>109.0.5414.119</lt></range>
+      </package>
+      <package>
+	<name>ungoogled-chromium</name>
+	<range><lt>109.0.5414.119</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop_24.html">
+	  <p>This release contains 6 security fixes, including:</p>
+	  <ul>
+	    <li>[1376354] High CVE-2023-0471: Use after free in WebTransport. Reported by chichoo Kim(chichoo) and Cassidy Kim(@cassidy6564) on 2022-10-19</li>
+	    <li>[1405256] High CVE-2023-0472: Use after free in WebRTC. Reported by Cassidy Kim(@cassidy6564) on 2023-01-06</li>
+	    <li>[1404639] Medium CVE-2023-0473: Type Confusion in ServiceWorker API. Reported by raven at KunLun lab on 2023-01-03</li>
+	    <li>[1400841] Medium CVE-2023-0474: Use after free in GuestView. Reported by avaue at S.S.L on 2022-12-14</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0471</cvename>
+      <cvename>CVE-2023-0472</cvename>
+      <cvename>CVE-2023-0473</cvename>
+      <cvename>CVE-2023-0474</cvename>
+      <url>https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop_24.html</url>
+    </references>
+    <dates>
+      <discovery>2023-01-24</discovery>
+      <entry>2023-01-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b0e1fa2b-9c86-11ed-9296-002b67dfc673">
+    <topic>re2c -- uncontrolled recursion</topic>
+    <affects>
+      <package>
+	<name>re2c</name>
+	<range><lt>2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>re2c reports:</p>
+	<blockquote cite="https://github.com/advisories/GHSA-pgr8-gpgg-9j5m">
+	  <p>re2c before 2.0 has uncontrolled recursion that causes stack consumption in find_fixed_tags.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2018-21232</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2018-21232</url>
+    </references>
+    <dates>
+      <discovery>2022-05-24</discovery>
+      <entry>2023-01-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b8a0fea2-9be9-11ed-8acf-0800277bb8a8">
+    <topic>gitea -- information disclosure</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.18.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/22566">
+	  <p>Prevent multiple To recipients: Change the mailer interface to
+	    prevent leaking of possible hidden email addresses when sending
+	    to multiple recipients.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2023/01/gitea-1.18.3-is-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-01-22</discovery>
+      <entry>2023-01-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7844789a-9b1f-11ed-9a3f-b42e991fc52e">
+    <topic>net/krill -- DoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>krill</name>
+	<range><lt>0.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0158">
+	<p>
+		NLnet Labs Krill supports direct access to the RRDP repository
+		content through its built-in web server at the "/rrdp" endpoint.
+		Prior to 0.12.1 a direct query for any existing directory under
+		"/rrdp/", rather than an RRDP file such as "/rrdp/notification.xml"
+		as would be expected, causes Krill to crash. If the built-in "/rrdp"
+		endpoint is exposed directly to the internet, then malicious remote
+		parties can cause the publication server to crash. The repository
+		content is not affected by this, but the availability of the server
+		and repository can cause issues if this attack is persistent and is
+		not mitigated. .
+	</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0158</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0158</url>
+    </references>
+    <dates>
+      <discovery>2023-01-10</discovery>
+      <entry>2023-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bba3f684-9b1d-11ed-9a3f-b42e991fc52e">
+    <topic>www/awstats -- Partial absolute pathname</topic>
+    <affects>
+      <package>
+	<name>awstats</name>
+	<range><lt>7.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176">
+	  <p>It seems #90 is not completely fixed in 7.8.
+	    (that is, even after CVE-2017-1000501 and CVE-2020-29600 are fixed).
+	  In AWStats through 7.8, cgi-bin/awstats.pl?config= accepts a
+	  partial absolute pathname (omitting the initial /etc), even
+	  though it was intended to only read a file in the /etc/awstats/awstats.conf format.
+	  NOTE: this issue exists because of an incomplete fix for CVE-2017-1000501 and CVE-2020-29600.
+	</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-35176</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35176</url>
+    </references>
+    <dates>
+      <discovery>2022-12-11</discovery>
+      <entry>2023-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b6f7ad7d-9b19-11ed-9a3f-b42e991fc52e">
+    <topic>net/eternalterminal -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>eternalterminal</name>
+	<range><lt>6.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mitre reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48257">
+	  <p>etserver and etclient have predictable logfile names in
+	    /tmp and they are world-readable logfiles</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-48257</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48257</url>
+      <cvename>CVE-2022-48258</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48258</url>
+    </references>
+    <dates>
+      <discovery>2023-01-13</discovery>
+      <entry>2023-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="28b69630-9b10-11ed-97a6-6805ca2fa271">
+    <topic>powerdns-recursor -- denial of service</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><ge>4.8.0</ge><lt>4.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PowerDNS Team reports:</p>
+	<blockquote cite="https://blog.powerdns.com/2023/01/20/security-advisory-2023-01-for-powerdns-recursor-4-8-0/">
+	  <p>PowerDNS Security Advisory 2023-01: unbounded recursion results in program termination</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22617</cvename>
+      <url>https://docs.powerdns.com/recursor/security-advisories/powerdns-advisory-2023-01.html</url>
+    </references>
+    <dates>
+      <discovery>2023-01-20</discovery>
+      <entry>2023-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a3b10c9b-99d9-11ed-aa55-d05099fed512">
+	  <topic>shells/fish -- arbitrary code execution via git</topic>
+    <affects>
+      <package>
+	<name>fish</name>
+	<range><ge>3.1.0</ge><lt>3.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Peter Ammon reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2022-20001">
+	<p>
+		fish is a command line shell. fish version 3.1.0 through
+		version 3.3.1 is vulnerable to arbitrary code execution.
+		git repositories can contain per-repository
+		configuration that change the behavior of git, including
+		running arbitrary commands. When using the default
+		configuration of fish, changing to a directory
+		automatically runs git commands in order to display
+		information about the current repository in the prompt.
+		If an attacker can convince a user to change their
+		current directory into one controlled by the attacker,
+		such as on a shared file system or extracted archive,
+		fish will run arbitrary commands under the attacker's
+		control. This problem has been fixed in fish 3.4.0. Note
+		that running git in these directories, including using
+		the git tab completion, remains a potential trigger for
+		this issue. As a workaround, remove the
+		fish_git_prompt function from the prompt.
+	    </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-20001</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-20001</url>
+    </references>
+    <dates>
+      <discovery>2021-12-26</discovery>
+      <entry>2023-01-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dc49f6dc-99d2-11ed-86e9-d4c9ef517024">
+    <topic>MySQL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mysql-connector-c++</name>
+	<range><lt>8.0.33</lt></range>
+      </package>
+      <package>
+	<name>mysql-connector-odbc</name>
+	<range><lt>8.0.33</lt></range>
+      </package>
+      <package>
+	<name>mysql-client57</name>
+	<range><lt>5.7.42</lt></range>
+      </package>
+      <package>
+	<name>mysql-server57</name>
+	<range><lt>5.7.42</lt></range>
+      </package>
+      <package>
+	<name>mysql-client80</name>
+	<range><lt>8.0.33</lt></range>
+      </package>
+      <package>
+	<name>mysql-server80</name>
+	<range><lt>8.0.33</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Oracle reports:</p>
+	<blockquote cite="https://www.oracle.com/security-alerts/cpujan2023.html#AppendixMSQL">
+	  <p>This Critical Patch Update contains 37 new security patches for
+	    Oracle MySQL. 8 of these vulnerabilities may be remotely exploitable
+	    without authentication, i.e., may be exploited over a network withouti
+	    requiring user credentials.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-32221</cvename>
+      <cvename>CVE-2022-24407</cvename>
+      <cvename>CVE-2022-24407</cvename>
+      <cvename>CVE-2022-3171</cvename>
+      <cvename>CVE-2022-1941</cvename>
+      <cvename>CVE-2023-21868</cvename>
+      <cvename>CVE-2023-21860</cvename>
+      <cvename>CVE-2023-21875</cvename>
+      <cvename>CVE-2023-21869</cvename>
+      <cvename>CVE-2023-21877</cvename>
+      <cvename>CVE-2023-21880</cvename>
+      <cvename>CVE-2023-21872</cvename>
+      <cvename>CVE-2023-21871</cvename>
+      <cvename>CVE-2023-21836</cvename>
+      <cvename>CVE-2023-21887</cvename>
+      <cvename>CVE-2023-21863</cvename>
+      <cvename>CVE-2023-21864</cvename>
+      <cvename>CVE-2023-21865</cvename>
+      <cvename>CVE-2023-21866</cvename>
+      <cvename>CVE-2023-21867</cvename>
+      <cvename>CVE-2023-21870</cvename>
+      <cvename>CVE-2023-21873</cvename>
+      <cvename>CVE-2023-21876</cvename>
+      <cvename>CVE-2023-21878</cvename>
+      <cvename>CVE-2023-21879</cvename>
+      <cvename>CVE-2023-21881</cvename>
+      <cvename>CVE-2023-21883</cvename>
+      <cvename>CVE-2023-21840</cvename>
+      <cvename>CVE-2023-21882</cvename>
+      <cvename>CVE-2023-21874</cvename>
+      <url>https://www.oracle.com/security-alerts/cpujan2023.html#AppendixMSQL</url>
+    </references>
+    <dates>
+      <discovery>2023-01-20</discovery>
+      <entry>2023-01-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="005dfb48-990d-11ed-b9d3-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq</name>
+	<range><lt>3.1.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpmyfaq developers report:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2022-10-24">
+	  <p>phpMyFAQ does not implement sufficient checks to avoid a stored
+	    XSS in "Add new question"</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid a stored XSS
+	    in admin user page</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid a stored XSS
+	    in FAQ comments</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid a blind
+	    stored XSS in admin open question page</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid a reflected
+	    XSS in the admin backend login</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid stored XSS
+	    on user, category, FAQ, news and configuration admin backend</p>
+	  <p>phpMyFAQ does not implement sufficient checks to avoid weak passwords</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://huntr.dev/bounties/cbba22f0-89ed-4d01-81ea-744979c8cbde/</url>
+      <url>https://huntr.dev/bounties/fac01e9f-e3e5-4985-94ad-59a76485f215/</url>
+      <url>https://huntr.dev/bounties/83cfed62-af8b-4aaa-94f2-5a33dc0c2d69/</url>
+      <url>https://huntr.dev/bounties/051d5e20-7fab-4769-bd7d-d986b804bb5a/</url>
+      <url>https://huntr.dev/bounties/c03c5925-43ff-450d-9827-2b65a3307ed6/</url>
+      <url>https://huntr.dev/bounties/f50ec8d1-cd60-4c2d-9ab8-3711870d83b9/</url>
+      <url>https://huntr.dev/bounties/82b0b629-c56b-4651-af3f-17f749751857/</url>
+      <url>https://huntr.dev/bounties/eac0a9d7-9721-4191-bef3-d43b0df59c67/</url>
+      <url>https://huntr.dev/bounties/bc27e84b-1f91-4e1b-a78c-944edeba8256/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-15</discovery>
+      <entry>2023-01-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95176ba5-9796-11ed-bfbf-080027f5fec9">
+    <topic>rack -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.4.1,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.2,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Aaron Patterson reports:</p>
+	<blockquote cite="https://github.com/rack/rack/blob/v3.0.4.1/CHANGELOG.md">
+	  <dl>
+	    <dt>CVE-2022-44570</dt>
+	    <dd>
+	      Carefully crafted input can cause the Range header
+	      parsing component in Rack to take an unexpected amount
+	      of time, possibly resulting in a denial of service
+	      attack vector. Any applications that deal with Range
+	      requests (such as streaming applications, or
+	      applications that serve files) may be impacted.
+	    </dd>
+	    <dt>CVE-2022-44571</dt>
+	    <dd>
+	      Carefully crafted input can cause Content-Disposition
+	      header parsing in Rack to take an unexpected amount of
+	      time, possibly resulting in a denial of service attack
+	      vector. This header is used typically used in multipart
+	      parsing. Any applications that parse multipart posts
+	      using Rack (virtually all Rails applications) are
+	      impacted.
+	    </dd>
+	    <dt>CVE-2022-44572</dt>
+	    <dd>
+	      Carefully crafted input can cause RFC2183 multipart
+	      boundary parsing in Rack to take an unexpected amount of
+	      time, possibly resulting in a denial of service attack
+	      vector. Any applications that parse multipart posts
+	      using Rack (virtually all Rails applications) are
+	      impacted.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-44570</cvename>
+      <cvename>CVE-2022-44571</cvename>
+      <cvename>CVE-2022-44572</cvename>
+      <url>https://github.com/rack/rack/blob/v3.0.4.1/CHANGELOG.md</url>
+      <url>https://github.com/advisories/GHSA-65f5-mfpf-vfhj</url>
+      <url>https://github.com/advisories/GHSA-93pm-5p5f-3ghx</url>
+      <url>https://github.com/advisories/GHSA-rqv2-275x-2jq5</url>
+    </references>
+    <dates>
+      <discovery>2023-01-17</discovery>
+      <entry>2023-01-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="00919005-96a3-11ed-86e9-d4c9ef517024">
+    <topic>Apache httpd -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.55</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://downloads.apache.org/httpd/CHANGES_2.4.55">
+	  <p>mod_dav out of bounds read, or write of zero byte (CVE-2006-20001)
+	    (moderate)</p>
+	  <p>mod_proxy_ajp Possible request smuggling (CVE-2022-36760) (moderate)</p>
+	  <p>mod_proxy prior to 2.4.55 allows a backend to trigger HTTP response
+	    splitting (CVE-2022-37436) (moderate)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-37436</cvename>
+      <cvename>CVE-2022-36760</cvename>
+      <cvename>CVE-2006-20001</cvename>
+      <url>https://downloads.apache.org/httpd/CHANGES_2.4.55</url>
+    </references>
+    <dates>
+      <discovery>2023-01-17</discovery>
+      <entry>2023-01-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5fa68bd9-95d9-11ed-811a-080027f5fec9">
+    <topic>redis -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<range><lt>7.0.8</lt></range>
+      </package>
+      <package>
+	<name>redis-devel</name>
+	<range><lt>7.0.8.20230116</lt></range>
+      </package>
+      <package>
+	<name>redis62</name>
+	<range><lt>6.2.9</lt></range>
+      </package>
+      <package>
+	<name>redis6</name>
+	<range><lt>6.0.17</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Redis core team reports:</p>
+	<blockquote cite="https://github.com/redis/redis/releases/tag/7.0.8">
+	  <dl>
+	    <dt>CVE-2022-35977</dt>
+	    <dd>
+	      Integer overflow in the Redis SETRANGE and SORT/SORT_RO
+	      commands can drive Redis to OOM panic.
+	    </dd>
+	    <dt>CVE-2023-22458</dt>
+	    <dd>
+	      Integer overflow in the Redis HRANDFIELD and ZRANDMEMBER
+	      commands can lead to denial-of-service.
+	    </dd>
+	  </dl>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-35977</cvename>
+      <cvename>CVE-2023-22458</cvename>
+      <url>https://github.com/redis/redis/releases/tag/7.0.8</url>
+    </references>
+    <dates>
+      <discovery>2023-01-16</discovery>
+      <entry>2023-01-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d9e9439-959e-11ed-b464-b42e991fc52e">
+    <topic>security/keycloak -- Multiple possible DoS attacks</topic>
+    <affects>
+      <package>
+	<name>keycloak</name>
+	<range><lt>20.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CIRCL reports:</p>
+	<blockquote cite="https://cve.circl.lu/cve/CVE-2022-41966">
+	    <ul>
+	      <li>CVE-2022-41966: XStream serializes Java objects to XML
+	      and back again.
+	      Versions prior to 1.4.20 may allow a remote attacker
+	      to terminate the application with a stack
+	      overflow error, resulting in a denial of
+	      service only via manipulation the
+	      processed input stream.
+	      </li>
+	      <li>CVE-2022-40151: If the parser is running on user
+	      supplied input, an attacker may supply content that
+	      causes the parser to crash by stackoverflow. This
+	      effect may support a denial of service attack.
+	      </li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-40151</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40151</url>
+      <cvename>CVE-2022-41966</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-41966</url>
+    </references>
+    <dates>
+      <discovery>2022-09-07</discovery>
+      <entry>2023-01-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="847f16e5-9406-11ed-a925-3065ec8fd3ec">
+    <topic>security/tor -- SOCKS4(a) inversion bug</topic>
+    <affects>
+      <package>
+	<name>tor</name>
+	<range><lt>0.4.7.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Tor Project reports:</p>
+	<blockquote cite="https://gitlab.torproject.org/tpo/core/tor/-/issues/40730">
+	  <p>TROVE-2022-002: The SafeSocks option for SOCKS4(a) is inverted leading to SOCKS4 going through</p>
+	  <p>This is a report from hackerone:<br/>
+	     We have classified this as medium considering that tor was not defending in-depth for dangerous SOCKS request and so any user relying on SafeSocks 1 to make sure they don't link DNS leak and their Tor traffic wasn't safe afterall for SOCKS4(a).
+	     Tor Browser doesn't use SafeSocks 1 and SOCKS4 so at least the likely vast majority of users are not affected.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://hackerone.com/bugs?subject=torproject&amp;report_id=1784589</url>
+      <url>https://gitlab.torproject.org/tpo/core/tor/-/issues/40730</url>
+    </references>
+    <dates>
+      <discovery>2023-01-12</discovery>
+      <entry>2023-01-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="76e2fcce-92d2-11ed-a635-080027f5fec9">
+    <topic>emacs -- arbitary shell command execution vulnerability of ctags</topic>
+    <affects>
+      <package>
+	<name>emacs</name>
+	<name>emacs-canna</name>
+	<name>emacs-nox</name>
+	<range><lt>28.2_2,3</lt></range>
+      </package>
+      <package>
+	<name>emacs-devel</name>
+	<name>emacs-devel-nox</name>
+	<range><lt>30.0.50.202211128,2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>lu4nx reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2022-45939">
+	  <p>
+	    GNU Emacs through 28.2 allows attackers to execute
+	    commands via shell metacharacters in the name of a
+	    source-code file, because lib-src/etags.c uses the system
+	    C library function in its implementation of the ctags
+	    program. For example, a victim may use the "ctags *"
+	    command (suggested in the ctags documentation) in a
+	    situation where the current working directory has contents
+	    that depend on untrusted input.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-45939</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-45939</url>
+    </references>
+    <dates>
+      <discovery>2022-11-28</discovery>
+      <entry>2023-01-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="53caf29b-9180-11ed-acbe-b42e991fc52e">
+    <topic>cassandra3 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cassandra3</name>
+	<range><lt>3.11.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cassandra tema reports:</p>
+	<blockquote cite="https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=CHANGES.txt;hb=refs/tags/cassandra-3.11.14">
+	  <p>This release contains 6 security fixes including</p>
+	  <ul>
+	      <li>CVE-2022-24823: When Netty's multipart decoders are used local information disclosure can occur via the local system temporary directory</li>
+	      <li>CVE-2020-7238: Netty 4.1.43.Final allows HTTP Request Smuggling because it mishandles Transfer-Encoding whitespace (such as a [space]Transfer-Encoding:chunked line) and a later Content-Length header.</li>
+	      <li>CVE-2019-2684: Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Java SE</li>
+	      <li>CVE-2022-25857: The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.</li>
+	      <li>CVE-2022-42003: In FasterXML jackson-databind, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled.</li>
+	      <li>CVE-2022-42004: In FasterXML jackson-databind, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24823</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24823</url>
+      <cvename>CVE-2020-7238</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7238</url>
+      <cvename>CVE-2019-2684</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2684</url>
+      <cvename>CVE-2022-25857</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25857</url>
+      <cvename>CVE-2022-42003</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42003</url>
+      <cvename>CVE-2022-42004</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004</url>
+    </references>
+    <dates>
+      <discovery>2023-01-11</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="60624f63-9180-11ed-acbe-b42e991fc52e">
+    <topic>cassandra3 -- arbitrary code execution</topic>
+    <affects>
+      <package>
+	<name>cassandra3</name>
+	<range><lt>3.11.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Marcus Eriksson reports:</p>
+	<blockquote cite="https://lists.apache.org/thread/y4nb9s4co34j8hdfmrshyl09lokm7356">
+	  <p>
+	  When running Apache Cassandra with
+	  the following configuration:
+	  enable_user_defined_functions: true
+	  enable_scripted_user_defined_functions: true
+	  enable_user_defined_functions_threads: false
+	  it is possible for an attacker to execute arbitrary code on
+	  the host. The attacker would need to have enough permissions
+	  to create user defined functions in the cluster to be able
+	  to exploit this.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44521</cvename>
+      <url>https://www.cvedetails.com/cve/CVE-2021-44521</url>
+    </references>
+    <dates>
+      <discovery>2022-02-11</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b3fd12ea-917a-11ed-acbe-b42e991fc52e">
+    <topic>cassandra3 -- jBCrypt integer overflow</topic>
+    <affects>
+      <package>
+	<name>cassandra3</name>
+	<range><lt>3.11.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>mindrot project reports:</p>
+	<blockquote cite="http://www.mindrot.org/projects/jBCrypt/news/rel04.html">
+	  <p>There is an integer overflow that
+	  occurs with very large log_rounds values, first reported by
+	  Marcus Rathsfeld.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-0886</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0886</url>
+    </references>
+    <dates>
+      <discovery>2015-01-30</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9fa7b139-c1e9-409e-bed0-006aadcf5845">
+    <topic>xorg-server -- Multiple security issues in X server extensions</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<name>xephyr</name>
+	<name>xorg-vfbserver</name>
+	<range><lt>21.1.5,1</lt></range>
+      </package>
+      <package>
+	<name>xorg-nestserver</name>
+	<range><lt>21.1.5,2</lt></range>
+      </package>
+      <package>
+	<name>xwayland</name>
+	<range><lt>22.1.6,1</lt></range>
+      </package>
+      <package>
+	<name>xwayland-devel</name>
+	<range><lt>21.0.99.1.319</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The X.org project reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2022-December/003302.html">
+	  <ul>
+	    <li>CVE-2022-46340/ZDI-CAN-19265: X.Org Server XTestSwapFakeInput stack
+	    overflow
+
+	    <p>The swap handler for the XTestFakeInput request of the XTest extension
+	    may corrupt the stack if GenericEvents with lengths larger than 32 bytes
+	    are sent through a the XTestFakeInput request.</p>
+
+	    <p>This issue does not affect systems where client and server use the same
+	    byte order.</p></li>
+
+	    <li>CVE-2022-46341/ZDI-CAN-19381: X.Org Server XIPassiveUngrab
+	    out-of-bounds access
+
+	    <p>The handler for the XIPassiveUngrab request accesses out-of-bounds
+	    memory when invoked with a high keycode or button code.</p></li>
+
+	    <li>CVE-2022-46342/ZDI-CAN-19400: X.Org Server XvdiSelectVideoNotify
+	    use-after-free
+
+	    <p>The handler for the XvdiSelectVideoNotify request may write to memory
+	    after it has been freed.</p></li>
+
+	    <li>CVE-2022-46343/ZDI-CAN-19404: X.Org Server ScreenSaverSetAttributes
+	    use-after-free
+
+	    <p>The handler for the ScreenSaverSetAttributes request may write to memory
+	    after it has been freed.</p></li>
+
+	    <li>CVE-2022-46344/ZDI-CAN-19405: X.Org Server XIChangeProperty
+	    out-of-bounds access
+
+	    <p>The handler for the XIChangeProperty request has a length-validation
+	    issues, resulting in out-of-bounds memory reads and potential
+	    information disclosure.</p></li>
+
+	    <li>CVE-2022-4283/ZDI-CAN-19530: X.Org Server XkbGetKbdByName use-after-free
+
+	    <p>The XkbCopyNames function left a dangling pointer to freed memory,
+	    resulting in out-of-bounds memory access on subsequent XkbGetKbdByName
+	    requests.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.x.org/archives/xorg-announce/2022-December/003302.html</url>
+      <cvename>CVE-2022-46340</cvename>
+      <cvename>CVE-2022-46341</cvename>
+      <cvename>CVE-2022-46342</cvename>
+      <cvename>CVE-2022-46343</cvename>
+      <cvename>CVE-2022-46344</cvename>
+      <cvename>CVE-2022-4283</cvename>
+    </references>
+    <dates>
+      <discovery>2022-12-14</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3a023570-91ab-11ed-8950-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.7.0</ge><lt>15.7.2</lt></range>
+	<range><ge>15.6.0</ge><lt>15.6.4</lt></range>
+	<range><ge>6.6.0</ge><lt>15.5.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/01/09/security-release-gitlab-15-7-2-released/">
+	  <p>Race condition on gitlab.com enables verified email forgery and third-party account hijacking</p>
+	  <p>DOS and high resource consumption of Prometheus server through abuse of Grafana integration proxy endpoint</p>
+	  <p>Maintainer can leak sentry token by changing the configured URL</p>
+	  <p>Maintainer can leak masked webhook secrets by changing target URL of the webhook</p>
+	  <p>Cross-site scripting in wiki changes page affecting self-hosted instances running without strict CSP</p>
+	  <p>Group access tokens continue to work after owner loses ability to revoke them</p>
+	  <p>Users' avatar disclosure by user ID in private GitLab instances</p>
+	  <p>Arbitrary Protocol Redirection in GitLab Pages</p>
+	  <p>Regex DoS due to device-detector parsing user agents</p>
+	  <p>Regex DoS in the Submodule Url Parser</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-4037</cvename>
+      <cvename>CVE-2022-3613</cvename>
+      <cvename>CVE-2022-4365</cvename>
+      <cvename>CVE-2022-4342</cvename>
+      <cvename>CVE-2022-3573</cvename>
+      <cvename>CVE-2022-4167</cvename>
+      <cvename>CVE-2022-3870</cvename>
+      <cvename>CVE-2023-0042</cvename>
+      <cvename>CVE-2022-4131</cvename>
+      <cvename>CVE-2022-3514</cvename>
+      <url>https://about.gitlab.com/releases/2023/01/09/security-release-gitlab-15-7-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-01-09</discovery>
+      <entry>2023-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7b929503-911d-11ed-a925-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>109.0.5414.74</lt></range>
+      </package>
+      <package>
+	<name>ungoogled-chromium</name>
+	<range><lt>109.0.5414.74</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html">
+	  <p>This release contains 17 security fixes, including:</p>
+	  <ul>
+	    <li>[1353208] High CVE-2023-0128: Use after free in Overview Mode. Reported by Khalil Zhani on 2022-08-16</li>
+	    <li>[1382033] High CVE-2023-0129: Heap buffer overflow in Network Service. Reported by asnine on 2022-11-07</li>
+	    <li>[1370028] Medium CVE-2023-0130: Inappropriate implementation in Fullscreen API. Reported by Hafiizh on 2022-09-30</li>
+	    <li>[1357366] Medium CVE-2023-0131: Inappropriate implementation in iframe Sandbox. Reported by NDevTK on 2022-08-28</li>
+	    <li>[1371215] Medium CVE-2023-0132: Inappropriate implementation in Permission prompts. Reported by Jasper Rebane (popstonia) on 2022-10-05</li>
+	    <li>[1375132] Medium CVE-2023-0133: Inappropriate implementation in Permission prompts. Reported by Alesandro Ortiz on 2022-10-17</li>
+	    <li>[1385709] Medium CVE-2023-0134: Use after free in Cart. Reported by Chaoyuan Peng (@ret2happy) on 2022-11-17</li>
+	    <li>[1385831] Medium CVE-2023-0135: Use after free in Cart. Reported by Chaoyuan Peng (@ret2happy) on 2022-11-18</li>
+	    <li>[1356987] Medium CVE-2023-0136: Inappropriate implementation in Fullscreen API. Reported by Axel Chong on 2022-08-26</li>
+	    <li>[1399904] Medium CVE-2023-0137: Heap buffer overflow in Platform Apps. Reported by avaue and Buff3tts at S.S.L. on 2022-12-10</li>
+	    <li>[1346675] Low CVE-2023-0138: Heap buffer overflow in libphonenumber. Reported by Michael Dau on 2022-07-23</li>
+	    <li>[1367632] Low CVE-2023-0139: Insufficient validation of untrusted input in Downloads. Reported by Axel Chong on 2022-09-24</li>
+	    <li>[1326788] Low CVE-2023-0140: Inappropriate implementation in File System API. Reported by harrison.mitchell, cybercx.com.au on 2022-05-18</li>
+	    <li>[1362331] Low CVE-2023-0141: Insufficient policy enforcement in CORS. Reported by scarlet on 2022-09-12</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0128</cvename>
+      <cvename>CVE-2023-0129</cvename>
+      <cvename>CVE-2023-0130</cvename>
+      <cvename>CVE-2023-0131</cvename>
+      <cvename>CVE-2023-0132</cvename>
+      <cvename>CVE-2023-0133</cvename>
+      <cvename>CVE-2023-0134</cvename>
+      <cvename>CVE-2023-0135</cvename>
+      <cvename>CVE-2023-0136</cvename>
+      <cvename>CVE-2023-0137</cvename>
+      <cvename>CVE-2023-0138</cvename>
+      <cvename>CVE-2023-0139</cvename>
+      <cvename>CVE-2023-0140</cvename>
+      <cvename>CVE-2023-0141</cvename>
+      <url>https://chromereleases.googleblog.com/2023/01/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-01-10</discovery>
+      <entry>2023-01-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="59c284f4-8d2e-11ed-9ce0-b42e991fc52e">
+    <topic>net-mgmt/cacti is vulnerable to remote command injection</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>1.2.23</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cacti team reports:</p>
+	<blockquote cite="https://github.com/Cacti/cacti/security/advisories/GHSA-6p93-p743-35gf">
+	<p>
+	    A command injection vulnerability allows an
+	    unauthenticated user to execute arbitrary code on a server
+	    running Cacti, if a specific data source was selected for
+	    any monitored device.
+	</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-46169</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-46169</url>
+    </references>
+    <dates>
+      <discovery>2022-12-05</discovery>
+      <entry>2023-01-05</entry>
+      <modified>2023-01-09</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="541696ed-8d12-11ed-af80-ecf4bbc0bda0">
+    <topic>devel/viewvc-devel is vulnerable to cross-site scripting</topic>
+    <affects>
+      <package>
+	<name>py37-viewvc-devel</name>
+	<name>py38-viewvc-devel</name>
+	<name>py39-viewvc-devel</name>
+	<range><lt>1.3.0.20230104</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>C. Michael Pilato reports:</p>
+	<blockquote cite="https://github.com/viewvc/viewvc/releases/tag/1.1.30">
+	  <p>security fix: escape revision view copy paths (#311) [CVE-2023-22464]</p>
+	</blockquote>
+	<blockquote cite="https://github.com/viewvc/viewvc/releases/tag/1.1.29">
+	  <p>security fix: escape revision view changed paths (#311) [CVE-2023-22456]</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-22464</cvename>
+      <cvename>CVE-2023-22456</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-22464</url>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-22456</url>
+    </references>
+    <dates>
+      <discovery>2023-01-04</discovery>
+      <entry>2023-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b2eac07-8b4d-11ed-8b23-a0f3c100ae18">
+    <topic>rxvt-unicode is vulnerable to a remote code execution</topic>
+    <affects>
+      <package>
+	<name>rxvt-unicode</name>
+	<range><lt>9.31</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Marc Lehmann reports:</p>
+	<blockquote cite="http://lists.schmorp.de/pipermail/rxvt-unicode/2023q1/002638.html">
+	  <p>The biggest issue is resolving CVE-2022-4170, which allows command
+	     execution inside urxvt from within the terminal (that means anything that
+	     can output text in the terminal can start commands in the context of the
+	     urxvt process, even remotely).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-4170</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-4170</url>
+    </references>
+    <dates>
+      <discovery>2022-12-05</discovery>
+      <entry>2023-01-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="86c330fe-bbae-4ca7-85f7-5321e627a4eb">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.18.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/22219">
+	  <p>Remove ReverseProxy authentication from the API</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/21139">
+	  <p>Support Go Vulnerability Management</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20935">
+	  <p>Forbid HTML string tooltips</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2022/12/gitea-1.18.0-is-released/</url>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.18.0</url>
+    </references>
+    <dates>
+      <discovery>2022-08-23</discovery>
+      <entry>2023-01-02</entry>
+    </dates>
+  </vuln>

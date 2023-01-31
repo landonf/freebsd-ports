@@ -3,6 +3,7 @@
     SUBDIR += abyss
     SUBDIR += ad2vcf
     SUBDIR += artemis
+    SUBDIR += atac-seq
     SUBDIR += augustus
     SUBDIR += avida
     SUBDIR += babel
@@ -151,6 +152,7 @@
     SUBDIR += py-bcbio-gff
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
+    SUBDIR += py-biosig
     SUBDIR += py-bx-python
     SUBDIR += py-crossmap
     SUBDIR += py-cutadapt
@@ -236,6 +238,7 @@
     SUBDIR += viennarna
     SUBDIR += vsearch
     SUBDIR += vt
+    SUBDIR += wfa2-lib
     SUBDIR += wise
 
 .include <bsd.port.subdir.mk>

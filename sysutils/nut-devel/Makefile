@@ -19,8 +19,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	9fb8d6d5f
-NUT_COMMIT_DATE=	2022.12.08
+GH_TAGNAME=	5a2d3a0e6
+NUT_COMMIT_DATE=	2023.01.24
 
 MAKE_JOBS_UNSAFE=	yes
 USE_GCC=	yes
@@ -28,8 +28,10 @@ GNU_CONFIGURE=	yes
 USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python
 USE_LDCONFIG=	yes
 
-NUT_USER?=	uucp
-NUT_GROUP?=	uucp
+NUT_USER?=	nut
+NUT_GROUP?=	nut
+USERS=		${NUT_USER} 
+GROUPS=		${NUT_GROUP} dialer
 STATEDIR?=	/var/db/nut
 PLIST_SUB+=	NUT_USER=${NUT_USER}
 PLIST_SUB+=	NUT_GROUP=${NUT_GROUP}

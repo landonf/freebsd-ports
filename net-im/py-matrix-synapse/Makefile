@@ -1,8 +1,7 @@
 PORTNAME=	matrix-synapse
-DISTVERSION=	1.72.0
-PORTREVISION=	1
+DISTVERSION=	1.75.0
 CATEGORIES=	net-im python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${PORTNAME:S/-/_/}-${DISTVERSION}.tar.gz
 
@@ -31,7 +30,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=3.0.0:devel/py-jsonschema@${PY_F
 		${PYTHON_PKGNAMEPREFIX}pyasn1-modules>=0.0.7:devel/py-pyasn1-modules@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}bcrypt>=3.1.7:security/py-bcrypt@${PY_FLAVOR} \
 		${PY_PILLOW} \
-		${PYTHON_PKGNAMEPREFIX}sortedcontainers>=1.4.4:devel/py-sortedcontainers@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sortedcontainers>=1.5.2:devel/py-sortedcontainers@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pysaml2>=4.5.0:security/py-pysaml2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pymacaroons>=0.13.0:security/py-pymacaroons@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}msgpack>=0.5.2:devel/py-msgpack@${PY_FLAVOR} \
@@ -66,11 +65,11 @@ CARGO_TEST=	no
 CARGO_INSTALL=	no
 CARGO_CARGOTOML=	${WRKSRC}/rust/Cargo.toml
 CARGO_CRATES=	aho-corasick-0.7.19 \
-		anyhow-1.0.66 \
+		anyhow-1.0.68 \
 		arc-swap-1.5.1 \
 		autocfg-1.1.0 \
 		bitflags-1.3.2 \
-		blake2-0.10.5 \
+		blake2-0.10.6 \
 		block-buffer-0.10.3 \
 		cfg-if-1.0.0 \
 		crypto-common-0.1.6 \
@@ -102,12 +101,12 @@ CARGO_CRATES=	aho-corasick-0.7.19 \
 		regex-syntax-0.6.27 \
 		ryu-1.0.11 \
 		scopeguard-1.1.0 \
-		serde-1.0.147 \
-		serde_derive-1.0.147 \
-		serde_json-1.0.87 \
+		serde-1.0.152 \
+		serde_derive-1.0.152 \
+		serde_json-1.0.91 \
 		smallvec-1.10.0 \
 		subtle-2.4.1 \
-		syn-1.0.102 \
+		syn-1.0.104 \
 		target-lexicon-0.12.4 \
 		typenum-1.15.0 \
 		unicode-ident-1.0.5 \

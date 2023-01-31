@@ -24,6 +24,7 @@
     SUBDIR += R-cran-gridExtra
     SUBDIR += R-cran-jpeg
     SUBDIR += R-cran-latticeExtra
+    SUBDIR += R-cran-magick
     SUBDIR += R-cran-munsell
     SUBDIR += R-cran-pROC
     SUBDIR += R-cran-pixmap
@@ -73,6 +74,7 @@
     SUBDIR += azpainterb
     SUBDIR += barcode
     SUBDIR += batik
+    SUBDIR += bgfx
     SUBDIR += birdfont
     SUBDIR += bitmap
     SUBDIR += blend2d
@@ -108,7 +110,6 @@
     SUBDIR += colmap
     SUBDIR += colord
     SUBDIR += colord-gtk
-    SUBDIR += comical
     SUBDIR += compupic
     SUBDIR += converseen
     SUBDIR += corrupter
@@ -234,6 +235,7 @@
     SUBDIR += gcolor3
     SUBDIR += gd
     SUBDIR += gdal
+    SUBDIR += gdal-grass
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdk-pixbuf2-xlib
@@ -544,6 +546,8 @@
     SUBDIR += luminance-qt5
     SUBDIR += lux
     SUBDIR += lximage-qt
+    SUBDIR += magnum
+    SUBDIR += magnum-plugins
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += mandelbulber
@@ -616,6 +620,7 @@
     SUBDIR += openmvs
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
+    SUBDIR += openpgl
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
     SUBDIR += openslide
@@ -828,6 +833,7 @@
     SUBDIR += proj-data
     SUBDIR += pstoedit
     SUBDIR += ptex
+    SUBDIR += py-ManimPango
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
@@ -859,6 +865,7 @@
     SUBDIR += py-geopandas
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
+    SUBDIR += py-glcontext
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
@@ -880,6 +887,8 @@
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
     SUBDIR += py-ming
+    SUBDIR += py-moderngl
+    SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
@@ -996,6 +1005,8 @@
     SUBDIR += recoverjpeg
     SUBDIR += renrot
     SUBDIR += repng2jpeg
+    SUBDIR += resvg
+    SUBDIR += resvg-capi
     SUBDIR += rgbpaint
     SUBDIR += rigsofrods-caelum
     SUBDIR += rigsofrods-pagedgeometry
@@ -1122,6 +1133,7 @@
     SUBDIR += tweeny
     SUBDIR += ufraw
     SUBDIR += unpaper
+    SUBDIR += upscaler
     SUBDIR += urho3d
     SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv

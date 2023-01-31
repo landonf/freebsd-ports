@@ -13,8 +13,9 @@ LICENSE_COMB=	dual
 LICENSE_FILE_BSD2CLAUSE=${WRKSRC}/LICENSE.txt
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
+
+PORTSCOUT=	limit:^1\.2\.2
 
 .include <bsd.port.mk>

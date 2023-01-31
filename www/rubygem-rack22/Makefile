@@ -1,5 +1,5 @@
 PORTNAME=	rack
-PORTVERSION=	2.2.4
+PORTVERSION=	2.2.6
 PORTEPOCH=	3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
@@ -13,12 +13,13 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
 
 USES=		cpe gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 
 PLIST_FILES=	bin/rackup
 
 CPE_VENDOR=	rack_project
+
+PORTSCOUT=	limit:^2\.2\.
 
 .include <bsd.port.mk>

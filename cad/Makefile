@@ -6,12 +6,12 @@
     SUBDIR += admesh
     SUBDIR += adms
     SUBDIR += alliance
+    SUBDIR += antimony
     SUBDIR += appcsxcad
     SUBDIR += archimedes
     SUBDIR += astk-client
     SUBDIR += astk-serveur
     SUBDIR += atlc
-    SUBDIR += basicdsp
     SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
@@ -77,7 +77,6 @@
     SUBDIR += libredwg
     SUBDIR += librepcb
     SUBDIR += librnd
-    SUBDIR += linux-eagle5
     SUBDIR += logisim
     SUBDIR += magic
     SUBDIR += meshdev
@@ -104,6 +103,7 @@
     SUBDIR += pdnmesh
     SUBDIR += py-cadquery
     SUBDIR += py-cq-editor
+    SUBDIR += py-edalize
     SUBDIR += py-ezdxf
     SUBDIR += py-gdspy
     SUBDIR += py-gmsh
@@ -113,6 +113,7 @@
     SUBDIR += py-pyfda
     SUBDIR += py-pygmsh
     SUBDIR += py-pymtl
+    SUBDIR += py-vunit-hdl
     SUBDIR += python-gdsii
     SUBDIR += qcad
     SUBDIR += qcsxcad
@@ -125,6 +126,7 @@
     SUBDIR += repsnapper
     SUBDIR += rubygem-gdsii
     SUBDIR += scotch
+    SUBDIR += silice
     SUBDIR += solvespace
     SUBDIR += sp2sp
     SUBDIR += spice
@@ -132,6 +134,8 @@
     SUBDIR += stm32flash
     SUBDIR += sumo
     SUBDIR += surelog
+    SUBDIR += svlint
+    SUBDIR += svls
     SUBDIR += sweethome3d
     SUBDIR += tkgate
     SUBDIR += tochnog
@@ -140,6 +144,7 @@
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
     SUBDIR += veroroute
+    SUBDIR += veryl
     SUBDIR += xcircuit
     SUBDIR += xyce
     SUBDIR += yosys

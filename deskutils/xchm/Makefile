@@ -1,25 +1,23 @@
 PORTNAME=	xchm
-PORTVERSION=	1.23
-PORTREVISION=	4
+PORTVERSION=	1.33
 CATEGORIES=	deskutils
-MASTER_SITES=	SF/${PORTNAME}/xCHM/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Windows HTML Help (.chm) viewer for UNIX
-WWW=		http://xchm.sourceforge.net/
-
-DEPRECATED=	Abandoned project and use deprecated wxgtk28
-EXPIRATION_DATE=	2022-12-31
+WWW=		https://github.com/rzvncj/xCHM
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libchm.so:misc/chmlib
 
-GNU_CONFIGURE=	yes
-USES=		compiler:c++11-lang localbase
-USE_WX=		2.8
+USES=		compiler:c++11-lang desktop-file-utils localbase autoreconf
+USE_GITHUB=	yes
+GH_ACCOUNT=	rzvncj
+GH_PROJECT=	xCHM
+USE_WX=		3.0+
 WX_CONF_ARGS=	absolute
+GNU_CONFIGURE=	yes
 LDFLAGS+=	-lpthread
 
 OPTIONS_DEFINE=	NLS

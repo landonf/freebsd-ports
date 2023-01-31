@@ -87,6 +87,7 @@
     SUBDIR += clearsilver
     SUBDIR += closure-compiler
     SUBDIR += cntlm
+    SUBDIR += cobalt
     SUBDIR += codeigniter
     SUBDIR += colly
     SUBDIR += coppermine
@@ -118,11 +119,13 @@
     SUBDIR += dolibarr15
     SUBDIR += domoticz
     SUBDIR += dooble
+    SUBDIR += dot-http
+    SUBDIR += drill
+    SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
     SUBDIR += drupal9
-    SUBDIR += drupal10
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -215,6 +218,7 @@
     SUBDIR += h2o
     SUBDIR += h2o-devel
     SUBDIR += habari
+    SUBDIR += hedgedoc
     SUBDIR += hiawatha
     SUBDIR += hiawatha-monitor
     SUBDIR += horde-ansel
@@ -293,6 +297,7 @@
     SUBDIR += libnghttp3
     SUBDIR += libresonic-standalone
     SUBDIR += librespeed
+    SUBDIR += librewolf
     SUBDIR += librtcdcpp
     SUBDIR += libwpe
     SUBDIR += libwww
@@ -335,6 +340,7 @@
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
+    SUBDIR += microbin
     SUBDIR += middleman
     SUBDIR += midori
     SUBDIR += mimetex
@@ -451,6 +457,8 @@
     SUBDIR += node
     SUBDIR += node14
     SUBDIR += node16
+    SUBDIR += node18
+    SUBDIR += node19
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -460,6 +468,7 @@
     SUBDIR += npm-node14
     SUBDIR += npm-node16
     SUBDIR += npm-node18
+    SUBDIR += npm-node19
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1012,6 +1021,7 @@
     SUBDIR += p5-Mojolicious-Plugin-Database
     SUBDIR += p5-Mojolicious-Plugin-HamlRenderer
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
+    SUBDIR += p5-Mojolicious-Plugin-OpenAPI
     SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
@@ -1038,6 +1048,7 @@
     SUBDIR += p5-Newsletter
     SUBDIR += p5-Nginx-ReadBody
     SUBDIR += p5-Nginx-Simple
+    SUBDIR += p5-OpenAPI-Client
     SUBDIR += p5-PHP-Session
     SUBDIR += p5-POE-Component-Client-HTTP
     SUBDIR += p5-POE-Component-Client-UserAgent
@@ -1680,6 +1691,7 @@
     SUBDIR += py-internetarchive
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
+    SUBDIR += py-kiss-headers
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1722,6 +1734,7 @@
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
     SUBDIR += py-qt5-webengine
+    SUBDIR += py-qt6-webengine
     SUBDIR += py-quilt3
     SUBDIR += py-recaptcha
     SUBDIR += py-requests
@@ -1774,7 +1787,6 @@
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-txrequests
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -1791,7 +1803,6 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
-    SUBDIR += py-werkzeug21
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -1800,6 +1811,7 @@
     SUBDIR += py-woob-qt
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
+    SUBDIR += py-xandikos
     SUBDIR += py-yarl
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
@@ -1812,15 +1824,17 @@
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
     SUBDIR += qt6-webchannel
+    SUBDIR += qt6-webengine
     SUBDIR += qt6-websockets
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
     SUBDIR += rearx
+    SUBDIR += reddsaver
     SUBDIR += redmine42
     SUBDIR += redmine50
-    SUBDIR += remark42
     SUBDIR += rejik
+    SUBDIR += remark42
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += reproxy
@@ -1991,6 +2005,7 @@
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-json-jwt115
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt25
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2237,6 +2252,7 @@
     SUBDIR += srg
     SUBDIR += srt
     SUBDIR += stagit
+    SUBDIR += stork
     SUBDIR += subsonic-standalone
     SUBDIR += suphp
     SUBDIR += surf
@@ -2342,7 +2358,6 @@
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
-    SUBDIR += varnish4
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
@@ -2358,6 +2373,7 @@
     SUBDIR += w3m-img
     SUBDIR += w3mir
     SUBDIR += wabt
+    SUBDIR += wasm-pack
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser
@@ -2377,8 +2393,8 @@
     SUBDIR += websocketd
     SUBDIR += webstone
     SUBDIR += webstone-ssl
-    SUBDIR += webtrees
     SUBDIR += webtrees20
+    SUBDIR += webtrees21
     SUBDIR += wget2
     SUBDIR += wgetpaste
     SUBDIR += wiki-tui
@@ -2407,6 +2423,7 @@
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
+    SUBDIR += yarn-node19
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

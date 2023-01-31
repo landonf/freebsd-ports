@@ -259,6 +259,7 @@
     SUBDIR += p5-Geo-Calc
     SUBDIR += p5-Geo-Coordinates-Converter
     SUBDIR += p5-Geo-Coordinates-Converter-iArea
+    SUBDIR += p5-Geo-Coordinates-Transform
     SUBDIR += p5-Geo-WebService-Elevation-USGS
     SUBDIR += p5-Mcstas-Tools
     SUBDIR += p5-PerlMol
@@ -297,6 +298,7 @@
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
+    SUBDIR += py-asdf-unit-schemas
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
@@ -344,6 +346,7 @@
     SUBDIR += py-hiphive
     SUBDIR += py-hoomd-blue
     SUBDIR += py-inequality
+    SUBDIR += py-ipygany
     SUBDIR += py-jupyter_jsmol
     SUBDIR += py-kim-query
     SUBDIR += py-kimpy
@@ -430,6 +433,7 @@
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
     SUBDIR += py-tweedledum
+    SUBDIR += py-vedo
     SUBDIR += py-veusz
     SUBDIR += py-xbout
     SUBDIR += pybrain

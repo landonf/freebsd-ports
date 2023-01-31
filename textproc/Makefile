@@ -79,6 +79,7 @@
     SUBDIR += bibtex2html
     SUBDIR += bibtool
     SUBDIR += bibutils
+    SUBDIR += biodiff
     SUBDIR += bn-aspell
     SUBDIR += br-aspell
     SUBDIR += bsddiff
@@ -106,6 +107,7 @@
     SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
+    SUBDIR += comrak
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
@@ -124,6 +126,7 @@
     SUBDIR += ctpp2
     SUBDIR += cwtext
     SUBDIR += cy-aspell
+    SUBDIR += cy-hunspell
     SUBDIR += da-aspell
     SUBDIR += dadadodo
     SUBDIR += dasel
@@ -158,6 +161,7 @@
     SUBDIR += docbook2odf
     SUBDIR += docbookrx
     SUBDIR += docproj
+    SUBDIR += docproj-fonts-cjk
     SUBDIR += docproj-legacy
     SUBDIR += dom4j
     SUBDIR += domc
@@ -173,7 +177,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
     SUBDIR += elasticsearch8
     SUBDIR += en-aspell
@@ -201,6 +204,7 @@
     SUBDIR += fcitx5-configtool
     SUBDIR += fcitx5-gtk
     SUBDIR += fcitx5-lua
+    SUBDIR += fcitx5-m17n
     SUBDIR += fcitx5-qt
     SUBDIR += fcitx5-qt-common
     SUBDIR += fex
@@ -263,6 +267,7 @@
     SUBDIR += hi-aspell
     SUBDIR += highlight
     SUBDIR += hil-aspell
+    SUBDIR += hq
     SUBDIR += hr-aspell
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
@@ -318,6 +323,7 @@
     SUBDIR += itstool
     SUBDIR += jade
     SUBDIR += jalingo
+    SUBDIR += jaq
     SUBDIR += jarnal
     SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
@@ -503,9 +509,9 @@
     SUBDIR += openfts
     SUBDIR += openjade
     SUBDIR += opensearch
-    SUBDIR += opensearch13
     SUBDIR += opensearch-dashboards
     SUBDIR += opensearch-dashboards13
+    SUBDIR += opensearch13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
@@ -1336,6 +1342,7 @@
     SUBDIR += py-gi-docgen
     SUBDIR += py-googletrans
     SUBDIR += py-grako
+    SUBDIR += py-grapheme
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1404,6 +1411,7 @@
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
     SUBDIR += py-openstackdocstheme
+    SUBDIR += py-openstep-plist
     SUBDIR += py-orange3-text
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
@@ -1483,12 +1491,14 @@
     SUBDIR += py-rich
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
+    SUBDIR += py-rich12
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-rstfmt
     SUBDIR += py-scour
+    SUBDIR += py-sentencepiece
     SUBDIR += py-simplebayes
     SUBDIR += py-smartypants
     SUBDIR += py-snowballstemmer
@@ -1584,6 +1594,7 @@
     SUBDIR += py-xmldiff
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
+    SUBDIR += py-youseedee
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
     SUBDIR += py-zope.tal
@@ -1699,6 +1710,7 @@
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
+    SUBDIR += rubygem-gemoji3
     SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
@@ -1853,6 +1865,7 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
+    SUBDIR += sad
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary
@@ -1879,6 +1892,7 @@
     SUBDIR += sdocbook-xml
     SUBDIR += sdom
     SUBDIR += senna
+    SUBDIR += sentencepiece
     SUBDIR += sgmlformat
     SUBDIR += sgmls
     SUBDIR += sgrep

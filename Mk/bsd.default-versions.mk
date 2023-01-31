@@ -40,8 +40,8 @@ BDB_DEFAULT?=		5
 COROSYNC_DEFAULT?=	2
 # Possible_values: full canna nox devel_full devel_nox
 #EMACS_DEFAULT?=	let the flavor be the default if not explicitly set
-# Possible values: 2.5, 3.0, 4.0
-FIREBIRD_DEFAULT?=	2.5
+# Possible values: 3.0, 4.0
+FIREBIRD_DEFAULT?=	3.0
 # Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.2
@@ -77,14 +77,8 @@ LIBRSVG2_DEFAULT?=	legacy
 .  endif
 # Possible values: c7
 LINUX_DEFAULT?=		c7
-# Possible values: 70, 80, 90, 10, 11, 12, 13, 14, -devel (to be used when non-base compiler is required)
-# Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before
-# bumping the LLVM version.
-.  if ${ARCH} == powerpc
-LLVM_DEFAULT?=		10
-.  else
-LLVM_DEFAULT?=		90
-.  endif
+# Possible values: 10, 11, 12, 13, 14, 15, -devel (to be used when non-base compiler is required)
+LLVM_DEFAULT?=		15
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.4
 # Possible values: luajit, luajit-devel, luajit-openresty
@@ -99,7 +93,7 @@ MONO_DEFAULT=		5.10
 MYSQL_DEFAULT?=		5.7
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 14, 16, 18, lts, current
+# Possible value: 14, 16, 18, 19, current, lts (Note: current = 19 and lts = 18)
 NODEJS_DEFAULT?=    lts
 # Possible values: 5.32, 5.34, 5.36, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
@@ -171,6 +165,6 @@ SSL_DEFAULT?=	base
 # Possible values: 8.5, 8.6, 8.7
 TCLTK_DEFAULT?=		8.6
 # Possible values: 4, 6, 7
-VARNISH_DEFAULT?=	4
+VARNISH_DEFAULT?=	6
 
 .endif

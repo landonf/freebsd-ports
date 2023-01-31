@@ -1,19 +1,18 @@
 PORTNAME=	couchbase
-DISTVERSION=	3.2.2
+PORTVERSION=	4.0.0
 CATEGORIES=	databases
+MASTER_SITES=	https://github.com/couchbase/couchbase-php-client/releases/download/${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Couchbase Server PHP extension
-WWW=		https://pecl.php.net/package/couchbase
+WWW=		https://pecl.php.net/package/couchbase \
+		https://github.com/couchbase/couchbase-php-client
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	libcouchbase>=3.3.2:databases/libcouchbase
-LIB_DEPENDS=	libcouchbase.so:databases/libcouchbase
+BUILD_DEPENDS=	cmake:devel/cmake-core
 
-USES=		php:build,pecl
+USES=		compiler:c++17-lang php:build,pecl
 USE_PHP=	json:build
-
-IGNORE_WITH_PHP=81 82
 
 .include <bsd.port.mk>

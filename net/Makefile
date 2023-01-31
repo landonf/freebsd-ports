@@ -138,6 +138,7 @@
     SUBDIR += dual-dhclient
     SUBDIR += dual-dhclient-daemon
     SUBDIR += easysoap
+    SUBDIR += ecal
     SUBDIR += echoping
     SUBDIR += empty
     SUBDIR += endlessh
@@ -180,6 +181,7 @@
     SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
+    SUBDIR += geocode-glib2
     SUBDIR += geoipupdate
     SUBDIR += gerbera
     SUBDIR += gfbgraph
@@ -245,6 +247,7 @@
     SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
+    SUBDIR += haproxy26
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -338,6 +341,7 @@
     SUBDIR += krill
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-apiserver
     SUBDIR += kube-controller-manager
     SUBDIR += kube-scheduler
     SUBDIR += l2tpd
@@ -345,6 +349,7 @@
     SUBDIR += lambdamoo
     SUBDIR += landrop
     SUBDIR += latd
+    SUBDIR += lavinmq
     SUBDIR += ldap-stats
     SUBDIR += ldapbrowser
     SUBDIR += ldapdiff
@@ -409,6 +414,7 @@
     SUBDIR += librdkafka
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go
+    SUBDIR += librest1
     SUBDIR += librsync
     SUBDIR += libsignal-protocol-c
     SUBDIR += libslirp
@@ -568,7 +574,6 @@
     SUBDIR += openmpi
     SUBDIR += openmpi3
     SUBDIR += openntpd
-    SUBDIR += opennx
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
@@ -1182,6 +1187,7 @@
     SUBDIR += radreport
     SUBDIR += radsecproxy
     SUBDIR += radvd
+    SUBDIR += rathole
     SUBDIR += rclone
     SUBDIR += rclone-browser
     SUBDIR += rdapper
@@ -1353,6 +1359,7 @@
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
+    SUBDIR += rubygem-rbvmomi2
     SUBDIR += rubygem-right_aws
     SUBDIR += rubygem-right_flexiscale
     SUBDIR += rubygem-right_gogrid
@@ -1415,6 +1422,7 @@
     SUBDIR += serviio
     SUBDIR += sflowtool
     SUBDIR += shadowsocks-libev
+    SUBDIR += shadowsocks-rust
     SUBDIR += shelldap
     SUBDIR += shmux
     SUBDIR += sie-nmsg
@@ -1424,6 +1432,7 @@
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
+    SUBDIR += slurm
     SUBDIR += smb4k
     SUBDIR += smbldap-tools
     SUBDIR += smcroute

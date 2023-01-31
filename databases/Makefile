@@ -54,14 +54,13 @@
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
+    SUBDIR += diesel
     SUBDIR += duckdb
     SUBDIR += ejdb
     SUBDIR += emacsql
     SUBDIR += erlfdb
     SUBDIR += evolution-data-server
     SUBDIR += fastdb
-    SUBDIR += firebird25-client
-    SUBDIR += firebird25-server
     SUBDIR += firebird30-client
     SUBDIR += firebird30-server
     SUBDIR += firebird40-client
@@ -78,6 +77,7 @@
     SUBDIR += fpc-postgres
     SUBDIR += fpc-pxlib
     SUBDIR += fpc-sqlite
+    SUBDIR += frece
     SUBDIR += freetds
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
@@ -91,6 +91,7 @@
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
     SUBDIR += go-pgweb
+    SUBDIR += gobang
     SUBDIR += gom
     SUBDIR += gqlplus
     SUBDIR += grass7
@@ -193,6 +194,7 @@
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
+    SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
@@ -226,6 +228,7 @@
     SUBDIR += nagios-check_postgres_replication
     SUBDIR += nagios-check_redis
     SUBDIR += namazu2
+    SUBDIR += nanodbc
     SUBDIR += neo4j
     SUBDIR += ocaml-dbm
     SUBDIR += ocaml-mysql
@@ -582,7 +585,6 @@
     SUBDIR += pglogical
     SUBDIR += pgmetrics
     SUBDIR += pgmodeler
-    SUBDIR += pgpool-II-37
     SUBDIR += pgpool-II-40
     SUBDIR += pgpool-II-41
     SUBDIR += pgpool-II-42
@@ -845,6 +847,7 @@
     SUBDIR += py-zodbpickle
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
+    SUBDIR += qdrant
     SUBDIR += qof
     SUBDIR += qt5-sql
     SUBDIR += qt5-sqldrivers-ibase
@@ -854,6 +857,7 @@
     SUBDIR += qt5-sqldrivers-sqlite2
     SUBDIR += qt5-sqldrivers-sqlite3
     SUBDIR += qt5-sqldrivers-tds
+    SUBDIR += quake
     SUBDIR += recutils
     SUBDIR += redis
     SUBDIR += redis-devel
@@ -862,6 +866,7 @@
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
+    SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
@@ -992,6 +997,7 @@
     SUBDIR += rubygem-redis-clustering
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
+    SUBDIR += rubygem-redis-namespace19
     SUBDIR += rubygem-redis4
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm

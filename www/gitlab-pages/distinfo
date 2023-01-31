@@ -1,5 +1,5 @@
-TIMESTAMP = 1660638036
-SHA256 (go/www_gitlab-pages/gitlab-pages-v1.61.1/v1.61.1.mod) = d30e9e9ae72c0f72147234002b47f577e6b71595249f7d592e0ade566f90e14e
-SIZE (go/www_gitlab-pages/gitlab-pages-v1.61.1/v1.61.1.mod) = 2968
-SHA256 (go/www_gitlab-pages/gitlab-pages-v1.61.1/v1.61.1.zip) = e62273c81abd82352a693bd5333499bbafeafe1958b37839ac29c7cc60444c6e
-SIZE (go/www_gitlab-pages/gitlab-pages-v1.61.1/v1.61.1.zip) = 373080
+TIMESTAMP = 1675107900
+SHA256 (go/www_gitlab-pages/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0/go.mod) = 407883ba322b73d1526b585fb5a2570826c39759adf176965e8a37b1cf664f2d
+SIZE (go/www_gitlab-pages/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0/go.mod) = 2938
+SHA256 (go/www_gitlab-pages/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0.tar.gz) = acc4e14c002479360875e5a5e8d92c401386b840085bad18bacde6a56cf2cb67
+SIZE (go/www_gitlab-pages/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0/gitlab-org-gitlab-pages-5830a8685703e74b9a2d7736c139c255b6a9a9be_GL0.tar.gz) = 227264

@@ -1,5 +1,5 @@
 PORTNAME=	wine-proton
-DISTVERSION=	7.0-4
+DISTVERSION=	7.0-5
 CATEGORIES=	emulators
 
 MAINTAINER=	iwtcex@gmail.com
@@ -10,6 +10,7 @@ LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+IGNORE_FreeBSD_12=requires F_ADD_SEALS
 ONLY_FOR_ARCHS=	amd64 i386
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
@@ -22,15 +23,16 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		autoreconf bison desktop-file-utils gettext-runtime gl gmake gnome gstreamer localbase openal pkgconfig python:build sdl shebangfix tar:xz xorg
 USE_GCC=	yes
+PIE_UNSAFE=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ValveSoftware
 GH_PROJECT=	wine
-GH_TAGNAME=	fb6e6af8928a29660e8cf797d43e028ea5bf8d23
+GH_TAGNAME=	492470267af486cb24ad0deaa028168eb94618a4
 
 USE_GL=		gl
 USE_GNOME=	glib20
-USE_GSTREAMER=	good
+USE_GSTREAMER=	gl mpeg2dec x264 # https://github.com/ValveSoftware/wine/commit/8cdd506d7e68c27cd564c317320bfc8d3a999eda
 USE_SDL=	sdl2
 USE_XORG=	x11 xext xcomposite xcursor xi xinerama xrandr xrender
 
@@ -102,7 +104,7 @@ PULSEAUDIO_CONFIGURE_OFF=	--without-pulse
 
 .include <bsd.port.pre.mk>
 
-.if (${LLVM_DEFAULT} == 90 || ${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
+.if (${LLVM_DEFAULT} == 10 || ${LLVM_DEFAULT} == 11)
 _LLVM_VERSION=	12
 .else
 _LLVM_VERSION=	${LLVM_DEFAULT}

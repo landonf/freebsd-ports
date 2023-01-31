@@ -104,6 +104,7 @@
     SUBDIR += cuetools
     SUBDIR += cutmp3
     SUBDIR += cyanrip
+    SUBDIR += d11amp
     SUBDIR += dagrab
     SUBDIR += darkice
     SUBDIR += dcd
@@ -222,6 +223,7 @@
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
     SUBDIR += gervill
+    SUBDIR += ggwave
     SUBDIR += giada
     SUBDIR += glurp
     SUBDIR += gmsynth-lv2
@@ -481,6 +483,7 @@
     SUBDIR += mixxx
     SUBDIR += mixxx22
     SUBDIR += mkcue
+    SUBDIR += mmtc
     SUBDIR += moc
     SUBDIR += modplug-tools
     SUBDIR += moodbar
@@ -534,6 +537,7 @@
     SUBDIR += ncmpcpp
     SUBDIR += ncpamixer
     SUBDIR += ncspot
+    SUBDIR += netease-music-tui
     SUBDIR += noise-repellent-lv2
     SUBDIR += noise-suppression-for-voice-lv2
     SUBDIR += normalize
@@ -646,6 +650,7 @@
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gtts
     SUBDIR += py-hsaudiotag3k
+    SUBDIR += py-librosa
     SUBDIR += py-mpd
     SUBDIR += py-music21
     SUBDIR += py-musicbrainzngs
@@ -655,6 +660,7 @@
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
+    SUBDIR += py-pydub
     SUBDIR += py-pyjacklib
     SUBDIR += py-pylast
     SUBDIR += py-pyliblo
@@ -663,6 +669,8 @@
     SUBDIR += py-pyradio
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
+    SUBDIR += py-resampy
+    SUBDIR += py-simpleaudio
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice
     SUBDIR += py-soundscrape
@@ -743,6 +751,7 @@
     SUBDIR += solfege
     SUBDIR += somafm-cli
     SUBDIR += sonata
+    SUBDIR += songrec
     SUBDIR += sonic-visualiser
     SUBDIR += sonivox
     SUBDIR += sonivox-eas

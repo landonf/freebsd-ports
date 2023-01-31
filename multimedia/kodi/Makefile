@@ -1,6 +1,6 @@
 PORTNAME=	kodi
-DISTVERSION=	19.4
-PORTREVISION=	8
+DISTVERSION=	19.5
+PORTREVISION=	2
 CATEGORIES=	multimedia java
 
 MAINTAINER=	yzrh@noema.org
@@ -220,6 +220,7 @@ GBM_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 			libxkbcommon.so:x11/libxkbcommon \
 			libinput.so:x11/libinput
 
+WAYLAND_CATEGORIES=	wayland
 WAYLAND_USES=		gl
 WAYLAND_USE=		GL=egl,glu
 WAYLAND_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \

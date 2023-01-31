@@ -2,7 +2,7 @@ PORTNAME=	obake
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0-24
 DISTVERSIONSUFFIX=	-gb8cc71c
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -28,7 +28,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libmpfr.so:math/mpfr \
 		libtbb.so:devel/onetbb
 
-USES=		cmake:testing compiler:c++17-lang # need compiler:c++20-lang
+USES=		cmake:testing compiler:c++20-lang
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

@@ -5,6 +5,7 @@
     SUBDIR += alchemist.el
     SUBDIR += algol68g
     SUBDIR += angelscript
+    SUBDIR += antimony
     SUBDIR += apache-commons-jelly
     SUBDIR += asn1c
     SUBDIR += atlast
@@ -82,6 +83,7 @@
     SUBDIR += fpc-source
     SUBDIR += fpc-units
     SUBDIR += fpc-utils
+    SUBDIR += frawk
     SUBDIR += fsharp
     SUBDIR += fth
     SUBDIR += gambit-c
@@ -269,7 +271,7 @@
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
-    SUBDIR += ponyc
+    SUBDIR += pomsky
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-hy
@@ -370,6 +372,5 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
-    SUBDIR += zig-devel
 
 .include <bsd.port.subdir.mk>

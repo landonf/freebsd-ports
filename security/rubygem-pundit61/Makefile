@@ -1,5 +1,5 @@
 PORTNAME=	pundit
-PORTVERSION=	2.2.0
+PORTVERSION=	2.3.0
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	61
@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 RUN_DEPENDS=	rubygem-activesupport61>=3.0.0:devel/rubygem-activesupport61
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 
