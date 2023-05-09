@@ -1,9 +1,9 @@
---- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2022-12-02 17:56:32 UTC
+--- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2023-04-08 11:38:38 UTC
 +++ third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc
-@@ -278,7 +278,7 @@ TEST_F(WebRtcAudioRendererTest, DISABLED_VerifySinkPar
+@@ -290,7 +290,7 @@ TEST_F(WebRtcAudioRendererTest, DISABLED_VerifySinkPar
    SetupRenderer(kDefaultOutputDeviceId);
    renderer_proxy_->Start();
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
 -    BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    static const int kExpectedBufferSize = kHardwareSampleRate / 100;

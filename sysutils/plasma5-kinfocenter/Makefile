@@ -1,5 +1,6 @@
 PORTNAME=	kinfocenter
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -9,7 +10,8 @@ WWW=		https://www.kde.org/plasma-desktop
 RUN_DEPENDS=	lscpu:sysutils/lscpu \
 		glxinfo:graphics/mesa-demos \
 		vulkaninfo:graphics/vulkan-tools \
-		xdpyinfo:x11/xdpyinfo
+		xdpyinfo:x11/xdpyinfo \
+		clinfo:devel/clinfo
 
 USES=		cmake compiler:c++11-lib gettext gl kde:5 pkgconfig qt:5 \
 		tar:xz xorg
@@ -29,10 +31,6 @@ USE_XORG=	ice sm x11 xext
 
 # TODO	-- this should be handled correctly...
 LDFLAGS+=-ldevinfo
-
-post-extract:
-	# File move not handled by patch
-	${MV} ${WRKSRC}/Modules/pci/kcm_pci.json ${WRKSRC}/Modules/pci/kcm_pci.json.cmake
 
 # install freebsd-logo and distrorc
 post-install:

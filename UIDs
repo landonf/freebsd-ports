@@ -263,16 +263,16 @@ promscale:*:314:314::0:0:Promscale:/nonexistent:/usr/sbin/nologin
 lavinmq:*:315:315::0:0:LavinMQ user:/nonexistent:/usr/sbin/nologin
 nut:*:316:316::0:0:Network UPS Tools user:/nonexistent:/usr/sbin/nologin
 hedgedoc:*:317:317::0:0:HedgeDoc user:/nonexistent:/usr/sbin/nologin
-# free: 318
-# free: 319
-# free: 320
+icingadirector:*:318:183::0:0:icingadirector user:/nonexistent:/usr/sbin/nologin
+rustdesk:*:319:319::0:0:rustdesk-server user:/nonexistent:/usr/sbin/nologin
+teleirc:*:320:320::0:0:Telegram and IRC bridge:/nonexistent:/usr/sbin/nologin
 # free: 321
 # free: 322
 # free: 323
 # free: 324
 dkfilter:*:325:325::0:0:DK Filter Owner:/nonexistent:/usr/sbin/nologin
 smfs:*:326:326::0:0:SMFSAV Owner:/nonexistent:/usr/sbin/nologin
-# free: 327
+_reticulum:*:327:327::0:0:Reticulum Daemon:/nonexistent:/usr/sbin/nologin
 # free: 328
 # free: 329
 orthanc:*:330:330::0:0:Orthanc Daemon:/nonexistent:/usr/sbin/nologin
@@ -571,7 +571,7 @@ taskd:*:616:616::0:0:taskd user:/nonexistent:/usr/sbin/nologin
 # free: 622
 # free: 623
 # free: 624
-# free: 625
+xapsd:*:625:625::0:0:xapsd:/var/lib/xapsd:/usr/sbin/nologin
 # free: 626
 # free: 627
 # free: 628
@@ -703,7 +703,7 @@ c-lightning:*:735:735::0:0:c-lightning Daemon:/var/db/c-lightning:/usr/sbin/nolo
 # free: 754
 # free: 755
 # free: 756
-# free: 757
+sopel:*:757:757::0:0:Sopel IRC Bot:/var/db/sopel:/usr/sbin/nologin
 # free: 758
 # free: 759
 # free: 760
@@ -773,7 +773,7 @@ titus-keys:*:823:65533::0:0:Titus Keyserver User:/nonexistent:/usr/sbin/nologin
 selenium:*:824:824::0:0:Selenium Daemon User:/usr/local/selenium:/bin/sh
 polw:*:825:825::0:0:Policyd-weight Cache Owner:/nonexistent:/sbin/nologin
 statsd:*:826:826::0:0:Statsd Daemon:/nonexistent:/sbin/nologin
-# free: 827
+_tuptime:*:827:827::0:0:Tuptime:/var/lib/tuptime:/usr/sbin/nologin
 # free: 828
 # free: 829
 # free: 830
@@ -814,7 +814,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 865
 # free: 866
 # free: 867
-# free: 868
+jellyfin:*:868:868::0:0:Jellyfin:/nonexistent:/usr/sbin/nologin
 keyd:*:869:869::0:0:Key remapping daemon for evdev:/nonexistent:/usr/sbin/nologin
 buildbot:*:870:870::0:0:Buildbot user:/var/db/buildbot:/usr/sbin/nologin
 archiva:*:871:871::0:0:Apache Archiva Daemon:/nonexistent:/usr/sbin/nologin

@@ -1,5 +1,6 @@
 PORTNAME=	gnome-initial-setup
 PORTVERSION=	43.2
+PORTREVISION=	2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -29,7 +30,8 @@ RUN_DEPENDS=	gdm>=3.0.0:x11/gdm \
 USES=		compiler:c++11-lib gettext gnome meson pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack
 
-MESON_ARGS=	-Dparental_controls=disabled \
+MESON_ARGS=	-Dibus=disabled \
+		-Dparental_controls=disabled \
 		-Dsystemd=false
 
 PORTSCOUT=	limitw:1,even

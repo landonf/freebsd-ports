@@ -15,6 +15,7 @@
     SUBDIR += akonadi-mime
     SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
+    SUBDIR += alligator
     SUBDIR += aluminum
     SUBDIR += aoe
     SUBDIR += apache-commons-net
@@ -44,6 +45,7 @@
     SUBDIR += avahi-libdns
     SUBDIR += avahi-qt5
     SUBDIR += avahi-sharp
+    SUBDIR += aws-ec2-imdsv2-get
     SUBDIR += axa
     SUBDIR += babeld
     SUBDIR += balance
@@ -125,6 +127,7 @@
     SUBDIR += dhcprelya
     SUBDIR += dictd
     SUBDIR += dimes
+    SUBDIR += downzemall
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
     SUBDIR += dpinger
@@ -231,6 +234,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-igd12
     SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gupnp14
@@ -244,7 +248,6 @@
     SUBDIR += haproxy18
     SUBDIR += haproxy20
     SUBDIR += haproxy22
-    SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
     SUBDIR += haproxy26
@@ -388,6 +391,7 @@
     SUBDIR += libmdf
     SUBDIR += libmediawiki
     SUBDIR += libnatpmp
+    SUBDIR += libndp
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
@@ -461,7 +465,6 @@
     SUBDIR += micro_proxy
     SUBDIR += microsocks
     SUBDIR += minidlna
-    SUBDIR += minisapserver
     SUBDIR += minissdpd
     SUBDIR += miniupnpc
     SUBDIR += miniupnpd
@@ -519,7 +522,6 @@
     SUBDIR += netselect
     SUBDIR += netstrain
     SUBDIR += netwib
-    SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
     SUBDIR += nfstrace
     SUBDIR += ng_mikrotik_eoip
@@ -579,7 +581,6 @@
     SUBDIR += openrsync
     SUBDIR += opensips31
     SUBDIR += openslp
-    SUBDIR += opentracker
     SUBDIR += openvswitch
     SUBDIR += ortp
     SUBDIR += osrtspproxy
@@ -1141,6 +1142,7 @@
     SUBDIR += py-socketio-client
     SUBDIR += py-socksio
     SUBDIR += py-softlayer
+    SUBDIR += py-speedometer
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle
@@ -1155,6 +1157,7 @@
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
+    SUBDIR += py-uri-template
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-url-normalize
@@ -1170,6 +1173,7 @@
     SUBDIR += pyrad
     SUBDIR += qadsl
     SUBDIR += qoauth-qt5
+    SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
     SUBDIR += qt6-networkauth
@@ -1212,7 +1216,6 @@
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
-    SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rssguard
     SUBDIR += rsync
@@ -1229,6 +1232,7 @@
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
     SUBDIR += rubygem-apollo_upload_server
+    SUBDIR += rubygem-app_store_connect
     SUBDIR += rubygem-asset_sync
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
@@ -1282,7 +1286,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
-    SUBDIR += rubygem-gitlab-omniauth-openid-connect
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1295,6 +1298,7 @@
     SUBDIR += rubygem-google-cloud-logging-v2
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-pubsub-v1
+    SUBDIR += rubygem-google-cloud-resource_manager
     SUBDIR += rubygem-google-cloud-spanner
     SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
@@ -1306,6 +1310,7 @@
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
+    SUBDIR += rubygem-interfacez
     SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddr122
     SUBDIR += rubygem-ipaddress
@@ -1317,10 +1322,12 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
     SUBDIR += rubygem-net-protocol
+    SUBDIR += rubygem-net-protocol01
     SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-nkf
@@ -1353,6 +1360,7 @@
     SUBDIR += rubygem-orchestrator_client
     SUBDIR += rubygem-ovirt-engine-sdk
     SUBDIR += rubygem-packetfu
+    SUBDIR += rubygem-packetgen
     SUBDIR += rubygem-pcaprub
     SUBDIR += rubygem-private_address_check
     SUBDIR += rubygem-proxifier
@@ -1395,6 +1403,7 @@
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
+    SUBDIR += rustdesk-server
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
@@ -1509,6 +1518,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
+    SUBDIR += tigervnc-viewer-java
     SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
@@ -1524,10 +1534,9 @@
     SUBDIR += trafshow
     SUBDIR += trafshow3
     SUBDIR += trickle
+    SUBDIR += trippy
     SUBDIR += tsclient
     SUBDIR += tsctp
-    SUBDIR += tshark
-    SUBDIR += tshark-lite
     SUBDIR += tsocks
     SUBDIR += tunneller
     SUBDIR += turnserver
@@ -1573,6 +1582,12 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifi-firmware-ath10k-kmod
+    SUBDIR += wifi-firmware-ath11k-kmod
+    SUBDIR += wifi-firmware-base
+    SUBDIR += wifi-firmware-mt76-kmod
+    SUBDIR += wifi-firmware-rtw88-kmod
+    SUBDIR += wifi-firmware-rtw89-kmod
     SUBDIR += wifibox
     SUBDIR += wifibox-alpine
     SUBDIR += wifibox-core
@@ -1582,7 +1597,6 @@
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
-    SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
     SUBDIR += wlvncc
     SUBDIR += wmnd
@@ -1597,6 +1611,7 @@
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli
+    SUBDIR += xapsd
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi

@@ -1,6 +1,6 @@
 PORTNAME=	glurp
 PORTVERSION=	0.12.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -10,6 +10,9 @@ WWW=		https://sourceforge.net/projects/glurp/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Unmaintained for years and depends on deprecated GTK2
+EXPIRATION_DATE=2023-06-30
 
 LIB_DEPENDS=	libmpd.so:audio/libmpd
 

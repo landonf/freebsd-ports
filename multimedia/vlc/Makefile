@@ -1,10 +1,13 @@
 PORTNAME=	vlc
 DISTVERSION=	3.0.18
+PORTREVISION=	4
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio net www
-MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
-		http://ftp.snt.utwente.nl/pub/software/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
-		ftp://ftp.crans.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/
+MASTER_SITES=	https://get.videolan.org/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		https://mirror.init7.net/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://mirror.clarkson.edu/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://ftp.kaist.ac.kr/vlc/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Qt based multimedia player and streaming server
@@ -25,10 +28,12 @@ BUILD_DEPENDS=	gsed:textproc/gsed \
 		yasm:devel/yasm
 RUN_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg
 
-USES=		compiler:c++17-lang cpe desktop-file-utils gettext-tools gmake gnome \
-		iconv:wchar_t libtool localbase pathfix pkgconfig tar:xz
+USES=		compiler:c++17-lang cpe desktop-file-utils elfctl gettext-tools \
+		gmake gnome iconv:wchar_t libtool localbase pathfix pkgconfig \
+		tar:xz
 
 CPE_VENDOR=	videolan
+ELF_FEATURES=	+noaslr:bin/.libs/vlc # See PR 270038
 
 # VLC git (post 2.2.4) requires C++11 support and passes the appropriate flag
 # to the compiler. Until the port is updated, we explicitly pass -std=c++11 to
@@ -80,6 +85,7 @@ OPTIONS_DEFAULT=ASS AVAHI DAV1D DBUS DVDREAD DVDNAV GNUTLS HARFBUZZ JPEG \
 OPTIONS_DEFAULT_powerpc=	ALTIVEC
 OPTIONS_DEFAULT_powerpc64=	ALTIVEC
 OPTIONS_EXCLUDE=LIBPLACEBO # https://code.videolan.org/videolan/vlc/-/commit/8e22c39ea3c3
+OPTIONS_EXCLUDE+=	VAAPI # Not compatible until VLC 4
 OPTIONS_SUB=	yes
 
 AOM_DESC=	AV1 video encoding/decoding via libaom

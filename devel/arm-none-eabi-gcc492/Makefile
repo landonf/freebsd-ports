@@ -1,6 +1,6 @@
 PORTNAME=	gcc
 PORTVERSION=	4.9.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	GCC/releases/gcc-${DISTVERSION}
 PKGNAMEPREFIX?=	arm-none-eabi-
@@ -12,6 +12,9 @@ WWW=		https://gcc.gnu.org/
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
+
+DEPRECATED=	Long time unsupported upstream
+EXPIRATION_DATE=	2023-05-31
 
 BROKEN_mips=		configure: error: cannot compute suffix of object files: cannot compile
 BROKEN_mips64=		configure: error: cannot compute suffix of object files: cannot compile

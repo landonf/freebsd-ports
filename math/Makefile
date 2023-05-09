@@ -389,7 +389,6 @@
     SUBDIR += hpipm
     SUBDIR += hptt
     SUBDIR += hs-Agda
-    SUBDIR += hs-penrose
     SUBDIR += hs-syfco
     SUBDIR += hsl
     SUBDIR += hydrogen
@@ -411,12 +410,14 @@
     SUBDIR += jts
     SUBDIR += kahip
     SUBDIR += kalgebra
+    SUBDIR += kalk
     SUBDIR += kalker
     SUBDIR += kamis
     SUBDIR += kbruch
     SUBDIR += kcalc
     SUBDIR += kfr
     SUBDIR += kig
+    SUBDIR += kissat
     SUBDIR += kktdirect
     SUBDIR += kmplot
     SUBDIR += labplot
@@ -560,6 +561,7 @@
     SUBDIR += octave-forge-fda
     SUBDIR += octave-forge-femoctave
     SUBDIR += octave-forge-fenv
+    SUBDIR += octave-forge-fileio
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
     SUBDIR += octave-forge-fpl
@@ -601,6 +603,7 @@
     SUBDIR += octave-forge-nnet
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-oct2mat
+    SUBDIR += octave-forge-octave-pool
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
@@ -611,6 +614,7 @@
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pde1dm
+    SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
     SUBDIR += octave-forge-psychrometrics
@@ -638,6 +642,7 @@
     SUBDIR += octave-forge-symbolic
     SUBDIR += octave-forge-tcl-octave
     SUBDIR += octave-forge-tsa
+    SUBDIR += octave-forge-velas
     SUBDIR += octave-forge-video
     SUBDIR += octave-forge-websockets
     SUBDIR += octave-forge-zenity
@@ -647,6 +652,7 @@
     SUBDIR += oink
     SUBDIR += oleo
     SUBDIR += onednn
+    SUBDIR += onednn252
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -891,6 +897,7 @@
     SUBDIR += py-cmaes
     SUBDIR += py-cmyt
     SUBDIR += py-colormath
+    SUBDIR += py-contourpy
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
@@ -913,6 +920,7 @@
     SUBDIR += py-formulaic
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
+    SUBDIR += py-fsph
     SUBDIR += py-fvcore
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
@@ -940,6 +948,7 @@
     SUBDIR += py-libpoly
     SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
+    SUBDIR += py-lrcalc
     SUBDIR += py-luminol
     SUBDIR += py-mapbox-earcut
     SUBDIR += py-mathics
@@ -951,6 +960,8 @@
     SUBDIR += py-minorminer
     SUBDIR += py-mip
     SUBDIR += py-mixsimulator
+    SUBDIR += py-ml-dtypes
+    SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
@@ -982,6 +993,7 @@
     SUBDIR += py-pplpy
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
+    SUBDIR += py-py-find-1st
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyaudi
     SUBDIR += py-pybloom

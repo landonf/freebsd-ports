@@ -1,6 +1,6 @@
 PORTNAME?=		mysql
-PORTVERSION=		8.0.31
-PORTREVISION?=		0
+PORTVERSION=		8.0.32
+PORTREVISION?=		3
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -12,13 +12,11 @@ WWW=		https://www.mysql.com/
 
 LICENSE=		GPLv2
 
-BROKEN_i386=	--yplg_out: protoc-gen-yplg: Plugin killed by signal 11.
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 SLAVEDIRS=	databases/mysql80-client
-USES=		bison:build cmake:noninja compiler:c++17-lang cpe \
-		groff:run libedit localbase ncurses perl5 pkgconfig shebangfix ssl
+USES=		bison:build cmake:noninja cpe groff:run libedit localbase \
+		ncurses perl5 pkgconfig shebangfix ssl
 
 CPE_VENDOR=	oracle
 
@@ -34,7 +32,6 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libicutu.so:devel/icu \
 		liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd \
-		libprotobuf.so:devel/protobuf \
 		libfido2.so:security/libfido2 \
 		libhidapi.so:comms/hidapi \
 		${LIB_DEPENDS_${ARCH}}
@@ -42,6 +39,7 @@ LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_amd64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_armv7=	libunwind.so:devel/libunwind
 LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc=		libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64=		libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
 
@@ -51,11 +49,12 @@ BUILD_DEPENDS_aarch64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_amd64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_armv7=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_i386=	libunwind>0:devel/libunwind
+BUILD_DEPENDS_powerpc=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_powerpc64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_powerpc64le=	libunwind>0:devel/libunwind
 
 CMAKE_BUILD_TYPE=	Release
-CFLAGS+=		-fPIC -malign-double
+CFLAGS+=		-fPIC
 CFLAGS_aarch64?=	-march=armv8-a+crc+crypto
 
 CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
@@ -66,6 +65,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
 		-DINSTALL_INFODIR="${INFO_PATH}" \
 		-DINSTALL_LIBDIR="lib/mysql" \
+		-DINSTALL_PRIV_LIBDIR="lib/mysql/private" \
 		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="${MY_DBDIR}" \
 		-DINSTALL_MYSQLKEYRINGDIR="etc/mysql/keyring" \
@@ -86,7 +86,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DWITH_ICU=system \
 		-DWITH_CURL=system \
 		-DWITH_ZSTD=system \
-		-DWITH_PROTOBUF=system \
+		-DWITH_PROTOBUF=bundled \
 		-DWITH_SSL=system \
 		-DWITH_AUTHENTICATION_FIDO=1 \
 		-DBUILD_BUNDLED_ZLIB=0 \
@@ -184,6 +184,14 @@ FEDERATED_SUB_LIST_OFF+=	FEDER=""
 .if ${ARCH} == i386
 #CMAKE_ARGS+=	-DDISABLE_PSI_MEMORY=1
 SSP_UNSAFE=	yes
+.endif
+
+.if ${ARCH} == powerpc
+LDFLAGS+=	-latomic
+USES+=		compiler:gcc-c++11-lib
+.else
+CXXFLAGS+=	-malign-double
+USES+=		compiler:c++17-lang
 .endif
 
 post-extract:

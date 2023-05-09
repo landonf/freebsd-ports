@@ -1,5 +1,5 @@
 PORTNAME=	starlette
-PORTVERSION=	0.23.1
+PORTVERSION=	0.26.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,10 +11,11 @@ WWW=		https://github.com/encode/starlette
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}anyio>=3.4.0<5:devel/py-anyio@${PY_FLAVOR}
 
 USES=		python:3.7+
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
@@ -33,9 +34,5 @@ FULL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}itsdangerous>=0:security/py-itsdangerou
 .if ${PYTHON_REL} < 31000
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}typing-extensions>=3.10.0:devel/py-typing-extensions@${PY_FLAVOR}
 .endif
-
-post-patch:
-	@${RM} ${WRKSRC}/pyproject.toml
-	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
 
 .include <bsd.port.post.mk>

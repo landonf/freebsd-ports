@@ -1,5 +1,6 @@
 PORTNAME=	nim
-DISTVERSION=	1.6.10
+DISTVERSION=	1.6.12
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://nim-lang.org/download/
 
@@ -81,6 +82,7 @@ do-install:
 	# Install nim lib files
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
 	(cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/lib/${PORTNAME} "! -name libnimrtl.so")
+	${REINPLACE_CMD} 's|\.\.\/doc|/usr/local/share/doc/nim|g' ${WRKSRC}/compiler/commands.nim
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/compiler
 	(cd ${WRKSRC}/compiler && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/compiler "! -name nim ! -name nim1")
 	# Configuration files
@@ -93,15 +95,15 @@ do-install-DOCS-on:
 	${FIND} ${WRKSRC}/doc -name "*.idx" -delete
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/nim/dochack
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/dochack.nim ${STAGEDIR}${PREFIX}/share/nim/dochack
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/dochack.js ${STAGEDIR}${PREFIX}/share/nim/dochack
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/fuzzysearch.nim ${STAGEDIR}${PREFIX}/share/nim/dochack
 
 do-install-TOOLS-on:
 .for t in ${TLIST}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${t} ${STAGEDIR}${PREFIX}/bin
 .endfor
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/nim/dochack
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/dochack.nim ${STAGEDIR}${PREFIX}/share/nim/dochack
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/dochack.js ${STAGEDIR}${PREFIX}/share/nim/dochack
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/dochack/fuzzysearch.nim ${STAGEDIR}${PREFIX}/share/nim/dochack
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ./koch test all -d:release \

@@ -1,5 +1,6 @@
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
@@ -77,6 +78,7 @@ MESON_ARGS+=	-Dgallium-xa=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
 		-Dglx=disabled \
+		-Dmicrosoft-clc=disabled \
 		-Dosmesa=false
 
 .for _gd in ${ALL_GALLIUM_DRIVERS}

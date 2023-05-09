@@ -1,9 +1,6 @@
 PORTNAME=	veloren
-PORTVERSION=	s20230124
+PORTVERSION=	s20230506
 CATEGORIES=	games wayland
-.if !make(makesum)
-MASTER_SITES=	LOCAL/jbeich
-.endif
 PKGNAMESUFFIX=	-weekly
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,7 +10,8 @@ WWW=		https://veloren.net/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64
+BROKEN_aarch64=	https://github.com/rust-lang/libc/issues/3217
+ONLY_FOR_ARCHS=	aarch64 amd64 i386
 # https://gitlab.com/veloren/veloren/-/issues/1006
 ONLY_FOR_ARCHS_REASON=	unsupported platform by https://github.com/wasmerio/wasmer
 
@@ -26,16 +24,21 @@ RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-pl
 USES=		cargo xorg
 USE_XORG=	xcb
 USE_GITLAB=	yes
-GL_COMMIT=	1904740ffd6eff97d65cd853297c5de8af9316e2
+GL_COMMIT=	95a38ff8f60d8895461971eb1266a5530cca8cce
 CARGO_ENV=	VELOREN_USERDATA_STRATEGY=system SHADERC_LIB_DIR="${LOCALBASE}/lib"
 PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		bin/${PORTNAME}-voxygen \
 		share/applications/net.veloren.veloren.desktop \
+		share/metainfo/net.veloren.veloren.metainfo.xml \
 		share/pixmaps/net.veloren.veloren.png
 PORTDATA=	*
 
 CONFLICTS_INSTALL=	${PORTNAME}
 
+.if ${MACHINE_ARCH} == i386
+# Fixes error "Rust cannot catch foreign exceptions"
+CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
+.endif
 # Fixes error "Instruction does not dominate all uses!"
 LTO_UNSAFE=	yes
 
@@ -50,7 +53,7 @@ post-patch:
 		${WRKSRC}/common/build.rs
 # Extract (snapshot) version from the port instead of empty file
 	@${REINPLACE_CMD} -e '/GIT_HASH/s/=.*/= "${GL_COMMIT:C/(.{8}).*/\1/}";/' \
-		-e "/GIT_DATE.*static/s/=.*/= \"$$(date -r $$(${AWK} '/TIMESTAMP/ { print $$3 }' \
+		-e "/GIT_DATE.*static/s/=.*/= \"$$(date -ur $$(${AWK} '/TIMESTAMP/ { print $$3 }' \
 			${DISTINFO_FILE}) +'%Y-%m-%d-%H:%M')\";/" \
 		${WRKSRC}/common/src/util/mod.rs
 # Respect PREFIX != /usr/local for system assets
@@ -64,5 +67,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/applications
 	${RLN} ${STAGEDIR}${DATADIR}/assets/voxygen/*.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/metainfo
+	${RLN} ${STAGEDIR}${DATADIR}/assets/voxygen/*.metainfo.xml \
+		${STAGEDIR}${PREFIX}/share/metainfo
 
 .include <bsd.port.mk>

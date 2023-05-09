@@ -1,5 +1,5 @@
 PORTNAME=	matomo
-PORTVERSION=	4.13.0
+PORTVERSION=	4.13.3
 CATEGORIES=	www
 MASTER_SITES=	http://builds.matomo.org/
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
@@ -12,8 +12,8 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cpe shebangfix php:flavors
-USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json \
-		mbstring mcrypt memcache mysqli opcache openssl pcre pdo \
+USE_PHP=	ctype curl dom fileinfo filter gd iconv intl \
+		mbstring mcrypt memcache mysqli opcache pdo \
 		pdo_mysql posix readline session simplexml soap sockets \
 		sqlite3 tidy tokenizer xml zlib
 

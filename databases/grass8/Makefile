@@ -1,6 +1,6 @@
 PORTNAME=	grass
-DISTVERSION=	8.2.0
-PORTREVISION=	4
+DISTVERSION=	8.2.1
+PORTREVISION=	2
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \

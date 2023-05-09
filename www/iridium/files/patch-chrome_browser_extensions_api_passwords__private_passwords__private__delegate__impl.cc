@@ -1,6 +1,6 @@
---- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2023-01-17 19:19:00 UTC
+--- chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc.orig	2023-04-22 17:45:15 UTC
 +++ chrome/browser/extensions/api/passwords_private/passwords_private_delegate_impl.cc
-@@ -533,7 +533,7 @@ void PasswordsPrivateDelegateImpl::OsReauthCall(
+@@ -523,7 +523,7 @@ void PasswordsPrivateDelegateImpl::OsReauthCall(
  }
  
  void PasswordsPrivateDelegateImpl::OsReauthTimeoutCall() {

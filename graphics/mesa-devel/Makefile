@@ -1,16 +1,16 @@
 PORTNAME=	mesa
-DISTVERSION=	23.0-branchpoint-740
-DISTVERSIONSUFFIX=	-g29010669802
+DISTVERSION=	23.1-branchpoint-989
+DISTVERSIONSUFFIX=	-gcb4e4fc5de4
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	700efacda59c.patch:-p1
-PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
-PATCHFILES+=	1dc263a6b038.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/20992
+PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
+PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
+COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
 WWW=		https://www.mesa3d.org/
 
 LICENSE=	MIT
@@ -37,15 +37,18 @@ USE_LDCONFIG=	yes
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 MESON_ARGS=	-Dgallium-omx=disabled \
-		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
+		-Dandroid-libbacktrace=disabled \
+		-Dlmsensors=disabled \
+		-Dmicrosoft-clc=disabled \
+		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
-OPTIONS_DEFINE=		LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
-OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
+OPTIONS_DEFINE=		LIBUNWIND LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
+OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO OPENCL VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		GALLIUM VULKAN
 OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv hasvk radv
@@ -53,7 +56,8 @@ OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv hasvk
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
-OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus hasvk iris/}
+OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}
+OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Nx86_64:C/.+/anv iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Npowerpc64:Npowerpc64le:Nx86_64:C/.+/LIBUNWIND/}
 OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[-1]}"==${.CURDIR:T}:?COINST:}
 OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[-1]}"!=${.CURDIR:T}:?COINST:}
@@ -83,6 +87,7 @@ radv_BUILD_DEPENDS=	glslangValidator:graphics/glslang
 
 COINST_DESC=		Allow co-installation with another Mesa port
 COINST_MESON_ON=	-Degl-lib-suffix=${PKGNAMESUFFIX}
+COINST_RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri # ICD
 COINST_PLIST_SUB=	SUFFIX=${PKGNAMESUFFIX}
 COINST_SUB_FILES=	libmap.conf
 COINST_SUB_LIST=	SUFFIX=${PKGNAMESUFFIX}
@@ -101,6 +106,24 @@ ${i}_IMPLIES+=		LLVM
 .endfor
 
 LTO_MESON_TRUE=		b_lto
+
+OPENCL_DESC=		Heterogeneous computing via OpenCL (implies LLVM)
+OPENCL_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
+			libclc>0:devel/libclc \
+			spirv-tools>0:graphics/spirv-tools \
+			rustc:lang/${RUST_DEFAULT}
+OPENCL_LIB_DEPENDS=	libLLVMSPIRVLib.so.${LLVM_VERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
+OPENCL_RUN_DEPENDS=	libclc>0:devel/libclc
+OPENCL_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
+OPENCL_MESON_FALSE=	b_lundef # environ
+OPENCL_MESON_TRUE=	gallium-rusticl
+OPENCL_MESON_ON=	-Dgallium-opencl=icd
+OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
+OPENCL_VARS=		LLVM_USES=llvm:15,lib # chase libclc + rust (LTO)
+.if ${MACHINE_ARCH} != aarch64 # XXX missing in ONLY_FOR_ARCHS
+OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
+.endif
+OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIONS_GROUP_GALLIUM
 
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
@@ -143,6 +166,8 @@ post-patch:
 		${WRKSRC}/bin/git_sha1_gen.py
 
 post-patch-COINST-on:
+	@${MV} ${WRKSRC}/src/gallium/targets/opencl/MesaOpenCL.def.in \
+		${WRKSRC}/src/gallium/targets/opencl/MesaOpenCL${PKGNAMESUFFIX}.def.in
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
 		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
 	@${MV} ${WRKSRC}/src/util/00-radv-defaults.conf \
@@ -150,6 +175,6 @@ post-patch-COINST-on:
 
 post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
-		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf.sample
+		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf
 
 .include <bsd.port.mk>

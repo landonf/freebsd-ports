@@ -1,5 +1,5 @@
 PORTNAME=	installer
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,11 +12,13 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		python:3.7+
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	allflavors autoplist concurrent pep517
 
+MAKE_ENV=	PYTHONPATH=${WRKSRC}/src
 NO_ARCH=	yes
 
-post-patch:
-	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
+PEP517_BUILD_CMD=	${PYTHON_CMD} -m flit_core.wheel
+PEP517_BUILD_DEPEND=	${PYTHON_PKGNAMEPREFIX}flit-core>=3.2.0<4:devel/py-flit-core@${PY_FLAVOR}
+PEP517_INSTALL_DEPEND=	# empty
 
 .include <bsd.port.mk>

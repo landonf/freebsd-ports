@@ -1,6 +1,6 @@
---- ui/gl/gl_implementation.cc.orig	2022-10-29 17:50:56 UTC
+--- ui/gl/gl_implementation.cc.orig	2023-05-05 12:12:41 UTC
 +++ ui/gl/gl_implementation.cc
-@@ -287,7 +287,7 @@ GetRequestedGLImplementationFromCommandLine(
+@@ -281,7 +281,7 @@ GetRequestedGLImplementationFromCommandLine(
    *fallback_to_software_gl = false;
    bool overrideUseSoftwareGL =
        command_line->HasSwitch(switches::kOverrideUseSoftwareGLForTests);

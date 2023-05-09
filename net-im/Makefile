@@ -28,6 +28,7 @@
     SUBDIR += gomuks
     SUBDIR += gotktrix
     SUBDIR += gotosocial
+    SUBDIR += gtkcord4
     SUBDIR += icmpchat
     SUBDIR += icqlib
     SUBDIR += jabberd
@@ -163,6 +164,7 @@
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
+    SUBDIR += teleirc
     SUBDIR += telepathy-accounts-signon
     SUBDIR += telepathy-farstream
     SUBDIR += telepathy-gabble
@@ -177,6 +179,7 @@
     SUBDIR += tg_owt
     SUBDIR += tkabber
     SUBDIR += tkabber-plugins
+    SUBDIR += tokodon
     SUBDIR += toot
     SUBDIR += tox
     SUBDIR += tox_extension_messages

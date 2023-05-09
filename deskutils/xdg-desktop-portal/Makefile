@@ -1,5 +1,6 @@
 PORTNAME=	xdg-desktop-portal
 PORTVERSION=	1.16.0
+PORTREVISION=	1
 CATEGORIES=	deskutils wayland
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -20,6 +21,8 @@ USE_GNOME=	glib20
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	flatpak
+
+MESON_ARGS=	-Ddocbook-docs=disabled -Dsystemd=disabled
 
 .include <bsd.port.pre.mk>
 

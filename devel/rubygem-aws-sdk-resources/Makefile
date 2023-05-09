@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.157.0
+PORTVERSION=	3.163.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -64,6 +64,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-cloudsearch>=1<2:devel/rubygem-aws-sdk-cloudsearch \
 		rubygem-aws-sdk-cloudsearchdomain>=1<2:devel/rubygem-aws-sdk-cloudsearchdomain \
 		rubygem-aws-sdk-cloudtrail>=1<2:devel/rubygem-aws-sdk-cloudtrail \
+		rubygem-aws-sdk-cloudtraildata>=1<2:devel/rubygem-aws-sdk-cloudtraildata \
 		rubygem-aws-sdk-cloudwatch>=1<2:devel/rubygem-aws-sdk-cloudwatch \
 		rubygem-aws-sdk-cloudwatchevents>=1<2:devel/rubygem-aws-sdk-cloudwatchevents \
 		rubygem-aws-sdk-cloudwatchevidently>=1<2:devel/rubygem-aws-sdk-cloudwatchevidently \
@@ -160,6 +161,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-importexport>=1<2:devel/rubygem-aws-sdk-importexport \
 		rubygem-aws-sdk-inspector>=1<2:devel/rubygem-aws-sdk-inspector \
 		rubygem-aws-sdk-inspector2>=1<2:devel/rubygem-aws-sdk-inspector2 \
+		rubygem-aws-sdk-internetmonitor>=1<2:devel/rubygem-aws-sdk-internetmonitor \
 		rubygem-aws-sdk-iot>=1<2:devel/rubygem-aws-sdk-iot \
 		rubygem-aws-sdk-iot1clickdevicesservice>=1<2:devel/rubygem-aws-sdk-iot1clickdevicesservice \
 		rubygem-aws-sdk-iot1clickprojects>=1<2:devel/rubygem-aws-sdk-iot1clickprojects \
@@ -179,6 +181,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-iotwireless>=1<2:devel/rubygem-aws-sdk-iotwireless \
 		rubygem-aws-sdk-ivs>=1<2:devel/rubygem-aws-sdk-ivs \
 		rubygem-aws-sdk-ivschat>=1<2:devel/rubygem-aws-sdk-ivschat \
+		rubygem-aws-sdk-ivsrealtime>=1<2:devel/rubygem-aws-sdk-ivsrealtime \
 		rubygem-aws-sdk-kafka>=1<2:devel/rubygem-aws-sdk-kafka \
 		rubygem-aws-sdk-kafkaconnect>=1<2:devel/rubygem-aws-sdk-kafkaconnect \
 		rubygem-aws-sdk-kendra>=1<2:devel/rubygem-aws-sdk-kendra \
@@ -248,6 +251,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-opsworks>=1<2:devel/rubygem-aws-sdk-opsworks \
 		rubygem-aws-sdk-opsworkscm>=1<2:devel/rubygem-aws-sdk-opsworkscm \
 		rubygem-aws-sdk-organizations>=1<2:devel/rubygem-aws-sdk-organizations \
+		rubygem-aws-sdk-osis>=1<2:devel/rubygem-aws-sdk-osis \
 		rubygem-aws-sdk-outposts>=1<2:devel/rubygem-aws-sdk-outposts \
 		rubygem-aws-sdk-panorama>=1<2:devel/rubygem-aws-sdk-panorama \
 		rubygem-aws-sdk-personalize>=1<2:devel/rubygem-aws-sdk-personalize \
@@ -331,11 +335,13 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-textract>=1<2:devel/rubygem-aws-sdk-textract \
 		rubygem-aws-sdk-timestreamquery>=1<2:devel/rubygem-aws-sdk-timestreamquery \
 		rubygem-aws-sdk-timestreamwrite>=1<2:devel/rubygem-aws-sdk-timestreamwrite \
+		rubygem-aws-sdk-tnb>=1<2:devel/rubygem-aws-sdk-tnb \
 		rubygem-aws-sdk-transcribeservice>=1<2:devel/rubygem-aws-sdk-transcribeservice \
 		rubygem-aws-sdk-transcribestreamingservice>=1<2:devel/rubygem-aws-sdk-transcribestreamingservice \
 		rubygem-aws-sdk-transfer>=1<2:devel/rubygem-aws-sdk-transfer \
 		rubygem-aws-sdk-translate>=1<2:devel/rubygem-aws-sdk-translate \
 		rubygem-aws-sdk-voiceid>=1<2:devel/rubygem-aws-sdk-voiceid \
+		rubygem-aws-sdk-vpclattice>=1<2:devel/rubygem-aws-sdk-vpclattice \
 		rubygem-aws-sdk-waf>=1<2:devel/rubygem-aws-sdk-waf \
 		rubygem-aws-sdk-wafregional>=1<2:devel/rubygem-aws-sdk-wafregional \
 		rubygem-aws-sdk-wafv2>=1<2:devel/rubygem-aws-sdk-wafv2 \

@@ -9,7 +9,11 @@ WWW=		https://github.com/mmatuska/relayd
 
 LICENSE=	ISCL
 
+BROKEN=		fails to build
+
 USES=		ssl uidfix
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	Fails to build with OpenSSL 3.0.0 and later
 USE_GITHUB=	yes
 GH_ACCOUNT=	mmatuska
 

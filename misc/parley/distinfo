@@ -1,3 +1,3 @@
-TIMESTAMP = 1672732011
-SHA256 (KDE/release-service/22.12.1/parley-22.12.1.tar.xz) = 8b76fac515bf7f244f77f48faf7abcb62936fff0c7d01db0b4d6473a16f5f809
-SIZE (KDE/release-service/22.12.1/parley-22.12.1.tar.xz) = 8592408
+TIMESTAMP = 1681548303
+SHA256 (KDE/release-service/23.04.0/parley-23.04.0.tar.xz) = c24bfe8fe55d9e51272f855ed2a897cec272fbc7d057e6a2381447e988023d95
+SIZE (KDE/release-service/23.04.0/parley-23.04.0.tar.xz) = 8594460

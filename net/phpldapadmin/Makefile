@@ -1,5 +1,5 @@
 PORTNAME=	phpldapadmin
-PORTVERSION=	1.2.6.4
+PORTVERSION=	1.2.6.5
 CATEGORIES=	net www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -15,7 +15,7 @@ CPE_VENDOR=	phpldapadmin_project
 USE_GITHUB=	yes
 GH_ACCOUNT=	leenooks
 GH_PROJECT=	phpLDAPadmin
-USE_PHP=	gettext hash iconv ldap openssl pcre session xml
+USE_PHP=	gettext iconv ldap session xml
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -44,15 +44,13 @@ SUB_FILES+=	pkg-message
 post-patch:
 	cd ${WRKSRC} ;							    \
 	${FIND} . ! -type d ! -name ${CFGFILE}.example ! -name .cvsignore   \
-	    ! -name .gitignore ! -name *.orig 				    \
-	    ! -name Attribute.php | ${SORT} |				    \
-	    ${SED} -e "s!^\.!${WWWDIR_REL}!"			>${PLIST} ;
+	    ! -name .gitignore ! -name *.orig | ${SORT}			    \
+	    | ${SED} -e "s!^\.!${WWWDIR_REL}!"			>${PLIST} ;
 
 do-install:
 	cd ${WRKSRC} ;					 \
 	for src in $$( ${FIND} . ! -name .cvsignore	 \
-		! -name .gitignore ! -name *.orig	 \
-		! -name Attribute.php) ; do		 \
+		! -name .gitignore ! -name *.orig) ; do	 \
 	    dst=${STAGEDIR}${WWWDIR}$${src#.} ;		 \
 	    if ${TEST} -d $$src ; then			 \
 		${MKDIR} $$dst ;			 \

@@ -1,4 +1,4 @@
---- content/renderer/render_process_impl.cc.orig	2023-01-13 08:56:02 UTC
+--- content/renderer/render_process_impl.cc.orig	2023-05-05 12:12:41 UTC
 +++ content/renderer/render_process_impl.cc
 @@ -46,7 +46,7 @@
  #if BUILDFLAG(IS_WIN)
@@ -9,18 +9,9 @@
  #include "v8/include/v8-wasm-trap-handler-posix.h"
  #endif
  
-@@ -154,7 +154,7 @@ RenderProcessImpl::RenderProcessImpl()
-   SetV8FlagIfNotFeature(features::kWebAssemblyCodeProtection,
-                         "--no-wasm-write-protect-code-memory");
- 
--#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(ARCH_CPU_X86_64)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_X86_64)
-   SetV8FlagIfFeature(features::kWebAssemblyCodeProtectionPku,
-                      "--wasm-memory-protection-keys");
-   SetV8FlagIfNotFeature(features::kWebAssemblyCodeProtectionPku,
-@@ -224,7 +224,7 @@ RenderProcessImpl::RenderProcessImpl()
-   SetV8FlagIfNotFeature(features::kWebAssemblyDynamicTiering,
-                         "--no-wasm-dynamic-tiering");
+@@ -231,7 +231,7 @@ RenderProcessImpl::RenderProcessImpl()
+     v8::V8::SetFlagsFromString(kSABPerContextFlag, sizeof(kSABPerContextFlag));
+   }
  
 -#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && defined(ARCH_CPU_X86_64)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && defined(ARCH_CPU_X86_64)

@@ -69,6 +69,7 @@
     SUBDIR += etherape
     SUBDIR += ettercap
     SUBDIR += fastnetmon
+    SUBDIR += fence-agents
     SUBDIR += fetchconfig
     SUBDIR += flow-tools
     SUBDIR += flowd
@@ -129,6 +130,7 @@
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mac-telnet
+    SUBDIR += makenl
     SUBDIR += mbrowse
     SUBDIR += mdata-client
     SUBDIR += metronome
@@ -204,6 +206,7 @@
     SUBDIR += nfsen
     SUBDIR += ng_ipacct
     SUBDIR += nitpicker
+    SUBDIR += nrpe
     SUBDIR += nrpe3
     SUBDIR += nsca
     SUBDIR += nsca-client
@@ -420,5 +423,10 @@
     SUBDIR += zabbix62-java
     SUBDIR += zabbix62-proxy
     SUBDIR += zabbix62-server
+    SUBDIR += zabbix64-agent
+    SUBDIR += zabbix64-frontend
+    SUBDIR += zabbix64-java
+    SUBDIR += zabbix64-proxy
+    SUBDIR += zabbix64-server
 
 .include <bsd.port.subdir.mk>

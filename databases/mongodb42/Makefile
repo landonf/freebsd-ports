@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	4.2.23
+DISTVERSION=	4.2.24
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -21,6 +21,8 @@ LICENSE_NAME_SSPLv1=	Server Side Public License
 LICENSE_FILE_SSPLv1=	${WRKSRC}/LICENSE-Community.txt
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+DEPRECATED=	Upstream EOL reached on 2023-04-30
+EXPIRATION_DATE=	2023-09-30
 ONLY_FOR_ARCHS=	aarch64 amd64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	only ported to amd64, aarch64, and powerpc64le on FreeBSD; upstream supports arm64, ppc64le, s390x, and x86-64
 

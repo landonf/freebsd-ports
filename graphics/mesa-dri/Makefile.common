@@ -12,7 +12,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	22.3.4
+MESABASEVERSION=	22.3.7
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -30,8 +30,7 @@ LICENSE_FILE=	${WRKSRC}/docs/license.rst
 
 COMPONENT=	${PORTNAME:tl:C/^lib//:C/mesa-//}
 
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:devel/libpthread-stubs \
-		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS+=	libexpat.so:textproc/expat2
 .if ${COMPONENT} != clover
 .if ${PORT_OPTIONS:MPLATFORM_X11}
@@ -41,7 +40,7 @@ USES+=	xorg
 .if ${COMPONENT} != osmesa
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 .endif
-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
 .if ${OPSYS} == DragonFly

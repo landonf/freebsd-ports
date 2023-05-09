@@ -1,9 +1,9 @@
 PORTNAME=	appointments
-PORTVERSION=	1.14.10
+PORTVERSION=	1.14.14
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/raw/${DISTVERSIONPREFIX}${DISTVERSION}/build/artifacts/appstore/
-DISTNAME=	${PORTNAME}
 DISTVERSIONPREFIX=	v
+DISTNAME=	${PORTNAME}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Appointments app for Nextcloud
@@ -12,7 +12,7 @@ WWW=		https://apps.nextcloud.com/apps/appointments
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NEXTCLOUD_RUN_DEPENDS=	22
+NEXTCLOUD_RUN_DEPENDS=	24
 
 USES=		nextcloud php:flavors
 

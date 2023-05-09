@@ -1,10 +1,11 @@
 PORTNAME=	docker
 PORTVERSION=	6.0.1
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Python library for the Docker Engine API
 WWW=		https://github.com/docker/docker-py
 

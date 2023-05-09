@@ -1,11 +1,10 @@
 PORTNAME=	consul-template
 PORTVERSION=	0.29.4
-PORTREVISION=	3
+PORTREVISION=	8
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
-MAINTAINER=	swills@FreeBSD.org
-# co-maintainer: brd
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Generic template rendering and notifications with Consul
 WWW=		https://github.com/hashicorp/consul-template
 
@@ -29,7 +28,7 @@ GH_TUPLE=	hashicorp:${PORTNAME}:${DISTVERSIONPREFIX}${PORTVERSION}:DEFAULT/src/g
 		golang:net:e18ecbb05110:golang_net/vendor/golang.org/x/net \
 		golang:protobuf:v1.5.2:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:snappy:v0.0.2:golang_snappy/vendor/github.com/golang/snappy \
-		golang:sys:1d35b9e2eb4e:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:v0.6.0:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
 		golang:time:3af7569d3a1e:golang_time/vendor/golang.org/x/time \
 		google:go-genproto:cb27e3aa2013:google_go_genproto/vendor/google.golang.org/genproto \

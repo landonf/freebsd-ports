@@ -1,5 +1,5 @@
 PORTNAME=	node
-PORTVERSION=	19.5.0
+PORTVERSION=	19.9.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=	libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js ${PORTVERSION:R:R}.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
+DEPRECATED=	Nodejs 19.* will reach its EoL on 2023-06-01. Use Node.js 18.* (www/node18) or 20.* (www/node20) instead
+EXPIRATION_DATE=2023-06-30
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	brotli>=1.0.9,1:archivers/brotli \
@@ -27,7 +29,7 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6-3.10,build shebangfix
+USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build shebangfix
 
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
@@ -37,9 +39,9 @@ CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-zlib \
 		--without-npm
 HAS_CONFIGURE=	yes
-MAKE_ENV=	CC.host="${CC}" \
+MAKE_ENV=	CC.host="${CCACHE_BIN} ${CC}" \
 		CFLAGS.host="${CFLAGS}" \
-		CXX.host="${CXX}" \
+		CXX.host="${CCACHE_BIN} ${CXX}" \
 		CXXFLAGS.host="${CXXFLAGS}" \
 		LDFLAGS.host="${LDFLAGS}" \
 		LINK.host="${CXX}"

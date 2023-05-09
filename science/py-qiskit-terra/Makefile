@@ -1,5 +1,6 @@
 PORTNAME=	qiskit-terra
-DISTVERSION=	0.23.0
+DISTVERSION=	0.23.3
+PORTREVISION=	2
 CATEGORIES=	science python # quantum-computing
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -70,11 +71,11 @@ CARGO_CRATES=	ahash-0.7.6 \
 		ppv-lite86-0.2.16 \
 		priority-queue-1.2.0 \
 		proc-macro2-1.0.47 \
-		pyo3-0.18.0 \
-		pyo3-build-config-0.18.0 \
-		pyo3-ffi-0.18.0 \
-		pyo3-macros-0.18.0 \
-		pyo3-macros-backend-0.18.0 \
+		pyo3-0.18.1 \
+		pyo3-build-config-0.18.1 \
+		pyo3-ffi-0.18.1 \
+		pyo3-macros-0.18.1 \
+		pyo3-macros-backend-0.18.1 \
 		quote-1.0.21 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \

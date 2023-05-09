@@ -28,6 +28,9 @@
     SUBDIR += bitmap
     SUBDIR += bmpanel2
     SUBDIR += brisk-menu
+    SUBDIR += budgie
+    SUBDIR += budgie-desktop
+    SUBDIR += budgie-screensaver
     SUBDIR += cde
     SUBDIR += cde-24
     SUBDIR += cde-25
@@ -109,10 +112,12 @@
     SUBDIR += gtkterm2
     SUBDIR += guake
     SUBDIR += gxkb
+    SUBDIR += habak
     SUBDIR += hamclock
     SUBDIR += hhpc
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
+    SUBDIR += hybrid-bar
     SUBDIR += hyprland-share-picker
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
@@ -179,7 +184,6 @@
     SUBDIR += libXxf86dga
     SUBDIR += libXxf86vm
     SUBDIR += libclipboard
-    SUBDIR += libdmx
     SUBDIR += libexo
     SUBDIR += libfakekey
     SUBDIR += libfm
@@ -294,10 +298,10 @@
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen
     SUBDIR += plasma5-kwayland-integration
-    SUBDIR += plasma5-kwayland-server
     SUBDIR += plasma5-layer-shell-qt
     SUBDIR += plasma5-libkscreen
     SUBDIR += plasma5-plasma
+    SUBDIR += plasma5-plasma-bigscreen
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
@@ -308,7 +312,11 @@
     SUBDIR += py-caffeine-ng
     SUBDIR += py-i3-quickterm
     SUBDIR += py-i3ipc
+    SUBDIR += py-mouseinfo
+    SUBDIR += py-pyautogui
+    SUBDIR += py-pynput
     SUBDIR += py-pyscreenshot
+    SUBDIR += py-pyscreeze
     SUBDIR += py-python-xapp
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-screeninfo
@@ -379,6 +387,7 @@
     SUBDIR += swayrbar
     SUBDIR += swaysettings
     SUBDIR += sxhkd
+    SUBDIR += sxmo-wayout
     SUBDIR += sxpc
     SUBDIR += tabbed
     SUBDIR += taiga
@@ -406,6 +415,7 @@
     SUBDIR += way-displays
     SUBDIR += waybar
     SUBDIR += wayland-logout
+    SUBDIR += waylock
     SUBDIR += wayout
     SUBDIR += wbar
     SUBDIR += wcm
@@ -425,6 +435,7 @@
     SUBDIR += wmcliphist
     SUBDIR += wmctrl
     SUBDIR += wmdrawer
+    SUBDIR += wmenu
     SUBDIR += wmfocus
     SUBDIR += wmsystemtray
     SUBDIR += wmutils-core

@@ -1,5 +1,6 @@
 PORTNAME=	spacezero
 PORTVERSION=	0.86.01
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20${PORTVERSION:R}/
 
@@ -11,6 +12,10 @@ LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis
+
+BROKEN=		Error: no fonts found in your system
+DEPRECATED=	broken, abandoned upstream, depends on deprecated gtk2
+EXPIRATION_DATE=2023-06-03
 
 USES=		openal:al,alut gnome pkgconfig xorg
 USE_GNOME=	gtk20

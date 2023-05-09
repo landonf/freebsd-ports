@@ -19,6 +19,8 @@
     SUBDIR += bijiben
     SUBDIR += birdtray
     SUBDIR += bookworm
+    SUBDIR += budgie-desktop-view
+    SUBDIR += budgie-trash-applet
     SUBDIR += cairo-dock
     SUBDIR += cairo-dock-plugins
     SUBDIR += caja-extensions
@@ -114,10 +116,6 @@
     SUBDIR += health
     SUBDIR += hebcal
     SUBDIR += helpviewer
-    SUBDIR += horde-groupware
-    SUBDIR += horde-kronolith
-    SUBDIR += horde-mnemo
-    SUBDIR += horde-nag
     SUBDIR += hot-babe
     SUBDIR += howm
     SUBDIR += hs-arbtt
@@ -140,6 +138,7 @@
     SUBDIR += kdepim-addons
     SUBDIR += kdepim-runtime
     SUBDIR += keditbookmarks
+    SUBDIR += keep-presence
     SUBDIR += kfind
     SUBDIR += kmail
     SUBDIR += kmail-account-wizard
@@ -157,6 +156,9 @@
     SUBDIR += libcprime
     SUBDIR += libkdepim
     SUBDIR += libportal
+    SUBDIR += libportal-gtk3
+    SUBDIR += libportal-gtk4
+    SUBDIR += libportal-qt5
     SUBDIR += ljclive
     SUBDIR += lumina-archiver
     SUBDIR += lumina-calculator
@@ -242,6 +244,7 @@
     SUBDIR += sliderule
     SUBDIR += solanum
     SUBDIR += sowon
+    SUBDIR += spacefm
     SUBDIR += spice-gtk
     SUBDIR += subsurface
     SUBDIR += synapse

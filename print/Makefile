@@ -56,6 +56,7 @@
     SUBDIR += fpdf
     SUBDIR += freetype2
     SUBDIR += ft2demos
+    SUBDIR += ghostscript10
     SUBDIR += ghostscript7-base
     SUBDIR += ghostscript7-commfont
     SUBDIR += ghostscript7-jpnfont
@@ -65,8 +66,6 @@
     SUBDIR += ghostscript8-x11
     SUBDIR += ghostscript9-agpl-base
     SUBDIR += ghostscript9-agpl-x11
-    SUBDIR += ghostscript9-base
-    SUBDIR += ghostscript9-x11
     SUBDIR += gimp-gutenprint
     SUBDIR += gl2ps
     SUBDIR += gsfonts
@@ -75,7 +74,7 @@
     SUBDIR += gutenprint
     SUBDIR += gv
     SUBDIR += harfbuzz
-    SUBDIR += harfbuzz-hb-view
+    SUBDIR += harfbuzz-cairo
     SUBDIR += harfbuzz-icu
     SUBDIR += hp2xx
     SUBDIR += hplip
@@ -187,6 +186,7 @@
     SUBDIR += py-preppy
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
+    SUBDIR += py-pydyf
     SUBDIR += py-pypdf
     SUBDIR += py-pypdf2
     SUBDIR += py-pypdf3
@@ -231,6 +231,7 @@
     SUBDIR += sgf2tex
     SUBDIR += shrinkpdf
     SUBDIR += simple-fb2-reader
+    SUBDIR += sioyek
     SUBDIR += splix
     SUBDIR += system-config-printer
     SUBDIR += t1utils

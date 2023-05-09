@@ -1,5 +1,5 @@
 PORTNAME=	pyradio
-DISTVERSION=	0.9.0
+DISTVERSION=	0.9.2.5
 PORTREVISION=	1
 CATEGORIES=	audio python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,13 +12,16 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}dnspython>=2.2.1:dns/py-dnspython@${PY_FLAVOR} \
+		${PKGNAMEPREFIX}netifaces>=0.11.0:net/py-netifaces@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}psutil>=5.9.2:sysutils/py-psutil@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}requests>=2.28.1:www/py-requests@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}wheel>=0.38.4:devel/py-wheel@${PY_FLAVOR} \
 		bash:shells/bash
 RUN_DEPENDS=	${PKGNAMEPREFIX}dnspython>=2.2.1:dns/py-dnspython@${PY_FLAVOR} \
+		${PKGNAMEPREFIX}netifaces>=0.11.0:net/py-netifaces@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}psutil>=5.9.2:sysutils/py-psutil@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}requests>=2.28.1:www/py-requests@${PY_FLAVOR} \
+		${PKGNAMEPREFIX}rich>=13.3.2:textproc/py-rich@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}wheel>=0.38.4:devel/py-wheel@${PY_FLAVOR} \
 		bash:shells/bash
 
@@ -51,8 +54,6 @@ post-patch:
 	@${SED} -i.bak -e 's/\(distro =\) None/\1 ${OPSYS}/' \
 	 -e 's/\(enable_notifications =\) -1/\1 0/' \
 	 	${WRKSRC}/pyradio/config
-	@${SED} -i.bak -e "s,/usr/local/share/icons\(/pyradio.png\),${PREFIX}/share/pixmaps\1,1" \
-		${WRKSRC}/pyradio/log.py
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/devel/${PORTNAME}.desktop \

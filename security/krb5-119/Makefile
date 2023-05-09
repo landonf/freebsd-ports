@@ -22,6 +22,8 @@ KERBEROSV_URL=		http://web.mit.edu/kerberos/
 USES=			compiler:c++11-lang cpe gmake gettext-runtime \
 			gssapi:bootstrap,mit libtool:build localbase \
 			perl5 pkgconfig ssl
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	Requires OpenSSL 3.0.0 deprecated RSA_ routines
 USE_CSTD=		gnu99
 USE_LDCONFIG=		yes
 USE_PERL5=		build
@@ -46,7 +48,7 @@ KRB5_HTML_DESC=		Install krb5 HTML documentation
 DNS_FOR_REALM_DESC=	Enable DNS lookups for Kerberos realm names
 DNS_FOR_REALM_CONFIGURE_ENABLE=	dns-for-realm
 LDAP=			Enable LDAP support
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_WITH=	ldap
 LMDB_DESC=		OpenLDAP Lightning Memory-Mapped Database support
 LMDB_CONFIGURE_WITH=	lmdb

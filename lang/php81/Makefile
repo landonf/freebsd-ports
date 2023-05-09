@@ -1,5 +1,5 @@
 PORTNAME=	php81
-DISTVERSION=	8.1.14
+DISTVERSION=	8.1.18
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -363,8 +363,7 @@ BUILD_DEPENDS=		re2c:devel/re2c
 .if ${PHP_MODNAME} == "ldap"
 CONFIGURE_ARGS+=	--with-ldap-sasl=${LOCALBASE} \
 			--with-ldap=${LOCALBASE}
-
-USE_OPENLDAP=	yes
+USES+=	ldap
 .endif
 
 .if ${PHP_MODNAME} == "mbstring"
@@ -616,6 +615,10 @@ USES+=			pkgconfig
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == aarch64 && ${PHP_MODNAME} == "opcache"
+CONFIGURE_ARGS+=--disable-opcache-jit
+.endif
 
 .if ${PHP_MODNAME} == "sqlite3" || ${PHP_MODNAME} == "zlib"
 post-extract:

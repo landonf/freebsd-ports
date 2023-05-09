@@ -2,7 +2,7 @@ PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v22.0.3/:chromium \
+MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v22.2.0/:chromium \
 		https://commondatastorage.googleapis.com/chromium-nodejs/:chromium_node \
 		https://commondatastorage.googleapis.com/chromium-fonts/:chromium_testfonts
 PKGNAMESUFFIX=	${ELECTRON_VER_MAJOR}
@@ -31,7 +31,7 @@ BUILD_DEPENDS=	gperf:devel/gperf \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		node16>0:www/node16 \
 		npm-node16>0:www/npm-node16
-LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libsnappy.so:archivers/snappy \
 		libFLAC.so:audio/flac \
@@ -62,9 +62,9 @@ TEST_DEPENDS=	git:devel/git \
 		${PYTHON_PKGNAMEPREFIX}python-dbusmock>0:devel/py-python-dbusmock@${PY_FLAVOR} \
 		npm-node16>0:www/npm-node16
 
-USES=		bison compiler:c++17-lang cpe gettext-tools gl gnome iconv \
-		jpeg localbase:ldflags ninja pkgconfig python:build,test \
-		shebangfix tar:xz xorg
+USES=		bison compiler:c++17-lang cpe gettext-tools gl gnome \
+		iconv:wchar_t jpeg localbase:ldflags ninja pkgconfig \
+		python:build,test shebangfix tar:xz xorg
 
 CPE_VENDOR=	electronjs
 USE_GITHUB=	yes
@@ -205,7 +205,7 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
-CHROMIUM_VER=			108.0.5359.179
+CHROMIUM_VER=			108.0.5359.215
 # See ${WRKSRC}/third_party/node/node_modules.tar.gz.sha1 for CHROMIUM_NODE_MODULES_HASH
 CHROMIUM_NODE_MODULES_HASH=	f8b5da24d33317766d3933fb6711b0603fc4fb6f
 # See ${WRKSRC}/third_party/test_fonts/test_fonts.tar.gz.sha1 for CHROMIUM_TEST_FONTS_HASH
@@ -221,14 +221,10 @@ REACTIVEOBJC_VER=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 # See ${WRKSRC}/electron/DEPS for MANTLE_VER
 MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 
-YARN_TIMESTAMP=	1675054791
+YARN_TIMESTAMP=	1683167496
 
 .include "Makefile.version"
-.include <bsd.port.pre.mk>
-
-.if ${OSREL} == "12.3"
-IGNORE=		does not compile, libc++ too old
-.endif
+.include <bsd.port.pre.mk> # required for COMPILER_VERSION
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base

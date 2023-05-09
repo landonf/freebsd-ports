@@ -1,6 +1,5 @@
     COMMENT = CAD tools
 
-    SUBDIR += NASTRAN-95
     SUBDIR += PrusaSlicer
     SUBDIR += abc
     SUBDIR += admesh
@@ -37,10 +36,12 @@
     SUBDIR += freehdl
     SUBDIR += fritzing
     SUBDIR += gds3d
+    SUBDIR += gdscpp
     SUBDIR += gdsreader
     SUBDIR += gdt
     SUBDIR += geda
     SUBDIR += gerbv
+    SUBDIR += ghdl
     SUBDIR += gmsh
     SUBDIR += gnucap
     SUBDIR += gplcver
@@ -48,6 +49,7 @@
     SUBDIR += gspiceui
     SUBDIR += gtkwave
     SUBDIR += horizon-eda
+    SUBDIR += hs-verismith
     SUBDIR += ifcopenshell
     SUBDIR += impact
     SUBDIR += irsim
@@ -102,6 +104,7 @@
     SUBDIR += pcb-rnd
     SUBDIR += pdnmesh
     SUBDIR += py-cadquery
+    SUBDIR += py-cocotb
     SUBDIR += py-cq-editor
     SUBDIR += py-edalize
     SUBDIR += py-ezdxf

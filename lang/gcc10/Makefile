@@ -1,5 +1,6 @@
 PORTNAME=	gcc
 PORTVERSION=	10.4.0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -76,6 +77,7 @@ CONFIGURE_ARGS+=--disable-bootstrap
 .else
 CONFIGURE_ARGS+=--with-build-config=bootstrap-debug
 ALL_TARGET=	bootstrap-lean
+PIE_UNSAFE=    yes
 .endif
 INSTALL_TARGET=	install-strip
 .if ${UID} != 0

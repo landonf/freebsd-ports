@@ -5,6 +5,7 @@
     SUBDIR += aclgen
     SUBDIR += actiona
     SUBDIR += adios2
+    SUBDIR += aichat
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -24,6 +25,7 @@
     SUBDIR += biblesync
     SUBDIR += bibletime
     SUBDIR += biblical-curse
+    SUBDIR += binbloom
     SUBDIR += binclock
     SUBDIR += binocle
     SUBDIR += biosfont-demos
@@ -36,6 +38,7 @@
     SUBDIR += bsod
     SUBDIR += buffer
     SUBDIR += caffe
+    SUBDIR += chatgpt-shell-cli
     SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
@@ -70,7 +73,6 @@
     SUBDIR += ctm
     SUBDIR += cuttlefish
     SUBDIR += dahdi
-    SUBDIR += dahdi-kmod
     SUBDIR += dahdi-kmod26
     SUBDIR += darknet
     SUBDIR += dartsim
@@ -82,6 +84,7 @@
     SUBDIR += digitemp
     SUBDIR += dijo
     SUBDIR += dive
+    SUBDIR += dlib-models
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -106,6 +109,7 @@
     SUBDIR += findutils
     SUBDIR += firestring
     SUBDIR += flag
+    SUBDIR += flashlight
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
     SUBDIR += fortune-mod-epictetus
@@ -154,7 +158,6 @@
     SUBDIR += gkrellshoot2
     SUBDIR += gkx86info2
     SUBDIR += global-tz
-    SUBDIR += glow
     SUBDIR += gnome-devel-docs
     SUBDIR += gnome-getting-started-docs
     SUBDIR += gnome-icon-theme
@@ -353,6 +356,7 @@
     SUBDIR += p5-Locale-US
     SUBDIR += p5-Net-vCard
     SUBDIR += p5-OSSP-uuid
+    SUBDIR += p5-OpenAI-API
     SUBDIR += p5-Software-License
     SUBDIR += p5-Software-License-CCpack
     SUBDIR += p5-Test-Dir
@@ -411,6 +415,7 @@
     SUBDIR += py-halo
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-icoextract
     SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
     SUBDIR += py-lightgbm
@@ -421,6 +426,7 @@
     SUBDIR += py-numcodecs
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
+    SUBDIR += py-openai
     SUBDIR += py-openpaperwork-core
     SUBDIR += py-openpaperwork-gtk
     SUBDIR += py-openvdb
@@ -444,10 +450,12 @@
     SUBDIR += py-pyprind
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
+    SUBDIR += py-pytorch
     SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-shap2
+    SUBDIR += py-shell-gpt
     SUBDIR += py-soapy_power
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
@@ -458,9 +466,11 @@
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
     SUBDIR += py-toil
+    SUBDIR += py-torchvision
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
     SUBDIR += py-uhi
+    SUBDIR += py-wandb
     SUBDIR += py-wurlitzer
     SUBDIR += py-xgboost
     SUBDIR += pyobd
@@ -472,6 +482,8 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qt6-doc
+    SUBDIR += qt6-examples
+    SUBDIR += qt6ct
     SUBDIR += quantum++
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
@@ -546,6 +558,7 @@
     SUBDIR += tlci
     SUBDIR += toilet
     SUBDIR += translate
+    SUBDIR += trurl
     SUBDIR += ttyrec
     SUBDIR += tudu
     SUBDIR += tvbrowser
@@ -587,6 +600,7 @@
     SUBDIR += wmtunlo
     SUBDIR += wmweather+
     SUBDIR += wmwork
+    SUBDIR += wthrr
     SUBDIR += xd-rust
     SUBDIR += xdelta
     SUBDIR += xdelta3

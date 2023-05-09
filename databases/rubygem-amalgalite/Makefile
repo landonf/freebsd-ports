@@ -1,5 +1,5 @@
 PORTNAME=	amalgalite
-PORTVERSION=	1.7.0
+PORTVERSION=	1.9.1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 

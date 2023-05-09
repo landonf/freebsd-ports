@@ -1,5 +1,6 @@
 PORTNAME=	poetry
 PORTVERSION=	1.3.2
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +13,8 @@ WWW=		https://python-poetry.org/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}CacheControl>=0.12.9<0.13.0:www/py-cachecontrol@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=1.1.0:devel/py-poetry-core@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cachecontrol>=0.12.9<0.13.0:www/py-cachecontrol@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cleo>=2.0.0<3.0.0:devel/py-cleo@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}crashtest>=0.4.1<0.5.0:devel/py-crashtest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dulwich020>=0.20.46<0.21.0:devel/py-dulwich020@${PY_FLAVOR} \
@@ -36,8 +38,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}CacheControl>=0.12.9<0.13.0:www/py-cachecont
 		${PYTHON_PKGNAMEPREFIX}virtualenv>=20.4.3<21.0.0:devel/py-virtualenv@${PY_FLAVOR}
 
 USES=		python:3.7+
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	autoplist concurrent pep517
 
+BINARY_ALIAS=	git=false
 NO_ARCH=	yes
 
 .include <bsd.port.pre.mk>
@@ -47,14 +50,11 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}backports.cached-property>=1.0.2<2.0.0:deve
 .endif
 
 .if ${PYTHON_REL} < 31000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=4.4<5.0:devel/py-importlib-metadata@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=4.4:devel/py-importlib-metadata@${PY_FLAVOR}
 .endif
 
 .if ${PYTHON_REL} < 31100
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}tomli>=2.0.1<3.0.0:textproc/py-tomli@${PY_FLAVOR}
 .endif
-
-post-patch:
-	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
 
 .include <bsd.port.post.mk>

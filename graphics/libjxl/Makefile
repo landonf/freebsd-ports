@@ -1,6 +1,6 @@
 PORTNAME=	libjxl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.0
+DISTVERSION=	0.8.1
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -19,9 +19,11 @@ CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_TUPLE=	jbeich:skcms:b25b07b:skcms/third_party/skcms \
-		libjxl:testdata:d6168ff:testdata/third_party/testdata \
+		libjxl:testdata:d6168ff:testdata/testdata \
 		webmproject:sjpeg:868ab55:sjpeg/third_party/sjpeg \
 		${NULL}
+CFLAGS_powerpc64=	-DHWY_DISABLE_PPC8_CRYPTO
+CFLAGS_powerpc=	-DHWY_DISABLE_PPC8_CRYPTO
 CMAKE_ON=	JPEGXL_ENABLE_PLUGINS
 CMAKE_OFF=	${BENCHMARK FUZZERS TCMALLOC:L:S/^/JPEGXL_ENABLE_/}
 CMAKE_OFF+=	${OpenGL GLUT:L:S/^/CMAKE_DISABLE_FIND_PACKAGE_/} # sjpeg
@@ -53,6 +55,7 @@ OPENEXR_CMAKE_BOOL=	JPEGXL_ENABLE_OPENEXR
 
 PIXBUF_USES=		gnome
 PIXBUF_USE=		GNOME=gdkpixbuf2
+PIXBUF_CMAKE_BOOL=	JPEGXL_ENABLE_PLUGIN_GDKPIXBUF
 
 PNG_LIB_DEPENDS=	libpng.so:graphics/png
 PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
@@ -60,8 +63,5 @@ PNG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_PNG
 post-patch:
 	@${REINPLACE_CMD} 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/plugins/gdk-pixbuf/jxl.thumbnailer
-
-post-patch-PIXBUF-off:
-	@${REINPLACE_CMD} -i.nopixbuf '/gdk-pixbuf/d' ${WRKSRC}/plugins/CMakeLists.txt
 
 .include <bsd.port.mk>

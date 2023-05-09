@@ -1,5 +1,5 @@
-TIMESTAMP = 1664225687
-SHA256 (go/net_geoipupdate/geoipupdate-v4.10.0/v4.10.0.mod) = e900001f4f2082bfb31c500ec26884ba98fb5ef9e9cf79fb81c7725599a2dda2
-SIZE (go/net_geoipupdate/geoipupdate-v4.10.0/v4.10.0.mod) = 436
-SHA256 (go/net_geoipupdate/geoipupdate-v4.10.0/v4.10.0.zip) = 4a5414ae09ce9e9c735f0250e81a7f1442160ecc35522ce1426118db5f68fa99
-SIZE (go/net_geoipupdate/geoipupdate-v4.10.0/v4.10.0.zip) = 52392
+TIMESTAMP = 1683563326
+SHA256 (go/net_geoipupdate/geoipupdate-v5.1.1/v5.1.1.mod) = 6be6e5d22de91ea94b660c9ec8dc7901e2e5b00c694b29ebfa8afbc09f71927b
+SIZE (go/net_geoipupdate/geoipupdate-v5.1.1/v5.1.1.mod) = 551
+SHA256 (go/net_geoipupdate/geoipupdate-v5.1.1/v5.1.1.zip) = 7e3d87dcdb0948841b032f9f471f8bfc7269e44062847af683799cac43ee9f4e
+SIZE (go/net_geoipupdate/geoipupdate-v5.1.1/v5.1.1.zip) = 62583

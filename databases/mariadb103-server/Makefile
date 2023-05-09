@@ -1,5 +1,5 @@
 PORTNAME?=	mariadb
-PORTVERSION=	10.3.37
+PORTVERSION=	10.3.38
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
@@ -30,6 +30,8 @@ SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
+IGNORE_SSL=	openssl30 openssl31
+IGNORE_SSL_REASON=	Upstream only supports OpenSSL 1.0.1 upto 1.1.X
 USE_LDCONFIG=	${PREFIX}/lib/mysql
 SHEBANG_FILES=	scripts/*.sh
 SITESDIR=	mariadb/mariadb-${PORTVERSION}/source
@@ -102,6 +104,7 @@ DISABLED_PLUGINS+=	DAEMON_EXAMPLE DIALOG_EXAMPLES EXAMPLE \
 DATADIR=	${PREFIX}/share/mysql
 
 CONFLICTS_INSTALL=	mariadb10[0-24-9]-${PKGNAMESUFFIX:C/^[0-9]*-//} \
+			mariadb1011-${PKGNAMESUFFIX:C/^[0-9]*-//} \
 			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//} \
 			mysqlwsrep*-server \
 			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}
@@ -217,7 +220,8 @@ post-install-GSSAPI_NONE-off:
 post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/share/mysql/policy \
 		${STAGEDIR}${PREFIX}/include/mysql/server/private \
-		${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig
+		${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig \
+		${STAGEDIR}${PREFIX}/libexec/rcmysql
 	${MV} ${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf \
 		${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf.sample
 .endif # ${PKGNAMESUFFIX:M*-client}

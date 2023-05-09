@@ -1,7 +1,7 @@
 PORTNAME=	pydev
-PORTVERSION=	10.1.1
+PORTVERSION=	10.1.3
 CATEGORIES=	java devel python
-MASTER_SITES=	https://github.com/fabioz/Pydev/releases/download/${PORTNAME}_10_1_1/
+MASTER_SITES=	https://github.com/fabioz/Pydev/releases/download/${PORTNAME}_10_1_3/
 PKGNAMEPREFIX=	eclipse-
 DISTNAME=	PyDev.${PORTVERSION}
 
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/eclipse:java/eclipse
 USES=		python zip
 
 USE_JAVA=	YES
-JAVA_VERSION=	1.8+
+JAVA_VERSION=	8+
 JAVA_OS=	native
 JAVA_RUN=	YES
 

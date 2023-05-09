@@ -1,6 +1,6 @@
---- ui/base/ui_base_features.cc.orig	2023-01-11 09:17:16 UTC
+--- ui/base/ui_base_features.cc.orig	2023-04-28 17:01:32 UTC
 +++ ui/base/ui_base_features.cc
-@@ -205,7 +205,7 @@ BASE_FEATURE(kExperimentalFlingAnimation,
+@@ -204,7 +204,7 @@ BASE_FEATURE(kExperimentalFlingAnimation,
               "ExperimentalFlingAnimation",
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -9,7 +9,7 @@
      (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_ASH) && \
       !BUILDFLAG(IS_CHROMEOS_LACROS))
               base::FEATURE_ENABLED_BY_DEFAULT
-@@ -307,7 +307,7 @@ bool IsForcedColorsEnabled() {
+@@ -311,7 +311,7 @@ bool IsForcedColorsEnabled() {
  // milestones.
  BASE_FEATURE(kEyeDropper,
               "EyeDropper",

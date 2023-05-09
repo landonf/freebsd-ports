@@ -1,6 +1,6 @@
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	mail
 MASTER_SITES=	EXIM:exim
 MASTER_SITE_SUBDIR=	/exim4/:exim \
@@ -54,7 +54,7 @@ ICONV_USES=	iconv:lib,build
 INTERNATIONAL_LIB_DEPENDS=	libidn.so:dns/libidn
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 MYSQL_USES=	mysql
-OPENLDAP_USE=	openldap=yes
+OPENLDAP_USES=	ldap
 PGSQL_LIB_DEPENDS=	libicudata.so:devel/icu
 PGSQL_USES=	pgsql pkgconfig
 REDIS_LIB_DEPENDS=	libhiredis.so:databases/hiredis
@@ -295,6 +295,8 @@ SEDLIST+=	-e 's,^\# (EXIM_MONITOR=),\1,'
 USES+=		ssl
 SEDLIST+=	-e 's,^\# (USE_OPENSSL=),\1,'
 SEDLIST+=	-e 's,^\# (TLS_LIBS=.*-lssl[[:space:]]),\1,'
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	error: token is not a valid binary operator in a preprocessor subexpression
 .else
 SEDLIST+=	-e 's,^\# (USE_GNUTLS=),\1,'
 SEDLIST+=	-e 's,^\# (TLS_LIBS=.*-lgnutls[[:space:]]),\1,'
@@ -319,10 +321,6 @@ SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib ${ICONV_LIB},' \
 		-e 's,^\# (HAVE_ICONV=),\1,'
 .else
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,,'
-.endif
-
-.if ${PORT_OPTIONS:MOPENLDAP_VER} && ${WITH_OPENLDAP_VER:tl} != "auto"
-WANT_OPENLDAP_VER=	${WITH_OPENLDAP_VER}
 .endif
 
 .if ${PORT_OPTIONS:MOPENLDAP}

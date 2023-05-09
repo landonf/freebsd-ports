@@ -1,12 +1,13 @@
 PORTNAME=	bindgen-cli
-DISTVERSION=	0.63.0
+DISTVERSION=	0.65.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	CRATESIO
 PKGNAMEPREFIX=	rust-
 # XXX Teach USES=cargo to have proper default
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
-MAINTAINER=	gecko@FreeBSD.org
+MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Generate Rust bindings from C (and some C++) code
 WWW=		https://github.com/rust-lang/rust-bindgen
 
@@ -18,7 +19,7 @@ PLIST_FILES=	bin/${PORTNAME:S/-cli//}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,"llvm-config,"${LLVM_CONFIG},' \
-		${WRKSRC}/cargo-crates/clang-sys-*/build/common.rs \
-		${WRKSRC}/cargo-crates/clang-sys-*/src/support.rs
+		${WRKSRC_crate_clang-sys}/build/common.rs \
+		${WRKSRC_crate_clang-sys}/src/support.rs
 
 .include <bsd.port.mk>

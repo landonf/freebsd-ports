@@ -1,10 +1,10 @@
 PORTNAME=	netdata
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.37.1
+DISTVERSION=	1.38.1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	me@forkbomb9.ch
 COMMENT=	Scalable distributed realtime performance and health monitoring
 WWW=		https://github.com/netdata/netdata
 

@@ -1,12 +1,12 @@
 PORTNAME=	petsc4py
-DISTVERSION=	3.18.3
+DISTVERSION=	3.19.0
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	PETSc for Python
-WWW=		https://bitbucket.org/petsc/petsc4py
+WWW=		https://gitlab.com/petsc/petsc
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libpetsc.so:science/PETSc
 RUN_DEPENDS=	${PYNUMPY}
 
 USES=		python:3.6+
-USE_PYTHON=	distutils autoplist pytest # tests fail to run, see https://gitlab.com/petsc/petsc/-/issues/1301
+USE_PYTHON=	distutils cython autoplist pytest # tests fail to run, see https://gitlab.com/petsc/petsc/-/issues/1301
 
 MAKE_ENV=	PETSC_DIR=${LOCALBASE}
 

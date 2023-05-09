@@ -1,9 +1,9 @@
---- headless/lib/headless_content_main_delegate.cc.orig	2022-12-02 17:56:32 UTC
+--- headless/lib/headless_content_main_delegate.cc.orig	2023-05-05 12:12:41 UTC
 +++ headless/lib/headless_content_main_delegate.cc
-@@ -336,7 +336,7 @@ void HeadlessContentMainDelegate::InitCrashReporter(
-   if (process_type != switches::kZygoteProcess) {
+@@ -337,7 +337,7 @@ void HeadlessContentMainDelegate::InitCrashReporter(
+   if (process_type != ::switches::kZygoteProcess) {
      g_headless_crash_client.Pointer()->set_crash_dumps_dir(
-         options()->crash_dumps_dir);
+         command_line.GetSwitchValuePath(switches::kCrashDumpsDir));
 -#if !BUILDFLAG(IS_WIN)
 +#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_BSD)
      crash_reporter::InitializeCrashpad(process_type.empty(), process_type);

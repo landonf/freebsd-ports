@@ -1,10 +1,11 @@
 PORTNAME=	pgbouncer
-PORTVERSION=	1.17.0
+PORTVERSION=	1.18.0
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://pgbouncer.github.io/downloads/files/${PORTVERSION}/ \
 		http://pgbouncer.github.io/downloads/files/${PORTVERSION}/
 
-MAINTAINER=	m.tsatsenko@gmail.com
+MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	Lightweight connection pooler for PostgreSQL
 WWW=		https://pgbouncer.github.io/
 

@@ -1,12 +1,14 @@
 PORTNAME=	mapclassify
 PORTVERSION=	2.5.0
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Classification schemes for choropleth maps
-WWW=		https://pysal.org/mapclassify/
+WWW=		https://pysal.org/mapclassify/ \
+		https://github.com/pysal/mapclassify
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

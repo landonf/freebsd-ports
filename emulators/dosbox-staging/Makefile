@@ -1,6 +1,7 @@
 PORTNAME=	dosbox-staging
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.80.1
+PORTREVISION=	1
 CATEGORIES=	emulators
 
 MAINTAINER=	makc@FreeBSD.org
@@ -21,7 +22,7 @@ USE_GL=		gl
 USE_SDL=	sdl2 image2 net2
 USE_GITHUB=	yes
 
-MESON_ARGS=	-Duse_mt32emu=false
+MESON_ARGS=	-Dunit_tests=disabled -Duse_mt32emu=false
 LDFLAGS+=	-pthread -lz
 
 OPTIONS_DEFINE=	ALSA DOCS FLUIDSYNTH

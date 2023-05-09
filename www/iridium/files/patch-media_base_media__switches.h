@@ -1,6 +1,6 @@
---- media/base/media_switches.h.orig	2023-01-17 19:19:00 UTC
+--- media/base/media_switches.h.orig	2023-04-22 17:45:15 UTC
 +++ media/base/media_switches.h
-@@ -217,7 +217,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseDecoderStreamFor
+@@ -277,7 +277,7 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseDecoderStreamFor
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseFakeDeviceForMediaStream);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseMediaHistoryStore);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kUseR16Texture);
@@ -9,8 +9,8 @@
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoDecodeLinux);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoDecodeLinuxGL);
  MEDIA_EXPORT BASE_DECLARE_FEATURE(kVaapiVideoEncodeLinux);
-@@ -328,11 +328,11 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(
- MEDIA_EXPORT BASE_DECLARE_FEATURE(kDeprecateLowUsageCodecs);
+@@ -396,11 +396,11 @@ MEDIA_EXPORT BASE_DECLARE_FEATURE(
+     kAllowClearDolbyVisionInMseWhenPlatformEncryptedDvEnabled);
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

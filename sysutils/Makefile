@@ -52,6 +52,7 @@
     SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += appjail
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -111,6 +112,9 @@
     SUBDIR += bareos20-client
     SUBDIR += bareos20-server
     SUBDIR += bareos20-traymonitor
+    SUBDIR += bareos21-client
+    SUBDIR += bareos21-server
+    SUBDIR += bareos21-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -131,6 +135,7 @@
     SUBDIR += bkpupsd
     SUBDIR += bksh
     SUBDIR += bkt
+    SUBDIR += blisp
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += boxbackup-devel
@@ -150,6 +155,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += budgie-control-center
     SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
@@ -160,6 +166,7 @@
     SUBDIR += byobu
     SUBDIR += calamares
     SUBDIR += catfish
+    SUBDIR += catsit
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
     SUBDIR += cbsd-mq-router
@@ -181,9 +188,11 @@
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
+    SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine318
     SUBDIR += cfengine319
     SUBDIR += cfengine320
+    SUBDIR += cfengine321
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -287,7 +296,6 @@
     SUBDIR += diskimage-tools
     SUBDIR += diskonaut
     SUBDIR += diskscrub
-    SUBDIR += disktype
     SUBDIR += diskus
     SUBDIR += dmg2img
     SUBDIR += dmidecode
@@ -332,6 +340,7 @@
     SUBDIR += dwatch-gource
     SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
+    SUBDIR += dynamic_motd
     SUBDIR += e2fsprogs
     SUBDIR += e2fsprogs-core
     SUBDIR += e2tools
@@ -350,9 +359,9 @@
     SUBDIR += envconsul
     SUBDIR += epazote
     SUBDIR += equinix-metal-cli
+    SUBDIR += erdtree
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
-    SUBDIR += etcupdate
     SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum
@@ -475,7 +484,6 @@
     SUBDIR += gdu
     SUBDIR += genimage
     SUBDIR += genisoimage
-    SUBDIR += geomWatch
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
@@ -555,6 +563,7 @@
     SUBDIR += i7z
     SUBDIR += iat
     SUBDIR += iichid
+    SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
     SUBDIR += inotify-tools
@@ -563,7 +572,6 @@
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
-    SUBDIR += ioc
     SUBDIR += iocage
     SUBDIR += iocage-devel
     SUBDIR += iocell
@@ -596,7 +604,6 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
-    SUBDIR += jobd
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk
@@ -645,6 +652,7 @@
     SUBDIR += libcdio-paranoia
     SUBDIR += libchk
     SUBDIR += libcpuid
+    SUBDIR += libdisplay-info
     SUBDIR += libdnf
     SUBDIR += libfvde
     SUBDIR += libg15
@@ -669,6 +677,7 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
+    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -830,6 +839,7 @@
     SUBDIR += nrg2iso
     SUBDIR += nss_ndb
     SUBDIR += nsysctl
+    SUBDIR += ntfs2btrfs
     SUBDIR += ntfy
     SUBDIR += ntpstat
     SUBDIR += nut
@@ -1051,8 +1061,10 @@
     SUBDIR += puppet-mode.el
     SUBDIR += puppet6
     SUBDIR += puppet7
+    SUBDIR += puppet8
     SUBDIR += puppetserver6
     SUBDIR += puppetserver7
+    SUBDIR += puppetserver8
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -1110,10 +1122,10 @@
     SUBDIR += py-power
     SUBDIR += py-prometheus-zfs
     SUBDIR += py-psutil
-    SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
+    SUBDIR += py-python-bareos
     SUBDIR += py-python-consul
     SUBDIR += py-python-consul2
     SUBDIR += py-python-crontab
@@ -1172,7 +1184,6 @@
     SUBDIR += reed
     SUBDIR += reggae
     SUBDIR += rej
-    SUBDIR += relaxconf
     SUBDIR += rename
     SUBDIR += renameutils
     SUBDIR += reoback
@@ -1200,6 +1211,7 @@
     SUBDIR += rsyslog8
     SUBDIR += rtsx-kmod
     SUBDIR += rtty
+    SUBDIR += rtx
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bolt
     SUBDIR += rubygem-bosh-gen
@@ -1294,6 +1306,7 @@
     SUBDIR += runj
     SUBDIR += runwhen
     SUBDIR += rush
+    SUBDIR += rust-coreutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1318,7 +1331,6 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screenfetch
-    SUBDIR += screenfetch-nox11
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
@@ -1352,6 +1364,7 @@
     SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
+    SUBDIR += sndy
     SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += sockaddr
@@ -1427,6 +1440,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux-xpanes
     SUBDIR += tmux23
     SUBDIR += topgrade
     SUBDIR += topless
@@ -1444,6 +1458,7 @@
     SUBDIR += tty-clock
     SUBDIR += ttyd
     SUBDIR += ttyload
+    SUBDIR += tuckr
     SUBDIR += tuptime
     SUBDIR += turbostat
     SUBDIR += tw_cli
@@ -1507,7 +1522,6 @@
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
-    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc
@@ -1625,6 +1639,7 @@
     SUBDIR += xpipe
     SUBDIR += xstow
     SUBDIR += xsysstats
+    SUBDIR += xxd
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank

@@ -1,14 +1,16 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.3.0
+DISTVERSION=	6.15.0
+PORTREVISION=	2
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm \
 		LOCAL/mikael/signal-desktop/:sqlite \
+		LOCAL/mikael/signal-desktop/:yarn \
 		https://nodejs.org/download/release/v${NODE_VERSION}/:node \
 		https://electronjs.org/headers/v${ELECTRON_GYP_VERSION}/:electron_gyp \
 		https://build-artifacts.signal.org/desktop/:sqlcipher
-DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz:prefetch \
-		signal-desktop-${DISTVERSION}-npm-cache.tar.gz:npm \
+DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz:yarn \
+		signal-desktop-6.4.1-npm-cache.tar.gz:npm \
 		node-v${NODE_VERSION}-headers.tar.gz:node \
 		node-v${ELECTRON_GYP_VERSION}-headers.tar.gz:electron_gyp \
 		${SQLCIPHER}.tar.gz:sqlcipher
@@ -22,18 +24,20 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 
-FETCH_DEPENDS=	yarn-node16>0:www/yarn-node16
-EXTRACT_DEPENDS=yarn-node16>0:www/yarn-node16
+EXTRACT_DEPENDS=jq:textproc/jq \
+		yarn-node16>0:www/yarn-node16
 BUILD_DEPENDS=	${LOCALBASE}/lib/libringrtc.so:multimedia/ringrtc \
 		${LOCALBASE}/lib/libsignal_node.so:net-im/libsignal-node \
+		${LOCALBASE}/lib/libsignal_tokenizer.a:devel/signal-fts5-extension \
 		app-builder>0:devel/app-builder \
+		jq:textproc/jq \
 		electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
 		npm:www/npm-node16 \
-		${LOCALBASE}/lib/libcrypto.a:security/openssl-devel \
+		${LOCALBASE}/lib/libcrypto.a:security/openssl30 \
 		vips>0:graphics/vips \
 		yarn:www/yarn-node16
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
-		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+		libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libcups.so:print/cups \
 		libdbus-1.so:devel/dbus \
@@ -65,9 +69,6 @@ USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xi xrandr xrender xtst
 PACKAGE_ENV=	SIGNAL_ENV=production
 MAKE_ENV+=	ELECTRON_OVERRIDE_DIST_PATH=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR} \
 		HOME=${WRKDIR} \
-		PLAYWRIGHT_BROWSERS_PATH=${WRKDIR}/.cache \
-		PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true \
-		PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true \
 		USE_SYSTEM_APP_BUILDER=true \
 		SOURCE_DATE_EPOCH=${_BUILD_DATE}
 
@@ -84,19 +85,18 @@ _BUILD_DATE=	$$(date +'%s')
 
 ELECTRON_VER_MAJOR=	22
 # keep NODE_VERSION in sync with www/node16 DISTVERSION
-NODE_VERSION=		16.19.0
+NODE_VERSION=		16.20.0
 # bump ELECTRON_GYP_VERSION when ELECTRON_VER_MAJOR is changed
-ELECTRON_GYP_VERSION=	22.0.0
+ELECTRON_GYP_VERSION=	22.3.5
 
-# ll work/.cache/yarn/v6 | egrep "@signalapp|esbuild-freebsd-64"
-NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.21.1-381d6162ae0e7719dc625780c1d6c3f9f558c33d-integrity
-NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.23.0-982fb6268eab2eb35a61624149b5f9ce9af28907-integrity
-NPM_SQLITE3_DIR=	npm-@signalapp-better-sqlite3-8.0.4-53ed2074634b69e83116573b26ae1d927c4aab22-integrity
-NPM_PLAYWRITE_DIR=	npm-playwright-core-1.17.1-a16e0f89284a0ed8ae6d77e1c905c84b8a2ba022-integrity
-NPM_ESBUILD_VERS=	0.15.8
-SQLCIPHER=		sqlcipher-4.5.2--3.0.7-4587e88a4219cb76fd595a5b73f82bfd919b235d75626f40783525f4f58a7503
+# sh get_deps.sh
+NPM_SIGNAL_DIR=		npm-@signalapp-libsignal-client-0.22.0-d57441612df46f90df68fc5d9ad45b857b9d2c44-integrity
+NPM_RINGRTC_DIR=	npm-@signalapp-ringrtc-2.26.2-6ca91cd4b2d3ed545eb87c4aaddcb3f8735ad85a-integrity
+NPM_SQLITE3_DIR=	npm-@signalapp-better-sqlite3-8.4.3-7ffa8d03d2a12543247936bfb7b9f74cdbc6fe9b-integrity
+NPM_ESBUILD_VERS=	0.17.11
+SQLCIPHER=		sqlcipher-4.5.3-fts--3.0.7--0.2.1-b633825cf7e0fdd39a6cdf128f2bd76552a88d325f2b9cd07bb87a457cefb986
 
-ESBUILD_ARCH=		${ARCH:S/aarch64/arm/:S/amd64//}
+ESBUILD_ARCH=		${ARCH:S/aarch64/arm64/:S/amd64/x64/}
 NODE_ARCH=		${ARCH:S/aarch64/arm64/:S/amd64/x64/}
 APP_OUT_DIR=		linux-${ARCH:S/aarch64/arm64-/:S/amd64//}unpacked
 
@@ -105,13 +105,17 @@ PLIST_SUB=		NODE_ARCH=${NODE_ARCH} \
 
 YARN_TIMESTAMP=	1661146515
 
-pre-fetch:
-	if [ ! -f ${DISTDIR}/signal-desktop-${DISTVERSION}-yarn-cache.tar.gz ]; \
-		then ${MKDIR} ${WRKDIR}; \
+fetch-yarn:
+	if [ ! -f ${DISTDIR}/signal-desktop-${DISTVERSION}-yarn-cache.tar.gz ]; then \
+		${MKDIR} /tmp/signal-desktop; \
+		${FETCH_CMD} -o - https://raw.githubusercontent.com/signalapp/Signal-Desktop/v${DISTVERSION}/package.json | \
+			${PREFIX}/bin/jq '.engines.node = "${NODE_VERSION}"' > /tmp/signal-desktop/package.json; \
+		${FETCH_CMD} -o /tmp/signal-desktop/yarn.lock https://raw.githubusercontent.com/signalapp/Signal-Desktop/v${DISTVERSION}/yarn.lock; \
 		${ECHO_CMD} 'yarn-offline-mirror "./yarn-offline-cache"' >> \
-			${WRKDIR}/.yarnrc; \
-		${CP} ${FILESDIR}/package.json ${FILESDIR}/yarn.lock ${WRKDIR}; \
-		cd ${WRKDIR} && ${SETENV} HOME=${WRKDIR} XDG_CACHE_HOME=${WRKDIR}/.cache \
+			/tmp/signal-desktop/.yarnrc; \
+		${PREFIX}/bin/jq 'del(.devDependencies."@signalapp/mock-server")' /tmp/signal-desktop/package.json > /tmp/signal-desktop/package.json.tmp; \
+		${MV} /tmp/signal-desktop/package.json.tmp /tmp/signal-desktop/package.json; \
+		cd /tmp/signal-desktop && ${SETENV} HOME=/tmp/signal-desktop XDG_CACHE_HOME=/tmp/signal-desktop/.cache \
 			yarn --frozen-lockfile --ignore-scripts; \
 		${MTREE_CMD} -cbnSp yarn-offline-cache | ${MTREE_CMD} -C | ${SED} \
 			-e 's:time=[0-9.]*:time=${YARN_TIMESTAMP}.000000000:' \
@@ -136,13 +140,18 @@ post-extract:
 	${ECHO_CMD} '9' > ${WRKDIR}/.electron-gyp/${ELECTRON_GYP_VERSION}/installVersion
 
 	# install yarn modules and fail silently
-	${CP} ${FILESDIR}/package.json ${WRKSRC}/
 	${ECHO_CMD} 'yarn-offline-mirror "../yarn-offline-cache"' > ${WRKSRC}/.yarnrc
+	# Update node engine
+	${PREFIX}/bin/jq '.engines.node = "${NODE_VERSION}"' ${WRKSRC}/package.json > ${WRKSRC}/package.json.tmp
+	${MV} ${WRKSRC}/package.json.tmp ${WRKSRC}/package.json
+	# remove mock-server as it doesn't build and is useless
+	${PREFIX}/bin/jq 'del(.devDependencies."@signalapp/mock-server")' ${WRKSRC}/package.json > ${WRKSRC}/package.json.tmp
+	${MV} ${WRKSRC}/package.json.tmp ${WRKSRC}/package.json
 	cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} yarn install --frozen-lockfile --ignore-optional --offline || ${TRUE}
 
 do-build:
-	${ECHO_CMD} 'yarn-offline-mirror "../yarn-cache"' > ${WRKSRC}/.yarnrc
+	${ECHO_CMD} 'yarn-offline-mirror "../yarn-offline-cache"' > ${WRKSRC}/.yarnrc
 
 # electron-builder is stupid and tries to open ${LOCALBASE}/share/electron22/electron with WRITE priv
 # copy ${LOCALBASE}/share/electron22 in WRKDIR
@@ -164,9 +173,6 @@ do-build:
 	${CP} ${DISTDIR}/${SQLCIPHER}.tar.gz \
 		${WRKDIR}/.cache/yarn/v6/${NPM_SQLITE3_DIR}/node_modules/@signalapp/better-sqlite3/deps/sqlcipher.tar.gz
 
-	# patch-package can't patch playwright-core, patch the yarn cache instead
-	${CP} ${FILESDIR}/playwrigth-registry.js \
-	 	${WRKDIR}/.cache/yarn/v6/${NPM_PLAYWRITE_DIR}/node_modules/playwright-core/lib/utils/registry.js
 	${CP} ${FILESDIR}/fetch-prebuild.js \
 		${WRKDIR}/.cache/yarn/v6/${NPM_RINGRTC_DIR}/node_modules/@signalapp/ringrtc/scripts/fetch-prebuild.js
 	${CP} ${FILESDIR}/download.js \
@@ -176,7 +182,7 @@ do-build:
 	cd ${WRKDIR}/.cache/yarn/v6 && ${PATCH} -s -N -i ${FILESDIR}/sqlite3.gyp.diff
 
 	${MKDIR} ${WRKDIR}/esbuild-freebsd-64
-	${TAR} -xf ${WRKDIR}/yarn-offline-cache/esbuild-freebsd-${ESBUILD_ARCH}64-${NPM_ESBUILD_VERS}.tgz -C ${WRKDIR}/esbuild-freebsd-64
+	${TAR} -xf ${WRKDIR}/yarn-offline-cache/@esbuild-freebsd-${ESBUILD_ARCH}-${NPM_ESBUILD_VERS}.tgz -C ${WRKDIR}/esbuild-freebsd-64
 
 # 	# For online build
 #	${RM} ${WRKDIR}/.npmrc
@@ -185,7 +191,7 @@ do-build:
 #	cd ${WRKSRC} && \
 #		${SETENV} ${MAKE_ENV} yarn generate
 #	cd ${WRKSRC} && \
-#		${SETENV} ${MAKE_ENV} yarn build:webpack
+#		${SETENV} ${MAKE_ENV} yarn build:esbuild:prod
 
 	# For offline build
 	${ECHO_CMD} offline=true > ${WRKDIR}/.npmrc
@@ -194,7 +200,7 @@ do-build:
 	cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} yarn --offline generate
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} yarn --offline build:webpack
+		${SETENV} ${MAKE_ENV} yarn --offline build:esbuild:prod
 
 do-install:
 # taken from https://github.com/tagattie/FreeBSD-Electron/blob/master/Mk/Uses/electron.mk#L387

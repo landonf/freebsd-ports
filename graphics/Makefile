@@ -6,9 +6,7 @@
     SUBDIR += Hermes
     SUBDIR += IPA
     SUBDIR += ImageMagick6
-    SUBDIR += ImageMagick6-nox11
     SUBDIR += ImageMagick7
-    SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
@@ -44,6 +42,7 @@
     SUBDIR += aaphoto
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
+    SUBDIR += aeskulap
     SUBDIR += agg
     SUBDIR += airsaned
     SUBDIR += akira
@@ -62,6 +61,7 @@
     SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
+    SUBDIR += asciinema-agg
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -92,13 +92,13 @@
     SUBDIR += cairo
     SUBDIR += cairomm
     SUBDIR += cal3d
-    SUBDIR += camera
     SUBDIR += camerakit
     SUBDIR += cbonsai
     SUBDIR += cbviewer
     SUBDIR += cegui
     SUBDIR += cenon
     SUBDIR += cfdg
+    SUBDIR += cgif
     SUBDIR += chafa
     SUBDIR += charls
     SUBDIR += cimg
@@ -145,6 +145,7 @@
     SUBDIR += drawing
     SUBDIR += drawpile
     SUBDIR += drm-510-kmod
+    SUBDIR += drm-515-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm_info
@@ -259,7 +260,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-gmic-plugin
     SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
@@ -372,6 +372,7 @@
     SUBDIR += impressive
     SUBDIR += imv
     SUBDIR += inkscape
+    SUBDIR += inkscape-open-symbols
     SUBDIR += instant-meshes
     SUBDIR += intel-backlight
     SUBDIR += intergif
@@ -552,6 +553,7 @@
     SUBDIR += maim
     SUBDIR += mandelbulber
     SUBDIR += mapcache
+    SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += matplotlib-cpp
@@ -715,7 +717,6 @@
     SUBDIR += p5-Image-MetaData-GQview
     SUBDIR += p5-Image-MetaData-JPEG
     SUBDIR += p5-Image-OCR-Tesseract
-    SUBDIR += p5-Image-ObjectDetect
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-PNG-Libpng
     SUBDIR += p5-Image-PNG-QRCode
@@ -850,6 +851,7 @@
     SUBDIR += py-cartopy
     SUBDIR += py-cogdumper
     SUBDIR += py-colorcet
+    SUBDIR += py-colorthief
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -859,6 +861,7 @@
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models
     SUBDIR += py-fiona
+    SUBDIR += py-fotokilof
     SUBDIR += py-freeimagepy
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
@@ -875,6 +878,7 @@
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
     SUBDIR += py-h3
+    SUBDIR += py-haishoku
     SUBDIR += py-hiplot
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
@@ -893,7 +897,6 @@
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
-    SUBDIR += py-open3d-python
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
@@ -932,6 +935,7 @@
     SUBDIR += py-pyqtgraph
     SUBDIR += py-pyrsgis
     SUBDIR += py-pytesseract
+    SUBDIR += py-python-barcode
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
@@ -947,10 +951,12 @@
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-spectra
+    SUBDIR += py-sqlalchemy-imageattach
     SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
     SUBDIR += py-tifffile
+    SUBDIR += py-tkcolorpicker
     SUBDIR += py-toyplot
     SUBDIR += py-traitsui
     SUBDIR += py-ueberzug
@@ -964,6 +970,7 @@
     SUBDIR += py-willow
     SUBDIR += py-yaswfp
     SUBDIR += py-zbar-py
+    SUBDIR += pywal
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
@@ -991,6 +998,7 @@
     SUBDIR += quesoglc
     SUBDIR += quickqanava
     SUBDIR += qvge
+    SUBDIR += qview
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
@@ -1040,7 +1048,6 @@
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
     SUBDIR += rubygem-mini_magick410
-    SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png

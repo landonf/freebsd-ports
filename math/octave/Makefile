@@ -1,6 +1,6 @@
 PORTNAME=	octave
 PORTVERSION=	${OCTAVE_VERSION}
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	GNU
 
@@ -13,7 +13,8 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:devel/gperf \
 		${LOCALBASE}/bin/makeinfo:print/texinfo \
 		gnuplot:math/gnuplot \
-		gsed:textproc/gsed
+		gsed:textproc/gsed \
+		${LOCALBASE}/include/rapidjson/rapidjson.h:devel/rapidjson
 RUN_DEPENDS=	${LOCALBASE}/bin/makeinfo:print/texinfo \
 		gnuplot:math/gnuplot \
 		gsed:textproc/gsed

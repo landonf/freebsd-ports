@@ -45,7 +45,7 @@
 +}
 +#endif
 +
- //  get available memory in MB units
+ //  get available memory in MB units (includes swap space)
  //  typical < 0.1 milliseconds
  
  double availmemory()
@@ -68,13 +68,13 @@
  
 @@ -996,7 +1032,7 @@ double get_seconds()
     timespec    time1;
-    double      time2;
+    double      secs;
     
 -   clock_gettime(CLOCK_MONOTONIC_RAW,&time1);
 +   clock_gettime(CLOCK_MONOTONIC,&time1);
-    time2 = time1.tv_sec;
-    time2 += time1.tv_nsec * 0.000000001;
-    return time2;
+    secs = time1.tv_sec;
+    secs += time1.tv_nsec * 0.000000001;
+    return secs;
 @@ -1020,7 +1056,7 @@ void logtime_init(cchar *text)
     using namespace logtime_names;
  
@@ -141,9 +141,9 @@
  
  *********************************************************************************/
  
- int zfind(cchar *pattern, char **&flist, int &NF)
+ int zfind(ch *pattern, ch **&flist, int &NF)
  {
-    char     **zfind_filelist = 0;                                                //  list of filespecs returned
+    ch       **zfind_filelist = 0;                                                //  list of filespecs returned
 +#ifdef GLOB_PERIOD
     int      globflags = GLOB_PERIOD;                                             //  include dotfiles
 +#else
@@ -151,7 +151,7 @@
 +#endif
     int      ii, jj, err, cc;
     glob_t   globdata;
-    char     *pp;
+    ch       *pp;
 @@ -5805,9 +5850,16 @@ int zinitapp(cchar *appvers, int argc, char *argv[])  
     if (argc > 1 && strmatchV(argv[1],"-ver","-v",0)) exit(0);                    //  exit if nothing else wanted
  

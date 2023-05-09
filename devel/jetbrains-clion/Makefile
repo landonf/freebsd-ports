@@ -1,5 +1,5 @@
 PORTNAME=	clion
-PORTVERSION=	2022.3.2
+PORTVERSION=	2023.1.2
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cdn.jetbrains.com/cpp/
 PKGNAMEPREFIX=	jetbrains-
@@ -45,18 +45,19 @@ do-install:
 	@${RM} -r \
 		${WRKSRC}/bin/cmake/linux \
 		${WRKSRC}/bin/fsnotifier \
-		${WRKSRC}/bin/fsnotifier-arm \
-		${WRKSRC}/bin/fsnotifier64 \
 		${WRKSRC}/bin/gdb/linux \
 		${WRKSRC}/bin/lldb/linux \
 		${WRKSRC}/bin/ninja \
+		${WRKSRC}/bin/remote-dev-server.sh \
 		${WRKSRC}/bin/repair \
 		${WRKSRC}/jbr \
-		${WRKSRC}/jre64 \
+		${WRKSRC}/lib/native \
 		${WRKSRC}/lib/pty4j \
 		${WRKSRC}/plugins/cwm-plugin \
 		${WRKSRC}/plugins/gateway-plugin/lib/remote-dev-workers \
 		${WRKSRC}/plugins/performanceTesting \
+		${WRKSRC}/plugins/performanceTesting-async \
+		${WRKSRC}/plugins/performanceTesting-yourkit \
 		${WRKSRC}/plugins/remote-dev-server
 
 # Use cmake binaries provided by devel/cmake
@@ -69,7 +70,8 @@ do-install:
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
 		"! -path \./${CLION_CLANG}/* ! -name *\.bak ! -name *\.so ! -name *\.dll ! -name *\.dylib ! -name *\.pdb ! -name *\.sh ! -name *\.exe")
 	@(cd ${WRKSRC} && ${COPYTREE_BIN} ${CLION_CLANG} ${STAGEDIR}${DATADIR})
-	@(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR} "-name *\.sh")
+	@(cd ${WRKSRC}/bin && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR}/bin/ \
+		"-name *\.sh -o -name *\.py")
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${FILESDIR}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/

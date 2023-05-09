@@ -1,6 +1,6 @@
---- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2022-04-21 18:48:31 UTC
+--- chrome/browser/prefs/pref_service_incognito_allowlist.cc.orig	2023-04-05 11:05:06 UTC
 +++ chrome/browser/prefs/pref_service_incognito_allowlist.cc
-@@ -138,7 +138,7 @@ const char* const kPersistentPrefNames[] = {
+@@ -167,7 +167,7 @@ const char* const kPersistentPrefNames[] = {
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

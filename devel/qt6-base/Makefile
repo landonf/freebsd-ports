@@ -1,7 +1,11 @@
 PORTNAME=	base
 DISTVERSION=	${QT6_VERSION}
+PORTREVISION=	2
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt6-
+
+PATCH_SITES=	https://github.com/qt/qtbase/commit/
+PATCHFILES=	3f45905953d57e0174059d7d9d6bc75c3c1c406c.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
@@ -11,12 +15,11 @@ BUILD_DEPENDS=	xml:textproc/xmlstarlet \
 		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	\
-		libatk-1.0.so:accessibility/atk \
-		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+		libatk-1.0.so:accessibility/at-spi2-core \
+		libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libavahi-client.so:net/avahi-app \
 		libbrotlidec.so:archivers/brotli \
-		libcups.so:print/cups \
 		libdbus-1.so:devel/dbus \
 		libdouble-conversion.so:devel/double-conversion \
 		libdrm.so:graphics/libdrm \
@@ -79,11 +82,14 @@ USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 # zstd from base fails to compress files during the build (error 11: unsupported argument)
 BINARY_ALIAS=	zstd=${LOCALBASE}/bin/zstd
 
-#== Option handling
+OPTIONS_DEFINE=		CUPS
 OPTIONS_GROUP=		SQL
 OPTIONS_GROUP_SQL=	IBASE MYSQL ODBC PSQL SQLITE
-OPTIONS_DEFAULT=	SQLITE
+OPTIONS_DEFAULT=	CUPS SQLITE
 OPTIONS_SUB=		yes
+
+CUPS_LIB_DEPENDS=	libcups.so:print/cups
+CUPS_CMAKE_OFF=		-DFEATURE_cups=OFF
 
 IBASE_DESC=		InterBase database support
 IBASE_CMAKE_ON=		-DFEATURE_sql_ibase=ON

@@ -30,7 +30,6 @@ share/icons/oxygen/32x32/actions/player-volume-muted.png
 share/icons/oxygen/48x48/actions/player-volume-muted.png
 share/icons/oxygen/scalable/actions/player-volume-muted.svgz
 share/kservices5/ServiceMenus/dragonplayer_play_dvd.desktop
-share/kservices5/dragonplayer_part.desktop
 share/locale/ar/LC_MESSAGES/dragonplayer.mo
 share/locale/be/LC_MESSAGES/dragonplayer.mo
 share/locale/bg/LC_MESSAGES/dragonplayer.mo

@@ -9,6 +9,9 @@ DISTFILES=	# empty
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Common files for Ghostscript 7.x CJK font support
 
+DEPRECATED=	Obsolete and unsupported upstream
+EXPIRATION_DATE=2023-06-30
+
 BUILD_DEPENDS=	${CMAPDIR}/ac15/cid2code.txt:print/adobe-cmaps
 RUN_DEPENDS=	${CMAPDIR}/ac15/cid2code.txt:print/adobe-cmaps
 
@@ -19,6 +22,8 @@ SUB_LIST=	PORTVERSION="${PORTVERSION}" GS_RESDIR="${GS_RESDIR}"
 PLIST_SUB=	GS_RESDIR="${GS_RESDIR}"
 USES=		ghostscript:7,run
 NO_ARCH=	yes
+
+FORBIDDEN=	CVE-2023-28879
 
 CONFLICTS_INSTALL= \
 		ghostscript[789] \

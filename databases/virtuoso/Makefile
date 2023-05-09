@@ -1,6 +1,6 @@
 PORTNAME=	virtuoso
 PORTVERSION=	7.2.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-opensource-${PORTVERSION}
@@ -99,7 +99,7 @@ CONFIGURE_ARGS+=--disable-krb
 
 .if ${PORT_OPTIONS:MLDAP}
 CONFIGURE_ARGS+=--enable-openldap=${LOCALBASE}
-USE_OPENLDAP=	yes
+USES=	ldap
 .else
 CONFIGURE_ARGS+=--disable-openldap
 .endif

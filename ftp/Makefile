@@ -29,7 +29,6 @@
     SUBDIR += gftp
     SUBDIR += gnustep-ftp
     SUBDIR += gstreamer1-plugins-curl
-    SUBDIR += horde-gollem
     SUBDIR += hsftp
     SUBDIR += jftp
     SUBDIR += lftp
@@ -66,6 +65,7 @@
     SUBDIR += pure-ftpd
     SUBDIR += py-aioftp
     SUBDIR += py-ftputil
+    SUBDIR += py-parfive
     SUBDIR += py-pycurl
     SUBDIR += py-pyftpdlib
     SUBDIR += py-requests-ftp

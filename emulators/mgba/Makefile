@@ -1,5 +1,6 @@
 PORTNAME=	mgba
-DISTVERSION=	0.10.1
+DISTVERSION=	0.10.2
+PORTREVISION=	3
 CATEGORIES=	emulators
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -15,7 +16,7 @@ LICENSE_FILE_MPL20=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 		libpng.so:graphics/png
 
-USES=		cmake compiler:c++11-lang gl gnome localbase:ldflags lua \
+USES=		cmake compiler:c++14-lang gl gnome localbase:ldflags lua \
 		pkgconfig sdl sqlite:3
 
 USE_GITHUB=	yes
@@ -51,11 +52,7 @@ QT5_DESC=	Qt 5 frontend
 DEBUGGERS_USES=		libedit
 DEBUGGERS_CMAKE_BOOL=	USE_DEBUGGERS USE_EDITLINE USE_GDB_STUB
 
-FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
-			libavformat.so:multimedia/ffmpeg \
-			libavresample.so:multimedia/ffmpeg \
-			libavutil.so:multimedia/ffmpeg \
-			libswscale.so:multimedia/ffmpeg
+FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CMAKE_BOOL=	USE_FFMPEG
 
 LIBRETRO_CMAKE_BOOL=	BUILD_LIBRETRO

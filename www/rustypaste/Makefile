@@ -1,6 +1,6 @@
 PORTNAME=	rustypaste
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.2
+DISTVERSION=	0.8.4
 PORTREVISION=	4
 CATEGORIES=	www
 
@@ -10,6 +10,8 @@ WWW=		https://github.com/orhun/rustypaste/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		cargo
 USE_GITHUB=	yes

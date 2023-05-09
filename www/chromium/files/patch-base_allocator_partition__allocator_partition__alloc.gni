@@ -1,7 +1,7 @@
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2023-01-11 09:17:16 UTC
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2023-04-28 17:01:32 UTC
 +++ base/allocator/partition_allocator/partition_alloc.gni
-@@ -121,7 +121,7 @@ assert(
-     "Missing dangling pointer checks feature for its performance experiment")
+@@ -285,7 +285,7 @@ assert(!use_asan_backup_ref_ptr || use_hookable_raw_pt
+        "AsanBackupRefPtr requires RawPtrHookableImpl")
  
  declare_args() {
 -  enable_pkeys = is_linux && target_cpu == "x64"

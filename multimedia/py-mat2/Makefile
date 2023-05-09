@@ -1,10 +1,11 @@
 PORTNAME=	mat2
-DISTVERSION=	0.13.1
+DISTVERSION=	0.13.3
+PORTREVISION=	2
 CATEGORIES=	multimedia audio graphics textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Handy tool to trash your metadata
 WWW=		https://0xacab.org/jvoisin/mat2
 

@@ -1,6 +1,5 @@
 PORTNAME=	libmediainfo
-PORTVERSION=	22.12
-PORTREVISION=	1
+PORTVERSION=	23.04
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mediaarea.net/download/binary/mediainfo/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -19,13 +18,16 @@ LIB_DEPENDS=	libtinyxml2.so:textproc/tinyxml2 \
 
 USES=		compiler:c++11-lang dos2unix libtool localbase pathfix pkgconfig tar:xz
 
-CONFIGURE_ARGS=	--enable-shared --enable-static --disable-dll
+CONFIGURE_ARGS=	--enable-shared --enable-static
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 PATHFIX_MAKEFILEIN+=	configure
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/MediaInfo_CLI_GNU_FromSource/MediaInfoLib/Project/GNU/Library
+
+DOS2UNIX_FILES=	../../../Source/MediaInfo/Audio/File_Usac.cpp \
+		../../../Source/MediaInfo/Audio/File_Usac.h
 
 OPTIONS_DEFINE=	CURL
 OPTIONS_DEFAULT=CURL

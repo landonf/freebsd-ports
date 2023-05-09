@@ -1,7 +1,7 @@
 PORTNAME=	geeqie
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.1
-PORTREVISION=	6
+PORTREVISION=	10
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -21,7 +21,6 @@ USE_GNOME=	cairo gdkpixbuf2 gtk30 glib20
 USE_GITHUB=	yes
 GH_ACCOUNT=	BestImageViewer
 SHEBANG_FILES=	plugins/*/geeqie-*
-MESON_ARGS=	-Djpeg=enabled -Dlua=enabled
 
 PORTDOCS=	*
 

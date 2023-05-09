@@ -1,17 +1,20 @@
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.2.2.56
+DISTVERSION=	7.3.3.49
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES+=	LOCAL/mikael/v8/:source1 \
 		LOCAL/mikael/onlyoffice/:source2 \
 		https://nodejs.org/dist/v${NODE_VERSION_PKGFETCH}/:source3 \
 		https://nodejs.org/dist/v${NODE_VERSION_PORTS}/:source3 \
-		SF/optipng/OptiPNG/optipng-0.7.7/:source4
+		SF/optipng/OptiPNG/optipng-0.7.7/:source4 \
+		https://nodejs.org/download/release/v$v${NODE_VERSION_PORTS}/:node
 DISTFILES+=	v8-8.9.255.25_all.tar.gz:source1 \
 		node-v${NODE_VERSION_PKGFETCH}.tar.gz:source3 \
 		node-v${NODE_VERSION_PORTS}.tar.gz:source3 \
 		optipng-0.7.7.tar.gz:source4 \
-		${PORTNAME}-${DISTVERSION}-npm-cache.tar.gz:source2
+		${PORTNAME}-${DISTVERSION}-npm-cache.tar.gz:source2 \
+		node-v${NODE_VERSION_PORTS}-headers.tar.gz:node
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Secure office and productivity apps
@@ -34,10 +37,10 @@ LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libharfbuzz.so:print/harfbuzz \
 		libiconv.so:converters/libiconv \
 		libicutu.so:devel/icu
-
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}supervisor>0:sysutils/py-supervisor@${PY_FLAVOR} \
 		gsed:textproc/gsed \
 		nginx:www/nginx \
+		pwgen:sysutils/pwgen \
 		rabbitmq>0:net/rabbitmq \
 		webfonts>=0:x11-fonts/webfonts
 
@@ -47,7 +50,7 @@ USE_QT=		qmake:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	ONLYOFFICE
 GH_PROJECT=	DocumentServer
-GH_TAGNAME=	v7.2.2
+GH_TAGNAME=	v${DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}
 GH_TUPLE=	ONLYOFFICE:core:v${DISTVERSION}:core/core \
 		ONLYOFFICE:core-fonts:v${DISTVERSION}:corefonts/core-fonts \
 		ONLYOFFICE:dictionaries:v${DISTVERSION}:dictionaries/dictionaries \
@@ -56,7 +59,6 @@ GH_TUPLE=	ONLYOFFICE:core:v${DISTVERSION}:core/core \
 		ONLYOFFICE:sdkjs:v${DISTVERSION}:sdkjs/sdkjs \
 		ONLYOFFICE:server:v${DISTVERSION}:server/server \
 		ONLYOFFICE:web-apps:v${DISTVERSION}:webapps/web-apps \
-		ONLYOFFICE:plugin-mendeley:v${PLUGIN_VERSION}:sdkjs_plugins_mendeley/sdkjs-plugins/plugin-mendeley \
 		ONLYOFFICE:build_tools:v${DISTVERSION}:buildtools/build_tools \
 		ONLYOFFICE:DocumentBuilder:626d1e44db3d06ceb8298215a67ef0475912d89a:document_builder/DocumentBuilder \
 		ONLYOFFICE:onlyoffice.github.io:b26d001664d771df4f663d2d3ba7dd4a188b6cab:sdkjs_plugins_v1/onlyoffice.github.io \
@@ -92,15 +94,15 @@ SUB_LIST=	ETCDIR=${ETCDIR} \
 		PREFIX=${PREFIX} \
 		WWWDIR=${WWWDIR}
 
-PLUGIN_VERSION=	7.2.0.8
 # node version used with "npm install pkg@5.5.1"
 NODE_VERSION_PKGFETCH=	16.13.0
 # node version used in the ports tree
-NODE_VERSION_PORTS=	16.19.0
+NODE_VERSION_PORTS=	16.20.0
 
-MAKE_ENV=	BUILD_NUMBER="1" \
+MAKE_ENV=	BUILD_NUMBER="8" \
 		PKG_CACHE_PATH=${WRKDIR}/.pkg-cache \
-		PRODUCT_VERSION="${DISTVERSION}"
+		PRODUCT_VERSION=${DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/} \
+		BUILD_NUMBER=${DISTVERSION:C/^[0-9]+\.[0-9]+\.[0-9]+\.([0-9]+)/\1/}
 
 # Don't create __pycache__ directory when executing node-gyp
 # This is a workaround to avoid filesystem violations during poudriere build
@@ -113,15 +115,25 @@ CONFLICTS_BUILD=devel/googletest
 post-extract:
 	@${MV} ${WRKDIR}/v8 ${WRKSRC}/core/Common/3dParty/v8
 
-	@${MKDIR} ${WRKDIR}/.pkg-cache/node
+	@${MKDIR} ${WRKDIR}/.pkg-cache/node \
+		  ${WRKDIR}/.cache/node-gyp/${NODE_VERSION_PORTS}
 	@${CP} ${DISTDIR}/node-v${NODE_VERSION_PKGFETCH}.tar.gz ${DISTDIR}/node-v${NODE_VERSION_PORTS}.tar.gz \
 		${WRKDIR}/.pkg-cache/node
+	${MV} ${WRKDIR}/node-v${NODE_VERSION_PORTS}/include ${WRKDIR}/.cache/node-gyp/${NODE_VERSION_PORTS}
+	${ECHO_CMD} '9' > ${WRKDIR}/.cache/node-gyp/${NODE_VERSION_PORTS}/installVersion
 
 	@${MKDIR} ${WRKSRC}/sdkjs-plugins/v1
 	@${CP} ${WRKSRC}/onlyoffice.github.io/sdkjs-plugins/v1/* ${WRKSRC}/sdkjs-plugins/v1
 
 	@${MV} ${WRKSRC}/server/Common/config/production-linux.json ${WRKSRC}/server/Common/config/production-freebsd.json
 	@${MV} ${WRKSRC}/server/Common/config/development-linux.json ${WRKSRC}/server/Common/config/development-freebsd.json
+
+	# linux has moved to systemd init files, continue to using supervisord for now
+	${MKDIR} ${WRKSRC}/document-server-package/common/documentserver/supervisor
+.for i in ds-converter.conf ds-docservice.conf ds-metrics.conf ds.conf
+	${CP} ${FILESDIR}/${i} \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor
+.endfor
 
 post-patch:
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|' \
@@ -140,17 +152,19 @@ post-patch:
 		${WRKSRC}/build_tools/scripts/build_server.py \
 		${WRKSRC}/document-server-package/Makefile
 	@${REINPLACE_CMD} -e 's|linux|freebsd|' -e 's|/etc|${LOCALBASE}/etc|' \
-		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-docservice.conf.m4 \
-		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-converter.conf.m4 \
-		${WRKSRC}/document-server-package/common/documentserver-example/supervisor/ds-example.conf.m4 \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-docservice.conf \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-converter.conf \
 		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-static-gzip.sh.m4 \
-		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4
+		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4 \
+		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-jwt-status.sh.m4
 	@${REINPLACE_CMD} 's|/var/www|${LOCALBASE}/www|' \
 		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-generate-allfonts.sh.m4 \
+		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4 \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-converter.conf \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-docservice.conf \
+		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-metrics.conf \
 		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-static-gzip.sh.m4 \
-		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-converter.conf.m4 \
-		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-docservice.conf.m4 \
-		${WRKSRC}/document-server-package/common/documentserver/supervisor/ds-metrics.conf.m4
+		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-jwt-status.sh.m4
 	@${REINPLACE_CMD} -e 's|/var/lib|/var/db|' -e 's|/var/www|${LOCALBASE}/www|' \
 			  -e 's|/usr/share|${LOCALBASE}/share|' -e 's|/etc|${LOCALBASE}/etc|' \
 		${WRKSRC}/server/Common/config/production-freebsd.json \
@@ -163,6 +177,8 @@ post-patch:
 		${WRKSRC}/web-apps/build/patches/optipng-bin+5.1.0.patch
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' -e 's|%%ETCDIR%%|${ETCDIR}|' \
 		${WRKSRC}/document-server-package/Makefile
+	@${REINPLACE_CMD} 's#ds:ds#${DS_USERNAME}:${DS_GROUPNAME}#' \
+		${WRKSRC}/document-server-package/common/documentserver/bin/documentserver-update-securelink.sh.m4
 	@${RM} ${WRKSRC}/web-apps/build/patches/optipng-bin+5.1.0.patch.orig
 
 	@${FIND} ${WRKSRC}/server -type f -name npm-shrinkwrap.json -delete
@@ -173,15 +189,11 @@ post-patch:
 do-build:
 	${INSTALL_SCRIPT} ${FILESDIR}/npm ${BINARY_LINKDIR}/npm
 
-	@${CP} ${FILESDIR}/packagejsons/server/package-lock.json ${WRKSRC}/server
-#	@${CP} ${FILESDIR}/packagejsons/server/Common/package-lock.json ${WRKSRC}/server/Common
-
 	@cd ${WRKSRC}/web-apps/build ; ${SETENV} ${MAKE_ENV} npm install patch-package
 	@cd ${WRKSRC}/web-apps/build ; ${SETENV} ${MAKE_ENV} npm install optipng-bin@5.1.0
 	@cd ${WRKSRC}/web-apps/build ; node_modules/.bin/patch-package
 	@cd ${WRKSRC}/web-apps/build/node_modules/optipng-bin ; ${SETENV} ${MAKE_ENV} npm run postinstall optipng-bin
 
-#	@cd ${WRKSRC}/web-apps/build ; ${SETENV} ${MAKE_ENV} npm install patch-package
 	@cd ${WRKSRC}/server ; ${SETENV} ${MAKE_ENV} npm install grunt-cli
 	@cd ${WRKSRC}/server ; ${SETENV} ${MAKE_ENV} npm install grunt
 	@cd ${WRKSRC}/server ; ${SETENV} ${MAKE_ENV} npm install pkg@5.5.1
@@ -195,13 +207,13 @@ do-build:
 
 do-install:
 # install the project
-# do not strip docservice, converter and metrics
+# do not strip docservice, converter, metrics and json
 	cd ${WRKSRC}/document-server-package/common/documentserver/home && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/documentserver
 	${INSTALL_SCRIPT} ${WRKSRC}/document-server-package/common/documentserver/bin/*.sh ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/document-server-package/common/documentserver/home/server/tools/all* ${STAGEDIR}${WWWDIR}/documentserver/server/tools
 	${INSTALL_PROGRAM} ${WRKSRC}/document-server-package/common/documentserver/home/server/FileConverter/bin/x2t ${STAGEDIR}${WWWDIR}/documentserver/server/FileConverter/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/document-server-package/common/documentserver/home/server/FileConverter/bin/docbuilder ${STAGEDIR}${WWWDIR}/documentserver/server/FileConverter/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/document-server-package/common/documentserver/home/npm/json ${STAGEDIR}${WWWDIR}/documentserver/npm
+	${INSTALL_DATA} ${WRKSRC}/document-server-package/common/documentserver/home/npm/json ${STAGEDIR}${WWWDIR}/documentserver/npm
 	${INSTALL_LIB} ${WRKSRC}/document-server-package/common/documentserver/home/server/FileConverter/bin/*.so ${STAGEDIR}${PREFIX}/lib
 	${RM} ${STAGEDIR}${PREFIX}/bin/documentserver-letsencrypt.sh
 
@@ -235,6 +247,7 @@ create-caches-tarball:
 	# do some cleanup first
 	${RM} -r  ${WRKDIR}/.npm/_logs ${WRKDIR}/.npm/_update-notifier-last-checked ${WRKDIR}/.cache/yarn/v6/.tmp
 	${FIND} ${WRKDIR}/.cache -type f -perm 755 -exec file {} \; | ${EGREP} "ELF|PE32+|Mach-O" | ${AWK} -F ':' '{print $$1}' | ${XARGS} ${RM}
+	${FIND} ${WRKDIR}/.pkg-cache -type f -perm 755 -exec file {} \; | ${EGREP} "ELF|PE32+|Mach-O" | ${AWK} -F ':' '{print $$1}' | ${XARGS} ${RM}
 
 	cd ${WRKDIR} && \
 		${TAR} czf ${PORTNAME}-${DISTVERSION}-npm-cache.tar.gz .npm .cache .pkg-cache

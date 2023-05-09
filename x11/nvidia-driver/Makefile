@@ -1,21 +1,20 @@
-#
 # For those wondering why this port is not under `x11-drivers' category,
 # have a look at https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=121930.
 #
 # Starting with version 1.0-7667, NVidia has dropped support for numerous
 # "legacy" GPUs.  Consult NVidia README (the Appendix) to find out whether
 # you need to use legacy driver version and install one of corresponding
-# slave ports instead (`x11/nvidia-driver-390', `x11/nvidia-driver-340',
-# or `x11/nvidia-driver-304').
+# slave ports instead (`x11/nvidia-driver-470', `x11/nvidia-driver-390',
+# `x11/nvidia-driver-340', or `x11/nvidia-driver-304').
 #
 # To simplify testing of new feature branches and beta driver versions,
 # the port aims to support building against arbitrary DISTVERSION, i.e.
 # ``make DISTVERSION=xxx.yy.zz -DNO_CHECKSUM'' should typically work.
 
 PORTNAME?=	nvidia-driver
-DISTVERSION?=	510.60.02
+DISTVERSION?=	525.105.17
 # Always try to set PORTREVISION as it can be overridden by the slave ports
-PORTREVISION?=	1
+PORTREVISION?=	0
 CATEGORIES=	x11
 MASTER_SITES=	NVIDIA/XFree86/FreeBSD-${ARCH_SUFX}/${DISTVERSION}
 DISTNAME=	NVIDIA-FreeBSD-${ARCH_SUFX}-${DISTVERSION}
@@ -35,6 +34,9 @@ PATCH_DEPENDS=	gsed:textproc/gsed
 BUILD_DEPENDS=	pkg-config:devel/pkgconf
 LIB_DEPENDS=	libOpenGL.so:graphics/libglvnd
 .endif
+.if ${NVVERSION} >= 415.013
+LIB_DEPENDS+=	libnvidia-egl-wayland.so:graphics/egl-wayland
+.endif
 
 USES=		kmod uidfix xorg
 .if ${NVVERSION} >= 470.04201
@@ -42,6 +44,8 @@ USES+=		tar:xz
 .endif
 USE_XORG=	x11 xorg-server xext
 USE_LDCONFIG=	yes
+
+PIE_UNSAFE=	yes
 
 EGL_JSON_PATH=		${PREFIX}/share/egl/egl_external_platform.d
 GLVND_JSON_PATH=	${PREFIX}/share/glvnd/egl_vendor.d
@@ -88,6 +92,12 @@ NVSRC=		.
 NVSRC=		nvidia
 .endif
 
+.if ${NVVERSION} < 358.009
+SUB_LIST+=	KLDNAME=nvidia
+.else
+SUB_LIST+=	KLDNAME=nvidia-modeset
+.endif
+
 .if ${NVVERSION} < 460.039
 .  if ${NVVERSION} >= 358.009
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src_nvidia-modeset_nvidia-modeset-freebsd.c
@@ -127,6 +137,10 @@ PLIST_SUB+=	EXTENSIONSDIR="@comment "
 PLIST_SUB+=	LIBGLDIR=${LIBGLDIR} LIBGLMAP="@comment "
 .else
 PLIST_SUB+=	LIBGLDIR="@comment " LIBGLMAP=""
+.endif
+
+.if ${NVVERSION} >= 515.08601
+PLIST_FILES+=	lib/libnvidia-wayland-client.so.${DISTVERSION}
 .endif
 
 CONFLICTS_INSTALL+=	nvidia-driver nvidia-driver-*
@@ -232,6 +246,12 @@ post-patch: .SILENT
 	${REINPLACE_CMD} -e '/void nvidia_dev_dtor/,+8s,.*status.*,,' \
 		${WRKSRC}/src/${NVSRC}/nvidia_dev.c
 .endif
+# Move symlinks under PREFIX
+.if ${NVVERSION} >= 525.08902
+	${REINPLACE_CMD} -e '/ln/s/$${LOCALBASE}\/lib/../' \
+		-e '/LIBDIR/!s/$${LOCALBASE}/$${DESTDIR}$${PREFIX}/' \
+		${WRKSRC}/lib/libnvidia-allocator/Makefile
+.endif
 # After src 2a99dd30dfaa, DRIVER_MODULE should not include nvidia_devclass
 .if ${OSVERSION} >= 1400058
 	${REINPLACE_CMD} -e '/^DRIVER_MODULE/s/, nvidia_devclass//' \
@@ -330,6 +350,10 @@ post-install: .SILENT
 .if ${NVVERSION} < 495.02905
 	${REINPLACE_CMD} -e '/libnvidia-egl-gbm\.so/d ; \
 		/15_nvidia_gbm\.json/d' ${TMPPLIST}
+.endif
+.if ${NVVERSION} < 525.08902
+	${REINPLACE_CMD} -e '/libnvidia-allocator\.so/d ; \
+		/nvidia-drm_gbm\.so/d' ${TMPPLIST}
 .endif
 .if ${NVVERSION} < 410.057
 # Rename some libraries and install a libmap file to resolve conflict with

@@ -1,5 +1,5 @@
 PORTNAME=	freebsd-sysroot
-DISTVERSION=	a2022-12-14
+DISTVERSION=	a2023-03-23
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${_SYSROOT_DIST:@f@https://download.freebsd.org/$f?dummy=/:${FLAVOR}@} \
@@ -21,9 +21,6 @@ FLAVORS=	aarch64 amd64 armv7 i386 powerpc powerpc64 powerpc64le \
 		powerpcspe riscv64
 FLAVOR?=	${FLAVORS:[1]}
 
-powerpc_BUILD_DEPENDS=		powerpc-binutils>0:devel/binutils@powerpc
-powerpc_RUN_DEPENDS=		powerpc-binutils>0:devel/binutils@powerpc
-
 QA_ENV=		IGNORE_QA_baselibs=1 \
 		IGNORE_QA_no_arch=1 \
 		IGNORE_QA_proxydeps=1 \
@@ -39,13 +36,12 @@ SUB_FILES=	${exists(${FILESDIR}/${FLAVOR}-c++.in):?${FLAVOR}-c++:} \
 SUB_LIST=	FREEBSD_SYSROOT="${_SYSROOT}" \
 		FREEBSD_SYSROOT_CC="${CC}" \
 		FREEBSD_SYSROOT_CXX="${CXX}" \
-		FREEBSD_SYSROOT_LLVM_TRIPLE="${_SYSROOT_LLVM_TRIPLE}" \
-		FREEBSD_SYSROOT_POWERPC_LD="$$(${ECHO_CMD} ${LOCALBASE}/bin/powerpc-unknown-${OPSYS:tl}*[0-9]-ld.bfd)"
+		FREEBSD_SYSROOT_LLVM_TRIPLE="${_SYSROOT_LLVM_TRIPLE}"
 PLIST=		${.CURDIR}/pkg-plist.${FLAVOR}
 PLIST_SUB=	ROOT=${_SYSROOT:S,^${PREFIX}/,,}
 
 _SYSROOT=				${PREFIX}/${PORTNAME}/${FLAVOR:S/_/-/g}
-_SYSROOT_VER=				${_SYSROOT_VER_${FLAVOR}:U12.3-RELEASE}
+_SYSROOT_VER=				${_SYSROOT_VER_${FLAVOR}:U12.4-RELEASE}
 _SYSROOT_VER_powerpc=			13.1-RELEASE
 _SYSROOT_VER_powerpc64=			13.1-RELEASE
 _SYSROOT_VER_powerpc64le=		13.1-RELEASE
@@ -75,8 +71,8 @@ _SYSROOT_ARCH_amd64=			x86_64
 _SYSROOT_ARCH_i386=			i686
 _SYSROOT_ARCH_powerpc64=		powerpc64
 _SYSROOT_LLVM_TRIPLE=			${_SYSROOT_LLVM_TRIPLE_${FLAVOR}:U${_SYSROOT_ARCH_${FLAVOR}:U${FLAVOR}}-unknown-${OPSYS:tl}}
-_SYSROOT_LLVM_TRIPLE_aarch64=		aarch64-unknown-freebsd12.3
-_SYSROOT_LLVM_TRIPLE_armv7=		armv7-unknown-freebsd12.3-gnueabihf
+_SYSROOT_LLVM_TRIPLE_aarch64=		aarch64-unknown-freebsd12.4
+_SYSROOT_LLVM_TRIPLE_armv7=		armv7-unknown-freebsd12.4-gnueabihf
 _SYSROOT_LLVM_TRIPLE_powerpc=		powerpc-unknown-freebsd13.1 # secure-plt
 _SYSROOT_LLVM_TRIPLE_powerpc64=		powerpc64-unknown-freebsd13.1 # elfv2
 
@@ -111,7 +107,7 @@ pre-extract:
 # check if detected as UFS: unxz -c $img | dd skip=$skip | file -
 do-extract:
 	@unxz -c ${_DISTDIR}/${EXTRACT_ONLY} | \
-		dd skip=118784 >${WRKDIR}/base.img
+		dd skip=118912 >${WRKDIR}/base.img
 	@${MKDIR} ${WRKDIR}/base
 	@cd ${WRKDIR}/base; \
 		dump -0f - ${WRKDIR}/base.img | \

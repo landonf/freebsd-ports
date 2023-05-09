@@ -1,5 +1,5 @@
 PORTNAME=	labwc
-DISTVERSION=	0.6.1
+DISTVERSION=	0.6.3
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -38,7 +38,11 @@ NLS_USES=		gettext
 NLS_MESON_ENABLED=	nls
 NLS_PLIST_FILES=	share/locale/de/LC_MESSAGES/${PORTNAME}.mo \
 			share/locale/es/LC_MESSAGES/${PORTNAME}.mo \
+			share/locale/id/LC_MESSAGES/${PORTNAME}.mo \
 			share/locale/it/LC_MESSAGES/${PORTNAME}.mo \
+			share/locale/ka/LC_MESSAGES/${PORTNAME}.mo \
+			share/locale/pl/LC_MESSAGES/${PORTNAME}.mo \
+			share/locale/ru/LC_MESSAGES/${PORTNAME}.mo \
 			share/locale/sv/LC_MESSAGES/${PORTNAME}.mo \
 			share/locale/tr/LC_MESSAGES/${PORTNAME}.mo
 
@@ -60,10 +64,5 @@ post-patch:
 # Respect hier(7) for examples
 	@${REINPLACE_CMD} '/datadir/s/doc/examples/' \
 		${WRKSRC}/docs/meson.build
-# XXX Drop after FreeBSD 12.3 EOL around 2023-03-01
-# https://cgit.freebsd.org/src/commit/?id=773538247007
-	@if [ ${OPSYS} = FreeBSD -a ${OSVERSION} -lt 1203501 ]; then \
-		${REINPLACE_CMD} -e '/_POSIX_C_SOURCE/d' ${WRKSRC}/src/cursor.c; \
-	fi
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	ghostscript
 PORTVERSION=	8.71
-PORTREVISION=	23
+PORTREVISION=	24
 CATEGORIES=	print
 MASTER_SITES=	http://downloads.ghostscript.com/public/:gs_srcs \
 		SF/ghostscript/GPL%20Ghostscript/${PORTVERSION}:gs_srcs \
@@ -14,7 +14,12 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ghostscript 8.x PostScript interpreter, base part
 WWW=		https://www.cs.wisc.edu/~ghost/doc/GPL/index.htm
 
+FORBIDDEN=	CVE-2023-28879
+
 LICENSE=	GPLv3
+
+DEPRECATED=	Obsolete and unsupported upstream, consider using a more recent version
+EXPIRATION_DATE=2023-06-30
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \

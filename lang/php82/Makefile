@@ -1,5 +1,5 @@
 PORTNAME=	php82
-DISTVERSION=	8.2.1
+DISTVERSION=	8.2.5
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -364,8 +364,7 @@ BUILD_DEPENDS=		re2c:devel/re2c
 .if ${PHP_MODNAME} == "ldap"
 CONFIGURE_ARGS+=	--with-ldap-sasl=${LOCALBASE} \
 			--with-ldap=${LOCALBASE}
-
-USE_OPENLDAP=	yes
+USES+=	ldap
 .endif
 
 .if ${PHP_MODNAME} == "mbstring"
@@ -402,7 +401,7 @@ CONFIGURE_ARGS+=	--enable-odbc \
 .if ${PHP_MODNAME} == "opcache"
 # This is needed by Zend extensions, keep before everything.
 PHP_MOD_PRIO=		10
-CONFIGURE_ARGS+=	--enable-opcache
+CONFIGURE_ARGS+=        --enable-opcache
 .endif
 
 .if ${PHP_MODNAME} == "pcntl"
@@ -618,6 +617,10 @@ USES+=			pkgconfig
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == aarch64 && ${PHP_MODNAME} == "opcache"
+CONFIGURE_ARGS+=--disable-opcache-jit
+.endif
 
 .if ${PHP_MODNAME} == "sqlite3" || ${PHP_MODNAME} == "zlib"
 post-extract:

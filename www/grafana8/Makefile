@@ -1,7 +1,6 @@
 PORTNAME=	grafana
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.5.15
-PORTREVISION=	2
+DISTVERSION=	8.5.24
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/:public
 PKGNAMESUFFIX=	${DISTVERSION:C/([0-9]).*/\1/1}
@@ -15,7 +14,7 @@ WWW=		https://github.com/grafana/grafana
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386 riscv64
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
@@ -24,7 +23,7 @@ USES=		cpe go:modules
 USE_GITHUB=	yes
 
 USE_RC_SUBR=	grafana
-TAG=		be4228d
+TAG=		87c0302
 
 GO_TARGET=	./pkg/cmd/grafana-server \
 		./pkg/cmd/grafana-cli
@@ -39,7 +38,7 @@ SUB_LIST=	GRAFANA_USER=${GRAFANA_USER} \
 		GRAFANA_LOGDIR=${GRAFANA_LOGDIR} \
 		GRAFANA_PLUGINDIR=${GRAFANA_PLUGINDIR} \
 		GRAFANA_PROVISIONINGDIR=${GRAFANA_PROVISIONINGDIR} \
-		GRAFANA_BUILDHASH=cf625893e14b53d42c9c
+		GRAFANA_BUILDHASH=0dfd49f78dc93c695e30
 
 GRAFANA_USER?=	grafana
 GRAFANA_GROUP?=	grafana

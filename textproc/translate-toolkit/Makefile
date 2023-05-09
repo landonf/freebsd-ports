@@ -1,11 +1,12 @@
 PORTNAME=	translate-toolkit
-PORTVERSION=	3.8.1
+PORTVERSION=	3.8.6
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tools and API for translation and localization engineering
-WWW=		https://toolkit.translatehouse.org/
+WWW=		https://toolkit.translatehouse.org/ \
+		https://github.com/translate/translate
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -60,7 +61,7 @@ PHP_VARS=		MANPAGES+="php2po po2php"
 RC_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pyparsing>=3.0.7:devel/py-pyparsing@${PY_FLAVOR}
 RC_VARS=		MANPAGES+="po2rc rc2po"
 SPELLCHECK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}enchant>=3.2.2:textproc/py-enchant@${PY_FLAVOR}
-SUBTITLES_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aeidon>=1.10.1:textproc/py-aeidon@${PY_FLAVOR}
+SUBTITLES_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aeidon>=1.12:textproc/py-aeidon@${PY_FLAVOR}
 TMSERVER_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheroot>=9.0.0:www/py-cheroot@${PY_FLAVOR}
 TRADOS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.3:www/py-beautifulsoup@${PY_FLAVOR}
 YAML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ruamel.yaml>=0.17.21:devel/py-ruamel.yaml@${PY_FLAVOR}

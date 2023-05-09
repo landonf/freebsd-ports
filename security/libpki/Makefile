@@ -15,6 +15,8 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		autoreconf gnome libtool ssl
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	Fails to detect OpenSSL 3.0 or later
 USE_GITHUB=	yes
 GH_ACCOUNT=	openca
 USE_GNOME=	libxml2
@@ -35,7 +37,7 @@ MYSQL_DESC=	"Enable MySQL support"
 PGSQL_DESC=	"Enable PostgreSQL support"
 
 DNS_CONFIGURE_ENABLE=	dns
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_ENABLE=	ldap
 MYSQL_USES=		mysql
 MYSQL_CONFIGURE_ENABLE=	mysql

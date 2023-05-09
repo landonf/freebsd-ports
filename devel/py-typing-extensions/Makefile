@@ -1,5 +1,5 @@
 PORTNAME=	typing-extensions
-PORTVERSION=	4.4.0
+PORTVERSION=	4.5.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,11 +13,12 @@ LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		python:3.7+
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	allflavors autoplist concurrent pep517
 
 NO_ARCH=	yes
 
-post-patch:
-	@${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|' ${FILESDIR}/setup.py > ${WRKSRC}/setup.py
+# The workaround (e7a9ba1fecd9209fbb4b669ccb283cb1862c4a2a) should be reverted after Python 3.7 EOL
+PEP517_BUILD_CMD=	${PYTHON_CMD} -m flit_core.wheel
+PEP517_BUILD_DEPEND=	${PYTHON_PKGNAMEPREFIX}flit-core>=3.4<4:devel/py-flit-core@${PY_FLAVOR}
 
 .include <bsd.port.mk>

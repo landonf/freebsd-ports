@@ -1,6 +1,6 @@
 PORTNAME=	archiveopteryx
 PORTVERSION=	3.2.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	http://archiveopteryx.org/download/
 
@@ -9,6 +9,9 @@ COMMENT=	Advanced PostgreSQL-based IMAP/POP server
 WWW=		https://www.archiveopteryx.org/
 
 LICENSE=	MIT
+
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	error: 'SSL_CTX_use_RSAPrivateKey_file' is deprecated
 
 BUILD_DEPENDS=	jam:devel/jam
 

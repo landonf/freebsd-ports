@@ -9,8 +9,8 @@ WWW=		https://spamassassin.apache.org/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
-GH_TAGNAME=	d5261958c
-SA_COMMIT_DATE=	2023.01.25
+GH_TAGNAME=	9b82160ba
+SA_COMMIT_DATE=	2023.05.02
 
 LICENSE=	APACHE20
 
@@ -24,6 +24,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		p5-Net-IDN-Encode>=0:textproc/p5-Net-IDN-Encode \
 		p5-Net-LibIDN>=0:dns/p5-Net-LibIDN \
 		p5-URI>=0:net/p5-URI \
+		p5-Class-XSAccessor>=0:devel/p5-Class-XSAccessor \
+		p5-XString>=0:textproc/p5-XString \
 		re2c>=.12.0:devel/re2c
 
 .for dep in DCC DKIM MYSQL PGSQL PYZOR RAZOR RELAY_COUNTRY RLIMIT SPF_QUERY SSL
@@ -149,6 +151,7 @@ post-patch::
 		-e 's,B_CONFDIR)/v342.pre,B_CONFDIR)/v342.pre.sample,g' \
 		-e 's,B_CONFDIR)/v343.pre,B_CONFDIR)/v343.pre.sample,g' \
 		-e 's,B_CONFDIR)/v400.pre,B_CONFDIR)/v400.pre.sample,g' \
+		-e 's,B_CONFDIR)/v401.pre,B_CONFDIR)/v401.pre.sample,g' \
 		-e 's/require DBI/0/' \
 		${WRKSRC}/Makefile.PL
 	${REINPLACE_CMD} -e '/^CC =/d; \

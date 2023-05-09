@@ -133,7 +133,6 @@
     SUBDIR += libgda5
     SUBDIR += libgda5-jdbc
     SUBDIR += libgda5-ldap
-    SUBDIR += libgda5-mdb
     SUBDIR += libgda5-mysql
     SUBDIR += libgda5-postgresql
     SUBDIR += libgda5-ui
@@ -143,6 +142,7 @@
     SUBDIR += libmemcache
     SUBDIR += libmemcached
     SUBDIR += libmongo-client
+    SUBDIR += libmongocrypt
     SUBDIR += libmswstr
     SUBDIR += libnvpair
     SUBDIR += libodbc++
@@ -171,6 +171,8 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
+    SUBDIR += mariadb1011-client
+    SUBDIR += mariadb1011-server
     SUBDIR += mariadb103-client
     SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
@@ -185,8 +187,6 @@
     SUBDIR += memcached
     SUBDIR += metabase
     SUBDIR += mongodb-tools
-    SUBDIR += mongodb36
-    SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
     SUBDIR += mongodb40-tools
     SUBDIR += mongodb42
@@ -194,17 +194,17 @@
     SUBDIR += mongodb44
     SUBDIR += mongodb50
     SUBDIR += mongodb60
+    SUBDIR += mongodb70
     SUBDIR += movine
     SUBDIR += mroonga
     SUBDIR += mtop
     SUBDIR += mydumper
     SUBDIR += mysac
     SUBDIR += mysql++
-    SUBDIR += mysql-connector-c
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
     SUBDIR += mysql-connector-java51
-    SUBDIR += mysql-connector-odbc
+    SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
     SUBDIR += mysql2pgsql
@@ -666,14 +666,6 @@
     SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql10-client
-    SUBDIR += postgresql10-contrib
-    SUBDIR += postgresql10-docs
-    SUBDIR += postgresql10-pgtcl
-    SUBDIR += postgresql10-plperl
-    SUBDIR += postgresql10-plpython
-    SUBDIR += postgresql10-pltcl
-    SUBDIR += postgresql10-server
     SUBDIR += postgresql11-client
     SUBDIR += postgresql11-contrib
     SUBDIR += postgresql11-docs
@@ -726,8 +718,10 @@
     SUBDIR += pspg
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb-terminus7
+    SUBDIR += puppetdb-terminus8
     SUBDIR += puppetdb6
     SUBDIR += puppetdb7
+    SUBDIR += puppetdb8
     SUBDIR += puredb
     SUBDIR += pxlib
     SUBDIR += pxtools
@@ -758,6 +752,7 @@
     SUBDIR += py-duckdb
     SUBDIR += py-fakeredis
     SUBDIR += py-fastapi-users-db-ormar
+    SUBDIR += py-fastparquet
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
     SUBDIR += py-flask-sqlalchemy
@@ -818,6 +813,7 @@
     SUBDIR += py-rb
     SUBDIR += py-redis
     SUBDIR += py-redis2
+    SUBDIR += py-redis3
     SUBDIR += py-rrdtool
     SUBDIR += py-sispy
     SUBDIR += py-south
@@ -829,6 +825,7 @@
     SUBDIR += py-sqlalchemy12
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlalchemy14
+    SUBDIR += py-sqlalchemy20
     SUBDIR += py-sqlglot
     SUBDIR += py-sqlite-fts4
     SUBDIR += py-sqlite-utils
@@ -869,7 +866,6 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
-    SUBDIR += rocksdb-lite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
     SUBDIR += rrdtool
@@ -970,6 +966,7 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg13
+    SUBDIR += rubygem-pg14
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg_query
     SUBDIR += rubygem-pghero

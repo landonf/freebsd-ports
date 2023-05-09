@@ -1,6 +1,7 @@
 PORTNAME=	hoomd-blue
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.8.1
+DISTVERSION=	3.11.0
+PORTREVISION=	1
 CATEGORIES=	science # physics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,14 +21,12 @@ GH_ACCOUNT=	glotzerlab
 
 GH_TUPLE=	glotzerlab:upp11:0c1fb8d:glotzerlab_upp11/hoomd/extern/upp11 \
 		glotzerlab:nano-signal-slot:34223a4:glotzerlab_nano_signal_slot/hoomd/extern/nano-signal-slot \
-		glotzerlab:cub:c3cceac115c072fb63df1836ff46d8c60d9eb304:glotzerlab_cub/hoomd/extern/cub \
 		glotzerlab:quickhull:a706b5b:glotzerlab_quickhull/hoomd/extern/quickhull \
 		glotzerlab:random123:a2c4f04:glotzerlab_random123/hoomd/extern/random123 \
 		glotzerlab:HIP:d211f99:glotzerlab_HIP/hoomd/extern/HIP \
 		glotzerlab:hipCUB:c70e193:glotzerlab_hipCUB/hoomd/extern/hipCUB \
 		mphowardlab:neighbor:ba0f068:mphowardlab_neighbor/hoomd/extern/neighbor \
-		mphowardlab:hipper:b6da049:mphowardlab_hipper/hoomd/extern/hipper \
-		glotzerlab:hoomd-examples:1eb694bdd7873217be61ad38febe144a0efed3b5:glotzerlab_hoomd_examples/sphinx-doc/tutorial
+		mphowardlab:hipper:b6da049:mphowardlab_hipper/hoomd/extern/hipper
 
 SHEBANG_GLOB=	*.sh
 

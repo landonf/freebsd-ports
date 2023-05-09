@@ -1,6 +1,6 @@
 PORTNAME?=	percona
-DISTVERSION=	5.7.39-42
-PORTREVISION?=	0
+DISTVERSION=	5.7.41-44
+PORTREVISION?=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.7/Percona-Server-${DISTVERSION}/source/tarball/:percona \
 		SF/boost/boost/1.59.0:boost
@@ -15,6 +15,11 @@ WWW?=		https://www.percona.com/software/percona-server
 
 LICENSE?=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Upstream EOL reaches on 2023-10-01
+EXPIRATION_DATE=	2023-10-01
+IGNORE_SSL=	openssl30 openssl31
+IGNORE_SSL_REASON=	Upstream only supports upto OpenSSL 1.1.1 branch
 
 CPE_VENDOR=	percona
 CPE_PRODUCT=	percona_server
@@ -152,6 +157,8 @@ post-patch:
 	# issue 220865: MySQL developers forgot that FreeBSD != Linux
 	@${REINPLACE_CMD} -e 's|%%FREEBSD_LOCAL_LIB%%|${LOCALBASE}/lib|g' \
 	${WRKSRC}/configure.cmake
+	@${REINPLACE_CMD} -e 's|__clang__|__undefined__|g' \
+	    ${WRKDIR}/boost_1_59_0/boost/atomic/detail/ops_gcc_x86_dcas.hpp
 
 .include <bsd.port.pre.mk>
 

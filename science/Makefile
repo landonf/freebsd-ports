@@ -5,7 +5,6 @@
     SUBDIR += ChipmunkPhysics
     SUBDIR += InsightToolkit
     SUBDIR += InsightToolkit501
-    SUBDIR += InsightToolkit521
     SUBDIR += PETSc
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -43,7 +42,6 @@
     SUBDIR += buddy
     SUBDIR += cantera
     SUBDIR += cardioid
-    SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
     SUBDIR += cdo
@@ -70,7 +68,6 @@
     SUBDIR += csvtk
     SUBDIR += dakota
     SUBDIR += dalton
-    SUBDIR += dcl
     SUBDIR += dd_package
     SUBDIR += devisor
     SUBDIR += dftbplus
@@ -97,7 +94,6 @@
     SUBDIR += fasthenry
     SUBDIR += fastjet
     SUBDIR += feff10
-    SUBDIR += fisicalab
     SUBDIR += fleur
     SUBDIR += frontistr
     SUBDIR += fsom
@@ -280,6 +276,7 @@
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy
     SUBDIR += py-GPyOpt
+    SUBDIR += py-HepMC3
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -305,6 +302,7 @@
     SUBDIR += py-boutdata
     SUBDIR += py-boututils
     SUBDIR += py-cdo
+    SUBDIR += py-cfgrib
     SUBDIR += py-chainer
     SUBDIR += py-chainer-chemistry
     SUBDIR += py-chempy
@@ -401,6 +399,7 @@
     SUBDIR += py-qcengine
     SUBDIR += py-qiskit
     SUBDIR += py-qiskit-aer
+    SUBDIR += py-qiskit-dynamics
     SUBDIR += py-qiskit-experiments
     SUBDIR += py-qiskit-finance
     SUBDIR += py-qiskit-ibm-experiment
@@ -424,6 +423,7 @@
     SUBDIR += py-sdf
     SUBDIR += py-segregation
     SUBDIR += py-segyio
+    SUBDIR += py-signac
     SUBDIR += py-sklearn-pandas
     SUBDIR += py-skrebate
     SUBDIR += py-spaghetti
@@ -455,7 +455,6 @@
     SUBDIR += rubygem-rgeo-geojson
     SUBDIR += rubygem-rgeo-proj4
     SUBDIR += rubygem-rgeo-shapefile
-    SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
     SUBDIR += sciplot

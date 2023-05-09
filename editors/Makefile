@@ -11,6 +11,8 @@
     SUBDIR += beav
     SUBDIR += bee-host
     SUBDIR += biew
+    SUBDIR += bined
+    SUBDIR += bingrok
     SUBDIR += bitedit
     SUBDIR += bless
     SUBDIR += boiling-egg
@@ -194,6 +196,7 @@
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
     SUBDIR += linux-bcompare
+    SUBDIR += linux-r7-office
     SUBDIR += linux-sublime
     SUBDIR += linux-sublime-text4
     SUBDIR += linux-sublime3
@@ -202,6 +205,7 @@
     SUBDIR += lite-xl
     SUBDIR += marker
     SUBDIR += mg
+    SUBDIR += mickey
     SUBDIR += micro
     SUBDIR += mined
     SUBDIR += mle
@@ -212,6 +216,7 @@
     SUBDIR += ne
     SUBDIR += nedit
     SUBDIR += neovim
+    SUBDIR += neovim-gtk
     SUBDIR += neovim-qt
     SUBDIR += notepadnext
     SUBDIR += novelwriter
@@ -242,6 +247,7 @@
     SUBDIR += rehex
     SUBDIR += retext
     SUBDIR += rubygem-neovim
+    SUBDIR += sam
     SUBDIR += scite
     SUBDIR += se
     SUBDIR += semi
@@ -269,12 +275,14 @@
     SUBDIR += turbo
     SUBDIR += tweak
     SUBDIR += uemacs
+    SUBDIR += uhex
     SUBDIR += uzap
     SUBDIR += ved
     SUBDIR += vigor
     SUBDIR += vile
     SUBDIR += vim
     SUBDIR += vim-colorschemes-legacy
+    SUBDIR += vis
     SUBDIR += vscode
     SUBDIR += web-mode
     SUBDIR += with-editor

@@ -23,7 +23,6 @@
     SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
-    SUBDIR += amarok
     SUBDIR += amb-plugins
     SUBDIR += amberol
     SUBDIR += ampache
@@ -82,7 +81,6 @@
     SUBDIR += cava
     SUBDIR += ccaudio2
     SUBDIR += cd-discid
-    SUBDIR += cd2mp3
     SUBDIR += cddb-bundle
     SUBDIR += cdparanoia
     SUBDIR += checkmate
@@ -91,21 +89,16 @@
     SUBDIR += chromaprint
     SUBDIR += cli-visualizer
     SUBDIR += clunk
-    SUBDIR += cmp3
     SUBDIR += cmt
     SUBDIR += cmus
     SUBDIR += codec2
-    SUBDIR += cpige
-    SUBDIR += crip
     SUBDIR += csound
     SUBDIR += csoundqt
     SUBDIR += ctronome
-    SUBDIR += cue2toc
     SUBDIR += cuetools
     SUBDIR += cutmp3
     SUBDIR += cyanrip
     SUBDIR += d11amp
-    SUBDIR += dagrab
     SUBDIR += darkice
     SUBDIR += dcd
     SUBDIR += deadbeef
@@ -117,7 +110,6 @@
     SUBDIR += deadbeef-spectrogram-plugin
     SUBDIR += deadbeef-vu-meter-plugin
     SUBDIR += deadbeef-waveform-seekbar-plugin
-    SUBDIR += dekagen
     SUBDIR += denemo
     SUBDIR += dexed
     SUBDIR += dgedit
@@ -139,6 +131,7 @@
     SUBDIR += eawpats
     SUBDIR += eawplus
     SUBDIR += ebumeter
+    SUBDIR += ebur128
     SUBDIR += ecasound
     SUBDIR += elisa
     SUBDIR += emms
@@ -222,7 +215,6 @@
     SUBDIR += gbemol
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
-    SUBDIR += gervill
     SUBDIR += ggwave
     SUBDIR += giada
     SUBDIR += glurp
@@ -288,6 +280,7 @@
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
     SUBDIR += gtmixer
+    SUBDIR += gtultra
     SUBDIR += guidoar
     SUBDIR += guidolib
     SUBDIR += guitarix-lv2
@@ -306,11 +299,9 @@
     SUBDIR += icecast-kh
     SUBDIR += icegenerator
     SUBDIR += ices
-    SUBDIR += id3ed
     SUBDIR += id3el
     SUBDIR += id3lib
     SUBDIR += id3mtag
-    SUBDIR += id3ren
     SUBDIR += id3tool
     SUBDIR += id3v2
     SUBDIR += iir1
@@ -337,7 +328,6 @@
     SUBDIR += juke
     SUBDIR += julius
     SUBDIR += kapitonov-plugins-pack-lv2
-    SUBDIR += kexis
     SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
@@ -376,7 +366,6 @@
     SUBDIR += libgig
     SUBDIR += libgme
     SUBDIR += libgpod
-    SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libinstpatch
@@ -418,7 +407,6 @@
     SUBDIR += libspecbleach
     SUBDIR += libtremor
     SUBDIR += libvorbis
-    SUBDIR += libworkman
     SUBDIR += libxmp
     SUBDIR += lilv
     SUBDIR += lingot
@@ -489,14 +477,13 @@
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
-    SUBDIR += mousai-devel
+    SUBDIR += mousai
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
     SUBDIR += mp3_check
     SUBDIR += mp3asm
     SUBDIR += mp3blaster
     SUBDIR += mp3burn
-    SUBDIR += mp3c
     SUBDIR += mp3check
     SUBDIR += mp3ck
     SUBDIR += mp3gain
@@ -560,6 +547,7 @@
     SUBDIR += osd-lyrics
     SUBDIR += osdmixer
     SUBDIR += oss
+    SUBDIR += owntone
     SUBDIR += p5-Audio-CD
     SUBDIR += p5-Audio-Ecasound
     SUBDIR += p5-Audio-FLAC-Header
@@ -607,6 +595,7 @@
     SUBDIR += pc-mixer
     SUBDIR += pcaudiolib
     SUBDIR += pd
+    SUBDIR += pd-cyclone
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
     SUBDIR += pianobar
@@ -615,6 +604,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pithos
+    SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
@@ -674,6 +664,7 @@
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice
     SUBDIR += py-soundscrape
+    SUBDIR += py-soxr
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
     SUBDIR += py-tagpy
@@ -739,6 +730,7 @@
     SUBDIR += sherlock-lv2
     SUBDIR += shntool
     SUBDIR += shortwave
+    SUBDIR += shuriken
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
@@ -758,7 +750,6 @@
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
     SUBDIR += soundgrab
-    SUBDIR += soundkonverter
     SUBDIR += soundtouch
     SUBDIR += soundtracker
     SUBDIR += sox
@@ -776,8 +767,6 @@
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular
-    SUBDIR += splay
-    SUBDIR += splaytk
     SUBDIR += spotify-player
     SUBDIR += spotify-qt
     SUBDIR += spotify-tui
@@ -807,7 +796,6 @@
     SUBDIR += taglib
     SUBDIR += taglib-extras
     SUBDIR += taglookup
-    SUBDIR += tagtool
     SUBDIR += tagutil
     SUBDIR += tamgamp-lv2
     SUBDIR += tap-plugins
@@ -845,6 +833,7 @@
     SUBDIR += vamp-plugin-sdk
     SUBDIR += vban
     SUBDIR += vgmplay
+    SUBDIR += vgmtools
     SUBDIR += vimpc
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
@@ -852,7 +841,6 @@
     SUBDIR += vitunes
     SUBDIR += vm-lv2
     SUBDIR += vmpk
-    SUBDIR += vo-aacenc
     SUBDIR += vo-amrwbenc
     SUBDIR += voipong
     SUBDIR += volumeicon
@@ -861,7 +849,6 @@
     SUBDIR += vsound
     SUBDIR += vst3sdk
     SUBDIR += waon
-    SUBDIR += wav2cdr
     SUBDIR += wavbreaker
     SUBDIR += wavegain
     SUBDIR += waveplay
@@ -882,10 +869,10 @@
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
+    SUBDIR += xfce4-mixer
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc
-    SUBDIR += ximp3
     SUBDIR += xmcd
     SUBDIR += xmix
     SUBDIR += xmixer

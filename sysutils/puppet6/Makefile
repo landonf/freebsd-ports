@@ -1,6 +1,6 @@
 PORTNAME=	puppet
 PORTVERSION=	6.28.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=   https://forge.puppet.com/v3/files/:forge
 PKGNAMESUFFIX=	6
@@ -12,10 +12,13 @@ WWW=		https://puppet.com/docs/puppet/latest/puppet_index.html
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Puppet 6 has reached EOL
+EXPIRATION_DATE=2023-06-01
 BROKEN_RUBY30=	yes
 BROKEN_RUBY31=	yes
+BROKEN_RUBY32=	yes
 
-RUN_DEPENDS=	rubygem-concurrent-ruby>=1.0:devel/rubygem-concurrent-ruby \
+RUN_DEPENDS=	rubygem-concurrent-ruby11>=1.0:devel/rubygem-concurrent-ruby11 \
 		rubygem-deep_merge>=1.0:devel/rubygem-deep_merge \
 		rubygem-fast_gettext1>=1.1:devel/rubygem-fast_gettext1 \
 		rubygem-ffi>=1.9.24:devel/rubygem-ffi \
@@ -31,7 +34,7 @@ USES=		cpe ruby
 USE_GITHUB=	yes
 GH_ACCOUNT=	puppetlabs
 
-CONFLICTS_INSTALL=	puppet7
+CONFLICTS_INSTALL=	puppet[0-9]
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 NO_ARCH=	yes
 NO_BUILD=	yes

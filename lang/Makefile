@@ -1,6 +1,5 @@
     COMMENT = Programming languages
 
-    SUBDIR += J
     SUBDIR += abcl
     SUBDIR += alchemist.el
     SUBDIR += algol68g
@@ -41,7 +40,6 @@
     SUBDIR += cython-devel
     SUBDIR += dhall
     SUBDIR += dlang-tools
-    SUBDIR += dlv
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
@@ -90,13 +88,14 @@
     SUBDIR += gauche
     SUBDIR += gawk
     SUBDIR += gcc
-    SUBDIR += gcc-ecj45
     SUBDIR += gcc10
     SUBDIR += gcc11
     SUBDIR += gcc11-devel
     SUBDIR += gcc12
     SUBDIR += gcc12-devel
+    SUBDIR += gcc13
     SUBDIR += gcc13-devel
+    SUBDIR += gcc14-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
     SUBDIR += gcc8
@@ -104,6 +103,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
+    SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
     SUBDIR += gnat12
@@ -120,6 +120,7 @@
     SUBDIR += go-devel
     SUBDIR += go118
     SUBDIR += go119
+    SUBDIR += go120
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
@@ -134,6 +135,7 @@
     SUBDIR += hermes
     SUBDIR += hla
     SUBDIR += hs-brainfuck
+    SUBDIR += hs-futhark
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc
@@ -219,6 +221,7 @@
     SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
+    SUBDIR += opensycl
     SUBDIR += ott
     SUBDIR += owl-lisp
     SUBDIR += p5-Data-JavaScript
@@ -306,7 +309,6 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
-    SUBDIR += ruby27
     SUBDIR += ruby30
     SUBDIR += ruby31
     SUBDIR += ruby32
@@ -322,6 +324,7 @@
     SUBDIR += scala
     SUBDIR += scheme48
     SUBDIR += scm
+    SUBDIR += scratch
     SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
@@ -364,7 +367,6 @@
     SUBDIR += v8
     SUBDIR += v8-beta
     SUBDIR += vala
-    SUBDIR += visualworks
     SUBDIR += voc
     SUBDIR += yabasic
     SUBDIR += yap

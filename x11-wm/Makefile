@@ -12,7 +12,9 @@
     SUBDIR += berry
     SUBDIR += blackbox
     SUBDIR += bspwm
+    SUBDIR += bspwm-devel
     SUBDIR += cage
+    SUBDIR += cage-devel
     SUBDIR += cagebreak
     SUBDIR += chamfer
     SUBDIR += compiz
@@ -47,7 +49,6 @@
     SUBDIR += hs-xmonad
     SUBDIR += hyprland
     SUBDIR += i3
-    SUBDIR += i3-gaps
     SUBDIR += icewm
     SUBDIR += ittywm
     SUBDIR += jewel
@@ -101,6 +102,8 @@
     SUBDIR += stumpwm
     SUBDIR += subtle
     SUBDIR += sway
+    SUBDIR += sway-devel
+    SUBDIR += swayfx
     SUBDIR += tinywm
     SUBDIR += transset
     SUBDIR += treewm
@@ -121,6 +124,7 @@
     SUBDIR += wmname
     SUBDIR += wmx
     SUBDIR += xcompmgr
+    SUBDIR += xdgmenumaker
     SUBDIR += xfce4
     SUBDIR += xfce4-desktop
     SUBDIR += xfce4-panel

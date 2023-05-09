@@ -1,5 +1,5 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	109.0.5414.119
+PORTVERSION=	113.0.5672.63
 UGVERSION=	${DISTVERSION}-1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
@@ -34,7 +34,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/libdata/pkgconfig/Qt5Core.pc:devel/qt5-core \
 		${LOCALBASE}/libdata/pkgconfig/Qt5Widgets.pc:x11-toolkits/qt5-widgets
 
-LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libspeechd.so:accessibility/speech-dispatcher \
 		libsnappy.so:archivers/snappy \
@@ -43,7 +43,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libspeex.so:audio/speex \
 		libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
+		libffi.so:devel/libffi \
 		libicuuc.so:devel/icu \
 		libjsoncpp.so:devel/jsoncpp \
 		libpci.so:devel/libpci \
@@ -54,6 +56,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libexif.so:graphics/libexif \
 		libpng.so:graphics/png \
 		libwebp.so:graphics/webp \
+		libdav1d.so:multimedia/dav1d \
 		libopenh264.so:multimedia/openh264 \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
@@ -70,7 +73,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
-USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome iconv jpeg \
+USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome iconv:wchar_t jpeg \
 		localbase:ldflags ninja perl5 pkgconfig python:3.7+,build qt:5 shebangfix \
 		tar:xz xorg
 
@@ -112,9 +115,8 @@ GN_ARGS+=	fatal_linker_warnings=false \
 		use_sysroot=false \
 		use_system_freetype=false \
 		use_system_harfbuzz=true \
+		use_system_libffi=true \
 		use_system_libjpeg=true \
-		use_system_libwayland=true \
-		use_system_wayland_scanner=true \
 		use_udev=false \
 		extra_cxxflags="${CXXFLAGS}" \
 		extra_ldflags="${LDFLAGS}"
@@ -126,7 +128,6 @@ GN_ARGS+=	build_with_tflite_lib=false \
 		disable_fieldtrial_testing_config=true \
 		enable_backup_ref_ptr_support=false \
 		enable_hangout_services_extension=false \
-		enable_js_type_check=false \
 		enable_mdns=false \
 		enable_mse_mpeg2ts_stream_parser=true \
 		enable_nacl=false \
@@ -223,18 +224,14 @@ TEST_DISTFILES=		chromium-${DISTVERSION}-testdata${EXTRACT_SUFX} \
 TEST_ALL_TARGET=	${TEST_TARGETS}
 
 .include <bsd.port.options.mk>
-.include <bsd.port.pre.mk>
-
-.if ${OSREL} == "12.3"
-IGNORE=		does not compile, libc++ too old
-.endif
+.include <bsd.port.pre.mk> # for COMPILER_VERSION
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-.if ${COMPILER_VERSION} != 130
-LLVM_DEFAULT=		13
+.if ${COMPILER_VERSION} < 150
+LLVM_DEFAULT=		15
 BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
@@ -290,7 +287,7 @@ pre-configure:
 	#./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		flac fontconfig freetype harfbuzz-ng icu libdrm libevent libpng \
+		dav1d flac fontconfig freetype harfbuzz-ng icu libdrm libevent libpng \
 		libusb libwebp libxml libxslt openh264 opus snappy || ${FALSE}
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 .for brand in Chrome Chromium

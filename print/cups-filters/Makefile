@@ -1,6 +1,6 @@
 PORTNAME=	cups-filters
 PORTVERSION=	1.28.16
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://www.openprinting.org/download/cups-filters/
 
@@ -108,7 +108,7 @@ AVAHI_SUB_LIST_OFF=		AVAHI_DAEMON=
 
 LDAP_CONFIGURE_ENABLE=		ldap
 LDAP_DESC=			Get printer locations from an LDAP server
-LDAP_USE=			OPENLDAP=yes
+LDAP_USES=			ldap
 
 # Default PDF-to-PostScript renderer
 

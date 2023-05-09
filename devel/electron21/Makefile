@@ -1,11 +1,14 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
+PORTREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/:chromium \
+MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v21.4.0/:chromium \
+		https://commondatastorage.googleapis.com/chromium-nodejs/:chromium_node \
 		https://commondatastorage.googleapis.com/chromium-fonts/:chromium_testfonts
 PKGNAMESUFFIX=	${ELECTRON_VER_MAJOR}
 DISTFILES=	chromium-${CHROMIUM_VER}${EXTRACT_SUFX}:chromium \
+		${CHROMIUM_NODE_MODULES_HASH}:chromium_node \
 		${CHROMIUM_TEST_FONTS_HASH}:chromium_testfonts \
 		electron-yarn-cache-${ELECTRON_VER}${EXTRACT_SUFX}:prefetch
 DIST_SUBDIR=	${PORTNAME}
@@ -17,6 +20,9 @@ WWW=		https://electronjs.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
 
+DEPRECATED=	EOLed upstream, switch to newer version
+EXPIRATION_DATE=	2023-06-30
+
 FETCH_DEPENDS=		yarn-node16>0:www/yarn-node16
 EXTRACT_DEPENDS=	yarn-node16>0:www/yarn-node16
 PATCH_DEPENDS=		git:devel/git
@@ -26,7 +32,7 @@ BUILD_DEPENDS=		gperf:devel/gperf \
 			${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 			node16>0:www/node16 \
 			npm-node16>0:www/npm-node16
-LIB_DEPENDS=		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=		libatk-bridge-2.0.so:accessibility/at-spi2-core \
 			libatspi.so:accessibility/at-spi2-core \
 			libsnappy.so:archivers/snappy \
 			libFLAC.so:audio/flac \
@@ -137,7 +143,9 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
-CHROMIUM_VER=			106.0.5249.119
+CHROMIUM_VER=			106.0.5249.199
+# See ${WRKSRC}/third_party/node/node_modules.tar.gz.sha1 for CHROMIUM_NODE_MODULES_HASH
+CHROMIUM_NODE_MODULES_HASH=	80c023f0deb4d0ff28b42c4848257d26b7207725
 # See ${WRKSRC}/third_party/test_fonts/test_fonts.tar.gz.sha1 for CHROMIUM_TEST_FONTS_HASH
 CHROMIUM_TEST_FONTS_HASH=	336e775eec536b2d785cc80eff6ac39051931286
 # See ${WRKSRC}/electron/DEPS for NODE_VER
@@ -151,14 +159,13 @@ REACTIVEOBJC_VER=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 # See ${WRKSRC}/electron/DEPS for MANTLE_VER
 MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 
-YARN_TIMESTAMP=	1661146515
+YARN_TIMESTAMP=	1680677274
 
 GN_ARGS+=		clang_use_chrome_plugins=false \
 			enable_hangout_services_extension=true \
 			enable_js_type_check=false \
 			enable_nacl=false \
 			enable_remoting=false \
-			enable_wmax_tokens=false \
 			fatal_linker_warnings=false \
 			icu_use_data_file=false \
 			is_clang=true \
@@ -245,6 +252,7 @@ post-extract:
 		${WRKSRC}/third_party/squirrel.mac/vendor/ReactiveObjC
 	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/${GH_PROJECT_mantle}-${MANTLE_VER} \
 		${WRKSRC}/third_party/squirrel.mac/vendor/Mantle
+	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/node_modules ${WRKSRC}/third_party/node
 	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/test_fonts ${WRKSRC}/third_party/test_fonts
 # Install node modules for electron
 	${MV} ${WRKDIR}/${PORTNAME}-${ELECTRON_VER}/yarn-offline-cache ${WRKDIR}

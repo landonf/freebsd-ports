@@ -5,7 +5,7 @@ CATEGORIES=	net java
 MASTER_SITES=	SF/vnc-tight/TightVNC-unix/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}_unixsrc
 
-MAINTAINER=	meta@FreeBSD.org
+MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Enhanced version of VNC
 WWW=		https://www.tightvnc.com/
 
@@ -26,6 +26,7 @@ CONFLICTS=	tigervnc
 WRKSRC=		${WRKDIR}/vnc_unixsrc
 SHEBANG_FILES=	vncserver
 CFLAGS+=	-Wno-return-type
+CFLAGS+=	-Wno-int-conversion
 ALL_TARGET=	World
 MAKE_ARGS=	CC=${CC}
 

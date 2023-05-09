@@ -1,7 +1,6 @@
 PORTNAME=	lavinmq
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0-beta.8
-PORTREVISION=	1
+DISTVERSION=	1.0.1
 CATEGORIES=	net
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -9,6 +8,7 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Next-generation AMQP 0.9.1 based message broker
+WWW=		https://www.lavinmq.com/
 
 LICENSE=	APACHE20
 

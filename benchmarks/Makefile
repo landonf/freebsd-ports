@@ -100,7 +100,6 @@
     SUBDIR += spp
     SUBDIR += stream
     SUBDIR += stress-ng
-    SUBDIR += super-smack
     SUBDIR += sysbench
     SUBDIR += tcpblast
     SUBDIR += thrulay
@@ -113,6 +112,7 @@
     SUBDIR += uperf
     SUBDIR += vegeta
     SUBDIR += vkmark
+    SUBDIR += vkoverhead
     SUBDIR += vkpeak
     SUBDIR += webbench
     SUBDIR += wrk

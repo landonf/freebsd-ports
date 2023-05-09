@@ -1,5 +1,6 @@
 PORTNAME=	iridium
-PORTVERSION=	2023.01.109
+PORTVERSION=	2023.04.112.2
+PORTREVISION=	2
 CATEGORIES=	www wayland
 MASTER_SITES=	https://downloads.iridiumbrowser.de/source/
 PKGNAMESUFFIX=	-browser
@@ -15,7 +16,7 @@ LICENSE_COMB=	multi
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 PATCH_SITES=	https://nerd.hu/distfiles/
-PATCHFILES+=	disable-privacy-sandbox-7f49edb924b6d2b38fcc9a2c76d4e5e1f857e7b9.patch:-p1
+PATCHFILES+=	disable-privacy-sandbox-ce036275d9d21a8408ef48ee9839b3c21b8448ca.patch:-p1
 
 BUILD_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
@@ -32,7 +33,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/libdata/pkgconfig/Qt5Core.pc:devel/qt5-core \
 		${LOCALBASE}/libdata/pkgconfig/Qt5Widgets.pc:x11-toolkits/qt5-widgets
 
-LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
 		libspeechd.so:accessibility/speech-dispatcher \
 		libsnappy.so:archivers/snappy \
@@ -41,7 +42,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libspeex.so:audio/speex \
 		libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
+		libffi.so:devel/libffi \
 		libicuuc.so:devel/icu \
 		libjsoncpp.so:devel/jsoncpp \
 		libpci.so:devel/libpci \
@@ -68,7 +71,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
-USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome iconv jpeg \
+USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome iconv:wchar_t jpeg \
 		localbase:ldflags ninja perl5 pkgconfig python:3.7+,build qt:5 shebangfix \
 		tar:xz xorg
 
@@ -99,7 +102,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		chrome_pgo_phase=0 \
 		enable_backup_ref_ptr_support=false \
 		enable_hangout_services_extension=true \
-		enable_js_type_check=false \
 		enable_nacl=false \
 		enable_remoting=false \
 		fatal_linker_warnings=false \
@@ -119,8 +121,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_system_freetype=false \
 		use_system_harfbuzz=true \
 		use_system_libjpeg=true \
-		use_system_libwayland=true \
-		use_system_wayland_scanner=true \
 		use_udev=false \
 		extra_cxxflags="${CXXFLAGS}" \
 		extra_ldflags="${LDFLAGS}"
@@ -196,18 +196,14 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 .include <bsd.port.options.mk>
-.include <bsd.port.pre.mk>
-
-.if ${OSREL} == "12.3"
-IGNORE=			does not compile, libc++ too old
-.endif
+.include <bsd.port.pre.mk> # for COMPILER_VERSION
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-.if ${COMPILER_VERSION} != 130
-LLVM_DEFAULT=		13
+.if ${COMPILER_VERSION} < 150
+LLVM_DEFAULT=		15
 BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \

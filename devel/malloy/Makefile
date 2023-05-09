@@ -1,5 +1,5 @@
 PORTNAME=	malloy
-DISTVERSION=	0.6.0
+DISTVERSION=	0.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	jbo@insane.engineer
@@ -8,9 +8,6 @@ WWW=		https://github.com/tectu/malloy
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
-
-BROKEN_FreeBSD_12=	some C++20 STL headers are missing on 12.3,\
-			see https://bugs.freebsd.org/255374
 
 BUILD_DEPENDS=	boost-libs>1.74.0:devel/boost-libs
 LIB_DEPENDS=	libfmt.so:devel/libfmt \

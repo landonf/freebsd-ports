@@ -9,6 +9,7 @@
 
 PORTNAME=	dovecot
 PORTVERSION=	2.3.20
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://dovecot.org/releases/2.3/
 
@@ -85,7 +86,7 @@ LZ4_LIB_DEPENDS=	liblz4.so:archivers/liblz4
 CDB_CONFIGURE_WITH=	cdb
 CDB_LIB_DEPENDS=	libcdb.so:databases/tinycdb
 
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_WITH=	ldap
 
 MYSQL_USES=		mysql

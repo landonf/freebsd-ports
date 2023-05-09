@@ -1,5 +1,5 @@
 PORTNAME=	swoole
-PORTVERSION=	5.0.1
+PORTVERSION=	5.0.2
 CATEGORIES=	devel net
 
 MAINTAINER=	vanilla@FreeBSD.org
@@ -9,8 +9,7 @@ WWW=		https://pecl.php.net/package/swoole
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c11 localbase:ldflags php:pecl ssl
-USE_PHP=	hash:build pcre
+USES=		compiler:c11 localbase:ldflags php:build,pecl ssl
 
 CONFIGURE_ARGS+=	--enable-mysqlnd
 
@@ -26,7 +25,7 @@ CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 CURL_CONFIGURE_ON=	--enable-swoole-curl
 CURL_USE=		PHP=curl
 JSON_CONFIGURE_ON=	--enable-swoole-json
-JSON_USE=		PHP=json:build
+JSON_USES=		php:build
 PGSQL_CONFIGURE_ON=	--enable-swoole-pgsql
 PGSQL_USES=		pgsql
 BROTLI_CONFIGURE_ON=	--enable-brotli

@@ -1,6 +1,6 @@
---- chrome/browser/ui/browser.h.orig	2022-10-29 17:50:56 UTC
+--- chrome/browser/ui/browser.h.orig	2023-04-08 11:38:38 UTC
 +++ chrome/browser/ui/browser.h
-@@ -277,7 +277,7 @@ class Browser : public TabStripModelObserver,
+@@ -290,7 +290,7 @@ class Browser : public TabStripModelObserver,
      int32_t restore_id = kDefaultRestoreId;
  #endif
  

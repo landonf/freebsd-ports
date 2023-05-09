@@ -1,5 +1,5 @@
 PORTNAME?=	mariadb
-PORTVERSION=	10.6.11
+PORTVERSION=	10.6.12
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
@@ -120,6 +120,7 @@ DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
 
 CONFLICTS_INSTALL=	mariadb10[0-57-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
+			mariadb1011-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysqlwsrep* \
 			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-*
@@ -266,6 +267,7 @@ post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/share/mysql/policy \
 		${STAGEDIR}${PREFIX}/include/mysql/server/private \
 		${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig \
+		${STAGEDIR}${PREFIX}/libexec/rcmysql \
 		${STAGEDIR}/suite \
 		${STAGEDIR}${ETCDIR}/init.d \
 		${STAGEDIR}${ETCDIR}/logrotate.d \

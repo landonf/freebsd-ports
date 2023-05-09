@@ -28,7 +28,6 @@
     SUBDIR += abstreet
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
-    SUBDIR += acm
     SUBDIR += adonthell
     SUBDIR += adonthell-wastesedge
     SUBDIR += aestats
@@ -257,6 +256,7 @@
     SUBDIR += ezquake
     SUBDIR += f1spirit-remake
     SUBDIR += fairymax
+    SUBDIR += fakesteak
     SUBDIR += falconseye
     SUBDIR += fargoal
     SUBDIR += fbg2
@@ -273,7 +273,6 @@
     SUBDIR += flightgear-aircraft
     SUBDIR += flightgear-data
     SUBDIR += flightgear-mb339-pan
-    SUBDIR += flightgear-terragear
     SUBDIR += flobopuyo
     SUBDIR += flyhard
     SUBDIR += flying
@@ -425,6 +424,7 @@
     SUBDIR += jvgs
     SUBDIR += jzip
     SUBDIR += kanagram
+    SUBDIR += kanatest
     SUBDIR += kapman
     SUBDIR += kartofel
     SUBDIR += katomic
@@ -708,7 +708,6 @@
     SUBDIR += opencity
     SUBDIR += openclaw
     SUBDIR += openclonk
-    SUBDIR += opendungeons
     SUBDIR += openenroth
     SUBDIR += openfodder
     SUBDIR += opengfx
@@ -1026,7 +1025,6 @@
     SUBDIR += vavoom-extras
     SUBDIR += vcmi
     SUBDIR += vectoroids
-    SUBDIR += veloren
     SUBDIR += veloren-weekly
     SUBDIR += violetland
     SUBDIR += viruskiller

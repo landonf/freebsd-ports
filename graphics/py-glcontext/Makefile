@@ -1,5 +1,6 @@
 PORTNAME=	glcontext
 DISTVERSION=	2.3.7
+PORTREVISION=	1
 CATEGORIES=	graphics
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +12,8 @@ WWW=		https://github.com/moderngl/glcontext
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 
 USES=		localbase python xorg
 USE_PYTHON=	pep517 autoplist pytest

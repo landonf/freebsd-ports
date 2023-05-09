@@ -1,9 +1,10 @@
 PORTNAME=	afl
-PORTVERSION=	4.00c
+PORTVERSION=	4.05c
+PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	++-${FLAVOR}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	Fast instrumented fuzzer
 WWW=		https://aflplus.plus/
 

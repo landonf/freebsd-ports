@@ -1,6 +1,7 @@
 PORTNAME=	jackit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.21
+DISTVERSION=	1.9.22
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	dev@submerge.ch
@@ -27,8 +28,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 SHEBANG_FILES=	dbus/jack_control
 SHEBANG_LANG=	python3
 
-CONFIGURE_ARGS=	--celt=no --sndfile=no --samplerate=yes \
-		--readline=no --example-tools=no
+CONFIGURE_ARGS=	--celt=no --samplerate=yes
 
 OPTIONS_DEFINE=		ALSA DBUS OPUS PROFILING
 OPTIONS_DEFAULT=	DBUS OPUS

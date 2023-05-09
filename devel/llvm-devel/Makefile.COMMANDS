@@ -15,7 +15,6 @@ LLVM_COMMANDS=	\
 		llvm-cvtres \
 		llvm-cxxmap \
 		llvm-debuginfo-analyzer \
-		llvm-debuginfod \
 		llvm-debuginfod-find \
 		llvm-diff \
 		llvm-dis \
@@ -113,7 +112,6 @@ FLANG_COMMANDS=	\
 		bbc \
 		f18-parse-demo \
 		fir-opt \
-		flang \
 		flang-new \
 		flang-to-external-fc \
 		tco
