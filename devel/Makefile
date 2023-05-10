@@ -31,6 +31,7 @@
     SUBDIR += R-cran-cliapp
     SUBDIR += R-cran-clipr
     SUBDIR += R-cran-clisymbols
+    SUBDIR += R-cran-clock
     SUBDIR += R-cran-collapse
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
@@ -4402,6 +4403,7 @@
     SUBDIR += py-cdg
     SUBDIR += py-celery
     SUBDIR += py-celery-progress
+    SUBDIR += py-celery-singleton
     SUBDIR += py-cerberus
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
@@ -5621,6 +5623,7 @@
     SUBDIR += py-types-cryptography
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
+    SUBDIR += py-types-jsonschema
     SUBDIR += py-types-mock
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psutil
